@@ -20,7 +20,8 @@ async function loadData() {
     loadingEl.style.display = 'block';
     errorEl.style.display = 'none';
 
-    const response = await fetch('../data/entries.json');
+    // GitHub raw コンテンツから直接取得
+    const response = await fetch('https://raw.githubusercontent.com/Kite0301/shopify-changelog-watcher/refs/heads/main/data/entries.json');
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
