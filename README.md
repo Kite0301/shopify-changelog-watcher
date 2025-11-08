@@ -124,12 +124,23 @@ GitHubリポジトリの **Actions** タブから "Daily RSS Fetch" を選択し
 
 ### GitHub Pages の公開方法
 
+GitHub Actions を使って自動デプロイされます。
+
+#### 初回セットアップ
+
 1. GitHubリポジトリの **Settings** > **Pages** に移動
 2. **Build and deployment** セクションで以下を設定：
-   - Source: `Deploy from a branch`
-   - Branch: `main` / `/public`
-3. **Save** をクリック
-4. 数分後、`https://<username>.github.io/<repository-name>/` でアクセス可能
+   - Source: `GitHub Actions` を選択
+3. 変更は自動保存されます
+
+#### 自動デプロイ
+
+- `public/` 配下のファイルが更新されたときに自動デプロイ
+- 手動実行も可能：Actions タブから "Deploy to GitHub Pages" を実行
+
+公開URL: `https://kite0301.github.io/shopify-changelog-watcher/`
+
+**注意**: `data/entries.json` が更新されても再デプロイは不要です。ビューアは実行時に最新のJSONを読み込みます。
 
 ## 評価基準
 
