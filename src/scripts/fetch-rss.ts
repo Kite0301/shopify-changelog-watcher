@@ -1,5 +1,6 @@
 import { fetchAllFeeds, filterNewEntries } from '../fetcher/rss.js';
 import { loadDataStore, saveDataStore } from '../utils/file.js';
+import { loadEvaluationCriteria } from '../utils/config.js';
 import { toISOString } from '../utils/date.js';
 
 /**
@@ -9,6 +10,11 @@ async function main() {
   try {
     console.log('=== Shopify Changelog RSS Fetcher ===\n');
 
+    // 設定を読み込み
+    const criteria = await loadEvaluationCriteria();
+    const startDate = criteria.analysis?.startDate || '2025-10-01';
+    console.log(`Analysis start date: ${startDate}\n`);
+
     // 既存のデータを読み込み
     console.log('Loading existing data...');
     const dataStore = await loadDataStore();
@@ -17,8 +23,16 @@ async function main() {
     // RSSフィードから取得
     const fetchedEntries = await fetchAllFeeds();
 
+    // 分析開始日以降のエントリーのみをフィルタリング
+    const recentEntries = fetchedEntries.filter(
+      (entry) => entry.publishedAt >= startDate
+    );
+    console.log(
+      `Filtered to ${recentEntries.length} entries from ${startDate} onwards (from ${fetchedEntries.length} total)`
+    );
+
     // 新規エントリーのみをフィルタリング
-    const newEntries = filterNewEntries(fetchedEntries, dataStore.entries);
+    const newEntries = filterNewEntries(recentEntries, dataStore.entries);
 
     if (newEntries.length === 0) {
       console.log('\n✓ No new entries to add');

@@ -46,5 +46,9 @@
       "minTotalScore": 8,
       "description": "週次レポートに含める最低合計スコア"
     }
+  },
+  "analysis": {
+    "startDate": "2025-10-01",
+    "description": "AI分析の対象とする最も古い日付（この日付以降のエントリーのみを分析）"
   }
 }

@@ -21,6 +21,10 @@ interface EvaluationCriteria {
       description: string;
     };
   };
+  analysis?: {
+    startDate: string;
+    description: string;
+  };
 }
 
 const CONFIG_PATH = path.join(process.cwd(), 'config/evaluation-criteria.json');
