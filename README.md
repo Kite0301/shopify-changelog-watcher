@@ -127,9 +127,9 @@ GitHubリポジトリの **Actions** タブから "Daily RSS Fetch" を選択し
 1. GitHubリポジトリの **Settings** > **Pages** に移動
 2. **Build and deployment** セクションで以下を設定：
    - Source: `Deploy from a branch`
-   - Branch: `main` / `/(root)`
+   - Branch: `main` / `/public`
 3. **Save** をクリック
-4. 数分後、`https://<username>.github.io/<repository-name>/public/` でアクセス可能
+4. 数分後、`https://<username>.github.io/<repository-name>/` でアクセス可能
 
 ## 評価基準
 
