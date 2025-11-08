@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopify Changelog Watcher</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📰 Shopify Changelog Watcher</h1>
+            <p class="subtitle">日本のマーチャント・パートナー向けに分析された Shopify の更新情報</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat-info">
+                <span id="totalCount">-</span> 件のエントリー
+            </div>
+            <div class="stat-info">
+                最終更新: <span id="latestDate">-</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <input type="text" id="searchBox" placeholder="🔍 タイトルや要約で検索...">
+
+            <div class="filters">
+                <select id="sourceFilter">
+                    <option value="">すべてのソース</option>
+                    <option value="shopify-changelog">Shopify Changelog</option>
+                    <option value="developer-changelog">Developer Changelog</option>
+                </select>
+
+                <select id="scoreFilter">
+                    <option value="">すべてのスコア</option>
+                    <option value="high">高スコア（12+）</option>
+                    <option value="medium">中スコア（8-11）</option>
+                    <option value="low">低スコア（-7）</option>
+                </select>
+
+                <select id="sortBy">
+                    <option value="date-desc">日付：新しい順</option>
+                    <option value="date-asc">日付：古い順</option>
+                    <option value="score-desc">スコア：高い順</option>
+                    <option value="score-asc">スコア：低い順</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="loading" class="loading">読み込み中...</div>
+        <div id="error" class="error" style="display: none;"></div>
+
+        <div id="entriesContainer"></div>
+
+        <footer>
+            <p>
+                データソース:
+                <a href="https://changelog.shopify.com" target="_blank">Shopify Changelog</a> |
+                <a href="https://shopify.dev/changelog" target="_blank">Developer Changelog</a>
+            </p>
+            <p>
+                <a href="https://github.com/Kite0301/shopify-changelog-watcher" target="_blank">GitHub</a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -6,7 +6,8 @@ Shopify公式のchangelogを自動収集し、AI分析により日本のマー�
 
 - 複数のShopify changelog（通常版・開発者版）からRSS経由で自動収集
 - Claude AIによる日本語要約と重要度評価
-- 週次レポートの自動生成
+- GitHub Pagesによる収集データの可視化
+- 週次レポートの自動生成（※未実装）
 - GitHub Actionsによる完全自動化
 
 ## 対象リソース
@@ -23,8 +24,13 @@ shopify-changelog-watcher/
 ├── config/
 │   └── evaluation-criteria.json  # AI評価基準
 ├── data/
-│   ├── entries.json        # 収集した全エントリー
+│   ├── entries.json        # 収集した全エントリー（2025/10/01以降）
+│   ├── entries-archive-2025-09.json  # アーカイブ（2025/09以前）
 │   └── reports/            # 週次レポート
+├── public/                 # GitHub Pages用
+│   ├── index.html          # ビューアページ
+│   ├── styles.css          # スタイルシート
+│   └── app.js              # JavaScriptロジック
 ├── src/
 │   ├── fetcher/            # RSS取得モジュール
 │   ├── analyzer/           # AI分析モジュール
@@ -101,9 +107,33 @@ GitHubリポジトリの **Settings > Secrets and variables > Actions** で以�
 
 GitHubリポジトリの **Actions** タブから "Daily RSS Fetch" を選択し、"Run workflow" で実行可能
 
+## データビューア（GitHub Pages）
+
+収集・分析されたデータは GitHub Pages で閲覧できます。
+
+### 機能
+
+- **検索**: タイトルや日本語要約で絞り込み
+- **フィルター**: ソース別、スコア範囲別でフィルタリング
+- **ソート**: 日付順、スコア順での並び替え
+- **色分け**: スコアに応じた視覚的な重要度表示
+  - 赤: 高スコア（12+）
+  - オレンジ: 中スコア（8-11）
+  - グレー: 低スコア（-7）
+- **NEWバッジ**: 3日以内の新着記事を表示
+
+### GitHub Pages の公開方法
+
+1. GitHubリポジトリの **Settings** > **Pages** に移動
+2. **Build and deployment** セクションで以下を設定：
+   - Source: `Deploy from a branch`
+   - Branch: `main` / `/(root)`
+3. **Save** をクリック
+4. 数分後、`https://<username>.github.io/<repository-name>/public/` でアクセス可能
+
 ## 評価基準
 
-AIは以下の4つの軸で各エントリーを1-5点で評価します：
+AIは以下の4つの軸で各エントリーを1-5点で評価します（`config/evaluation-criteria.json` で定義）：
 
 - **マーチャント影響度**: 日本のマーチャントへの影響
 - **パートナー影響度**: 開発者・代理店への影響
@@ -111,6 +141,14 @@ AIは以下の4つの軸で各エントリーを1-5点で評価します：
 - **技術的重要度**: 破壊的変更や重要な機能追加の有無
 
 合計スコア8点以上のエントリーが週次レポートに含まれます。
+
+## コスト管理
+
+- AI分析は2025/10/01以降のエントリーのみが対象（コスト削減のため）
+- 古いエントリーは `data/entries-archive-2025-09.json` にアーカイブ
+- 推定月間コスト: 約$0.40（Claude Sonnet 4.5使用）
+  - 入力トークン: $3/1M
+  - 出力トークン: $15/1M
 
 ## ライセンス
 
