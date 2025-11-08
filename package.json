@@ -10,6 +10,7 @@
     "start": "node dist/index.js",
     "fetch": "tsx src/scripts/fetch-rss.ts",
     "analyze": "tsx src/scripts/analyze.ts",
+    "analyze:one": "tsx src/scripts/analyze-one.ts",
     "report": "tsx src/scripts/generate-report.ts",
     "lint": "eslint src --ext .ts",
     "format": "prettier --write \"src/**/*.ts\""

@@ -1,19 +1,17 @@
 import { loadDataStore, saveDataStore } from '../utils/file.js';
-import { analyzeEntries } from '../analyzer/claude.js';
+import { analyzeEntry } from '../analyzer/claude.js';
 
 /**
- * 未分析のエントリーを分析する
+ * 未分析のエントリーを1件ずつ分析して保存
  */
 async function main() {
   try {
     console.log('=== Shopify Changelog AI Analyzer ===\n');
 
-    // データを読み込み
     console.log('Loading data...');
     const dataStore = await loadDataStore();
     console.log(`✓ Loaded ${dataStore.entries.length} entries\n`);
 
-    // 未分析のエントリーを抽出
     const unanalyzedEntries = dataStore.entries.filter((entry) => !entry.analysis);
 
     if (unanalyzedEntries.length === 0) {
@@ -22,58 +20,65 @@ async function main() {
     }
 
     console.log(`Found ${unanalyzedEntries.length} unanalyzed entries\n`);
-    console.log('Starting AI analysis...');
-    console.log('(This may take a few minutes)\n');
+    console.log('Starting AI analysis...\n');
 
-    // 進捗表示付きで分析
-    const analysisResults = await analyzeEntries(unanalyzedEntries, {
-      concurrency: 5,
-      onProgress: (current, total) => {
-        const percentage = Math.round((current / total) * 100);
-        process.stdout.write(`\rProgress: ${current}/${total} (${percentage}%)`);
-      },
-    });
-
-    console.log('\n');
-
-    // 分析結果をエントリーに追加
     let successCount = 0;
-    for (const entry of dataStore.entries) {
-      const analysis = analysisResults.get(entry.id);
-      if (analysis) {
-        entry.analysis = analysis;
+    let failedCount = 0;
+    const analyzedEntries = [];
+    let totalCost = 0;
+    let totalInputTokens = 0;
+    let totalOutputTokens = 0;
+
+    for (let i = 0; i < unanalyzedEntries.length; i++) {
+      const entry = unanalyzedEntries[i];
+      const progress = `${i + 1}/${unanalyzedEntries.length}`;
+
+      process.stdout.write(`\r[${progress}] Analyzing: ${entry.title.substring(0, 60)}...`);
+
+      try {
+        const result = await analyzeEntry(entry);
+        entry.analysis = result.analysis;
+        analyzedEntries.push(entry);
+
+        totalInputTokens += result.usage.inputTokens;
+        totalOutputTokens += result.usage.outputTokens;
+        totalCost += result.usage.estimatedCost;
+
+        await saveDataStore(dataStore);
         successCount++;
+      } catch (error) {
+        console.error(`\n✗ Failed: ${entry.title}`);
+        console.error(`  ${error instanceof Error ? error.message : String(error)}`);
+        failedCount++;
       }
     }
 
-    // 保存
-    console.log('\nSaving results...');
-    await saveDataStore(dataStore);
-    console.log(`✓ Saved analysis results for ${successCount} entries`);
+    console.log('\n');
 
-    // 統計情報を表示
-    console.log('\n=== Analysis Summary ===');
+    console.log('=== Analysis Summary ===');
     console.log(`Total entries: ${dataStore.entries.length}`);
-    console.log(`Analyzed in this run: ${successCount}`);
-    console.log(`Failed: ${unanalyzedEntries.length - successCount}`);
+    console.log(`Successfully analyzed: ${successCount}`);
+    console.log(`Failed: ${failedCount}`);
 
-    // 高スコアのエントリーを表示
-    const analyzedEntries = dataStore.entries
-      .filter((e) => e.analysis && analysisResults.has(e.id))
-      .sort((a, b) => (b.analysis?.totalScore || 0) - (a.analysis?.totalScore || 0));
+    console.log('\n=== Token Usage & Cost ===');
+    console.log(`Total input tokens:  ${totalInputTokens.toLocaleString()}`);
+    console.log(`Total output tokens: ${totalOutputTokens.toLocaleString()}`);
+    console.log(`Total tokens:        ${(totalInputTokens + totalOutputTokens).toLocaleString()}`);
+    console.log(`Total cost:          $${totalCost.toFixed(4)}`);
 
     if (analyzedEntries.length > 0) {
-      console.log('\n=== Top Scored Entries (from this run) ===');
-      analyzedEntries.slice(0, 5).forEach((entry, index) => {
+      const sortedEntries = [...analyzedEntries].sort(
+        (a, b) => (b.analysis?.totalScore || 0) - (a.analysis?.totalScore || 0)
+      );
+
+      console.log('\n=== Top 5 Entries (by score) ===');
+      sortedEntries.slice(0, 5).forEach((entry, index) => {
         console.log(`\n${index + 1}. ${entry.title}`);
-        console.log(`   Score: ${entry.analysis?.totalScore}/20`);
-        console.log(`   - Merchant Impact: ${entry.analysis?.scores.merchantImpact}`);
-        console.log(`   - Partner Impact: ${entry.analysis?.scores.partnerImpact}`);
-        console.log(`   - Japan Relevance: ${entry.analysis?.scores.japanRelevance}`);
+        console.log(`   Total Score: ${entry.analysis?.totalScore}/20`);
         console.log(
-          `   - Technical Importance: ${entry.analysis?.scores.technicalImportance}`
+          `   Scores: M:${entry.analysis?.scores.merchantImpact} P:${entry.analysis?.scores.partnerImpact} J:${entry.analysis?.scores.japanRelevance} T:${entry.analysis?.scores.technicalImportance}`
         );
-        console.log(`   Summary: ${entry.analysis?.summarizedJa}`);
+        console.log(`   ${entry.analysis?.summarizedJa}`);
       });
     }
 

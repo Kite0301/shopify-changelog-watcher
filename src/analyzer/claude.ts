@@ -8,6 +8,22 @@ const client = new Anthropic({
   apiKey: getAnthropicApiKey(),
 });
 
+// Claude Sonnet 4.5 の料金 (per million tokens)
+const PRICING = {
+  INPUT_PER_MILLION: 3.0,
+  OUTPUT_PER_MILLION: 15.0,
+};
+
+export interface AnalysisResult {
+  analysis: Analysis;
+  usage: {
+    inputTokens: number;
+    outputTokens: number;
+    totalTokens: number;
+    estimatedCost: number;
+  };
+}
+
 /**
  * プロンプトを生成
  */
@@ -66,9 +82,9 @@ ${technicalDesc}
 }
 
 /**
- * Claude APIを使ってエントリーを分析
+ * Claude APIを使ってエントリーを分析（トークン使用量と料金を含む）
  */
-export async function analyzeEntry(entry: ChangelogEntry): Promise<Analysis> {
+export async function analyzeEntry(entry: ChangelogEntry): Promise<AnalysisResult> {
   const prompt = await buildAnalysisPrompt(entry);
 
   const message = await client.messages.create({
@@ -104,55 +120,26 @@ export async function analyzeEntry(entry: ChangelogEntry): Promise<Analysis> {
     parsed.scores.japanRelevance +
     parsed.scores.technicalImportance;
 
+  // トークン使用量と料金を計算
+  const inputTokens = message.usage.input_tokens;
+  const outputTokens = message.usage.output_tokens;
+  const totalTokens = inputTokens + outputTokens;
+  const inputCost = (inputTokens / 1_000_000) * PRICING.INPUT_PER_MILLION;
+  const outputCost = (outputTokens / 1_000_000) * PRICING.OUTPUT_PER_MILLION;
+  const estimatedCost = inputCost + outputCost;
+
   return {
-    summarizedJa: parsed.summarizedJa,
-    scores: parsed.scores as AnalysisScores,
-    totalScore,
-    analyzedAt: toISOString(new Date()),
+    analysis: {
+      summarizedJa: parsed.summarizedJa,
+      scores: parsed.scores as AnalysisScores,
+      totalScore,
+      analyzedAt: toISOString(new Date()),
+    },
+    usage: {
+      inputTokens,
+      outputTokens,
+      totalTokens,
+      estimatedCost,
+    },
   };
-}
-
-/**
- * 複数のエントリーを並列で分析（レート制限を考慮）
- */
-export async function analyzeEntries(
-  entries: ChangelogEntry[],
-  options: {
-    concurrency?: number;
-    onProgress?: (current: number, total: number) => void;
-  } = {}
-): Promise<Map<string, Analysis>> {
-  const { concurrency = 5, onProgress } = options;
-  const results = new Map<string, Analysis>();
-  const queue = [...entries];
-  let completed = 0;
-
-  // 並列実行
-  const workers = Array.from({ length: Math.min(concurrency, queue.length) }, async () => {
-    while (queue.length > 0) {
-      const entry = queue.shift();
-      if (!entry) break;
-
-      try {
-        const analysis = await analyzeEntry(entry);
-        results.set(entry.id, analysis);
-        completed++;
-
-        if (onProgress) {
-          onProgress(completed, entries.length);
-        }
-      } catch (error) {
-        console.error(`Failed to analyze entry ${entry.id}:`, error);
-        // エラーが発生しても続行
-        completed++;
-        if (onProgress) {
-          onProgress(completed, entries.length);
-        }
-      }
-    }
-  });
-
-  await Promise.all(workers);
-
-  return results;
 }
