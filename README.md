@@ -83,10 +83,23 @@ npm run report
 
 ### GitHub Actionsでの自動実行
 
-1. GitHubリポジトリの Settings > Secrets and variables > Actions で `ANTHROPIC_API_KEY` を設定
-2. ワークフローが自動的に実行されます：
-   - 日次: RSS取得 + AI分析（毎日9:00 JST）
-   - 週次: レポート生成（毎週月曜10:00 JST）
+#### 1. GitHub Secretsの設定
+
+GitHubリポジトリの **Settings > Secrets and variables > Actions** で以下のシークレットを設定：
+
+- `ANTHROPIC_API_KEY` - Anthropic APIキー（AI分析用）
+- `SLACK_WEBHOOK_URL` - Slack Incoming Webhook URL（通知用）
+
+#### 2. 自動実行スケジュール
+
+- **日次**: RSS取得 + データ更新（毎日9:00 JST）
+  - 新規エントリーがあればSlack通知
+  - 自動的に `data/entries.json` を更新してコミット
+- **週次**: レポート生成（毎週月曜10:00 JST）※未実装
+
+#### 3. 手動実行
+
+GitHubリポジトリの **Actions** タブから "Daily RSS Fetch" を選択し、"Run workflow" で実行可能
 
 ## 評価基準
 

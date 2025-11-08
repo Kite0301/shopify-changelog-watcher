@@ -1,0 +1,168 @@
+name: Daily RSS Fetch
+
+on:
+  schedule:
+    # 毎日 9:00 JST (00:00 UTC)
+    - cron: '0 0 * * *'
+  workflow_dispatch: # 手動実行を許可
+
+jobs:
+  fetch-and-update:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write # リポジトリへの書き込み権限
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch RSS feeds
+        id: fetch
+        run: |
+          # RSS取得を実行し、出力を保存
+          npm run fetch > fetch-output.txt 2>&1
+
+          # 出力から統計情報を抽出
+          NEW_ENTRIES=$(grep "New entries added:" fetch-output.txt | awk '{print $4}')
+          TOTAL_ENTRIES=$(grep "Total entries:" fetch-output.txt | awk '{print $3}')
+
+          # 環境変数に設定
+          echo "new_entries=${NEW_ENTRIES:-0}" >> $GITHUB_OUTPUT
+          echo "total_entries=${TOTAL_ENTRIES:-0}" >> $GITHUB_OUTPUT
+
+          # 出力内容を表示
+          cat fetch-output.txt
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if [[ -n $(git status -s data/entries.json) ]]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          git add data/entries.json
+          git commit -m "Update changelog entries (automated)
+
+          New entries: ${{ steps.fetch.outputs.new_entries }}
+          Total entries: ${{ steps.fetch.outputs.total_entries }}
+
+          🤖 Automated update by GitHub Actions"
+
+          git push
+
+      - name: Send Slack notification (success with new entries)
+        if: success() && steps.check_changes.outputs.changes == 'true'
+        uses: slackapi/slack-github-action@v1.27.0
+        with:
+          payload: |
+            {
+              "text": "📰 Shopify Changelog Update",
+              "blocks": [
+                {
+                  "type": "header",
+                  "text": {
+                    "type": "plain_text",
+                    "text": "📰 New Shopify Changelog Entries Detected"
+                  }
+                },
+                {
+                  "type": "section",
+                  "fields": [
+                    {
+                      "type": "mrkdwn",
+                      "text": "*New Entries:*\n${{ steps.fetch.outputs.new_entries }}"
+                    },
+                    {
+                      "type": "mrkdwn",
+                      "text": "*Total Entries:*\n${{ steps.fetch.outputs.total_entries }}"
+                    }
+                  ]
+                },
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "View the changes on <https://github.com/${{ github.repository }}/blob/main/data/entries.json|GitHub>"
+                  }
+                },
+                {
+                  "type": "context",
+                  "elements": [
+                    {
+                      "type": "mrkdwn",
+                      "text": "Workflow: <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|${{ github.workflow }}>"
+                    }
+                  ]
+                }
+              ]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+
+      - name: Send Slack notification (no new entries)
+        if: success() && steps.check_changes.outputs.changes == 'false'
+        uses: slackapi/slack-github-action@v1.27.0
+        with:
+          payload: |
+            {
+              "text": "✅ Shopify Changelog Check Complete - No New Entries",
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "✅ Daily changelog check completed. No new entries found.\n\n*Total Entries:* ${{ steps.fetch.outputs.total_entries }}"
+                  }
+                }
+              ]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+
+      - name: Send Slack notification (failure)
+        if: failure()
+        uses: slackapi/slack-github-action@v1.27.0
+        with:
+          payload: |
+            {
+              "text": "❌ Shopify Changelog Fetch Failed",
+              "blocks": [
+                {
+                  "type": "header",
+                  "text": {
+                    "type": "plain_text",
+                    "text": "❌ Changelog Fetch Failed"
+                  }
+                },
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "The daily RSS fetch workflow encountered an error.\n\nPlease check the <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|workflow logs> for details."
+                  }
+                }
+              ]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
