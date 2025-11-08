@@ -25,6 +25,7 @@
   "license": "MIT",
   "dependencies": {
     "@anthropic-ai/sdk": "^0.30.1",
+    "dotenv": "^16.4.5",
     "rss-parser": "^3.13.0",
     "zod": "^3.23.8"
   },
