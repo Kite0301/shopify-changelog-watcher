@@ -1,0 +1,43 @@
+{
+  "name": "shopify-changelog-watcher",
+  "version": "1.0.0",
+  "description": "Automated Shopify changelog monitoring and analysis tool for Japanese merchants and partners",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "fetch": "tsx src/scripts/fetch-rss.ts",
+    "analyze": "tsx src/scripts/analyze.ts",
+    "report": "tsx src/scripts/generate-report.ts",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\""
+  },
+  "keywords": [
+    "shopify",
+    "changelog",
+    "rss",
+    "automation",
+    "ai-analysis"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.30.1",
+    "rss-parser": "^3.13.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "@typescript-eslint/eslint-plugin": "^8.13.0",
+    "@typescript-eslint/parser": "^8.13.0",
+    "eslint": "^9.14.0",
+    "prettier": "^3.3.3",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
