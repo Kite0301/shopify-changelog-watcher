@@ -43,6 +43,26 @@ jobs:
           # 出力内容を表示
           cat fetch-output.txt
 
+      - name: Run AI analysis on new entries
+        id: analyze
+        if: steps.fetch.outputs.new_entries != '0'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          # 未分析のエントリーを分析
+          npm run analyze > analyze-output.txt 2>&1
+
+          # 出力から統計情報を抽出
+          ANALYZED=$(grep "Successfully analyzed:" analyze-output.txt | awk '{print $3}')
+          COST=$(grep "Total cost:" analyze-output.txt | awk '{print $3}')
+
+          # 環境変数に設定
+          echo "analyzed=${ANALYZED:-0}" >> $GITHUB_OUTPUT
+          echo "cost=${COST:-0}" >> $GITHUB_OUTPUT
+
+          # 出力内容を表示
+          cat analyze-output.txt
+
       - name: Check for changes
         id: check_changes
         run: |
@@ -59,10 +79,12 @@ jobs:
           git config --local user.name "github-actions[bot]"
 
           git add data/entries.json
-          git commit -m "Update changelog entries (automated)
+          git commit -m "Update changelog entries with AI analysis (automated)
 
           New entries: ${{ steps.fetch.outputs.new_entries }}
+          Analyzed: ${{ steps.analyze.outputs.analyzed }}
           Total entries: ${{ steps.fetch.outputs.total_entries }}
+          Analysis cost: ${{ steps.analyze.outputs.cost }}
 
           🤖 Automated update by GitHub Actions"
 
@@ -92,7 +114,15 @@ jobs:
                     },
                     {
                       "type": "mrkdwn",
+                      "text": "*Analyzed:*\n${{ steps.analyze.outputs.analyzed }}"
+                    },
+                    {
+                      "type": "mrkdwn",
                       "text": "*Total Entries:*\n${{ steps.fetch.outputs.total_entries }}"
+                    },
+                    {
+                      "type": "mrkdwn",
+                      "text": "*AI Cost:*\n${{ steps.analyze.outputs.cost }}"
                     }
                   ]
                 },
