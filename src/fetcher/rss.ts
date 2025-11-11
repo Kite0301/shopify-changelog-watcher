@@ -31,6 +31,7 @@ async function fetchFromSource(source: RSSSource): Promise<ChangelogEntry[]> {
         title: item.title || 'No title',
         link,
         publishedAt,
+        collectedAt: new Date().toISOString(), // 収集日時を記録
         category: categories,
         description: item.content || item.contentSnippet || '',
       };

@@ -39,6 +39,7 @@ export const ChangelogEntrySchema = z.object({
   title: z.string(),
   link: z.string().url(),
   publishedAt: z.string(),
+  collectedAt: z.string().optional(), // 収集日時（新規追加時に設定）
   category: z.array(z.string()),
   description: z.string(),
   analysis: AnalysisSchema.optional(),

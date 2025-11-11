@@ -158,8 +158,8 @@ function createEntryCard(entry) {
   // 日付をフォーマット
   const publishedDate = formatDate(entry.publishedAt);
 
-  // 3日以内かチェック
-  const isNew = isWithin3Days(entry.publishedAt);
+  // 3日以内かチェック（収集日基準）
+  const isNew = isWithin3Days(entry);
   const newBadge = isNew ? '<span class="new-badge">NEW</span>' : '';
 
   // ソース名を変換
@@ -233,12 +233,14 @@ function formatDate(isoString) {
 }
 
 /**
- * 3日以内かチェック
+ * 3日以内かチェック（収集日基準）
  */
-function isWithin3Days(isoString) {
-  const publishedDate = new Date(isoString);
+function isWithin3Days(entry) {
+  // collectedAt があればそれを使用、なければ publishedAt を使用
+  const dateToCheck = entry.collectedAt || entry.publishedAt;
+  const checkDate = new Date(dateToCheck);
   const now = new Date();
-  const diffInMs = now - publishedDate;
+  const diffInMs = now - checkDate;
   const diffInDays = diffInMs / (1000 * 60 * 60 * 24);
   return diffInDays <= 3;
 }

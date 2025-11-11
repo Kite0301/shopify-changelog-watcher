@@ -21,7 +21,8 @@
         },
         "totalScore": 14,
         "analyzedAt": "2025-11-11T00:01:44.851Z"
-      }
+      },
+      "collectedAt": "2025-11-11T00:01:38.161Z"
     },
     {
       "id": "developer-changelog-changelog-protected-customer-data-scopes-required",
@@ -45,7 +46,8 @@
         },
         "totalScore": 16,
         "analyzedAt": "2025-11-11T00:01:51.849Z"
-      }
+      },
+      "collectedAt": "2025-11-11T00:01:38.161Z"
     },
     {
       "id": "shopify-changelog-posts-duplicate-an-existing-user-group-for-easier-new-group-creation",
@@ -201,7 +203,8 @@
         },
         "totalScore": 12,
         "analyzedAt": "2025-11-11T00:01:56.804Z"
-      }
+      },
+      "collectedAt": "2025-11-11T00:01:38.161Z"
     },
     {
       "id": "developer-changelog-changelog-taxsummariescreate-webhook-and-taxsummarycreate-mutation-now-available",
