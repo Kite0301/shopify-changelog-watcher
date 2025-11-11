@@ -2,6 +2,17 @@
 
 Shopify公式のchangelogを自動収集し、AI分析により日本のマーチャントおよびパートナーにとって重要な情報を抽出・レポート化するツールです。
 
+## 📊 収集データを見る
+
+**👉 [https://kite0301.github.io/shopify-changelog-watcher/](https://kite0301.github.io/shopify-changelog-watcher/)**
+
+- 日本語要約付き
+- 重要度スコア表示
+- 検索・フィルター機能
+- 毎日自動更新
+
+---
+
 ## 機能
 
 - 複数のShopify changelog（通常版・開発者版）からRSS経由で自動収集
@@ -109,18 +120,21 @@ GitHubリポジトリの **Actions** タブから "Daily RSS Fetch" を選択し
 
 ## データビューア（GitHub Pages）
 
+**🔗 https://kite0301.github.io/shopify-changelog-watcher/**
+
 収集・分析されたデータは GitHub Pages で閲覧できます。
 
 ### 機能
 
 - **検索**: タイトルや日本語要約で絞り込み
 - **フィルター**: ソース別、スコア範囲別でフィルタリング
-- **ソート**: 日付順、スコア順での並び替え
+- **デフォルトソート**: 収集日（なければ公開日）の新しい順で表示
 - **色分け**: スコアに応じた視覚的な重要度表示
   - 赤: 高スコア（12+）
   - オレンジ: 中スコア（8-11）
   - グレー: 低スコア（-7）
-- **NEWバッジ**: 3日以内の新着記事を表示
+- **NEWバッジ**: 収集から3日以内の記事を表示（緑バッジ）
+- **日付表示**: 公開日と収集日を両方表示（RSS遅延を可視化）
 
 ### GitHub Pages の公開方法
 
@@ -138,9 +152,7 @@ GitHub Actions を使って自動デプロイされます。
 - `public/` 配下のファイルが更新されたときに自動デプロイ
 - 手動実行も可能：Actions タブから "Deploy to GitHub Pages" を実行
 
-公開URL: `https://kite0301.github.io/shopify-changelog-watcher/`
-
-**注意**: `data/entries.json` が更新されても再デプロイは不要です。ビューアは実行時に最新のJSONを読み込みます。
+**注意**: `data/entries.json` が更新されても再デプロイは不要です。ビューアは実行時にGitHub rawコンテンツから最新のJSONを読み込みます。
 
 ## 評価基準
 
