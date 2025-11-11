@@ -151,6 +151,7 @@ function createEntryCard(entry) {
 
   // 日付をフォーマット
   const publishedDate = formatDate(entry.publishedAt);
+  const collectedDate = entry.collectedAt ? formatDate(entry.collectedAt) : null;
 
   // 3日以内かチェック（収集日基準）
   const isNew = isWithin3Days(entry);
@@ -202,7 +203,8 @@ function createEntryCard(entry) {
       </div>
 
       <div class="entry-meta">
-        <span>📅 ${publishedDate}</span>
+        <span>📅 公開: ${publishedDate}</span>
+        ${collectedDate ? `<span>📥 収集: ${collectedDate}</span>` : ''}
         <span>📍 ${sourceName}</span>
       </div>
 
