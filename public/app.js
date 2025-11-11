@@ -47,12 +47,10 @@ function setupEventListeners() {
   const searchBox = document.getElementById('searchBox');
   const sourceFilter = document.getElementById('sourceFilter');
   const scoreFilter = document.getElementById('scoreFilter');
-  const sortBy = document.getElementById('sortBy');
 
   searchBox.addEventListener('input', applyFilters);
   sourceFilter.addEventListener('change', applyFilters);
   scoreFilter.addEventListener('change', applyFilters);
-  sortBy.addEventListener('change', applyFilters);
 }
 
 /**
@@ -74,13 +72,12 @@ function updateStats() {
 }
 
 /**
- * フィルターとソートを適用
+ * フィルターを適用
  */
 function applyFilters() {
   const searchText = document.getElementById('searchBox').value.toLowerCase();
   const sourceValue = document.getElementById('sourceFilter').value;
   const scoreValue = document.getElementById('scoreFilter').value;
-  const sortValue = document.getElementById('sortBy').value;
 
   // フィルタリング
   filteredEntries = allEntries.filter((entry) => {
@@ -105,22 +102,11 @@ function applyFilters() {
     return matchesSearch && matchesSource && matchesScore;
   });
 
-  // ソート
+  // デフォルトソート: 収集日（なければ公開日）の新しい順
   filteredEntries.sort((a, b) => {
-    if (sortValue === 'date-desc') {
-      return new Date(b.publishedAt) - new Date(a.publishedAt);
-    } else if (sortValue === 'date-asc') {
-      return new Date(a.publishedAt) - new Date(b.publishedAt);
-    } else if (sortValue === 'score-desc') {
-      const scoreA = a.analysis?.totalScore ?? 0;
-      const scoreB = b.analysis?.totalScore ?? 0;
-      return scoreB - scoreA;
-    } else if (sortValue === 'score-asc') {
-      const scoreA = a.analysis?.totalScore ?? 0;
-      const scoreB = b.analysis?.totalScore ?? 0;
-      return scoreA - scoreB;
-    }
-    return 0;
+    const dateA = new Date(a.collectedAt || a.publishedAt);
+    const dateB = new Date(b.collectedAt || b.publishedAt);
+    return dateB - dateA; // 新しい順
   });
 
   renderEntries();
