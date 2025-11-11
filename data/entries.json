@@ -1,6 +1,52 @@
 {
-  "lastUpdated": "2025-11-08T05:58:30.580Z",
+  "lastUpdated": "2025-11-11T00:01:38.161Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-tax-liability-changes-for-facebook-instagram-sales-channel-orders",
+      "source": "shopify-changelog",
+      "title": "Tax liability changes for Facebook & Instagram sales channel orders",
+      "link": "https://changelog.shopify.com/posts/tax-liability-changes-for-facebook-instagram-sales-channel-orders",
+      "publishedAt": "2025-11-10T16:00:00.000Z",
+      "category": [
+        "Channels"
+      ],
+      "description": "\n        <p>Starting August 26, 2025, Meta (Facebook &amp; Instagram) is no longer acting as a marketplace facilitator for orders placed through the Facebook &amp; Instagram sales channel. This means that merchants are now responsible for tax collection and filing on these orders, rather than Meta handling tax obligations.</p>\n\n<p><strong>What's changed:</strong><br>\n- Orders placed on or after August 26, 2025 through Facebook &amp; Instagram will show <code>channel_liable: false</code> in your order data</p>\n\n<p><strong>What stays the same:</strong><br>\n- Orders placed before August 26, 2025 remain Meta's responsibility for tax filing (<code>channel_liable: true</code>)<br>\n- No changes to your Facebook &amp; Instagram sales channel setup</p>\n\n<p><strong>Resource links:</strong><br>\n- <a href=\"https://help.shopify.com/en/manual/taxes\">Shopify Tax documentation</a><br>\n- <a href=\"https://help.shopify.com/en/manual/online-sales-channels/facebook\">Facebook &amp; Instagram sales channel documentation</a></p>\n\n      ",
+      "analysis": {
+        "summarizedJa": "2025年8月26日より、Facebook & Instagram販売チャネル経由の注文について、Metaがマーケットプレイスファシリテーターとしての役割を終了し、税金の徴収と申告の責任がマーチャント側に移管されます。この日以降の注文では注文データの`channel_liable`が`false`となり、マーチャント自身が税務処理を行う必要があります。この変更はFacebook & Instagramチャネルを利用している全てのマーチャントに影響します。",
+        "scores": {
+          "merchantImpact": 4,
+          "partnerImpact": 3,
+          "japanRelevance": 3,
+          "technicalImportance": 4
+        },
+        "totalScore": 14,
+        "analyzedAt": "2025-11-11T00:01:44.851Z"
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-protected-customer-data-scopes-required",
+      "source": "developer-changelog",
+      "title": "Protected customer data scopes required for web pixel PII access starting on December 10th",
+      "link": "https://shopify.dev/changelog/protected-customer-data-scopes-required",
+      "publishedAt": "2025-11-10T15:00:00.000Z",
+      "category": [
+        "Action Required",
+        "Platform",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>We will be enforcing Shopify's protected customer data policy for all web pixel extensions starting on December 10th, 2025. Customer personally identifiable information (PII)—including name, email, phone, and address fields—will only be present in web pixel payloads when the app has been approved for the corresponding protected scopes.</p>\n<h2>What’s changing</h2>\n<ul>\n<li>Web pixel payloads will be filtered at runtime based on the app’s approved access scopes.</li>\n<li>If your app is not approved for a given scope, the corresponding fields in the pixel event will be set to null. Event data structure remains stable.</li>\n<li>Enforcement applies on all web pixel surfaces: storefront, checkout, and customer accounts.</li>\n<li>Custom pixels are out of scope for this change.</li>\n</ul>\n<h2>Protected scopes enforced</h2>\n<ul>\n<li>read_customer_name</li>\n<li>read_customer_email</li>\n<li>read_customer_phone</li>\n<li>read_customer_address</li>\n<li>read_customer_personal_data</li>\n</ul>\n<h2>Example</h2>\n<pre><code>{\n  &quot;event&quot;: &quot;checkout_completed&quot;,\n  &quot;customer&quot;: {\n    &quot;email&quot;: null,           // null if not approved for read_customer_email\n    &quot;first_name&quot;: null,      // null if not approved for read_customer_name\n    &quot;phone&quot;: null            // null if not approved for read_customer_phone\n  },\n  &quot;shipping_address&quot;: {\n     &quot;first_name&quot;: null,\t// null if not approved for read_customer_name\n     &quot;address_1&quot;: null, \t// null if not approved for read_customer_address\n     &quot;address_2&quot;: null, \t// null if not approved for read_customer_address\n     &quot;zip&quot;: null,      \t// null if not approved for read_customer_address\n     &quot;phone&quot;: null            // null if not approved for read_customer_phone\n     [other address fields exempt]\n  }\n}\n</code></pre>\n<p>Non-PII data events will continue to fire normally. Your analytics, conversion tracking, and non-PII use cases will not be affected.</p>\n<h2>What you need to do</h2>\n<ul>\n<li><strong>Review and request access.</strong> Ensure you have approval for the protected scopes you require. See <a href=\"https://shopify.dev/docs/apps/launch/protected-customer-data\" target=\"_blank\" class=\"body-link\">Protected Customer Data Policy</a>. You should only request the scopes your app uses.</li>\n<li><strong>Update your code paths.</strong> Handle null for gated fields without breaking event handling or analytics pipelines.</li>\n<li><strong>Test across surfaces.</strong> Verify behavior on storefront, checkout, and customer accounts. No downtime is expected.</li>\n</ul>\n<p>This change will take effect starting on December 10th, 2025. We recommend submitting your request for protected customer data review as soon as possible if you need to maintain access to these values. </p>\n<p>No action is needed if your app is already approved for protected customer data, or is resilient to null values. If you have questions about this change, please comment on this post in the Developer Community forums.</p>\n</div> ",
+      "analysis": {
+        "summarizedJa": "2025年12月10日より、Web Pixel拡張機能で顧客の個人情報（氏名、メール、電話番号、住所）にアクセスするには、対応する保護スコープの承認が必須となります。承認されていない場合、ピクセルイベント内の該当フィールドはnullとなるため、アプリ開発者は必要なスコープの申請とコード対応が必要です。非PII（個人識別情報以外）のデータには影響ありません。",
+        "scores": {
+          "merchantImpact": 2,
+          "partnerImpact": 5,
+          "japanRelevance": 4,
+          "technicalImportance": 5
+        },
+        "totalScore": 16,
+        "analyzedAt": "2025-11-11T00:01:51.849Z"
+      }
+    },
     {
       "id": "shopify-changelog-posts-duplicate-an-existing-user-group-for-easier-new-group-creation",
       "source": "shopify-changelog",
@@ -131,6 +177,30 @@
         },
         "totalScore": 11,
         "analyzedAt": "2025-11-08T08:50:16.852Z"
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-carrier-service-api-now-includes-order-totals-and-customer-tags",
+      "source": "developer-changelog",
+      "title": "Carrier Service API now includes order totals and customer tags",
+      "link": "https://shopify.dev/changelog/carrier-service-api-now-includes-order-totals-and-customer-tags",
+      "publishedAt": "2025-11-04T17:00:00.000Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API"
+      ],
+      "description": " <div class=\"\"><p>The Carrier Service API callback payload has been enhanced to include order totals and customer tags. This update allows you to calculate shipping rates more effectively by considering the order value and customer segments.</p>\n<p><strong>New Payload Fields:</strong></p>\n<ul>\n<li><code>order_totals</code><ul>\n<li><code>subtotal_price</code>: The total price of items before discounts and taxes.</li>\n<li><code>total_price</code>: The final price after applying discounts and taxes.</li>\n<li><code>discount_amount</code>: The total amount of discounts applied to the order.</li>\n</ul>\n</li>\n<li><code>customer</code><ul>\n<li><code>id</code>: The unique identifier for the customer.</li>\n<li><code>tags</code>: Labels associated with the customer, useful for segmentation.</li>\n</ul>\n</li>\n</ul>\n<p>These new fields are automatically included in all callback responses, enabling you to tailor shipping rates based on detailed order and customer information. For more information on how to implement these changes, please refer to the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/queries/carrierservice\" target=\"_blank\" class=\"body-link\">Carrier Service API documentation</a>.</p>\n<p>Consider updating your shipping rate calculations to leverage these new fields for a more customized shipping experience.</p>\n</div> ",
+      "analysis": {
+        "summarizedJa": "Carrier Service APIのコールバックペイロードに、注文合計金額（割引前・割引後・割引額）と顧客タグ情報が追加されました。これにより、注文金額や顧客セグメントに基づいて、より柔軟で詳細な配送料金の計算が可能になります。この機能は自動的にすべてのコールバックレスポンスに含まれます。",
+        "scores": {
+          "merchantImpact": 2,
+          "partnerImpact": 4,
+          "japanRelevance": 3,
+          "technicalImportance": 3
+        },
+        "totalScore": 12,
+        "analyzedAt": "2025-11-11T00:01:56.804Z"
       }
     },
     {
