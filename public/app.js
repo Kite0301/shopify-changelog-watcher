@@ -28,6 +28,14 @@ async function loadData() {
 
     const data = await response.json();
     allEntries = data.entries || [];
+
+    // 初期ソート: 収集日（なければ公開日）の新しい順
+    allEntries.sort((a, b) => {
+      const dateA = new Date(a.collectedAt || a.publishedAt);
+      const dateB = new Date(b.collectedAt || b.publishedAt);
+      return dateB - dateA; // 新しい順
+    });
+
     filteredEntries = [...allEntries];
 
     updateStats();
