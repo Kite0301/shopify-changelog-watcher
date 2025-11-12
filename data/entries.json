@@ -1,12 +1,36 @@
 {
-  "lastUpdated": "2025-11-11T00:01:38.161Z",
+  "lastUpdated": "2025-11-12T00:01:36.275Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-released-delegatable-billing-permissions",
+      "source": "shopify-changelog",
+      "title": "Released delegatable billing permissions",
+      "link": "https://changelog.shopify.com/posts/released-delegatable-billing-permissions",
+      "publishedAt": "2025-11-11T17:00:00.000Z",
+      "collectedAt": "2025-11-12T00:01:36.267Z",
+      "category": [
+        "Billing"
+      ],
+      "description": "\n        <p>Delegatable billing allows merchants to grant specific team members permission to view invoices, manage payment methods, and handle billing-related information—without elevating them to full account ownership.</p>\n\n<p>This feature is available for merchants within an organization. Permissions can be delegated directly in the Shopify Admin under Settings &gt; Users and permissions.</p>\n\n      ",
+      "analysis": {
+        "summarizedJa": "組織アカウントを持つマーチャント向けに、請求書の閲覧や支払い方法の管理などの請求関連権限を、アカウントオーナー権限を付与せずに特定のチームメンバーに委譲できる機能がリリースされました。この権限設定は、Shopify管理画面の「設定」>「ユーザーと権限」から直接行うことができます。日本のマーチャントにとっては、経理担当者などに適切な権限を安全に付与できるようになり、チーム運営の効率化が期待できます。",
+        "scores": {
+          "merchantImpact": 3,
+          "partnerImpact": 2,
+          "japanRelevance": 3,
+          "technicalImportance": 2
+        },
+        "totalScore": 10,
+        "analyzedAt": "2025-11-12T00:01:43.142Z"
+      }
+    },
     {
       "id": "shopify-changelog-posts-tax-liability-changes-for-facebook-instagram-sales-channel-orders",
       "source": "shopify-changelog",
       "title": "Tax liability changes for Facebook & Instagram sales channel orders",
       "link": "https://changelog.shopify.com/posts/tax-liability-changes-for-facebook-instagram-sales-channel-orders",
       "publishedAt": "2025-11-10T16:00:00.000Z",
+      "collectedAt": "2025-11-11T00:01:38.161Z",
       "category": [
         "Channels"
       ],
@@ -21,8 +45,7 @@
         },
         "totalScore": 14,
         "analyzedAt": "2025-11-11T00:01:44.851Z"
-      },
-      "collectedAt": "2025-11-11T00:01:38.161Z"
+      }
     },
     {
       "id": "developer-changelog-changelog-protected-customer-data-scopes-required",
@@ -30,6 +53,7 @@
       "title": "Protected customer data scopes required for web pixel PII access starting on December 10th",
       "link": "https://shopify.dev/changelog/protected-customer-data-scopes-required",
       "publishedAt": "2025-11-10T15:00:00.000Z",
+      "collectedAt": "2025-11-11T00:01:38.161Z",
       "category": [
         "Action Required",
         "Platform",
@@ -46,8 +70,7 @@
         },
         "totalScore": 16,
         "analyzedAt": "2025-11-11T00:01:51.849Z"
-      },
-      "collectedAt": "2025-11-11T00:01:38.161Z"
+      }
     },
     {
       "id": "shopify-changelog-posts-duplicate-an-existing-user-group-for-easier-new-group-creation",
@@ -187,6 +210,7 @@
       "title": "Carrier Service API now includes order totals and customer tags",
       "link": "https://shopify.dev/changelog/carrier-service-api-now-includes-order-totals-and-customer-tags",
       "publishedAt": "2025-11-04T17:00:00.000Z",
+      "collectedAt": "2025-11-11T00:01:38.161Z",
       "category": [
         "API",
         "New",
@@ -203,8 +227,7 @@
         },
         "totalScore": 12,
         "analyzedAt": "2025-11-11T00:01:56.804Z"
-      },
-      "collectedAt": "2025-11-11T00:01:38.161Z"
+      }
     },
     {
       "id": "developer-changelog-changelog-taxsummariescreate-webhook-and-taxsummarycreate-mutation-now-available",
