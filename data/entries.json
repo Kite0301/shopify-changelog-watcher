@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-11-12T00:01:36.275Z",
+  "lastUpdated": "2025-11-13T00:01:34.377Z",
   "entries": [
     {
       "id": "shopify-changelog-posts-released-delegatable-billing-permissions",
@@ -70,6 +70,34 @@
         },
         "totalScore": 16,
         "analyzedAt": "2025-11-11T00:01:51.849Z"
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-tax-webhook-summary-and-calculation-requests-now-use-global-ids",
+      "source": "developer-changelog",
+      "title": "Tax webhook summary and calculation requests now use Global IDs",
+      "link": "https://shopify.dev/changelog/tax-webhook-summary-and-calculation-requests-now-use-global-ids",
+      "publishedAt": "2025-11-07T17:00:00.000Z",
+      "collectedAt": "2025-11-13T00:01:33.201Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Breaking API Change",
+        "Admin GraphQL API",
+        "Webhook",
+        "2026-01"
+      ],
+      "description": " <div class=\"\"><p>Starting with API version 2026-01, third-party tax apps will receive <a href=\"https://shopify.dev/docs/api/usage/gids\" target=\"_blank\" class=\"body-link\">Global IDs (GIDs)</a> in tax calculation requests and tax summary webhook payloads for all entity references of the summary section. This aligns with how Partners interact with other Shopify APIs.</p>\n<p>These apps can now use the same identifiers across all Shopify endpoints without managing different ID formats for tax-specific integrations. </p>\n<h2>What's changed</h2>\n<p>This change affects two key integration points:</p>\n<p><strong>Tax calculation requests:</strong></p>\n<ul>\n<li><code>Customer</code>, <code>Company</code>, <code>CompanyLocation</code>, <code>Product</code>, and <code>ProductVariant</code> IDs now use the GID format.</li>\n</ul>\n<p><strong>Tax summary webhooks:</strong></p>\n<ul>\n<li>All entity IDs within the summary section (<a href=\"https://shopify.dev/docs/api/storefront/latest/objects/Order\" target=\"_blank\" class=\"body-link\"><code>Order</code></a>, <a href=\"https://shopify.dev/docs/api/customer/latest/objects/Customer\" target=\"_blank\" class=\"body-link\"><code>Customer</code></a>, <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/Product\" target=\"_blank\" class=\"body-link\"><code>Product</code></a>, <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/ProductVariant\" target=\"_blank\" class=\"body-link\"><code>ProductVariant</code></a>, <code>SalesAgreement</code>, <code>Sale</code>, <a href=\"https://shopify.dev/docs/api/customer/latest/objects/LineItem\" target=\"_blank\" class=\"body-link\"><code>LineItem</code></a>, <a href=\"https://shopify.dev/docs/api/customer/latest/objects/Company\" target=\"_blank\" class=\"body-link\"><code>Company</code></a>, <a href=\"https://shopify.dev/docs/api/customer/latest/objects/CompanyLocation\" target=\"_blank\" class=\"body-link\"><code>CompanyLocation</code></a> <a href=\"https://shopify.dev/docs/api/customer/latest/objects/ShippingLine\" target=\"_blank\" class=\"body-link\"><code>ShippingLine</code></a>, and <a href=\"https://shopify.dev/docs/api/customer/latest/objects/TaxLine\" target=\"_blank\" class=\"body-link\"><code>TaxLine</code></a>) now use the GID format.</li>\n<li>The webhook payload also includes new <code>admin_graphql_api_id</code> fields at the top level for <code>TaxSummary</code>, <code>Shop</code>, and <code>Order</code> entities.</li>\n</ul>\n<p>Changes include:</p>\n<ul>\n<li><strong>Top Level:</strong> Adds <code>shop_admin_graphql_api_id</code> and <code>order_admin_graphql_api_id</code> fields (existing <code>shop_id</code> and <code>order_id</code> remain as integers).</li>\n<li><strong>Customer IDs:</strong> Changes from <code>&quot;id&quot;: &quot;5&quot;</code> to <code>&quot;id&quot;: &quot;gid://shopify/Customer/5&quot;</code>.</li>\n<li><strong>Product IDs:</strong> Changes from <code>&quot;id&quot;: &quot;1&quot;</code> to <code>&quot;id&quot;: &quot;gid://shopify/Product/1&quot;</code>.</li>\n<li><strong>Product Variant IDs:</strong> Changes from <code>&quot;id&quot;: &quot;1&quot;</code> to <code>&quot;id&quot;: &quot;gid://shopify/ProductVariant/1&quot;</code>.</li>\n<li><strong>Line Item IDs:</strong> Changes from <code>&quot;line_item_id&quot;: &quot;5&quot;</code> to <code>&quot;line_item_id&quot;: &quot;gid://shopify/LineItem/5&quot;</code>.</li>\n<li><strong>Sale IDs:</strong> Changes from <code>&quot;id&quot;: &quot;9&quot;</code> to <code>&quot;id&quot;: &quot;gid://shopify/Sale/9&quot;</code>.</li>\n<li><strong>Agreement IDs:</strong> Changes from <code>&quot;id&quot;: &quot;6&quot;</code> to <code>&quot;id&quot;: &quot;gid://shopify/Agreement/6&quot;</code>.</li>\n<li><strong>Company IDs:</strong> Changes from <code>&quot;id&quot;: &quot;3&quot;</code> to <code>&quot;id&quot;: &quot;gid://shopify/Company/3&quot;</code>.</li>\n<li><strong>Company Location IDs:</strong> Changes from <code>&quot;id&quot;: &quot;4&quot;</code> to <code>&quot;id&quot;: &quot;gid://shopify/CompanyLocation/4&quot;</code>.</li>\n<li><strong>Shipping Line IDs:</strong> Changes from <code>&quot;id&quot;: &quot;4&quot;</code> to <code>&quot;id&quot;: &quot;gid://shopify/ShippingLine/4&quot;</code>.</li>\n<li><strong>Tax Line IDs:</strong> Changes from <code>&quot;id&quot;: 6</code> to <code>&quot;id&quot;: &quot;gid://shopify/TaxLine/6&quot;</code>.</li>\n</ul>\n<h2>What you need to do</h2>\n<p>Update your integrations to handle the GID format when processing tax calculations and webhook payloads in API version 2026-01 and later. The following are some examples:</p>\n<h3>Tax calculation request</h3>\n<p><strong>Before (2025-10 and earlier):</strong> </p>\n<pre><code class=\"language-json\">{\n  &quot;cart&quot;: {\n    &quot;buyer_identity&quot;: {\n      &quot;customer&quot;: {\n        &quot;id&quot;: &quot;593934299&quot;\n      }\n    }\n  }\n}\n</code></pre>\n<p><strong>After (2026-01):</strong></p>\n<pre><code class=\"language-json\">{\n  &quot;cart&quot;: {\n    &quot;buyer_identity&quot;: {\n      &quot;customer&quot;: {\n        &quot;id&quot;: &quot;gid://shopify/Customer/593934299&quot;\n      }\n    }\n  }\n}\n</code></pre>\n<h3>Tax summary webhook</h3>\n<p><strong>Before (2025-10 and earlier):</strong></p>\n<pre><code class=\"language-json\">{\n  &quot;id&quot;: 80,\n  &quot;shop_id&quot;: 1,\n  &quot;order_id&quot;: 64,\n  &quot;summary&quot;: {\n    &quot;agreements&quot;: [{\n      &quot;id&quot;: &quot;82&quot;,\n      &quot;sales&quot;: [{\n        &quot;id&quot;: &quot;106&quot;,\n        &quot;line_item_id&quot;: &quot;76&quot;\n      }]\n    }]\n  }\n}\n</code></pre>\n<p><strong>After (2026-01):</strong></p>\n<pre><code class=\"language-json\">{\n  &quot;id&quot;: 80,\n  &quot;admin_graphql_api_id&quot;: &quot;gid://shopify/TaxSummary/80&quot;,\n  &quot;shop_id&quot;: 1,\n  &quot;shop_admin_graphql_api_id&quot;: &quot;gid://shopify/Shop/1&quot;,\n  &quot;order_id&quot;: 64,\n  &quot;order_admin_graphql_api_id&quot;: &quot;gid://shopify/Order/64&quot;,\n  &quot;summary&quot;: {\n    &quot;agreements&quot;: [{\n      &quot;id&quot;: &quot;gid://shopify/SalesAgreement/82&quot;,\n      &quot;sales&quot;: [{\n        &quot;id&quot;: &quot;gid://shopify/Sale/106&quot;,\n        &quot;line_item_id&quot;: &quot;gid://shopify/LineItem/76&quot;\n      }]\n    }]\n  }\n}\n</code></pre>\n</div> ",
+      "analysis": {
+        "summarizedJa": "2026-01 APIバージョンから、サードパーティ税計算アプリが受け取るtax calculation requestとtax summary webhookのペイロード内のエンティティIDが、整数形式からGlobal ID（GID）形式に変更されます。Customer、Product、Order、LineItemなど全てのエンティティ参照が「gid://shopify/EntityType/ID」形式になるため、税計算アプリを開発しているパートナーは2026-01までに対応が必須です。",
+        "scores": {
+          "merchantImpact": 2,
+          "partnerImpact": 5,
+          "japanRelevance": 3,
+          "technicalImportance": 4
+        },
+        "totalScore": 14,
+        "analyzedAt": "2025-11-13T00:01:41.223Z"
       }
     },
     {
@@ -347,6 +375,29 @@
         },
         "totalScore": 11,
         "analyzedAt": "2025-11-08T08:55:58.399Z"
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-faster-invoice-payments-for-indian-merchants",
+      "source": "shopify-changelog",
+      "title": "Faster Invoice Payment Confirmation for Indian Merchants",
+      "link": "https://changelog.shopify.com/posts/faster-invoice-payments-for-indian-merchants",
+      "publishedAt": "2025-10-30T16:00:00.000Z",
+      "collectedAt": "2025-11-13T00:01:34.368Z",
+      "category": [
+        "Billing"
+      ],
+      "description": "\n        <p>We've improved the invoice payment experience for merchants in India. When you pay an invoice, you'll now be redirected directly to your payment provider to complete authentication, reducing payment confirmation time from over 30 hours to around 30 seconds. 🚀</p>\n\n<p>Previously, you needed to wait for a notification from your bank, then navigate to your banking portal separately to enter your OTP and complete payment. Now, you'll get a notification from Razorpay and be redirected immediately to complete authentication in one seamless flow. Your payment will be confirmed within seconds.</p>\n\n<p>This update applies to all manual invoice payments in your Shopify admin and is available to all merchants in India.</p>\n\n<p>Learn more about the new payment flow in the <a href=\"https://help.shopify.com/en/manual/your-account/manage-billing/paying-your-bills/making-payments/account-billing-india/india-pay-bills\">Shopify Help Center</a></p>\n\n      ",
+      "analysis": {
+        "summarizedJa": "インド市場のマーチャント向けに、請求書の支払い確認プロセスが大幅に改善されました。支払い時に決済プロバイダー(Razorpay)へ直接リダイレクトされ、認証を完了できるようになったことで、従来30時間以上かかっていた支払い確認時間が約30秒に短縮されます。この変更はインドの全マーチャントのShopify管理画面での手動請求書支払いに適用されます。",
+        "scores": {
+          "merchantImpact": 1,
+          "partnerImpact": 1,
+          "japanRelevance": 1,
+          "technicalImportance": 2
+        },
+        "totalScore": 5,
+        "analyzedAt": "2025-11-13T00:01:47.145Z"
       }
     },
     {
