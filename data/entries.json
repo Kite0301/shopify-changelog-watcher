@@ -1,6 +1,99 @@
 {
-  "lastUpdated": "2025-11-13T00:01:34.377Z",
+  "lastUpdated": "2025-11-14T00:01:32.652Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-apple-pay-available-as-a-payment-method-in-shop-pay-checkout",
+      "source": "shopify-changelog",
+      "title": "Apple Pay available as a payment method in Shop Pay checkout",
+      "link": "https://changelog.shopify.com/posts/apple-pay-available-as-a-payment-method-in-shop-pay-checkout",
+      "publishedAt": "2025-11-13T17:00:00.000Z",
+      "collectedAt": "2025-11-14T00:01:32.640Z",
+      "category": [
+        "Checkout"
+      ],
+      "description": "\n        <p>Merchants who have Apple Pay enabled as an express checkout option will now automatically have it enabled as a payment method in Shop Pay checkouts. Providing Apple Pay as a payment method expands your customer payment options while supporting your checkout customizations. <a href=\"https://help.shopify.com/en/manual/payments/accelerated-checkouts/apple-pay\">Learn more</a> about enabling Apple Pay.</p>\n\n      ",
+      "analysis": {
+        "summarizedJa": "Apple Payをエクスプレスチェックアウトとして有効にしているマーチャントは、Shop Payチェックアウトでも自動的にApple Payが決済手段として利用可能になりました。これにより、チェックアウトのカスタマイズを維持しながら、顧客の決済オプションが拡大されます。",
+        "scores": {
+          "merchantImpact": 3,
+          "partnerImpact": 2,
+          "japanRelevance": 4,
+          "technicalImportance": 2
+        },
+        "totalScore": 11,
+        "analyzedAt": "2025-11-14T00:01:42.887Z"
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-new-google-cloud-run-deployment-tutorial-released",
+      "source": "developer-changelog",
+      "title": "New Google Cloud Run deployment tutorial released",
+      "link": "https://shopify.dev/changelog/new-google-cloud-run-deployment-tutorial-released",
+      "publishedAt": "2025-11-13T17:00:00.000Z",
+      "collectedAt": "2025-11-14T00:01:31.264Z",
+      "category": [
+        "Tools",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>We're excited to introduce a new <a href=\"https://shopify.dev/docs/apps/launch/deployment/deploy-to-google-cloud-run\" target=\"_blank\" class=\"body-link\">deployment tutorial for Google Cloud Run</a>.</p>\n<p>After scaffolding a Shopify app through the CLI and building out functionality in a local development store, what's next? </p>\n<p>Deployment!</p>\n<p>This tutorial guides you through the complete process of deploying your production Shopify apps, using Google Cloud Run as the target. You'll configure a project with the necessary permissions for continuous deployment, you'll set up a production database for persistent storage, and configure load balancing for multiple instances of your app across multiple regions.</p>\n<p>Take a look and share your thoughts (including how you deploy your apps differently) on the <a href=\"https://community.shopify.dev/\" target=\"_blank\" class=\"body-link\">Shopify community forum</a>!</p>\n</div> ",
+      "analysis": {
+        "summarizedJa": "ShopifyアプリをGoogle Cloud Runにデプロイするための新しいチュートリアルが公開されました。このチュートリアルでは、継続的デプロイメントのための権限設定、本番用データベースの構築、複数リージョンでのロードバランシング設定など、本番環境へのデプロイプロセス全体を解説しています。CLIでアプリを構築した後の実運用に向けた重要なガイドとなります。",
+        "scores": {
+          "merchantImpact": 1,
+          "partnerImpact": 4,
+          "japanRelevance": 3,
+          "technicalImportance": 3
+        },
+        "totalScore": 11,
+        "analyzedAt": "2025-11-14T00:01:48.301Z"
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-sidekick-voice-is-now-available-in-the-shopify-mobile-app",
+      "source": "shopify-changelog",
+      "title": "Sidekick Voice is now available in the Shopify Mobile App",
+      "link": "https://changelog.shopify.com/posts/sidekick-voice-is-now-available-in-the-shopify-mobile-app",
+      "publishedAt": "2025-11-13T14:00:00.000Z",
+      "collectedAt": "2025-11-14T00:01:32.640Z",
+      "category": [
+        "Mobile"
+      ],
+      "description": "\n        <p>Merchants can now use Sidekick Voice in the Shopify Mobile App. Sidekick Voice is context-aware and you can chat with Sidekick Voice as you navigate and work in the admin.</p>\n\n<ul>\n<li>Voice conversations with Sidekick throughout the mobile admin</li>\n<li>Persistent voice controls in navigation—mute and hang up buttons stay accessible during calls</li>\n<li>Context-aware responses as Sidekick understands you're on mobile</li>\n<li>Active conversations that continue as you move between tasks and screens until you end the call</li>\n</ul>\n\n<p>Start a voice conversation with Sidekick using the voice button in the Sidekick panel. You can open the Sidekick panel using the Sidekick button in the bottom navigation bar. Voice controls appear in your navigation bar so you can mute, unmute, or hang up while continuing to work between different admin sections.</p>\n\n<p><a href=\"https://help.shopify.com/en/manual/shopify-admin/productivity-tools/sidekick/set-up#mobile\">[Learn more]</a></p>\n\n      ",
+      "analysis": {
+        "summarizedJa": "ShopifyモバイルアプリでSidekickの音声機能が利用可能になりました。管理画面のどのページでもSidekickと音声で会話でき、画面を移動しても通話は継続され、ミュートや終了ボタンはナビゲーションバーから常にアクセス可能です。音声ボタンはSidekickパネル内にあり、コンテキストを理解した応答が得られます。",
+        "scores": {
+          "merchantImpact": 3,
+          "partnerImpact": 2,
+          "japanRelevance": 2,
+          "technicalImportance": 3
+        },
+        "totalScore": 10,
+        "analyzedAt": "2025-11-14T00:01:54.124Z"
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-enhanced-ai-image-generation-and-editing-on-the-shopify-mobile-app",
+      "source": "shopify-changelog",
+      "title": "Enhanced AI image generation and editing on the Shopify mobile app",
+      "link": "https://changelog.shopify.com/posts/enhanced-ai-image-generation-and-editing-on-the-shopify-mobile-app",
+      "publishedAt": "2025-11-13T14:00:00.000Z",
+      "collectedAt": "2025-11-14T00:01:32.640Z",
+      "category": [
+        "Mobile"
+      ],
+      "description": "\n        <p>Turn any product photo on your mobile device into high quality pack shots and marketing images using natural language prompts. <br>\n* Crop and recenter<br>\n* Remove background content<br>\n* Change file names and alt text<br>\n* Use AI image generation to place products in various marketing shots</p>\n\n<p><a href=\"https://help.shopify.com/en/manual/shopify-admin/productivity-tools/media-editor\">[Learn more]</a></p>\n\n      ",
+      "analysis": {
+        "summarizedJa": "Shopifyモバイルアプリで、AI画像生成・編集機能が強化されました。自然言語のプロンプトを使って、商品写真を高品質なパッケージショットやマーケティング画像に変換でき、背景削除、トリミング、再配置、ファイル名・代替テキストの変更などが可能です。AIを活用して商品を様々なマーケティングシーンに配置することもできます。",
+        "scores": {
+          "merchantImpact": 4,
+          "partnerImpact": 3,
+          "japanRelevance": 4,
+          "technicalImportance": 3
+        },
+        "totalScore": 14,
+        "analyzedAt": "2025-11-14T00:01:59.346Z"
+      }
+    },
     {
       "id": "shopify-changelog-posts-released-delegatable-billing-permissions",
       "source": "shopify-changelog",
