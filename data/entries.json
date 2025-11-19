@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-11-18T00:01:33.499Z",
+  "lastUpdated": "2025-11-19T00:01:39.762Z",
   "entries": [
     {
       "id": "shopify-changelog-posts-apple-pay-available-as-a-payment-method-in-shop-pay-checkout",
@@ -1848,6 +1848,29 @@
         },
         "totalScore": 15,
         "analyzedAt": "2025-11-08T09:01:13.512Z"
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-pay-in-full-credit-card-payment-option-will-automatically-retry-each-month",
+      "source": "shopify-changelog",
+      "title": "Pay-in-Full credit card payment option will automatically retry each month",
+      "link": "https://changelog.shopify.com/posts/pay-in-full-credit-card-payment-option-will-automatically-retry-each-month",
+      "publishedAt": "2025-10-01T16:00:00.000Z",
+      "collectedAt": "2025-11-19T00:01:39.754Z",
+      "category": [
+        "Shopify-credit"
+      ],
+      "description": "\n        <p>We’ve added automatic monthly retries to the Pay-in-full credit card payment option because this respects the merchants original choice. Now merchants can choose the Pay-in-Full payment option and that will not be disabled in case of payment failure. This enables merchants to repay their statements faster allowing them to save on fees and have extra spend capacity.</p>\n\n      ",
+      "analysis": {
+        "summarizedJa": "Shopify Creditの一括払いオプションで、決済が失敗した場合でも毎月自動的に再試行されるようになりました。これにより、マーチャントは当初選択した一括払いが無効化されることなく、手数料を節約し、利用可能枠を早期に回復できるようになります。",
+        "scores": {
+          "merchantImpact": 2,
+          "partnerImpact": 1,
+          "japanRelevance": 1,
+          "technicalImportance": 2
+        },
+        "totalScore": 6,
+        "analyzedAt": "2025-11-19T00:01:45.262Z"
       }
     },
     {
