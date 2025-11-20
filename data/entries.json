@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2025-11-19T00:01:39.762Z",
+  "lastUpdated": "2025-11-20T00:01:27.644Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-deprecate-incatalog-and-catalogs-fields-from-object-type-location",
+      "source": "developer-changelog",
+      "title": "Deprecate `in_catalog` and `catalogs` fields from object type `Location`",
+      "link": "https://shopify.dev/changelog/deprecate-incatalog-and-catalogs-fields-from-object-type-location",
+      "publishedAt": "2025-11-19T17:00:00.000Z",
+      "collectedAt": "2025-11-20T00:01:26.655Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Deprecation Announcement",
+        "Admin GraphQL API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>The <code>in_catalog</code> and <code>catalogs</code>  fields represents the legacy concept of direct connected catalogs to a location. Since the introduction of Markets Home this is not a valid concept anymore. </p>\n<p>These fields are now deprecated and will be hidden from documentation starting in version <strong>2026-04</strong>.</p>\n<p>Developers who previously relied on these fields should update their integrations accordingly. \nNo further action is required if these fields were not in use.</p>\n</div> ",
+      "analysis": {
+        "summarizedJa": "Admin GraphQL APIのLocationオブジェクトから、`in_catalog`と`catalogs`フィールドが非推奨となり、2026-04バージョンからドキュメントに表示されなくなります。これらはMarkets Homeの導入により無効となった、ロケーションとカタログを直接接続する旧来の概念を表すフィールドです。これらのフィールドを使用している開発者は、統合の更新が必要です。",
+        "scores": {
+          "merchantImpact": 1,
+          "partnerImpact": 3,
+          "japanRelevance": 3,
+          "technicalImportance": 3
+        },
+        "totalScore": 10,
+        "analyzedAt": "2025-11-20T00:01:34.290Z"
+      }
+    },
     {
       "id": "shopify-changelog-posts-apple-pay-available-as-a-payment-method-in-shop-pay-checkout",
       "source": "shopify-changelog",
