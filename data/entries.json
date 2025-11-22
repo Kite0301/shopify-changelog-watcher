@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-11-21T00:01:37.399Z",
+  "lastUpdated": "2025-11-22T00:01:34.125Z",
   "entries": [
     {
       "id": "developer-changelog-changelog-tax-summary-webhook-created-at-field-now-returns-utc-timezone",
@@ -27,6 +27,29 @@
         },
         "totalScore": 11,
         "analyzedAt": "2025-11-21T00:01:43.180Z"
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-get-to-shopify-support-faster-from-the-shopify-help-center",
+      "source": "shopify-changelog",
+      "title": "Get to Shopify Support faster from the Shopify Help Center",
+      "link": "https://changelog.shopify.com/posts/get-to-shopify-support-faster-from-the-shopify-help-center",
+      "publishedAt": "2025-11-20T17:00:00.000Z",
+      "collectedAt": "2025-11-22T00:01:34.113Z",
+      "category": [
+        "Help-center"
+      ],
+      "description": "\n        <p>Support update: we made it easier to chat with a human.</p>\n\n<p>We heard you. After trying self‑serve, it wasn’t always clear how to reach a person.</p>\n\n<p>What’s new: we’ve added a “Chat with a human” button on Help Center pages that puts you directly into the lineup for an advisor. On a typical day, we reach most contacts within 5 minutes.</p>\n\n<p>Need support? Try it out on the <a href=\"http://help.shopify.com\">Shopify Help Center</a>.</p>\n\n      ",
+      "analysis": {
+        "summarizedJa": "Shopifyヘルプセンターに「人間とチャット」ボタンが追加され、セルフサービスを試した後にサポート担当者へ直接連絡できるようになりました。通常、5分以内にサポート担当者が対応します。この改善により、マーチャントがより迅速に人的サポートを受けられるようになりました。",
+        "scores": {
+          "merchantImpact": 3,
+          "partnerImpact": 2,
+          "japanRelevance": 3,
+          "technicalImportance": 1
+        },
+        "totalScore": 9,
+        "analyzedAt": "2025-11-22T00:01:39.847Z"
       }
     },
     {
