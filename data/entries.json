@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2025-11-22T00:01:34.125Z",
+  "lastUpdated": "2025-11-23T00:01:44.745Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-tax-summary-webhook-and-calculation-requests-now-includes-shop-and-presentment-currency-amount",
+      "source": "developer-changelog",
+      "title": "Tax summary webhook and calculation requests now includes shop and presentment currency amount",
+      "link": "https://shopify.dev/changelog/tax-summary-webhook-and-calculation-requests-now-includes-shop-and-presentment-currency-amount",
+      "publishedAt": "2025-11-22T17:00:00.000Z",
+      "collectedAt": "2025-11-23T00:01:43.722Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "Webhook",
+        "2026-01"
+      ],
+      "description": " <div class=\"\"><p>As of API version <code>2026-01</code>, the <code>tax_summaries/create</code> webhook and tax calculation requests for Tax Partner Apps include additional fields for currency. These fields provide amounts in both shop currency and presentment currency. This enhancement allows tax partners to perform calculations and reporting in the merchant's accounting currency while maintaining the customer-facing currency for display.</p>\n<h2>What's New</h2>\n<p>The webhook and tax calculation request payloads now include two new currency-specific fields in the following locations:</p>\n<ol>\n<li><p><strong>Sale Records</strong> (<code>agreements[].sales[]</code>):</p>\n<ul>\n<li><code>amount_before_taxes_after_discounts_currencies</code>: A <a href=\"https://shopify.dev/docs/api/customer/2026-01/objects/MoneyBag\" target=\"_blank\" class=\"body-link\"><code>MoneyBag</code></a> object containing the sale amount before taxes in both shop currency and presentment currency.</li>\n</ul>\n</li>\n<li><p><strong>Cart Line Costs</strong> (<code>delivery_groups[].cart_lines[].cost</code>):</p>\n<ul>\n<li><code>amount_per_quantity_currencies</code>: A <code>MoneyBag</code> object containing the per-unit cost in both shop currency and presentment currency.</li>\n</ul>\n</li>\n</ol>\n<p>These fields complement the existing single-currency amount fields and are available when shops have multi-currency enabled.</p>\n<h3>MoneyBag Structure</h3>\n<p>The new <code>MoneyBag</code> fields contain two <a href=\"https://shopify.dev/docs/api/customer/2026-01/objects/MoneyV2\" target=\"_blank\" class=\"body-link\"><code>MoneyV2</code></a>. Below is an example of the structure:</p>\n<p><strong>Before (2025-10 and earlier):</strong> </p>\n<pre><code class=\"language-json\">{\n    &quot;amount_before_taxes_after_discounts&quot;: {\n        &quot;currency_code&quot;: &quot;CAD&quot;,\n        &quot;amount&quot;: &quot;135.00&quot;\n    }\n}\n</code></pre>\n<p><strong>After (2026-01):</strong></p>\n<pre><code class=\"language-json\">{\n    &quot;amount_before_taxes_after_discounts&quot;: {\n        &quot;currency_code&quot;: &quot;CAD&quot;,\n        &quot;amount&quot;: &quot;135.00&quot;\n    },\n    &quot;amount_before_taxes_after_discounts_currencies&quot;: {\n        &quot;shop_currency&quot;: {\n            &quot;currency_code&quot;: &quot;USD&quot;,\n            &quot;amount&quot;: &quot;100.00&quot;\n        },\n        &quot;presentment_currency&quot;: {\n            &quot;currency_code&quot;: &quot;CAD&quot;,\n            &quot;amount&quot;: &quot;135.00&quot;\n        }\n    }\n}\n</code></pre>\n</div> ",
+      "analysis": {
+        "summarizedJa": "2026-01 APIバージョンから、Tax Partner Apps向けの税金計算リクエストとWebhookに、ショップ通貨と表示通貨の両方の金額を含むMoneyBag形式の新しいフィールドが追加されます。これにより、税金パートナーはマーチャントの会計通貨で計算・レポート処理を行いながら、顧客向けには表示通貨を維持できるようになります。多通貨販売を行うストアで税金計算の精度と柔軟性が向上します。",
+        "scores": {
+          "merchantImpact": 2,
+          "partnerImpact": 4,
+          "japanRelevance": 3,
+          "technicalImportance": 3
+        },
+        "totalScore": 12,
+        "analyzedAt": "2025-11-23T00:01:51.513Z"
+      }
+    },
     {
       "id": "developer-changelog-changelog-tax-summary-webhook-created-at-field-now-returns-utc-timezone",
       "source": "developer-changelog",
