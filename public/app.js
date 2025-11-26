@@ -207,19 +207,24 @@ function createEntryCard(entry) {
 
   // 複数モデルの分析結果を表示
   let analysisHTML = '';
+  let scoreDisplayHTML = '';
+
   if (modelNames.length === 0) {
     analysisHTML = '<div class="entry-summary">分析中...</div><div class="entry-scores">分析中...</div>';
+    scoreDisplayHTML = '<div class="entry-score">スコア: -/20</div>';
   } else if (modelNames.length === 1) {
-    // 1モデルのみ: シンプル表示
+    // 1モデルのみ: シンプル表示（スコアはヘッダーに固定表示）
     const analysis = analyses[modelNames[0]];
     analysisHTML = createSingleAnalysisHTML(analysis, modelNames[0]);
+    scoreDisplayHTML = `<div class="entry-score">スコア: ${totalScore}/20</div>`;
   } else {
-    // 複数モデル: タブ表示
+    // 複数モデル: タブ表示（スコアもタブ内に移動）
     analysisHTML = createMultiAnalysisHTML(analyses, entry.id);
+    scoreDisplayHTML = ''; // スコアはタブ内に表示
   }
 
   return `
-    <div class="entry-card ${scoreClass}">
+    <div class="entry-card ${scoreClass}" data-entry-id="${entry.id}">
       <div class="entry-header">
         <div class="entry-title">
           <a href="${entry.link}" target="_blank" rel="noopener noreferrer">
@@ -227,7 +232,7 @@ function createEntryCard(entry) {
           </a>
           ${newBadge}
         </div>
-        <div class="entry-score">スコア: ${totalScore}/20</div>
+        ${scoreDisplayHTML}
       </div>
 
       <div class="entry-meta">
@@ -303,6 +308,7 @@ function createMultiAnalysisHTML(analyses, entryId) {
       const analysis = analyses[modelName];
       const summary = analysis?.summarizedJa || '分析中...';
       const scores = analysis?.scores;
+      const totalScore = analysis?.totalScore ?? 0;
 
       const scoreItems = scores
         ? `
@@ -326,7 +332,10 @@ function createMultiAnalysisHTML(analyses, entryId) {
         : '<div>分析中...</div>';
 
       return `
-        <div class="model-content ${isActive}" data-entry="${entryId}" data-model="${modelName}">
+        <div class="model-content ${isActive}" data-entry="${entryId}" data-model="${modelName}" data-total-score="${totalScore}">
+          <div class="model-content-header">
+            <div class="entry-score">スコア: ${totalScore}/20</div>
+          </div>
           <div class="entry-summary">${escapeHtml(summary)}</div>
           <div class="entry-scores">${scoreItems}</div>
         </div>

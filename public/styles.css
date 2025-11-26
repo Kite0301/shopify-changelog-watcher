@@ -349,3 +349,19 @@ footer p {
     font-weight: 600;
     vertical-align: middle;
 }
+
+/* Model Content Header */
+.model-content-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 12px;
+}
+
+.model-content-header .entry-score {
+    background: #ecf0f1;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
