@@ -81,6 +81,23 @@
           "totalScore": 11,
           "analyzedAt": "2025-11-21T00:01:43.180Z",
           "model": "claude-sonnet-4-5"
+        },
+        "gemini-2.5-flash": {
+          "summarizedJa": "Shopifyの税務パートナー向けウェブフック`tax_summaries/create`において、`created_at`フィールドの時刻フォーマットが変更されます。APIバージョン2026-01以降、タイムスタンプがUTC形式（Zサフィックス付き）でミリ秒精度を含むようになります。この変更は既存のシステムに影響を与えるため、該当するウェブフックを処理しているパートナーは、日付解析ロジックの更新が必須です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2025-11-26T15:16:06.091Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 987,
+            "output": 155
+          },
+          "estimatedCost": 0
         }
       }
     },
@@ -107,6 +124,23 @@
           "totalScore": 9,
           "analyzedAt": "2025-11-22T00:01:39.847Z",
           "model": "claude-sonnet-4-5"
+        },
+        "gemini-2.5-flash": {
+          "summarizedJa": "Shopifyサポートが改善され、ヘルプセンターから人間とチャットで直接連絡を取りやすくなりました。セルフサービスで解決できない場合でも、ヘルプセンターのページに追加された「Chat with a human」ボタンから、通常5分以内にアドバイザーと繋がることが可能です。これにより、日本のマーチャントやパートナーは、より迅速にサポートを受けられるようになります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 14,
+          "analyzedAt": "2025-11-26T15:12:51.581Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 729,
+            "output": 136
+          },
+          "estimatedCost": 0
         }
       }
     },
@@ -137,6 +171,23 @@
           "totalScore": 10,
           "analyzedAt": "2025-11-20T00:01:34.290Z",
           "model": "claude-sonnet-4-5"
+        },
+        "gemini-2.5-flash": {
+          "summarizedJa": "ShopifyのAPIにおいて、`Location`オブジェクトタイプ内の`in_catalog`および`catalogs`フィールドが非推奨となります。これらは「Markets Home」の導入により不要となった古いカタログ連携の概念を表しており、2026年4月以降のAPIバージョンではドキュメントから削除されます。これらのフィールドを利用しているアプリや連携機能を持つパートナーは、システムの更新が必要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2025-11-26T15:13:06.773Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 741,
+            "output": 138
+          },
+          "estimatedCost": 0
         }
       }
     },
@@ -163,6 +214,23 @@
           "totalScore": 11,
           "analyzedAt": "2025-11-14T00:01:42.887Z",
           "model": "claude-sonnet-4-5"
+        },
+        "gemini-2.5-flash": {
+          "summarizedJa": "Apple Payをエクスプレスチェックアウトとして有効にしているマーチャントは、Shop Payのチェックアウト画面でも自動的にApple Payが支払い方法として利用可能になります。これにより、顧客はShop Pay利用時にもApple Payを選択できるようになり、支払いオプションが拡大し、チェックアウトの利便性が向上します。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 12,
+          "analyzedAt": "2025-11-26T15:13:18.855Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 687,
+            "output": 122
+          },
+          "estimatedCost": 0
         }
       }
     },
@@ -190,6 +258,23 @@
           "totalScore": 11,
           "analyzedAt": "2025-11-14T00:01:48.301Z",
           "model": "claude-sonnet-4-5"
+        },
+        "gemini-2.5-flash": {
+          "summarizedJa": "ShopifyアプリをGoogle Cloud Runにデプロイするための新しいチュートリアルが公開されました。このガイドは、開発者がShopify CLIで作成したアプリを本番環境に展開する際、必要な権限設定、本番データベースの構築、複数リージョンでのロードバランシング構成までを網羅しています。これにより、日本のパートナーはより堅牢でスケーラブルなアプリを効率的にデプロイできるようになります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2025-11-26T15:13:34.184Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 808,
+            "output": 148
+          },
+          "estimatedCost": 0
         }
       }
     },
@@ -216,6 +301,23 @@
           "totalScore": 10,
           "analyzedAt": "2025-11-14T00:01:54.124Z",
           "model": "claude-sonnet-4-5"
+        },
+        "gemini-2.5-flash": {
+          "summarizedJa": "Shopifyモバイルアプリで、AIアシスタント「Sidekick Voice」が利用可能になりました。これにより、マーチャントはモバイルアプリ内で音声でSidekickと会話しながら、管理画面の操作や情報取得ができるようになります。Sidekickはコンテキストを理解し、画面遷移中も会話が継続されるため、モバイルでのストア管理の効率化と利便性向上が期待されます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2025-11-26T15:13:48.183Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 822,
+            "output": 139
+          },
+          "estimatedCost": 0
         }
       }
     },
@@ -242,6 +344,23 @@
           "totalScore": 14,
           "analyzedAt": "2025-11-14T00:01:59.346Z",
           "model": "claude-sonnet-4-5"
+        },
+        "gemini-2.5-flash": {
+          "summarizedJa": "Shopifyモバイルアプリで、AIを活用した画像生成と編集機能が強化されました。これにより、自然言語プロンプトを使って、モバイルデバイス上の商品写真を高品質な商品画像やマーケティング画像に変換できます。背景削除、トリミング、代替テキスト変更に加え、AIによる多様なマーケティングシーンへの商品配置が可能になり、マーチャントは商品画像の作成・編集をより手軽に行えるようになります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2025-11-26T15:14:04.664Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 709,
+            "output": 142
+          },
+          "estimatedCost": 0
         }
       }
     },
@@ -269,6 +388,23 @@
           "totalScore": 11,
           "analyzedAt": "2025-11-18T00:01:39.855Z",
           "model": "claude-sonnet-4-5"
+        },
+        "gemini-2.5-flash": {
+          "summarizedJa": "Shopify Dev MCPサーバーがPOS (Point of Sale) UI拡張機能のコード生成に対応しました。これにより、開発者はIDE内で仮想ペアプログラマーとしてDev MCPを活用し、POSアプリ開発を効率化できます。コードスニペットの生成やAPI探索が容易になり、開発プロセスが加速するため、より高品質なPOSアプリの提供に繋がります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2025-11-26T15:14:16.968Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 900,
+            "output": 133
+          },
+          "estimatedCost": 0
         }
       }
     },
@@ -295,6 +431,23 @@
           "totalScore": 10,
           "analyzedAt": "2025-11-12T00:01:43.142Z",
           "model": "claude-sonnet-4-5"
+        },
+        "gemini-2.5-flash": {
+          "summarizedJa": "Shopifyは、マーチャントが特定のチームメンバーに対し、請求書の閲覧や支払い方法の管理といった請求関連の権限を、アカウント全体の所有権を与えることなく委任できる機能をリリースしました。この機能は「組織」に属するマーチャントが利用でき、Shopify管理画面の「設定 > ユーザーと権限」から設定可能です。これにより、経理担当者などがより安全に請求情報を管理できるようになります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2025-11-26T15:14:30.777Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 654,
+            "output": 148
+          },
+          "estimatedCost": 0
         }
       }
     },

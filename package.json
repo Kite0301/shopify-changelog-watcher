@@ -11,6 +11,7 @@
     "fetch": "tsx src/scripts/fetch-rss.ts",
     "analyze": "tsx src/scripts/analyze.ts",
     "analyze:one": "tsx src/scripts/analyze-one.ts",
+    "backfill:gemini": "tsx src/scripts/backfill-gemini.ts",
     "test:gemini": "tsx src/scripts/test-gemini.ts",
     "migrate": "tsx src/scripts/migrate-analyses.ts",
     "report": "tsx src/scripts/generate-report.ts",
