@@ -55,10 +55,12 @@ function setupEventListeners() {
   const searchBox = document.getElementById('searchBox');
   const sourceFilter = document.getElementById('sourceFilter');
   const scoreFilter = document.getElementById('scoreFilter');
+  const modelFilter = document.getElementById('modelFilter');
 
   searchBox.addEventListener('input', applyFilters);
   sourceFilter.addEventListener('change', applyFilters);
   scoreFilter.addEventListener('change', applyFilters);
+  modelFilter.addEventListener('change', applyFilters);
 }
 
 /**
@@ -80,34 +82,71 @@ function updateStats() {
 }
 
 /**
+ * エントリーから分析結果を取得（analyses または analysis から）
+ */
+function getAnalysis(entry) {
+  // 新形式: analyses から取得
+  if (entry.analyses) {
+    const models = Object.keys(entry.analyses);
+    if (models.length > 0) {
+      // 最初のモデルの結果を返す（デフォルト）
+      return entry.analyses[models[0]];
+    }
+  }
+  // 旧形式: analysis を返す（後方互換性）
+  return entry.analysis || null;
+}
+
+/**
+ * エントリーから全モデルの分析結果を取得
+ */
+function getAllAnalyses(entry) {
+  if (entry.analyses) {
+    return entry.analyses;
+  }
+  // 旧形式の場合
+  if (entry.analysis) {
+    const model = entry.analysis.model || 'claude-sonnet-4-5';
+    return { [model]: entry.analysis };
+  }
+  return {};
+}
+
+/**
  * フィルターを適用
  */
 function applyFilters() {
   const searchText = document.getElementById('searchBox').value.toLowerCase();
   const sourceValue = document.getElementById('sourceFilter').value;
   const scoreValue = document.getElementById('scoreFilter').value;
+  const modelValue = document.getElementById('modelFilter').value;
 
   // フィルタリング
   filteredEntries = allEntries.filter((entry) => {
+    const analysis = getAnalysis(entry);
+
     // 検索テキスト
     const matchesSearch =
       !searchText ||
       entry.title.toLowerCase().includes(searchText) ||
-      (entry.analysis?.summarizedJa || '').toLowerCase().includes(searchText);
+      (analysis?.summarizedJa || '').toLowerCase().includes(searchText);
 
     // ソース
     const matchesSource = !sourceValue || entry.source === sourceValue;
 
+    // モデル
+    const matchesModel = !modelValue || (entry.analyses && entry.analyses[modelValue]);
+
     // スコア
     let matchesScore = true;
-    if (scoreValue && entry.analysis?.totalScore !== undefined) {
-      const score = entry.analysis.totalScore;
+    if (scoreValue && analysis?.totalScore !== undefined) {
+      const score = analysis.totalScore;
       if (scoreValue === 'high') matchesScore = score >= 12;
       else if (scoreValue === 'medium') matchesScore = score >= 8 && score < 12;
       else if (scoreValue === 'low') matchesScore = score < 8;
     }
 
-    return matchesSearch && matchesSource && matchesScore;
+    return matchesSearch && matchesSource && matchesModel && matchesScore;
   });
 
   // デフォルトソート: 収集日（なければ公開日）の新しい順
@@ -140,9 +179,12 @@ function renderEntries() {
  * エントリーカードのHTMLを生成
  */
 function createEntryCard(entry) {
-  const analysis = entry.analysis;
-  const scores = analysis?.scores;
-  const totalScore = analysis?.totalScore ?? 0;
+  const analyses = getAllAnalyses(entry);
+  const modelNames = Object.keys(analyses);
+
+  // デフォルトで最初のモデルを表示
+  const defaultAnalysis = modelNames.length > 0 ? analyses[modelNames[0]] : null;
+  const totalScore = defaultAnalysis?.totalScore ?? 0;
 
   // スコアレベルを判定
   let scoreClass = 'score-low';
@@ -163,10 +205,49 @@ function createEntryCard(entry) {
       ? 'Shopify Changelog'
       : 'Developer Changelog';
 
-  // サマリー（日本語）
-  const summary = analysis?.summarizedJa || '分析中...';
+  // 複数モデルの分析結果を表示
+  let analysisHTML = '';
+  if (modelNames.length === 0) {
+    analysisHTML = '<div class="entry-summary">分析中...</div><div class="entry-scores">分析中...</div>';
+  } else if (modelNames.length === 1) {
+    // 1モデルのみ: シンプル表示
+    const analysis = analyses[modelNames[0]];
+    analysisHTML = createSingleAnalysisHTML(analysis, modelNames[0]);
+  } else {
+    // 複数モデル: タブ表示
+    analysisHTML = createMultiAnalysisHTML(analyses, entry.id);
+  }
 
-  // 個別スコア
+  return `
+    <div class="entry-card ${scoreClass}">
+      <div class="entry-header">
+        <div class="entry-title">
+          <a href="${entry.link}" target="_blank" rel="noopener noreferrer">
+            ${escapeHtml(entry.title)}
+          </a>
+          ${newBadge}
+        </div>
+        <div class="entry-score">スコア: ${totalScore}/20</div>
+      </div>
+
+      <div class="entry-meta">
+        <span>📅 公開: ${publishedDate}</span>
+        ${collectedDate ? `<span>📥 収集: ${collectedDate}</span>` : ''}
+        <span>📍 ${sourceName}</span>
+      </div>
+
+      ${analysisHTML}
+    </div>
+  `;
+}
+
+/**
+ * 単一モデルの分析結果HTML
+ */
+function createSingleAnalysisHTML(analysis, modelName) {
+  const summary = analysis?.summarizedJa || '分析中...';
+  const scores = analysis?.scores;
+
   const scoreItems = scores
     ? `
     <div class="entry-scores">
@@ -190,31 +271,90 @@ function createEntryCard(entry) {
   `
     : '<div class="entry-scores">分析中...</div>';
 
+  const modelBadge = modelName ? `<span class="model-badge">${getModelDisplayName(modelName)}</span>` : '';
+
   return `
-    <div class="entry-card ${scoreClass}">
-      <div class="entry-header">
-        <div class="entry-title">
-          <a href="${entry.link}" target="_blank" rel="noopener noreferrer">
-            ${escapeHtml(entry.title)}
-          </a>
-          ${newBadge}
+    <div class="entry-summary">
+      ${modelBadge}
+      ${escapeHtml(summary)}
+    </div>
+    ${scoreItems}
+  `;
+}
+
+/**
+ * 複数モデルの分析結果HTML（タブ形式）
+ */
+function createMultiAnalysisHTML(analyses, entryId) {
+  const modelNames = Object.keys(analyses);
+
+  // タブヘッダー
+  const tabs = modelNames
+    .map((modelName, index) => {
+      const isActive = index === 0 ? 'active' : '';
+      return `<button class="model-tab ${isActive}" data-entry="${entryId}" data-model="${modelName}">${getModelDisplayName(modelName)}</button>`;
+    })
+    .join('');
+
+  // タブコンテンツ
+  const contents = modelNames
+    .map((modelName, index) => {
+      const isActive = index === 0 ? 'active' : '';
+      const analysis = analyses[modelName];
+      const summary = analysis?.summarizedJa || '分析中...';
+      const scores = analysis?.scores;
+
+      const scoreItems = scores
+        ? `
+        <div class="score-item">
+          <span class="score-label">マーチャント影響</span>
+          <span class="score-value">${scores.merchantImpact}/5</span>
         </div>
-        <div class="entry-score">スコア: ${totalScore}/20</div>
-      </div>
+        <div class="score-item">
+          <span class="score-label">パートナー影響</span>
+          <span class="score-value">${scores.partnerImpact}/5</span>
+        </div>
+        <div class="score-item">
+          <span class="score-label">日本関連性</span>
+          <span class="score-value">${scores.japanRelevance}/5</span>
+        </div>
+        <div class="score-item">
+          <span class="score-label">技術的重要性</span>
+          <span class="score-value">${scores.technicalImportance}/5</span>
+        </div>
+      `
+        : '<div>分析中...</div>';
 
-      <div class="entry-meta">
-        <span>📅 公開: ${publishedDate}</span>
-        ${collectedDate ? `<span>📥 収集: ${collectedDate}</span>` : ''}
-        <span>📍 ${sourceName}</span>
-      </div>
+      return `
+        <div class="model-content ${isActive}" data-entry="${entryId}" data-model="${modelName}">
+          <div class="entry-summary">${escapeHtml(summary)}</div>
+          <div class="entry-scores">${scoreItems}</div>
+        </div>
+      `;
+    })
+    .join('');
 
-      <div class="entry-summary">
-        ${escapeHtml(summary)}
-      </div>
-
-      ${scoreItems}
+  return `
+    <div class="model-tabs">
+      ${tabs}
+    </div>
+    <div class="model-contents">
+      ${contents}
     </div>
   `;
+}
+
+/**
+ * モデル名を表示用に変換
+ */
+function getModelDisplayName(modelName) {
+  const displayNames = {
+    'claude-sonnet-4-5': 'Claude 4.5',
+    'gemini-2.5-flash': 'Gemini 2.5',
+    'gemini-1.5-flash': 'Gemini 1.5',
+    'gpt-4o': 'GPT-4o',
+  };
+  return displayNames[modelName] || modelName;
 }
 
 /**
@@ -249,3 +389,23 @@ function escapeHtml(text) {
   div.textContent = text;
   return div.innerHTML;
 }
+
+// タブクリックのイベントリスナー（イベント委譲）
+document.addEventListener('click', (e) => {
+  if (e.target.classList.contains('model-tab')) {
+    const entryId = e.target.dataset.entry;
+    const modelName = e.target.dataset.model;
+
+    // 同じエントリー内のタブとコンテンツを切り替え
+    const tabs = document.querySelectorAll(`.model-tab[data-entry="${entryId}"]`);
+    const contents = document.querySelectorAll(`.model-content[data-entry="${entryId}"]`);
+
+    tabs.forEach((tab) => tab.classList.remove('active'));
+    contents.forEach((content) => content.classList.remove('active'));
+
+    e.target.classList.add('active');
+    document
+      .querySelector(`.model-content[data-entry="${entryId}"][data-model="${modelName}"]`)
+      .classList.add('active');
+  }
+});

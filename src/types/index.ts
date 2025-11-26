@@ -22,12 +22,23 @@ export const AnalysisScoresSchema = z.object({
 
 export type AnalysisScores = z.infer<typeof AnalysisScoresSchema>;
 
+// Token Usage Schema
+export const TokenUsageSchema = z.object({
+  input: z.number(),
+  output: z.number(),
+});
+
+export type TokenUsage = z.infer<typeof TokenUsageSchema>;
+
 // Analysis Schema
 export const AnalysisSchema = z.object({
   summarizedJa: z.string(),
   scores: AnalysisScoresSchema,
   totalScore: z.number(),
   analyzedAt: z.string(),
+  model: z.string(), // 'claude-sonnet-4-5', 'gemini-1.5-pro-latest', etc.
+  tokenUsage: TokenUsageSchema.optional(),
+  estimatedCost: z.number().optional(), // USD
 });
 
 export type Analysis = z.infer<typeof AnalysisSchema>;
@@ -42,7 +53,7 @@ export const ChangelogEntrySchema = z.object({
   collectedAt: z.string().optional(), // 収集日時（新規追加時に設定）
   category: z.array(z.string()),
   description: z.string(),
-  analysis: AnalysisSchema.optional(),
+  analyses: z.record(z.string(), AnalysisSchema).optional(), // モデル名をキーとした分析結果の辞書
 });
 
 export type ChangelogEntry = z.infer<typeof ChangelogEntrySchema>;

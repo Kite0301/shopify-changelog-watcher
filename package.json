@@ -11,6 +11,8 @@
     "fetch": "tsx src/scripts/fetch-rss.ts",
     "analyze": "tsx src/scripts/analyze.ts",
     "analyze:one": "tsx src/scripts/analyze-one.ts",
+    "test:gemini": "tsx src/scripts/test-gemini.ts",
+    "migrate": "tsx src/scripts/migrate-analyses.ts",
     "report": "tsx src/scripts/generate-report.ts",
     "lint": "eslint src --ext .ts",
     "format": "prettier --write \"src/**/*.ts\""
@@ -26,6 +28,7 @@
   "license": "MIT",
   "dependencies": {
     "@anthropic-ai/sdk": "^0.30.1",
+    "@google/genai": "^1.30.0",
     "dotenv": "^16.4.5",
     "rss-parser": "^3.13.0",
     "zod": "^3.23.8"

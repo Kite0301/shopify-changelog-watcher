@@ -27,3 +27,10 @@ export function getOptionalEnv(key: string, defaultValue = ''): string {
 export function getAnthropicApiKey(): string {
   return getRequiredEnv('ANTHROPIC_API_KEY');
 }
+
+/**
+ * Gemini API キーを取得
+ */
+export function getGeminiApiKey(): string {
+  return getRequiredEnv('GEMINI_API_KEY');
+}

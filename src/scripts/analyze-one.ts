@@ -1,18 +1,22 @@
 import { loadDataStore, saveDataStore } from '../utils/file.js';
-import { analyzeEntry } from '../analyzer/claude.js';
+import { createAllAnalyzers } from '../analyzer/factory.js';
 
 /**
- * テスト用: 未分析のエントリー1件のみを分析して保存
+ * テスト用: 未分析のエントリー1件のみを全モデルで分析して保存
  */
 async function main() {
   try {
     console.log('=== Test: Analyze One Entry ===\n');
 
+    // すべてのアナライザーを作成
+    const analyzers = createAllAnalyzers();
+    console.log(`Using analyzers: ${analyzers.map((a) => a.getModelName()).join(', ')}\n`);
+
     console.log('Loading data...');
     const dataStore = await loadDataStore();
     console.log(`✓ Loaded ${dataStore.entries.length} entries\n`);
 
-    const unanalyzedEntries = dataStore.entries.filter((entry) => !entry.analysis);
+    const unanalyzedEntries = dataStore.entries.filter((entry) => !entry.analyses);
 
     if (unanalyzedEntries.length === 0) {
       console.log('✓ All entries are already analyzed');
@@ -27,26 +31,40 @@ async function main() {
     console.log(`Source: ${entry.source}`);
     console.log(`Published: ${entry.publishedAt}\n`);
 
-    console.log('Analyzing...');
-    const result = await analyzeEntry(entry);
+    // analyses を初期化
+    entry.analyses = {};
 
-    console.log('\n=== Analysis Result ===');
-    console.log(`Total Score: ${result.analysis.totalScore}/20`);
-    console.log(`  Merchant Impact: ${result.analysis.scores.merchantImpact}/5`);
-    console.log(`  Partner Impact: ${result.analysis.scores.partnerImpact}/5`);
-    console.log(`  Japan Relevance: ${result.analysis.scores.japanRelevance}/5`);
-    console.log(`  Technical Importance: ${result.analysis.scores.technicalImportance}/5`);
-    console.log(`\nSummary (Japanese):`);
-    console.log(`  ${result.analysis.summarizedJa}`);
+    // 各アナライザーで分析
+    for (const analyzer of analyzers) {
+      const modelName = analyzer.getModelName();
+      console.log(`\nAnalyzing with ${modelName}...`);
 
-    console.log('\n=== Token Usage & Cost ===');
-    console.log(`Input tokens:  ${result.usage.inputTokens.toLocaleString()}`);
-    console.log(`Output tokens: ${result.usage.outputTokens.toLocaleString()}`);
-    console.log(`Total tokens:  ${result.usage.totalTokens.toLocaleString()}`);
-    console.log(`Estimated cost: $${result.usage.estimatedCost.toFixed(6)}\n`);
+      try {
+        const result = await analyzer.analyzeEntry(entry);
+        entry.analyses[modelName] = result;
 
-    console.log('Saving...');
-    entry.analysis = result.analysis;
+        console.log(`\n=== ${modelName} Analysis Result ===`);
+        console.log(`Total Score: ${result.totalScore}/20`);
+        console.log(`  Merchant Impact: ${result.scores.merchantImpact}/5`);
+        console.log(`  Partner Impact: ${result.scores.partnerImpact}/5`);
+        console.log(`  Japan Relevance: ${result.scores.japanRelevance}/5`);
+        console.log(`  Technical Importance: ${result.scores.technicalImportance}/5`);
+        console.log(`\nSummary (Japanese):`);
+        console.log(`  ${result.summarizedJa}`);
+
+        if (result.tokenUsage && result.estimatedCost !== undefined) {
+          console.log(`\nToken Usage & Cost:`);
+          console.log(`  Input tokens:  ${result.tokenUsage.input.toLocaleString()}`);
+          console.log(`  Output tokens: ${result.tokenUsage.output.toLocaleString()}`);
+          console.log(`  Total tokens:  ${(result.tokenUsage.input + result.tokenUsage.output).toLocaleString()}`);
+          console.log(`  Estimated cost: $${result.estimatedCost.toFixed(6)}`);
+        }
+      } catch (error) {
+        console.error(`✗ Failed with ${modelName}:`, error);
+      }
+    }
+
+    console.log('\n\nSaving...');
     await saveDataStore(dataStore);
     console.log(`✓ Saved`);
 

@@ -293,3 +293,59 @@ footer p {
         grid-template-columns: 1fr;
     }
 }
+
+/* Model Tabs */
+.model-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #e1e8ed;
+}
+
+.model-tab {
+    padding: 8px 16px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #7f8c8d;
+    transition: all 0.2s ease;
+    margin-bottom: -2px;
+}
+
+.model-tab:hover {
+    color: #2c3e50;
+    background: #f8f9fa;
+}
+
+.model-tab.active {
+    color: #3498db;
+    border-bottom-color: #3498db;
+}
+
+.model-contents {
+    position: relative;
+}
+
+.model-content {
+    display: none;
+}
+
+.model-content.active {
+    display: block;
+}
+
+/* Model Badge */
+.model-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    margin-right: 8px;
+    background: #e8f4fd;
+    color: #3498db;
+    border-radius: 4px;
+    font-size: 0.75em;
+    font-weight: 600;
+    vertical-align: middle;
+}
