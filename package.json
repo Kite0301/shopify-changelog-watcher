@@ -15,6 +15,7 @@
     "test:gemini": "tsx src/scripts/test-gemini.ts",
     "migrate": "tsx src/scripts/migrate-analyses.ts",
     "report": "tsx src/scripts/generate-report.ts",
+    "report:weekly": "tsx src/scripts/generate-weekly-report.ts",
     "lint": "eslint src --ext .ts",
     "format": "prettier --write \"src/**/*.ts\""
   },
