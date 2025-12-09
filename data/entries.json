@@ -1,6 +1,109 @@
 {
-  "lastUpdated": "2025-11-23T00:01:44.745Z",
+  "lastUpdated": "2025-12-09T05:19:43.933Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-venmo-and-paypal-are-now-treated-as-separate-payment-methods",
+      "source": "developer-changelog",
+      "title": "Venmo and PayPal are now treated as separate payment methods",
+      "link": "https://shopify.dev/changelog/venmo-and-paypal-are-now-treated-as-separate-payment-methods",
+      "publishedAt": "2025-12-08T17:00:00.000Z",
+      "collectedAt": "2025-12-09T05:19:42.623Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Breaking API Change",
+        "Functions",
+        "2026-01"
+      ],
+      "description": " <div class=\"\"><p>Starting in API version <code>2026-01</code>, Venmo and PayPal are treated as separate payment methods when using payment customization functions. Previously, hiding PayPal's express checkout placement would automatically hide Venmo as well. With this change, you can now hide or show Venmo independently from PayPal in your payment customization logic.</p>\n<h2>Action Required</h2>\n<p>If you were previously hiding PayPal's accelerated checkout placement to also hide Venmo, you must now explicitly hide Venmo separately in your payment customization function.</p>\n<h3>Previous Behavior (Automatic):</h3>\n<ul>\n<li>Hiding PayPal's <a href=\"https://shopify.dev/docs/api/functions/2026-01/payment-customization#Input.fields.paymentMethods.placements.ACCELERATED_CHECKOUT\" target=\"_blank\" class=\"body-link\"><code>ACCELERATED_CHECKOUT</code></a> placement would automatically hide Venmo.</li>\n</ul>\n<h3>New Behavior (Explicit Control Required):</h3>\n<ul>\n<li>Hiding PayPal's <code>ACCELERATED_CHECKOUT</code> placement only hides PayPal.</li>\n<li>To hide Venmo, you must now explicitly hide Venmo's placements separately.</li>\n</ul>\n<p>To maintain the previous behavior of hiding both PayPal and Venmo together, update your payment customization function logic to explicitly target the Venmo payment method.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "summarizedJa": "APIバージョン2026-01以降、VenmoとPayPalが決済カスタマイズ機能において別々の決済方法として扱われるようになります。従来はPayPalの高速チェックアウトを非表示にすると自動的にVenmoも非表示になりましたが、今後はVenmoを非表示にする場合は明示的に指定する必要があります。決済カスタマイズ関数でPayPalとVenmoの両方を非表示にしたい場合は、コードの更新が必要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 1,
+            "technicalImportance": 4
+          },
+          "totalScore": 11,
+          "analyzedAt": "2025-12-09T05:19:49.638Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1237,
+            "output": 234
+          },
+          "estimatedCost": 0.007221
+        },
+        "gemini-2.5-flash": {
+          "summarizedJa": "APIバージョン2026-01以降、Shopifyの決済カスタマイズ機能において、VenmoとPayPalが個別の決済方法として扱われるようになります。これまでPayPalの高速チェックアウトを非表示にするとVenmoも自動的に非表示になっていましたが、今後はVenmoを個別に明示的に非表示にする設定が必要です。もし以前の挙動に依存していた場合、決済カスタマイズロジックの更新が必須となります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 1,
+            "technicalImportance": 4
+          },
+          "totalScore": 9,
+          "analyzedAt": "2025-12-09T05:19:56.590Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 916,
+            "output": 152
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-order-editing-new-validations-and-handled-usererrors",
+      "source": "developer-changelog",
+      "title": "Order editing new validations and handled `userErrors`",
+      "link": "https://shopify.dev/changelog/order-editing-new-validations-and-handled-usererrors",
+      "publishedAt": "2025-12-05T17:00:00.000Z",
+      "collectedAt": "2025-12-09T05:19:42.623Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-01"
+      ],
+      "description": " <div class=\"\"><p>Order editing mutations now include additional validations. When these validations fail, the API returns relevant <code>userErrors</code> in the response. These changes apply to all supported API versions.</p>\n<h2>Gift card amount limit</h2>\n<p>Gift cards added with the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/ordereditaddvariant\" target=\"_blank\" class=\"body-link\">OrderEditAddVariant</a> mutation are now subject to a maximum value limit. Limits vary by currency but are set high enough to accommodate typical merchant use cases.</p>\n<h3>Error message</h3>\n<p><code>Gift card amount exceeds the limit of {limit}</code></p>\n<h2>Line item count limit</h2>\n<p>Orders are limited to a maximum number of active line items when using the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/ordereditaddvariant\" target=\"_blank\" class=\"body-link\">OrderEditAddVariant</a> and <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/ordereditaddcustomitem\" target=\"_blank\" class=\"body-link\">OrderEditAddCustomItem</a> mutations. Most shops have a limit of 500 line items.</p>\n<h3>Error message</h3>\n<p><code>The number of line items exceeds the limit of {limit}</code></p>\n<h2>Line item subtotal limit</h2>\n<p>Orders now validate that the combined value of all active line items stays within the subtotal limit. </p>\n<p>This validation already exists at checkout and now applies to order editing as well. The current limit is set high enough to avoid blocking legitimate orders in normal use.</p>\n<h3>Error message</h3>\n<p><code>Line item subtotal exceeds the limit of {limit}</code></p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "summarizedJa": "注文編集API（OrderEditAddVariant、OrderEditAddCustomItem）に新しいバリデーションが追加されました。ギフトカードの金額上限、注文あたりの商品明細数の上限（ほとんどのストアで500件）、商品明細の小計上限の3つの制限が設けられ、制限を超えた場合はuserErrorsが返されます。これらの変更はすべてのAPIバージョンに適用されます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2025-12-09T05:20:02.425Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1323,
+            "output": 221
+          },
+          "estimatedCost": 0.0072840000000000005
+        },
+        "gemini-2.5-flash": {
+          "summarizedJa": "Shopifyの注文編集APIに、ギフトカードの金額、注文内の商品アイテム数、および商品アイテムの合計金額に関する新たなバリデーションが追加されました。これにより、API経由で注文を編集する際にこれらの上限を超過すると、エラーが返されるようになります。日本のマーチャントやパートナーは、API連携システムやカスタムアプリで注文編集を行う際に、これらの新しい制限を考慮する必要があります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2025-12-09T05:20:10.857Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1012,
+            "output": 141
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-tax-summary-webhook-and-calculation-requests-now-includes-shop-and-presentment-currency-amount",
       "source": "developer-changelog",
@@ -403,6 +506,54 @@
           "tokenUsage": {
             "input": 900,
             "output": 133
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-change-all-ids-to-global-ids-in-tax-summary-and-tax-calculation-request",
+      "source": "shopify-changelog",
+      "title": "Resource IDs in tax webhook summary section and calculation requests migrate to Global IDs",
+      "link": "https://changelog.shopify.com/posts/change-all-ids-to-global-ids-in-tax-summary-and-tax-calculation-request",
+      "publishedAt": "2025-11-12T17:00:00.000Z",
+      "collectedAt": "2025-12-09T05:19:43.921Z",
+      "category": [
+        "Partners"
+      ],
+      "description": "\n        <p>Tax Partner Apps now receive consistent identifiers that match Shopify's GraphQL Admin API. Starting with API version 2026-01, these apps will receive Global IDs (GIDs) for customers, products, line items, and sales agreements, aligning with Shopify's standard <a href=\"https://shopify.dev/docs/api/usage/gids\">guidance for using Global IDs</a> across all APIs.</p>\n\n<p>This change makes the tax calculation API consistent with how partners interact with other Shopify APIs, using the same identifier format throughout the platform. Tax service providers can now use the same IDs they receive from other Shopify endpoints, eliminating the need to manage different ID formats for tax-specific integrations.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "summarizedJa": "2026-01以降のAPIバージョンから、Tax Partner Apps（税金計算連携アプリ）で使用されるリソースIDが、既存の数値形式からShopifyのGraphQL Admin APIと統一されたグlobal ID（GID）形式に変更されます。これにより、顧客、商品、ラインアイテム、販売契約などのIDがShopifyの他のAPIと同じ形式で提供されるようになり、税金連携における開発がシンプルになります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 2,
+            "technicalImportance": 4
+          },
+          "totalScore": 11,
+          "analyzedAt": "2025-12-09T05:20:23.389Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1020,
+            "output": 217
+          },
+          "estimatedCost": 0.006314999999999999
+        },
+        "gemini-2.5-flash": {
+          "summarizedJa": "Shopifyの税金計算パートナーアプリにおいて、APIバージョン2026-01以降、顧客、商品、ラインアイテムなどのIDがGlobal ID (GID) に統一されます。これにより、税金計算APIが他のShopify APIと一貫性を持つようになり、パートナーは異なるID形式を管理する必要がなくなります。日本の税金サービスプロバイダーや開発者は、この変更に対応することで、より効率的な連携が可能になります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2025-12-09T05:20:30.858Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 761,
+            "output": 149
           },
           "estimatedCost": 0
         }
