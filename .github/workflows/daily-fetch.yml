@@ -55,11 +55,12 @@ jobs:
 
           # 出力から統計情報を抽出
           ANALYZED=$(grep "Successfully analyzed:" analyze-output.txt | awk '{print $3}')
-          COST=$(grep "Total cost:" analyze-output.txt | awk '{print $3}')
+          # コストは全モデルの合計（最後のTotal cost行を取得してドル記号を削除）
+          COST=$(grep "Total cost:" analyze-output.txt | tail -1 | awk '{print $3}' | sed 's/\$//')
 
           # 環境変数に設定
           echo "analyzed=${ANALYZED:-0}" >> $GITHUB_OUTPUT
-          echo "cost=${COST:-0}" >> $GITHUB_OUTPUT
+          echo "cost=${COST:-0.0000}" >> $GITHUB_OUTPUT
 
           # 出力内容を表示
           cat analyze-output.txt
