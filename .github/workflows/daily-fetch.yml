@@ -55,12 +55,19 @@ jobs:
 
           # 出力から統計情報を抽出
           ANALYZED=$(grep "Successfully analyzed:" analyze-output.txt | awk '{print $3}')
-          # コストは全モデルの合計（最後のTotal cost行を取得してドル記号を削除）
-          COST=$(grep "Total cost:" analyze-output.txt | tail -1 | awk '{print $3}' | sed 's/\$//')
+
+          # モデル別のコストとトークン数を抽出
+          CLAUDE_COST=$(grep -A 4 "claude-sonnet-4-5:" analyze-output.txt | grep "Total cost:" | awk '{print $3}' | sed 's/\$//')
+          CLAUDE_TOKENS=$(grep -A 4 "claude-sonnet-4-5:" analyze-output.txt | grep "Total tokens:" | awk '{print $3}' | sed 's/,//g')
+          GEMINI_COST=$(grep -A 4 "gemini-2.5-flash:" analyze-output.txt | grep "Total cost:" | awk '{print $3}' | sed 's/\$//')
+          GEMINI_TOKENS=$(grep -A 4 "gemini-2.5-flash:" analyze-output.txt | grep "Total tokens:" | awk '{print $3}' | sed 's/,//g')
 
           # 環境変数に設定
           echo "analyzed=${ANALYZED:-0}" >> $GITHUB_OUTPUT
-          echo "cost=${COST:-0.0000}" >> $GITHUB_OUTPUT
+          echo "claude_cost=${CLAUDE_COST:-0.0000}" >> $GITHUB_OUTPUT
+          echo "claude_tokens=${CLAUDE_TOKENS:-0}" >> $GITHUB_OUTPUT
+          echo "gemini_cost=${GEMINI_COST:-0.0000}" >> $GITHUB_OUTPUT
+          echo "gemini_tokens=${GEMINI_TOKENS:-0}" >> $GITHUB_OUTPUT
 
           # 出力内容を表示
           cat analyze-output.txt
@@ -86,7 +93,10 @@ jobs:
           New entries: ${{ steps.fetch.outputs.new_entries }}
           Analyzed: ${{ steps.analyze.outputs.analyzed }}
           Total entries: ${{ steps.fetch.outputs.total_entries }}
-          Analysis cost: ${{ steps.analyze.outputs.cost }}
+
+          AI Analysis:
+          - Claude Sonnet 4.5: \$${{ steps.analyze.outputs.claude_cost }} (${{ steps.analyze.outputs.claude_tokens }} tokens)
+          - Gemini 2.5 Flash: \$${{ steps.analyze.outputs.gemini_cost }} (${{ steps.analyze.outputs.gemini_tokens }} tokens)
 
           🤖 Automated update by GitHub Actions"
 
@@ -121,12 +131,15 @@ jobs:
                     {
                       "type": "mrkdwn",
                       "text": "*Total Entries:*\n${{ steps.fetch.outputs.total_entries }}"
-                    },
-                    {
-                      "type": "mrkdwn",
-                      "text": "*AI Cost:*\n${{ steps.analyze.outputs.cost }}"
                     }
                   ]
+                },
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "*AI Analysis Cost:*\n• Claude Sonnet 4.5: \$${{ steps.analyze.outputs.claude_cost }} (${{ steps.analyze.outputs.claude_tokens }} tokens)\n• Gemini 2.5 Flash: \$${{ steps.analyze.outputs.gemini_cost }} (${{ steps.analyze.outputs.gemini_tokens }} tokens)"
+                  }
                 },
                 {
                   "type": "section",
