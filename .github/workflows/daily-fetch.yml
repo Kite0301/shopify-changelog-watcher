@@ -48,6 +48,7 @@ jobs:
         if: steps.fetch.outputs.new_entries != '0'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           # 未分析のエントリーを分析
           npm run analyze > analyze-output.txt 2>&1
