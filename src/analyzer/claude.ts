@@ -73,6 +73,7 @@ export class ClaudeAnalyzer implements Analyzer {
     const estimatedCost = inputCost + outputCost;
 
     return {
+      titleJa: parsed.titleJa,
       summarizedJa: parsed.summarizedJa,
       scores: {
         merchantImpact: parsed.scores.merchantImpact,

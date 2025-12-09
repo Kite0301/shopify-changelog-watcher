@@ -49,6 +49,10 @@ async function main() {
         console.log(`  Partner Impact: ${result.scores.partnerImpact}/5`);
         console.log(`  Japan Relevance: ${result.scores.japanRelevance}/5`);
         console.log(`  Technical Importance: ${result.scores.technicalImportance}/5`);
+        if (result.titleJa) {
+          console.log(`\nTitle (Japanese):`);
+          console.log(`  ${result.titleJa}`);
+        }
         console.log(`\nSummary (Japanese):`);
         console.log(`  ${result.summarizedJa}`);
 

@@ -32,6 +32,7 @@ export type TokenUsage = z.infer<typeof TokenUsageSchema>;
 
 // Analysis Schema
 export const AnalysisSchema = z.object({
+  titleJa: z.string().optional(), // 日本語タイトル
   summarizedJa: z.string(),
   scores: AnalysisScoresSchema,
   totalScore: z.number(),

@@ -120,19 +120,22 @@ function generateSummarySlide(report: WeeklyReport): string {
 
   if (entries.high.length > 0) {
     entries.high.forEach(item => {
-      tocItems.push(`<div class="toc-item high"><span class="toc-icon">🔥</span><span class="toc-title">${item.entry.title}</span><span class="toc-score">${item.score}pt</span></div>`);
+      const title = item.analysis.titleJa || item.entry.title;
+      tocItems.push(`<div class="toc-item high"><span class="toc-icon">🔥</span><span class="toc-title">${title}</span><span class="toc-score">${item.score}pt</span></div>`);
     });
   }
 
   if (entries.medium.length > 0) {
     entries.medium.forEach(item => {
-      tocItems.push(`<div class="toc-item medium"><span class="toc-icon">⚠️</span><span class="toc-title">${item.entry.title}</span><span class="toc-score">${item.score}pt</span></div>`);
+      const title = item.analysis.titleJa || item.entry.title;
+      tocItems.push(`<div class="toc-item medium"><span class="toc-icon">⚠️</span><span class="toc-title">${title}</span><span class="toc-score">${item.score}pt</span></div>`);
     });
   }
 
   if (entries.low.length > 0) {
     entries.low.forEach(item => {
-      tocItems.push(`<div class="toc-item low"><span class="toc-icon">📌</span><span class="toc-title">${item.entry.title}</span><span class="toc-score">${item.score}pt</span></div>`);
+      const title = item.analysis.titleJa || item.entry.title;
+      tocItems.push(`<div class="toc-item low"><span class="toc-icon">📌</span><span class="toc-title">${title}</span><span class="toc-score">${item.score}pt</span></div>`);
     });
   }
 
@@ -195,12 +198,13 @@ function generateDetailSlide(item: ScoredEntry, index: number, category: string)
   // スコアバーの視覚化（20点満点）
   const scoreBar = generateScoreBar(score);
   const scoreColor = score >= 12 ? 'high' : score >= 8 ? 'medium' : 'low';
+  const displayTitle = analysis.titleJa || entry.title;
 
   return `<!-- _class: detail -->
 
 # ${category} #${index}
 
-## ${entry.title}
+## ${displayTitle}
 
 <div class="score-and-link-container">
 <div class="score-container">

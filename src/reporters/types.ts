@@ -34,6 +34,7 @@ export interface ScoredEntry {
   entry: ChangelogEntry;
   score: number;
   analysis: {
+    titleJa?: string; // 日本語タイトル
     summarizedJa: string;
     scores: {
       merchantImpact: number;

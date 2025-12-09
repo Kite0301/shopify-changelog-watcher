@@ -1,6 +1,7 @@
 import { ChangelogEntry } from '../types/index.js';
 
 export interface AnalysisResult {
+  titleJa?: string;
   summarizedJa: string;
   scores: {
     merchantImpact: number;

@@ -115,7 +115,9 @@ function generateDetailedEntry(item: ScoredEntry, index: number): string {
     ? 'Shopify Changelog'
     : 'Developer Changelog';
 
-  return `### ${index}. [${entry.title}](${entry.link}) - スコア: ${score}点
+  const displayTitle = analysis.titleJa || entry.title;
+
+  return `### ${index}. [${displayTitle}](${entry.link}) - スコア: ${score}点
 
 **公開日**: ${publishedDate}
 **収集日**: ${collectedDate}
