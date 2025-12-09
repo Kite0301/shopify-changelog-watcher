@@ -95,7 +95,7 @@ AIが4つの基準をもとに各5点満点、**合計20点満点**で評価
 <div class="toc-item medium"><span class="toc-icon">⚠️</span><span class="toc-title">Google Cloud Run デプロイメントの新しいチュートリアルを公開</span><span class="toc-score">11pt</span></div>
 <div class="toc-item medium"><span class="toc-icon">⚠️</span><span class="toc-title">Sidekick VoiceがShopifyモバイルアプリで利用可能になりました</span><span class="toc-score">10pt</span></div>
 <div class="toc-item medium"><span class="toc-icon">⚠️</span><span class="toc-title">委任可能な請求権限をリリース</span><span class="toc-score">10pt</span></div>
-<div class="toc-item low"><span class="toc-icon">📌</span><span class="toc-title">Faster Invoice Payment Confirmation for Indian Merchants</span><span class="toc-score">5pt</span></div>
+<div class="toc-item low"><span class="toc-icon">📌</span><span class="toc-title">インド加盟店向け請求書支払い確認の迅速化</span><span class="toc-score">5pt</span></div>
 </div>
 </div>
 
@@ -611,7 +611,7 @@ ShopifyモバイルアプリでSidekickの音声機能が利用可能になり�
 
 # 📌 通常更新 #1
 
-## Faster Invoice Payment Confirmation for Indian Merchants
+## インド加盟店向け請求書支払い確認の迅速化
 
 <div class="score-and-link-container">
 <div class="score-container">

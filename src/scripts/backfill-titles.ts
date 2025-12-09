@@ -3,11 +3,11 @@ import { loadDataStore, saveDataStore } from '../utils/file.js';
 import { getAnthropicApiKey } from '../utils/env.js';
 
 /**
- * 2025年11月以降のエントリーに日本語タイトルのみを追加（軽量版）
+ * 2025年11月以降に収集されたエントリーに日本語タイトルのみを追加（軽量版）
  */
 async function main() {
   try {
-    console.log('=== Backfill Japanese Titles (November 2025+) ===\n');
+    console.log('=== Backfill Japanese Titles (Collected in November 2025+) ===\n');
 
     // Anthropic クライアントを初期化
     const anthropic = new Anthropic({ apiKey: getAnthropicApiKey() });
@@ -16,14 +16,15 @@ async function main() {
     const dataStore = await loadDataStore();
     console.log(`✓ Loaded ${dataStore.entries.length} entries\n`);
 
-    // 2025年11月1日以降のエントリーをフィルタリング
+    // 2025年11月1日以降に収集されたエントリーをフィルタリング
     const cutoffDate = new Date('2025-11-01T00:00:00Z');
     const targetEntries = dataStore.entries.filter((entry) => {
-      const publishedDate = new Date(entry.publishedAt);
-      return publishedDate >= cutoffDate;
+      if (!entry.collectedAt) return false;
+      const collectedDate = new Date(entry.collectedAt);
+      return collectedDate >= cutoffDate;
     });
 
-    console.log(`Found ${targetEntries.length} entries from November 2025 onwards\n`);
+    console.log(`Found ${targetEntries.length} entries collected from November 2025 onwards\n`);
 
     let processedCount = 0;
     let skippedCount = 0;

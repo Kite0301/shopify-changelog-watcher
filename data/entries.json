@@ -1170,6 +1170,7 @@
       "description": "\n        <p>We've improved the invoice payment experience for merchants in India. When you pay an invoice, you'll now be redirected directly to your payment provider to complete authentication, reducing payment confirmation time from over 30 hours to around 30 seconds. 🚀</p>\n\n<p>Previously, you needed to wait for a notification from your bank, then navigate to your banking portal separately to enter your OTP and complete payment. Now, you'll get a notification from Razorpay and be redirected immediately to complete authentication in one seamless flow. Your payment will be confirmed within seconds.</p>\n\n<p>This update applies to all manual invoice payments in your Shopify admin and is available to all merchants in India.</p>\n\n<p>Learn more about the new payment flow in the <a href=\"https://help.shopify.com/en/manual/your-account/manage-billing/paying-your-bills/making-payments/account-billing-india/india-pay-bills\">Shopify Help Center</a></p>\n\n      ",
       "analyses": {
         "claude-sonnet-4-5": {
+          "titleJa": "インド加盟店向け請求書支払い確認の迅速化",
           "summarizedJa": "インド市場のマーチャント向けに、請求書の支払い確認プロセスが大幅に改善されました。支払い時に決済プロバイダー(Razorpay)へ直接リダイレクトされ、認証を完了できるようになったことで、従来30時間以上かかっていた支払い確認時間が約30秒に短縮されます。この変更はインドの全マーチャントのShopify管理画面での手動請求書支払いに適用されます。",
           "scores": {
             "merchantImpact": 1,
@@ -2677,6 +2678,7 @@
       "description": "\n        <p>We’ve added automatic monthly retries to the Pay-in-full credit card payment option because this respects the merchants original choice. Now merchants can choose the Pay-in-Full payment option and that will not be disabled in case of payment failure. This enables merchants to repay their statements faster allowing them to save on fees and have extra spend capacity.</p>\n\n      ",
       "analyses": {
         "claude-sonnet-4-5": {
+          "titleJa": "全額払いのクレジットカード決済オプションは毎月自動的に再試行されます",
           "summarizedJa": "Shopify Creditの一括払いオプションで、決済が失敗した場合でも毎月自動的に再試行されるようになりました。これにより、マーチャントは当初選択した一括払いが無効化されることなく、手数料を節約し、利用可能枠を早期に回復できるようになります。",
           "scores": {
             "merchantImpact": 2,
