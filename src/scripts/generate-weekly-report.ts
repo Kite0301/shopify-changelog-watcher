@@ -4,6 +4,7 @@ import { loadDataStore } from '../utils/file.js';
 import { getWeekNumber } from '../utils/date.js';
 import { getPreviousWeek, getWeekRange, parseWeekNumber } from '../utils/week.js';
 import { generateMarkdownReport } from '../reporters/markdown-reporter.js';
+import { generateMarpSlides } from '../reporters/marp-reporter.js';
 import {
   WeeklyReport,
   WeeklyReportMeta,
@@ -44,16 +45,24 @@ export async function generateWeeklyReport(options: ReportGeneratorOptions = {})
   // Markdown生成
   const markdown = generateMarkdownReport(report);
 
+  // Marpスライド生成
+  const slides = generateMarpSlides(report);
+
   // 出力ディレクトリ作成
   if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir, { recursive: true });
     console.log(`✓ 出力ディレクトリ作成: ${outputDir}`);
   }
 
-  // ファイル保存
+  // Markdownレポート保存
   const reportPath = path.join(outputDir, `${weekNumber}.md`);
   fs.writeFileSync(reportPath, markdown, 'utf-8');
-  console.log(`✓ レポート保存: ${reportPath}`);
+  console.log(`✓ Markdownレポート保存: ${reportPath}`);
+
+  // Marpスライド保存
+  const slidesPath = path.join(outputDir, `${weekNumber}-slides.md`);
+  fs.writeFileSync(slidesPath, slides, 'utf-8');
+  console.log(`✓ Marpスライド保存: ${slidesPath}`);
 
   console.log(`🎉 週次レポート生成完了！`);
 }
