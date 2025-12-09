@@ -1,0 +1,200 @@
+name: Weekly Report Generation
+
+on:
+  schedule:
+    # 毎週月曜 10:00 JST (01:00 UTC)
+    - cron: '0 1 * * 1'
+  workflow_dispatch: # 手動実行を許可
+    inputs:
+      week_number:
+        description: 'Week number to generate report for (e.g., 2025-W47). Leave empty for previous week.'
+        required: false
+        type: string
+
+jobs:
+  generate-report:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write # リポジトリへの書き込み権限
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate weekly report
+        id: generate
+        run: |
+          # 週番号の指定がある場合はそれを使用、なければ前週
+          if [[ -n "${{ inputs.week_number }}" ]]; then
+            WEEK_NUMBER="${{ inputs.week_number }}"
+            npm run report:weekly "${WEEK_NUMBER}" > report-output.txt 2>&1
+          else
+            npm run report:weekly > report-output.txt 2>&1
+            # 前週の週番号を取得（出力から抽出）
+            WEEK_NUMBER=$(grep "週次レポート生成開始:" report-output.txt | awk '{print $3}')
+          fi
+
+          # 週番号を環境変数に設定
+          echo "week_number=${WEEK_NUMBER}" >> $GITHUB_OUTPUT
+
+          # レポートファイルが生成されたか確認
+          REPORT_FILE="data/reports/${WEEK_NUMBER}.md"
+          if [[ -f "${REPORT_FILE}" ]]; then
+            # レポート内容から統計を抽出
+            TOTAL_ENTRIES=$(grep "総更新数:" "${REPORT_FILE}" | sed 's/.*総更新数: \([0-9]*\)件.*/\1/')
+            HIGH_PRIORITY=$(grep "超重要更新" "${REPORT_FILE}" | grep -o '[0-9]*件' | head -1 | grep -o '[0-9]*')
+            MEDIUM_PRIORITY=$(grep "重要更新（スコア8-11点）" "${REPORT_FILE}" | grep -o '[0-9]*件' | head -1 | grep -o '[0-9]*')
+
+            echo "total_entries=${TOTAL_ENTRIES:-0}" >> $GITHUB_OUTPUT
+            echo "high_priority=${HIGH_PRIORITY:-0}" >> $GITHUB_OUTPUT
+            echo "medium_priority=${MEDIUM_PRIORITY:-0}" >> $GITHUB_OUTPUT
+            echo "report_generated=true" >> $GITHUB_OUTPUT
+          else
+            echo "report_generated=false" >> $GITHUB_OUTPUT
+          fi
+
+          # 出力内容を表示
+          cat report-output.txt
+
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if [[ -n $(git status -s data/reports/) ]]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push report
+        if: steps.check_changes.outputs.changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          git add data/reports/
+          git commit -m "Generate weekly report for ${{ steps.generate.outputs.week_number }}
+
+          Total entries: ${{ steps.generate.outputs.total_entries }}
+          High priority (12+): ${{ steps.generate.outputs.high_priority }}
+          Medium priority (8-11): ${{ steps.generate.outputs.medium_priority }}
+
+          🤖 Automated update by GitHub Actions"
+
+          git push
+
+      - name: Send Slack notification (success)
+        if: success() && steps.check_changes.outputs.changes == 'true'
+        uses: slackapi/slack-github-action@v1.27.0
+        with:
+          payload: |
+            {
+              "text": "📊 Weekly Shopify Changelog Report Generated",
+              "blocks": [
+                {
+                  "type": "header",
+                  "text": {
+                    "type": "plain_text",
+                    "text": "📊 Weekly Report Generated"
+                  }
+                },
+                {
+                  "type": "section",
+                  "fields": [
+                    {
+                      "type": "mrkdwn",
+                      "text": "*Week:*\n${{ steps.generate.outputs.week_number }}"
+                    },
+                    {
+                      "type": "mrkdwn",
+                      "text": "*Total Entries:*\n${{ steps.generate.outputs.total_entries }}"
+                    },
+                    {
+                      "type": "mrkdwn",
+                      "text": "*High Priority:*\n${{ steps.generate.outputs.high_priority }}"
+                    },
+                    {
+                      "type": "mrkdwn",
+                      "text": "*Medium Priority:*\n${{ steps.generate.outputs.medium_priority }}"
+                    }
+                  ]
+                },
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "View the report on <https://github.com/${{ github.repository }}/blob/main/data/reports/${{ steps.generate.outputs.week_number }}.md|GitHub>"
+                  }
+                },
+                {
+                  "type": "context",
+                  "elements": [
+                    {
+                      "type": "mrkdwn",
+                      "text": "Workflow: <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|${{ github.workflow }}>"
+                    }
+                  ]
+                }
+              ]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+
+      - name: Send Slack notification (no entries)
+        if: success() && steps.check_changes.outputs.changes == 'false'
+        uses: slackapi/slack-github-action@v1.27.0
+        with:
+          payload: |
+            {
+              "text": "✅ Weekly Report Check Complete - No Entries",
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "✅ Weekly report generation completed for *${{ steps.generate.outputs.week_number }}*.\n\nNo changelog entries were collected during this week."
+                  }
+                }
+              ]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+
+      - name: Send Slack notification (failure)
+        if: failure()
+        uses: slackapi/slack-github-action@v1.27.0
+        with:
+          payload: |
+            {
+              "text": "❌ Weekly Report Generation Failed",
+              "blocks": [
+                {
+                  "type": "header",
+                  "text": {
+                    "type": "plain_text",
+                    "text": "❌ Weekly Report Generation Failed"
+                  }
+                },
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "The weekly report generation workflow encountered an error.\n\nPlease check the <${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}|workflow logs> for details."
+                  }
+                }
+              ]
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
