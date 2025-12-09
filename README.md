@@ -4,7 +4,7 @@ Shopify公式のchangelogを自動収集し、AI分析により日本のマー�
 
 ## 📊 収集データを見る
 
-**👉 [https://kite0301.github.io/shopify-changelog-watcher/](https://kite0301.github.io/shopify-changelog-watcher/)**
+**👉 [https://Kite0301.github.io/shopify-changelog-watcher/](https://Kite0301.github.io/shopify-changelog-watcher/)**
 
 - 日本語要約付き
 - 重要度スコア表示
@@ -120,7 +120,7 @@ GitHubリポジトリの **Actions** タブから "Daily RSS Fetch" を選択し
 
 ## データビューア（GitHub Pages）
 
-**🔗 https://kite0301.github.io/shopify-changelog-watcher/**
+**🔗 https://Kite0301.github.io/shopify-changelog-watcher/**
 
 収集・分析されたデータは GitHub Pages で閲覧できます。
 
