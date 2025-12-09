@@ -136,6 +136,7 @@ function scoreEntries(entries: ChangelogEntry[]): ScoredEntry[] {
         entry,
         score: analysis.totalScore,
         analysis: {
+          titleJa: analysis.titleJa,
           summarizedJa: analysis.summarizedJa,
           scores: analysis.scores,
           analyzedAt: analysis.analyzedAt,

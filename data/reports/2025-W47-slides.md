@@ -86,12 +86,12 @@ AIが4つの基準をもとに各5点満点、**合計20点満点**で評価
 <div class="summary-right">
 <h2 class="toc-heading">📋 目次</h2>
 <div class="toc-list">
-<div class="toc-item high"><span class="toc-icon">🔥</span><span class="toc-title">Tax summary webhook and calculation requests now includes shop and presentment currency amount</span><span class="toc-score">12pt</span></div>
-<div class="toc-item medium"><span class="toc-icon">⚠️</span><span class="toc-title">Tax summary webhook `created_at` field now returns UTC timezone</span><span class="toc-score">11pt</span></div>
-<div class="toc-item medium"><span class="toc-icon">⚠️</span><span class="toc-title">Shopify Dev MCP now supports POS UI extensions</span><span class="toc-score">11pt</span></div>
-<div class="toc-item medium"><span class="toc-icon">⚠️</span><span class="toc-title">Deprecate `in_catalog` and `catalogs` fields from object type `Location`</span><span class="toc-score">10pt</span></div>
-<div class="toc-item medium"><span class="toc-icon">⚠️</span><span class="toc-title">Receive weekly store order summary in your inbox</span><span class="toc-score">10pt</span></div>
-<div class="toc-item medium"><span class="toc-icon">⚠️</span><span class="toc-title">Get to Shopify Support faster from the Shopify Help Center</span><span class="toc-score">9pt</span></div>
+<div class="toc-item high"><span class="toc-icon">🔥</span><span class="toc-title">税金サマリーWebhookと計算リクエストにショップ通貨と表示通貨の金額を追加</span><span class="toc-score">12pt</span></div>
+<div class="toc-item medium"><span class="toc-icon">⚠️</span><span class="toc-title">税務サマリーWebhookの`created_at`フィールドがUTCタイムゾーンを返すように変更</span><span class="toc-score">11pt</span></div>
+<div class="toc-item medium"><span class="toc-icon">⚠️</span><span class="toc-title">Shopify Dev MCPがPOS UI拡張機能に対応</span><span class="toc-score">11pt</span></div>
+<div class="toc-item medium"><span class="toc-icon">⚠️</span><span class="toc-title">`Location`オブジェクト型の`in_catalog`フィールドと`catalogs`フィールドの廃止</span><span class="toc-score">10pt</span></div>
+<div class="toc-item medium"><span class="toc-icon">⚠️</span><span class="toc-title">店舗注文の週次サマリーをメールで受信</span><span class="toc-score">10pt</span></div>
+<div class="toc-item medium"><span class="toc-icon">⚠️</span><span class="toc-title">ShopifyヘルプセンターからShopifyサポートへ素早くアクセス</span><span class="toc-score">9pt</span></div>
 <div class="toc-item low"><span class="toc-icon">📌</span><span class="toc-title">Pay-in-Full credit card payment option will automatically retry each month</span><span class="toc-score">6pt</span></div>
 </div>
 </div>
@@ -104,7 +104,7 @@ AIが4つの基準をもとに各5点満点、**合計20点満点**で評価
 
 # 🔥 超重要更新 #1
 
-## Tax summary webhook and calculation requests now includes shop and presentment currency amount
+## 税金サマリーWebhookと計算リクエストにショップ通貨と表示通貨の金額を追加
 
 <div class="score-and-link-container">
 <div class="score-container">
@@ -160,7 +160,7 @@ AIが4つの基準をもとに各5点満点、**合計20点満点**で評価
 
 # ⚠️ 重要更新 #1
 
-## Tax summary webhook `created_at` field now returns UTC timezone
+## 税務サマリーWebhookの`created_at`フィールドがUTCタイムゾーンを返すように変更
 
 <div class="score-and-link-container">
 <div class="score-container">
@@ -216,7 +216,7 @@ AIが4つの基準をもとに各5点満点、**合計20点満点**で評価
 
 # ⚠️ 重要更新 #2
 
-## Shopify Dev MCP now supports POS UI extensions
+## Shopify Dev MCPがPOS UI拡張機能に対応
 
 <div class="score-and-link-container">
 <div class="score-container">
@@ -272,7 +272,7 @@ Shopify Dev MCPサーバーが、POS（販売時点管理）UI拡張機能のコ
 
 # ⚠️ 重要更新 #3
 
-## Deprecate `in_catalog` and `catalogs` fields from object type `Location`
+## `Location`オブジェクト型の`in_catalog`フィールドと`catalogs`フィールドの廃止
 
 <div class="score-and-link-container">
 <div class="score-container">
@@ -328,7 +328,7 @@ Admin GraphQL APIのLocationオブジェクトから、`in_catalog`と`catalogs`
 
 # ⚠️ 重要更新 #4
 
-## Receive weekly store order summary in your inbox
+## 店舗注文の週次サマリーをメールで受信
 
 <div class="score-and-link-container">
 <div class="score-container">
@@ -384,7 +384,7 @@ Admin GraphQL APIのLocationオブジェクトから、`in_catalog`と`catalogs`
 
 # ⚠️ 重要更新 #5
 
-## Get to Shopify Support faster from the Shopify Help Center
+## ShopifyヘルプセンターからShopifyサポートへ素早くアクセス
 
 <div class="score-and-link-container">
 <div class="score-container">
