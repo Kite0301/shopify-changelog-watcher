@@ -107,7 +107,6 @@ ${items.join('\n')}`;
  */
 function generateDetailedEntry(item: ScoredEntry, index: number): string {
   const { entry, score, analysis } = item;
-  const categories = entry.category.join(', ');
   const publishedDate = formatDate(new Date(entry.publishedAt));
   const collectedDate = entry.collectedAt ? formatDate(new Date(entry.collectedAt)) : 'N/A';
 
@@ -120,7 +119,6 @@ function generateDetailedEntry(item: ScoredEntry, index: number): string {
 
 **公開日**: ${publishedDate}
 **収集日**: ${collectedDate}
-**カテゴリ**: ${categories || 'なし'}
 **情報源**: ${sourceName}
 
 #### AI分析サマリー（Claude Sonnet 4.5）
@@ -139,12 +137,7 @@ ${analysis.summarizedJa}
  * 週次トレンドセクション生成
  */
 function generateTrendsSection(report: WeeklyReport): string {
-  const { stats, entries } = report;
-
-  // カテゴリーTop3
-  const topCategoriesText = stats.topCategories.length > 0
-    ? stats.topCategories.map(c => `${c.category}（${c.count}件）`).join('、')
-    : 'なし';
+  const { entries } = report;
 
   // 日本市場関連性の高い更新を抽出（japanRelevance >= 4）
   const allEntries = [...entries.high, ...entries.medium, ...entries.low];
@@ -159,7 +152,6 @@ function generateTrendsSection(report: WeeklyReport): string {
 
   return `## 📈 週次トレンド
 
-- 最も多いカテゴリー: ${topCategoriesText}
 - 日本市場関連性の高い更新: ${japanRelevantCount}件
 - 技術的に重要な変更: ${breakingChangesCount}件`;
 }
@@ -170,5 +162,5 @@ function generateTrendsSection(report: WeeklyReport): string {
 function generateFooter(): string {
   return `---
 
-*このレポートは自動生成されています。詳細は [Shopify Changelog Watcher](https://kite0301.github.io/shopify-changelog-watcher/) でご確認ください。*`;
+*このレポートは自動生成されています。詳細は [Shopify Changelog Watcher](https://Kite0301.github.io/shopify-changelog-watcher/) でご確認ください。*`;
 }
