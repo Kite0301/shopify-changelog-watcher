@@ -66,6 +66,21 @@ jobs:
           # 出力内容を表示
           cat report-output.txt
 
+      - name: Generate PDF from slides
+        if: steps.generate.outputs.report_generated == 'true'
+        run: |
+          WEEK_NUMBER="${{ steps.generate.outputs.week_number }}"
+          SLIDES_FILE="data/reports/${WEEK_NUMBER}-slides.md"
+
+          # スライドファイルが存在する場合のみPDF生成
+          if [[ -f "${SLIDES_FILE}" ]]; then
+            echo "Generating PDF for ${WEEK_NUMBER}..."
+            npx @marp-team/marp-cli --theme themes/shopify-changelog.css --pdf --allow-local-files "${SLIDES_FILE}" -o "data/reports/${WEEK_NUMBER}-slides.pdf"
+            echo "PDF generated successfully"
+          else
+            echo "No slides file found, skipping PDF generation"
+          fi
+
       - name: Check for changes
         id: check_changes
         run: |
