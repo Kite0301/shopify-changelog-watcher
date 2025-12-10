@@ -125,10 +125,11 @@ function applyFilters() {
   filteredEntries = allEntries.filter((entry) => {
     const analysis = getAnalysis(entry);
 
-    // 検索テキスト
+    // 検索テキスト（日本語タイトルも検索対象に）
     const matchesSearch =
       !searchText ||
       entry.title.toLowerCase().includes(searchText) ||
+      (analysis?.titleJa || '').toLowerCase().includes(searchText) ||
       (analysis?.summarizedJa || '').toLowerCase().includes(searchText);
 
     // ソース
@@ -205,6 +206,9 @@ function createEntryCard(entry) {
       ? 'Shopify Changelog'
       : 'Developer Changelog';
 
+  // タイトル表示（日本語タイトルがあれば優先、なければ英語）
+  const displayTitle = defaultAnalysis?.titleJa || entry.title;
+
   // 複数モデルの分析結果を表示
   let analysisHTML = '';
   let scoreDisplayHTML = '';
@@ -228,7 +232,7 @@ function createEntryCard(entry) {
       <div class="entry-header">
         <div class="entry-title">
           <a href="${entry.link}" target="_blank" rel="noopener noreferrer">
-            ${escapeHtml(entry.title)}
+            ${escapeHtml(displayTitle)}
           </a>
           ${newBadge}
         </div>
