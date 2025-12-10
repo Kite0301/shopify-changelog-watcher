@@ -207,7 +207,25 @@ function createEntryCard(entry) {
       : 'Developer Changelog';
 
   // タイトル表示（日本語タイトルがあれば優先、なければ英語）
-  const displayTitle = defaultAnalysis?.titleJa || entry.title;
+  const hasJaTitle = defaultAnalysis?.titleJa;
+  const displayTitle = hasJaTitle || entry.title;
+
+  // 日本語タイトルがある場合、元のタイトルも表示
+  let titleHTML = '';
+  if (hasJaTitle) {
+    titleHTML = `
+      <a href="${entry.link}" target="_blank" rel="noopener noreferrer">
+        ${escapeHtml(displayTitle)}
+      </a>
+      <div class="original-title">${escapeHtml(entry.title)}</div>
+    `;
+  } else {
+    titleHTML = `
+      <a href="${entry.link}" target="_blank" rel="noopener noreferrer">
+        ${escapeHtml(entry.title)}
+      </a>
+    `;
+  }
 
   // 複数モデルの分析結果を表示
   let analysisHTML = '';
@@ -231,9 +249,7 @@ function createEntryCard(entry) {
     <div class="entry-card ${scoreClass}" data-entry-id="${entry.id}">
       <div class="entry-header">
         <div class="entry-title">
-          <a href="${entry.link}" target="_blank" rel="noopener noreferrer">
-            ${escapeHtml(displayTitle)}
-          </a>
+          ${titleHTML}
           ${newBadge}
         </div>
         ${scoreDisplayHTML}
