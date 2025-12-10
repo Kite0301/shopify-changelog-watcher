@@ -1,6 +1,60 @@
 {
-  "lastUpdated": "2025-12-09T05:19:43.933Z",
+  "lastUpdated": "2025-12-10T00:01:40.219Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-tax-summary-webhook-and-calculation-requests-now-include-customer-and-company-metafields",
+      "source": "developer-changelog",
+      "title": "Tax summary webhook and calculation requests now include customer and company metafields",
+      "link": "https://shopify.dev/changelog/tax-summary-webhook-and-calculation-requests-now-include-customer-and-company-metafields",
+      "publishedAt": "2025-12-09T17:00:00.000Z",
+      "collectedAt": "2025-12-10T00:01:39.045Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "Webhook",
+        "2026-01"
+      ],
+      "description": " <div class=\"\"><p>As of API version 2026-01, tax calculation requests for tax partner apps now include buyer metafields. These fields provide custom data associated with customers (for D2C orders) and companies (for B2B orders) that may affect tax calculations. This enhancement allows tax partners to access merchant-defined buyer attributes for more accurate tax determination and compliance reporting.</p>\n<h2>What's new</h2>\n<p>The tax calculation request payload now includes new <code>metafields</code> arrays in the buyer identity section:</p>\n<ol>\n<li><p><strong>Customer metafields</strong> (<code>cart.buyer_identity.customer.metafields[]</code>):</p>\n<ul>\n<li>Available for D2C orders</li>\n<li>Contains custom attributes defined by the merchant for individual customers</li>\n<li>Examples include prescription status, tax exemption certificates, and customer classifications</li>\n</ul>\n</li>\n<li><p><strong>Company metafields</strong> (<code>cart.buyer_identity.purchasing_company.company.metafields[]</code>):</p>\n<ul>\n<li>Available for B2B orders</li>\n<li>Contains custom attributes defined by the merchant for business customers</li>\n<li>Examples include wholesale status, resale certificates, and business classifications</li>\n</ul>\n</li>\n</ol>\n<h2>Metafield structure</h2>\n<p>Each metafield contains information on namespace, key, type, and value. The following example shows the structure before and after the update:</p>\n<h3>Customer metafields</h3>\n<p><strong>Before (2025-10 and earlier):</strong> </p>\n<pre><code class=\"language-json\">{\n  &quot;customer&quot;: {\n    &quot;id&quot;: &quot;123&quot;,\n    &quot;exemptions&quot;: []\n  }\n}\n</code></pre>\n<p><strong>After (2026-01):</strong></p>\n<pre><code class=\"language-json\">{\n  &quot;customer&quot;: {\n    &quot;id&quot;: &quot;123&quot;,\n    &quot;exemptions&quot;: [],\n    &quot;metafields&quot;: [\n      {\n        &quot;namespace&quot;: &quot;custom&quot;,\n        &quot;key&quot;: &quot;has_prescription&quot;,\n        &quot;type&quot;: &quot;boolean&quot;,\n        &quot;value&quot;: &quot;true&quot;\n      }\n    ]\n  }\n}\n</code></pre>\n<h3>Company metafields</h3>\n<p><strong>Before (2025-10 and earlier):</strong> </p>\n<pre><code class=\"language-json\">{\n  &quot;purchasing_company&quot;: {\n    &quot;company&quot;: {\n      &quot;id&quot;: &quot;456&quot;,\n      &quot;external_id&quot;: &quot;ACME-001&quot;\n    },\n    &quot;company_location&quot;: {\n      &quot;id&quot;: &quot;789&quot;,\n      &quot;external_id&quot;: &quot;ACME-LOCATION-001&quot;\n    }\n  }\n}\n</code></pre>\n<p><strong>After (2026-01):</strong></p>\n<pre><code class=\"language-json\">{\n  &quot;purchasing_company&quot;: {\n    &quot;company&quot;: {\n      &quot;id&quot;: &quot;456&quot;,\n      &quot;external_id&quot;: &quot;ACME-001&quot;,\n      &quot;metafields&quot;: [\n        {\n          &quot;namespace&quot;: &quot;custom&quot;,\n          &quot;key&quot;: &quot;customer_class&quot;,\n          &quot;type&quot;: &quot;single_line_text_field&quot;,\n          &quot;value&quot;: &quot;wholesale&quot;\n        }\n      ]\n    },\n    &quot;company_location&quot;: {\n      &quot;id&quot;: &quot;789&quot;,\n      &quot;external_id&quot;: &quot;ACME-LOCATION-001&quot;\n    }\n  }\n}\n</code></pre>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "税計算サマリーWebhookとリクエストに顧客・会社のメタフィールドが含まれるように",
+          "summarizedJa": "APIバージョン2026-01より、税計算パートナーアプリ向けの税計算リクエストに、顧客（D2C注文）および会社（B2B注文）のメタフィールドが含まれるようになりました。これにより、マーチャントが定義したカスタム属性（処方箋の有無、免税証明書、顧客分類など）を参照して、より正確な税計算とコンプライアンス対応が可能になります。メタフィールドには名前空間、キー、タイプ、値の情報が含まれます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2025-12-10T00:01:46.331Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2053,
+            "output": 302
+          },
+          "estimatedCost": 0.010689
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "税金概要ウェブフックと計算リクエストに顧客および企業メタフィールドが含まれるようになりました",
+          "summarizedJa": "Shopify APIバージョン2026-01より、税金計算リクエストに顧客および企業のメタフィールドが含まれるようになりました。これにより、税金パートナーアプリはマーチャントが定義したカスタムデータを利用し、D2CおよびB2Bの注文におけるより正確な税金計算とコンプライアンスレポートが可能になります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2025-12-10T00:01:53.978Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1658,
+            "output": 154
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-venmo-and-paypal-are-now-treated-as-separate-payment-methods",
       "source": "developer-changelog",
@@ -49,6 +103,57 @@
           "tokenUsage": {
             "input": 916,
             "output": 152
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-new-open-source-experimentation-platform",
+      "source": "developer-changelog",
+      "title": "New: Open source experimentation platform",
+      "link": "https://shopify.dev/changelog/new-open-source-experimentation-platform",
+      "publishedAt": "2025-12-08T13:03:00.000Z",
+      "collectedAt": "2025-12-10T00:01:39.045Z",
+      "category": [
+        "Tools",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>Tangle is a platform-agnostic, open source experimentation platform with a visual editor and content-based caching.  </p>\n<p>With Tangle, you can build ML and data pipelines collaboratively, choosing from reusable modules in the component library or adding your own.</p>\n<p><a href=\"https://tangleml.com/\" target=\"_blank\" class=\"body-link\">Learn more about Tangle</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "新機能: オープンソース実験プラットフォーム",
+          "summarizedJa": "Tangleは、ビジュアルエディタとコンテンツベースのキャッシング機能を備えた、プラットフォームに依存しないオープンソースの実験プラットフォームです。MLやデータパイプラインを共同で構築でき、再利用可能なコンポーネントライブラリから選択したり、独自のモジュールを追加したりできます。データサイエンスやML関連の開発を行うパートナーにとって有用なツールとなります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 8,
+          "analyzedAt": "2025-12-10T00:02:00.258Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1013,
+            "output": 252
+          },
+          "estimatedCost": 0.006819
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "新機能：オープンソースの実験プラットフォーム「Tangle」",
+          "summarizedJa": "Shopifyは、プラットフォーム非依存のオープンソース実験プラットフォーム「Tangle」を発表しました。これは、ビジュアルエディタとコンテンツベースのキャッシュを備え、機械学習やデータパイプラインを共同で構築できるツールです。日本のパートナーは、Tangleを活用して高度なデータ分析や最適化の実験を行い、マーチャント向けのソリューション開発に役立てることができます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2025-12-10T00:02:07.649Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 721,
+            "output": 159
           },
           "estimatedCost": 0
         }
