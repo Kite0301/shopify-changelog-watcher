@@ -1,6 +1,1443 @@
 {
-  "lastUpdated": "2025-12-10T00:01:40.219Z",
+  "lastUpdated": "2025-12-11T00:01:37.658Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-start-sidekick-conversations-from-shopify-home",
+      "source": "shopify-changelog",
+      "title": "Start Sidekick conversations from Shopify Home",
+      "link": "https://changelog.shopify.com/posts/start-sidekick-conversations-from-shopify-home",
+      "publishedAt": "2025-12-10T20:55:00.000Z",
+      "collectedAt": "2025-12-11T00:01:37.650Z",
+      "category": [
+        "Sidekick"
+      ],
+      "description": "\n        <p>You can now start Sidekick conversations directly from Shopify Home. A new chat input lets you start every Shopify session with a Sidekick chat, without opening the Sidekick sidebar.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopifyホームから直接Sidekick会話を開始可能に",
+          "summarizedJa": "Shopifyホーム画面から直接Sidekickとの会話を開始できるようになりました。新しいチャット入力フィールドにより、Sidekickサイドバーを開くことなく、Shopifyセッションの開始時にすぐにSidekickとチャットを始めることができます。これによりAIアシスタントへのアクセスがより簡単になります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 1,
+            "japanRelevance": 2,
+            "technicalImportance": 2
+          },
+          "totalScore": 7,
+          "analyzedAt": "2025-12-11T00:01:44.067Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 960,
+            "output": 219
+          },
+          "estimatedCost": 0.006165
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "ShopifyホームからSidekickチャットを開始",
+          "summarizedJa": "ShopifyのAIアシスタント「Sidekick」との会話を、Shopify管理画面のトップページ（Shopify Home）から直接開始できるようになりました。新しいチャット入力欄が追加されたことで、Sidekickのサイドバーを開く手間なく、Shopifyセッションの開始時にすぐにチャットを始められます。これにより、マーチャントはよりスムーズにSidekickを活用し、業務効率を向上させることが期待されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2025-12-11T00:01:49.612Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 668,
+            "output": 163
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-sidekick-conversation-history-moves-to-your-sidebar",
+      "source": "shopify-changelog",
+      "title": "Sidekick conversation history moves to your sidebar",
+      "link": "https://changelog.shopify.com/posts/sidekick-conversation-history-moves-to-your-sidebar",
+      "publishedAt": "2025-12-10T20:55:00.000Z",
+      "collectedAt": "2025-12-11T00:01:37.650Z",
+      "category": [
+        "Sidekick"
+      ],
+      "description": "\n        <p>Sidekick conversation history is now available in the navigation sidebar. You can jump into past conversations with one click from anywhere in the admin, without opening the Sidekick sidebar.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Sidekickの会話履歴がサイドバーに移動",
+          "summarizedJa": "Sidekickの会話履歴が管理画面のナビゲーションサイドバーに追加されました。これにより、Sidekickのサイドバーを開かなくても、管理画面のどこからでもワンクリックで過去の会話にアクセスできるようになりました。作業効率の向上が期待できるUI改善です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 1,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 8,
+          "analyzedAt": "2025-12-11T00:01:54.890Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 953,
+            "output": 208
+          },
+          "estimatedCost": 0.005979
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Sidekickの会話履歴がサイドバーに移動",
+          "summarizedJa": "ShopifyのAIアシスタント「Sidekick」の会話履歴が、管理画面のナビゲーションサイドバーから直接アクセスできるようになりました。これにより、Sidekickのサイドバーを開くことなく、管理画面のどこからでも過去の会話にワンクリックで簡単にアクセスできます。マーチャントは、AIアシスタントとの過去のやり取りを素早く参照できるようになり、業務効率の向上が期待されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 1,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2025-12-11T00:01:58.784Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 669,
+            "output": 161
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-sidekick-fullscreen-mode-keeps-sidebar-visible",
+      "source": "shopify-changelog",
+      "title": "Sidekick fullscreen mode keeps sidebar visible",
+      "link": "https://changelog.shopify.com/posts/sidekick-fullscreen-mode-keeps-sidebar-visible",
+      "publishedAt": "2025-12-10T20:55:00.000Z",
+      "collectedAt": "2025-12-11T00:01:37.650Z",
+      "category": [
+        "Sidekick"
+      ],
+      "description": "\n        <p>Sidekick fullscreen mode no longer covers the navigation sidebar. The view now fills the workspace up to the sidebar, allowing you to navigate the admin while keeping Sidekick’s open and expanded.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Sidekickのフルスクリーンモードでサイドバーが表示されたまま利用可能に",
+          "summarizedJa": "Sidekickのフルスクリーンモードがナビゲーションサイドバーを覆わなくなりました。Sidekickを開いて展開したまま、管理画面のサイドバーを使ってナビゲーションできるようになり、ワークスペース全体をより効率的に活用できます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2025-12-11T00:02:04.248Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 956,
+            "output": 212
+          },
+          "estimatedCost": 0.0060479999999999996
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Sidekickのフルスクリーンモードでサイドバーが常に表示",
+          "summarizedJa": "Sidekickのフルスクリーンモードが改善され、ナビゲーションサイドバーを覆い隠すことがなくなりました。これにより、Sidekickを開いたままでも管理画面のサイドバーを使って自由に移動できるようになります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2025-12-11T00:02:09.496Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 670,
+            "output": 119
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-flow-editor-now-uses-vertical-layout",
+      "source": "shopify-changelog",
+      "title": "Flow: workflows now have a more compact vertical layout",
+      "link": "https://changelog.shopify.com/posts/flow-editor-now-uses-vertical-layout",
+      "publishedAt": "2025-12-10T20:00:00.000Z",
+      "collectedAt": "2025-12-11T00:01:37.650Z",
+      "category": [
+        "Apps"
+      ],
+      "description": "\n        <p>The Flow editor now arranges workflows top-to-bottom instead of left-to-right with the configuration panel on the left and Sidekick on the right, so more of the workflow fits on the screen and it's easier to scroll. Visual improvements include cleaner styling and more compact steps with clearly visible selection states. </p>\n\n<p>When steps become scattered across the canvas, click \"Arrange workflow\" in the lower-left corner to auto-organize them into an organized vertical flow. New workflows will use vertical layout by default. Existing workflows can switch anytime using the \"Arrange workflow\" button. Your workflows keep working exactly as they do today—only the visual arrangement changes.</p>\n\n<p>In early 2026, all workflows will automatically update to vertical layout. If you've organized steps in a specific way, switching now gives you time to adjust their placement manually.</p>\n\n<p>Learn more about the new vertical layout in the <a href=\"https://help.shopify.com/manual/shopify-flow/create/workflow-editor\">Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Flow: ワークフローが縦型レイアウトでよりコンパクトに表示されるようになりました",
+          "summarizedJa": "Shopify Flowのエディターが、従来の左右配置から上下の縦型レイアウトに変更され、画面により多くのワークフローを表示できるようになりました。新規ワークフローはデフォルトで縦型レイアウトとなり、既存のワークフローも「Arrange workflow」ボタンでいつでも切り替え可能です。2026年初頭には、すべてのワークフローが自動的に縦型レイアウトに更新される予定です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 11,
+          "analyzedAt": "2025-12-11T00:02:15.094Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1146,
+            "output": 266
+          },
+          "estimatedCost": 0.007428000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Flow: ワークフローエディタがコンパクトな垂直レイアウトに刷新",
+          "summarizedJa": "Shopify Flowのワークフローエディタが、従来の左右配置から上下配置の垂直レイアウトに刷新されました。これにより、画面により多くのワークフローが表示され、スクロールしやすくなるなど視認性が向上します。既存のワークフローも「Arrange workflow」ボタンでいつでも切り替え可能で、2026年初頭には全てのワークフローが自動的に垂直レイアウトに更新される予定です。機能自体に変更はなく、視覚的な配置のみが変わります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 12,
+          "analyzedAt": "2025-12-11T00:02:21.353Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 863,
+            "output": 179
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-advanced-metafield-metaobject-querying",
+      "source": "developer-changelog",
+      "title": "Advanced Metafield & Metaobject Querying",
+      "link": "https://shopify.dev/changelog/advanced-metafield-metaobject-querying",
+      "publishedAt": "2025-12-10T17:00:00.000Z",
+      "collectedAt": "2025-12-11T00:01:36.725Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-01"
+      ],
+      "description": " <div class=\"\"><p>We've expanded the resources that you can query by metafield value to include Companies and Company Locations. We've also expanded how you can query metafield values on Products, Orders, and Metaobject entries to include:</p>\n<ul>\n<li>Greater than and less than comparisons</li>\n<li>Prefix matching</li>\n<li>Boolean operators (AND, OR, NOT)</li>\n</ul>\n<p>These work across more metafield types than before. No more fetching all resources and iterating through metafield values client-side. You can filter directly in your queries, and the query options now match how other properties are searchable on resources.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "メタフィールドとメタオブジェクトの高度なクエリ機能",
+          "summarizedJa": "Admin GraphQL APIにおいて、メタフィールド値によるクエリ対象がCompaniesとCompany Locationsにも拡張されました。また、Products、Orders、Metaobjectエントリーでは、大小比較、前方一致、論理演算子（AND、OR、NOT）を使用した高度な検索が可能になり、より多くのメタフィールドタイプに対応しました。クライアント側での反復処理が不要になり、クエリで直接フィルタリングできるようになります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2025-12-11T00:02:26.899Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1085,
+            "output": 260
+          },
+          "estimatedCost": 0.007155
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "メタフィールドとメタオブジェクトの高度なクエリ機能",
+          "summarizedJa": "ShopifyのAPIにおいて、メタフィールドの値を使ったデータ検索機能が大幅に強化されました。ProductsやOrders、Metaobjectエントリーに加え、CompaniesやCompany Locationsでもメタフィールドによる検索が可能になり、「より大きい/小さい」「前方一致」「AND/OR/NOT」といった高度な条件指定が直接クエリで行えるようになります。これにより、開発者は必要なデータをAPIで効率的に絞り込めるため、より複雑なデータ連携や表示が容易になります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2025-12-11T00:02:35.086Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 773,
+            "output": 170
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-expand-your-catalog-instantly-with-the-shopify-product-network",
+      "source": "shopify-changelog",
+      "title": "Expand your catalog instantly with the Shopify Product Network",
+      "link": "https://changelog.shopify.com/posts/expand-your-catalog-instantly-with-the-shopify-product-network",
+      "publishedAt": "2025-12-10T15:30:00.000Z",
+      "collectedAt": "2025-12-11T00:01:37.650Z",
+      "category": [
+        "Apps"
+      ],
+      "description": "\n        <p>Shopify Product Network gives your store instant access to products from other trusted Shopify brands, with no need to stock, ship, or source products. When customers browse or search, they see personalized recommendations alongside your own inventory—powered by data from hundreds of millions of buyers. </p>\n\n<p>Everything happens on your store. Customers check out with you, you keep the customer record, and you earn commission when they buy. And when a network sale happens, it’s shipped directly from the seller. </p>\n\n<p>You can enable Product Network on collections, search results, thank you page, or order status. </p>\n\n<p>Install the <a href=\"https://apps.shopify.com/shopify-product-network\">Shopify Product Network</a> app to get started.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify Product Networkでカタログを即座に拡充",
+          "summarizedJa": "Shopify Product Networkは、他の信頼できるShopifyブランドの商品を在庫なしで販売できる機能です。顧客が商品を閲覧・検索すると、自店舗の商品と共にパーソナライズされた推奨商品が表示され、購入時には手数料を獲得できます。商品は出品者から直接発送されるため、在庫管理や配送の必要がありません。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2025-12-11T00:02:40.671Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1092,
+            "output": 230
+          },
+          "estimatedCost": 0.006726
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopifyプロダクトネットワークでカタログを即座に拡大",
+          "summarizedJa": "Shopifyプロダクトネットワークは、他の信頼できるShopifyブランドの商品を在庫・発送・調達なしで自社ストアに追加できる機能です。顧客はパーソナライズされたおすすめ商品としてこれらを閲覧でき、自社ストアで決済し、マーチャントは手数料を得られます。これにより、日本のマーチャントはリスクなく商品ラインナップを拡充し、売上機会を増やすことが可能です。",
+          "scores": {
+            "merchantImpact": 5,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 16,
+          "analyzedAt": "2025-12-11T00:02:47.911Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 805,
+            "output": 163
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-the-winter-26-edition-is-live",
+      "source": "shopify-changelog",
+      "title": "The Winter '26 Edition is live",
+      "link": "https://changelog.shopify.com/posts/the-winter-26-edition-is-live",
+      "publishedAt": "2025-12-10T15:00:00.000Z",
+      "collectedAt": "2025-12-11T00:01:37.650Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>Announcing 150+ updates to Shopify.</p>\n\n<p><a href=\"https://www.shopify.com/editions/winter2026?utm_source=changelog-merchant&amp;utm_medium=changelog-merchant&amp;utm_campaign=winter26edition-launch_Q425BACADO\">See the updates</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Winter '26 Editionが公開されました",
+          "summarizedJa": "Shopifyの150以上の新機能とアップデートをまとめたWinter '26 Editionが公開されました。このエディションリリースには、マーチャントとパートナーの両方に影響する多数の機能強化や新機能が含まれています。詳細は公式ページで確認できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2025-12-11T00:02:52.512Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 983,
+            "output": 189
+          },
+          "estimatedCost": 0.005784
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Winter '26 Editionが公開されました",
+          "summarizedJa": "Shopifyの「Winter '26 Edition」が正式にリリースされ、プラットフォーム全体で150以上の新機能や改善が発表されました。日本のマーチャントやパートナーは、ビジネス運営や開発に影響する可能性のあるこれらの広範なアップデートの詳細を確認することが推奨されます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2025-12-11T00:02:57.308Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 714,
+            "output": 132
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-introducing-sidekick-app-extensions",
+      "source": "developer-changelog",
+      "title": "Introducing Sidekick app extensions",
+      "link": "https://shopify.dev/changelog/introducing-sidekick-app-extensions",
+      "publishedAt": "2025-12-10T14:50:00.000Z",
+      "collectedAt": "2025-12-11T00:01:36.725Z",
+      "category": [
+        "Platform",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>Today, we're introducing <a href=\"https://shopify.dev/docs/apps/build/sidekick\" target=\"_blank\" class=\"body-link\">Sidekick app extensions</a> to give your app new ways to integrate your app with <a href=\"https://www.shopify.com/magic\" target=\"_blank\" class=\"body-link\">Sidekick</a>, Shopify's AI-enabled commerce assistant. </p>\n<h3>What are Sidekick app extensions?</h3>\n<p>Your app can connect its data and workflows using app extensions. Sidekick can search your app’s data, answer questions with your app’s context, and take merchants straight to the right page in your app.</p>\n<p>You can also let Sidekick assist directly inside your app. Define safe, scoped actions—like editing an email template, creating a product review, or updating a support issue—and Sidekick will suggest changes and bring up the right UI, but merchants stay in control of what gets updated.</p>\n<h3>Learn more</h3>\n<p>Jump in and take a tour through our <a href=\"https://shopify.dev/docs/apps/build/sidekick\" target=\"_blank\" class=\"body-link\">documentation on Sidekick app extensions</a> to learn how you can integrate these new super-powers into your app!</p>\n<h3>Holler at us</h3>\n<p>Leave us feedback, comments, and questions in the <a href=\"https://community.shopify.dev/c/extensions/5\" target=\"_blank\" class=\"body-link\">Shopify Developer Community</a>. We'd love to hear from you. </p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Sidekickアプリ拡張機能の導入",
+          "summarizedJa": "ShopifyのAIアシスタント「Sidekick」とアプリを統合できる新しい拡張機能が登場しました。アプリのデータ検索や質問への回答、アプリ内での操作支援など、Sidekickを通じてマーチャントにより良い体験を提供できるようになります。アプリ開発者は、メールテンプレートの編集や商品レビューの作成など、安全なスコープ付きアクションを定義し、Sidekickに連携させることができます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 2,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2025-12-11T00:03:02.840Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1304,
+            "output": 256
+          },
+          "estimatedCost": 0.007752
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Sidekickアプリ拡張機能の導入",
+          "summarizedJa": "ShopifyのAIアシスタント「Sidekick」と連携する「Sidekickアプリ拡張機能」が導入されました。これにより、アプリはSidekickとデータやワークフローを接続し、マーチャントはSidekickを通じてアプリのデータ検索や質問応答、さらにはアプリ内での特定の操作支援を受けられるようになります。アプリ開発者は、この新機能でマーチャントにAIを活用したより高度な体験を提供できるようになります。",
+          "scores": {
+            "merchantImpact": 5,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 5
+          },
+          "totalScore": 19,
+          "analyzedAt": "2025-12-11T00:03:11.516Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 976,
+            "output": 162
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-edit-emails-faster-with-sidekick",
+      "source": "shopify-changelog",
+      "title": "Edit emails faster with Sidekick",
+      "link": "https://changelog.shopify.com/posts/edit-emails-faster-with-sidekick",
+      "publishedAt": "2025-12-10T14:30:00.000Z",
+      "collectedAt": "2025-12-11T00:01:37.650Z",
+      "category": [
+        "Sidekick"
+      ],
+      "description": "\n        <p>Get to your first email draft faster. Edit, add or delete parts of your email by simply telling Sidekick what to do. Sidekick makes the changes right in place, using your existing templates and brand settings so your emails always look like you. Keep iterating until you're happy—polish headlines, adjust CTAs, add or replace images, and make edits section by section or to the full email at once—all with Sidekick.</p>\n\n<p><a href=\"http://help.shopify.com/manual/shopify-admin/productivity-tools/sidekick/generate-content#email-campaigns\">Learn more</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Sidekickでメールをより速く編集",
+          "summarizedJa": "Shopifyの AI アシスタント「Sidekick」を使って、メールの編集、追加、削除を音声指示で簡単に行えるようになりました。既存のテンプレートとブランド設定を使用しながら、見出しの調整、CTAの変更、画像の追加・置換など、セクション単位または全体の編集を繰り返し行うことができます。この機能により、メールキャンペーンの初稿作成がより迅速になります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 2,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2025-12-11T00:03:17.930Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1051,
+            "output": 242
+          },
+          "estimatedCost": 0.006783000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Sidekickでメール編集をより迅速に",
+          "summarizedJa": "Sidekickを活用することで、メールのドラフト作成をより迅速に行えるようになります。Sidekickに指示するだけで、既存のテンプレートやブランド設定を維持しながら、メールの各部分を編集、追加、削除できます。ヘッドラインの調整、CTAの変更、画像の追加・置換など、メール全体またはセクションごとに簡単に反復編集が可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2025-12-11T00:03:23.982Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 761,
+            "output": 149
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-ai-block-generation-for-all-theme-store-themes",
+      "source": "shopify-changelog",
+      "title": "AI block generation for all Theme Store themes",
+      "link": "https://changelog.shopify.com/posts/ai-block-generation-for-all-theme-store-themes",
+      "publishedAt": "2025-12-10T14:30:00.000Z",
+      "collectedAt": "2025-12-11T00:01:37.650Z",
+      "category": [
+        "Themes"
+      ],
+      "description": "\n        <p>AI block generation, powered by Sidekick, now works with every theme from the Shopify Theme Store—not just Horizon themes. Describe what you want in plain language, and Sidekick will code it for you on the spot. And if Sidekick's first pass isn't just right, you can iterate on the design to refine your results.</p>\n\n<p>Theme block generation is available on <a href=\"https://themes.shopify.com/\">Theme Store</a> themes. Learn more about theme block generation in the <a href=\"https://help.shopify.com/en/manual/online-store/themes/customizing-themes/theme-editor/shopify-magic/generate-blocks\">Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "全テーマストアテーマ対応のAIブロック生成機能",
+          "summarizedJa": "Sidekick搭載のAIブロック生成機能が、Horizonテーマだけでなく、Shopifyテーマストアの全テーマで利用可能になりました。自然言語で希望するデザインを説明するだけで、Sidekickがその場でコーディングを行い、結果が理想的でない場合は反復的にデザインを調整できます。この機能により、コーディング知識がなくてもテーマのカスタマイズが容易になります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2025-12-11T00:03:30.305Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1080,
+            "output": 251
+          },
+          "estimatedCost": 0.007004999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "すべてのテーマストアテーマでAIブロック生成が可能に",
+          "summarizedJa": "ShopifyのAIブロック生成機能（Sidekick搭載）が、Horizonテーマだけでなく、すべてのShopifyテーマストアのテーマで利用可能になりました。これにより、マーチャントは自然言語で希望するデザインを記述するだけで、Sidekickが自動でコードを生成し、必要に応じてデザインを繰り返し調整できるようになります。この機能は、テーマのカスタマイズをより手軽にし、デザインの柔軟性を大幅に向上させます。",
+          "scores": {
+            "merchantImpact": 5,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 17,
+          "analyzedAt": "2025-12-11T00:03:34.282Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 787,
+            "output": 165
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-customize-your-theme-with-sidekick",
+      "source": "shopify-changelog",
+      "title": "Customize your theme with Sidekick",
+      "link": "https://changelog.shopify.com/posts/customize-your-theme-with-sidekick",
+      "publishedAt": "2025-12-10T14:30:00.000Z",
+      "collectedAt": "2025-12-11T00:01:37.650Z",
+      "category": [
+        "Sidekick"
+      ],
+      "description": "\n        <p>Describe the theme changes you want to make, and Sidekick will apply them instantly. Tell Sidekick something like \"make my store feel more premium with elegant typography and generous spacing\" and it'll come to life before your eyes. You can also click any section or block in your theme preview and ask Sidekick to customize it directly.</p>\n\n<p>Sidekick can customize all themes that are editable in the Online Store theme editor. More details and instructions are available in the <a href=\"https://help.shopify.com/en/manual/shopify-admin/productivity-tools/sidekick/help-and-guidance#theme-editing\">Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Sidekickでテーマをカスタマイズ",
+          "summarizedJa": "ShopifyのAIアシスタント「Sidekick」を使って、自然言語でテーマのカスタマイズができるようになりました。例えば「エレガントなタイポグラフィと余白でプレミアム感を出したい」と伝えるだけで、Sidekickが即座にテーマに変更を適用します。オンラインストアのテーマエディターで編集可能な全てのテーマに対応しています。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2025-12-11T00:03:40.952Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1066,
+            "output": 234
+          },
+          "estimatedCost": 0.006708
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Sidekickでストアテーマをカスタマイズ",
+          "summarizedJa": "Shopifyの新機能Sidekickは、自然言語で指示するだけでストアのテーマデザインを瞬時に変更できるAIアシスタントです。「エレガントなタイポグラフィでプレミアム感を出す」といった指示や、テーマプレビューの特定箇所をクリックして直接カスタマイズを依頼することも可能です。オンラインストアのテーマエディタで編集可能な全てのテーマに対応しており、日本のマーチャントも簡単にストアデザインを改善できるようになります。",
+          "scores": {
+            "merchantImpact": 5,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 17,
+          "analyzedAt": "2025-12-11T00:03:48.716Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 771,
+            "output": 164
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-b2b-features-now-available-in-horizon-themes",
+      "source": "shopify-changelog",
+      "title": "B2B features now available in Horizon themes",
+      "link": "https://changelog.shopify.com/posts/b2b-features-now-available-in-horizon-themes",
+      "publishedAt": "2025-12-10T14:30:00.000Z",
+      "collectedAt": "2025-12-11T00:01:37.650Z",
+      "category": [
+        "B2b"
+      ],
+      "description": "\n        <p>Horizon themes are now fully compatible with Shopify's B2B features. Wholesale merchants can display volume pricing tiers, enforce quantity rules, and offer quick order lists directly in any Horizon theme without custom development or third-party apps.</p>\n\n<p>If you're already using a Horizon theme, B2B features will appear automatically when you enable them for your store. New to Horizon? Browse the full <a href=\"https://themes.shopify.com/collections/horizon-themes\">Horizon theme collection</a> on the Shopify Theme Store.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "HorizonテーマでB2B機能が利用可能に",
+          "summarizedJa": "ShopifyのHorizonテーマがB2B機能に完全対応しました。卸売事業者は、カスタム開発やサードパーティアプリなしで、ボリューム価格設定、数量ルール、クイック注文リストなどの機能を直接利用できます。既にHorizonテーマを使用している場合、B2B機能を有効化すれば自動的に表示されます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2025-12-11T00:03:53.424Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1038,
+            "output": 226
+          },
+          "estimatedCost": 0.006504
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "HorizonテーマでB2B機能が利用可能に",
+          "summarizedJa": "ShopifyのHorizonテーマがB2B機能に完全対応しました。これにより、卸売業者はボリューム価格設定、数量ルール、クイック注文リストを、カスタム開発やサードパーティアプリなしで直接利用できるようになります。既存のHorizonテーマを使用している場合は自動的に機能が有効になり、新規導入の場合もすぐに利用可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 15,
+          "analyzedAt": "2025-12-11T00:03:59.714Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 750,
+            "output": 145
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-manage-your-store-in-the-theme-editor",
+      "source": "shopify-changelog",
+      "title": "Manage your store in the theme editor",
+      "link": "https://changelog.shopify.com/posts/manage-your-store-in-the-theme-editor",
+      "publishedAt": "2025-12-10T14:30:00.000Z",
+      "collectedAt": "2025-12-11T00:01:37.650Z",
+      "category": [
+        "Online store"
+      ],
+      "description": "\n        <p>You can now manage products, collections, markets, metafields, and more directly in the theme editor. Changes happen in an overlay dialog, so you never lose your place.</p>\n\n<p>When you're in the theme editor, click the edit button next to resource pickers like products, collections, metaobjects, metafields, or markets to modify them instantly. You can also create new ones on the fly. This same capability is available across other areas of admin, letting you manage resources wherever you're working without navigating away.</p>\n\n<p>Learn more about adding and editing store resources in the theme editor in the <a href=\"https://help.shopify.com/en/manual/online-store/themes/customizing-themes/theme-editor/add-and-edit-store-resources\">Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "テーマエディターでストアを管理",
+          "summarizedJa": "テーマエディター内で商品、コレクション、マーケット、メタフィールドなどを直接管理できるようになりました。リソースピッカーの横にある編集ボタンをクリックすると、オーバーレイダイアログで変更が可能になり、作業中のページから離れることなく、その場でリソースの編集や新規作成ができます。この機能により、テーマのカスタマイズ作業の効率が大幅に向上します。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 5,
+            "technicalImportance": 3
+          },
+          "totalScore": 16,
+          "analyzedAt": "2025-12-11T00:04:04.549Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1094,
+            "output": 241
+          },
+          "estimatedCost": 0.006897
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "テーマエディターでストアを管理",
+          "summarizedJa": "Shopifyのテーマエディター内で、商品、コレクション、マーケット、メタフィールドなどのストアリソースを直接管理できるようになりました。これにより、テーマの編集中に画面遷移することなく、オーバーレイダイアログでリソースの作成や変更が即座に行え、マーチャントやパートナーの作業効率が大幅に向上します。この機能は他の管理画面でも利用可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2025-12-11T00:04:09.713Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 813,
+            "output": 153
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-accept-payments-in-person-or-online-with-payment-links",
+      "source": "shopify-changelog",
+      "title": "Accept payments in person or online with payment links",
+      "link": "https://changelog.shopify.com/posts/accept-payments-in-person-or-online-with-payment-links",
+      "publishedAt": "2025-12-10T14:30:00.000Z",
+      "collectedAt": "2025-12-11T00:01:37.650Z",
+      "category": [
+        "Mobile"
+      ],
+      "description": "\n        <p>You can now create payment links when completing quick sale orders.</p>\n\n<p>Payment links are unique, shareable URLs that let you accept payments instantly. Share it on social, through email, with a text, or in person with a QR code. The link takes buyers to checkout where they can pay with their Shopify account or credit card.</p>\n\n<p><a href=\"https://help.shopify.com/en/manual/shopify-admin/shopify-app/quick-sale/accept-payment\">Learn more</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "決済リンクで対面・オンラインでの支払いを受け付け可能に",
+          "summarizedJa": "クイック販売注文で決済リンクが作成できるようになりました。決済リンクはSNS、メール、テキスト、QRコードなどで共有できる固有のURLで、購入者はShopifyアカウントまたはクレジットカードで即座に支払いが可能になります。対面販売やオンライン販売の両方で柔軟に決済を受け付けられます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2025-12-11T00:04:15.012Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1032,
+            "output": 232
+          },
+          "estimatedCost": 0.006576
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "決済リンクで対面またはオンラインでの支払いを受け入れ可能に",
+          "summarizedJa": "クイックセール注文完了時に決済リンクを作成できるようになりました。この決済リンクは、ユニークで共有可能なURLであり、対面またはオンラインで即座に支払いを受け付けることができます。ソーシャルメディア、メール、テキストメッセージ、またはQRコードを通じて顧客に共有し、Shopifyアカウントやクレジットカードでの支払いを促すことが可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2025-12-11T00:04:21.509Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 750,
+            "output": 146
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-quick-sale-now-supports-tips-and-change-due",
+      "source": "shopify-changelog",
+      "title": "Quick sale now supports tips and change due",
+      "link": "https://changelog.shopify.com/posts/quick-sale-now-supports-tips-and-change-due",
+      "publishedAt": "2025-12-10T14:30:00.000Z",
+      "collectedAt": "2025-12-11T00:01:37.650Z",
+      "category": [
+        "Mobile"
+      ],
+      "description": "\n        <p>Quick sale now handles tips and automatic change calculations for smoother in-person transactions.</p>\n\n<p>You can now enable tips in quick sale settings so that when completing a quick sale order, customers can add tips before payment. For cash transactions, the app automatically calculates and displays change due, making your in-person sales easier.</p>\n\n<p><a href=\"https://help.shopify.com/en/manual/shopify-admin/shopify-app/quick-sale/create-quick-sale\">Learn more</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "クイックセールでチップと釣り銭計算に対応",
+          "summarizedJa": "Shopify POSのクイックセール機能で、チップの受け取りと現金取引時の自動釣り銭計算が可能になりました。クイックセール設定でチップを有効化すると、支払い前に顧客がチップを追加でき、現金決済時には釣り銭が自動計算・表示されるため、対面販売がよりスムーズになります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 2,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2025-12-11T00:04:26.838Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1027,
+            "output": 220
+          },
+          "estimatedCost": 0.0063809999999999995
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "クイックセールがチップと釣銭計算に対応",
+          "summarizedJa": "Shopifyのクイックセール機能が、対面販売における顧客からのチップ受け付けと自動釣銭計算に対応しました。これにより、クイックセール設定でチップを有効にすると、顧客は支払い前にチップを追加できるようになります。また、現金取引ではアプリが自動で釣銭を計算・表示するため、対面販売のプロセスがよりスムーズになります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 1,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2025-12-11T00:04:31.961Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 746,
+            "output": 149
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-combine-repeat-bundle-options",
+      "source": "shopify-changelog",
+      "title": "Combine repeat bundle options ",
+      "link": "https://changelog.shopify.com/posts/combine-repeat-bundle-options",
+      "publishedAt": "2025-12-10T14:30:00.000Z",
+      "collectedAt": "2025-12-11T00:01:37.650Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>We’ve just launched an update that allows you to combine repeat bundle options, leading to a more convenient customer experience.</p>\n\n<p>Historically, in a scenario where you offer a bundle of 3 t-shirts that each come in size small, medium, and large, your customer would have to select their size for each individual t-shirt, a process that was repetitive and inefficient.</p>\n\n<p>Now, you can bundle options like size or length so your customers will only have to select them once, instead of multiple times. What’s more, these grouped options are treated as one option, increasing the number of options available on the bundle.</p>\n\n<p><a href=\"https://help.shopify.com/en/manual/products/bundles/shopify-bundles#track-your-bundles-performance\">Learn more</a> about combining bundle options.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "繰り返されるバンドルオプションの統合",
+          "summarizedJa": "Shopify Bundlesで、同じオプション(サイズや長さなど)を繰り返し選択する必要があった問題が解決されました。例えば3枚のTシャツバンドルで、従来は各Tシャツごとにサイズを選択する必要がありましたが、今後は1回の選択で済むようになり、顧客体験が向上します。また、グループ化されたオプションは1つのオプションとして扱われるため、バンドルで利用可能なオプション数が増加します。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2025-12-11T00:04:37.730Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1091,
+            "output": 259
+          },
+          "estimatedCost": 0.007157999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "バンドル商品の繰り返しオプションを統合",
+          "summarizedJa": "今回のアップデートにより、Shopifyのバンドル商品において、繰り返し発生するオプション（例：サイズや長さ）をまとめて設定できるようになりました。これにより、顧客はバンドル内の各商品ごとにオプションを選択する手間がなくなり、一度の選択で済むため、購入体験が大幅に向上します。この機能は、顧客の選択プロセスを簡素化し、より効率的なショッピングを可能にします。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2025-12-11T00:04:42.893Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 806,
+            "output": 155
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-proactive-business-recommendations-from-sidekick",
+      "source": "shopify-changelog",
+      "title": "Proactive business recommendations from Sidekick",
+      "link": "https://changelog.shopify.com/posts/proactive-business-recommendations-from-sidekick",
+      "publishedAt": "2025-12-10T14:30:00.000Z",
+      "collectedAt": "2025-12-11T00:01:37.650Z",
+      "category": [
+        "Sidekick"
+      ],
+      "description": "\n        <p>Rolling out over the coming weeks, Sidekick Pulse proactively surfaces up to 5 tailored recommendations for your business. Instead of waiting for you to write a prompt, Sidekick runs deep research on your store’s data, market trends, and performance to identify opportunities, insights, and actions to take.</p>\n\n<p>Each insight appears as a card in your admin with clear citations, so you can trust the data. When you’re ready to act, Pulse passes all context to Sidekick to help you execute immediately.</p>\n\n<p><a href=\"https://help.shopify.com/en/manual/shopify-admin/productivity-tools/sidekick/help-and-guidance#pulse\">Learn more about Sidekick Pulse</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Sidekickによる積極的なビジネス推奨機能",
+          "summarizedJa": "Sidekick Pulseが、ストアデータ、市場トレンド、パフォーマンスを分析し、最大5つのカスタマイズされたビジネス推奨を自動的に提示する新機能です。管理画面にカードとして表示され、明確な引用元が示されるため信頼性が高く、すぐに実行に移すことができます。今後数週間かけて段階的にリリースされます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2025-12-11T00:04:48.366Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1084,
+            "output": 235
+          },
+          "estimatedCost": 0.006777
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Sidekickからの能動的なビジネス推奨",
+          "summarizedJa": "ShopifyのAIアシスタントSidekickの新機能「Sidekick Pulse」が、ストアデータや市場トレンドを分析し、ビジネス改善のためのパーソナライズされた推奨事項を最大5つまで能動的に提供します。これにより、マーチャントはプロンプト入力なしで、信頼できるデータに基づいた具体的なアクションプランを管理画面で受け取ることができ、Sidekickがその実行をサポートします。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 13,
+          "analyzedAt": "2025-12-11T00:04:55.940Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 788,
+            "output": 159
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-create-custom-apps-with-sidekick",
+      "source": "shopify-changelog",
+      "title": "Create custom apps with Sidekick",
+      "link": "https://changelog.shopify.com/posts/create-custom-apps-with-sidekick",
+      "publishedAt": "2025-12-10T14:30:00.000Z",
+      "collectedAt": "2025-12-11T00:01:37.650Z",
+      "category": [
+        "Sidekick"
+      ],
+      "description": "\n        <p>You can now use Sidekick to generate simple, purpose-built apps for your store. Describe the functionality you need, and Sidekick will write the code, build the interface using <a href=\"https://shopify.dev/docs/api/app-home/polaris-web-components\">Polaris components</a>, and connect to the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest\">GraphQL Admin API</a>.</p>\n\n<p>Generated apps are single-page tools that live directly in your admin. You can preview the app, request changes to the code or design, and install it for your team to use. </p>\n\n<p>Available now to merchants on Grow, Plus and Enterprise plans. Usage limits apply.</p>\n\n<p><a href=\"https://help.shopify.com/en/manual/shopify-admin/productivity-tools/sidekick/generate-apps\">Learn more about generating apps</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Sidekickでカスタムアプリを作成",
+          "summarizedJa": "Sidekickを使用して、ストア向けのシンプルなカスタムアプリを生成できるようになりました。必要な機能を説明すると、SidekickがPolarisコンポーネントを使ってコードを記述し、GraphQL Admin APIに接続したシングルページアプリを構築します。この機能はGrow、Plus、Enterpriseプランのマーチャントが利用可能で、使用制限が適用されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2025-12-11T00:05:01.950Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1131,
+            "output": 230
+          },
+          "estimatedCost": 0.006843
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Sidekickでカスタムアプリを生成",
+          "summarizedJa": "ShopifyのAIアシスタントSidekickが、ストア向けのシンプルなカスタムアプリを生成できるようになりました。必要な機能を記述するだけで、Sidekickがコードを書き、PolarisコンポーネントでUIを構築し、GraphQL Admin APIに接続します。生成されたアプリは管理画面内で動作し、プレビューや変更リクエスト、チームでの利用のためのインストールが可能で、Grow、Plus、Enterpriseプランのマーチャントが利用できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2025-12-11T00:05:09.879Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 833,
+            "output": 163
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-improved-ai-image-editing-with-sidekick",
+      "source": "shopify-changelog",
+      "title": "Improved AI image editing with Sidekick",
+      "link": "https://changelog.shopify.com/posts/improved-ai-image-editing-with-sidekick",
+      "publishedAt": "2025-12-10T14:30:00.000Z",
+      "collectedAt": "2025-12-11T00:01:37.650Z",
+      "category": [
+        "Sidekick"
+      ],
+      "description": "\n        <p>The AI image editing features in the file editor have been enhanced with new capabilities and improvements that make editing product photos easier, faster, and more versatile.</p>\n\n<p>What's improved:<br>\n• <strong>Flexible prompting</strong>: Describe what you want to change in the new <code>Generate</code> panel..<br>\n• <strong>Generative image expansion</strong>: Extend images beyond their original edges using the zoom slider in the <code>Crop and transform</code> panel.</p>\n\n<p>Try out any of these new features by selecting an existing photo from your <a href=\"https://admin.shopify.com/content/files\">files</a> or learn more <a href=\"https://help.shopify.com/en/manual/shopify-admin/productivity-tools/shopify-magic/media-generation\">here</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "SidekickのAI画像編集機能が改善",
+          "summarizedJa": "Shopifyのファイルエディターに搭載されているAI画像編集機能が強化されました。柔軟なプロンプト入力で変更内容を記述できる「生成」パネルと、画像を元の枠を超えて拡張できる生成的画像拡張機能が追加され、商品写真の編集がより簡単で迅速、かつ多様になりました。既存の画像ファイルから新機能を試すことができます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2025-12-11T00:05:15.998Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1114,
+            "output": 239
+          },
+          "estimatedCost": 0.006927
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "SidekickによるAI画像編集機能の強化",
+          "summarizedJa": "ShopifyのファイルエディタにおけるAI画像編集機能が大幅に強化され、商品写真の編集がより簡単、迅速、かつ多機能になりました。新しい「Generate」パネルでの柔軟なプロンプト入力や、「Crop and transform」パネルでの生成AIによる画像拡張機能が追加され、マーチャントはAIを活用して商品画像を効率的に編集・加工できるようになります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2025-12-11T00:05:21.138Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 806,
+            "output": 153
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-sidekick-now-remembers-your-preferences",
+      "source": "shopify-changelog",
+      "title": "Sidekick now remembers your preferences",
+      "link": "https://changelog.shopify.com/posts/sidekick-now-remembers-your-preferences",
+      "publishedAt": "2025-12-10T14:30:00.000Z",
+      "collectedAt": "2025-12-11T00:01:37.650Z",
+      "category": [
+        "Sidekick"
+      ],
+      "description": "\n        <p>Sidekick now remembers your history. When you start a new conversation, Sidekick will recall context, preferences, and details from your previous interactions. All memory is at a user level.</p>\n\n<p>This allows you to pick up where you left off without re-explaining your aims or preferences. It applies to all new conversations moving forward.</p>\n\n<p><a href=\"https://help.shopify.com/en/manual/shopify-admin/productivity-tools/sidekick/help-and-guidance#memory\">Learn more about Sidekick memory</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Sidekickがユーザーの設定や履歴を記憶する機能を追加",
+          "summarizedJa": "Shopifyの AI アシスタント「Sidekick」が、過去の会話履歴やユーザーの設定、好みを記憶できるようになりました。新しい会話を始める際に、以前のやり取りの内容を引き継ぐことができるため、目的や好みを毎回説明し直す必要がなくなります。この記憶機能はユーザーレベルで保存され、今後のすべての新しい会話に適用されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2025-12-11T00:05:27.448Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1041,
+            "output": 250
+          },
+          "estimatedCost": 0.006873
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Sidekickがユーザー設定を記憶するようになりました",
+          "summarizedJa": "ShopifyのAIアシスタントSidekickが、過去の会話履歴、文脈、設定、詳細を記憶するようになりました。これにより、ユーザーは以前のやり取りの続きから会話を再開でき、目的や好みを繰り返し説明する必要がなくなります。この機能はユーザーレベルで適用され、今後のすべての新しい会話に反映されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2025-12-11T00:05:33.811Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 751,
+            "output": 145
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-sidekick-now-creates-interactive-to-do-lists",
+      "source": "shopify-changelog",
+      "title": "Sidekick now creates interactive to-do lists",
+      "link": "https://changelog.shopify.com/posts/sidekick-now-creates-interactive-to-do-lists",
+      "publishedAt": "2025-12-10T14:30:00.000Z",
+      "collectedAt": "2025-12-11T00:01:37.650Z",
+      "category": [
+        "Sidekick"
+      ],
+      "description": "\n        <p>Sidekick can now break down complex requests into interactive to-do lists. When you ask for help with a multi-step goal—like preparing for a sale or setting up a new feature—Sidekick can generate a structured list of tasks.</p>\n\n<p>You can check off items as you complete them, or let Sidekick mark them as done when it detects that the action is complete. The list persists in your chat history, allowing you to pause and resume workflows without losing your place.</p>\n\n<p><a href=\"https://help.shopify.com/en/manual/shopify-admin/productivity-tools/sidekick/help-and-guidance\">Learn more about Sidekick to-do lists</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Sidekickがインタラクティブなタスクリストを作成可能に",
+          "summarizedJa": "SidekickがShopifyの複雑な作業を段階的なタスクリストに分解できるようになりました。セールの準備や新機能の設定など、複数ステップが必要な目標について、完了状況をチェックしながら進められる構造化されたタスクリストを生成します。チャット履歴にリストが保存されるため、作業を中断・再開しても進捗状況を維持できます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2025-12-11T00:05:39.297Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1081,
+            "output": 236
+          },
+          "estimatedCost": 0.006782999999999999
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-select-elements-to-give-sidekick-context",
+      "source": "shopify-changelog",
+      "title": "Select elements to give Sidekick context",
+      "link": "https://changelog.shopify.com/posts/select-elements-to-give-sidekick-context",
+      "publishedAt": "2025-12-10T14:30:00.000Z",
+      "collectedAt": "2025-12-11T00:01:37.650Z",
+      "category": [
+        "Sidekick"
+      ],
+      "description": "\n        <p>You can now select any component on your screen to focus Sidekick's attention.</p>\n\n<p>Click the target icon in the Sidekick menu, then select any button, text, or section. Sidekick will use that specific element as the context for your next request, ensuring it understands exactly what you are referring to without needing a written description.</p>\n\n<p><a href=\"https://help.shopify.com/en/manual/shopify-admin/productivity-tools/sidekick/set-up#input-features\">Learn more</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Sidekickに文脈を伝えるための要素選択機能",
+          "summarizedJa": "Sidekickメニューのターゲットアイコンをクリックすることで、画面上の任意のボタン、テキスト、セクションを選択できるようになりました。選択した要素がSidekickの次のリクエストの文脈として使用されるため、文章で説明することなく、正確に何を指しているかをSidekickに理解させることができます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2025-12-11T00:05:44.397Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1040,
+            "output": 217
+          },
+          "estimatedCost": 0.006374999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Sidekickのコンテキスト指定：画面要素の選択",
+          "summarizedJa": "ShopifyのAIアシスタント「Sidekick」に、画面上の任意の要素（ボタン、テキスト、セクションなど）を選択してコンテキストを与える新機能が追加されました。これにより、ユーザーは具体的な説明を記述することなく、Sidekickに作業対象を正確に伝えられるようになります。ターゲットアイコンをクリックして要素を選択するだけで、より効率的な操作が可能になります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 11,
+          "analyzedAt": "2025-12-11T00:05:51.397Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 749,
+            "output": 152
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-shopify-messaging-now-supports-sms-marketing",
+      "source": "shopify-changelog",
+      "title": "Shopify Messaging now supports SMS marketing",
+      "link": "https://changelog.shopify.com/posts/shopify-messaging-now-supports-sms-marketing",
+      "publishedAt": "2025-12-10T14:30:00.000Z",
+      "collectedAt": "2025-12-11T00:01:37.650Z",
+      "category": [
+        "Apps"
+      ],
+      "description": "\n        <p>We’ve added SMS marketing capabilities to <a href=\"https://apps.shopify.com/shopify-email\">Shopify Messaging</a>, formerly known as Shopify Email. Now you can create, send, and track SMS directly from Shopify. </p>\n\n<p>Subscribed customers can receive exclusive offers, helpful product tips, and timely updates. Use ready-made templates built by commerce experts or create your own, then customize your messages to fit your brand. All messages include built-in safeguards to meet regional compliance. </p>\n\n<p>With flexible pricing, you can scale up SMS marketing communications during busy seasons and scale down when you need to—only paying for the messages you send.</p>\n\n<p>You can find both email and SMS marketing capabilities in your Shopify admin within the Shopify Messaging app. SMS marketing is available to select regions.</p>\n\n<p>To learn how to <a href=\"https://help.shopify.com/en/manual/promoting-marketing/create-marketing/shopify-messaging\">create and send SMS marketing messages</a>, visit the Shopify Help Center.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify MessagingがSMSマーケティングに対応",
+          "summarizedJa": "Shopify Email から名称変更された Shopify Messaging に、SMS マーケティング機能が追加されました。マーチャントは Shopify 管理画面から直接 SMS の作成・送信・トラッキングが可能になり、既製テンプレートの利用やブランドに合わせたカスタマイズ、地域コンプライアンスへの対応が組み込まれています。SMS マーケティングは一部地域で利用可能で、送信したメッセージ数に応じた従量課金制となっています。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2025-12-11T00:05:58.775Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1160,
+            "output": 259
+          },
+          "estimatedCost": 0.007365
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify MessagingがSMSマーケティングに対応",
+          "summarizedJa": "Shopify Messaging（旧Shopify Email）にSMSマーケティング機能が追加され、マーチャントはShopify管理画面から直接SMSの作成、送信、追跡が可能になります。これにより、顧客へ限定オファーや最新情報をSMSで届けられるようになり、地域ごとのコンプライアンスに対応しつつ、柔軟な料金体系で運用できます。ただし、本機能は一部地域での提供となるため、日本での利用可否は確認が必要です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2025-12-11T00:06:06.507Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 858,
+            "output": 168
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-new-collection-options-in-the-shopify-messaging-email-editor",
+      "source": "shopify-changelog",
+      "title": "New collection options in the Shopify Messaging email editor",
+      "link": "https://changelog.shopify.com/posts/new-collection-options-in-the-shopify-messaging-email-editor",
+      "publishedAt": "2025-12-10T14:30:00.000Z",
+      "collectedAt": "2025-12-11T00:01:37.650Z",
+      "category": [
+        "Apps"
+      ],
+      "description": "\n        <p>New collection features in the email editor help you build your emails more quickly and create targeted email campaigns. With this update, you can now:  </p>\n\n<ul>\n<li>Filter products by collections when manually building product sections. Start by choosing a collection and quickly find the products you want to include in your email. </li>\n<li>Add dynamic product sections for a specific collection, and choose whether to feature its best selling or most recently added products. </li>\n<li>Display multiple collections in a single email section. Each collection gets its own tile that customers can click to shop. </li>\n</ul>\n\n<p>To learn more about <a href=\"https://help.shopify.com/en/manual/promoting-marketing/create-marketing/shopify-messaging/email/create-email/templates#collection\">adding collections in your Shopify Messaging emails</a>, please refer to the Shopify Help Center. </p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify Messagingメールエディターにコレクション機能を追加",
+          "summarizedJa": "Shopify Messagingのメールエディターに、コレクションを活用した新機能が追加されました。コレクションでの商品絞り込み、特定コレクションの人気商品や新着商品の動的表示、複数コレクションを1つのセクションに表示できる機能により、ターゲットを絞ったメールキャンペーンの作成が効率化されます。メール作成の時間短縮とより効果的なプロモーションが可能になります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2025-12-11T00:06:13.578Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1123,
+            "output": 250
+          },
+          "estimatedCost": 0.007119
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-the-winter-26-edition-is-here",
+      "source": "developer-changelog",
+      "title": "The Winter '26 Edition is here",
+      "link": "https://shopify.dev/changelog/the-winter-26-edition-is-here",
+      "publishedAt": "2025-12-10T14:30:00.000Z",
+      "collectedAt": "2025-12-11T00:01:36.725Z",
+      "category": [
+        "Platform",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>Announcing 150+ updates to Shopify.</p>\n<p><a href=\"https://www.shopify.com/editions/winter2026?utm_source=changelog-dev&utm_medium=changelog-dev&utm_campaign=winter26edition-launch_Q425BACADO\" target=\"_blank\" class=\"body-link\">See the updates</a></p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Winter '26 Edition（2026年冬版）リリース",
+          "summarizedJa": "Shopifyの150以上のアップデートがWinter '26 Editionとして発表されました。プラットフォーム全体にわたる大規模なアップデートで、マーチャントと開発者の両方に影響を与える新機能や改善が含まれています。詳細は専用ページで確認できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2025-12-11T00:06:18.321Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 995,
+            "output": 196
+          },
+          "estimatedCost": 0.005925
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-a-more-powerful-dev-assistant-on-shopifydev",
+      "source": "developer-changelog",
+      "title": "A more powerful Dev Assistant on shopify.dev",
+      "link": "https://shopify.dev/changelog/a-more-powerful-dev-assistant-on-shopifydev",
+      "publishedAt": "2025-12-10T14:00:00.000Z",
+      "collectedAt": "2025-12-11T00:01:36.725Z",
+      "category": [
+        "API",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>We've overhauled the Dev Assistant to make it a more reliable and comprehensive companion for your development workflow. While the Assistant is already a familiar tool, this update introduces a new engine designed to deliver higher accuracy and broader knowledge across the entire ecosystem.</p>\n<p>Key improvements include:</p>\n<ul>\n<li><strong>Comprehensive platform knowledge</strong>: The Assistant now supports the full breadth of the Shopify development platform. Whether you're working with the GraphQL Admin API, building UI extensions, or configuring Hydrogen, you can ask about any aspect of the platform and get a relevant answer.</li>\n<li><strong>Verified code examples</strong>: We've improved the accuracy of generated solutions. The Assistant now validates code blocks against our schemas before rendering the response, ensuring the snippets you receive are syntactically correct and ready to use.</li>\n<li><strong>Direct documentation access</strong>: It's now easier to verify answers and dive deeper into specific topics. The Assistant provides transparent resource links alongside every response, enabling you to navigate quickly to the exact pages on shopify.dev that were used to generate the answer.</li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "shopify.dev の開発者アシスタントがより強力に進化",
+          "summarizedJa": "shopify.devの開発者アシスタント（Dev Assistant）が大幅に刷新され、精度と対応範囲が向上しました。GraphQL Admin API、UI拡張、Hydrogenなどプラットフォーム全体の知識に対応し、コード例はスキーマに対して検証されるため構文的に正確なものが提供されます。また、回答には参照元のドキュメントへの直接リンクが表示されるようになり、より深い学習が可能になりました。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2025-12-11T00:06:25.630Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1171,
+            "output": 250
+          },
+          "estimatedCost": 0.0072629999999999995
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-revamped-pos-ui-extensions-reference",
+      "source": "developer-changelog",
+      "title": "Revamped POS UI extensions reference",
+      "link": "https://shopify.dev/changelog/revamped-pos-ui-extensions-reference",
+      "publishedAt": "2025-12-10T14:00:00.000Z",
+      "collectedAt": "2025-12-11T00:01:36.725Z",
+      "category": [
+        "API",
+        "New",
+        "POS Extensions"
+      ],
+      "description": " <div class=\"\"><p>We've overhauled the Point of Sale (POS) UI extensions reference, making it easier for you to build extensions that integrate into Shopify's <a href=\"https://shopify.dev/docs/apps/build/pos\" target=\"_blank\" class=\"body-link\">Point of Sale interface</a>.</p>\n<p>Updates include:</p>\n<ul>\n<li><strong>Expanded guidance:</strong> Detailed explanations and real-world use cases help you implement features.</li>\n<li><strong>More examples:</strong> New code snippets and an example switcher help you find what you need faster.</li>\n<li><strong>Clearer relationships:</strong> Support matrices show at a glance how targets, APIs, and components work together.</li>\n<li><strong>Developer feedback addressed:</strong> We reviewed and resolved 100% of feedback submitted through our <strong>Was this doc helpful?</strong> form.</li>\n</ul>\n<p>Check out the new <a href=\"https://shopify.dev/docs/api/pos-ui-extensions\" target=\"_blank\" class=\"body-link\">POS UI extensions reference</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "POS UI拡張機能リファレンスの全面刷新",
+          "summarizedJa": "Shopify POSのUI拡張機能のドキュメントが全面的に刷新されました。詳細なガイダンス、豊富なコード例、コンポーネント間の関係性を示すサポートマトリックスが追加され、開発者からのフィードバックも100%対応されています。これによりPOSアプリ開発がより容易になります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2025-12-11T00:06:31.084Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1184,
+            "output": 215
+          },
+          "estimatedCost": 0.006777
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-offline-access-tokens-now-support-expiry-and-refresh",
+      "source": "developer-changelog",
+      "title": "Offline access tokens now support expiry and refresh",
+      "link": "https://shopify.dev/changelog/offline-access-tokens-now-support-expiry-and-refresh",
+      "publishedAt": "2025-12-10T14:00:00.000Z",
+      "collectedAt": "2025-12-11T00:01:36.725Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "Admin REST API"
+      ],
+      "description": " <div class=\"\"><p><a href=\"https://shopify.dev/docs/apps/build/authentication-authorization/access-tokens/offline-access-tokens\" target=\"_blank\" class=\"body-link\">Offline access tokens</a> now can optionally expire after 60 minutes and come with a refresh token. You can use the refresh token to obtain a new offline access token without requiring merchant interaction. This update aligns our process with the OAuth 2.0 specification and enhances security.</p>\n<h2>How expiry works</h2>\n<p>OAuth authorizes your app to act on behalf of a store. Once the merchant approves your requested scopes, you receive tokens.</p>\n<ol>\n<li>Direct the merchant through OAuth and request offline access.</li>\n<li>We provide:<ul>\n<li><code>access_token</code> access token to be used to make API requests</li>\n<li><code>expires_in</code> time to live (TTL) of the access token in seconds (3600 seconds)</li>\n<li><code>refresh_token</code> used to request a new access token with an updated TTL</li>\n</ul>\n</li>\n<li>Before or after the access token expires, exchange the <code>refresh_token</code> at the token endpoint to receive a new offline access token.</li>\n<li>Update stored tokens with the latest values returned by the refresh response.</li>\n</ol>\n<p>Refer to the OAuth documentation for specific parameters, error codes, and retry guidance.</p>\n<h2>How to implement expiry</h2>\n<ul>\n<li>Securely store refresh tokens, as they are sensitive credentials that can generate new access tokens. Use a secrets manager, encrypt at rest, and restrict access.</li>\n<li>To implement expiring tokens, you'll need to:<ul>\n<li>Track the access token’s 60-minute expiry.</li>\n<li>Proactively refresh tokens a few minutes before they expire, and when you recieve a 401 response.</li>\n<li>Update stored tokens with the latest values from the refresh response.</li>\n<li>Remove any assumptions in your code that offline tokens never expire.</li>\n</ul>\n</li>\n<li>Monitor logs and alerts for token refresh failures, and revert to a new OAuth authorization if necessary.</li>\n</ul>\n<h2>Migration and compatibility</h2>\n<ul>\n<li>This change is additive: existing perpetual offline tokens will continue to function for now.</li>\n<li>Available with both <a href=\"https://shopify.dev/docs/apps/build/authentication-authorization/access-tokens/token-exchange\" target=\"_blank\" class=\"body-link\">token exchange</a> and <a href=\"https://shopify.dev/docs/apps/build/authentication-authorization/access-tokens/authorization-code-grant\" target=\"_blank\" class=\"body-link\">authorization code</a> grant types.  The <a href=\"https://shopify.dev/docs/apps/build/authentication-authorization/access-tokens/client-credentials-grant\" target=\"_blank\" class=\"body-link\">client credentials grant</a> already supports expiry and refresh using a slightly different OAuth 2 spec process.</li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "オフラインアクセストークンが有効期限とリフレッシュに対応",
+          "summarizedJa": "オフラインアクセストークンが60分の有効期限を持つようになり、リフレッシュトークンによる更新が可能になりました。OAuth 2.0仕様に準拠し、セキュリティが強化されますが、既存の永続的なトークンは当面継続して機能します。アプリ開発者は、トークンの有効期限管理とリフレッシュロジックの実装が必要になります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 5
+          },
+          "totalScore": 15,
+          "analyzedAt": "2025-12-11T00:06:36.506Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1688,
+            "output": 239
+          },
+          "estimatedCost": 0.008649
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-monitor-admin-performance-issues-by-region-with-web-vitals-api",
+      "source": "developer-changelog",
+      "title": "Monitor admin performance issues by region with Web Vitals API",
+      "link": "https://shopify.dev/changelog/monitor-admin-performance-issues-by-region-with-web-vitals-api",
+      "publishedAt": "2025-12-10T13:45:00.000Z",
+      "collectedAt": "2025-12-11T00:01:36.725Z",
+      "category": [
+        "API",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>Enhance your app's global admin performance with regional data from the Web Vitals API. Each Web Vitals event now includes a country field with a two-letter ISO country code, allowing you to pinpoint where users encounter performance issues with your app.</p>\n<p>This update enables you to understand regional performance patterns and optimize your app for users worldwide. You can segment admin performance data by geography to identify slow-loading regions, troubleshoot location-specific issues, and ensure consistent user experiences across various markets.</p>\n<p>No additional setup is required; existing onReport callbacks automatically receive the new country field. Use this data to create more targeted performance optimizations and deliver faster admin experiences for merchants globally.</p>\n<p>For more information about the Web Vitals API, visit the <a href=\"https://shopify.dev/docs/apps/build/performance/admin-installation-oauth?utm_source=w26-editions-website&utm_medium=product-cta&utm_campaign=winter26edition#measure-your-apps-loading-performance\" target=\"_blank\" class=\"body-link\">developer documentation</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Web Vitals APIで地域別の管理画面パフォーマンス問題を監視可能に",
+          "summarizedJa": "Web Vitals APIに国コード（ISO 2文字）が追加され、アプリの管理画面パフォーマンスを地域別に分析できるようになりました。これにより、特定地域でのパフォーマンス問題を特定し、世界中のマーチャントに最適化されたアプリ体験を提供できます。既存のonReportコールバックに自動的に国フィールドが追加されるため、追加設定は不要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2025-12-11T00:06:43.191Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1173,
+            "output": 251
+          },
+          "estimatedCost": 0.007284
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-simplified-app-store-requirements",
+      "source": "developer-changelog",
+      "title": "Simplified App Store requirements",
+      "link": "https://shopify.dev/changelog/simplified-app-store-requirements",
+      "publishedAt": "2025-12-10T13:45:00.000Z",
+      "collectedAt": "2025-12-11T00:01:36.725Z",
+      "category": [
+        "Shopify App Store",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>Preparing your app for review just became more straightforward. We've simplified and updated App Store requirements to be clearer, better organized, and easier to work with throughout the development process.</p>\n<p><strong>What's improved:</strong></p>\n<ul>\n<li><strong>Streamlined structure:</strong> Requirements are organized for better structure and readability, so you can understand exactly what’s needed.</li>\n<li><strong>Numbered for easy reference:</strong> Each requirement has a clear number and hyperlink associated with it, making it simple to reference specific items as you work through them.</li>\n</ul>\n<p><strong>What this means for you:</strong>\nThese improvements remove friction from understanding and following requirements, so you can focus on building features that merchants love.</p>\n<p>All updated requirements are now live in the <a href=\"https://shopify.dev/docs/apps/launch/shopify-app-store/app-store-requirements\" target=\"_blank\" class=\"body-link\">developer documentation</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "App Storeの要件が簡素化されました",
+          "summarizedJa": "Shopify App Storeへの申請要件が、より明確で分かりやすく整理されました。各要件には番号とハイパーリンクが付与され、開発プロセス全体を通じて参照しやすくなっています。これにより、開発者はアプリのレビュー準備をより効率的に進められるようになります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2025-12-11T00:06:48.006Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1143,
+            "output": 201
+          },
+          "estimatedCost": 0.006444
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-new-fields-to-combine-bundle-options",
+      "source": "developer-changelog",
+      "title": "New fields to combine bundle options",
+      "link": "https://shopify.dev/changelog/new-fields-to-combine-bundle-options",
+      "publishedAt": "2025-12-10T13:03:00.000Z",
+      "collectedAt": "2025-12-11T00:01:36.725Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-01"
+      ],
+      "description": " <div class=\"\"><p>In the API <code>2026-01</code> release candidate version, we've introduced consolidated options in the GraphQL Admin API. This feature allows you to support merchants by combining options, such as size and length, to streamline the checkout process for customers.</p>\n<p>The new <code>consolidatedOptions</code> field has been added to the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/input-objects/ProductBundleCreateInput\" target=\"_blank\" class=\"body-link\"><code>ProductBundleCreateInput</code></a> and <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/input-objects/productbundleupdateinput\" target=\"_blank\" class=\"body-link\"><code>ProductBundleUpdateInput</code></a> input objects in the GraphQL Admin API. Use this field to define which buyer-facing options to combine across components, ensuring a single selector for customers purchasing fixed bundles.</p>\n<p>Learn more about combining bundle options by following this <a href=\"https://shopify.dev/docs/apps/build/product-merchandising/bundles/add-product-fixed-bundle\" target=\"_blank\" class=\"body-link\">tutorial</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "バンドルオプションを統合する新しいフィールド",
+          "summarizedJa": "GraphQL Admin API 2026-01で、商品バンドルのオプション（サイズや長さなど）を統合できる新しい`consolidatedOptions`フィールドが追加されました。これにより、固定バンドル商品の購入時に、複数のコンポーネントのオプションを単一のセレクターにまとめることができ、チェックアウトプロセスを効率化できます。`ProductBundleCreateInput`および`ProductBundleUpdateInput`で利用可能です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2025-12-11T00:06:54.031Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1213,
+            "output": 245
+          },
+          "estimatedCost": 0.007314
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-shopifyql-python-sdk-and-cli-now-available-for-analytics",
+      "source": "developer-changelog",
+      "title": "ShopifyQL Python SDK and CLI now available for analytics",
+      "link": "https://shopify.dev/changelog/shopifyql-python-sdk-and-cli-now-available-for-analytics",
+      "publishedAt": "2025-12-09T20:00:00.000Z",
+      "collectedAt": "2025-12-11T00:01:36.725Z",
+      "category": [
+        "API",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>Developers and merchants can now access ShopifyQL data through a dedicated Python SDK and CLI tool designed for analytics workflows.</p>\n<p>The ShopifyQL Python package provides a clean, Pythonic interface for ShopifyQL queries while handling GraphQL API complexity behind the scenes. It eliminates manual OAuth implementation and HTTP request handling, returning data directly as either pandas DataFrames or polars DataFrames.This enables you to create reporting apps and export data to data warehouses without managing GraphQL interactions directly.</p>\n<p><a href=\"https://shopify.dev/docs/apps/build/shopifyql/python-sdk-and-cli\" target=\"_blank\" class=\"body-link\">Learn more</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "ShopifyQL Python SDKとCLIが分析用途で利用可能に",
+          "summarizedJa": "ShopifyQLのデータにアクセスできるPython SDKとCLIツールが新たにリリースされました。このSDKはGraphQL APIの複雑な処理を隠蔽し、OAuth認証やHTTPリクエストの実装を不要にしながら、pandasやpolarsのDataFrame形式でデータを直接取得できます。レポーティングアプリの開発やデータウェアハウスへのデータエクスポートが容易になります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2025-12-11T00:07:00.323Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1084,
+            "output": 240
+          },
+          "estimatedCost": 0.006852
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-tax-summary-webhook-and-calculation-requests-now-include-customer-and-company-metafields",
       "source": "developer-changelog",
@@ -52,6 +1489,39 @@
             "output": 154
           },
           "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-multi-environment-theme-commands-shopify-cli",
+      "source": "developer-changelog",
+      "title": "Multi-environment theme commands in Shopify CLI",
+      "link": "https://shopify.dev/changelog/multi-environment-theme-commands-shopify-cli",
+      "publishedAt": "2025-12-09T17:00:00.000Z",
+      "collectedAt": "2025-12-11T00:01:36.725Z",
+      "category": [
+        "Tools",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>You can now run theme commands across multiple environments simultaneously, making it easier to manage themes across development, staging, and production stores in a single operation.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify CLIでのマルチ環境テーマコマンド",
+          "summarizedJa": "Shopify CLIで複数の環境にまたがってテーマコマンドを同時実行できるようになりました。これにより、開発環境、ステージング環境、本番ストアのテーマを1回の操作で管理できるようになり、テーマ開発・運用の効率が向上します。複数店舗や環境を管理する開発者にとって作業時間の短縮につながります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2025-12-11T00:07:06.486Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 945,
+            "output": 227
+          },
+          "estimatedCost": 0.00624
         }
       }
     },
@@ -208,6 +1678,40 @@
             "output": 141
           },
           "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-binary-testing-for-shopify-functions",
+      "source": "developer-changelog",
+      "title": "Binary testing for Shopify Functions",
+      "link": "https://shopify.dev/changelog/binary-testing-for-shopify-functions",
+      "publishedAt": "2025-12-05T17:00:00.000Z",
+      "collectedAt": "2025-12-11T00:01:36.725Z",
+      "category": [
+        "Tools",
+        "New",
+        "Functions"
+      ],
+      "description": " <div class=\"\"><p>We've released the <a href=\"https://www.npmjs.com/package/@shopify/shopify-function-test-helpers\" target=\"_blank\" class=\"body-link\"><code>@shopify/shopify-function-test-helpers</code></a> package to simplify writing comprehensive integration tests for Shopify Functions using real production data. All function extension templates now include integration tests powered by this package.</p>\n<h2>Why this matters</h2>\n<ol>\n<li><strong>Test the actual WASM binary</strong>: Integration tests validate the compiled code uploaded to Shopify's infrastructure, helping to catch breaking changes before they hit production; including compilation errors, runtime crashes, or serialization issues that unit tests might miss.</li>\n<li><strong>Easily add new scenarios</strong>: Create new fixtures in the <code>tests/fixtures/</code> directory, and the test suite will automatically include them. There's no need to write additional test code for each new scenario.</li>\n<li><strong>Build from real production data</strong>: Create your fixture library by copying function run logs directly from production. This enables you to test against the actual inputs your function encounters, ensuring your tests reflect real-world scenarios.</li>\n</ol>\n<h2>Learn more</h2>\n<p>For more details, visit the <a href=\"https://www.npmjs.com/package/@shopify/shopify-function-test-helpers\" target=\"_blank\" class=\"body-link\">package page</a> or explore the <a href=\"https://shopify.dev/docs/apps/build/functions/test-debug-functions#writing-wasm-integration-tests-for-functions\" target=\"_blank\" class=\"body-link\">Shopify developer documentation</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify Functionsのバイナリテスト機能",
+          "summarizedJa": "Shopify Functionsの統合テストを簡素化する新しいnpmパッケージ「@shopify/shopify-function-test-helpers」がリリースされました。実際の本番データを使用してコンパイル済みWASMバイナリをテストでき、本番環境で発生する可能性のある問題を事前に検出できます。全ての関数エクステンションテンプレートにこのパッケージを使用した統合テストが含まれるようになりました。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2025-12-11T00:07:11.953Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1317,
+            "output": 243
+          },
+          "estimatedCost": 0.0075959999999999995
         }
       }
     },
