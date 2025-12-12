@@ -1,6 +1,156 @@
 {
-  "lastUpdated": "2025-12-11T00:01:37.658Z",
+  "lastUpdated": "2025-12-12T00:01:32.098Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-create-flow-automations-with-sidekick",
+      "source": "shopify-changelog",
+      "title": "Create Flow automations with Sidekick",
+      "link": "https://changelog.shopify.com/posts/create-flow-automations-with-sidekick",
+      "publishedAt": "2025-12-11T20:00:00.000Z",
+      "collectedAt": "2025-12-12T00:01:32.088Z",
+      "category": [
+        "Apps"
+      ],
+      "description": "\n        <p>Sidekick can now create Flow workflows. Open Flow, click the Sidekick icon, and describe what you want to automate. Sidekick generates a workflow with the appropriate trigger, conditions, and actions. The workflow opens in the editor where you can test it, make changes, and activate.</p>\n\n<p>Works well for: customer and order tagging, email and Slack notifications, inventory alerts, scheduled automations. Workflows with advanced Liquid or custom code may require manual editing.</p>\n\n<p>Requirements:<br>\nFlow must be installed and open<br>\nDesktop only<br>\nManual activation required</p>\n\n<p>Available on Basic, Shopify, Advanced, and Plus plans. To learn more, visit the <a href=\"https://help.shopify.com/manual/shopify-flow/create/create-workflow#sidekick\">Help Center.</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "SidekickでFlowの自動化ワークフローを作成可能に",
+          "summarizedJa": "ShopifyのAIアシスタントSidekickが、Flowアプリ内でワークフローを自動生成できるようになりました。Flowを開いてSidekickアイコンをクリックし、自動化したい内容を説明すると、適切なトリガー、条件、アクションを含むワークフローが生成されます。顧客・注文のタグ付け、メール・Slack通知、在庫アラート、スケジュール自動化などに対応し、Basic以上の全プランで利用可能です（デスクトップのみ、手動でのアクティブ化が必要）。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2025-12-12T00:01:39.016Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1108,
+            "output": 288
+          },
+          "estimatedCost": 0.007644
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "SidekickでFlowの自動化を作成",
+          "summarizedJa": "SidekickがShopify Flowのワークフローを自動生成できるようになりました。Flowを開いてSidekickアイコンをクリックし、自動化したい内容を説明するだけで、適切なトリガー、条件、アクションを含むワークフローが作成されます。これにより、顧客や注文のタグ付け、通知、在庫アラートなどの業務自動化が容易になり、Basic以上のプランで利用可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2025-12-12T00:01:44.461Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 815,
+            "output": 148
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-flow-preview-workflows-safely-with-test-runs",
+      "source": "shopify-changelog",
+      "title": "Flow: Preview workflows safely with test runs",
+      "link": "https://changelog.shopify.com/posts/flow-preview-workflows-safely-with-test-runs",
+      "publishedAt": "2025-12-11T17:00:00.000Z",
+      "collectedAt": "2025-12-12T00:01:32.088Z",
+      "category": [
+        "Apps"
+      ],
+      "description": "\n        <p>Today we’re introducing test runs in Shopify Flow — a safe way to see exactly how a workflow will behave before you activate it. Start a test directly in the editor by choosing an event from your shop and watch how your workflow evaluates in context.</p>\n\n<p>With test runs, you can spot issues fast.</p>\n\n<p>You can review the exact path your workflow would take through branches and for each loops:</p>\n\n<p><img src=\"https://screenshot.click/03-42-madvo-cbvxf.png\" alt=\"Screenshot of a workflow being tested\"></p>\n\n<p>You can inspect your shop’s real data, by previewing the output of your Conditions, Liquid code, and Run code steps:</p>\n\n<p><img src=\"https://screenshot.click/03-52-n9tbj-4c2hh.png\" alt=\"Screenshot of the details of a condition\"></p>\n\n<p>Running a test is quick (about 10 seconds) and isolated from your live store. Actions that change something outside the workflow run, such as Add order tags or Send Internal Email, will not run. Instead, the test will show you the output of any Liquid code in the steps. Other actions that only change data for the workflow, like Run code, Count, and Sum will run and display their output. </p>\n\n<p>Learn more about testing workflows in the <a href=\"https://help.shopify.com/manual/shopify-flow/manage/test-workflow\">Shopify Help Center</a> and discover automation best practices in our Flow testing guide.</p>\n\n<p>For more information about building templates, visit the <a href=\"https://help.shopify.com/en/manual/shopify-flow/\">documentation</a>. For questions and feedback, visit the <a href=\"https://community.shopify.com/c/shopify-flow/304\">Shopify community</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Flow: テスト実行機能でワークフローを安全にプレビュー",
+          "summarizedJa": "Shopify Flowに、ワークフローを有効化する前に動作を安全に確認できるテスト実行機能が追加されました。実際のショップデータを使用して、分岐条件やLiquidコードの出力を検証でき、約10秒で完了します。実際のストアには影響を与えず、タグ追加やメール送信などのアクションは実行されません。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2025-12-12T00:01:49.808Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1343,
+            "output": 225
+          },
+          "estimatedCost": 0.007403999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Flow: テスト実行でワークフローを安全にプレビュー",
+          "summarizedJa": "Shopify Flowに「テスト実行」機能が導入されました。これにより、ワークフローを有効化する前に、実際のショップデータを用いてその動作を安全にプレビューし、問題点を迅速に特定できます。テストはライブストアに影響を与えず、分岐やループのパス、条件やLiquidコードの出力などを確認できるため、より信頼性の高い自動化設定が可能になります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 17,
+          "analyzedAt": "2025-12-12T00:01:57.767Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1054,
+            "output": 156
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-prevent-accidental-inventory-overwrite-in-bulk-editor",
+      "source": "shopify-changelog",
+      "title": "Prevent accidental inventory overwrite in bulk editor",
+      "link": "https://changelog.shopify.com/posts/prevent-accidental-inventory-overwrite-in-bulk-editor",
+      "publishedAt": "2025-12-11T17:00:00.000Z",
+      "collectedAt": "2025-12-12T00:01:32.088Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p><strong>Visual changes:</strong> The editor now shows what’s changing before you save. You’ll see the original value and your new value side by side. Increases appear in green and decreases in red, making it clear that you’re replacing quantities rather than adjusting them.</p>\n\n<p><strong>Alert tooltips:</strong> Tooltips on the Available and On hand columns explain that new values override existing quantities.</p>\n\n<p><strong>Conflict detection:</strong> If inventory changes while you’re editing (for example, when another staff member updates stock), you’ll see an inventory mismatch dialog. The dialog shows what changed and gives you options:</p>\n\n<ul>\n<li><strong>Save suggested:</strong> Uses the suggested value based on the current inventory</li>\n<li><strong>Save original:</strong> Overrides it with the exact number you entered</li>\n<li><strong>Discard:</strong> Closes the dialog and returns you to the bulk editor</li>\n</ul>\n\n<p>This prevents accidental overwrites and keeps your inventory accurate. Learn more <a href=\"https://help.shopify.com/en/manual/products/inventory/adjusting-inventory/bulk-editing-inventory#edit-properties\">here</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "バルクエディターでの在庫の誤上書きを防止",
+          "summarizedJa": "管理画面のバルクエディターに在庫編集時の安全機能が追加されました。保存前に元の値と新しい値を並べて表示し、増減を色分けして確認できるようになりました。また、他のスタッフが同時に在庫を更新した場合は競合検知ダイアログが表示され、提案値の保存・元の値で上書き・破棄の3つの選択肢から対応を選べるため、誤った在庫上書きを防ぎ正確な在庫管理が可能になります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2025-12-12T00:02:04.706Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1195,
+            "output": 270
+          },
+          "estimatedCost": 0.007635
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "一括エディタでの意図しない在庫上書きを防止",
+          "summarizedJa": "Shopifyの一括エディタで在庫を編集する際、意図しない上書きを防ぐための機能が追加されました。編集内容が視覚的に分かりやすくなり、既存の数量を上書きすることが明確に表示されます。また、他のスタッフによる同時変更があった場合には、競合を検出し、現在の在庫に基づいた推奨値で保存するか、入力した値で上書きするかを選択できるダイアログが表示され、在庫の正確性を保ちます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2025-12-12T00:02:10.363Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 879,
+            "output": 176
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-start-sidekick-conversations-from-shopify-home",
       "source": "shopify-changelog",
