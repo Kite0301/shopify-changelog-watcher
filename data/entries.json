@@ -1,6 +1,323 @@
 {
-  "lastUpdated": "2025-12-12T00:01:32.098Z",
+  "lastUpdated": "2025-12-14T00:01:43.606Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-automated-transfers-for-shopify-balance-payouts",
+      "source": "shopify-changelog",
+      "title": "Automated transfers for Shopify Balance payouts ",
+      "link": "https://changelog.shopify.com/posts/automated-transfers-for-shopify-balance-payouts",
+      "publishedAt": "2025-12-12T17:00:00.000Z",
+      "collectedAt": "2025-12-14T00:01:43.592Z",
+      "category": [
+        "Balance"
+      ],
+      "description": "\n        <p>We’ve released Auto Transfers for Shopify Balance users in the US. This feature lets merchants automatically move incoming Shopify payouts across multiple accounts — such as setting aside funds for paying suppliers, savings, or operating expenses. With flexible rules and percentage-based allocations, merchants can now automate cash management, reduce manual transfers, and stay in control of how their money is budgeted each day.</p>\n\n<p>To learn more, visit our <a href=\"http://help.shopify.com/en/manual/finance/shopify-balance/managing-account/transfers#shopify-balance-automatic-transfers\">Help Center guide on Auto Transfers</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify Balance支払いの自動振替機能",
+          "summarizedJa": "米国のShopify Balanceユーザー向けに、入金されるShopify支払いを複数のアカウントへ自動的に振り分ける機能がリリースされました。仕入先への支払い、貯蓄、運営費用など、目的別に資金を自動配分することが可能です。柔軟なルール設定とパーセンテージベースの配分により、キャッシュマネジメントの自動化と手動振替の削減が実現できます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 5,
+          "analyzedAt": "2025-12-14T00:01:50.011Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1056,
+            "output": 243
+          },
+          "estimatedCost": 0.006813
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify Balanceペイアウトの自動振替",
+          "summarizedJa": "この機能は、米国のShopify Balanceユーザー向けにリリースされました。マーチャントは、Shopifyからの入金をサプライヤーへの支払い、貯蓄、運営費などの複数の口座に自動的に振り分けることができます。柔軟なルールと割合に基づいた配分により、キャッシュフロー管理を自動化し、手動での振替作業を削減できます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 3
+          },
+          "totalScore": 6,
+          "analyzedAt": "2025-12-14T00:01:55.728Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 766,
+            "output": 148
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-making-idempotency-mandatory-for-inventory-adjustments-and-refund-mutations",
+      "source": "developer-changelog",
+      "title": "Making idempotency mandatory for inventory adjustments and refund mutations",
+      "link": "https://shopify.dev/changelog/making-idempotency-mandatory-for-inventory-adjustments-and-refund-mutations",
+      "publishedAt": "2025-12-12T17:00:00.000Z",
+      "collectedAt": "2025-12-14T00:01:42.255Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Breaking API Change",
+        "Admin GraphQL API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>This changelog relates to <a href=\"https://shopify.dev/changelog/concurrency-protection-features\" target=\"_blank\" class=\"body-link\">concurrency protection features</a>.</p>\n<p>We're making the <a href=\"https://shopify.dev/changelog/adding-idempotency-for-inventory-adjustments-and-refund-mutations\" target=\"_blank\" class=\"body-link\">idempotent directive introduced here</a> <strong>mandatory</strong> for the following mutations in version <code>2026-04</code>:</p>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/refundCreate\" target=\"_blank\" class=\"body-link\"><code>refundCreate</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventoryShipmentReceive\" target=\"_blank\" class=\"body-link\"><code>inventoryShipmentReceive</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventoryAdjustQuantities\" target=\"_blank\" class=\"body-link\"><code>inventoryAdjustQuantities</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventoryMoveQuantities\" target=\"_blank\" class=\"body-link\"><code>inventoryMoveQuantities</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventorySetQuantities\" target=\"_blank\" class=\"body-link\"><code>inventorySetQuantities</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventorySetOnHandQuantities\" target=\"_blank\" class=\"body-link\"><code>inventorySetOnHandQuantities</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventoryShipmentCreateInTransit\" target=\"_blank\" class=\"body-link\"><code>inventoryShipmentCreateInTransit</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventoryShipmentCreate\" target=\"_blank\" class=\"body-link\"><code>inventoryShipmentCreate</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventoryTransferCreate\" target=\"_blank\" class=\"body-link\"><code>inventoryTransferCreate</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventoryTransferCreateAsReadyToShip\" target=\"_blank\" class=\"body-link\"><code>inventoryTransferCreateAsReadyToShip</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventoryTransferDuplicate\" target=\"_blank\" class=\"body-link\"><code>inventoryTransferDuplicate</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventoryTransferSetItems\" target=\"_blank\" class=\"body-link\"><code>inventoryTransferSetItems</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventorySetScheduledChanges\" target=\"_blank\" class=\"body-link\"><code>inventorySetScheduledChanges</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventoryActivate\" target=\"_blank\" class=\"body-link\"><code>inventoryActivate</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventoryShipmentAddItems\" target=\"_blank\" class=\"body-link\"><code>inventoryShipmentAddItems</code></a></li>\n</ul>\n<blockquote>\n<p><strong>Note</strong>:\nEven though the idempotency directive doesn't show up as mandatory at the schema level, calling these mutations without an idempotency directive will result in an error at runtime.</p>\n</blockquote>\n<h2>What you need to do</h2>\n<p>Developers using these mutations must update their application logic to include the <code>@idempotent</code> directive before migrating to version <code>2026-04</code></p>\n<h2>How to use the directive</h2>\n<p>An idempotency key is a unique identifier (we recommend using a UUID) that you provide when making a mutation request (generally, you would regenerate this key on page load and after successful operations). If you retry the same request with the same idempotency key due to network issues or timeouts, Shopify will recognize it as a duplicate and ensure the inventory is only adjusted once (or that the refund is only created once), protecting against double-counting. It will return the result of the original operation instead of creating a new one.</p>\n<p>Example usage:</p>\n<pre><code>  mutation {\n    inventoryAdjustQuantities(\n      input: {\n        reason: &quot;restock&quot;\n        name: &quot;available&quot;\n        changes: [{\n          delta: 5\n          inventoryItemId: &quot;gid://shopify/InventoryItem/123&quot;\n          locationId: &quot;gid://shopify/Location/456&quot;\n        }]\n      }\n    ) @idempotent(key: &quot;4f5b6ebf-143c-4da5-8d0f-fb8553bfd85d&quot;) {\n      inventoryAdjustmentGroup {\n        id\n      }\n      userErrors {\n        code\n        message\n      }\n    }\n  }\n</code></pre>\n<h2>Why we made this change</h2>\n<p>Idempotency keys are essential for building robust, production-ready integrations. Duplicate inventory adjustments and duplicate refunds have long been a pain-point for merchants and for Shopify, resulting in inventory inconsistencies and financial losses. Making idempotency mandatory for our refund and inventory mutations will mitigate these problems.</p>\n<p>For more information on how to implement idempotency, refer to <a href=\"https://shopify.dev/docs/api/usage/idempotent-requests\" target=\"_blank\" class=\"body-link\">our docs</a>.</p>\n<h2>Error codes</h2>\n<p>If there's an issue with your idempotency key usage, you'll receive one of these error codes:</p>\n<ul>\n<li><code>IDEMPOTENCY_CONCURRENT_REQUEST</code>: Another request with the same idempotency key is currently being processed</li>\n<li><code>IDEMPOTENCY_KEY_PARAMETER_MISMATCH</code>: The same idempotency key was used with different parameters</li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "在庫調整とrefundのmutationで冪等性ディレクティブが必須化",
+          "summarizedJa": "2026-04バージョンから、在庫調整および返金関連の15種類のGraphQL mutationにおいて、@idempotentディレクティブの使用が必須となります。これにより、ネットワークの問題やタイムアウト時の重複リクエストによる在庫の二重計上や重複返金を防止できます。開発者は2026-04への移行前に、これらのmutationに一意の冪等性キー（UUID推奨）を含めるようアプリケーションロジックを更新する必要があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 5
+          },
+          "totalScore": 15,
+          "analyzedAt": "2025-12-14T00:02:01.864Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2768,
+            "output": 272
+          },
+          "estimatedCost": 0.012384000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "在庫調整および返金ミューテーションにおける冪等性の必須化",
+          "summarizedJa": "Shopifyは、2026年4月版APIから、在庫調整および返金関連の特定のミューテーションで冪等性（@idempotentディレクティブ）の利用を必須化します。これは、重複処理による在庫不整合や財務損失を防ぎ、システムの堅牢性を高めるための重要な変更です。日本のパートナーは、対象となるAPIを使用している既存のアプリケーションを2026年4月版APIに移行する前に、必ずコードを更新し、冪等性キーを実装する必要があります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 5
+          },
+          "totalScore": 18,
+          "analyzedAt": "2025-12-14T00:02:09.894Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 2232,
+            "output": 191
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-removal-of-payment-method-requirement-on-api-created-subscription-contracts",
+      "source": "developer-changelog",
+      "title": "Removal of payment method requirement on API created Subscription contracts",
+      "link": "https://shopify.dev/changelog/removal-of-payment-method-requirement-on-api-created-subscription-contracts",
+      "publishedAt": "2025-12-12T17:00:00.000Z",
+      "collectedAt": "2025-12-14T00:01:42.255Z",
+      "category": [
+        "API",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>We've made it possible create subscription contracts without an attached payment method using the GraphQL Admin API. Contracts created through checkout will continue to require a payment method.</p>\n<p>With this update, if you’re importing existing contracts with missing or expired payment methods, you can still migrate them to Shopify first and collect or update payment details later—removing a common onboarding blocker while keeping the buyer experience unchanged. </p>\n<p><strong>Note</strong>: Charges can’t be processed until a valid payment method is added.</p>\n<p><a href=\"https://shopify.dev/docs/apps/build/purchase-options/subscriptions/migrate-to-subscriptions-api/migrate-subscription-contracts\" target=\"_blank\" class=\"body-link\">Learn more in the dev docs</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "API経由で作成するサブスクリプション契約における支払い方法の必須要件の撤廃",
+          "summarizedJa": "GraphQL Admin APIを使用してサブスクリプション契約を作成する際、支払い方法を登録していなくても契約を作成できるようになりました。これにより、他のプラットフォームから既存の契約を移行する際、期限切れや欠落している支払い情報があっても先に契約をShopifyに移行し、後から支払い情報を収集・更新できるようになります。ただし、有効な支払い方法が追加されるまで課金処理は実行できません。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2025-12-14T00:02:16.769Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1105,
+            "output": 266
+          },
+          "estimatedCost": 0.007305000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "APIで作成された定期購入契約における支払い方法の要件撤廃",
+          "summarizedJa": "ShopifyのGraphQL Admin APIを使用して定期購入契約を作成する際、支払い方法を必須としない設定が可能になりました。これにより、既存の定期購入契約をShopifyへ移行する際に、支払い情報が不足または期限切れの場合でも、先に契約をインポートし、後から支払い情報を収集・更新できるようになります。ただし、実際の請求処理には有効な支払い方法の登録が必要です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2025-12-14T00:02:23.529Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 811,
+            "output": 159
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-finalizing-compare-and-swap-redesign-for-inventory-set-quantities",
+      "source": "developer-changelog",
+      "title": "New compare and swap syntax for the `inventorySetQuantities` mutation",
+      "link": "https://shopify.dev/changelog/finalizing-compare-and-swap-redesign-for-inventory-set-quantities",
+      "publishedAt": "2025-12-12T17:00:00.000Z",
+      "collectedAt": "2025-12-14T00:01:42.255Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Breaking API Change",
+        "Admin GraphQL API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>This changelog is relates to <a href=\"https://shopify.dev/changelog/concurrency-protection-features\" target=\"_blank\" class=\"body-link\">concurrency protection features</a>.</p>\n<p>We're making the <code>changeFromQuantity</code> field introduced <a href=\"https://shopify.dev/changelog/compare-and-swap-redesign-for-inventory-set-quantities\" target=\"_blank\" class=\"body-link\">in <code>2026-01</code></a> mandatory and removing the <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/input-objects/InventoryQuantityInput#fields-compareQuantity\" target=\"_blank\" class=\"body-link\"><code>compareQuantity</code></a> and <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/input-objects/InventorySetQuantitiesInput#fields-ignoreCompareQuantity\" target=\"_blank\" class=\"body-link\"><code>ignoreCompareQuantity</code></a> fields for the <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-04/mutations/inventorysetquantities\" target=\"_blank\" class=\"body-link\"><code>inventorySetQuantities</code></a> mutation.</p>\n<p>This is a breaking change. Note that even though the <code>changeFromQuantity</code> field doesn't show up as mandatory at the schema level, calling these mutations without passing in <code>null</code> or passing in the current actual quantity will result in an error at runtime.</p>\n<h3>What you need to do</h3>\n<p>Before migrating to version <code>2026-04</code>, update your application logic to include the <code>changeFromQuantity</code> argument:</p>\n<ul>\n<li>To enable concurrency checks (Recommended): Pass the expected current quantity.</li>\n<li>To opt-out (skip checks): Explicitly pass <code>changeFromQuantity: null</code></li>\n</ul>\n<p>Additionally, before migrating, you must remove the <code>ignoreCompareQuantity</code> argument and the <code>compareQuantity</code> argument from your mutation calls.</p>\n<h3>How to use the field</h3>\n<p>Previously, to bypass comparison checks, you set <code>ignoreCompareQuantity</code> to <code>true</code>.</p>\n<p>Now, to bypass comparison checks, you explicitly pass <code>null</code> to the <code>changeFromQuantity</code> field. To enable checks, pass an integer that represents the initial quantity before it is updated to the <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/input-objects/InventoryQuantityInput#fields-quantity\" target=\"_blank\" class=\"body-link\">desired value</a>.</p>\n<p>In the following example, the operation will only successfully set the new available quantity to 12 if the current available quantity is 5. If another process has modified the quantity in the meantime, you'll receive an error and can retry with the updated value.</p>\n<pre><code>  mutation {\n    inventorySetQuantities(\n      input: {\n      quantities: [\n        {\n          quantity: 12,\n          inventoryItemId: &quot;gid://shopify/InventoryItem/2&quot;,\n          locationId: &quot;gid://shopify/Location/1&quot;,\n          changeFromQuantity: 5\n        }\n      ],\n      reason: &quot;correction&quot;,\n      name: &quot;available&quot;\n    }\n    ) {\n      inventoryAdjustmentGroup {\n        id\n      }\n      userErrors {\n        code\n        message\n      }\n    }\n  }\n</code></pre>\n<h3>Removing legacy fields</h3>\n<p>The <code>compareQuantity</code> and <code>ignoreCompareQuantity</code> fields will be removed in version <code>2026-04</code>. </p>\n<p>For more information on compare and swap, and when you should opt out of comparison checks, refer to <a href=\"https://shopify.dev/docs/apps/build/orders-fulfillment/inventory-management-apps/manage-quantities-states#compare-and-swap\" target=\"_blank\" class=\"body-link\">our docs</a>. We encourage users to avoid opting-out unless it's justified by their use-case.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "inventorySetQuantitiesミューテーションの新しい比較・交換構文",
+          "summarizedJa": "2026-04バージョンから、inventorySetQuantitiesミューテーションにおいて、changeFromQuantityフィールドが必須となり、従来のcompareQuantityとignoreCompareQuantityフィールドが削除されます。在庫数量の並行更新保護を有効にするには期待される現在の数量を渡し、チェックをスキップする場合は明示的にnullを渡す必要があります。APIバージョン2026-04への移行前に、アプリケーションのロジックを更新する必要があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 5
+          },
+          "totalScore": 15,
+          "analyzedAt": "2025-12-14T00:02:29.037Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2037,
+            "output": 262
+          },
+          "estimatedCost": 0.010041000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "inventorySetQuantities ミューテーションにおける比較・交換構文の更新",
+          "summarizedJa": "Shopifyの`inventorySetQuantities`ミューテーションにおいて、在庫数量の同時実行保護機能が強化されます。バージョン`2026-04`から`changeFromQuantity`フィールドが必須となり、既存の`compareQuantity`と`ignoreCompareQuantity`フィールドは削除されます。これは破壊的変更であり、パートナーは`2026-04`への移行前にアプリケーションのロジックを更新し、新しい構文に対応する必要があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2025-12-14T00:02:36.489Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1624,
+            "output": 177
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-concurrency-protection-features",
+      "source": "developer-changelog",
+      "title": "Concurrency protection features for inventory and refund mutations",
+      "link": "https://shopify.dev/changelog/concurrency-protection-features",
+      "publishedAt": "2025-12-12T17:00:00.000Z",
+      "collectedAt": "2025-12-14T00:01:42.255Z",
+      "category": [
+        "Action Required",
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-01"
+      ],
+      "description": " <div class=\"\"><p>This changelog consolidates all updates related to concurrency protection features for inventory and refund mutations.</p>\n<h2>Compare and swap changes</h2>\n<p>To prevent race conditions in inventory updates, we're introducing compare and swap protection through the <code>changeFromQuantity</code> field across multiple API versions:</p>\n<ul>\n<li><code>2026-01</code> : <a href=\"https://shopify.dev/changelog/compare-and-swap-for-inventory-mutations-with-change-from-quantity\" target=\"_blank\" class=\"body-link\">Introducing a <code>changeFromQuantity</code> field for various inventory mutations</a> </li>\n<li><code>2026-01</code>:  <a href=\"https://shopify.dev/changelog/compare-and-swap-redesign-for-inventory-set-quantities\" target=\"_blank\" class=\"body-link\">Introducing a <code>changeFromQuantity</code> field for the <code>inventorySetQuantities</code> mutation and deprecating the old compare And swap fields</a></li>\n<li><code>2026-04</code>: <a href=\"https://shopify.dev/changelog/making-changefromquantity-field-required\" target=\"_blank\" class=\"body-link\">Making the <code>changeFromQuantity</code> field required (with explict opt-out) for various inventory mutations</a> <strong>(BREAKING)</strong> </li>\n<li><code>2026-04</code>: <a href=\"https://shopify.dev/changelog/finalizing-compare-and-swap-redesign-for-inventory-set-quantities\" target=\"_blank\" class=\"body-link\">Making the <code>changeFromQuantity</code> field required (with explict opt-out) for the <code>inventorySetQuantities</code> mutation and removing the old compare And swap fields</a> <strong>(BREAKING)</strong></li>\n</ul>\n<h2>Idempotency changes</h2>\n<p>To prevent duplicate operations when requests are retried, we're introducing idempotency protection through the idempotent directive:</p>\n<ul>\n<li><code>2026-01</code>: <a href=\"https://shopify.dev/changelog/adding-idempotency-for-inventory-adjustments-and-refund-mutations\" target=\"_blank\" class=\"body-link\">Introducing an optional <code>idempotent</code> directive for various inventory and refund mutations</a></li>\n<li><code>2026-04</code> <a href=\"https://shopify.dev/changelog/making-idempotency-mandatory-for-inventory-adjustments-and-refund-mutations\" target=\"_blank\" class=\"body-link\">Making the <code>idempotent</code> directive required for various inventory and refund mutations</a> <strong>(BREAKING)</strong></li>\n</ul>\n<h2>Why we made these changes</h2>\n<p>Most inventory adjustments lack concurrency and idempotency protection, leaving systems vulnerable to race conditions, duplicate updates, and integrity issues—especially when commands are retried due to network disruptions. To solve this we will standardize concurrency and idempotency checks across Inventory APIs.</p>\n<p>For more information, refer to our <a href=\"https://shopify.dev/docs/api/usage/idempotent-requests\" target=\"_blank\" class=\"body-link\">idempotency</a> and <a href=\"https://shopify.dev/docs/apps/build/orders-fulfillment/inventory-management-apps/manage-quantities-states#compare-and-swap\" target=\"_blank\" class=\"body-link\">compare and swap</a> docs.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "在庫管理と返金のミューテーションにおける同時実行保護機能",
+          "summarizedJa": "在庫調整と返金のAPIに、競合状態や重複操作を防ぐための同時実行保護機能が導入されます。2026-01から`changeFromQuantity`フィールドとべき等ディレクティブが追加され、2026-04からは必須となる破壊的変更が実施されます。在庫管理APIを使用するアプリやカスタム統合を開発しているパートナーは、対応が必要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 5
+          },
+          "totalScore": 15,
+          "analyzedAt": "2025-12-14T00:02:42.764Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1812,
+            "output": 241
+          },
+          "estimatedCost": 0.009051
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "在庫および返金操作のための並行処理保護機能",
+          "summarizedJa": "Shopifyは、在庫および返金操作におけるデータ整合性を強化するため、APIに「比較と交換（compare and swap）」機能と「冪等性（idempotency）」保護機能を導入します。これにより、在庫更新時の競合状態や、リトライ時の重複操作を防ぎ、システムの安定性が向上します。特に2026-04 APIバージョンでは破壊的変更が含まれるため、アプリ開発者やパートナーは既存のシステムを更新し、対応が必須となります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 5
+          },
+          "totalScore": 18,
+          "analyzedAt": "2025-12-14T00:02:50.820Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1406,
+            "output": 178
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-making-changefromquantity-field-required",
+      "source": "developer-changelog",
+      "title": "Making `changeFromQuantity` field required (with explicit opt-out)",
+      "link": "https://shopify.dev/changelog/making-changefromquantity-field-required",
+      "publishedAt": "2025-12-12T17:00:00.000Z",
+      "collectedAt": "2025-12-14T00:01:42.255Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Breaking API Change",
+        "Admin GraphQL API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>This changelog relates to <a href=\"https://shopify.dev/changelog/concurrency-protection-features\" target=\"_blank\" class=\"body-link\">concurrency protection features</a>.</p>\n<p>Starting in <code>2026-04</code>, the  <code>changeFromQuantity</code> field will be required for the following mutations:</p>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventoryAdjustQuantities\" target=\"_blank\" class=\"body-link\"><code>inventoryAdjustQuantities</code></a>: Available on the <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/input-objects/InventoryChangeInput\" target=\"_blank\" class=\"body-link\"><code>InventoryChangeInput</code></a> input type</li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventoryMoveQuantities\" target=\"_blank\" class=\"body-link\"><code>inventoryMoveQuantities</code></a>: Available on the <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/input-objects/InventoryMoveQuantityTerminalInput\" target=\"_blank\" class=\"body-link\"><code>InventoryMoveQuantityTerminalInput</code></a> input type</li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventorySetOnHandQuantities\" target=\"_blank\" class=\"body-link\"><code>inventorySetOnHandQuantities</code></a>: Available on the <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/input-objects/InventorySetQuantityInput\" target=\"_blank\" class=\"body-link\"><code>InventorySetQuantityInput</code></a> input type</li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/productVariantsBulkUpdate\" target=\"_blank\" class=\"body-link\">productVariantsBulkUpdate</a>: Available on the InventoryAdjustmentInput type, which is available on the <code>quantityAdjustments</code> field of the <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/input-objects/ProductVariantsBulkInput\" target=\"_blank\" class=\"body-link\"><code>ProductVariantsBulkInput</code></a> type</li>\n</ul>\n<p>This is a breaking change. Note that even though the <code>changeFromQuantity</code> field doesn't show up as mandatory at the schema level, calling these mutations without passing in <code>null</code> or passing in the current actual quantity will result in an error at runtime.</p>\n<h2>What you need to do</h2>\n<p>Before migrating to version 2026-04, update your application logic to include the <code>changeFromQuantity</code> argument:</p>\n<ul>\n<li>To enable concurrency checks (Recommended): Pass the expected current quantity.</li>\n<li>To opt-out (skip checks): Explicitly pass <code>changeFromQuantity: null</code></li>\n</ul>\n<h2>How to use the field</h2>\n<p>The <code>changeFromQuantity</code> field is useful to keep inventory data accurate, even if multiple updates are happening at the same time. If the actual quantity doesn't match the value you provide, the mutation will fail with a <code>CHANGE_FROM_QUANTITY_STALE</code> error, preventing unintended overwrites.</p>\n<p>In the following example, the adjustment will only succeed if the current available quantity is 50. If another process has modified the quantity in the meantime, you'll receive an error and can retry with the updated value.</p>\n<p>For more information on compare and swap, and when you should opt out of comparison checks, refer to <a href=\"https://shopify.dev/docs/apps/build/orders-fulfillment/inventory-management-apps/manage-quantities-states#compare-and-swap\" target=\"_blank\" class=\"body-link\">our docs</a>. We encourage users to avoid opting-out unless it's justified by their use-case.\n\t</p>\n<pre><code>  mutation {\n    inventoryAdjustQuantities(\n      input: {\n        reason: &quot;correction&quot;\n        name: &quot;available&quot;\n        changes: [{\n          delta: 10\n          changeFromQuantity: 50\n          inventoryItemId: &quot;gid://shopify/InventoryItem/123&quot;\n          locationId: &quot;gid://shopify/Location/456&quot;\n        }]\n      }\n    ) {\n      inventoryAdjustmentGroup {\n        id\n      }\n      userErrors {\n        code\n        message\n      }\n    }\n  }\n</code></pre>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "`changeFromQuantity`フィールドの必須化(明示的なオプトアウトを含む)",
+          "summarizedJa": "2026-04バージョンから、在庫関連のGraphQL mutationで`changeFromQuantity`フィールドが必須になります。このフィールドは在庫の同時更新による不整合を防ぐためのもので、現在の在庫数を渡すか、チェックをスキップする場合は明示的に`null`を渡す必要があります。対応しない場合、API呼び出し時にランタイムエラーが発生します。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 5
+          },
+          "totalScore": 15,
+          "analyzedAt": "2025-12-14T00:02:56.394Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2168,
+            "output": 245
+          },
+          "estimatedCost": 0.010178999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "changeFromQuantityフィールドの必須化（明示的なオプトアウトオプション付き）",
+          "summarizedJa": "2026年4月版APIから、在庫数を変更する特定のAPI操作（GraphQLミューテーション）において、`changeFromQuantity`フィールドが必須となります。これは破壊的変更であり、アプリや連携システムは、現在の在庫数を指定するか、明示的に`null`を渡すよう改修が必要です。この変更により、複数のシステムからの同時更新時でも在庫データの正確性が保たれ、意図しない上書きを防ぎます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 5
+          },
+          "totalScore": 17,
+          "analyzedAt": "2025-12-14T00:03:05.398Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1729,
+            "output": 177
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-create-flow-automations-with-sidekick",
       "source": "shopify-changelog",
@@ -399,6 +716,58 @@
           "tokenUsage": {
             "input": 773,
             "output": 170
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-deprecation-of-ordertransaction-authorizationcode-in-favor-of-ordertransactionpaymentid",
+      "source": "developer-changelog",
+      "title": "Deprecation of `OrderTransaction.authorizationCode` in favor of `OrderTransaction.paymentId`",
+      "link": "https://shopify.dev/changelog/deprecation-of-ordertransaction-authorizationcode-in-favor-of-ordertransactionpaymentid",
+      "publishedAt": "2025-12-10T17:00:00.000Z",
+      "collectedAt": "2025-12-14T00:01:42.255Z",
+      "category": [
+        "API",
+        "Deprecation Announcement",
+        "Admin GraphQL API"
+      ],
+      "description": " <div class=\"\"><p>Starting with the <code>2026-01</code> API version, the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/ordertransaction#field-OrderTransaction.fields.authorizationCode\" target=\"_blank\" class=\"body-link\"><code>authorizationCode</code></a> field on the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/ordertransaction#field-OrderTransaction\" target=\"_blank\" class=\"body-link\"><code>OrderTransaction</code></a> object is deprecated. We recommend using the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/ordertransaction#field-OrderTransaction.fields.paymentId\" target=\"_blank\" class=\"body-link\"><code>paymentId</code></a> field instead.</p>\n<p>The <code>paymentId</code> field provides a consistent, standardized identifier for payment reconciliation across all payment providers on Shopify. Adopting <code>paymentId</code> ensures your integration relies on the most stable and supported field for tracking and reconciling transactions, regardless of the underlying payment gateway.</p>\n<p><strong>Warning:</strong> <code>paymentId</code> returns a Shopify-specific identifier, which differs from the provider-specific value in <code>authorizationCode</code>. Ensure your systems are updated to store and reconcile using this new ID format.</p>\n<h3>Recommended migration</h3>\n<p>Developers should update their queries to use the <code>paymentId</code> field when accessing <code>OrderTransaction</code> objects in the Admin GraphQL API. Replace instances of <code>authorizationCode</code> with <code>paymentId</code>. By making these changes, you ensure your app relies on the standard identifier for payment transactions.</p>\n<p>For example, update your query from:</p>\n<pre><code class=\"language-graphql\">query TransactionDetails {\n  order(id: &quot;gid://shopify/Order/12345&quot;) {\n    transactions {\n      id\n      authorizationCode\n    }\n  }\n}\n</code></pre>\n<p>to:</p>\n<pre><code class=\"language-graphql\">query TransactionDetails {\n  order(id: &quot;gid://shopify/Order/12345&quot;) {\n    transactions {\n      id\n      paymentId\n    }\n  }\n}\n</code></pre>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "OrderTransaction.authorizationCodeの非推奨化とOrderTransaction.paymentIdへの移行",
+          "summarizedJa": "2026-01 APIバージョンから、OrderTransactionオブジェクトのauthorizationCodeフィールドが非推奨となり、paymentIdフィールドの使用が推奨されます。paymentIdはすべての決済プロバイダーで統一された識別子を提供し、決済の照合により安定した基盤を提供します。開発者はAdmin GraphQL APIのクエリを更新し、authorizationCodeからpaymentIdへ移行する必要があります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2025-12-14T00:03:10.584Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1556,
+            "output": 256
+          },
+          "estimatedCost": 0.008508
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "OrderTransaction.authorizationCodeフィールドの非推奨化とpaymentIdへの移行",
+          "summarizedJa": "2026年1月APIバージョン以降、`OrderTransaction`オブジェクトの`authorizationCode`フィールドが非推奨となり、代わりに`paymentId`フィールドの使用が推奨されます。`paymentId`は、Shopify上のすべての決済プロバイダーで決済照合のための標準化された識別子を提供します。アプリやシステムで決済トランザクションデータを扱っているパートナーは、`authorizationCode`から`paymentId`へのクエリ更新が必須となります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2025-12-14T00:03:18.011Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1178,
+            "output": 175
           },
           "estimatedCost": 0
         }
@@ -1866,6 +2235,59 @@
       }
     },
     {
+      "id": "developer-changelog-changelog-inventory-item-variant-field-deprecation",
+      "source": "developer-changelog",
+      "title": "InventoryItem.variant field deprecated in favor of InventoryItem.variants connection",
+      "link": "https://shopify.dev/changelog/inventory-item-variant-field-deprecation",
+      "publishedAt": "2025-12-02T17:00:00.000Z",
+      "collectedAt": "2025-12-14T00:01:42.256Z",
+      "category": [
+        "API",
+        "Deprecation Announcement",
+        "Admin GraphQL API",
+        "2026-01"
+      ],
+      "description": " <div class=\"\"><p>The <code>InventoryItem.variant</code> field has been deprecated and will be removed in a future API version. Use the new <code>InventoryItem.variants</code> connection instead. </p>\n<p>To learn more, see <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/InventoryItem\" target=\"_blank\" class=\"body-link\"><code>InventoryItem</code> object</a> or <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/queries/inventoryItem\" target=\"_blank\" class=\"body-link\"><code>inventoryItem</code> query</a> in the GraphQL Admin API reference. </p>\n<h3>Why we're making this change</h3>\n<p>The new <code>variants</code> connection allows for retrieving <code>ProductVariants</code> through a paginated connection, rather than a single variant object. This update prepares the API to support multiple variants sharing a single inventory item in the future.</p>\n<p>Initially the <code>variants</code> connection will return a single node. However, we recommend updating your integrations to handle <code>variants</code> as a connection to accommodate future changes.</p>\n<h3>What you need to do</h3>\n<p>Modify your GraphQL queries by replacing <code>variant</code> with <code>variants</code>. Since <code>variants</code> is a connection, ensure you request <code>edges</code> and <code>nodes</code>. Although the deprecated <code>variant</code> field remains functional in all supported API versions, including <code>2026-01</code> , it will eventually be removed. Updating your queries now will ensure they remain compatible with future API versions.</p>\n<p><strong>Before (deprecated):</strong></p>\n<pre><code class=\"language-graphql\">{\n  inventoryItem(id: &quot;gid://shopify/InventoryItem/123&quot;) {\n    variant {\n      id\n      sku\n    }\n  }\n}\n</code></pre>\n<p><strong>After (recommended):</strong></p>\n<pre><code class=\"language-graphql\">{\n  inventoryItem(id: &quot;gid://shopify/InventoryItem/123&quot;) {\n    variants(first: 10) {\n      edges {\n        node {\n          id\n          sku\n        }\n      }\n    }\n  }\n}\n</code></pre>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "InventoryItem.variantフィールドが非推奨化され、InventoryItem.variants接続に置き換え",
+          "summarizedJa": "GraphQL Admin APIにおいて、InventoryItem.variantフィールドが非推奨となり、新しいInventoryItem.variants接続への移行が推奨されます。将来的に複数のバリアントが単一の在庫アイテムを共有できるよう準備するため、variantsはページネーション対応の接続として実装されています。現在は単一ノードを返しますが、将来の変更に備えて、今のうちにクエリを更新することが推奨されます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2025-12-14T00:03:23.908Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1537,
+            "output": 261
+          },
+          "estimatedCost": 0.008525999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "InventoryItem.variantフィールドの非推奨化とInventoryItem.variantsコネクションへの移行",
+          "summarizedJa": "ShopifyのAdmin GraphQL APIにおいて、在庫アイテムに関連する`InventoryItem.variant`フィールドが非推奨となり、今後は`InventoryItem.variants`コネクションを使用するよう変更されます。これは将来的に複数のバリアントが単一の在庫アイテムを共有する機能に対応するための準備です。パートナーや開発者は、APIの互換性を維持するため、既存のGraphQLクエリを`variant`から`variants`（コネクション形式）に更新する必要があります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2025-12-14T00:03:31.127Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1155,
+            "output": 179
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
       "id": "developer-changelog-changelog-tax-summary-webhook-and-calculation-requests-now-includes-shop-and-presentment-currency-amount",
       "source": "developer-changelog",
       "title": "Tax summary webhook and calculation requests now includes shop and presentment currency amount",
@@ -1913,6 +2335,112 @@
           "tokenUsage": {
             "input": 1363,
             "output": 160
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-adding-idempotency-for-inventory-adjustments-and-refund-mutations",
+      "source": "developer-changelog",
+      "title": "Adding idempotency for inventory adjustments and refund mutations",
+      "link": "https://shopify.dev/changelog/adding-idempotency-for-inventory-adjustments-and-refund-mutations",
+      "publishedAt": "2025-11-21T17:00:00.000Z",
+      "collectedAt": "2025-12-14T00:01:42.256Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-01"
+      ],
+      "description": " <div class=\"\"><p>This changelog relates to <a href=\"https://shopify.dev/changelog/concurrency-protection-features\" target=\"_blank\" class=\"body-link\">concurrency protection features</a>.</p>\n<p>We're introducing idempotency keys for several inventory and refund mutations. This enhancement helps you build more reliable integrations by preventing duplicate operations when retrying failed requests. You pass idempotency keys in using an <code>idempotent</code> directive. Refer to the <a href=\"https://shopify.dev/docs/api/usage/idempotent-requests\" target=\"_blank\" class=\"body-link\">idempotent requests docs</a> for more details. </p>\n<p>The following mutations now support the optional <code>idempotent</code> directive:</p>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/refundCreate\" target=\"_blank\" class=\"body-link\"><code>refundCreate</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventoryShipmentReceive\" target=\"_blank\" class=\"body-link\"><code>inventoryShipmentReceive</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventoryAdjustQuantities\" target=\"_blank\" class=\"body-link\"><code>inventoryAdjustQuantities</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventoryMoveQuantities\" target=\"_blank\" class=\"body-link\"><code>inventoryMoveQuantities</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventorySetQuantities\" target=\"_blank\" class=\"body-link\"><code>inventorySetQuantities</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventorySetOnHandQuantities\" target=\"_blank\" class=\"body-link\"><code>inventorySetOnHandQuantities</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventoryShipmentCreateInTransit\" target=\"_blank\" class=\"body-link\"><code>inventoryShipmentCreateInTransit</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventoryShipmentCreate\" target=\"_blank\" class=\"body-link\"><code>inventoryShipmentCreate</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventoryTransferCreate\" target=\"_blank\" class=\"body-link\"><code>inventoryTransferCreate</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventoryTransferCreateAsReadyToShip\" target=\"_blank\" class=\"body-link\"><code>inventoryTransferCreateAsReadyToShip</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventoryTransferDuplicate\" target=\"_blank\" class=\"body-link\"><code>inventoryTransferDuplicate</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventoryTransferSetItems\" target=\"_blank\" class=\"body-link\"><code>inventoryTransferSetItems</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventorySetScheduledChanges\" target=\"_blank\" class=\"body-link\"><code>inventorySetScheduledChanges</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventoryActivate\" target=\"_blank\" class=\"body-link\"><code>inventoryActivate</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventoryShipmentAddItems\" target=\"_blank\" class=\"body-link\"><code>inventoryShipmentAddItems</code></a></li>\n</ul>\n<blockquote>\n<p><strong>Note</strong>:\nWhile the <code>idempotent</code> directive is optional for now, we plan to make it mandatory for these mutations in version <code>2026-04</code>.</p>\n</blockquote>\n<h2>How to use the directive</h2>\n<p>An idempotency key is a unique identifier (we recommend using a UUID) that you provide when making a mutation request (generally, you would regenerate this key on page load and after successful operations). If you retry the same request with the same idempotency key due to network issues or timeouts, Shopify will recognize it as a duplicate and ensure the inventory is only adjusted once (or that the refund is only created once), protecting against double-counting. It will return the result of the original operation instead of creating a new one.</p>\n<p>Example usage:</p>\n<pre><code>  mutation {\n    inventoryAdjustQuantities(\n      input: {\n        reason: &quot;restock&quot;\n        name: &quot;available&quot;\n        changes: [{\n          delta: 5\n          inventoryItemId: &quot;gid://shopify/InventoryItem/123&quot;\n          locationId: &quot;gid://shopify/Location/456&quot;\n        }]\n      }\n    ) @idempotent(key: &quot;4f5b6ebf-143c-4da5-8d0f-fb8553bfd85d&quot;) {\n      inventoryAdjustmentGroup {\n        id\n      }\n      userErrors {\n        code\n        message\n      }\n    }\n  }\n</code></pre>\n<h2>Why we made this change</h2>\n<p>Idempotency keys are essential for building robust, production-ready integrations. Network failures and timeouts are inevitable, and without idempotency protection, retrying requests could lead to duplicate refunds, incorrect inventory counts, or other data inconsistencies. Making this feature publicly available gives you the tools to handle these scenarios safely.</p>\n<h2>Error codes</h2>\n<p>If there's an issue with your idempotency key usage, you'll receive one of these error codes:</p>\n<ul>\n<li><code>IDEMPOTENCY_CONCURRENT_REQUEST</code>: Another request with the same idempotency key is currently being processed.</li>\n<li><code>IDEMPOTENCY_KEY_PARAMETER_MISMATCH</code>: The same idempotency key was used with different parameters.</li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "在庫調整および返金ミューテーションに冪等性を追加",
+          "summarizedJa": "Admin GraphQL APIの在庫関連および返金関連のミューテーションに冪等性キーのサポートが追加されました。ネットワーク障害時のリクエスト再試行による重複操作（二重返金や在庫数の誤計上など）を防止できるようになります。2026-04バージョンからは必須化される予定のため、開発者は早期の対応が推奨されます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 5
+          },
+          "totalScore": 15,
+          "analyzedAt": "2025-12-14T00:03:37.106Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2693,
+            "output": 229
+          },
+          "estimatedCost": 0.011514
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "在庫調整と返金ミューテーションへの冪等性の追加",
+          "summarizedJa": "Shopifyは、APIを利用した在庫調整や返金処理において、ネットワークエラーなどによる重複操作を防ぐ「冪等性」の機能を追加しました。これにより、API連携の信頼性が向上し、誤った在庫数や二重返金といったデータ不整合を防ぐことができます。現在は任意ですが、バージョン2026-04でこれらのミューテーションに対して冪等性キーの利用が必須となるため、API連携を構築・運用するパートナーは対応を検討する必要があります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2025-12-14T00:03:43.771Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 2168,
+            "output": 180
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-compare-and-swap-for-inventory-mutations-with-change-from-quantity",
+      "source": "developer-changelog",
+      "title": "New `changeFromQuantity` field to manage inventory",
+      "link": "https://shopify.dev/changelog/compare-and-swap-for-inventory-mutations-with-change-from-quantity",
+      "publishedAt": "2025-11-21T17:00:00.000Z",
+      "collectedAt": "2025-12-14T00:01:42.256Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-01"
+      ],
+      "description": " <div class=\"\"><p>This changelog relates to <a href=\"https://shopify.dev/changelog/concurrency-protection-features\" target=\"_blank\" class=\"body-link\">concurrency protection features</a>.</p>\n<p>The following mutations now support the optional <code>changeFromQuantity</code> field:</p>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventoryAdjustQuantities\" target=\"_blank\" class=\"body-link\"><code>inventoryAdjustQuantities</code></a>: Available on the <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/input-objects/InventoryChangeInput\" target=\"_blank\" class=\"body-link\"><code>InventoryChangeInput</code></a> input type</li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventoryMoveQuantities\" target=\"_blank\" class=\"body-link\"><code>inventoryMoveQuantities</code></a>: Available on the <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/input-objects/InventoryMoveQuantityTerminalInput\" target=\"_blank\" class=\"body-link\"><code>InventoryMoveQuantityTerminalInput</code></a> input type</li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventorySetOnHandQuantities\" target=\"_blank\" class=\"body-link\"><code>inventorySetOnHandQuantities</code></a>: Available on the <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/input-objects/InventorySetQuantityInput\" target=\"_blank\" class=\"body-link\"><code>InventorySetQuantityInput</code></a> input type</li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/productVariantsBulkUpdate\" target=\"_blank\" class=\"body-link\"><code>productVariantsBulkUpdate</code></a>: Available on the InventoryAdjustmentInput type, which is available on the <code>quantityAdjustments</code> field of the <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/input-objects/ProductVariantsBulkInput\" target=\"_blank\" class=\"body-link\"><code>ProductVariantsBulkInput</code></a> type</li>\n</ul>\n<blockquote>\n<p><strong>Note</strong>: \nThe  <code>quantityAdjustments</code> field of the <code>productVariantsBulkUpdate</code> mutation will only be public in version <code>2026-01</code>.</p>\n</blockquote>\n<h2>How to use the field</h2>\n<p>The <code>changeFromQuantity</code> field is useful to keep inventory data accurate, even if multiple updates are happening at the same time. If the actual quantity doesn't match the value you provide, the mutation will fail with a <code>CHANGE_FROM_QUANTITY_STALE</code> error, preventing unintended overwrites.</p>\n<p>In the following example, the adjustment only succeeds if the current available quantity is 50. If another process has modified the quantity in the meantime, you'll receive an error and can retry with the updated value. To opt-out of comparison checks you can explicitly pass in <code>null</code> to the <code>changeFromQuantity</code> field. \n\t</p>\n<pre><code>  mutation {\n    inventoryAdjustQuantities(\n      input: {\n        reason: &quot;correction&quot;\n        name: &quot;available&quot;\n        changes: [{\n          delta: 10\n          changeFromQuantity: 50\n          inventoryItemId: &quot;gid://shopify/InventoryItem/123&quot;\n          locationId: &quot;gid://shopify/Location/456&quot;\n        }]\n      }\n    ) {\n      inventoryAdjustmentGroup {\n        id\n      }\n      userErrors {\n        code\n        message\n      }\n    }\n  }\n</code></pre>\n<p>For more information on compare and swap, and when you should opt out of comparison checks, refer to <a href=\"https://shopify.dev/docs/apps/build/orders-fulfillment/inventory-management-apps/manage-quantities-states#compare-and-swap\" target=\"_blank\" class=\"body-link\">our docs</a>. We encourage users to avoid opting-out unless it's justified by their use case.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "在庫管理のための新しい`changeFromQuantity`フィールド",
+          "summarizedJa": "Admin GraphQL API 2026-01バージョンにて、在庫関連のミューテーションに`changeFromQuantity`フィールドが追加されました。このフィールドを使用することで、複数の更新が同時に発生する場合でも在庫データの正確性を保つことができ、期待する数量と実際の数量が一致しない場合はエラーを返して意図しない上書きを防ぎます。`inventoryAdjustQuantities`、`inventoryMoveQuantities`、`inventorySetOnHandQuantities`、`productVariantsBulkUpdate`の各ミューテーションで利用可能です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2025-12-14T00:03:51.097Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2088,
+            "output": 283
+          },
+          "estimatedCost": 0.010509000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "在庫管理のための新しい`changeFromQuantity`フィールド",
+          "summarizedJa": "ShopifyのAdmin GraphQL APIに、在庫管理の同時実行性保護を強化する新しいオプションフィールド`changeFromQuantity`が追加されました。これにより、複数のシステムが同時に在庫を更新する際に、現在の在庫数と指定された値が一致しない場合に更新を失敗させ、データの正確性を保ち、意図しない上書きを防ぎます。主に在庫管理アプリや連携システムを開発するパートナーにとって、より堅牢な在庫更新ロジックを実装するために重要な機能です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2025-12-14T00:03:58.554Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1649,
+            "output": 176
           },
           "estimatedCost": 0
         }
@@ -2054,6 +2582,59 @@
           "tokenUsage": {
             "input": 741,
             "output": 138
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-compare-and-swap-redesign-for-inventory-set-quantities",
+      "source": "developer-changelog",
+      "title": "Improved compare and swap inventory updates for the `inventorySetQuantities` mutation",
+      "link": "https://shopify.dev/changelog/compare-and-swap-redesign-for-inventory-set-quantities",
+      "publishedAt": "2025-11-14T17:00:00.000Z",
+      "collectedAt": "2025-12-14T00:01:42.256Z",
+      "category": [
+        "API",
+        "Deprecation Announcement",
+        "Admin GraphQL API",
+        "2026-01"
+      ],
+      "description": " <div class=\"\"><p>This changelog relates to <a href=\"https://shopify.dev/changelog/concurrency-protection-features\" target=\"_blank\" class=\"body-link\">concurrency protection features</a>.</p>\n<p>We've enhanced the compare-and-swap functionality in the <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/inventorysetquantities\" target=\"_blank\" class=\"body-link\"><code>inventorySetQuantities</code> mutation</a> to make concurrent inventory updates more intuitive. You can now use the new <code>changeFromQuantity</code> field in <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/input-objects/InventoryQuantityInput\" target=\"_blank\" class=\"body-link\">InventoryQuantityInput</a> to explicitly choose whether to perform quantity comparison checks.</p>\n<p>The use of <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/input-objects/InventoryQuantityInput#fields-compareQuantity\" target=\"_blank\" class=\"body-link\"><code>compareQuantity</code></a> and <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/input-objects/InventorySetQuantitiesInput#fields-ignoreCompareQuantity\" target=\"_blank\" class=\"body-link\"><code>ignoreCompareQuantity</code></a> will be deprecated .</p>\n<p>This <code>2026-01</code> change isn't considered breaking because if users don't pass in a value for <code>changeFromQuantity</code>, the mutation will fallback to using the values for <code>compareQuantity</code> and <code>ignoreCompareQuantity</code>.</p>\n<h3>How to use the field</h3>\n<p>Previously, to bypass comparison checks, you set <code>ignoreCompareQuantity</code> to <code>true</code>.</p>\n<p>Now, to bypass comparison checks, you explicitly pass <code>null</code> to the <code>changeFromQuantity</code> field. To enable checks, pass an integer that represents the initial quantity before it is updated to the <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/input-objects/InventoryQuantityInput#fields-quantity\" target=\"_blank\" class=\"body-link\">desired value</a>.</p>\n<p>Passing any value (including <code>null</code>) to <code>changeFromQuantity</code> will override any values passed to the <code>compareQuantity</code> and <code>ignoreCompareQuantity</code> fields. In the following example, the operation will only successfully set the new available quantity to 12 if the current available quantity is 5. If another process has modified the quantity in the meantime, you'll receive an error and can retry with the updated value.</p>\n<pre><code>  mutation {\n    inventorySetQuantities(\n      input: {\n      quantities: [\n        {\n          quantity: 12,\n          inventoryItemId: &quot;gid://shopify/InventoryItem/2&quot;,\n          locationId: &quot;gid://shopify/Location/1&quot;,\n          changeFromQuantity: 5\n        }\n      ],\n      reason: &quot;correction&quot;,\n      name: &quot;available&quot;\n    }\n    ) {\n      inventoryAdjustmentGroup {\n        id\n      }\n      userErrors {\n        code\n        message\n      }\n    }\n  }\n</code></pre>\n<h3>Deprecating legacy fields</h3>\n<p>The <code>compareQuantity</code> and <code>ignoreCompareQuantity</code> fields will be deprecated in version <code>2026-01</code>. We plan to remove them entirely starting from version <code>2026-04</code>.</p>\n<p>For more information on compare and swap, and when you should opt out of comparison checks, refer to <a href=\"https://shopify.dev/docs/apps/build/orders-fulfillment/inventory-management-apps/manage-quantities-states#compare-and-swap\" target=\"_blank\" class=\"body-link\">our docs</a>. We encourage users to avoid opting-out unless it's justified by their use-case.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "inventorySetQuantitiesミューテーションの比較交換による在庫更新機能の改善",
+          "summarizedJa": "inventorySetQuantitiesミューテーションの同時実行制御機能が強化され、新しいchangeFromQuantityフィールドが追加されました。これにより在庫数量の比較チェックをより直感的に制御できるようになります。従来のcompareQuantityとignoreCompareQuantityフィールドは2026-01で非推奨となり、2026-04で完全に削除される予定です。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2025-12-14T00:04:03.863Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2001,
+            "output": 229
+          },
+          "estimatedCost": 0.009438
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "`inventorySetQuantities` ミューテーションの在庫比較・交換更新機能の強化",
+          "summarizedJa": "この変更は、Shopifyの在庫更新API（`inventorySetQuantities` ミューテーション）における同時更新時の排他制御メカニズムを改善するものです。新しい `changeFromQuantity` フィールドが導入され、開発者は在庫の比較・交換チェックをより直感的に制御できるようになります。既存の `compareQuantity` および `ignoreCompareQuantity` フィールドは2026-01バージョンで非推奨となり、2026-04バージョンで完全に削除される予定のため、APIを利用しているパートナーは将来的な対応が必要です。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2025-12-14T00:04:12.116Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1591,
+            "output": 199
           },
           "estimatedCost": 0
         }
