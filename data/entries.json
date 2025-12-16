@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2025-12-14T00:01:43.606Z",
+  "lastUpdated": "2025-12-16T00:01:48.763Z",
   "entries": [
     {
       "id": "shopify-changelog-posts-automated-transfers-for-shopify-balance-payouts",
@@ -768,6 +768,59 @@
           "tokenUsage": {
             "input": 1178,
             "output": 175
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-faster-bulk-operations",
+      "source": "developer-changelog",
+      "title": "Faster bulk operations",
+      "link": "https://shopify.dev/changelog/faster-bulk-operations",
+      "publishedAt": "2025-12-10T17:00:00.000Z",
+      "collectedAt": "2025-12-16T00:01:47.476Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-01"
+      ],
+      "description": " <div class=\"\"><p>We've updated bulk operations in the GraphQL Admin API to process large datasets faster.</p>\n<p><strong>What's new:</strong>\nHere's what we've done:</p>\n<ul>\n<li><strong>Support for all mutations</strong>: Previously bulk mutations only supported a limited set of actions. Now, you can execute any mutation using bulk operations across all API versions.</li>\n<li><strong>Larger file uploads</strong> : Upload files up to 100MB (up from 20MB), reducing the number of operations needed for large datasets.</li>\n<li><strong>Five concurrent operations</strong>: Each app can run up to five bulk operations per shop simultaneously. Split large imports and exports into parallel jobs and complete them faster without managing throttling or concurrency yourself.</li>\n</ul>\n<p>For setup guidance and examples, visit the <a href=\"https://shopify.dev/docs/api/usage/bulk-operations/imports\" target=\"_blank\" class=\"body-link\">developer documentation</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "バルク操作の高速化",
+          "summarizedJa": "GraphQL Admin APIのバルク操作が大幅に高速化されました。すべてのミューテーションに対応し、ファイルアップロードサイズが100MBまで拡大（従来20MB）、さらに1ショップあたり最大5つの並行処理が可能になりました。大量データのインポート・エクスポート処理を分割して並列実行できるため、スロットリングや同時実行の管理なしに処理を高速完了できます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2025-12-16T00:01:55.050Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1144,
+            "output": 235
+          },
+          "estimatedCost": 0.006957
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "一括操作の高速化",
+          "summarizedJa": "ShopifyのGraphQL Admin APIにおける一括操作が大幅に高速化されました。これにより、全てのミューテーションがサポートされ、ファイルアップロードサイズが最大100MBに拡張されたほか、アプリごとに最大5つの同時実行が可能になります。大規模なデータセットのインポートやエクスポートがより効率的かつ迅速に行えるようになり、マーチャントの業務効率向上とパートナーの開発負担軽減に貢献します。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 17,
+          "analyzedAt": "2025-12-16T00:01:59.923Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 843,
+            "output": 160
           },
           "estimatedCost": 0
         }
