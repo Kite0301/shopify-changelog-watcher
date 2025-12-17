@@ -1,6 +1,56 @@
 {
-  "lastUpdated": "2025-12-16T00:01:48.763Z",
+  "lastUpdated": "2025-12-17T00:01:41.248Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-switch-between-exploration-methods-in-analytics",
+      "source": "shopify-changelog",
+      "title": "Switch between exploration methods in analytics",
+      "link": "https://changelog.shopify.com/posts/switch-between-exploration-methods-in-analytics",
+      "publishedAt": "2025-12-16T22:00:00.000Z",
+      "collectedAt": "2025-12-17T00:01:41.234Z",
+      "category": [
+        "Analytics"
+      ],
+      "description": "\n        <p>You can now switch between Freeform and Cohorts analysis methods without leaving your report — making it easier to explore your data from multiple angles in one place. Freeform lets you analyze trends over time and compare segments. Cohorts shows whether customers come back after their first purchase. Previously, cohort analysis required navigating to a specific report. Now, you can answer \"how are sales trending?\" and then switch easily to answer \"are these customers coming back?\" without needing to leave the report. </p>\n\n<p>Learn more <a href=\"https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/reports-overview#configuration-panel\">here</a> in the Shopify Help Center. </p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "アナリティクスで分析手法を切り替え可能に",
+          "summarizedJa": "アナリティクスレポート内で、フリーフォーム分析とコホート分析を切り替えられるようになりました。これまでコホート分析には専用レポートへの移動が必要でしたが、今後は同じレポート内で「売上のトレンドは?」から「顧客はリピートしているか?」といった異なる視点の分析にシームレスに切り替えられます。データを多角的に分析する作業効率が大幅に向上します。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2025-12-17T00:01:47.943Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1072,
+            "output": 249
+          },
+          "estimatedCost": 0.006951
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "アナリティクスでの分析方法の切り替え",
+          "summarizedJa": "Shopifyアナリティクスにおいて、レポートを離れることなく「フリーフォーム」と「コホート」の分析方法を切り替えられるようになりました。これにより、売上トレンドの分析から顧客のリピート状況の確認まで、複数の視点からデータを効率的に探索できるようになり、日本のマーチャントはより深い洞察を得やすくなります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2025-12-17T00:01:52.368Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 782,
+            "output": 145
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-automated-transfers-for-shopify-balance-payouts",
       "source": "shopify-changelog",
@@ -313,6 +363,59 @@
           "tokenUsage": {
             "input": 1729,
             "output": 177
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-set-processed-at-in-refund-create",
+      "source": "developer-changelog",
+      "title": "Set and retrieve `processedAt` in the `refundCreate` mutation",
+      "link": "https://shopify.dev/changelog/set-processed-at-in-refund-create",
+      "publishedAt": "2025-12-12T17:00:00.000Z",
+      "collectedAt": "2025-12-17T00:01:40.107Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-01"
+      ],
+      "description": " <div class=\"\"><p>We have introduced a new <code>processedAt</code> input field to the <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/refundcreate\" target=\"_blank\" class=\"body-link\"><code>refundCreate</code> mutation</a>. With this field, you can manage refund timestamps in your records more effectively.</p>\n<p>If you don't provide a <code>processedAt</code> value, then the current timestamp is used by default. This ensures that existing integrations continue to function without modification.</p>\n<h3>What's new</h3>\n<p>The <code>refundCreate</code> mutation now includes an optional <code>processedAt</code> field, enabling you to specify the exact time a refund was processed. This feature is particularly useful for:</p>\n<ul>\n<li><strong>Processing backdated refunds</strong>: Manage refunds initiated offline or those that need to reflect a specific processing date for accounting purposes.</li>\n<li><strong>Maintaining accurate financial records</strong>: Ensure your refund timestamps align with your actual business operations and reporting periods.</li>\n</ul>\n<h3>How it works</h3>\n<p>To use this feature, include the <code>processedAt</code> field when creating a refund:</p>\n<pre><code class=\"language-graphql\">mutation refundCreate($input: RefundInput!) {\n  refundCreate(input: $input) {\n    refund {\n      id\n      processedAt\n      createdAt\n    }\n    userErrors {\n      field\n      message\n    }\n  }\n}\n</code></pre>\n<p>With input:</p>\n<pre><code class=\"language-json\">{\n  &quot;input&quot;: {\n    &quot;orderId&quot;: &quot;gid://shopify/Order/123&quot;,\n    &quot;processedAt&quot;: &quot;2024-12-01T10:30:00Z&quot;,\n    &quot;refundLineItems&quot;: [...]\n  }\n}\n</code></pre>\n<p>If you don't provide a <code>processedAt</code> value, the current timestamp is used by default. This ensures that existing integrations continue to function without modification.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "refundCreateミューテーションでprocessedAtの設定と取得が可能に",
+          "summarizedJa": "Admin GraphQL APIのrefundCreateミューテーションに、新しくprocessedAtフィールドが追加されました。これにより返金処理の正確なタイムスタンプを指定できるようになり、過去日付の返金処理や会計目的での正確な記録管理が可能になります。processedAtを指定しない場合は現在時刻が自動的に使用されるため、既存の統合への影響はありません。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2025-12-17T00:01:58.032Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1491,
+            "output": 232
+          },
+          "estimatedCost": 0.007953
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "refundCreateミューテーションで返金処理日時（processedAt）を設定・取得",
+          "summarizedJa": "ShopifyのAdmin GraphQL APIの`refundCreate`ミューテーションに、オプションの`processedAt`フィールドが追加されました。これにより、マーチャントやパートナーは返金の正確な処理日時を指定できるようになります。この機能は、オフラインでの返金処理や会計上の特定の処理日に合わせる必要がある場合に特に有用で、より正確な財務記録の管理に貢献します。既存の連携はデフォルトで現在のタイムスタンプが使用されるため、変更なく機能します。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2025-12-17T00:02:05.485Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1131,
+            "output": 181
           },
           "estimatedCost": 0
         }
