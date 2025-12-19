@@ -1,6 +1,59 @@
 {
-  "lastUpdated": "2025-12-18T00:01:35.358Z",
+  "lastUpdated": "2025-12-19T00:01:37.856Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-customer-marketing-url-fields-now-require-write-access",
+      "source": "developer-changelog",
+      "title": "Customer marketing URL fields now require write access",
+      "link": "https://shopify.dev/changelog/customer-marketing-url-fields-now-require-write-access",
+      "publishedAt": "2025-12-18T17:00:00.000Z",
+      "collectedAt": "2025-12-19T00:01:36.532Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Breaking API Change",
+        "Admin GraphQL API"
+      ],
+      "description": " <div class=\"\"><p><strong>Effective immediately</strong>: The following customer-related fields now require the <code>write_customers</code> scope and the <code>create_and_edit_customers</code> permission:</p>\n<ul>\n<li><code>Customer.emailOpenTrackingUrl</code> (deprecated)</li>\n<li><code>Customer.unsubscribeUrl</code> (deprecated)</li>\n<li><code>CustomerEmailAddress.openTrackingUrl</code></li>\n<li><code>CustomerEmailAddress.marketingUnsubscribeUrl</code></li>\n<li><code>CustomerPhoneNumber.marketingUnsubscribeUrl</code></li>\n</ul>\n<p><strong>Reason for change</strong></p>\n<p>This update addresses a security vulnerability. These fields return URLs with secret tokens that can modify customer marketing consent, such as unsubscribing a customer. Previously, apps with only the <code>read_customers</code> scope could access these URLs, potentially leading to unauthorized changes to customer preferences. By updating the access requirements, we aim to prevent such security risks.</p>\n<p>According to our <a href=\"https://vault.shopify.io/page/Types-of-changes~dhb7e32.md#security-fixes\" target=\"_blank\" class=\"body-link\">API breaking change policy</a>, security fixes are implemented immediately across all API versions, bypassing the standard deprecation process.</p>\n<p><strong>Action required</strong></p>\n<p>If your app queries these fields, you must:</p>\n<ol>\n<li>Update your app to include the <code>write_customers</code> access scope. Previously, the <code>read_customers</code> scope was sufficient.</li>\n<li>Ensure the user making the request has the <code>create_and_edit_customers</code> permission.</li>\n</ol>\n<p>Apps that only have the <code>read_customers</code> scope will now encounter an access denied error when attempting to query these fields.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "顧客マーケティングURLフィールドに書き込み権限が必要に",
+          "summarizedJa": "セキュリティ脆弱性に対処するため、顧客のマーケティング配信停止URLなどのフィールドへのアクセスに、即日適用で`write_customers`スコープと`create_and_edit_customers`権限が必要になりました。これらのフィールドを利用するアプリは、`read_customers`スコープのみでは権限エラーとなるため、スコープの更新が必須です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 5
+          },
+          "totalScore": 15,
+          "analyzedAt": "2025-12-19T00:01:44.238Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1402,
+            "output": 236
+          },
+          "estimatedCost": 0.007745999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "顧客マーケティングURLフィールドに書き込みアクセスが必要に",
+          "summarizedJa": "Shopifyはセキュリティ強化のため、顧客のマーケティング関連URLフィールド（例：購読解除URL）へのアクセス要件を即時変更しました。これらのフィールドは、顧客の同意を変更できる秘密トークンを含むため、今後は`write_customers`スコープと`create_and_edit_customers`権限が必要となります。該当フィールドをクエリするアプリは、アクセススコープの更新が必須となり、対応しない場合アクセス拒否エラーが発生します。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2025-12-19T00:01:50.393Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1032,
+            "output": 174
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-uplift-disputes-evidence-form",
       "source": "shopify-changelog",
