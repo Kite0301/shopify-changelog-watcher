@@ -1,6 +1,161 @@
 {
-  "lastUpdated": "2025-12-19T00:01:37.856Z",
+  "lastUpdated": "2025-12-20T00:01:26.875Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-inter-location-transfer-order-shipments-reporting",
+      "source": "shopify-changelog",
+      "title": "Inter-Location Transfers Reporting",
+      "link": "https://changelog.shopify.com/posts/inter-location-transfer-order-shipments-reporting",
+      "publishedAt": "2025-12-19T22:00:00.000Z",
+      "collectedAt": "2025-12-20T00:01:26.860Z",
+      "category": [
+        "Inventory"
+      ],
+      "description": "\n        <p><strong>Update:</strong> Two new reports are now available in Analytics to help you track inter-location inventory movements.</p>\n\n<h3>1. Transfer Orders and Shipments Report</h3>\n\n<p>View detailed transfer and shipment data together. Track what was ordered, shipped, received, accepted, and rejected—all in one place.</p>\n\n<p><strong>Filter</strong> by transfer ID, name, origin, destination, status (Draft, Ready, Shipped, Received), date ranges, tags, reasons, product, or variant.</p>\n\n<p><strong>Access:</strong> Analytics &gt; Reports &gt; Inventory transfer orders and shipments </p>\n\n<h3>2. Transfers Report</h3>\n\n<p>A streamlined view focused on all transfers, including draft transfers. Ideal for tracking transfer status including inventory items in each transfer. </p>\n\n<p><strong>Access:</strong> Analytics &gt; Reports &gt; Inventory transfers </p>\n\n<p><strong>Both reports support:</strong></p>\n\n<ul>\n<li><strong>Export</strong> to CSV with one click. Exports use your current filters and support large datasets.<br></li>\n<li><strong>Customize</strong> by adding or removing columns from multiple dimensions. Save custom views for different use cases.</li>\n</ul>\n\n<p><a href=\"https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/custom-reports/inventory-transfers-and-shipments\">Learn more about these reports and how to customize them</a></p>\n\n<p><em>Note: If you previously used the Stocky app, these reports provide similar functionality to what you had before for transfers and shipments, with additional dimensions and flexibility.</em></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "ロケーション間在庫移動レポート機能",
+          "summarizedJa": "Analyticsに2つの新しいレポートが追加され、ロケーション間の在庫移動を詳細に追跡できるようになりました。「移動オーダーと出荷レポート」では注文・出荷・受領・承認・却下のデータを一元管理でき、「移動レポート」ではドラフトを含む全ての移動ステータスを確認できます。両レポートともCSVエクスポートやカラムのカスタマイズに対応し、複数拠点で在庫管理を行うマーチャントの業務効率化に貢献します。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2025-12-20T00:01:33.750Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1318,
+            "output": 278
+          },
+          "estimatedCost": 0.008124
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "ロケーション間在庫移動レポート",
+          "summarizedJa": "Shopifyアナリティクスに、店舗間の在庫移動を追跡するための新しいレポートが2種類追加されました。これにより、発注から出荷、受領、承認、却下までの詳細な在庫移動状況を一元的に把握できるようになります。在庫管理の可視性が大幅に向上し、CSVエクスポートやレポートのカスタマイズも可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2025-12-20T00:01:39.943Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 986,
+            "output": 144
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-create-balance-cards-for-staff",
+      "source": "shopify-changelog",
+      "title": "Create Balance cards for staff",
+      "link": "https://changelog.shopify.com/posts/create-balance-cards-for-staff",
+      "publishedAt": "2025-12-19T17:00:00.000Z",
+      "collectedAt": "2025-12-20T00:01:26.860Z",
+      "category": [
+        "Balance"
+      ],
+      "description": "\n        <p>We’ve just released the ability to create Balance cards linked to Balance Main or any additional Balance account for staff users. This will help Account Owners to delegate business spending to staff without having to share their card information. Staff cards for Balance will let staff members, including business partners and employees, spend the funds in Balance accounts directly using their own cards.</p>\n\n<p>To learn more, visit our <a href=\"https://help.shopify.com/en/manual/finance/shopify-balance/cards/card\">Help Center on Balance cards</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "スタッフ向けのBalanceカードの作成が可能に",
+          "summarizedJa": "Shopify Balanceアカウントに紐づいたスタッフ用カードを作成できる機能がリリースされました。アカウントオーナーは自身のカード情報を共有することなく、従業員やビジネスパートナーに業務支出を委任できるようになります。スタッフは専用のカードを使ってBalanceアカウントの資金を直接利用できます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 8,
+          "analyzedAt": "2025-12-20T00:01:45.028Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1020,
+            "output": 222
+          },
+          "estimatedCost": 0.00639
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "スタッフ用Balanceカードの作成",
+          "summarizedJa": "Shopify Balanceの口座オーナーは、従業員やビジネスパートナーなどのスタッフ向けにBalanceカードを発行できるようになりました。これにより、オーナーのカード情報を共有することなく、スタッフが直接Balance口座の資金を使って事業支出を行うことが可能になります。この機能は、事業支出の委任を容易にし、セキュリティを向上させます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2025-12-20T00:01:51.082Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 741,
+            "output": 138
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-removing-permitsskusharing-field-from-fulfillment-service",
+      "source": "developer-changelog",
+      "title": "Removing `permitsSkuSharing` field from fulfillment service",
+      "link": "https://shopify.dev/changelog/removing-permitsskusharing-field-from-fulfillment-service",
+      "publishedAt": "2025-12-19T17:00:00.000Z",
+      "collectedAt": "2025-12-20T00:01:25.809Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Breaking API Change",
+        "Admin GraphQL API",
+        "Admin REST API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>As of API version 2026-04, we've removed the <code>permitsSkuSharing</code> field from the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/FulfillmentService\" target=\"_blank\" class=\"body-link\"><code>FulfillmentService</code></a> object and from the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/fulfillmentServiceCreate\" target=\"_blank\" class=\"body-link\"><code>fulfillmentServiceCreate</code></a> and <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/fulfillmentserviceupdate\" target=\"_blank\" class=\"body-link\"><code>fulfillmentServiceUpdate</code></a> mutations. SKU sharing will be enabled by default for all fulfillment services.</p>\n<h3>Why we made this change</h3>\n<p>By enabling <code>permitsSkuSharing</code> for all fulfillment services, we're standardizing inventory behavior across fulfillment services and simplifying the API. Previously, having <code>permitsSkuSharing</code> set to disabled would restrict inventory to a single location. This didn't always represent how the merchant's inventory item was setup in the real world.</p>\n<h3>Impact on your app</h3>\n<ul>\n<li><strong>GraphQL</strong>: In the <code>unstable</code> or <code>2026-04</code> and later releases, if you are querying for the <code>permitsSkuSharing</code> field or sending it in mutations in API version, you will begin receiving errors. </li>\n<li><strong>REST</strong>: In the <code>unstable</code> or <code>2026-04</code> and later releases, the <code>permitsSkuSharing</code> field won't be returned in <code>GET</code> requests. In <code>POST</code> and <code>PUT</code> requests, the <code>permitsSkuSharing</code> argument will be ignored.</li>\n<li><code>permitsSkuSharing</code> will be enabled for all fulfillment services.</li>\n<li>When <code>permitsSkuSharing</code> was disabled, inventory could only be stocked at a single location. With it enabled for all fulfillment services, inventory can be stocked at multiple locations.</li>\n</ul>\n<h3>What you need to do</h3>\n<ul>\n<li>Remove any reads/writes of <code>permitsSkuSharing</code> from your code for the <code>unstable</code> or <code>2026-04</code> and later releases.</li>\n<li>Review any business logic that assumed inventory could only be stocked at a single location for a fulfillment service.</li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "フルフィルメントサービスから`permitsSkuSharing`フィールドを削除",
+          "summarizedJa": "APIバージョン2026-04以降、FulfillmentServiceオブジェクトから`permitsSkuSharing`フィールドが削除されます。SKU共有はすべてのフルフィルメントサービスでデフォルトで有効になり、在庫を複数のロケーションに配置できるようになります。フルフィルメントサービスを利用するアプリを開発している場合、コードから該当フィールドの読み書きを削除し、単一ロケーションのみを前提とした業務ロジックを見直す必要があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2025-12-20T00:01:56.676Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1636,
+            "output": 276
+          },
+          "estimatedCost": 0.009048
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "フルフィルメントサービスから`permitsSkuSharing`フィールドを削除",
+          "summarizedJa": "ShopifyはAPIバージョン2026-04以降、フルフィルメントサービスにおける`permitsSkuSharing`フィールドを削除します。これにより、すべてのフルフィルメントサービスでSKU共有がデフォルトで有効になり、在庫を複数のロケーションで管理できるようになります。パートナーは、このフィールドへのアクセスをコードから削除し、在庫管理に関するビジネスロジックを見直す必要があります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2025-12-20T00:02:03.400Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1199,
+            "output": 160
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-customer-marketing-url-fields-now-require-write-access",
       "source": "developer-changelog",
@@ -152,6 +307,59 @@
           "tokenUsage": {
             "input": 808,
             "output": 151
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-conversion-tracking-fields-added-to-marketing-engagement-create",
+      "source": "developer-changelog",
+      "title": "Conversion tracking fields added to MarketingEngagementCreate",
+      "link": "https://shopify.dev/changelog/conversion-tracking-fields-added-to-marketing-engagement-create",
+      "publishedAt": "2025-12-17T17:00:00.000Z",
+      "collectedAt": "2025-12-20T00:01:25.809Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-01"
+      ],
+      "description": " <div class=\"\"><p>To improve the integration of marketing platforms that track conversions beyond traditional sales metrics, we have added new fields to the <code>MarketingEngagementCreateInput</code> and <code>MarketingEngagement</code> objects on the <code>MarketingEngagementCreate</code> mutation. These enhancements enable more comprehensive data integration into Shopify's marketing reports.</p>\n<p>The new fields are:</p>\n<ul>\n<li><strong>primaryConversions</strong>: This field tracks the main conversion events, such as purchases or sign-ups, that are most critical to your marketing goals.</li>\n<li><strong>allConversions</strong>: This field captures all types of conversion events, providing a complete view of customer interactions.</li>\n</ul>\n<p>For more information on sharing marketing data, please visit our <a href=\"https://help.shopify.com/en/manual/promoting-marketing/analyze-marketing/app-data-sharing\" target=\"_blank\" class=\"body-link\">help page</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "MarketingEngagementCreateにコンバージョントラッキングフィールドを追加",
+          "summarizedJa": "MarketingEngagementCreateミューテーションに、primaryConversions（主要なコンバージョン）とallConversions（すべてのコンバージョン）の2つの新しいフィールドが追加されました。これにより、マーケティングプラットフォームが従来の売上指標以外のコンバージョンも追跡でき、Shopifyのマーケティングレポートに包括的なデータを統合できるようになります。購入や登録などの重要なイベントから、すべての顧客インタラクションまで、より詳細なマーケティング分析が可能になります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2025-12-20T00:02:09.954Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1173,
+            "output": 287
+          },
+          "estimatedCost": 0.007824
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "MarketingEngagementCreateにコンバージョン追跡フィールドが追加",
+          "summarizedJa": "Shopifyの`MarketingEngagementCreate`ミューテーションに、マーケティングプラットフォームが売上以外のコンバージョンを追跡するための新しいフィールド（`primaryConversions`、`allConversions`）が追加されました。これにより、マーケティングアプリはより多様なコンバージョンデータをShopifyのレポートに統合できるようになり、マーチャントは顧客インタラクションの全体像を把握し、マーケティング効果を詳細に分析できるようになります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2025-12-20T00:02:16.105Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 846,
+            "output": 167
           },
           "estimatedCost": 0
         }
@@ -3698,6 +3906,59 @@
           "totalScore": 6,
           "analyzedAt": "2025-11-08T08:55:48.300Z",
           "model": "claude-sonnet-4-5"
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-storefront-api-now-returns-errors-when-adding-a-gift-card-to-a-cart-with-missing-or-invalid-recipient-details",
+      "source": "developer-changelog",
+      "title": "Storefront API now returns errors when adding a gift card to a cart with missing or invalid recipient details",
+      "link": "https://shopify.dev/changelog/storefront-api-now-returns-errors-when-adding-a-gift-card-to-a-cart-with-missing-or-invalid-recipient-details",
+      "publishedAt": "2025-10-31T16:00:00.000Z",
+      "collectedAt": "2025-12-20T00:01:25.810Z",
+      "category": [
+        "API",
+        "Update",
+        "Storefront GraphQL API",
+        "2026-01"
+      ],
+      "description": " <div class=\"\"><p>As of API version <code>2026-01</code>, the Storefront API returns a <code>GIFT_CARD_RECIPIENT_INVALID</code> error when adding a gift card to a cart with missing or invalid recipient details, such as in <a href=\"https://shopify.dev/docs/storefronts/themes/product-merchandising/gift-cards#create-a-form-to-collect-recipient-information\" target=\"_blank\" class=\"body-link\">this example</a>.</p>\n<p>Previously, when adding a gift card to a cart using either the <code>cartCreate</code> or <code>cartLinesAdd</code> mutations, an empty cart and empty <code>userErrors</code> would be returned if any of the recipient details were invalid, such as a missing email address. With this change a <code>GIFT_CARD_RECIPIENT_INVALID</code> error is returned for both <a href=\"https://shopify.dev/docs/api/storefront/2026-01/mutations/cartcreate#returns-userErrors.fields.code.GIFT_CARD_RECIPIENT_INVALID\" target=\"_blank\" class=\"body-link\"><code>cartCreate</code></a> or <a href=\"https://shopify.dev/docs/api/storefront/2026-01/mutations/cartlinesadd#returns-userErrors.fields.code.GIFT_CARD_RECIPIENT_INVALID\" target=\"_blank\" class=\"body-link\"><code>cartLinesAdd</code></a> mutations, so that you can use the information to surface gift card recipient errors back to the client.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Storefront APIがギフトカードのカート追加時に受取人情報の不足や無効時にエラーを返すように変更",
+          "summarizedJa": "APIバージョン2026-01以降、Storefront APIでギフトカードをカートに追加する際、受取人情報（メールアドレスなど）が不足または無効な場合、GIFT_CARD_RECIPIENT_INVALIDエラーが返されるようになりました。以前は空のカートと空のuserErrorsが返されていましたが、この変更によりcartCreateおよびcartLinesAddミューテーションで適切なエラーハンドリングが可能になり、クライアント側でエラーを表示できるようになります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2025-12-20T00:02:21.607Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1343,
+            "output": 285
+          },
+          "estimatedCost": 0.008303999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Storefront API：ギフトカードの受取人情報不備時にエラーを返すように改善",
+          "summarizedJa": "ShopifyのStorefront APIは、バージョン2026-01以降、ギフトカードをカートに追加する際に受取人情報が不足または無効な場合、`GIFT_CARD_RECIPIENT_INVALID`エラーを返すようになりました。これにより、開発者は`cartCreate`や`cartLinesAdd`ミューテーション使用時に、具体的なエラーメッセージを顧客に表示できるようになります。以前は、受取人情報に不備があっても空のカートが返されるだけで、エラーの詳細が不明でした。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2025-12-20T00:02:28.080Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1038,
+            "output": 194
+          },
+          "estimatedCost": 0
         }
       }
     },
