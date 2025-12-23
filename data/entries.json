@@ -1,6 +1,56 @@
 {
-  "lastUpdated": "2025-12-20T00:01:26.875Z",
+  "lastUpdated": "2025-12-23T00:01:33.691Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-app-generated-and-imported-orders-fully-sync-to-avalara-tax-compliance",
+      "source": "shopify-changelog",
+      "title": "App generated and imported orders fully sync to Avalara Tax Compliance",
+      "link": "https://changelog.shopify.com/posts/app-generated-and-imported-orders-fully-sync-to-avalara-tax-compliance",
+      "publishedAt": "2025-12-20T17:00:00.000Z",
+      "collectedAt": "2025-12-23T00:01:33.678Z",
+      "category": [
+        "Partners"
+      ],
+      "description": "\n        <p>As of October 1, 2025, orders placed or modified through third party apps (such as Loop, Recharge, etc.) or imported into Shopify by a third party app (such as Matrixify) are automatically imported to Avalara Tax Compliance and will be recalculated.</p>\n\n<p>If you use alternative methods to import third party orders to Avalara Tax Compliance, these must be disabled or there may be risk of recording duplicate orders. </p>\n\n<p>If you do not wish these orders to flow from Shopify to Avalara Tax Compliance, contact Avalara support.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "アプリで生成・インポートされた注文がAvalara Tax Complianceに完全同期されるように",
+          "summarizedJa": "2025年10月1日より、サードパーティアプリ（Loop、Rechargeなど）を通じて作成・変更された注文、またはMatrixifyなどのアプリでインポートされた注文が、自動的にAvalara Tax Complianceにインポートされ、税額が再計算されるようになりました。既に別の方法でAvalara Tax Complianceに注文をインポートしている場合は、重複を避けるため無効化する必要があります。この同期を希望しない場合は、Avalaraサポートへの連絡が必要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 1,
+            "technicalImportance": 3
+          },
+          "totalScore": 9,
+          "analyzedAt": "2025-12-23T00:01:40.917Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1061,
+            "output": 283
+          },
+          "estimatedCost": 0.007428
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "アプリ生成・インポート注文のAvalara Tax Complianceへの完全同期",
+          "summarizedJa": "2025年10月1日より、Shopifyのサードパーティアプリ（定期購入アプリやインポートアプリなど）を通じて作成またはインポートされた注文が、自動的にAvalara Tax Complianceに同期され、税金が再計算されるようになります。これにより、越境ECを行う日本のマーチャントは、海外の税務コンプライアンスをより効率的に管理できるようになります。現在、これらの注文をAvalaraに連携するために別の方法を使用している場合は、重複を避けるためにその方法を無効にする必要があります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2025-12-23T00:01:50.955Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 768,
+            "output": 192
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-inter-location-transfer-order-shipments-reporting",
       "source": "shopify-changelog",
@@ -2852,6 +2902,60 @@
           "tokenUsage": {
             "input": 1155,
             "output": 179
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-deprecation-of-shop-billingaddress-in-favor-of-shop-shopaddress",
+      "source": "developer-changelog",
+      "title": "Deprecation of `Shop.billingAddress` in favor of `Shop.shopAddress`",
+      "link": "https://shopify.dev/changelog/deprecation-of-shop-billingaddress-in-favor-of-shop-shopaddress",
+      "publishedAt": "2025-12-01T17:00:00.000Z",
+      "collectedAt": "2025-12-23T00:01:32.265Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Deprecation Announcement",
+        "Admin GraphQL API",
+        "2026-01"
+      ],
+      "description": " <div class=\"\"><p>As of API version 2026-01, the <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/objects/shop#field-Shop.fields.shopAddress\" target=\"_blank\" class=\"body-link\"><code>shopAddress</code> field will be introduced to the <code>Shop</code> object</a> in the GraphQL Admin API. This new field replaces the now-deprecated <code>billingAddress</code> field, which will be removed in a future version. <code>shopAddress</code> will have identical structure and values as <code>billingAddress</code>. </p>\n<p>Billing account address currently corresponds to the shop address. This change makes that relationship clearer, and supports potential future separation of billing and shop addresses.</p>\n<h3>Action required</h3>\n<p>You should update your queries to use the new <code>shopAddress</code> field when accessing the <code>Shop</code> object in the GraphQL Admin API. Replace instances of <code>shop { billingAddress { ... } }</code> with <code>shop { shopAddress { ... } }</code>. </p>\n<p>For example, update your query from:</p>\n<pre><code class=\"language-graphql\">query ShopAddress {\n  shop {\n    billingAddress {\n      address1\n      address2\n      city\n      province\n      zip\n      country\n    }\n  }\n}\n</code></pre>\n<p>to:</p>\n<pre><code class=\"language-graphql\">query ShopAddress {\n  shop {\n    shopAddress {\n      address1\n      address2\n      city\n      province\n      zip\n      country\n    }\n  }\n}\n</code></pre>\n<p>By making these changes, you ensure compatibility with future API versions.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shop.billingAddressの廃止とShop.shopAddressへの移行",
+          "summarizedJa": "GraphQL Admin APIの2026-01バージョンより、Shopオブジェクトの`billingAddress`フィールドが廃止され、新しい`shopAddress`フィールドに置き換えられます。構造と値は同一ですが、将来的な請求先住所とショップ住所の分離に対応するための変更です。現在`billingAddress`を使用しているクエリは、`shopAddress`に更新する必要があります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2025-12-23T00:01:56.528Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1385,
+            "output": 232
+          },
+          "estimatedCost": 0.007634999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "`Shop.billingAddress`の非推奨化と`Shop.shopAddress`への移行",
+          "summarizedJa": "ShopifyのGraphQL Admin APIにおいて、APIバージョン2026-01より`Shop`オブジェクト内の`billingAddress`フィールドが非推奨となり、新たに`shopAddress`フィールドが導入されます。`shopAddress`は`billingAddress`と同一の構造と値を持つため、開発者は将来のAPIバージョンとの互換性を確保するために、既存のクエリを`shopAddress`を使用するように更新する必要があります。この変更は、請求先住所と店舗住所の関係を明確化し、将来的な分離をサポートするためのものです。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2025-12-23T00:02:01.250Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1054,
+            "output": 194
           },
           "estimatedCost": 0
         }
