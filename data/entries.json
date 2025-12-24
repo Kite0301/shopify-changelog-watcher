@@ -1,6 +1,58 @@
 {
-  "lastUpdated": "2025-12-23T00:01:33.691Z",
+  "lastUpdated": "2025-12-24T00:01:42.407Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-tax-partner-apps-can-now-receive-cart-line-properties-in-tax-calculation-requests",
+      "source": "developer-changelog",
+      "title": "Tax Partner Apps Can Now Receive Cart Line Properties in Tax Calculation Requests",
+      "link": "https://shopify.dev/changelog/tax-partner-apps-can-now-receive-cart-line-properties-in-tax-calculation-requests",
+      "publishedAt": "2025-12-23T17:00:00.000Z",
+      "collectedAt": "2025-12-24T00:01:41.289Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API"
+      ],
+      "description": " <div class=\"\"><h2>Overview</h2>\n<p>As of API version 2026-01, tax calculation requests for Tax Partner Apps can now include <strong>cart line item properties</strong>. These properties are custom name-value pairs that merchants can add to individual line items. </p>\n<h2>What's New</h2>\n<p>Tax Partner Apps can now receive line item properties in tax calculation requests by configuring which property keys they want to receive. </p>\n<h3>Property Configuration</h3>\n<ul>\n<li>Merchants configure properties on individual cart line items (e.g., &quot;token&quot;, &quot;personalization&quot;, &quot;gift_wrap&quot;)</li>\n<li>Tax Partner Apps specify which property keys they want to receive across all line items (maximum 5 keys)</li>\n<li>Only the requested property keys are included in calculation requests</li>\n</ul>\n<h3>How It Works: Per-Line-Item Properties</h3>\n<p>The 5-key limit applies to which property <strong>keys</strong> the partner wants to receive, not the number of line items:</p>\n<ul>\n<li><strong>Partner configures:</strong> <code>[&quot;token&quot;, &quot;personalization&quot;]</code> (2 keys)</li>\n<li><strong>Cart has:</strong> 10 line items</li>\n<li><strong>Result:</strong> All 10 line items will include their own <code>token</code> and <code>personalization</code> values (if present)</li>\n</ul>\n<h3>Request Payload Changes</h3>\n<p>Cart line items in the <code>delivery_groups[].cart_lines[]</code> objects now include an optional <code>properties</code> field <strong>per line item</strong>:</p>\n<p><strong>Before (2026-01):</strong></p>\n<pre><code class=\"language-json\">{\n  &quot;delivery_groups&quot;: [{\n    &quot;cart_lines&quot;: [{\n      &quot;id&quot;: &quot;gid://shopify/CartLine/123&quot;,\n      &quot;quantity&quot;: 1,\n      &quot;merchandise&quot;: {\n        &quot;id&quot;: &quot;gid://shopify/ProductVariant/456&quot;,\n        &quot;title&quot;: &quot;Custom T-Shirt&quot;\n      },\n      &quot;cost&quot;: {\n        &quot;amount_per_quantity&quot;: {\n          &quot;currency_code&quot;: &quot;USD&quot;,\n          &quot;amount&quot;: &quot;25.00&quot;\n        }\n      }\n    }]\n  }]\n}\n</code></pre>\n<p><strong>After (2026-01):</strong></p>\n<pre><code class=\"language-json\">{\n  &quot;delivery_groups&quot;: [{\n    &quot;cart_lines&quot;: [\n      {\n        &quot;id&quot;: &quot;gid://shopify/CartLine/7&quot;,\n        &quot;quantity&quot;: 1,\n        &quot;merchandise&quot;: {\n          &quot;id&quot;: &quot;gid://shopify/ProductVariant/456&quot;,\n          &quot;title&quot;: &quot;Custom T-Shirt&quot;\n        },\n        &quot;cost&quot;: {\n          &quot;amount_per_quantity&quot;: {\n            &quot;currency_code&quot;: &quot;USD&quot;,\n            &quot;amount&quot;: &quot;25.00&quot;\n          }\n        },\n        &quot;properties&quot;: {\n          &quot;token&quot;: &quot;abc-123&quot;,\n          &quot;personalization&quot;: &quot;John Smith&quot;\n        }\n      },\n      {\n        &quot;id&quot;: &quot;gid://shopify/CartLine/6&quot;,\n        &quot;quantity&quot;: 2,\n        &quot;merchandise&quot;: {\n          &quot;id&quot;: &quot;gid://shopify/ProductVariant/789&quot;,\n          &quot;title&quot;: &quot;Custom Mug&quot;\n        },\n        &quot;cost&quot;: {\n          &quot;amount_per_quantity&quot;: {\n            &quot;currency_code&quot;: &quot;USD&quot;,\n            &quot;amount&quot;: &quot;15.00&quot;\n          }\n        },\n        &quot;properties&quot;: {\n          &quot;token&quot;: &quot;def-456&quot;,\n          &quot;personalization&quot;: &quot;Jane Doe&quot;\n        }\n      }\n    ]\n  }]\n}\n</code></pre>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "税金パートナーアプリが税額計算リクエストでカートライン属性を受信可能に",
+          "summarizedJa": "APIバージョン2026-01から、税金パートナーアプリが税額計算リクエストにおいて、カートのラインアイテムに付与されたカスタム属性（名前と値のペア）を受け取れるようになりました。パートナーは最大5つのプロパティキーを指定でき、各ラインアイテムごとにそれらの値が含まれます。これにより、商品のパーソナライゼーション情報やトークンなど、カスタム情報に基づいたより正確な税額計算が可能になります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2025-12-24T00:01:49.589Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2164,
+            "output": 284
+          },
+          "estimatedCost": 0.010752000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "税パートナーアプリが税計算リクエストでカートラインプロパティを受け取れるように",
+          "summarizedJa": "Shopifyの税パートナーアプリは、APIバージョン2026-01以降、税計算リクエストでカートラインアイテムのカスタムプロパティを受け取れるようになります。これにより、マーチャントが個々の商品に追加した「ギフトラッピング」や「名入れ」といった詳細情報に基づいた、よりきめ細やかな税計算が可能になります。パートナーアプリは、受け取りたいプロパティキーを最大5つまで設定できます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2025-12-24T00:01:56.923Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1738,
+            "output": 175
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-app-generated-and-imported-orders-fully-sync-to-avalara-tax-compliance",
       "source": "shopify-changelog",
