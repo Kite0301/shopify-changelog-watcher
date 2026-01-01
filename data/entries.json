@@ -1,6 +1,58 @@
 {
-  "lastUpdated": "2025-12-24T00:01:42.407Z",
+  "lastUpdated": "2026-01-01T00:01:41.647Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-trackingconsent-landingpage-origreferrer-cookies-will-no-longer-be-set",
+      "source": "developer-changelog",
+      "title": " _tracking_consent, _landing_page, _orig_referrer cookies will no longer be set",
+      "link": "https://shopify.dev/changelog/trackingconsent-landingpage-origreferrer-cookies-will-no-longer-be-set",
+      "publishedAt": "2025-12-31T17:00:00.000Z",
+      "collectedAt": "2026-01-01T00:01:40.561Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Deprecation Announcement"
+      ],
+      "description": " <div class=\"\"><h3>What's changing?</h3>\n<p>Starting on September 15th, 2025, Shopify will no longer set the following cookies on merchant storefronts:</p>\n<ul>\n<li><code>_landing_page</code></li>\n<li><code>_orig_referrer</code></li>\n<li><code>_tracking_consent</code></li>\n</ul>\n<h3>Required updates</h3>\n<p>While accessing internal cookie values is never recommended as they frequently change, any code that currently accesses the cookie values will need to be adapted to use documented APIs.</p>\n<h4>_landing_page and _orig_referrer</h4>\n<p>We recommend keeping track of these values through browser APIs (<code>window.location.href</code> to save the landing page, and <code>document.referrer</code> for the referrer). To keep track of these values through the user’s session, you may use the <a href=\"https://shopify.dev/docs/api/web-pixels-api\" target=\"_blank\" class=\"body-link\">Web Pixels API</a>. \nIn the GraphQL Admin API, you can access this information by <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/queries/order\" target=\"_blank\" class=\"body-link\">querying an order</a>:</p>\n<pre><code class=\"language-graphql\">query referrerData {\n  order(id: &quot;gid://shopify/Order/14134963208214&quot;) {\n    customerJourneySummary {\n      lastVisit {\n        landingPage\n        referrerUrl\n      }\n    }\n  }\n}\n</code></pre>\n<h4>_tracking_consent</h4>\n<p>Please use the <a href=\"https://shopify.dev/docs/api/customer-privacy\" target=\"_blank\" class=\"body-link\">Customer Privacy API</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "_tracking_consent、_landing_page、_orig_referrer クッキーの廃止について",
+          "summarizedJa": "2025年9月15日より、Shopifyは_landing_page、_orig_referrer、_tracking_consentの3つのクッキーをマーチャントのストアフロントに設定しなくなります。これらのクッキー値に直接アクセスしているコードは、ブラウザAPI（window.location.hrefやdocument.referrer）、Web Pixels API、Customer Privacy APIなどの公式APIを使用するように更新が必要です。非推奨の内部クッキーに依存しているカスタムコードやアプリは動作しなくなる可能性があります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-01-01T00:01:47.762Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1419,
+            "output": 275
+          },
+          "estimatedCost": 0.008382
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "_tracking_consent, _landing_page, _orig_referrer クッキーの設定終了",
+          "summarizedJa": "2025年9月15日以降、Shopifyストアフロントで`_landing_page`、`_orig_referrer`、`_tracking_consent`の各クッキーが設定されなくなります。これらのクッキーに直接依存するカスタムコードやアプリは、Web Pixels API、GraphQL Admin API、Customer Privacy APIなどの公式APIへ移行する必要があります。これにより、トラッキングや顧客プライバシー関連のデータ取得方法が変更され、対応が求められます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-01-01T00:01:56.178Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1061,
+            "output": 182
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-tax-partner-apps-can-now-receive-cart-line-properties-in-tax-calculation-requests",
       "source": "developer-changelog",
