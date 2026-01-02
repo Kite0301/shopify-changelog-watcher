@@ -1,6 +1,168 @@
 {
-  "lastUpdated": "2026-01-01T00:01:41.647Z",
+  "lastUpdated": "2026-01-02T00:01:34.103Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-subscription-billing-attempts-throttling",
+      "source": "developer-changelog",
+      "title": "Subscription billing attempts throttling",
+      "link": "https://shopify.dev/changelog/subscription-billing-attempts-throttling",
+      "publishedAt": "2026-01-01T17:00:00.000Z",
+      "collectedAt": "2026-01-02T00:01:32.919Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-01"
+      ],
+      "description": " <div class=\"\"><p>Beginning in API version 2026-01, billing attempts will be throttled based on internal trust metrics to prevent abuse. If an attempt is throttled, it will be visible in the new <code>throttled</code> error code on the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/enums/BillingAttemptUserErrorCode\" target=\"_blank\" class=\"body-link\"><code>BillingAttemptUserErrorCode</code></a> enum.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "サブスクリプション請求試行のスロットリング",
+          "summarizedJa": "APIバージョン2026-01以降、不正利用を防ぐために内部信頼性指標に基づいて請求試行がスロットリング（制限）されるようになります。スロットリングが発生した場合は、BillingAttemptUserErrorCodeに新しく追加される「throttled」エラーコードで確認できます。サブスクリプション請求機能を実装しているアプリやストアでは、このエラーコードへの対応が必要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-01-02T00:01:39.692Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1032,
+            "output": 241
+          },
+          "estimatedCost": 0.006711
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "定期購入請求試行のスロットリング",
+          "summarizedJa": "ShopifyはAPIバージョン2026-01より、不正利用防止のため、定期購入の請求試行を内部の信頼性指標に基づいてスロットリング（制限）するようになります。請求試行が制限された場合、新しい`throttled`エラーコードが`BillingAttemptUserErrorCode` enumに表示されます。定期購入アプリやシステム連携を構築しているパートナーは、この新しいエラーコードへの対応を検討する必要があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-01-02T00:01:46.375Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 738,
+            "output": 164
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-introducing-the-orderslinkrequested-webhook-topic",
+      "source": "developer-changelog",
+      "title": "Introducing the `orders/link_requested` webhook topic",
+      "link": "https://shopify.dev/changelog/introducing-the-orderslinkrequested-webhook-topic",
+      "publishedAt": "2026-01-01T17:00:00.000Z",
+      "collectedAt": "2026-01-02T00:01:32.919Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "Webhook",
+        "2026-01"
+      ],
+      "description": " <div class=\"\"><p>As of API version 2026-01 of the GraphQL Admin API, your app can subscribe to the <code>orders/link_requested</code> webhook topic.</p>\n<p>This webhook is triggered when a customer requests a new order link from the expired <strong>Order status</strong> page. This allows your app to be notified when customers need to access their order details after their original order link has expired.</p>\n<p><strong>The webhook is triggered when:</strong> A customer visits an expired order status page and requests a new order link.</p>\n<p>**Payload: ** The webhook delivers the full <a href=\"https://shopify.dev/api/admin-graphql/unstable/objects/Order\" target=\"_blank\" class=\"body-link\"><code>Order</code></a> object, which includes:</p>\n<ul>\n<li>Order ID and details</li>\n<li>Customer information</li>\n<li>Order status</li>\n<li>Fulfillment information</li>\n</ul>\n<p>Find more information and view the full payload in the <a href=\"https://shopify.dev/docs/api/webhooks?accordionItem=webhooks-orders-link_requested&reference=toml\" target=\"_blank\" class=\"body-link\">Shopify dev docs</a>. </p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "orders/link_requested Webhookトピックの導入",
+          "summarizedJa": "GraphQL Admin API 2026-01バージョンから、注文ステータスページのリンクが期限切れになった際に、顧客が新しい注文リンクをリクエストしたときに通知を受け取れる`orders/link_requested` Webhookトピックが利用可能になりました。このWebhookでは注文ID、顧客情報、注文ステータス、フルフィルメント情報を含む完全なOrderオブジェクトが配信されます。アプリ開発者は、顧客が期限切れ後に注文詳細へのアクセスが必要になったタイミングを検知できるようになります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-01-02T00:01:52.289Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1241,
+            "output": 286
+          },
+          "estimatedCost": 0.008013
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "`orders/link_requested` Webhookトピックの導入",
+          "summarizedJa": "Shopifyは、APIバージョン2026-01より新しいWebhookトピック`orders/link_requested`を導入しました。これは、顧客が期限切れの注文ステータスページから新しい注文リンクをリクエストした際にトリガーされます。この機能により、アプリは顧客が注文詳細へのアクセスを必要としていることをリアルタイムで把握し、マーチャントは顧客サポートの強化や、顧客体験の向上に役立つ自動化された対応を構築できるようになります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-01-02T00:01:59.170Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 916,
+            "output": 178
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-new-return-reason-definitions-api-for-better-return-insights",
+      "source": "developer-changelog",
+      "title": "New Return Reason Definitions API for Better Return Insights",
+      "link": "https://shopify.dev/changelog/new-return-reason-definitions-api-for-better-return-insights",
+      "publishedAt": "2026-01-01T17:00:00.000Z",
+      "collectedAt": "2026-01-02T00:01:32.919Z",
+      "category": [
+        "API",
+        "Update",
+        "Admin GraphQL API",
+        "Customer Account API",
+        "Webhook",
+        "2026-01"
+      ],
+      "description": " <div class=\"\"><p>You can now use the new <code>ReturnReasonDefinition</code> type to capture more granular, category-specific return reasons when managing returns. This replaces the previous <code>ReturnReason</code> enum with a richer data model that helps provide merchants with better insights in their return analytics, and more tailored return experiences for their buyers.</p>\n<h3>What's new</h3>\n<ul>\n<li>A new <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/objects/ReturnReasonDefinition\" target=\"_blank\" class=\"body-link\"><code>ReturnReasonDefinition</code></a> type with <code>id</code>, <code>handle</code>, and <code>name</code> fields. Use the stable <code>handle</code> for programmatic logic.</li>\n<li>The <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/queries/returnReasonDefinitions\" target=\"_blank\" class=\"body-link\"><code>returnReasonDefinitions</code></a> query retrieves the full library of available return reasons.</li>\n<li>A new <code>suggestedReturnReasonDefinitions</code> connection on <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/objects/LineItem#field-LineItem.fields.suggestedReturnReasonDefinitions\" target=\"_blank\" class=\"body-link\"><code>LineItem</code></a> provides return reasons tailored to each product's category.</li>\n<li>The <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/returnCreate\" target=\"_blank\" class=\"body-link\"><code>returnCreate</code></a>, <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/mutations/returnRequest\" target=\"_blank\" class=\"body-link\"><code>returnRequest</code></a>, and <a href=\"https://shopify.dev/docs/api/customer/2026-01/mutations/orderRequestReturn\" target=\"_blank\" class=\"body-link\"><code>orderRequestReturn</code></a> mutations now accept <code>returnReasonDefinitionId</code> in their line item inputs.</li>\n<li>Access <code>returnReasonDefinition</code> on <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/objects/ReturnLineItem\" target=\"_blank\" class=\"body-link\"><code>ReturnLineItem</code></a> and <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/objects/UnverifiedReturnLineItem\" target=\"_blank\" class=\"body-link\"><code>UnverifiedReturnLineItem</code></a> types.</li>\n</ul>\n<h3>Deprecations</h3>\n<p>The <code>returnReason</code> field on input types and return line item types is deprecated. Use <code>returnReasonDefinitionId</code> for inputs and <code>returnReasonDefinition</code> for reading return data.</p>\n<h3>Migration</h3>\n<p>If your app creates returns, update your mutations to use <code>returnReasonDefinitionId</code> instead of <code>returnReason</code>. Query <code>suggestedReturnReasonDefinitions</code> on <code>LineItem</code> to get contextually relevant reasons for each product. For reading returns, update your queries to use <code>returnReasonDefinition</code> instead of <code>returnReason</code>.</p>\n<p>These changes are available in API version 2026-01.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "返品理由の詳細情報を取得できる新しいReturn Reason Definitions APIを公開",
+          "summarizedJa": "返品管理をより詳細に行うための新しい`ReturnReasonDefinition`タイプが導入されました。従来の`ReturnReason`列挙型に代わり、商品カテゴリーごとに適した返品理由を提供できるようになり、マーチャントはより詳細な返品分析が可能になります。返品を作成するアプリは、`returnReason`フィールドから`returnReasonDefinitionId`への移行が必要です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-01-02T00:02:05.234Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1837,
+            "output": 247
+          },
+          "estimatedCost": 0.009216
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "返品分析の洞察を深める新しい返品理由定義API",
+          "summarizedJa": "Shopifyは、返品理由をより詳細かつカテゴリ別に管理できる新しい返品理由定義APIを導入しました。これにより、マーチャントは返品に関するより深い分析洞察を得られ、購入者にはよりパーソナライズされた返品体験を提供できるようになります。アプリ開発者は、既存の返品関連APIの変更（`returnReason`の非推奨化と`returnReasonDefinitionId`への移行）に対応する必要があります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 17,
+          "analyzedAt": "2026-01-02T00:02:11.645Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1400,
+            "output": 164
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-trackingconsent-landingpage-origreferrer-cookies-will-no-longer-be-set",
       "source": "developer-changelog",
@@ -3413,6 +3575,59 @@
           "tokenUsage": {
             "input": 1591,
             "output": 199
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-subscription-billing-attempt-invalid-billing-address-error",
+      "source": "developer-changelog",
+      "title": "`INVALID_BILLING_ADDRESS`: new processing error for subscription billing attempts",
+      "link": "https://shopify.dev/changelog/subscription-billing-attempt-invalid-billing-address-error",
+      "publishedAt": "2025-11-14T17:00:00.000Z",
+      "collectedAt": "2026-01-02T00:01:32.920Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-01"
+      ],
+      "description": " <div class=\"\"><p>We've added a new processing error for subscription billing attempts: <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/interfaces/SubscriptionBillingAttemptProcessingError#possible-types-SubscriptionBillingAttemptGenericError.fields.code.INVALID_BILLING_ADDRESS\" target=\"_blank\" class=\"body-link\"><code>INVALID_BILLING_ADDRESS</code></a>.</p>\n<p>This error is returned when one or more fields in the billing address contain invalid data. Validated fields include:</p>\n<ul>\n<li><code>firstName</code> or <code>lastName</code></li>\n<li><code>address1</code> or <code>address2</code></li>\n<li><code>city</code></li>\n<li><code>province</code> or <code>provinceCode</code></li>\n<li><code>country</code> or <code>countryCode</code></li>\n<li><code>zip</code> (postal code)</li>\n<li><code>phone</code></li>\n<li><code>company</code></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "サブスクリプション請求試行に新しい処理エラー `INVALID_BILLING_ADDRESS` を追加",
+          "summarizedJa": "サブスクリプションの請求試行時に、請求先住所の情報が無効な場合に返される新しいエラー `INVALID_BILLING_ADDRESS` が追加されました。名前、住所、都市、都道府県、国、郵便番号、電話番号、会社名などのフィールドが検証対象となります。サブスクリプションアプリを開発・運用しているパートナーやマーチャントは、このエラーを適切にハンドリングする必要があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-01-02T00:02:17.229Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1210,
+            "output": 263
+          },
+          "estimatedCost": 0.007574999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "「INVALID_BILLING_ADDRESS」：定期購入の請求処理における新しいエラー",
+          "summarizedJa": "Shopifyの定期購入請求処理において、新しいエラーコード「INVALID_BILLING_ADDRESS」が追加されました。このエラーは、請求先住所のいずれかのフィールド（氏名、住所、都市、郵便番号など）に無効なデータが含まれている場合に発生します。マーチャントやパートナーは、定期購入の請求失敗を適切に処理するために、この新しいエラーを認識し、対応を検討する必要があります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-01-02T00:02:22.628Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 845,
+            "output": 169
           },
           "estimatedCost": 0
         }
