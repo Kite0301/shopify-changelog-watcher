@@ -1,6 +1,59 @@
 {
-  "lastUpdated": "2026-01-02T00:01:34.103Z",
+  "lastUpdated": "2026-01-03T00:01:35.295Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-remove-deprecated-errorcode-and-errormessage-fields-from-subscriptionbillingattempt",
+      "source": "developer-changelog",
+      "title": "Remove deprecated errorCode and errorMessage fields from SubscriptionBillingAttempt",
+      "link": "https://shopify.dev/changelog/remove-deprecated-errorcode-and-errormessage-fields-from-subscriptionbillingattempt",
+      "publishedAt": "2026-01-02T11:00:00.000Z",
+      "collectedAt": "2026-01-03T00:01:34.109Z",
+      "category": [
+        "API",
+        "Breaking API Change",
+        "Admin GraphQL API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>Starting with API version 2026-04, the <code>errorCode</code> and <code>errorMessage</code> fields on <code>SubscriptionBillingAttempt</code> are now hidden. These fields were deprecated in version 2025-01 with the introduction of <code>processingError</code>. Developers should now use <code>processingError.code</code> and <code>processingError.message</code> instead. If you haven't updated your code to use these new fields, please do so to ensure compatibility with the latest API version.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "SubscriptionBillingAttemptから非推奨のerrorCodeとerrorMessageフィールドを削除",
+          "summarizedJa": "2026-04バージョンから、SubscriptionBillingAttemptの`errorCode`と`errorMessage`フィールドが削除されます。これらは2025-01で非推奨となり、代わりに`processingError.code`と`processingError.message`を使用する必要があります。サブスクリプション決済に関するAPIを利用している開発者は、最新バージョンとの互換性を保つためにコードの更新が必要です。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-01-03T00:01:41.402Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1080,
+            "output": 244
+          },
+          "estimatedCost": 0.0069
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "SubscriptionBillingAttemptから非推奨のerrorCodeおよびerrorMessageフィールドを削除",
+          "summarizedJa": "Shopify APIバージョン2026-04以降、`SubscriptionBillingAttempt`オブジェクトの`errorCode`と`errorMessage`フィールドが非表示になります。これらのフィールドは以前から非推奨とされており、今後は`processingError.code`と`processingError.message`を使用する必要があります。APIを利用しているアプリやシステムは、最新バージョンとの互換性を保つためにコードの更新が必須です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-01-03T00:01:48.883Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 765,
+            "output": 162
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-subscription-billing-attempts-throttling",
       "source": "developer-changelog",
@@ -210,6 +263,112 @@
           "tokenUsage": {
             "input": 1061,
             "output": 182
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-tax-summary-webhook-now-includes-merchant-business-entity-information",
+      "source": "developer-changelog",
+      "title": "Tax summary webhook now includes merchant business entity information",
+      "link": "https://shopify.dev/changelog/tax-summary-webhook-now-includes-merchant-business-entity-information",
+      "publishedAt": "2025-12-24T17:00:00.000Z",
+      "collectedAt": "2026-01-03T00:01:34.110Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "Webhook",
+        "2026-01"
+      ],
+      "description": " <div class=\"\"><p>As of API version 2026-01, the <code>tax_summaries/create</code> webhook for Tax Partner Apps now include merchant business entity information. This addition provides details about the legal entity responsible for transactions, which is crucial for accurate tax calculation.</p>\n<p><strong>What's New</strong></p>\n<p>The tax webhook payload now feature a new <code>merchant_business_entity</code> field at the root level of the tax summary. This field includes the following details:</p>\n<ul>\n<li><code>id</code>: The global ID of the business entity (format: <code>gid://shopify/BusinessEntity/{id}</code>)</li>\n<li><code>company_name</code>: The legal name of the business entity</li>\n<li><code>display_name</code>: The display name of the business entity</li>\n<li><code>address</code>: The business entity's address, including:<ul>\n<li>Country</li>\n<li>Province</li>\n<li>Address lines</li>\n<li>City</li>\n<li>Zip code</li>\n<li>Company name</li>\n</ul>\n</li>\n</ul>\n<p>This field is optional and will only be present when the merchant has configured a legal business entity for their shop.</p>\n<p><strong>Structure</strong></p>\n<p><strong>Before (2026-01):</strong></p>\n<pre><code class=\"language-json\">{\n  &quot;summary&quot;: {\n    &quot;idempotent_key&quot;: &quot;abc123&quot;,\n    &quot;shop&quot;: { ... },\n    &quot;order_details&quot;: { ... }\n  }\n}\n</code></pre>\n<p><strong>After (2026-01):</strong></p>\n<pre><code class=\"language-json\">{\n  &quot;summary&quot;: {\n    &quot;idempotent_key&quot;: &quot;abc123&quot;,\n    &quot;shop&quot;: { ... },\n    &quot;order_details&quot;: { ... },\n    &quot;merchant_business_entity&quot;: {\n      &quot;id&quot;: &quot;gid://shopify/BusinessEntity/12345&quot;,\n      &quot;company_name&quot;: &quot;Acme Corporation&quot;,\n      &quot;display_name&quot;: &quot;Acme Corp&quot;,\n      &quot;address&quot;: {\n        &quot;country&quot;: &quot;CA&quot;,\n        &quot;province&quot;: &quot;ON&quot;,\n        &quot;address1&quot;: &quot;123 Main St&quot;,\n        &quot;city&quot;: &quot;Toronto&quot;,\n        &quot;zip&quot;: &quot;M5V 2T6&quot;,\n        &quot;company&quot;: &quot;Acme Corporation&quot;\n      }\n    }\n  }\n}\n</code></pre>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Tax summaryウェブフックにマーチャントの事業体情報が追加",
+          "summarizedJa": "APIバージョン2026-01より、Tax Partner Apps向けの`tax_summaries/create`ウェブフックに、マーチャントの法的事業体情報（会社名、住所など）が含まれるようになりました。この情報は取引の責任主体を明確にし、正確な税計算に役立ちます。この項目はオプションであり、マーチャントが法的事業体を設定している場合にのみ含まれます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-01-03T00:01:54.323Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1693,
+            "output": 239
+          },
+          "estimatedCost": 0.008664
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "税金概要Webhookにマーチャントの事業体情報が追加",
+          "summarizedJa": "Shopify APIバージョン2026-01より、税金パートナーアプリ向けの`tax_summaries/create`ウェブフックに、マーチャントの事業体情報が追加されました。これにより、取引の法的責任者に関する詳細（会社名、住所など）が提供され、より正確な税金計算に役立ちます。この情報は、マーチャントが事業体を設定している場合にのみ含まれます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-01-03T00:02:01.225Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1318,
+            "output": 167
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-tax-calculation-requests-now-include-merchant-business-entity-information",
+      "source": "developer-changelog",
+      "title": "Tax calculation requests now include merchant business entity information",
+      "link": "https://shopify.dev/changelog/tax-calculation-requests-now-include-merchant-business-entity-information",
+      "publishedAt": "2025-12-24T17:00:00.000Z",
+      "collectedAt": "2026-01-03T00:01:34.110Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API"
+      ],
+      "description": " <div class=\"\"><p>As of API version 2026-01, tax calculation requests sent to Tax Partner Apps now include merchant business entity information. This addition provides details about the legal entity responsible for transactions, enabling tax partners to apply accurate tax rules based on the specific business entity involved in the transaction.</p>\n<p>What's New</p>\n<p>Tax calculation request payloads now feature a new <code>merchant_business_entity</code> field at the root level of the request. This field includes the following details:</p>\n<p><code>id</code>: The global ID of the business entity (format: gid://shopify/BusinessEntity/{id})\n<code>company_name</code>: The legal name of the business entity\n<code>display_name</code>: The display name of the business entity\n<code>address</code>: The business entity's address, including:\n<code>Country</code></p>\n<ul>\n<li>Province</li>\n<li>Address lines (address1, address2)</li>\n<li>City</li>\n<li>Zip code</li>\n</ul>\n<p>**Structure\n**\n**Before (2026-01):\n**</p>\n<pre><code>{\n  &quot;shop&quot;: { ... },\n  &quot;cart&quot;: { ... },\n  &quot;currency_code&quot;: &quot;USD&quot;,\n  &quot;session_id&quot;: &quot;session_123&quot;\n}\n</code></pre>\n<p>**After (2026-01):\n**</p>\n<pre><code>{\n  &quot;shop&quot;: { ... },\n  &quot;cart&quot;: { ... },\n  &quot;currency_code&quot;: &quot;USD&quot;,\n  &quot;session_id&quot;: &quot;session_123&quot;,\n  &quot;merchant_business_entity&quot;: {\n    &quot;id&quot;: &quot;gid://shopify/BusinessEntity/456&quot;,\n    &quot;company_name&quot;: &quot;Test Company&quot;,\n    &quot;display_name&quot;: &quot;Test Display&quot;,\n    &quot;address&quot;: {\n      &quot;country&quot;: &quot;US&quot;,\n      &quot;province&quot;: &quot;CA&quot;,\n      &quot;address1&quot;: &quot;123 Main St&quot;,\n      &quot;address2&quot;: &quot;Suite 100&quot;,\n      &quot;city&quot;: &quot;San Francisco&quot;,\n      &quot;zip&quot;: &quot;94102&quot;\n    }\n  }\n}\n</code></pre>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "税額計算リクエストにマーチャントのビジネスエンティティ情報が含まれるようになりました",
+          "summarizedJa": "APIバージョン2026-01より、Tax Partner Appsへの税額計算リクエストに、取引の法的責任主体となるビジネスエンティティ情報（会社名、住所等）が新たに含まれるようになりました。この変更により、税務パートナーは取引に関与する特定のビジネスエンティティに基づいて、より正確な税務ルールを適用できるようになります。Tax Partner Appsを開発・利用している場合は、新しいmerchant_business_entityフィールドへの対応が必要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-01-03T00:02:07.267Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1596,
+            "output": 284
+          },
+          "estimatedCost": 0.009048
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "税計算リクエストにマーチャントの事業体情報が含まれるようになりました",
+          "summarizedJa": "APIバージョン2026-01より、税計算リクエストにマーチャントの事業体情報が追加されました。これにより、税パートナーアプリは取引を行う事業体の詳細（会社名、住所など）に基づいて、より正確な税計算ルールを適用できるようになります。日本のマーチャントは、複雑な税務要件を持つ場合に、より精度の高い税務処理が期待できます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-01-03T00:02:14.283Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1258,
+            "output": 163
           },
           "estimatedCost": 0
         }
