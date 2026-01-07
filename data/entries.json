@@ -1,6 +1,106 @@
 {
-  "lastUpdated": "2026-01-03T00:01:35.295Z",
+  "lastUpdated": "2026-01-07T00:01:33.063Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-payments-and-web-performance-data-available-in-sidekick",
+      "source": "shopify-changelog",
+      "title": "Payments and web performance data available in Sidekick",
+      "link": "https://changelog.shopify.com/posts/payments-and-web-performance-data-available-in-sidekick",
+      "publishedAt": "2026-01-06T17:00:00.000Z",
+      "collectedAt": "2026-01-07T00:01:33.050Z",
+      "category": [
+        "Sidekick"
+      ],
+      "description": "\n        <p>Simply describe what you want to know—like \"Show me fulfillment times by carrier\" or \"What were my net payments for each payment method last quarter?\" and Sidekick generates the query for you.</p>\n\n<p>Learn more: <a href=\"https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/shopifyql-editor/generate-shopifyql-queries\">Generate ShopifyQL queries with Sidekick</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "SidekickでPaymentsとWebパフォーマンスデータが利用可能に",
+          "summarizedJa": "ShopifyのAIアシスタント「Sidekick」で、決済データやWebパフォーマンスデータを自然言語で問い合わせできるようになりました。「配送業者別のフルフィルメント時間を表示」や「前四半期の決済方法別の純支払額は?」といった質問をするだけで、SidekickがShopifyQLクエリを自動生成してデータを取得します。レポート作成や分析作業の効率化に役立つ機能です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-01-07T00:01:40.460Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1032,
+            "output": 259
+          },
+          "estimatedCost": 0.006980999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Sidekickで決済とウェブパフォーマンスデータが利用可能に",
+          "summarizedJa": "ShopifyのAIアシスタント「Sidekick」が、決済データとウェブパフォーマンスデータの分析に対応しました。マーチャントは「キャリアごとのフルフィルメント時間」や「前四半期の決済方法ごとの純支払い額」のように知りたいことを自然言語で記述するだけで、Sidekickが自動的にShopifyQLクエリを生成し、必要な情報を簡単に取得できるようになります。これにより、データに基づいた意思決定がより手軽に行えるようになります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-01-07T00:01:46.212Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 738,
+            "output": 174
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-greater-flexibility-for-inventory-transfers",
+      "source": "shopify-changelog",
+      "title": "Greater flexibility for inventory transfers",
+      "link": "https://changelog.shopify.com/posts/greater-flexibility-for-inventory-transfers",
+      "publishedAt": "2026-01-06T17:00:00.000Z",
+      "collectedAt": "2026-01-07T00:01:33.050Z",
+      "category": [
+        "Inventory"
+      ],
+      "description": "\n        <p>Managing inventory should be straightforward. Now, inventory transfers give you more control:</p>\n\n<ul>\n<li><strong>Edit shipments anytime:</strong> Add, remove, or adjust items in a shipment—even after it’s in transit or received. Fix mistakes or update shipments as your plans change.<br></li>\n<li><strong>Receive inventory without providing an origin:</strong> Leave the origin blank to record stock from sources outside Shopify—like purchase order suppliers, or unexpected deliveries. Use the reduced API restrictions and referenceName to link these transfers to external systems, so you can track and receive all your inventory through Shopify.<br></li>\n<li><strong>Remove inventory to an unspecified destination:</strong> Write off, discard, or send inventory to places Shopify doesn’t track—like third-party warehouses, mobile teams, or suppliers—by leaving the destination blank. Keep track of your outbound inventory for later auditability.</li>\n</ul>\n\n<p>Every change appears in your adjustment history, so your records stay accurate and auditable.</p>\n\n<p><strong>Important:</strong><br><br>\nThe Transfer Update API no longer requires both an origin and destination. Review your integrations to see if your setup can benefit from the relaxed requirements.</p>\n\n<p>Learn more about inventory transfers in the <a href=\"https://help.shopify.com/\">Shopify Help Center</a> and see our <a href=\"https://shopify.dev/docs/api\">API docs</a> for technical details.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "在庫移動の柔軟性が向上",
+          "summarizedJa": "在庫移動機能が大幅に強化され、出荷後や受領後でも商品の追加・削除・調整が可能になりました。また、Shopify外の仕入先からの入庫時に出荷元を空白にできるようになり、サードパーティ倉庫などへの出庫時に出荷先を未指定にすることも可能になりました。Transfer Update APIの要件が緩和され、出荷元と出荷先の両方の指定が不要になったため、既存の連携機能の見直しが推奨されています。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-01-07T00:01:52.683Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1251,
+            "output": 263
+          },
+          "estimatedCost": 0.007698
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "在庫移動の柔軟性が向上",
+          "summarizedJa": "Shopifyの在庫移動機能が大幅に強化され、より柔軟な在庫管理が可能になりました。出荷済みの商品でも数量の追加・削除・調整が可能になったほか、発生元を特定しない外部からの入荷や、移動先を特定しない外部への出庫（棚卸し、廃棄など）も記録できるようになります。これにより、API連携もより柔軟になり、外部システムとの連携が容易になります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-01-07T00:01:58.679Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 930,
+            "output": 155
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-remove-deprecated-errorcode-and-errormessage-fields-from-subscriptionbillingattempt",
       "source": "developer-changelog",
