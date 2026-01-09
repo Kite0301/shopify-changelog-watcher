@@ -1,6 +1,106 @@
 {
-  "lastUpdated": "2026-01-07T00:01:33.063Z",
+  "lastUpdated": "2026-01-09T00:01:30.868Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-better-way-to-match-shopify-payments-payouts-with-bank-deposits",
+      "source": "shopify-changelog",
+      "title": "Better way to match Shopify Payments payouts with bank deposits",
+      "link": "https://changelog.shopify.com/posts/better-way-to-match-shopify-payments-payouts-with-bank-deposits",
+      "publishedAt": "2026-01-08T23:00:00.000Z",
+      "collectedAt": "2026-01-09T00:01:30.858Z",
+      "category": [
+        "Payments"
+      ],
+      "description": "\n        <p>We’ve made it easier to match payouts to bank deposits and transactions to payouts in the exports. Payout export now include <strong>Bank Reference</strong>, and order transactions export now include <strong>Payout ID</strong>, so it's easier to confirm which bank deposit a payout relates to and see which transactions were included in each payout. This update is available to all Shopify Payments merchants.</p>\n\n<p>Learn more about exporting payouts and order transactions in the <a href=\"https://help.shopify.com/en/manual/payments/shopify-payments/payouts/view-details\">Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify Paymentsの入金と銀行振込の照合がより簡単に",
+          "summarizedJa": "Shopify Paymentsの入金レポートに「銀行参照番号」が、注文トランザクションレポートに「入金ID」が追加されました。これにより、どの銀行入金がどの入金に対応し、各入金にどのトランザクションが含まれているかの確認が容易になります。この機能は全てのShopify Paymentsマーチャントが利用可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 2,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-01-09T00:01:36.828Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1070,
+            "output": 230
+          },
+          "estimatedCost": 0.00666
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify ペイメントの入金と銀行預金の照合を改善",
+          "summarizedJa": "Shopify ペイメントの入金と銀行口座への着金、および取引と入金の照合がより簡単になりました。入金エクスポートに「銀行参照番号 (Bank Reference)」が、注文取引エクスポートに「入金ID (Payout ID)」が追加され、経理処理が効率化されます。この更新は、すべてのShopify ペイメント利用マーチャントに提供されます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-01-09T00:01:44.584Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 773,
+            "output": 167
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-bulgarian-lev-bgn-is-now-replaced-with-euros-eur",
+      "source": "shopify-changelog",
+      "title": "Euros (EUR) have replaced the Bulgarian Lev (BGN)",
+      "link": "https://changelog.shopify.com/posts/bulgarian-lev-bgn-is-now-replaced-with-euros-eur",
+      "publishedAt": "2026-01-07T17:00:00.000Z",
+      "collectedAt": "2026-01-09T00:01:30.858Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>On Jan 1 2026, Bulgaria changed its official currency for electronic transactions from the Bulgarian Lev (BGN) to the Euro (EUR).</p>\n\n<p>As part of this change, markets that previously used the Bulgarian Lev have been updated to use Euros for stores that use Shopify's multi-currency feature. Customers previously paying in Bulgarian Lev will now pay in Euros.</p>\n\n<p>Shopify strongly recommends that stores who do not use multi-currency and currently have Bulgarian Lev as their default currency update their default currency to Euros.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "ブルガリアレフ(BGN)がユーロ(EUR)に置き換えられました",
+          "summarizedJa": "2026年1月1日より、ブルガリアの公式通貨が電子取引においてブルガリアレフからユーロに変更されました。Shopifyのマルチ通貨機能を使用しているストアでは、ブルガリアレフを使用していた市場が自動的にユーロに更新されています。マルチ通貨を使用しておらず、デフォルト通貨がブルガリアレフのストアは、ユーロへの変更を強く推奨されます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 5,
+          "analyzedAt": "2026-01-09T00:01:49.859Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1053,
+            "output": 263
+          },
+          "estimatedCost": 0.007103999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "ユーロ（EUR）がブルガリアレフ（BGN）に置き換わりました",
+          "summarizedJa": "ブルガリアが2026年1月1日より公式通貨をブルガリアレフ（BGN）からユーロ（EUR）に変更しました。これにより、Shopifyの多通貨機能を利用しているストアでは、ブルガリアレフを使用していた市場がユーロに自動更新されています。多通貨機能を利用していないストアでデフォルト通貨がブルガリアレフの場合は、ユーロへの更新が推奨されます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 5,
+          "analyzedAt": "2026-01-09T00:01:55.937Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 760,
+            "output": 173
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-payments-and-web-performance-data-available-in-sidekick",
       "source": "shopify-changelog",
