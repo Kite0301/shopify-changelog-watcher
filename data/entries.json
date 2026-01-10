@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-09T00:01:30.868Z",
+  "lastUpdated": "2026-01-10T00:01:24.565Z",
   "entries": [
     {
       "id": "shopify-changelog-posts-better-way-to-match-shopify-payments-payouts-with-bank-deposits",
@@ -46,6 +46,59 @@
           "tokenUsage": {
             "input": 773,
             "output": 167
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-deprecate-deliveryshippingoriginassign-mutation",
+      "source": "developer-changelog",
+      "title": "Deprecated `deliveryShippingOriginAssign` mutation",
+      "link": "https://shopify.dev/changelog/deprecate-deliveryshippingoriginassign-mutation",
+      "publishedAt": "2026-01-08T17:00:00.000Z",
+      "collectedAt": "2026-01-10T00:01:23.563Z",
+      "category": [
+        "API",
+        "Deprecation Announcement",
+        "Admin GraphQL API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>Support for legacy mode profiles in shipping has been discontinued, as this feature has been inactive for some time. Consequently, the GraphQL Admin API is being updated to align with this change.</p>\n<p>The following mutation is now marked as deprecated:</p>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/deliveryShippingOriginAssign\" target=\"_blank\" class=\"body-link\"><code>deliveryShippingOriginAssign</code></a></li>\n</ul>\n<p>Developers are advised to cease using this mutation, as it will be removed in a future API version. To ensure compatibility with upcoming updates, developers should explore alternative methods for assigning shipping origins within the current API framework.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "GraphQL Admin APIの`deliveryShippingOriginAssign`ミューテーションが非推奨化",
+          "summarizedJa": "長期間使用されていなかったレガシーモードの配送プロファイル機能のサポートが終了したことに伴い、GraphQL Admin APIの`deliveryShippingOriginAssign`ミューテーションが非推奨となりました。このミューテーションは将来のAPIバージョンで削除される予定のため、開発者は現在のAPIフレームワークで配送元を割り当てる代替手段を検討する必要があります。日本のマーチャントや開発者で、このミューテーションを使用しているアプリやカスタマイズがある場合は対応が必要です。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-01-10T00:01:30.682Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1112,
+            "output": 291
+          },
+          "estimatedCost": 0.007701
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "deliveryShippingOriginAssignミューテーションの非推奨化",
+          "summarizedJa": "Shopifyの配送設定におけるレガシーモードプロファイルのサポートが終了したため、GraphQL Admin APIの`deliveryShippingOriginAssign`ミューテーションが非推奨となりました。開発者はこのミューテーションの使用を中止し、今後のAPIバージョンでの削除に備えて代替手段を検討する必要があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-01-10T00:01:36.019Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 800,
+            "output": 136
           },
           "estimatedCost": 0
         }
