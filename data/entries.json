@@ -1,6 +1,58 @@
 {
-  "lastUpdated": "2026-01-10T00:01:24.565Z",
+  "lastUpdated": "2026-01-13T00:01:32.288Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-standardization-of-asset-url-version-parameters",
+      "source": "developer-changelog",
+      "title": "Standardization of Asset URL Version Parameters",
+      "link": "https://shopify.dev/changelog/standardization-of-asset-url-version-parameters",
+      "publishedAt": "2026-01-12T17:00:00.000Z",
+      "collectedAt": "2026-01-13T00:01:31.155Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>We're updating the format of versioning query parameters appended to store assets such as CSS and JS. Previously, some assets used a bare numeric query parameter, (for example, <code>?108</code>), while others used a key-value format with the <code>v</code> query parameter. Moving forward, all asset URLs will consistently use the <code>?v=VERSION_STRING</code> format for versioning.\nThe new format will be returned by liquid tags and will be present in Shopify-rendered storefront HTML.</p>\n<p>For example, an asset URL that previously looked like this:\n<a href=\"https://shop.example.com/cdn/shop/t/7/compiled_assets/styles.css?108\" target=\"_blank\" class=\"body-link\">https://shop.example.com/cdn/shop/t/7/compiled_assets/styles.css?108</a></p>\n<p>Will now look like this:\n<a href=\"https://shop.example.com/cdn/shop/t/7/compiled_assets/styles.css?v=108\" target=\"_blank\" class=\"body-link\">https://shop.example.com/cdn/shop/t/7/compiled_assets/styles.css?v=108</a></p>\n<p>These changes are being made to support upcoming infrastructure improvements.</p>\n<h1>Action Required:</h1>\n<p><strong>Most themes will not require any changes.</strong> Themes utilizing standard Liquid asset filters to generate URLs will automatically output the updated format.</p>\n<p>However, you should ensure that any app or custom theme code that uses asset URLs doesn’t require them to be expressed in the old bare numeric format. Regular expressions or logic specifically expecting a query string ending in only numbers should be updated to support the <code>?v=</code> format.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "アセットURLバージョンパラメータの標準化",
+          "summarizedJa": "CSSやJavaScriptなどのストアアセットのバージョン管理用クエリパラメータの形式が統一されます。従来の`?108`のような数値のみの形式から、すべて`?v=108`のようなキー・バリュー形式に変更されます。ほとんどのテーマは標準のLiquidフィルターを使用していれば自動的に対応されますが、カスタムコードやアプリで旧形式を前提とした正規表現やロジックがある場合は更新が必要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-01-13T00:01:37.901Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1334,
+            "output": 261
+          },
+          "estimatedCost": 0.007917
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "アセットURLバージョンパラメータの標準化",
+          "summarizedJa": "Shopifyは、ストアのアセット（CSSやJSなど）に付与されるバージョンパラメータの形式を「?v=バージョン文字列」に統一します。これにより、LiquidタグやShopifyがレンダリングするHTMLでは新しい形式が使用されます。ほとんどのテーマは自動的に対応しますが、旧形式（例: ?108）を直接解析しているアプリやカスタムコードは、新しい形式に対応するよう更新が必要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-01-13T00:01:45.430Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1038,
+            "output": 162
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-better-way-to-match-shopify-payments-payouts-with-bank-deposits",
       "source": "shopify-changelog",
@@ -464,6 +516,59 @@
           "tokenUsage": {
             "input": 1400,
             "output": 164
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-access-transactions-on-the-return-object",
+      "source": "developer-changelog",
+      "title": "Access transactions on the Return object",
+      "link": "https://shopify.dev/changelog/access-transactions-on-the-return-object",
+      "publishedAt": "2026-01-01T17:00:00.000Z",
+      "collectedAt": "2026-01-13T00:01:31.155Z",
+      "category": [
+        "API",
+        "Update",
+        "Admin GraphQL API",
+        "2026-01"
+      ],
+      "description": " <div class=\"\"><p>You can now access transaction data directly from the <code>Return</code> object in the Admin GraphQL API. This new <code>transactions</code> connection simplifies your ability to associate payments and refunds with specific returns, removing the need to deduce relationships based on amounts and timestamps. This helps ensure accurate financial reporting and reconciliation for integrations.</p>\n<p>The <code>transactions</code> connection is populated for the following scenarios:</p>\n<ul>\n<li><strong>POS returns and exchanges</strong>: Includes both refunds and captured payments.</li>\n<li><strong>Online returns and exchanges</strong>: Includes refunds only.</li>\n</ul>\n<p>Here's an example of how to query transactions on a return:</p>\n<pre><code class=\"language-graphql\">query {\n  return(id: &quot;gid://shopify/Return/123&quot;) {\n    transactions(first: 5) {\n      edges {\n        node {\n          id\n          kind\n          status\n          amountSet {\n            shopMoney {\n              amount\n              currencyCode\n            }\n          }\n        }\n      }\n    }\n  }\n}\n</code></pre>\n<p>For more details, refer to the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/queries/return?#returns-Return.fields.transactions\" target=\"_blank\" class=\"body-link\">Return object documentation</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "ReturnオブジェクトでのTransaction（取引）データへのアクセス",
+          "summarizedJa": "Admin GraphQL APIのReturnオブジェクトから直接トランザクションデータにアクセスできるようになりました。新しいtransactionsコネクションにより、返品・交換に関連する支払いや返金の情報を明確に取得でき、金額やタイムスタンプから関係性を推測する必要がなくなります。POSでの返品・交換では返金と支払いの両方、オンラインでの返品・交換では返金のみが含まれます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-01-13T00:01:50.410Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1267,
+            "output": 251
+          },
+          "estimatedCost": 0.007566
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Returnオブジェクトでトランザクションにアクセス可能に",
+          "summarizedJa": "Shopify Admin GraphQL APIの`Return`オブジェクトに、新たに`transactions`コネクションが追加されました。これにより、返品に関連する支払いおよび返金データを直接取得できるようになり、金額やタイムスタンプからの推測が不要になります。この機能は、特にPOSおよびオンラインでの返品・交換における正確な財務報告と照合を簡素化し、連携の精度向上に貢献します。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-01-13T00:01:56.045Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 945,
+            "output": 157
           },
           "estimatedCost": 0
         }
