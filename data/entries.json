@@ -1,6 +1,157 @@
 {
-  "lastUpdated": "2026-01-13T00:01:32.288Z",
+  "lastUpdated": "2026-01-14T00:01:40.604Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-storefronts-are-getting-faster-and-ready-to-evolve",
+      "source": "shopify-changelog",
+      "title": "Updates to how Shopify handles Liquid code",
+      "link": "https://changelog.shopify.com/posts/storefronts-are-getting-faster-and-ready-to-evolve",
+      "publishedAt": "2026-01-13T20:00:00.000Z",
+      "collectedAt": "2026-01-14T00:01:40.591Z",
+      "category": [
+        "Themes"
+      ],
+      "description": "\n        <p>Starting January 13, 2026, we're updating how Shopify handles Liquid code in your theme files. This happens automatically in the background to make your theme code more reliable.</p>\n\n<p>Your store will continue working exactly as it does now—nothing about your storefront will change. You don't need to do anything.</p>\n\n<p>If you edit your theme files, you might notice a small comment added to some files explaining what we updated. These comments are for informational purposes only. Your store's look, functionality, and performance remain exactly the same.</p>\n\n<p>If you work with a developer and they have questions, they can learn more in our <a href=\"https://shopify.dev/docs/storefronts/themes/tools/strict-liquid-migration\">migration guide</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "ShopifyのLiquidコード処理方法のアップデート",
+          "summarizedJa": "2026年1月13日より、Shopifyがテーマファイル内のLiquidコードの処理方法を自動的に更新します。ストアの見た目や機能、パフォーマンスは変わらず、マーチャント側での対応は不要です。テーマファイルを編集する際に、更新内容を説明する小さなコメントが追加される場合がありますが、情報提供のみを目的としています。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-01-14T00:01:46.220Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1097,
+            "output": 231
+          },
+          "estimatedCost": 0.006756000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "ShopifyのLiquidコード処理方法の更新",
+          "summarizedJa": "2026年1月13日より、Shopifyはテーマファイル内のLiquidコードの処理方法を自動的に更新し、テーマコードの信頼性を向上させます。この変更はストアの見た目、機能、パフォーマンスに影響を与えず、マーチャント側での対応は一切不要です。開発者がテーマファイルを編集する際に情報コメントが表示されることがありますが、ストアへの影響はありません。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-01-14T00:01:55.589Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 814,
+            "output": 157
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-liquid-is-getting-faster-and-ready-to-evolve",
+      "source": "developer-changelog",
+      "title": "Stricter Liquid parsing for themes and theme app extensions",
+      "link": "https://shopify.dev/changelog/liquid-is-getting-faster-and-ready-to-evolve",
+      "publishedAt": "2026-01-13T20:00:00.000Z",
+      "collectedAt": "2026-01-14T00:01:39.113Z",
+      "category": [
+        "Themes",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>Starting January 13, 2026, Shopify is enforcing stricter Liquid parsing for all themes. This improves code quality, prevents syntax errors, and enables future Liquid enhancements.</p>\n<p>If your theme contains Liquid code that doesn't meet the stricter parsing requirements, we'll automatically rewrite those files to be compatible. Updated files will include a comment explaining what changed. The rewrite process preserves your theme's functionality and appearance while fixing syntax issues that could cause problems in the future.</p>\n<p>If you're developing new themes or theme app extensions, all new submissions to the Theme Store and App Store already require strict-parsable Liquid code. This ensures new code meets the higher quality standards from the start.</p>\n<p>View the <a href=\"https://shopify.dev/docs/storefronts/themes/tools/strict-liquid-migration\" target=\"_blank\" class=\"body-link\">migration guide</a> for detailed information on updating your code. </p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "テーマおよびテーマアプリ拡張機能におけるLiquidパースの厳格化",
+          "summarizedJa": "2026年1月13日より、Shopifyは全テーマに対してより厳格なLiquidパースを適用します。厳格な要件を満たさないコードは自動的に書き換えられ、変更内容はコメントで説明されます。新規テーマやテーマアプリ拡張機能の提出時には既にこの厳格な基準が適用されており、コード品質の向上とシンタックスエラーの防止を目的としています。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-01-14T00:02:01.080Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1143,
+            "output": 254
+          },
+          "estimatedCost": 0.007239
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "テーマとテーマアプリ拡張機能のLiquid解析の厳格化",
+          "summarizedJa": "2026年1月13日より、Shopifyはすべてのテーマに対してLiquidコードのより厳格な解析を適用します。これによりコード品質が向上し、将来的な機能強化が可能になります。既存のテーマで厳格な要件を満たさないLiquidコードは自動的に修正され、機能や外観は維持されます。新規のテーマやテーマアプリ拡張機能は、すでにこの厳格な要件が適用されています。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-01-14T00:02:08.663Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 850,
+            "output": 170
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-new-default-setting-for-pixel-data-sharing",
+      "source": "shopify-changelog",
+      "title": "New default setting for marketing pixel data sharing ",
+      "link": "https://changelog.shopify.com/posts/new-default-setting-for-pixel-data-sharing",
+      "publishedAt": "2026-01-13T18:10:00.000Z",
+      "collectedAt": "2026-01-14T00:01:40.591Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>Shopify will soon default to automatic data sharing optimization that monitors your marketing pixels and only shares data with tools that are driving results for your store. </p>\n\n<p>We will look at multiple signals, including traffic and sales, to determine if sharing data back to a specific tool is helpful for your business. When it’s not, we will pause data sharing until we see new signals, at which point data sharing turns back on. </p>\n\n<p>You’ll see the setting enabled immediately for all active marketing pixels, but it will not begin limiting data for pixels that aren’t driving results for at least the next seven days. To opt out of optimized data sharing, you can adjust pixel settings in <a href=\"https://admin.shopify.com/settings/customer_events\">Settings &gt; Customer events</a>, and set pixels to ‘always on’ to maintain full data sharing at all times.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "マーケティングピクセルのデータ共有に関する新しいデフォルト設定",
+          "summarizedJa": "Shopifyはマーケティングピクセルのデータ共有を自動最適化する新しいデフォルト設定を導入します。トラフィックや売上などの指標をもとに、成果が出ているツールにのみデータを共有し、成果が見られないピクセルへのデータ共有は一時停止されます。この設定はすべてのアクティブなピクセルで即座に有効化されますが、実際の制限は最低7日後から開始され、管理画面の「設定 > カスタマーイベント」から常時データ共有する設定に変更することも可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-01-14T00:02:15.196Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1102,
+            "output": 296
+          },
+          "estimatedCost": 0.007745999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "マーケティングピクセルデータ共有の新しいデフォルト設定",
+          "summarizedJa": "Shopifyは、マーケティングピクセルからのデータ共有を自動的に最適化する新しいデフォルト設定を導入します。この機能は、トラフィックや売上などのシグナルを監視し、成果を上げているツールにのみデータを共有し、効果のないツールへの共有は一時停止します。マーチャントは「設定 > 顧客イベント」からこの最適化を無効にし、「常にオン」に設定することも可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-01-14T00:02:22.421Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 825,
+            "output": 164
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-standardization-of-asset-url-version-parameters",
       "source": "developer-changelog",
