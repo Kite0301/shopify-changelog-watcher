@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-14T00:01:40.604Z",
+  "lastUpdated": "2026-01-15T00:01:41.800Z",
   "entries": [
     {
       "id": "shopify-changelog-posts-storefronts-are-getting-faster-and-ready-to-evolve",
@@ -1135,6 +1135,56 @@
           "tokenUsage": {
             "input": 1199,
             "output": 160
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-shopify-capital-launches-in-spain",
+      "source": "shopify-changelog",
+      "title": "Shopify Capital launches in Spain",
+      "link": "https://changelog.shopify.com/posts/shopify-capital-launches-in-spain",
+      "publishedAt": "2025-12-19T17:00:00.000Z",
+      "collectedAt": "2026-01-15T00:01:41.790Z",
+      "category": [
+        "Shopify capital"
+      ],
+      "description": "\n        <p>Eligible merchants in Spain can now access funding directly through their Shopify admin, with a streamlined application process and flexible repayment terms that align with their business cash flow. To see if you are eligible please visit <a href=\"http://www.shopify.com/capital\">Shopify Capital</a>.</p>\n\n<p>For more information on Shopify Capital in Spain, learn more in the <a href=\"https://help.shopify.com/en/manual/finance/shopify-capital/spain\">Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify Capitalがスペインで開始",
+          "summarizedJa": "スペインのマーチャントがShopify管理画面から直接資金調達にアクセスできるようになりました。簡素化された申請プロセスと、ビジネスのキャッシュフローに合わせた柔軟な返済条件が提供されます。この機能は現時点ではスペイン限定で、日本での提供はありません。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 1
+          },
+          "totalScore": 4,
+          "analyzedAt": "2026-01-15T00:01:46.974Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1031,
+            "output": 205
+          },
+          "estimatedCost": 0.006168
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify Capitalがスペインで提供開始",
+          "summarizedJa": "Shopify Capitalがスペインの対象マーチャント向けに提供を開始しました。これにより、スペインのマーチャントはShopify管理画面から直接、簡素化された申請プロセスと柔軟な返済条件で資金調達が可能になります。この変更は、現時点では日本市場のマーチャントやパートナーには直接的な影響はありません。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 5,
+          "analyzedAt": "2026-01-15T00:01:51.490Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 738,
+            "output": 143
           },
           "estimatedCost": 0
         }
