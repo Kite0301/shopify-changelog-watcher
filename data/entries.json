@@ -1,6 +1,56 @@
 {
-  "lastUpdated": "2026-01-15T00:01:41.800Z",
+  "lastUpdated": "2026-01-16T00:01:27.824Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-flow-adopts-version-2026-01-of-the-graphql-admin-api",
+      "source": "shopify-changelog",
+      "title": "Flow adopts version 2026-01 of the GraphQL Admin API",
+      "link": "https://changelog.shopify.com/posts/flow-adopts-version-2026-01-of-the-graphql-admin-api",
+      "publishedAt": "2026-01-15T17:00:00.000Z",
+      "collectedAt": "2026-01-16T00:01:27.816Z",
+      "category": [
+        "Apps"
+      ],
+      "description": "\n        <p>Flow now uses version 2026-01 of the GraphQL Admin API, which includes new options for building automations. Some of the <a href=\"https://shopify.dev/changelog?filter=api&amp;api_version=2026-01&amp;api_type=admin-graphql\">changes</a> in version 2026-01 of the GraphQL Admin API include:</p>\n\n<ul>\n<li><em>Advanced querying of metafields and metaobjects</em>: We've expanded the resources that you can query by metafield value to include Companies and Company Locations. We've also expanded how you can query metafield values on Products, Orders, and Metaobject entries to include greater than and less than comparisons, prefix matching, and boolean operators (AND, OR, NOT). (<a href=\"https://shopify.dev/changelog/advanced-metafield-metaobject-querying\">changelog</a>)<br></li>\n<li><em>Access transactions on the</em> Return <em>object</em>: You can now access transaction data directly on the <code>Return</code> object that is included on triggers related to returns. (<a href=\"https://shopify.dev/changelog/access-transactions-on-the-return-object\">changelog</a>)<br></li>\n<li><em>New return reason definitions</em>: You can now use the new <code>ReturnReasonDefinition</code> type to capture more granular, category-specific return reasons when managing returns. This replaces the previous <code>ReturnReason</code> on the <code>Return</code> object that is included on triggers related to returns. The <code>returnCreate</code> and <code>returnRequest</code> mutations also accept this field as an input when using the mutation in a Send Admin API request action. (<a href=\"https://shopify.dev/changelog/new-return-reason-definitions-api-for-better-return-insights\">changelog</a>)<br></li>\n<li>orderUpdate <em>mutation now includes</em> phone <em>field</em>: This field allows merchants to update the customer phone number for an order, overwriting the existing phone number, when using the mutation in a Send Admin API request action. (<a href=\"https://shopify.dev/changelog/order-update-phone-field-public\">changelog</a>)</li>\n</ul>\n\n<p>For more information about how Flow uses the GraphQL, visit the <a href=\"https://help.shopify.com/en/manual/shopify-flow/getting-started/concepts/admin-api\">documentation</a>. To learn more about changes introduced in version 2026-01, visit the <a href=\"https://shopify.dev/changelog?filter=api&amp;api_version=2026-01&amp;api_type=admin-graphql\">Developer changelog</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "FlowがGraphQL Admin APIのバージョン2026-01を採用",
+          "summarizedJa": "Shopify Flowが最新のGraphQL Admin APIバージョン2026-01に対応し、自動化機能の構築オプションが拡張されました。主な変更点として、メタフィールドとメタオブジェクトの高度なクエリ機能、Returnオブジェクトでのトランザクションデータへのアクセス、より詳細な返品理由の定義、注文更新時の電話番号フィールドの追加などが含まれます。FlowでAdmin APIリクエストアクションを利用している場合、これらの新機能を活用できるようになります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-01-16T00:01:33.749Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1594,
+            "output": 276
+          },
+          "estimatedCost": 0.008922
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "FlowがGraphQL Admin API 2026-01バージョンに対応",
+          "summarizedJa": "Shopify FlowがGraphQL Admin APIのバージョン2026-01に対応し、自動化機能が大幅に強化されました。これにより、メタフィールドやメタオブジェクトの高度なクエリ、返品オブジェクトからの取引データアクセス、詳細な返品理由の定義、注文の電話番号更新などがFlowで利用可能になります。日本のマーチャントは、より複雑なデータに基づいた運用や返品管理を効率化し、ビジネスの自動化をさらに推進できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-01-16T00:01:42.069Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1248,
+            "output": 176
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-storefronts-are-getting-faster-and-ready-to-evolve",
       "source": "shopify-changelog",
