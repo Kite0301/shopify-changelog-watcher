@@ -1,6 +1,56 @@
 {
-  "lastUpdated": "2026-01-16T00:01:27.824Z",
+  "lastUpdated": "2026-01-17T00:01:39.249Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-enhanced-return-reasons",
+      "source": "shopify-changelog",
+      "title": "Better insights with category-specific return reasons",
+      "link": "https://changelog.shopify.com/posts/enhanced-return-reasons",
+      "publishedAt": "2026-01-16T17:00:00.000Z",
+      "collectedAt": "2026-01-17T00:01:39.241Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>Understanding why customers return products is key to improving your business. We've enhanced return reasons to give you richer, more actionable data about every return.</p>\n\n<p><strong>What's new</strong></p>\n\n<p>When processing returns, you'll now see suggested return reasons that are specific to the product being returned. Instead of generic options, you'll get relevant choices for each product category, like \"Too big\" or \"Too small\" for apparel, or \"Taste,\" \"Style,\" and \"Weight\" for items where those attributes matter.</p>\n\n<p>These suggestions are based on Shopify's Standard Product Taxonomy and are available across:<br>\n- Shopify admin<br>\n- Point of Sale (POS)<br>\n- Shopify self-serve-returns</p>\n\n<p><strong>Why it matters</strong></p>\n\n<p>Better return reasons mean better data. With more specific and consistent return information, you can:<br>\n- Reduce future returns by addressing product issues faster (like sizing problems or quality concerns)<br>\n- Make informed decisions about inventory and product development</p>\n\n<p>Return reasons are localized and standardized across your sales channels, so you'll get consistent insights whether returns happen online, in-store, or through self-serve customer accounts.</p>\n\n<p><strong>Getting started</strong></p>\n\n<p>Enhanced return reasons are automatically available when you process returns, no setup required. </p>\n\n<p>To view a report for returns by return reason in your admin, click <a href=\"https://admin.shopify.com/analytics/reports/explore?ql=FROM+sales%0A++SHOW+returns%0A++GROUP+BY+day%2C+ONLY+TOP+5+product_title%2C+ONLY+TOP+5+return_reason+WITH%0A++++GROUP_TOTALS%2C+TOTALS%0A++SINCE+startOfDay%28-7d%29+UNTIL+today%0A++ORDER+BY+day+ASC%2C+product_title+ASC%2C+return_reason+ASC%0AVISUALIZE+returns\">this link</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "カテゴリー別の返品理由で詳細なインサイトを取得",
+          "summarizedJa": "返品処理時に商品カテゴリーに応じた具体的な返品理由が自動表示されるようになりました。アパレルなら「大きすぎる」「小さすぎる」、食品なら「味」など、Shopifyの標準商品分類に基づいた理由が管理画面、POS、セルフサービス返品で利用できます。より詳細で一貫性のあるデータにより、サイズ問題や品質課題への対応が迅速化し、返品削減や商品開発に活用できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-01-17T00:01:46.288Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1402,
+            "output": 272
+          },
+          "estimatedCost": 0.008286
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "カテゴリ別返品理由による詳細なインサイト",
+          "summarizedJa": "Shopifyは、返品理由の機能を強化し、商品カテゴリに特化した具体的な返品理由を提案するようになりました。これにより、マーチャントはより詳細で実用的な返品データを収集でき、将来の返品削減、在庫管理、商品開発の改善に役立てることができます。この機能は設定不要で、管理画面、POS、セルフサービス返品で自動的に利用可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-01-17T00:01:53.352Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1102,
+            "output": 153
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-flow-adopts-version-2026-01-of-the-graphql-admin-api",
       "source": "shopify-changelog",
