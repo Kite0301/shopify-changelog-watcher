@@ -1,6 +1,110 @@
 {
-  "lastUpdated": "2026-01-17T00:01:39.249Z",
+  "lastUpdated": "2026-01-18T00:01:36.662Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-shop-minis-development-now-requires-partner-account-permissions",
+      "source": "developer-changelog",
+      "title": "Shop Minis development now requires Partner account permissions",
+      "link": "https://shopify.dev/changelog/shop-minis-development-now-requires-partner-account-permissions",
+      "publishedAt": "2026-01-17T17:00:00.000Z",
+      "collectedAt": "2026-01-18T00:01:35.772Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Breaking API Change",
+        "Shop Minis"
+      ],
+      "description": " <div class=\"\"><p>The Shop Minis CLI has been updated to ensure only authorized team members can create and manage Shop Minis. This is done by verifying the necessary permissions within your Partner organization.</p>\n<h3>What's changing</h3>\n<p>To develop Shop Minis, you must now have the <strong>Manage apps</strong> permission enabled on your Partner account. Without this permission, CLI commands will result in an error.</p>\n<p>This change affects CLI actions such as:</p>\n<ul>\n<li>Setting up a new Mini</li>\n<li>Submitting, canceling, and checking submissions</li>\n</ul>\n<h3>What you need to do</h3>\n<p><strong>For organization owners or admins</strong></p>\n<ol>\n<li>Log in to your <a href=\"https://partners.shopify.com\" target=\"_blank\" class=\"body-link\">Partner Dashboard</a>.</li>\n<li>Navigate to <strong>Settings</strong> → <strong>Team</strong>.</li>\n<li>Find the developer who needs access.</li>\n<li>Edit their profile to adjust permissions.</li>\n<li>Enable <strong>Manage apps</strong> under <strong>Sensitive permissions</strong>.</li>\n<li>Save the changes.</li>\n</ol>\n<p><strong>For developers:</strong></p>\n<p>Request that your organization owner or admin grants you the <strong>Manage apps</strong> permission.</p>\n<p>After permissions are updated, you can begin developing and submitting Minis within your Partner organization.</p>\n<h3>Learn more</h3>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/shop-minis#permissions\" target=\"_blank\" class=\"body-link\">Shop Minis permissions docs</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shop Minisの開発にパートナーアカウントの権限が必須に",
+          "summarizedJa": "Shop Minis CLIの利用には、パートナーアカウントで「アプリを管理」権限が必要になりました。この変更により、新しいMiniのセットアップや申請などのCLI操作を行うには、組織のオーナーまたは管理者から該当権限を付与してもらう必要があります。Shop Minisを開発する開発者は、パートナーダッシュボードで権限設定を確認・更新する必要があります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 2,
+            "technicalImportance": 4
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-01-18T00:01:42.487Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1372,
+            "output": 245
+          },
+          "estimatedCost": 0.007790999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shop Minisの開発にはパートナーアカウントの権限が必要になります",
+          "summarizedJa": "Shop Minisの開発には、パートナーアカウントの「Manage apps」権限が必須となりました。これにより、Shop Minisの作成や管理を行うCLIコマンドを実行する開発者は、パートナー組織のオーナーまたは管理者からこの権限を付与してもらう必要があります。権限がない場合、関連するCLIコマンドはエラーとなるため、速やかな対応が求められます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-01-18T00:01:49.085Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 997,
+            "output": 150
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-tracking-cookie-deprecation-hydrogen",
+      "source": "developer-changelog",
+      "title": "Deprecating shopify_y and shopify_s cookies for Hydrogen",
+      "link": "https://shopify.dev/changelog/tracking-cookie-deprecation-hydrogen",
+      "publishedAt": "2026-01-17T17:00:00.000Z",
+      "collectedAt": "2026-01-18T00:01:35.772Z",
+      "category": [
+        "API",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>Shopify will stop setting the <code>shopify_y</code> and <code>shopify_s</code> cookies in 2026.</p>\n<p>If you use these cookies, your storefront will continue to work normally. However, if you don’t upgrade, visitor and session attribution won't be reliable in in Shopify Analytics.</p>\n<p><strong>For Hydrogen storefronts, upgrade by April 30, 2026.</strong></p>\n<p>What you need to do:</p>\n<ul>\n<li><p>If you’re using Hydrogen (React Router) deployed to Oxygen: Run the Hydrogen CLI upgrade command. All Hydrogen versions from 2024.7 through 2025.7 include this fix.</p>\n</li>\n<li><p>For other setups: See instructions in the <a href=\"https://shopify.dev/docs/storefronts/headless/hydrogen/migrate/cookies\" target=\"_blank\" class=\"body-link\">dev docs</a>.</p>\n</li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Hydrogenにおけるshopify_yおよびshopify_sクッキーの廃止",
+          "summarizedJa": "Shopifyは2026年に`shopify_y`と`shopify_s`クッキーの設定を停止します。Hydrogenストアフロントを利用している場合、2026年4月30日までにアップグレードしないと、Shopify Analyticsでの訪問者およびセッションのアトリビューションが正確に機能しなくなります。Hydrogen CLI upgrade コマンドの実行、またはその他のセットアップの場合は開発者ドキュメントの手順に従って対応が必要です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-01-18T00:01:53.758Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1164,
+            "output": 262
+          },
+          "estimatedCost": 0.007422000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Hydrogenにおけるshopify_yおよびshopify_sクッキーの非推奨化",
+          "summarizedJa": "Shopifyは2026年に`shopify_y`および`shopify_s`クッキーの設定を停止します。これは主にHydrogenを利用しているストアフロントに影響し、対応しない場合、Shopifyアナリティクスでの訪問者およびセッションの計測が不正確になる可能性があります。Hydrogenストアフロントは2026年4月30日までにアップグレードが必要です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-01-18T00:02:00.960Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 857,
+            "output": 158
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-enhanced-return-reasons",
       "source": "shopify-changelog",
