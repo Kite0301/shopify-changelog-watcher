@@ -1,6 +1,56 @@
 {
-  "lastUpdated": "2026-01-18T00:01:36.662Z",
+  "lastUpdated": "2026-01-20T00:01:33.275Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-offline-payments-for-multi-entity",
+      "source": "shopify-changelog",
+      "title": "Offline payments for multi entity ",
+      "link": "https://changelog.shopify.com/posts/offline-payments-for-multi-entity",
+      "publishedAt": "2026-01-19T15:00:00.000Z",
+      "collectedAt": "2026-01-20T00:01:33.259Z",
+      "category": [
+        "Pos"
+      ],
+      "description": "\n        <p>We’ve added offline payments support to multi-entity Shopify Payment setups, so offline transactions now work across all shops. Transaction limits are automatically inherited instead of configured per entity with no additional configurations required. Now you can keep selling during connectivity issues even if your business operates more than one operational entity across multiple shops. </p>\n\n<p>Learn more about https://help.shopify.com/en/manual/sell-in-person/shopify-pos/selling-offline/offline-payments?mode=internal in the Shopify Help Center. </p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "マルチエンティティでのオフライン決済対応",
+          "summarizedJa": "複数の事業体でShopify Paymentsを運用している場合でも、オフライン決済機能が利用可能になりました。取引限度額は各エンティティごとに設定する必要がなく、自動的に継承されます。これにより、複数店舗を運営している事業者でも、ネットワーク接続に問題がある状況でも販売を継続できるようになります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-01-20T00:01:38.682Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1022,
+            "output": 221
+          },
+          "estimatedCost": 0.0063809999999999995
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "複数事業体向けオフライン決済",
+          "summarizedJa": "複数事業体でShopifyペイメントを利用しているマーチャント向けに、オフライン決済が全店舗で利用可能になりました。これにより、複数の事業体を運営している場合でも、ネットワーク接続の問題時にも販売を継続できます。取引限度額は自動的に継承されるため、追加設定は不要です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-01-20T00:01:42.366Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 739,
+            "output": 136
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-shop-minis-development-now-requires-partner-account-permissions",
       "source": "developer-changelog",
@@ -100,6 +150,60 @@
           "tokenUsage": {
             "input": 857,
             "output": 158
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-inventoryactivate-now-preserves-available-quantity",
+      "source": "developer-changelog",
+      "title": "`inventoryActivate` now preserves `available` quantity",
+      "link": "https://shopify.dev/changelog/inventoryactivate-now-preserves-available-quantity",
+      "publishedAt": "2026-01-17T17:00:00.000Z",
+      "collectedAt": "2026-01-20T00:01:32.167Z",
+      "category": [
+        "API",
+        "Breaking API Change",
+        "Admin GraphQL API",
+        "Admin REST API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>As of API version 2026-04, activating an inventory item with <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/inventoryactivate#top\" target=\"_blank\" class=\"body-link\"><code>inventoryActivate</code></a> without providing an <code>available</code> or <code>onHand</code> argument will no longer default to zero in all cases. For an item that was previously active at that location, any existing <code>active</code> and <code>onHand</code> quantities for the inactive <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/InventoryLevel\" target=\"_blank\" class=\"body-link\"><code>InventoryLevel</code></a> are preserved.</p>\n<h3>Why we made this change</h3>\n<p><code>inventoryActivate</code> currently sets any existing inventory quantities to zero preventing merchants from tracking inventory independently of activation status. The current behaviour prevents merchants from tracking physical inventory since quantity history disappears upon activation. This change will allow merchants to track inventory and handle activation seprately keeping their quantity history intact.</p>\n<h3>Impact on your app</h3>\n<ul>\n<li><strong>GraphQL</strong>: In the <code>unstable</code> or <code>2026-04</code> and later releases, if you use the <code>inventoryActivate</code> mutation without providing an <code>available</code> or <code>onHand</code> argument, whichever quantity existed prior to activation will be persisted.</li>\n<li><strong>REST</strong>: In the <code>unstable</code> or <code>2026-04</code> and later releases, <code>POST</code> requests to <a href=\"https://shopify.dev/docs/api/admin-rest/latest/resources/inventorylevel#post-inventory-levels-connect\" target=\"_blank\" class=\"body-link\"><code>inventory_levels/connect.json</code></a> will maintain whichever quantity existed prior to activation.</li>\n</ul>\n<h3>What you need to do</h3>\n<ul>\n<li>Review any business logic that assumes <code>inventoryActivate</code> resets inventory quantities to zero for the specified inventory item and location.</li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "`inventoryActivate`が`available`数量を保持するように変更",
+          "summarizedJa": "APIバージョン2026-04以降、`inventoryActivate`ミューテーションで在庫を有効化する際、`available`または`onHand`引数を指定しない場合、既存の在庫数量がゼロにリセットされず保持されるようになります。この変更により、マーチャントは有効化ステータスとは独立して在庫数量を追跡できるようになり、数量履歴が失われることがなくなります。この動作変更を前提としたビジネスロジックがある場合は見直しが必要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-01-20T00:01:47.941Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1492,
+            "output": 267
+          },
+          "estimatedCost": 0.008480999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "inventoryActivate が利用可能在庫数を保持するようになりました",
+          "summarizedJa": "Shopify APIのバージョン2026-04以降、`inventoryActivate`ミューテーション（またはREST APIの`inventory_levels/connect.json`）を使用して在庫アイテムを有効化する際、明示的に在庫数を指定しない場合でも、既存の利用可能在庫数や手持ち在庫数がゼロにリセットされなくなります。この変更により、マーチャントは在庫の有効化ステータスとは別に、正確な在庫履歴を保持し、物理的な在庫数を追跡できるようになります。アプリ開発者は、この変更が既存の在庫管理ロジックに影響しないか確認し、必要に応じて修正する必要があります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-01-20T00:01:56.596Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1092,
+            "output": 209
           },
           "estimatedCost": 0
         }
