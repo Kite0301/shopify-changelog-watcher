@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-20T00:01:33.275Z",
+  "lastUpdated": "2026-01-22T00:01:57.858Z",
   "entries": [
     {
       "id": "shopify-changelog-posts-offline-payments-for-multi-entity",
@@ -1702,6 +1702,59 @@
           "tokenUsage": {
             "input": 846,
             "output": 167
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-storefront-api-now-returns-a-specific-error-code-when-cart-transform-functions-fail",
+      "source": "developer-changelog",
+      "title": "Storefront API now returns a specific error code when Cart Transform Functions fail",
+      "link": "https://shopify.dev/changelog/storefront-api-now-returns-a-specific-error-code-when-cart-transform-functions-fail",
+      "publishedAt": "2025-12-17T17:00:00.000Z",
+      "collectedAt": "2026-01-22T00:01:56.957Z",
+      "category": [
+        "API",
+        "Update",
+        "Storefront GraphQL API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>As of API version 2026-04, the Storefront API will return a <code>MERCHANDISE_LINE_TRANSFORMERS_RUN_ERROR</code> <a href=\"https://shopify.dev/docs/api/storefront/latest/enums/CartErrorCode\" target=\"_blank\" class=\"body-link\">cart error code</a> when a <a href=\"https://shopify.dev/docs/api/functions/latest/cart-transform\" target=\"_blank\" class=\"body-link\">Cart Transform Function</a> encounters a runtime error during cart operations such as <a href=\"https://shopify.dev/docs/api/storefront/latest/mutations/cartCreate\" target=\"_blank\" class=\"body-link\"><code>cartCreate</code></a> or <a href=\"https://shopify.dev/docs/api/storefront/latest/mutations/cartLinesAdd\" target=\"_blank\" class=\"body-link\"><code>cartLinesAdd</code></a>.</p>\n<p>Previously, when a Cart Transform Function failed, the Storefront API returned a generic <a href=\"https://shopify.dev/docs/api/storefront/latest/enums/CartErrorCode#enums-INVALID\" target=\"_blank\" class=\"body-link\"><code>INVALID</code> error code</a> with the message &quot;An error occurred in your cart.&quot; This made it difficult to distinguish between failures in Cart Transform Functions and other validation errors programmatically.</p>\n<p>With the introduction of the specific <code>MERCHANDISE_LINE_TRANSFORMERS_RUN_ERROR</code> code, you can now:</p>\n<ul>\n<li>Identify and handle Cart Transform Function failures separately from other cart errors.</li>\n<li>Implement more precise error handling and debugging in your storefront.</li>\n</ul>\n<p>This change enhances your ability to maintain and troubleshoot your storefront implementation effectively.</p>\n<p>Example error response:</p>\n<pre><code>{\n  &quot;data&quot;: {\n    &quot;cartCreate&quot;: {\n      &quot;cart&quot;: null,\n      &quot;userErrors&quot;: [\n        {\n          &quot;code&quot;: &quot;MERCHANDISE_LINE_TRANSFORMERS_RUN_ERROR&quot;\n        }\n      ]\n    }\n  }\n}\n</code></pre>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Storefront APIがカート変換関数の失敗時に特定のエラーコードを返すようになりました",
+          "summarizedJa": "APIバージョン2026-04以降、Storefront APIでカート変換関数がランタイムエラーを起こした際に、従来の汎用的な「INVALID」エラーではなく、「MERCHANDISE_LINE_TRANSFORMERS_RUN_ERROR」という専用のエラーコードが返されるようになりました。これにより、カート変換関数の失敗を他のバリデーションエラーと明確に区別でき、より精密なエラーハンドリングとデバッグが可能になります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-01-22T00:02:03.563Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1508,
+            "output": 264
+          },
+          "estimatedCost": 0.008484
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Storefront API、カート変換機能の失敗時に特定のエラーコードを返すように",
+          "summarizedJa": "APIバージョン2026-04より、Storefront APIはカート変換機能が実行時エラーを起こした場合に、`MERCHANDISE_LINE_TRANSFORMERS_RUN_ERROR`という特定のエラーコードを返すようになります。これにより、以前の汎用的な`INVALID`エラーコードと異なり、カート変換機能の失敗を明確に識別し、より詳細なエラーハンドリングとデバッグが可能になります。マーチャントやパートナーは、ストアフロントの実装における問題特定と解決を効率化できます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-01-22T00:02:09.595Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1173,
+            "output": 193
           },
           "estimatedCost": 0
         }
