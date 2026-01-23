@@ -1,6 +1,56 @@
 {
-  "lastUpdated": "2026-01-22T00:01:57.858Z",
+  "lastUpdated": "2026-01-23T00:01:57.604Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-business-details-section-in-admin-general-settings",
+      "source": "shopify-changelog",
+      "title": "Improved clarity for managing Business details",
+      "link": "https://changelog.shopify.com/posts/business-details-section-in-admin-general-settings",
+      "publishedAt": "2026-01-22T17:00:00.000Z",
+      "collectedAt": "2026-01-23T00:01:57.588Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>You can now manage your store’s business details in the General settings page with an updated Business details section. This makes it easier to keep the information Shopify needs for verification and financial services up to date—without having to wait for onboarding or remediation. </p>\n\n<p>We’ve renamed the <strong>Billing address</strong> section in Store contact details to <strong>Store address</strong> to better reflect what that address represents. This does not change how your address is used.</p>\n\n<p>Your store’s currency is now set based on the business country selected in Business details.</p>\n\n<p>Note: If you have financial products such as Shopify Payments or Shopify Capital active you will need to deactivate these before making changes. </p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "ビジネス詳細の管理画面の改善",
+          "summarizedJa": "管理画面の一般設定ページに「ビジネス詳細」セクションが追加され、Shopifyの本人確認や金融サービスに必要な情報をより簡単に更新できるようになりました。また、「請求先住所」が「ストア住所」に名称変更され、ストアの通貨はビジネス詳細で選択した国に基づいて設定されるようになります。なお、Shopify PaymentsやShopify Capitalなどの金融商品を利用している場合、変更前に一旦無効化する必要があります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-01-23T00:02:03.609Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1075,
+            "output": 268
+          },
+          "estimatedCost": 0.007245
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "ビジネス詳細管理の明確化",
+          "summarizedJa": "Shopify管理画面の一般設定ページに「ビジネス詳細」セクションが新設され、ストアの検証や金融サービスに必要な情報の管理・更新が容易になりました。「請求先住所」は「ストア住所」に名称変更され、ストア通貨はビジネス国に基づいて設定されます。Shopify Paymentsなどの金融商品を利用中の場合は、変更前に一時的に非アクティブ化が必要です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-01-23T00:02:09.678Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 783,
+            "output": 148
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-offline-payments-for-multi-entity",
       "source": "shopify-changelog",
@@ -507,6 +557,57 @@
           "tokenUsage": {
             "input": 1038,
             "output": 162
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-migrate-metafields-with-shopify-app-import-custom-data-definitions",
+      "source": "developer-changelog",
+      "title": "Migrate metafields with `shopify app import-custom-data-definitions`",
+      "link": "https://shopify.dev/changelog/migrate-metafields-with-shopify-app-import-custom-data-definitions",
+      "publishedAt": "2026-01-09T17:00:00.000Z",
+      "collectedAt": "2026-01-23T00:01:56.378Z",
+      "category": [
+        "Tools",
+        "New"
+      ],
+      "description": " <div class=\"\"><p><code>shopify app import-custom-data-definitions</code> is now available in Shopify CLI version 3.89.</p>\n<p>This command helps you migrate existing metafield and metaobject definitions for your app to <a href=\"https://shopify.dev/docs/apps/build/metafields/definitions#toml-app-owned-example\" target=\"_blank\" class=\"body-link\">declarative TOML management</a>. All app-owned definitions configured on your dev store are automatically converted to their TOML equivalent. These definitions include those with a namespace like <code>$app</code> or metaobjects with a type like <code>$app:example</code>, You can review the TOML definitions and add them to your <code>shopify.app.toml</code> file. You can continue writing metafield and metaobject <em>values</em> without any changes.</p>\n<p>You can migrate all your definitions at once, or you can work step by step by running the command multiple times. Run <code>shopify app dev</code> to test your TOML definitions in your dev store, then run <code>shopify app deploy</code> to deploy your new centrally managed Metafield and Metaobject definitions to all shops with your app installed. After you've deployed your changes, you can delete the unnecessary definition management code.</p>\n<p>Declarative definitions offer several advantages over API management:</p>\n<ul>\n<li>Shopify updates declared definitions in every shop where your app is installed, ensuring consistency across installations.</li>\n<li>Definitions stay in sync with your app's state, allowing you to roll out new metafields and related features simultaneously.</li>\n<li>Definitions are version controlled as part of your app, making it easy to roll back.</li>\n</ul>\n<p>As always, feel free to reach out in the community forum to share your questions and feedback about using declarative metafield and metaobject definitions.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "shopify app import-custom-data-definitionsコマンドでメタフィールドを移行可能に",
+          "summarizedJa": "Shopify CLI 3.89で新コマンド「shopify app import-custom-data-definitions」が利用可能になりました。このコマンドは、既存のアプリ所有メタフィールドとメタオブジェクト定義を、API管理から宣言的なTOML管理へ自動移行できます。TOML管理により、アプリがインストールされた全ショップで定義の一貫性が保たれ、バージョン管理も容易になります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-01-23T00:02:14.696Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1393,
+            "output": 252
+          },
+          "estimatedCost": 0.007958999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "`shopify app import-custom-data-definitions`によるメタフィールド移行機能",
+          "summarizedJa": "Shopify CLI v3.89で利用可能になった`shopify app import-custom-data-definitions`コマンドにより、既存のメタフィールドおよびメタオブジェクト定義を宣言的なTOML形式へ移行できるようになりました。この機能は、アプリが所有する定義の一貫性を保ち、アプリの状態と同期させ、バージョン管理を容易にすることで、開発効率と信頼性を大幅に向上させます。パートナーは開発ストアでテスト後、デプロイすることで、アプリがインストールされているすべてのストアに新しい定義を適用できます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-01-23T00:02:20.481Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1042,
+            "output": 189
           },
           "estimatedCost": 0
         }
