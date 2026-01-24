@@ -1,6 +1,57 @@
 {
-  "lastUpdated": "2026-01-23T00:01:57.604Z",
+  "lastUpdated": "2026-01-24T00:01:37.036Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-more-control-over-app-deploys-in-cicd-pipelines",
+      "source": "developer-changelog",
+      "title": "More control over app deploys in CI/CD pipelines",
+      "link": "https://shopify.dev/changelog/more-control-over-app-deploys-in-cicd-pipelines",
+      "publishedAt": "2026-01-23T14:00:00.000Z",
+      "collectedAt": "2026-01-24T00:01:35.921Z",
+      "category": [
+        "Tools",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>As of Shopify CLI 3.89, you now have more control over the types of extension and configuration updates that should be allowed in your automated app releases. This allows developers to be more confident in the safety of CI/CD pipelines and other app deployment automation.</p>\n<p>This is possible via new flags on the <code>shopify app deploy</code> and <code>shopify app release</code> commands:</p>\n<ul>\n<li><code>--allow-updates</code>: Lets you deploy new app configuration and extensions, and update existing ones.</li>\n<li><code>--allow-deletes</code>: Lets you delete app configuration and extensions.</li>\n</ul>\n<p>The existing <code>--force</code> command is equivalent to using these flags together. </p>\n<p><strong>Note</strong>: Deleting app configuration and extensions also deletes related data on stores that have your app installed. To avoid accidentally deleting store data, Shopify recommends that you only use the <code>--allow-updates</code> flag in your default CI/CD workflow.</p>\n<p>For more information, see <a href=\"https://shopify.dev/docs/apps/launch/deployment/deploy-in-ci-cd-pipeline#controlling-extension-and-configuration-deployment\" target=\"_blank\" class=\"body-link\">documentation on Shopify.dev</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "CI/CDパイプラインにおけるアプリデプロイの詳細な制御が可能に",
+          "summarizedJa": "Shopify CLI 3.89以降、`shopify app deploy`と`shopify app release`コマンドに新しいフラグ（`--allow-updates`と`--allow-deletes`）が追加されました。これにより、CI/CD環境でのアプリの自動デプロイ時に、拡張機能や設定の更新・削除を細かく制御でき、意図しないデータ削除を防ぐことができます。Shopifyは、デフォルトのCI/CDワークフローでは`--allow-updates`のみの使用を推奨しています。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-01-24T00:01:42.654Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1248,
+            "output": 277
+          },
+          "estimatedCost": 0.007899
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "CI/CDパイプラインでのアプリデプロイ制御の強化",
+          "summarizedJa": "Shopify CLI 3.89以降で、CI/CDパイプラインを通じたアプリの自動デプロイにおいて、更新や削除をより細かく制御できるようになりました。これにより、アプリ開発者は自動デプロイの安全性を高め、特にマーチャントのストアデータが誤って削除されるリスクを軽減できます。デフォルトのCI/CDでは、データ削除を防ぐために更新のみを許可するフラグの使用が推奨されています。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-01-24T00:01:50.478Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 920,
+            "output": 172
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-business-details-section-in-admin-general-settings",
       "source": "shopify-changelog",
@@ -46,6 +97,59 @@
           "tokenUsage": {
             "input": 783,
             "output": 148
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-pos-ui-extensions-camera-api",
+      "source": "developer-changelog",
+      "title": "POS UI extensions can now use the device camera",
+      "link": "https://shopify.dev/changelog/pos-ui-extensions-camera-api",
+      "publishedAt": "2026-01-19T20:00:00.000Z",
+      "collectedAt": "2026-01-24T00:01:35.921Z",
+      "category": [
+        "API",
+        "New",
+        "POS Extensions",
+        "2026-01"
+      ],
+      "description": " <div class=\"\"><p>Starting with POS version 10.19.0, <a href=\"https://shopify.dev/docs/api/pos-ui-extensions/latest\" target=\"_blank\" class=\"body-link\">POS UI extensions</a> can now access the device camera through a new Camera API. This enables new use cases like scanning IDs, capturing product photos, and attaching images directly within Shopify POS.</p>\n<p>For options, usage examples, and best practices, see <a href=\"https://shopify.dev/docs/api/pos-ui-extensions/2026-01-rc/target-apis/standard-apis/camera-api\" target=\"_blank\" class=\"body-link\">Camera API</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "POS UI拡張機能でデバイスカメラが利用可能に",
+          "summarizedJa": "POSバージョン10.19.0以降、POS UI拡張機能から新しいCamera APIを通じてデバイスのカメラにアクセスできるようになりました。これにより、IDのスキャン、商品写真の撮影、Shopify POS内で直接画像を添付するといった新しいユースケースが実現可能になります。詳細な使用方法やベストプラクティスはCamera APIのドキュメントを参照してください。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-01-24T00:01:55.091Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1085,
+            "output": 242
+          },
+          "estimatedCost": 0.0068850000000000005
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "POS UI拡張機能がデバイスカメラを利用可能に",
+          "summarizedJa": "Shopify POSのUI拡張機能が、バージョン10.19.0以降、新しいCamera APIを通じてデバイスカメラにアクセスできるようになりました。これにより、POSアプリ内で身分証明書のスキャン、商品写真の撮影、画像の直接添付といった新たなユースケースが実現し、店舗運営の効率化と顧客体験の向上が期待されます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 17,
+          "analyzedAt": "2026-01-24T00:02:00.121Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 799,
+            "output": 147
           },
           "estimatedCost": 0
         }
@@ -354,6 +458,58 @@
           "tokenUsage": {
             "input": 1248,
             "output": 176
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-extended-surface-support-for-shopifyappextensions-now-including-admin-and-storefront",
+      "source": "developer-changelog",
+      "title": "shopify.app.extensions() in App Bridge now supports Admin and Theme app extensions",
+      "link": "https://shopify.dev/changelog/extended-surface-support-for-shopifyappextensions-now-including-admin-and-storefront",
+      "publishedAt": "2026-01-14T17:00:00.000Z",
+      "collectedAt": "2026-01-24T00:01:35.921Z",
+      "category": [
+        "Platform",
+        "Update",
+        "App Bridge"
+      ],
+      "description": " <div class=\"\"><p>The <a href=\"https://shopify.dev/docs/api/app-home/apis/app\" target=\"_blank\" class=\"body-link\"><code>shopify.app.extensions()</code> method in App Bridge</a> now supports Admin and Theme app extensions, in addition to the previously available checkout and customer account extensions.</p>\n<p>With this update, your embedded app can query the status of extensions across all major surfaces. This means you can receive consistent handle and activation data for Admin and Theme app extensions. As a result, you can build more comprehensive onboarding experiences and create setup dashboards that encompass your entire app extension ecosystem.</p>\n<p>For further details, see the <a href=\"https://shopify.dev/docs/api/app-home/apis/app\" target=\"_blank\" class=\"body-link\">dev docs</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "App Bridgeのshopify.app.extensions()がAdmin拡張機能とテーマアプリ拡張機能に対応",
+          "summarizedJa": "App Bridgeのshopify.app.extensions()メソッドが、既存のチェックアウトおよび顧客アカウント拡張機能に加えて、Admin拡張機能とテーマアプリ拡張機能もサポートするようになりました。これにより、埋め込みアプリから全ての主要なサーフェスの拡張機能のステータスを一元的に照会でき、より包括的なオンボーディング体験やセットアップダッシュボードの構築が可能になります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-01-24T00:02:04.823Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1129,
+            "output": 275
+          },
+          "estimatedCost": 0.0075120000000000004
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "App Bridgeの`shopify.app.extensions()`が管理画面およびテーマアプリ拡張機能をサポート",
+          "summarizedJa": "Shopify App Bridgeの`shopify.app.extensions()`メソッドが、管理画面とテーマアプリの拡張機能にも対応しました。これにより、アプリ開発者は、チェックアウトや顧客アカウントの拡張機能に加え、管理画面やテーマの拡張機能の状態も一元的に取得できるようになります。マーチャントは、アプリの導入プロセスがよりスムーズになり、全拡張機能を一つのダッシュボードで管理できるようになるため、利便性が向上します。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-01-24T00:02:11.952Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 834,
+            "output": 175
           },
           "estimatedCost": 0
         }
@@ -1129,6 +1285,59 @@
           "tokenUsage": {
             "input": 945,
             "output": 157
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-localization-support-for-pos-ui-extensions",
+      "source": "developer-changelog",
+      "title": "Localization support for POS UI extensions",
+      "link": "https://shopify.dev/changelog/localization-support-for-pos-ui-extensions",
+      "publishedAt": "2026-01-01T17:00:00.000Z",
+      "collectedAt": "2026-01-24T00:01:35.921Z",
+      "category": [
+        "API",
+        "New",
+        "POS Extensions",
+        "2026-01"
+      ],
+      "description": " <div class=\"\"><p>Starting in POS 10.19, you can now localize your POS UI extensions for international merchants, staff, and customers. You can</p>\n<ul>\n<li><strong>Translate extension text</strong>: Define locale files with translation strings that automatically resolve based on customer and shop locales.</li>\n<li><strong>Format currencies and numbers</strong>: Use <code>formatCurrency</code> and <code>formatNumber</code> to display values in locale-appropriate formats.</li>\n<li><strong>Handle pluralization</strong>: Support complex plural rules across languages using the standard <code>Intl.PluralRules</code> specification.</li>\n</ul>\n<p>Learn how to <a href=\"https://shopify.dev/docs/apps/build/pos/localization\" target=\"_blank\" class=\"body-link\">localize a POS UI extension</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "POS UI拡張機能のローカライゼーション対応",
+          "summarizedJa": "POS 10.19以降、POS UI拡張機能を多言語対応できるようになりました。拡張機能のテキスト翻訳、通貨・数値のロケール適切なフォーマット、複数形ルールへの対応が可能です。国際展開するマーチャントやスタッフ、顧客向けに最適化されたPOS体験を提供できます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-01-24T00:02:16.240Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1133,
+            "output": 220
+          },
+          "estimatedCost": 0.006699
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "POS UI拡張機能のローカライズ対応",
+          "summarizedJa": "Shopify POS 10.19以降、POS UI拡張機能が多言語に対応しました。これにより、日本のマーチャントは、海外の顧客やスタッフ向けに拡張機能のテキストを翻訳したり、通貨や数値の表示を地域に適した形式に設定したりできるようになります。パートナーは、より国際的なニーズに対応したPOSアプリを開発できるようになります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 17,
+          "analyzedAt": "2026-01-24T00:02:21.930Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 808,
+            "output": 149
           },
           "estimatedCost": 0
         }
