@@ -1,6 +1,57 @@
 {
-  "lastUpdated": "2026-01-24T00:01:37.036Z",
+  "lastUpdated": "2026-01-27T00:01:47.532Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-new-articlelist-input-setting-for-themes",
+      "source": "developer-changelog",
+      "title": "New `article_list` input setting for themes",
+      "link": "https://shopify.dev/changelog/new-articlelist-input-setting-for-themes",
+      "publishedAt": "2026-01-26T10:00:00.000Z",
+      "collectedAt": "2026-01-27T00:01:46.231Z",
+      "category": [
+        "Themes",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>You can now add an <code>article_list</code> input setting to your theme sections and blocks. This new setting type outputs an article picker that lets merchants select multiple published articles, which can be used for creating featured article sections, related content areas, or article galleries.</p>\n<p>Learn more about the <a href=\"https://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#article_list\" target=\"_blank\" class=\"body-link\">article_list input setting</a> in the theme documentation.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "テーマに新しい `article_list` 入力設定を追加",
+          "summarizedJa": "テーマのセクションとブロックに `article_list` 入力設定が追加されました。この設定により、マーチャントは複数の公開済み記事を選択できるようになり、注目記事セクション、関連コンテンツエリア、記事ギャラリーなどの作成が可能になります。テーマ開発者は、この新しい設定タイプを活用して、より柔軟なブログコンテンツの表示機能を実装できます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-01-27T00:01:52.390Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1038,
+            "output": 247
+          },
+          "estimatedCost": 0.006819
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "テーマに新しい`article_list`入力設定が追加",
+          "summarizedJa": "テーマのセクションやブロックに、新しい入力設定タイプ`article_list`が追加されました。これにより、マーチャントは複数の公開済み記事を簡単に選択し、特集記事セクション、関連コンテンツエリア、または記事ギャラリーなどの作成に活用できるようになります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-01-27T00:01:58.001Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 751,
+            "output": 132
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-more-control-over-app-deploys-in-cicd-pipelines",
       "source": "developer-changelog",
@@ -97,6 +148,58 @@
           "tokenUsage": {
             "input": 783,
             "output": 148
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-checkout-ui-extensions-now-default-to-non-blocking-behavior",
+      "source": "developer-changelog",
+      "title": "Checkout UI extensions now default to non-blocking behavior",
+      "link": "https://shopify.dev/changelog/checkout-ui-extensions-now-default-to-non-blocking-behavior",
+      "publishedAt": "2026-01-22T15:00:00.000Z",
+      "collectedAt": "2026-01-27T00:01:46.231Z",
+      "category": [
+        "Platform",
+        "Update",
+        "Checkout UI"
+      ],
+      "description": " <div class=\"\"><p>As of January 26, 2026, Checkout UI extensions that support blocking now default to non-blocking behavior. To enable blocking, merchants must explicitly activate the <strong>Allow app to block checkout</strong> setting in the checkout and accounts editor. </p>\n<p>If your Checkout UI extension requires blocking, display a warning in the editor using the <a href=\"https://shopify.dev/docs/api/checkout-ui-extensions/latest/apis/buyer-journey\" target=\"_blank\" class=\"body-link\"><code>useExtensionEditor()</code></a> hook, and include this step in your activation process. Inform merchants that they must enable <strong>Allow app to block checkout</strong> for the UI extension to function as intended.</p>\n<p>We now recommend building custom checkout validation using Cart and Checkout Validation Functions instead of Checkout UI extensions, as they are more secure, performant, and guaranteed to run across supported checkouts. Learn more about <a href=\"https://shopify.dev/docs/apps/build/checkout/cart-checkout-validation\" target=\"_blank\" class=\"body-link\">Cart and Checkout Validation Functions</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Checkout UI拡張機能がデフォルトで非ブロッキング動作に変更",
+          "summarizedJa": "2026年1月26日より、Checkout UI拡張機能はデフォルトで非ブロッキング動作となり、チェックアウトをブロックするにはマーチャントが「アプリによるチェックアウトのブロックを許可」設定を明示的に有効化する必要があります。拡張機能がブロッキングを必要とする場合は、エディター内で警告を表示し、マーチャントに設定手順を案内する必要があります。今後はCheckout UI拡張機能の代わりに、より安全でパフォーマンスの高いCart and Checkout Validation Functionsの利用が推奨されています。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-01-27T00:02:02.842Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1187,
+            "output": 304
+          },
+          "estimatedCost": 0.008121
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "チェックアウトUI拡張機能がデフォルトで非ブロッキング動作に",
+          "summarizedJa": "2026年1月26日より、チェックアウトUI拡張機能はデフォルトで非ブロッキング動作となります。アプリがチェックアウトをブロックする必要がある場合、マーチャントはチェックアウトエディターで明示的に設定を有効にする必要があります。開発者は、ブロッキングが必要な拡張機能について、マーチャントに設定有効化を促す警告表示と案内を行う必要があります。Shopifyは、カスタムチェックアウト検証には、より安全でパフォーマンスの高いカートおよびチェックアウト検証機能の利用を推奨しています。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 17,
+          "analyzedAt": "2026-01-27T00:02:09.961Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 885,
+            "output": 190
           },
           "estimatedCost": 0
         }
@@ -1338,6 +1441,59 @@
           "tokenUsage": {
             "input": 808,
             "output": 149
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-intents-api-for-customer-accounts",
+      "source": "developer-changelog",
+      "title": "Let buyers update subscription payment methods without leaving your extension",
+      "link": "https://shopify.dev/changelog/intents-api-for-customer-accounts",
+      "publishedAt": "2026-01-01T17:00:00.000Z",
+      "collectedAt": "2026-01-27T00:01:46.231Z",
+      "category": [
+        "API",
+        "New",
+        "Customer Accounts",
+        "2026-01"
+      ],
+      "description": " <div class=\"\"><p>Buyers can now replace the payment method on their subscription contract without navigating away from your Customer Account UI extension. Simply invoke the intent and the native payment flow handles the rest, no need to store or display cards yourself.</p>\n<p>This new capability is the first of its kind powered by a new Intents API that lets your extension invoke native customer account workflows for managing buyer information. </p>\n<p>Dive into the <a href=\"https://shopify.dev/docs/api/customer-account-ui-extensions/latest/apis/intents\" target=\"_blank\" class=\"body-link\">documentation on customer account intents</a> to get started.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "エクステンションを離れることなく、購入者がサブスクリプションの支払い方法を更新可能に",
+          "summarizedJa": "新しいIntents APIにより、購入者はカスタマーアカウントUIエクステンション内でサブスクリプション契約の支払い方法を直接変更できるようになりました。ネイティブの決済フローが自動的に処理するため、開発者がカード情報を保存・表示する必要がありません。この機能は購入者情報を管理するネイティブワークフローを呼び出せる新しいIntents APIによって実現されています。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-01-27T00:02:15.337Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1069,
+            "output": 259
+          },
+          "estimatedCost": 0.007092
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "顧客アカウント拡張機能内でサブスクリプションの支払い方法を更新可能に",
+          "summarizedJa": "このアップデートにより、購入者はShopifyの顧客アカウントUI拡張機能内で、サブスクリプションの支払い方法を直接更新できるようになります。これにより、顧客は外部ページに移動することなくスムーズに手続きを完了でき、マーチャントは顧客体験を向上させることができます。パートナーは、新しいIntents APIを活用することで、支払い情報の管理をShopifyのネイティブフローに任せつつ、より安全で統合されたUI拡張機能を開発できるようになります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-01-27T00:02:22.139Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 783,
+            "output": 174
           },
           "estimatedCost": 0
         }
