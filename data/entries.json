@@ -1,6 +1,109 @@
 {
-  "lastUpdated": "2026-01-27T00:01:47.532Z",
+  "lastUpdated": "2026-01-28T00:01:32.789Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-change-due-calculator-for-cash-payments",
+      "source": "shopify-changelog",
+      "title": "Change due calculator for cash payments",
+      "link": "https://changelog.shopify.com/posts/change-due-calculator-for-cash-payments",
+      "publishedAt": "2026-01-27T17:00:00.000Z",
+      "collectedAt": "2026-01-28T00:01:32.781Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>When a customer pays with cash in quick sale, you can now enter the amount they give you and instantly see the change due. No more mental math at the register.</p>\n\n<p>The calculator also supports cash rounding for markets that have eliminated small coin denominations. It automatically rounds the total and calculates change based on the rounded amount.</p>\n\n<p><strong>How it works:</strong><br>\n* Complete a cash sale in quick sale<br>\n* Enter the amount the customer gives you<br>\n* See the change due instantly<br>\n* Change amount appears on receipts and order confirmation</p>\n\n<p>Available on iOS and Android in all quick sale markets. Learn more at <a href=\"https://help.shopify.com/manual/sell-in-person/shopify-mobile/quick-sale\">Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "現金支払い時のお釣り自動計算機能",
+          "summarizedJa": "クイック販売で現金決済を行う際、顧客から受け取った金額を入力するだけでお釣りが自動計算されるようになりました。少額硬貨が廃止された市場向けに現金の端数処理にも対応しており、端数処理後の金額に基づいてお釣りを計算します。iOS・Android版のShopify POSアプリで利用可能で、お釣り額はレシートや注文確認書にも表示されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 1,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-01-28T00:01:39.147Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1097,
+            "output": 244
+          },
+          "estimatedCost": 0.006951000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "現金支払い時のお釣り自動計算機能",
+          "summarizedJa": "Shopifyのクイックセール機能において、現金支払い時のお釣り計算が自動化されました。顧客から受け取った金額を入力するだけで、お釣りが即座に表示され、レジでの計算ミスや手間を削減できます。小銭の廃止された市場向けの端数処理にも対応し、レシートにもお釣り額が記載されます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-01-28T00:01:46.912Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 812,
+            "output": 147
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-ensuring-pos-ui-extension-stability-by-hardening-callback-handling",
+      "source": "developer-changelog",
+      "title": "Ensuring POS UI extension stability by hardening callback handling",
+      "link": "https://shopify.dev/changelog/ensuring-pos-ui-extension-stability-by-hardening-callback-handling",
+      "publishedAt": "2026-01-27T17:00:00.000Z",
+      "collectedAt": "2026-01-28T00:01:31.278Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Breaking API Change",
+        "POS Extensions"
+      ],
+      "description": " <div class=\"\"><p>Starting with <code>POS 10.19.0</code>, unhandled errors in extension callbacks trigger an error page instead of failing silently. This change ensures a more stable and predictable experience for merchants and helps developers identify issues proactively.</p>\n<p>To prevent disruptions for merchants and minimize unexpected failures, developers should thoroughly test callbacks and ensure all exceptions are properly handled.</p>\n<p>For example, this code will now trigger an error page:</p>\n<pre><code class=\"language-js\">// Before: Errors occur but do not display an error page.\n// POS 10.19.0 onwards: Displays an error page upon encountering an error.\n&lt;Screen\n  name=&quot;example&quot;\n  title=&quot;Example&quot;\n  onReceiveParams={(params) =&gt; mayNotExist(params)}\n&gt;&lt;/Screen&gt;\n</code></pre>\n<p>One solution is to wrap the logic in try/catch blocks:</p>\n<pre><code class=\"language-js\">&lt;Screen\n  name=&quot;example&quot;\n  title=&quot;Example&quot;\n  onReceiveParams={(params) =&gt; {\n    try {\n      mayNotExist(params);\n    } catch (error) {\n      // Handle errors.\n    }\n  }}\n&gt;&lt;/Screen&gt;\n</code></pre>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "POSUIエクステンションの安定性確保：コールバックのエラーハンドリング強化",
+          "summarizedJa": "POS 10.19.0以降、エクステンションのコールバック内で未処理のエラーが発生すると、エラーページが表示されるようになります。これまで静かに失敗していたエラーが可視化されるため、開発者はtry/catchブロックで適切な例外処理を実装する必要があります。対応しない場合、マーチャントにエラーページが表示され業務に支障をきたす可能性があります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-01-28T00:01:51.244Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1267,
+            "output": 250
+          },
+          "estimatedCost": 0.0075509999999999996
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "POS UI拡張機能の安定性強化：コールバックエラー処理の厳格化",
+          "summarizedJa": "POSアプリのバージョン10.19.0以降、POS UI拡張機能内で未処理のエラーが発生した場合、これまでのようにサイレントに失敗するのではなく、エラーページが表示されるようになります。これにより、マーチャントはより安定したPOS利用体験を得られ、開発者は問題を早期に特定できるようになります。パートナー（開発者）は、マーチャントへの影響を避けるため、拡張機能のコールバックにおけるエラー処理を徹底し、適切に例外をハンドリングする必要があります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-01-28T00:01:59.263Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 956,
+            "output": 183
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-new-articlelist-input-setting-for-themes",
       "source": "developer-changelog",
@@ -47,6 +150,59 @@
           "tokenUsage": {
             "input": 751,
             "output": 132
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-events-data-now-limited-to-one-year-retention",
+      "source": "developer-changelog",
+      "title": "Events data now limited to one year retention",
+      "link": "https://shopify.dev/changelog/events-data-now-limited-to-one-year-retention",
+      "publishedAt": "2026-01-23T17:00:00.000Z",
+      "collectedAt": "2026-01-28T00:01:31.278Z",
+      "category": [
+        "API",
+        "Deprecation Announcement",
+        "Admin GraphQL API",
+        "Admin REST API"
+      ],
+      "description": " <div class=\"\"><p>Access to <code>events</code> data older than one year is no longer available via the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/interfaces/Event\" target=\"_blank\" class=\"body-link\">Admin GraphQL <code>Event</code> interface</a> or the <a href=\"https://shopify.dev/docs/api/admin-rest/latest/resources/event\" target=\"_blank\" class=\"body-link\">Admin REST <code>events</code> resource</a>. This update is part of our ongoing efforts to optimize data management and improve system performance. </p>\n<p>Please review and update any dependencies on these events. If you have any questions or need further assistance, feel free to reach out on the <a href=\"https://community.shopify.dev/\" target=\"_blank\" class=\"body-link\">Shopify Developer Community forums</a>. </p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "イベントデータの保持期間が1年に制限されました",
+          "summarizedJa": "Admin GraphQL APIとAdmin REST APIを通じて取得できる「events」データが、1年以前のものにアクセスできなくなりました。この変更はデータ管理の最適化とシステムパフォーマンス向上を目的としています。イベントデータに依存している機能がある場合は、実装の見直しと更新が必要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-01-28T00:02:03.399Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1135,
+            "output": 206
+          },
+          "estimatedCost": 0.006495
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "イベントデータの保持期間が1年に制限されました",
+          "summarizedJa": "ShopifyのAdmin GraphQL APIおよびAdmin REST APIを通じてアクセスできるイベントデータの保持期間が、1年までに制限されました。これにより、1年より古いイベントデータは利用できなくなります。この変更はデータ管理の最適化とシステムパフォーマンス向上のためであり、関連するAPIを利用しているマーチャントやパートナーは、既存の依存関係を確認し、必要に応じて更新する必要があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-01-28T00:02:10.144Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 833,
+            "output": 152
           },
           "estimatedCost": 0
         }
