@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-01-29T00:02:16.665Z",
+  "lastUpdated": "2026-01-30T00:02:52.485Z",
   "entries": [
     {
       "id": "shopify-changelog-posts-updates-to-chargeback-rates",
@@ -46,6 +46,56 @@
           "tokenUsage": {
             "input": 853,
             "output": 166
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-control-how-your-retail-locations-are-classified",
+      "source": "shopify-changelog",
+      "title": "Control how your retail locations are classified ",
+      "link": "https://changelog.shopify.com/posts/control-how-your-retail-locations-are-classified",
+      "publishedAt": "2026-01-28T15:00:00.000Z",
+      "collectedAt": "2026-01-30T00:02:52.475Z",
+      "category": [
+        "Pos"
+      ],
+      "description": "\n        <p>We’ve added a physical storefront toggle to Locations in Shopify Admin, so retail locations are no longer inferred solely from POS activity and can be explicitly defined.</p>\n\n<p>Now you can clearly separate customer facing stores from POS-only locations like pop-ups, test locations, or warehouses using a single control. This improves location discovery across channels like Shop and keeps analytics, reporting, and future location-based features accurate and reliable. </p>\n\n<p>Location names shown to customers in Shop will match the location name in Admin, so we recommend reviewing your location names. The physical storefront toggle is enabled by default. </p>\n\n<p>Learn more about managing physical storefronts and POS locations in the <a href=\"https://help.shopify.com/en/manual/sell-in-person/getting-started/shopify-pos-from-admin/add-locations\">Shopify Help Center</a>. </p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "実店舗ロケーションの分類を制御可能に",
+          "summarizedJa": "Shopify管理画面のロケーション設定に「実店舗」トグルが追加され、POSアクティビティから推測されるだけでなく、明示的に実店舗を定義できるようになりました。これにより、顧客向け店舗とポップアップや倉庫などのPOS専用ロケーションを明確に区別でき、Shopアプリでのロケーション表示や分析レポートの精度が向上します。デフォルトで有効になっているため、ロケーション名の見直しが推奨されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-01-30T00:02:58.904Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1118,
+            "output": 267
+          },
+          "estimatedCost": 0.007359
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "実店舗のロケーション分類を管理",
+          "summarizedJa": "Shopify管理画面のロケーション設定に「物理的な店舗（physical storefront）」トグルが追加され、小売店舗の分類をPOS活動から推測するのではなく、明示的に定義できるようになりました。これにより、顧客向けの実店舗とポップアップストアや倉庫などのPOS専用ロケーションを明確に区別でき、Shopアプリでの店舗発見性や分析レポートの精度が向上します。このトグルはデフォルトで有効になっています。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-01-30T00:03:04.655Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 825,
+            "output": 163
           },
           "estimatedCost": 0
         }
@@ -3458,6 +3508,58 @@
           "tokenUsage": {
             "input": 843,
             "output": 160
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-discouraging-use-of-receiptjson-on-ordertransaction-in-the-graphql-admin-api",
+      "source": "developer-changelog",
+      "title": "Discouraging use of `receiptJson` on `OrderTransaction` in the GraphQL Admin API",
+      "link": "https://shopify.dev/changelog/discouraging-use-of-receiptjson-on-ordertransaction-in-the-graphql-admin-api",
+      "publishedAt": "2025-12-10T17:00:00.000Z",
+      "collectedAt": "2026-01-30T00:02:51.504Z",
+      "category": [
+        "API",
+        "Update",
+        "Admin GraphQL API"
+      ],
+      "description": " <div class=\"\"><p>We’re <strong>discouraging</strong> use of <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/OrderTransaction#field-OrderTransaction.fields.receiptJson\" target=\"_blank\" class=\"body-link\"><code>OrderTransaction.receiptJson</code></a>. You should stop relying on <code>receiptJson</code> in production apps.</p>\n<p><code>receiptJson</code> is <strong>gateway-defined</strong>, <strong>inconsistently shaped</strong>, and may <strong>change without notice</strong>. Because its structure isn’t stable or typed, changes can lead to unexpected app failures.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "GraphQL Admin APIの`OrderTransaction`における`receiptJson`の使用非推奨化",
+          "summarizedJa": "GraphQL Admin APIの`OrderTransaction.receiptJson`フィールドの使用が非推奨となりました。このフィールドはゲートウェイによって定義され、構造が不安定で予告なく変更される可能性があるため、本番環境のアプリでの依存を停止することが推奨されています。構造が型付けされておらず、予期しないアプリの障害につながる恐れがあります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-01-30T00:03:09.224Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1107,
+            "output": 230
+          },
+          "estimatedCost": 0.006770999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "GraphQL Admin APIにおける`OrderTransaction`の`receiptJson`の使用非推奨化",
+          "summarizedJa": "Shopifyは、GraphQL Admin APIの`OrderTransaction`オブジェクトにある`receiptJson`フィールドの使用を非推奨としました。このフィールドは決済ゲートウェイによって定義され、形式が不安定で予告なく変更される可能性があるため、これに依存するアプリは予期せぬ障害を引き起こす可能性があります。日本のマーチャントやパートナーは、本番環境のアプリで`receiptJson`への依存を停止する必要があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-01-30T00:03:15.935Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 796,
+            "output": 168
           },
           "estimatedCost": 0
         }
