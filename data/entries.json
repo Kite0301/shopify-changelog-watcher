@@ -1,6 +1,56 @@
 {
-  "lastUpdated": "2026-01-30T00:02:52.485Z",
+  "lastUpdated": "2026-02-01T00:01:39.813Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-flow-send-emails-using-your-sender-email-address",
+      "source": "shopify-changelog",
+      "title": "Flow: Send emails using your sender email address",
+      "link": "https://changelog.shopify.com/posts/flow-send-emails-using-your-sender-email-address",
+      "publishedAt": "2026-01-31T17:00:00.000Z",
+      "collectedAt": "2026-02-01T00:01:39.804Z",
+      "category": [
+        "Apps"
+      ],
+      "description": "\n        <p>The <a href=\"https://help.shopify.com/en/manual/shopify-flow/reference/actions/send-email\">Send internal email</a> action in Shopify Flow will now display the <a href=\"https://help.shopify.com/en/manual/intro-to-shopify/initial-setup/setup-your-email#change-your-sender-email-address\">sender email address</a> for your store in the From field of the email. Before this change, the action would display “flow@shopify.com” in the From field.</p>\n\n<p>New configurations of the action will use the sender email address immediately and prior configurations in existing workflows will be updated to do so soon.</p>\n\n<p>To ensure emails are sent correctly, go to Settings &gt; <a href=\"https://admin.shopify.com/settings/notifications\">Notifications</a> in your Shopify admin and ensure the sender email is properly configured. If you use a third-party domain, then you may need to <a href=\"https://help.shopify.com/en/manual/intro-to-shopify/initial-setup/setup-your-email#authenticate\">authenticate your sender email address</a> to prevent your emails messages from being flagged as spam and ensure that your email messages are delivered.</p>\n\n<p>Email recipients may also need to update their email filtering or forwarding rules to match the sender email address instead of \"flow@shopify.com\".</p>\n\n<p>For more information, visit the <a href=\"https://help.shopify.com/en/manual/shopify-flow/reference/actions/send-email\">documentation</a>. For questions and feedback, visit the <a href=\"https://community.shopify.com/c/shopify-flow/304\">Shopify community</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Flow: ストアの送信者メールアドレスを使用したメール送信が可能に",
+          "summarizedJa": "Shopify Flowの「内部メール送信」アクションで、送信元アドレスが「flow@shopify.com」からストアの送信者メールアドレスに変更されます。新規設定は即座に、既存のワークフローも近日中に自動更新されます。独自ドメインを使用している場合は、スパム判定を防ぐために送信者メールアドレスの認証設定が必要になる場合があります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-02-01T00:01:45.486Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1327,
+            "output": 243
+          },
+          "estimatedCost": 0.007626
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Flow: 送信元メールアドレスを使用してメールを送信",
+          "summarizedJa": "Shopify Flowの「内部メールを送信」アクションが更新され、メールの送信元が「flow@shopify.com」からストアの送信元メールアドレスに変更されます。これにより、ブランドの一貫性が向上し、メールの信頼性が高まります。マーチャントは、スパム判定を防ぐため、設定で送信元メールアドレスが正しく設定・認証されているか確認し、必要に応じて受信者側でのメールフィルタリングルールの更新を促す必要があります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-02-01T00:01:51.387Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1021,
+            "output": 174
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-updates-to-chargeback-rates",
       "source": "shopify-changelog",
