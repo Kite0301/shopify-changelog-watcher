@@ -1,6 +1,56 @@
 {
-  "lastUpdated": "2026-02-01T00:01:39.813Z",
+  "lastUpdated": "2026-02-03T00:03:58.056Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-fulfilling-transfers-with-shopify-pos",
+      "source": "shopify-changelog",
+      "title": "Fulfilling Transfers with Shopify POS",
+      "link": "https://changelog.shopify.com/posts/fulfilling-transfers-with-shopify-pos",
+      "publishedAt": "2026-02-02T15:00:00.000Z",
+      "collectedAt": "2026-02-03T00:03:58.047Z",
+      "category": [
+        "Pos"
+      ],
+      "description": "\n        <p>Shopify POS 10.20 introduces a complete inventory transfers workflow to the POS device. Retail staff can now fulfill (outgoing) and receive (incoming) inventory transfers between locations natively—no need to rely solely on Shopify Admin or external apps. Staff can now pick, pack and send shipments using Outgoing Transfers under the Orders tab. Verify and receive incoming shipments under the Products tab. Staff can scan items to confirm inventory movement, track transfer status in real time, and operate with improved accuracy right from the sales floor.</p>\n\n<p>Updates include:<br>\n- *<em>Outgoing transfers: *</em>HQ can assign transfers in Admin; retail staff can pick, pack, and send transfers right from POS.<br>\n- *<em>All-in-one workflow: *</em>Outgoing transfers are under Orders and incoming under Products, all within POS.<br>\n- *<em>Greater traceability: *</em>Scan, verify, and track transfers for better control. Status is tracked in Shopify for reporting and auditing.<br>\n- *<em>User permissions: *</em>Easily choose which staff members can manage transfers.<br>\n- *<em>Direct Integration: *</em>Outgoing and incoming transfers are built directly into Shopify’s existing inventory management system—no additional apps or setup required.</p>\n\n<p>These enhancements streamline in-store inventory operations, reduce the risk of overselling, and help your in-store teams maintain accurate stock levels across all locations. <a href=\"https://help.shopify.com/en/manual/sell-in-person/shopify-pos/inventory-management/fulfilling-and-receiving-transfers\">Learn more about fulfilling transfers with POS</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify POSでの在庫移動の出庫・入庫対応",
+          "summarizedJa": "Shopify POS 10.20で、店舗スタッフがPOSデバイスから直接、拠点間の在庫移動の出庫・入庫作業を完結できるようになりました。管理画面や外部アプリに頼らず、注文タブから出庫作業、商品タブから入庫作業を行い、商品スキャンによる確認やリアルタイムステータス追跡が可能になり、店頭での在庫管理の精度と効率が向上します。スタッフ権限の設定も可能で、Shopifyの在庫管理システムに直接統合されています。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-02-03T00:04:05.847Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1315,
+            "output": 291
+          },
+          "estimatedCost": 0.008310000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify POSでの在庫移動の処理",
+          "summarizedJa": "Shopify POS 10.20により、店舗スタッフはPOSデバイスから直接、店舗間の在庫移動（出荷・受入）を完結できるようになりました。これにより、Shopify Adminや外部アプリに頼ることなく、商品のピッキング、梱包、発送、受入確認、スキャンによる追跡がPOS上で可能になります。この機能強化は、店舗の在庫管理業務を効率化し、在庫精度向上と販売機会損失の削減に貢献します。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-02-03T00:04:13.421Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 979,
+            "output": 171
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-flow-send-emails-using-your-sender-email-address",
       "source": "shopify-changelog",
