@@ -1,6 +1,57 @@
 {
-  "lastUpdated": "2026-02-03T00:03:58.056Z",
+  "lastUpdated": "2026-02-04T00:02:59.466Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-increasing-the-app-block-limit-to-30-for-theme-app-extensions",
+      "source": "developer-changelog",
+      "title": "Increasing the app block limit to 30 for theme app extensions",
+      "link": "https://shopify.dev/changelog/increasing-the-app-block-limit-to-30-for-theme-app-extensions",
+      "publishedAt": "2026-02-03T11:00:00.000Z",
+      "collectedAt": "2026-02-04T00:02:58.257Z",
+      "category": [
+        "Themes",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>You can now include up to 30 app blocks in a single theme app extension, an increase from the previous limit of 25. This gives you more flexibility to build comprehensive app experiences that integrate seamlessly with themes.</p>\n<p>Learn more about <a href=\"https://shopify.dev/docs/apps/build/online-store/theme-app-extensions\" target=\"_blank\" class=\"body-link\">theme app extensions</a> and <a href=\"https://shopify.dev/docs/apps/build/online-store/theme-app-extensions/configuration#file-and-content-size-limits\" target=\"_blank\" class=\"body-link\">file and content size limits</a> on Shopify.dev.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "テーマアプリ拡張機能のアプリブロック上限が30に増加",
+          "summarizedJa": "テーマアプリ拡張機能で利用できるアプリブロックの上限が、従来の25個から30個に引き上げられました。この変更により、開発者はテーマとシームレスに統合する、より包括的なアプリ体験を構築できるようになります。より多くの機能を1つのアプリ拡張機能に組み込むことが可能になり、アプリの柔軟性が向上します。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-02-04T00:03:04.242Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1091,
+            "output": 242
+          },
+          "estimatedCost": 0.006902999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "テーマアプリ拡張機能のアプリブロック制限を30に増加",
+          "summarizedJa": "テーマアプリ拡張機能におけるアプリブロックの設置上限が、これまでの25個から30個に引き上げられました。これにより、アプリ開発者はより多くのブロックをテーマに組み込むことができ、マーチャントはより柔軟で包括的なアプリ体験を顧客に提供できるようになります。テーマとのシームレスな連携が強化され、アプリの機能拡張の自由度が高まります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-02-04T00:03:10.069Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 803,
+            "output": 158
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-fulfilling-transfers-with-shopify-pos",
       "source": "shopify-changelog",
