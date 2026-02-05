@@ -1,6 +1,59 @@
 {
-  "lastUpdated": "2026-02-04T00:02:59.466Z",
+  "lastUpdated": "2026-02-05T00:03:41.354Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-new-payment-error-codes-added-to-subscriptions-apis",
+      "source": "developer-changelog",
+      "title": "Subscriptions APIs: new payment error code and error classification",
+      "link": "https://shopify.dev/changelog/new-payment-error-codes-added-to-subscriptions-apis",
+      "publishedAt": "2026-02-03T17:00:00.000Z",
+      "collectedAt": "2026-02-05T00:03:40.380Z",
+      "category": [
+        "API",
+        "Update",
+        "Admin GraphQL API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>We’ve added new payment error codes for Subscription Billing Attempts in the Admin GraphQL API. These new error codes provide more granularity and consistency, making payment errors easier to diagnose. They’re currently available in the unstable API version that you can discover <a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/enums/SubscriptionBillingAttemptErrorCode\" target=\"_blank\" class=\"body-link\">here</a>.</p>\n<p>We’re also updating our error-code mapping to be more explicit:</p>\n<ul>\n<li>In the <code>unstable</code> version, you’ll start seeing new error codes appear, along with fewer <code>AUTHENTICATION_ERROR</code> and <code>PAYMENT_METHOD_DECLINED</code> errors.</li>\n<li>If you’re on <code>2026-01</code> or earlier versions, you may still notice a shift in error volumes across existing error codes. We improved our mapping so that some errors previously categorized as generic decline errors (<code>PAYMENT_METHOD_DECLINED</code>) are now mapped more explicitly to existing error codes—for example, we can map more cases to <code>INSUFFICIENT_FUNDS</code> instead of generic declines.</li>\n</ul>\n<p>Please note that from <strong>January 28, 2026, to February 4, 2026</strong>, there was a temporary issue with error mapping, which may have caused a surge in <code>TRANSIENT_ERROR</code>. This has now been fixed.</p>\n<h3>Error code mapping</h3>\n<ul>\n<li><p>If you are on <code>unstable</code> version, you will see the new error code.</p>\n</li>\n<li><p>If you are on <code>2026-01</code> or earlier versions, you will see the currently mapped code.</p>\n<p>| New Error Code | Currently Mapped Error Code |\n|</p>\n</li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "サブスクリプションAPI: 新しい決済エラーコードとエラー分類の追加",
+          "summarizedJa": "Admin GraphQL APIのサブスクリプション請求試行に、より詳細で一貫性のある新しい決済エラーコードが追加され、エラーの診断が容易になりました。unstable版では新しいエラーコードが利用可能になり、2026-01以前のバージョンでも既存エラーコードへのマッピングが改善され、PAYMENT_METHOD_DECLINEDなどの一般的なエラーがINSUFFICIENT_FUNDSなどのより明示的なコードに分類されるようになりました。なお、2026年1月28日から2月4日にかけて一時的なマッピング問題がありましたが、現在は修正済みです。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-02-05T00:03:48.669Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1404,
+            "output": 322
+          },
+          "estimatedCost": 0.009042000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "定期購入API: 新しい支払いエラーコードとエラー分類",
+          "summarizedJa": "Shopifyの定期購入APIに、支払い失敗時の新しいエラーコードが追加され、エラー分類がより詳細になりました。これにより、マーチャントは支払い失敗の原因を正確に把握しやすくなり、パートナーはより精度の高いエラーハンドリングを実装できます。既存のAPIバージョンでもエラーマッピングが改善され、一般的な拒否エラーが具体的な理由に分類されるようになります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-02-05T00:03:56.080Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1066,
+            "output": 156
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-increasing-the-app-block-limit-to-30-for-theme-app-extensions",
       "source": "developer-changelog",
@@ -197,6 +250,59 @@
           "tokenUsage": {
             "input": 853,
             "output": 166
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-automatically-copy-cart-metafields-to-orders-at-checkout-completion",
+      "source": "developer-changelog",
+      "title": "Automatically copy cart metafields to orders at checkout completion",
+      "link": "https://shopify.dev/changelog/automatically-copy-cart-metafields-to-orders-at-checkout-completion",
+      "publishedAt": "2026-01-28T16:00:00.000Z",
+      "collectedAt": "2026-02-05T00:03:40.380Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>As of API version <code>2026-04</code>, order metafield definitions can copy values from cart metafields to order metafields when an order is created. You can specify which cart metafields should be carried over to orders. </p>\n<p>The metafield value is copied if both these conditions are true:</p>\n<ul>\n<li>An order metafield definition exists with the same namespace and key as a cart metafield. </li>\n<li>The <code>cartToOrderCopyable</code> capability is enabled on that order metafield definition.</li>\n</ul>\n<p>View <a href=\"https://shopify.dev/docs/apps/build/metafields/use-metafield-capabilities#cart-to-order-copyable\" target=\"_blank\" class=\"body-link\">developer documentation</a>.</p>\n<p>Cart metafields are now accessible in all APIs that interact with the buyer journey, including the Storefront API, Checkout UI extensions, Functions, and the GraphQL Admin API. </p>\n<p>We now recommend using cart metafields instead of cart attributes and checkout metafields for custom data storage. Cart metafields offer enhanced security features, such as edit and view permissions, and app-reserved namespaces, which prevent unauthorized access by other apps.</p>\n<p>Learn more about <a href=\"https://shopify.dev/docs/apps/build/metafields/use-metafield-capabilities\" target=\"_blank\" class=\"body-link\">metafield capabilities</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "チェックアウト完了時にカートのメタフィールドを注文へ自動コピー",
+          "summarizedJa": "APIバージョン2026-04から、カートのメタフィールドを注文作成時に自動的に注文メタフィールドへコピーできるようになりました。注文メタフィールド定義でcartToOrderCopyable機能を有効化し、カートメタフィールドと同じnamespaceとkeyを持つ場合に値がコピーされます。カート属性やチェックアウトメタフィールドの代わりに、セキュリティ機能が強化されたカートメタフィールドの使用が推奨されています。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-02-05T00:04:01.341Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1296,
+            "output": 276
+          },
+          "estimatedCost": 0.008028
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "カートのメタフィールドをチェックアウト完了時に注文へ自動コピー",
+          "summarizedJa": "APIバージョン2026-04以降、チェックアウト完了時にカートのメタフィールド値を注文のメタフィールドへ自動的にコピーできるようになります。これにより、購入プロセス全体でカスタムデータを安全に引き継ぐことが可能になり、カート属性やチェックアウトメタフィールドの代わりに、セキュリティが強化されたカートメタフィールドの使用が推奨されます。日本のマーチャントは、顧客の選択に基づいたより詳細な注文管理やパーソナライズが可能になり、パートナーはより堅牢でセキュアなアプリ開発が求められます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 17,
+          "analyzedAt": "2026-02-05T00:04:07.671Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 983,
+            "output": 187
           },
           "estimatedCost": 0
         }
