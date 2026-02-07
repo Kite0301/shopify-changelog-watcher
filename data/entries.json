@@ -1,6 +1,211 @@
 {
-  "lastUpdated": "2026-02-05T00:03:41.354Z",
+  "lastUpdated": "2026-02-07T00:03:14.367Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-auto-lock-staff-balance-or-credit-cards",
+      "source": "shopify-changelog",
+      "title": "Auto-lock staff Balance or Credit cards",
+      "link": "https://changelog.shopify.com/posts/auto-lock-staff-balance-or-credit-cards",
+      "publishedAt": "2026-02-06T17:00:00.000Z",
+      "collectedAt": "2026-02-07T00:03:14.351Z",
+      "category": [
+        "Balance"
+      ],
+      "description": "\n        <p>We’ve just released the ability to automatically lock staff Balance or Credit cards on a specific date in Cards. This will help Account Owners manage spending by ensuring staff can only use their cards up to a specific date of the Account Owner's choosing.</p>\n\n<p>To learn more, visit our <a href=\"https://help.shopify.com/en/manual/finance/shopify-credit/manage-cardholders\">Help Center on Credit cards</a> or <a href=\"https://help.shopify.com/en/manual/finance/shopify-balance/cards/card\">Help Center on Balance cards</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "スタッフ用BalanceまたはCreditカードの自動ロック機能",
+          "summarizedJa": "Shopify BalanceまたはCreditカードにおいて、スタッフカードを特定の日付で自動的にロックできる機能がリリースされました。アカウントオーナーは指定した日付までしかスタッフがカードを使用できないように設定することで、支出管理を効率化できます。この機能により、期間限定のスタッフや予算管理がより容易になります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 7,
+          "analyzedAt": "2026-02-07T00:03:19.935Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1045,
+            "output": 229
+          },
+          "estimatedCost": 0.0065699999999999995
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "スタッフのBalanceカードまたはクレジットカードの自動ロック機能",
+          "summarizedJa": "Shopifyは、スタッフ向けのBalanceカードまたはクレジットカードを特定の日付に自動的にロックする機能をリリースしました。これにより、アカウントオーナーはスタッフのカード利用期限を設定し、支出をより効果的に管理できるようになります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-02-07T00:03:25.790Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 762,
+            "output": 119
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-giftcardconfiguration-now-includes-default-gift-card-expiration",
+      "source": "developer-changelog",
+      "title": "The `GiftCardConfiguration` object now includes default gift card expiration",
+      "link": "https://shopify.dev/changelog/giftcardconfiguration-now-includes-default-gift-card-expiration",
+      "publishedAt": "2026-02-06T17:00:00.000Z",
+      "collectedAt": "2026-02-07T00:03:12.971Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>You can now query a merchant's default gift card expiration settings using the GraphQL Admin API.</p>\n<p>The new <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-04/objects/GiftCardConfiguration#field-GiftCardConfiguration.fields.expirationConfiguration\" target=\"_blank\" class=\"body-link\"><code>expirationConfiguration</code></a> field on the <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-04/objects/GiftCardConfiguration\" target=\"_blank\" class=\"body-link\"><code>GiftCardConfiguration</code></a> object returns the merchant's configured expiration settings, including the duration value and time unit (days, months, or years). When merchants have automatic gift card expiration enabled, you can use these settings to calculate the <code>expiresOn</code> date for new gift cards.</p>\n<h2>How it works</h2>\n<ul>\n<li>The <code>expirationConfiguration</code> field returns either:<ul>\n<li>a <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-04/objects/GiftCardExpirationConfiguration\" target=\"_blank\" class=\"body-link\"><code>GiftCardExpirationConfiguration</code></a> object when the merchant has configured a default gift card expiration</li>\n<li><code>null</code> when the merchant has gift cards set never to expire</li>\n</ul>\n</li>\n<li>The <code>GiftCardExpirationConfiguration</code> object includes:<ul>\n<li>an <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-04/objects/GiftCardExpirationConfiguration#field-GiftCardExpirationConfiguration.fields.expirationValue\" target=\"_blank\" class=\"body-link\"><code>expirationValue</code></a> field (integer)</li>\n<li>an <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-04/objects/GiftCardExpirationConfiguration#field-GiftCardExpirationConfiguration.fields.expirationUnit\" target=\"_blank\" class=\"body-link\"><code>expirationUnit</code></a> field (enum: <code>DAYS</code>, <code>MONTHS</code>, <code>YEARS</code>)</li>\n</ul>\n</li>\n</ul>\n<h2>Example query</h2>\n<pre><code>query {\n  giftCardConfiguration {\n    expirationConfiguration {\n      expirationValue\n      expirationUnit\n    }\n  }\n}\n</code></pre>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "GiftCardConfigurationオブジェクトにギフトカードのデフォルト有効期限が追加されました",
+          "summarizedJa": "GraphQL Admin APIを使用して、マーチャントのデフォルトギフトカード有効期限設定を照会できるようになりました。GiftCardConfigurationオブジェクトに新しいexpirationConfigurationフィールドが追加され、有効期限の値と時間単位（日、月、年）を取得できます。自動有効期限が有効な場合、これらの設定を使用して新しいギフトカードのexpiresOn日付を計算できます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-02-07T00:03:30.110Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1583,
+            "output": 254
+          },
+          "estimatedCost": 0.008559
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "`GiftCardConfiguration`オブジェクトでギフトカードのデフォルト有効期限設定が取得可能に",
+          "summarizedJa": "ShopifyのGraphQL Admin APIを通じて、ストアのデフォルトのギフトカード有効期限設定（期間と単位）を取得できるようになりました。これにより、マーチャントはギフトカードの有効期限設定をプログラムで確認でき、パートナーは新しいギフトカードの有効期限を正確に計算するアプリケーションを開発できます。有効期限が設定されていない場合は`null`が返されます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-02-07T00:03:36.525Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1167,
+            "output": 156
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-shop-minis-january-2026-update",
+      "source": "developer-changelog",
+      "title": "Shop Minis January 2026 update",
+      "link": "https://shopify.dev/changelog/shop-minis-january-2026-update",
+      "publishedAt": "2026-02-06T17:00:00.000Z",
+      "collectedAt": "2026-02-07T00:03:12.971Z",
+      "category": [
+        "API",
+        "New",
+        "Shop Minis"
+      ],
+      "description": " <div class=\"\"><h2>New Features</h2>\n<h3>Delayed Consent</h3>\n<p>We've enhanced consent management by introducing a delayed consent popup for all Shop Minis.</p>\n<p><strong>What this means for partners:</strong></p>\n<ul>\n<li>Users will see a consent screen before your mini loads if you request scopes.</li>\n<li>The mini's landing (splash) screen is shown while consent is pending.</li>\n<li>Partners should customize their splash screen to provide a great first impression.</li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shop Minis 2026年1月アップデート",
+          "summarizedJa": "Shop Minisにおいて、遅延同意ポップアップ機能が導入されました。パートナーがスコープをリクエストする場合、ユーザーにはミニアプリ読み込み前に同意画面が表示され、同意待機中はランディング（スプラッシュ）画面が表示されます。パートナーは良い第一印象を与えるためにスプラッシュ画面をカスタマイズすることが推奨されます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-02-07T00:03:41.379Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1047,
+            "output": 240
+          },
+          "estimatedCost": 0.006741
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shop Minis 2026年1月アップデート",
+          "summarizedJa": "Shop Minisに「遅延同意」機能が導入され、スコープを要求するMiniは読み込み前にユーザーに同意画面を表示するようになります。パートナーは、同意待ちの間に表示されるスプラッシュスクリーンをカスタマイズし、ユーザーに良い第一印象を与えることが推奨されます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-02-07T00:03:46.375Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 743,
+            "output": 138
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-sending-payment-requests-per-fulfillment",
+      "source": "shopify-changelog",
+      "title": "Sending payment requests per fulfillment",
+      "link": "https://changelog.shopify.com/posts/sending-payment-requests-per-fulfillment",
+      "publishedAt": "2026-02-06T14:00:00.000Z",
+      "collectedAt": "2026-02-07T00:03:14.351Z",
+      "category": [
+        "Orders"
+      ],
+      "description": "\n        <p>With payment requests per fulfillment, you can manage cash flow for orders with mixed lead times, collect payment on pre-orders as they arrive, and ship in-stock items without waiting for backordered products. Your buyers can pay through Customer Accounts, where unpaid requests appear directly, or via the payment link in email.</p>\n\n<p>This is particularly valuable if you're managing pre-orders, custom products, or seasonal inventory where items ship at different times. Instead of manually tracking partial payments outside of Shopify, you can request payment for each shipment as it goes out, all tracked directly in your admin.</p>\n\n<p>Learn more about <a href=\"https://help.shopify.com/en/manual/fulfillment/managing-orders/payments/deferred-payments#payment-per-fulfillment\">sending payment requests per fulfillment</a> in the Shopify Help Center. Exclusive to Plus.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "フルフィルメントごとの支払いリクエスト送信",
+          "summarizedJa": "Shopify Plusマーチャント向けに、フルフィルメント（出荷）ごとに支払いリクエストを送信できる機能が追加されました。予約商品やカスタム商品など、出荷時期が異なる商品を扱う際に、各出荷のタイミングで支払いを請求でき、キャッシュフローの管理が容易になります。顧客はカスタマーアカウントまたはメールのリンクから支払いを行うことができます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-02-07T00:03:51.114Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1109,
+            "output": 254
+          },
+          "estimatedCost": 0.007137
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "出荷単位での支払いリクエスト送信",
+          "summarizedJa": "この新機能により、マーチャントは注文全体ではなく、出荷単位で支払いリクエストを送信できるようになります。これにより、リードタイムが異なる商品（予約販売品、カスタム品、在庫切れ品など）を含む注文のキャッシュフロー管理が容易になり、準備ができた商品から順次出荷し、その都度支払いを受け取ることが可能です。購入者は顧客アカウントまたはメールの支払いリンクから支払いができ、Shopify Plus限定の機能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-02-07T00:03:58.354Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 809,
+            "output": 166
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-new-payment-error-codes-added-to-subscriptions-apis",
       "source": "developer-changelog",
