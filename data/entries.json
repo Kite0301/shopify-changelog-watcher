@@ -1,6 +1,59 @@
 {
-  "lastUpdated": "2026-02-07T00:03:14.367Z",
+  "lastUpdated": "2026-02-10T00:07:14.181Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-shopifyappextensions-in-app-bridge-now-supports-pos-ui-extensions",
+      "source": "developer-changelog",
+      "title": "shopify.app.extensions() in App Bridge now supports POS UI extensions",
+      "link": "https://shopify.dev/changelog/shopifyappextensions-in-app-bridge-now-supports-pos-ui-extensions",
+      "publishedAt": "2026-02-09T20:00:00.000Z",
+      "collectedAt": "2026-02-10T00:07:12.617Z",
+      "category": [
+        "API",
+        "Update",
+        "App Bridge",
+        "POS Extensions"
+      ],
+      "description": " <div class=\"\"><p>The <a href=\"https://shopify.dev/docs/api/app-home/apis/app\" target=\"_blank\" class=\"body-link\"><code>shopify.app.extensions()</code> method in App Bridge</a> now supports <strong>Point of Sale (POS) UI extensions</strong>, in addition to checkout, customer account, Admin, and Theme extensions.</p>\n<p>With this update, your embedded app can query the status of POS UI extensions along with other extension surfaces. This enables you to consistently handle and activate your Point of Sale extensions, simplifying the creation of onboarding flows and setup dashboards that encompass your entire app extension ecosystem, including in-store experiences.</p>\n<p>For more information, refer to the <a href=\"https://shopify.dev/docs/api/app-home/apis/app\" target=\"_blank\" class=\"body-link\">developer documentation</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "App Bridgeのshopify.app.extensions()がPOS UI拡張機能に対応",
+          "summarizedJa": "App Bridgeのshopify.app.extensions()メソッドが、チェックアウトやAdmin等に加えて、POS UI拡張機能のステータス照会に対応しました。これにより、埋め込みアプリからPOS拡張機能を含む全ての拡張機能を統一的に管理できるようになり、店舗内体験を含むオンボーディングフローやセットアップダッシュボードの作成が簡素化されます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-02-10T00:07:19.753Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1143,
+            "output": 246
+          },
+          "estimatedCost": 0.007119
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "App Bridgeの`shopify.app.extensions()`がPOS UI拡張機能をサポート",
+          "summarizedJa": "Shopify App Bridgeの`shopify.app.extensions()`メソッドが、新たにPOS（販売時点管理）UI拡張機能をサポートしました。これにより、開発者は埋め込みアプリからPOS UI拡張機能の状態を照会し、チェックアウトや管理画面の拡張機能と同様に一貫して管理・有効化できるようになります。店舗での体験を含むアプリ全体のオンボーディングや設定が簡素化され、より統合されたアプリ体験を提供できるようになります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-02-10T00:07:27.371Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 841,
+            "output": 173
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-auto-lock-staff-balance-or-credit-cards",
       "source": "shopify-changelog",
