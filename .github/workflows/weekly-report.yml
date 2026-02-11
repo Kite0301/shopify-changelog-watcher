@@ -2,8 +2,8 @@ name: Weekly Report Generation
 
 on:
   schedule:
-    # 毎週月曜 10:00 JST (01:00 UTC)
-    - cron: '0 1 * * 1'
+    # 毎週月曜 9:30 JST (00:30 UTC)
+    - cron: '30 0 * * 1'
   workflow_dispatch: # 手動実行を許可
     inputs:
       week_number:
