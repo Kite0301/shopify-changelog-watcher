@@ -1,6 +1,106 @@
 {
-  "lastUpdated": "2026-02-10T00:07:14.181Z",
+  "lastUpdated": "2026-02-11T00:07:35.612Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-create-customers-and-companies-with-sidekick",
+      "source": "shopify-changelog",
+      "title": "Create customers and companies with Sidekick",
+      "link": "https://changelog.shopify.com/posts/create-customers-and-companies-with-sidekick",
+      "publishedAt": "2026-02-10T17:00:00.000Z",
+      "collectedAt": "2026-02-11T00:07:35.595Z",
+      "category": [
+        "Sidekick"
+      ],
+      "description": "\n        <p>Sidekick can now create customers and companies for you. Describe what you need in plain language, and Sidekick fills out the forms automatically.</p>\n\n<p>What you can do:<br>\n- Quick customer creation — \"Create a customer named John Smith with email john@example.com and tag VIP\"<br>\n- B2B company setup — \"Create Acme Corp company located at 1234 Holland Drive in Toronto with net-30 terms\"</p>\n\n<p>Any field on the customer or company creation form can be filled conversationally through Sidekick.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "SidekickでCustomerとCompanyを作成可能に",
+          "summarizedJa": "ShopifyのAIアシスタント「Sidekick」が、顧客（Customer）と企業（Company）の作成に対応しました。自然な言葉で指示するだけで、Sidekickが自動的にフォームを入力してくれます。「John Smithという名前でメールアドレスがjohn@example.comの顧客を作成してVIPタグを付けて」といった指示や、B2B企業の登録も会話形式で行えるようになります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 2,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-02-11T00:07:40.841Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1046,
+            "output": 240
+          },
+          "estimatedCost": 0.006738
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Sidekickによる顧客と企業の作成",
+          "summarizedJa": "ShopifyのAIアシスタントSidekickが、自然言語での指示に基づいて顧客や企業を自動的に作成できるようになりました。これにより、マーチャントは「John Smithという顧客をVIPタグ付きで作成」のように会話形式で顧客情報やB2B企業情報を効率的に登録でき、顧客・企業作成フォームのあらゆる項目を対話を通じて入力・設定可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-02-11T00:07:48.496Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 754,
+            "output": 149
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-sell-fixed-bundles-on-google",
+      "source": "shopify-changelog",
+      "title": "Sell fixed bundles on Google",
+      "link": "https://changelog.shopify.com/posts/sell-fixed-bundles-on-google",
+      "publishedAt": "2026-02-10T15:33:00.000Z",
+      "collectedAt": "2026-02-11T00:07:35.595Z",
+      "category": [
+        "Channels"
+      ],
+      "description": "\n        <p>Fixed bundles (a set bundle with fixed components) can now be published to Google.  Give customers more ways to discover your offers through the Google network, so you can turn that traffic into sales.</p>\n\n<p>Whether you create bundles with <a href=\"https://apps.shopify.com/shopify-bundles?search_id=c796b692-b9f5-41a5-908d-87a88adfad45&amp;shallow_install_type=search&amp;surface_detail=shopify+bundle&amp;surface_inter_position=1&amp;surface_intra_position=1&amp;surface_type=search\">Shopify Bundles</a> or the <a href=\"https://shopify.dev/docs/apps/build/product-merchandising/bundles/start-building\">bundles product API</a>, fixed bundles can be published across Google, appearing in search results, Shopping ads, YouTube, and more.</p>\n\n<p>Go to your bundle product’s product detail page <a href=\"https://admin.shopify.com/products\">in admin</a>, then enable \"Google &amp; Youtube\" in the Publishing section, just like you would for your online store or POS. No additional setup required. Updates to pricing, images, and inventory sync automatically. </p>\n\n<p>Download the <a href=\"https://apps.shopify.com/google?search_id=98ac3703-fa8e-4939-b148-a48478f62828&amp;surface_detail=google+shopping&amp;surface_inter_position=1&amp;surface_intra_position=14&amp;surface_type=search\">Google &amp; YouTube app</a>. <br>\nLearn more about creating and <a href=\"https://help.shopify.com/en/manual/products/bundles/shopify-bundles\">publishing bundles</a>. </p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Googleで固定バンドル商品の販売が可能に",
+          "summarizedJa": "Shopify Bundlesアプリまたはバンドル商品APIで作成した固定バンドル商品を、Google & YouTubeチャネルに公開できるようになりました。商品詳細ページの公開セクションで「Google & Youtube」を有効にするだけで、Google検索結果、ショッピング広告、YouTubeなどに表示され、価格、画像、在庫情報が自動的に同期されます。追加設定は不要です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-02-11T00:07:52.879Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1346,
+            "output": 237
+          },
+          "estimatedCost": 0.007593
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "固定バンドル商品をGoogleで販売可能に",
+          "summarizedJa": "Shopifyで作成した固定バンドル商品（セット商品）を、Google検索結果、ショッピング広告、YouTubeなどのGoogleネットワークに公開できるようになりました。これにより、日本のマーチャントはGoogleを通じて顧客にバンドル商品をより広くアピールし、売上向上に繋げることができます。管理画面から簡単に設定でき、価格や在庫の更新も自動で行われるため、運用負荷も少ないです。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-02-11T00:07:59.285Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1062,
+            "output": 157
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-shopifyappextensions-in-app-bridge-now-supports-pos-ui-extensions",
       "source": "developer-changelog",
@@ -49,6 +149,106 @@
           "tokenUsage": {
             "input": 841,
             "output": 173
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-australia-post-account-linking-available-on-grow-and-basic-plans",
+      "source": "shopify-changelog",
+      "title": "Australia Post account linking available on Grow and Basic plans",
+      "link": "https://changelog.shopify.com/posts/australia-post-account-linking-available-on-grow-and-basic-plans",
+      "publishedAt": "2026-02-09T17:00:00.000Z",
+      "collectedAt": "2026-02-11T00:07:35.595Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>Merchants on Grow and Basic plans in Australia can now connect their Australia Post account to Shopify at&nbsp;no additional cost. </p>\n\n<p>Once linked, you can purchase Australia Post domestic and international&nbsp;labels from your&nbsp;Shopify admin using your existing MyPost Business rates. </p>\n\n<p>When you buy labels in Shopify, tracking numbers sync to orders automatically, keeping customers informed and helping you fulfill faster. </p>\n\n<p>How to connect:<br>\n1. Log in to your <a href=\"https://auspost.com.au/mypost-business/account-management/partners\">MyPost&nbsp;Business dashboard</a>.<br>\n2. Click your name in the top right, open Business Details, then, in eCommerce partners, select Shopify and generate a token.<br>\n3. In your Shopify admin, open Settings, then Shipping and delivery. In <a href=\"https://admin.shopify.com/settings/shipping/#carrier-accounts-section\">Carrier accounts</a>, select Australia Post. <br>\n4. Paste your token and save.</p>\n\n<p><a href=\"https://help.shopify.com/en/manual/fulfillment/setup/shipping-rates/third-party-carrier-calculated-shipping/australia-post#use-your-own-account\">Learn more about Australia Post setup</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Australia PostアカウントがGrowプランとBasicプランで連携可能に",
+          "summarizedJa": "オーストラリアのGrowプランおよびBasicプランのマーチャントが、追加費用なしでAustralia PostアカウントをShopifyに連携できるようになりました。連携後は、Shopify管理画面から既存のMyPost Businessレートで国内外の配送ラベルを購入でき、追跡番号が自動的に注文に同期されます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 5,
+          "analyzedAt": "2026-02-11T00:08:03.449Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1238,
+            "output": 220
+          },
+          "estimatedCost": 0.007013999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "オーストラリア郵便アカウント連携がGrowおよびベーシックプランで利用可能に",
+          "summarizedJa": "オーストラリアのShopifyマーチャント向けに、Growおよびベーシックプランでオーストラリア郵便（Australia Post）アカウントとの連携が追加費用なしで可能になりました。これにより、既存のMyPost Business料金で国内・国際配送ラベルをShopify管理画面から直接購入でき、追跡番号の自動同期によりフルフィルメントが効率化されます。この機能はオーストラリア国内のマーチャントに特化したものです。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 5,
+          "analyzedAt": "2026-02-11T00:08:08.148Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 940,
+            "output": 168
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-collect-capital-remittance-through-shopify-payments-in-texas",
+      "source": "shopify-changelog",
+      "title": "Collect Capital remittance through Shopify Payments in Texas",
+      "link": "https://changelog.shopify.com/posts/collect-capital-remittance-through-shopify-payments-in-texas",
+      "publishedAt": "2026-02-09T17:00:00.000Z",
+      "collectedAt": "2026-02-11T00:07:35.595Z",
+      "category": [
+        "Shopify capital"
+      ],
+      "description": "\n        <p>Due to new legal requirements in Texas, Shopify Capital began collecting repayments through Shopify Payments for new financing originated on or after September 1, 2025.</p>\n\n<p>For these financings, the repayment amount is automatically deducted from each day’s Shopify Payments payout before the payout is deposited into the merchant’s bank account.</p>\n\n<p>Please note:<br>\nThis change applies only to new Shopify Capital loans or Capital Flex accounts originated on or after September 1, 2025. Repayments for financings originated before this date will continue to be collected through ACH direct debit.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "テキサス州でShopify Paymentsを通じたCapital返済の回収を開始",
+          "summarizedJa": "テキサス州の新しい法的要件により、2025年9月1日以降に組成されたShopify Capitalの新規融資では、返済がShopify Paymentsを通じて自動的に回収されるようになりました。返済額は各日のShopify Paymentsの入金から自動的に差し引かれ、その後マーチャントの銀行口座に入金されます。この変更は新規融資のみに適用され、それ以前の融資はACH口座振替による回収が継続されます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 5,
+          "analyzedAt": "2026-02-11T00:08:13.070Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1069,
+            "output": 265
+          },
+          "estimatedCost": 0.007182000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "テキサス州におけるShopify Paymentsを通じたShopify Capitalの返済回収",
+          "summarizedJa": "テキサス州の新たな法的要件により、2025年9月1日以降に開始されるShopify Capitalの新規融資について、返済方法が変更されます。これにより、返済額はマーチャントの銀行口座に入金される前に、Shopify Paymentsの支払いから自動的に差し引かれるようになります。この変更は新規融資のみに適用され、それ以前の融資は引き続きACH直接引き落としで回収されます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 1
+          },
+          "totalScore": 4,
+          "analyzedAt": "2026-02-11T00:08:18.637Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 767,
+            "output": 181
           },
           "estimatedCost": 0
         }
@@ -307,6 +507,59 @@
           "tokenUsage": {
             "input": 1066,
             "output": 156
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-introducing-tracksinventory-query-filter-for-products",
+      "source": "developer-changelog",
+      "title": "Introducing the `tracks_inventory` query filter for products",
+      "link": "https://shopify.dev/changelog/introducing-tracksinventory-query-filter-for-products",
+      "publishedAt": "2026-02-03T17:00:00.000Z",
+      "collectedAt": "2026-02-11T00:07:34.475Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>As of GraphQL Admin API version <code>2026-04</code>, you can <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/queries/products#argument-query-filter-tracks_inventory\" target=\"_blank\" class=\"body-link\">filter products</a> based on whether their inventory is tracked using the new <code>tracks_inventory</code> Boolean filter.</p>\n<p>This is especially useful when working with merchants like dropshippers who might not maintain on-hand inventory.</p>\n<h3>Example usage</h3>\n<pre><code>query RetrieveWithInventoryProducts {\n  withInventory: products(first: 10, query: &quot;published_status:published AND tracks_inventory:true&quot;) {\n    edges {\n      node {\n        id\n        title\n        status\n        totalInventory\n        tracksInventory\n      }\n    }\n  }\n</code></pre>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "商品の在庫追跡フィルター `tracks_inventory` の導入",
+          "summarizedJa": "GraphQL Admin API バージョン2026-04から、商品検索時に在庫追跡の有無でフィルタリングできる新しい`tracks_inventory`フィルターが追加されました。このフィルターはブール値で、在庫を追跡している商品と追跡していない商品を区別して取得できます。ドロップシッピング業者など、手持ち在庫を持たないマーチャント向けのアプリ開発に特に有用です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-02-11T00:08:22.836Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1153,
+            "output": 244
+          },
+          "estimatedCost": 0.007119
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "商品向け`tracks_inventory`クエリフィルターの導入",
+          "summarizedJa": "GraphQL Admin APIバージョン2026-04より、商品が在庫追跡されているかどうかを`tracks_inventory`ブーリアンフィルターで絞り込めるようになりました。この機能は、ドロップシッパーのように実在庫を持たないマーチャントの商品管理を効率化するのに特に有用です。開発者はこの新しいフィルターを活用して、より精度の高い商品リストの取得やアプリケーションの構築が可能になります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-02-11T00:08:30.923Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 851,
+            "output": 164
           },
           "estimatedCost": 0
         }
