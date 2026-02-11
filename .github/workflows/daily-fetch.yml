@@ -72,6 +72,32 @@ jobs:
           # 出力内容を表示
           cat analyze-output.txt
 
+      - name: Extract new entry titles
+        id: extract_titles
+        if: steps.fetch.outputs.new_entries != '0'
+        run: |
+          # entries.jsonから新着エントリーのタイトルを抽出
+          # 最新のN件を取得（新着エントリー数分）
+          NEW_COUNT=${{ steps.fetch.outputs.new_entries }}
+
+          # jqを使用してタイトルを抽出し、改行区切りで結合
+          TITLES=$(jq -r --argjson count "$NEW_COUNT" '.entries[:$count] | .[] | "• " + .title' data/entries.json | head -n 10)
+
+          # Slack用にフォーマット（複数行を\nでエスケープ）
+          TITLES_FORMATTED=$(echo "$TITLES" | sed ':a;N;$!ba;s/\n/\\n/g')
+
+          # 10件を超える場合は省略メッセージを追加
+          if [ "$NEW_COUNT" -gt 10 ]; then
+            REMAINING=$((NEW_COUNT - 10))
+            TITLES_FORMATTED="${TITLES_FORMATTED}\\n_...and ${REMAINING} more_"
+          fi
+
+          echo "titles<<EOF" >> $GITHUB_OUTPUT
+          echo -e "$TITLES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+          echo "titles_formatted=$TITLES_FORMATTED" >> $GITHUB_OUTPUT
+
       - name: Check for changes
         id: check_changes
         run: |
@@ -138,6 +164,13 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
+                    "text": "*New Articles:*\n${{ steps.extract_titles.outputs.titles }}"
+                  }
+                },
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
                     "text": "*AI Analysis Cost:*\n• Claude Sonnet 4.5: $$${{ steps.analyze.outputs.claude_cost || '0.0000' }} (${{ steps.analyze.outputs.claude_tokens || '0' }} tokens)\n• Gemini 2.5 Flash: $$${{ steps.analyze.outputs.gemini_cost || '0.0000' }} (${{ steps.analyze.outputs.gemini_tokens || '0' }} tokens)"
                   }
                 },
@@ -145,7 +178,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "View the changes on <https://github.com/${{ github.repository }}/blob/main/data/entries.json|GitHub>"
+                    "text": "View the changes on <https://kite0301.github.io/shopify-changelog-watcher/|GitHub Pages>"
                   }
                 },
                 {
