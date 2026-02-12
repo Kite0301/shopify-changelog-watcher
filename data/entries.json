@@ -1,6 +1,60 @@
 {
-  "lastUpdated": "2026-02-11T00:07:35.612Z",
+  "lastUpdated": "2026-02-12T00:03:00.831Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-webhook-subscriptions-now-support-a-name-field-for-identification",
+      "source": "developer-changelog",
+      "title": "Webhook subscriptions now support a name field for identification",
+      "link": "https://shopify.dev/changelog/webhook-subscriptions-now-support-a-name-field-for-identification",
+      "publishedAt": "2026-02-11T17:00:00.000Z",
+      "collectedAt": "2026-02-12T00:02:59.193Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "Webhook",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>You can now assign an optional name to your webhook subscriptions to simplify identification and management. This feature is available for both TOML-based subscriptions and subscriptions created through the Admin API subscriptions created via the GraphQL Admin API.</p>\n<p>Naming your webhooks is particularly beneficial when you have multiple subscriptions targeting the same endpoint or listening to the same topic with different filters. When a webhook is delivered, its name is included in the request headers, allowing you to route and process incoming webhooks without needing to parse the payload body.</p>\n<p>For admin API subscriptions, the webhook name must be unique per shop. For declarative subscriptions, the name must be unique per app. Names can be up to 50 characters long and may include alphanumeric characters, underscores, and hyphens.</p>\n<p>To set a name for TOML-based subscriptions, update the <code>name</code> field in your <code>shopify.app.toml</code> webhook configuration. From <code>2026-04</code>, you can name admin API subscriptions, the <code>name</code> field can be set using the <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-04/objects/WebhookSubscription\" target=\"_blank\" class=\"body-link\">WebhookSubscription</a> GraphQL object, as well as through the <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-04/mutations/webhookSubscriptionCreate\" target=\"_blank\" class=\"body-link\">webhookSubscriptionCreate</a> and <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-04/mutations/webhookSubscriptionUpdate\" target=\"_blank\" class=\"body-link\">webhookSubscriptionUpdate</a> mutations.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Webhookサブスクリプションで識別用の名前フィールドに対応",
+          "summarizedJa": "Webhookサブスクリプションにオプションの名前を設定できるようになりました。同じエンドポイントや同じトピックに対する複数のサブスクリプションを識別しやすくなり、リクエストヘッダーに名前が含まれるため、ペイロードを解析せずにルーティングが可能になります。TOML形式とAdmin API経由の両方のサブスクリプションで利用でき、2026-04バージョンから利用可能です。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-02-12T00:03:05.899Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1361,
+            "output": 255
+          },
+          "estimatedCost": 0.007908
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Webhookサブスクリプションで識別用の名前フィールドがサポートされました",
+          "summarizedJa": "ShopifyのWebhookサブスクリプションに、識別用のオプションの名前フィールドが追加されました。これにより、複数のWebhookを管理する際に、エンドポイントやトピックが同じでも名前で簡単に識別・ルーティングできるようになります。特にアプリ開発者やシステム連携を行うパートナーにとって、Webhookの管理と処理の効率化に貢献するでしょう。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-02-12T00:03:10.969Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1034,
+            "output": 147
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-create-customers-and-companies-with-sidekick",
       "source": "shopify-changelog",
@@ -404,6 +458,57 @@
           "tokenUsage": {
             "input": 743,
             "output": 138
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-accelerated-checkout-now-supports-addons-from-the-product-page",
+      "source": "developer-changelog",
+      "title": "Accelerated checkouts now support add‑ons from the product page",
+      "link": "https://shopify.dev/changelog/accelerated-checkout-now-supports-addons-from-the-product-page",
+      "publishedAt": "2026-02-06T17:00:00.000Z",
+      "collectedAt": "2026-02-12T00:02:59.193Z",
+      "category": [
+        "Tools",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>It’s now possible to purchase products and their add-on products (for example, a TV and its warranty) from the product page using accelerated checkouts. </p>\n<p>Learn more in the <a href=\"https://shopify.dev/docs/storefronts/themes/pricing-payments/accelerated-checkout/checkout-with-multiple-products\" target=\"_blank\" class=\"body-link\">developer documentation</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "商品ページからのアドオン商品追加が高速チェックアウトに対応",
+          "summarizedJa": "商品ページから高速チェックアウト（Shop Pay、Apple Payなど）を利用する際に、アドオン商品（テレビと保証など）を同時に購入できるようになりました。これにより、複数商品をまとめてワンクリックで購入できる利便性が向上します。開発者向けドキュメントで詳細な実装方法が公開されています。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-02-12T00:03:15.316Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1025,
+            "output": 225
+          },
+          "estimatedCost": 0.006450000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "商品ページからのアドオン購入が高速チェックアウトに対応",
+          "summarizedJa": "Shopifyの高速チェックアウト機能が拡張され、商品ページからメイン商品とそのアドオン製品（例：テレビと保証）を同時に購入できるようになりました。これにより、顧客は商品ページを離れることなく、関連商品をまとめてスムーズに購入体験を完了できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-02-12T00:03:21.747Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 737,
+            "output": 130
           },
           "estimatedCost": 0
         }
