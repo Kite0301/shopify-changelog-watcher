@@ -1,6 +1,109 @@
 {
-  "lastUpdated": "2026-02-12T00:03:00.831Z",
+  "lastUpdated": "2026-02-13T00:04:35.617Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-use-metafields-as-dimensions-and-filters-in-analytics",
+      "source": "shopify-changelog",
+      "title": "Use metafields as dimensions and filters in Analytics",
+      "link": "https://changelog.shopify.com/posts/use-metafields-as-dimensions-and-filters-in-analytics",
+      "publishedAt": "2026-02-12T23:00:00.000Z",
+      "collectedAt": "2026-02-13T00:04:35.607Z",
+      "category": [
+        "Analytics"
+      ],
+      "description": "\n        <p>We've released <strong>metafields in Analytics</strong> so you can use your custom data in reports. You can now group and filter by metafields on products, variants, customers, and orders, for example by material, loyalty tier, or ingredients, directly in <strong>Reports</strong> and <strong>Explore</strong>. No need to export to spreadsheets: your custom dimensions live in Analytics. Choose which metafields to use by turning on <strong>Enable in Analytics</strong> in <strong>Settings → Metafields and metaobjects</strong> for each definition (Products, Variants, Customers, or Orders). We built this so you can segment and analyze the data that matters to your business without leaving Shopify.</p>\n\n<p>For step-by-step guidance and supported types, see the <a href=\"https://help.shopify.com/en/manual/custom-data/options#list-of-options-available-for-metafields\">Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Analyticsでメタフィールドをディメンションやフィルターとして利用可能に",
+          "summarizedJa": "Shopify Analyticsで、商品、バリエーション、顧客、注文のメタフィールドをレポートのグループ化やフィルターとして使用できるようになりました。素材、ロイヤルティ階層、成分などのカスタムデータを、スプレッドシートへのエクスポートなしで直接ReportsやExploreで分析可能です。設定画面でメタフィールド定義ごとに「Enable in Analytics」を有効化することで利用できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-02-13T00:04:41.044Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1143,
+            "output": 258
+          },
+          "estimatedCost": 0.007299
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "アナリティクスでメタフィールドをディメンションおよびフィルターとして利用可能に",
+          "summarizedJa": "Shopifyアナリティクスで、商品、バリアント、顧客、注文に設定したメタフィールドをディメンションやフィルターとして利用できるようになりました。これにより、素材や顧客ランクなどのカスタムデータをレポートや探索機能で直接分析でき、ビジネスに合わせた詳細なデータ分析がShopify内で完結します。設定から各メタフィールド定義で「アナリティクスで有効にする」をオンにするだけで利用可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-02-13T00:04:47.491Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 836,
+            "output": 167
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-added-new-enum-values-for-columndatatype-in-shopifyqltabledatacolumn",
+      "source": "developer-changelog",
+      "title": "Added new enum values for ColumnDataType in ShopifyqlTableDataColumn",
+      "link": "https://shopify.dev/changelog/added-new-enum-values-for-columndatatype-in-shopifyqltabledatacolumn",
+      "publishedAt": "2026-02-12T17:00:00.000Z",
+      "collectedAt": "2026-02-13T00:04:34.212Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>We have introduced 3 new enum values to <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-04/enums/ColumnDataType\" target=\"_blank\" class=\"body-link\">ColumnDataType</a> in <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-04/objects/ShopifyqlTableDataColumn\" target=\"_blank\" class=\"body-link\">ShopifyqlTableDataColumn</a>: </p>\n<ul>\n<li><code>RATING</code> : Represents a rating value as float.</li>\n<li><code>STRING IDENTITY</code>:  Represents a GID/UUID value.</li>\n<li><code>COLOR</code>:  Represents a color value in HEX format.</li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "ShopifyqlTableDataColumnのColumnDataTypeに新しい列挙値を追加",
+          "summarizedJa": "Admin GraphQL APIのShopifyqlTableDataColumnにおいて、ColumnDataTypeに3つの新しい列挙値が追加されました。追加されたのは、評価値を表すRATING、GID/UUIDを表すSTRING_IDENTITY、HEX形式の色値を表すCOLORです。ShopifyQLを使用したデータ分析やレポート機能の開発において、より多様なデータ型の扱いが可能になります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-02-13T00:04:52.651Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1145,
+            "output": 239
+          },
+          "estimatedCost": 0.00702
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "ShopifyqlTableDataColumnのColumnDataTypeに新しいEnum値が追加されました",
+          "summarizedJa": "ShopifyqlTableDataColumnのColumnDataTypeに、「RATING（評価値）」「STRING IDENTITY（GID/UUID）」「COLOR（色情報）」という3つの新しいデータ型が追加されました。これにより、ShopifyQLを使ったデータ分析やカスタムレポート作成において、より多様な情報を表現・利用できるようになります。特に、パートナーが開発するアプリや機能を通じて、マーチャントは詳細なデータを活用できるようになるでしょう。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-02-13T00:04:58.142Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 827,
+            "output": 168
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-webhook-subscriptions-now-support-a-name-field-for-identification",
       "source": "developer-changelog",
