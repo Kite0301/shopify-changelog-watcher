@@ -1,6 +1,56 @@
 {
-  "lastUpdated": "2026-02-13T00:04:35.617Z",
+  "lastUpdated": "2026-02-16T00:03:09.276Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-improved-us-sales-tax-reports",
+      "source": "shopify-changelog",
+      "title": "Improved United States sales tax reports",
+      "link": "https://changelog.shopify.com/posts/improved-us-sales-tax-reports",
+      "publishedAt": "2026-02-13T22:00:00.000Z",
+      "collectedAt": "2026-02-16T00:03:09.266Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>We added data fields and fixed calculations in two US sales tax reports used for filing and exports: the state-level Detailed transactions report and the Jurisdiction report.</p>\n\n<p>Detailed transactions report<br>\n* Added full address details for each transaction: destination, origin, and billing.<br>\n* Added product category and any tax exemptions applied to the transaction.</p>\n\n<p>Jurisdiction report<br>\n* Added new columns showing combined item and shipping totals.<br>\n* Fixed a calculation error: columns intended to show item totals no longer include shipping.</p>\n\n<p>Learn more about <a href=\"https://help.shopify.com/en/manual/taxes/tax-reports\">how each tax report is used</a> or <a href=\"https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/finances-report\">the data fields in the report</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "アメリカ売上税レポートの改善",
+          "summarizedJa": "アメリカの売上税申告に使用される2つのレポート（詳細トランザクションレポートと管轄区域レポート）が改善されました。詳細トランザクションレポートには配送先・発送元・請求先の完全な住所、商品カテゴリ、税免除情報が追加され、管轄区域レポートでは商品と配送料の合計列が追加され、計算エラーが修正されました。これらの改善により、アメリカでの売上税申告の精度と効率が向上します。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 2,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 7,
+          "analyzedAt": "2026-02-16T00:03:14.847Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1121,
+            "output": 261
+          },
+          "estimatedCost": 0.007278
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "米国売上税レポートの改善",
+          "summarizedJa": "Shopifyの米国売上税レポート「Detailed transactions report」と「Jurisdiction report」が改善されました。「Detailed transactions report」には取引の完全な住所詳細、商品カテゴリ、税免除情報が追加され、「Jurisdiction report」には商品と送料の合計を示す新しい列が追加され、計算エラーが修正されました。これにより、米国での税務申告やデータエクスポートの精度が向上します。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 5,
+          "analyzedAt": "2026-02-16T00:03:21.302Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 833,
+            "output": 159
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-use-metafields-as-dimensions-and-filters-in-analytics",
       "source": "shopify-changelog",
