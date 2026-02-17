@@ -1,6 +1,59 @@
 {
-  "lastUpdated": "2026-02-16T00:03:09.276Z",
+  "lastUpdated": "2026-02-17T00:03:35.928Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-remaining-line-items-weight-available-for-fulfillment-orders",
+      "source": "developer-changelog",
+      "title": "Remaining line items weight available for fulfillment orders",
+      "link": "https://shopify.dev/changelog/remaining-line-items-weight-available-for-fulfillment-orders",
+      "publishedAt": "2026-02-16T05:00:00.000Z",
+      "collectedAt": "2026-02-17T00:03:34.793Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>In the API 2026-04 release candidate version, a new field, <code>remainingLineItemsWeight</code>, has been added to the <code>FulfillmentOrder</code> GraphQL type. This field returns the total weight of line items that haven’t been fulfilled yet, which enables you to make decisions based on remaining weight in your fulfillment order.</p>\n<p>For implementation details and further information, see the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/FulfillmentOrder\" target=\"_blank\" class=\"body-link\">fulfillment orders documentation</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "フルフィルメント注文で未出荷の商品の残り重量が利用可能に",
+          "summarizedJa": "Admin GraphQL API 2026-04のリリース候補版で、FulfillmentOrderタイプに新しいフィールド「remainingLineItemsWeight」が追加されました。このフィールドは未フルフィルメントの商品の合計重量を返すもので、フルフィルメント注文における残り重量に基づいた意思決定が可能になります。物流や配送業務の最適化に役立つ機能です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-02-17T00:03:41.209Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1078,
+            "output": 238
+          },
+          "estimatedCost": 0.006804
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "フルフィルメントオーダーの未処理商品合計重量が取得可能に",
+          "summarizedJa": "ShopifyのAdmin GraphQL API 2026-04バージョンにおいて、`FulfillmentOrder`タイプに`remainingLineItemsWeight`という新しいフィールドが追加されました。このフィールドは、まだフルフィルメントされていない商品ラインアイテムの合計重量を返します。これにより、マーチャントやパートナーは、フルフィルメントオーダーに残っている商品の重量に基づいて、より効率的な出荷判断や物流計画を立てることが可能になります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-02-17T00:03:48.031Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 779,
+            "output": 167
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-improved-us-sales-tax-reports",
       "source": "shopify-changelog",
