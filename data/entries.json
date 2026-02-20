@@ -1,6 +1,316 @@
 {
-  "lastUpdated": "2026-02-17T00:03:35.928Z",
+  "lastUpdated": "2026-02-20T00:04:11.521Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-reduced-metafield-value-sizes",
+      "source": "developer-changelog",
+      "title": "Reduced metafield value sizes",
+      "link": "https://shopify.dev/changelog/reduced-metafield-value-sizes",
+      "publishedAt": "2026-02-19T17:00:00.000Z",
+      "collectedAt": "2026-02-20T00:04:10.437Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Breaking API Change",
+        "Admin GraphQL API",
+        "Admin REST API",
+        "Customer Account API",
+        "Storefront GraphQL API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>Beginning with API version 2026-04, new metafield values are limited to 16KB.  Existing metafields that exceed this size will remain read-only until they are updated. </p>\n<p>We're introducing this limit to maintain platform performance and stability. We believe this limit accommodates metafield use cases while preventing performance issues from extremely large values. If your app needs to store larger data, consider these alternatives:</p>\n<p>Alternatives to single large metafield values:</p>\n<ul>\n<li>Metaobject references supporting complex structured data</li>\n<li>List support for multiple values</li>\n<li>Split data across multiple metafields with logical grouping</li>\n<li>Use the Files API for large content</li>\n</ul>\n<p>Enhancements we've made to enable large data sets:</p>\n<ul>\n<li>Higher metaobject entry limits</li>\n<li>Increased metafield definition limits per resource</li>\n<li>Limits apply separately per app and are not tied to shop limits</li>\n</ul>\n<p>Find the <a href=\"https://shopify.dev/docs/apps/build/metafields/metafield-limits\" target=\"_blank\" class=\"body-link\">new limits here</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "メタフィールド値のサイズ制限の縮小",
+          "summarizedJa": "APIバージョン2026-04以降、新規メタフィールド値は16KBまでに制限されます。既存の制限超過メタフィールドは更新されるまで読み取り専用となります。大容量データが必要な場合は、メタオブジェクト参照、リスト、複数メタフィールドへの分割、またはFiles APIの利用などの代替手段を検討してください。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-02-20T00:04:16.061Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1248,
+            "output": 224
+          },
+          "estimatedCost": 0.007104
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "メタフィールド値のサイズ制限引き下げ",
+          "summarizedJa": "ShopifyはAPIバージョン2026-04より、新規メタフィールド値のサイズを16KBに制限します。既存の16KBを超える値は読み取り専用となり、更新にはサイズ調整が必要です。これはプラットフォームのパフォーマンス維持のためであり、より大きなデータを扱う場合はメタオブジェクトやFiles APIなどの代替手段の利用が推奨されます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 5
+          },
+          "totalScore": 18,
+          "analyzedAt": "2026-02-20T00:04:22.684Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 914,
+            "output": 147
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-improved-app-logs-and-monitoring",
+      "source": "developer-changelog",
+      "title": "Improved app logs and monitoring",
+      "link": "https://shopify.dev/changelog/improved-app-logs-and-monitoring",
+      "publishedAt": "2026-02-19T17:00:00.000Z",
+      "collectedAt": "2026-02-20T00:04:10.437Z",
+      "category": [
+        "Tools",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>We are enhancing app monitoring and logs to provide better visibility and debugging capabilities, starting with webhooks.</p>\n<p><strong>Monitoring Page Improvements</strong></p>\n<ul>\n<li>Expanded History: Access up to 30 days of webhook data, including successful deliveries, error counts, and p90 response times.  </li>\n<li>Topic Filtering: List all topics and filter the page to view charts specific to a single topic.</li>\n</ul>\n<p><strong>Logs Page Improvements</strong></p>\n<ul>\n<li>Fine-Grained Time Filters: Search logs using customized start and end dates and times for faster troubleshooting.  </li>\n<li>Multi-Select Filters: Filter by multiple Shops, Statuses, or Topics simultaneously.  </li>\n<li>Filter counts: See the count of events associated with each Shop, Status, and Topic filter option.</li>\n</ul>\n<p>These features are now available in the <a href=\"https://dev.shopify.com/dashboard/\" target=\"_blank\" class=\"body-link\">Dev Dashboard</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "アプリのログとモニタリング機能の改善",
+          "summarizedJa": "Webhook機能を中心に、アプリのモニタリングとログ機能が強化されました。モニタリングページでは最大30日間のWebhookデータ履歴の確認とトピック別のフィルタリングが可能になり、ログページでは詳細な時間フィルター、複数条件の同時選択、イベント数の表示など、デバッグとトラブルシューティングがより効率的に行えるようになりました。これらの機能は開発者ダッシュボードで利用できます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-02-20T00:04:27.470Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1174,
+            "output": 258
+          },
+          "estimatedCost": 0.007391999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "アプリのログと監視機能の強化",
+          "summarizedJa": "Shopifyは、特にウェブフックに焦点を当て、アプリの監視とログ機能を大幅に改善しました。これにより、開発者は最大30日間のウェブフック履歴や詳細なフィルタリング機能を利用して、アプリの動作状況をより正確に把握し、問題解決を迅速に行えるようになります。これらの新機能はDev Dashboardで利用可能です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-02-20T00:04:33.978Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 844,
+            "output": 148
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-the-dev-dashboard-is-now-multi-lingual",
+      "source": "developer-changelog",
+      "title": "The Dev Dashboard is now multi-lingual",
+      "link": "https://shopify.dev/changelog/the-dev-dashboard-is-now-multi-lingual",
+      "publishedAt": "2026-02-19T13:00:00.000Z",
+      "collectedAt": "2026-02-20T00:04:10.437Z",
+      "category": [
+        "Tools",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>The Dev Dashboard now renders in your preferred language, and is available in all the languages supported by the Shopify admin.</p>\n<p>For more information, see <a href=\"https://help.shopify.com/en/manual/your-account/languages\" target=\"_blank\" class=\"body-link\">Choosing your account language and region</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "開発者ダッシュボードが多言語対応に",
+          "summarizedJa": "開発者ダッシュボード（Dev Dashboard）が多言語対応となり、Shopify管理画面でサポートされているすべての言語で表示できるようになりました。ユーザーのアカウント設定で選択した言語に応じて、ダッシュボードが自動的にその言語で表示されます。日本語での利用も可能です。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-02-20T00:04:38.024Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 996,
+            "output": 208
+          },
+          "estimatedCost": 0.006108
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "開発者ダッシュボードが多言語対応になりました",
+          "summarizedJa": "開発者ダッシュボードがShopify管理画面でサポートされているすべての言語に対応し、ユーザーが選択した言語で表示されるようになりました。これにより、日本のパートナーや開発者は、使い慣れた日本語でダッシュボードを利用できるようになり、操作性と利便性が向上します。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-02-20T00:04:41.757Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 709,
+            "output": 130
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-use-the-admin-api-and-bulk-operations-in-shopify-cli",
+      "source": "developer-changelog",
+      "title": "Use the Admin API and bulk operations in Shopify CLI",
+      "link": "https://shopify.dev/changelog/use-the-admin-api-and-bulk-operations-in-shopify-cli",
+      "publishedAt": "2026-02-19T13:00:00.000Z",
+      "collectedAt": "2026-02-20T00:04:10.437Z",
+      "category": [
+        "Tools",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>Shopify CLI 3.90.1 now features commands that let you execute queries, mutations, and <a href=\"https://shopify.dev/docs/api/usage/bulk-operations/queries\" target=\"_blank\" class=\"body-link\">bulk operations</a> right from your terminal.</p>\n<ul>\n<li><code>shopify app execute</code> allows you to run standard Admin API queries and mutations.  </li>\n<li><code>shopify app bulk execute</code> allows you to start bulk queries and bulk mutations, and optionally <code>--watch</code> them synchronously.  </li>\n<li><code>shopify app bulk status</code> and <code>shopify app bulk cancel</code> allow you to monitor and manage bulk operations.</li>\n</ul>\n<p>These new commands come on the heels of the release of <a href=\"https://shopify.dev/changelog/faster-bulk-operations\" target=\"_blank\" class=\"body-link\">improved performance and expanded mutation support for bulk operations</a>, which make it possible to handle larger data sets for a wider variety of data types. With this Shopify CLI release, it’s now easy for you to script and automate both bulk operations and standard GraphQL operations with the Admin API, or utilize them with coding agents to query and manipulate your dev stores.</p>\n<p>For more information, see the <a href=\"https://shopify.dev/docs/api/usage/api-exploration/admin-cli-app-execute\" target=\"_blank\" class=\"body-link\">documentation</a> and our <a href=\"https://community.shopify.dev/t/admin-api-and-bulk-operations-in-shopify-cli/29467\" target=\"_blank\" class=\"body-link\">community announcement</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify CLIでAdmin APIとバルクオペレーションが利用可能に",
+          "summarizedJa": "Shopify CLI 3.90.1で、ターミナルから直接Admin APIのクエリ、ミューテーション、バルクオペレーションを実行できる新しいコマンドが追加されました。`shopify app execute`で標準的なAPI操作を、`shopify app bulk execute`でバルククエリやバルクミューテーションを実行でき、`--watch`オプションで同期的に監視することも可能です。これにより、開発ストアのデータ操作やスクリプト自動化が容易になり、大規模データセットの処理効率が向上します。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-02-20T00:04:46.542Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1338,
+            "output": 280
+          },
+          "estimatedCost": 0.008213999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify CLIでのAdmin APIとバルク操作の利用",
+          "summarizedJa": "Shopify CLI 3.90.1で、ターミナルから直接Admin APIのクエリ、ミューテーション、そしてバルク操作を実行できるようになりました。これにより、開発者は大量のデータを扱う操作や、通常のGraphQL操作をShopify CLIを通じて簡単に自動化・スクリプト化できるようになり、開発ストアの管理効率が大幅に向上します。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-02-20T00:04:52.836Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1006,
+            "output": 152
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-enable-offline-checkout-from-pos-device-setting",
+      "source": "shopify-changelog",
+      "title": "Enable Offline Checkout from POS Device Setting",
+      "link": "https://changelog.shopify.com/posts/enable-offline-checkout-from-pos-device-setting",
+      "publishedAt": "2026-02-18T18:00:00.000Z",
+      "collectedAt": "2026-02-20T00:04:11.504Z",
+      "category": [
+        "Pos"
+      ],
+      "description": "\n        <p>Store staff now have the ability to activate offline checkout mode per device, given proper permissions, with an event logged under Store activity log. This allows staff to continue making sales during outages or when your internet connection is spotty. In order to accept card payments during offline checkout mode, you first need to enable offline payments in POS settings.</p>\n\n<p>To learn more about offline checkout, visit the <a href=\"https://help.shopify.com/en/manual/sell-in-person/shopify-pos/selling-offline/offline-payments\">help center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "POSデバイス設定からオフラインチェックアウトを有効化",
+          "summarizedJa": "適切な権限を持つスタッフが、デバイスごとにオフラインチェックアウトモードを有効化できるようになりました。この機能により、インターネット接続が不安定な場合や通信障害時でも販売を継続できます。オフラインモードでカード決済を受け付けるには、事前にPOS設定でオフライン決済を有効にする必要があります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-02-20T00:04:56.937Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1037,
+            "output": 229
+          },
+          "estimatedCost": 0.006546
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "POSデバイス設定からのオフラインチェックアウト有効化",
+          "summarizedJa": "店舗スタッフは、適切な権限があれば、POSデバイスごとにオフラインチェックアウトモードを有効にできるようになりました。これにより、インターネット接続障害時でも販売を継続できます。オフラインモードでカード決済を受け付けるには、事前にPOS設定でオフライン決済を有効にする必要があります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-02-20T00:05:03.625Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 752,
+            "output": 131
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-shopify-pos-version-11-0",
+      "source": "shopify-changelog",
+      "title": "Shopify POS version 11.0",
+      "link": "https://changelog.shopify.com/posts/shopify-pos-version-11-0",
+      "publishedAt": "2026-02-18T18:00:00.000Z",
+      "collectedAt": "2026-02-20T00:04:11.504Z",
+      "category": [
+        "Pos"
+      ],
+      "description": "\n        <p>We’ve just launched Shopify POS version 11.0, bringing meaningful updates to the cart and core selling flow to help you and your staff work faster and stay focused during busy in-store moments. This release introduces improved cart interactions, add customer workflows, and smarter action handling, all built to make high frequency tasks easier and faster. The result is a more predictable staff experience that helps staff stay focused, oriented on the cart, and move faster through transactions with confidence, even if it's their first time using the POS.</p>\n\n<p><strong>Here’s what’s new in version 11.0</strong> </p>\n\n<p><strong>Improved cart and action workflows</strong> <br>\n- A cleaner, more readable cart layout makes it easier to scan items, prices and totals at a glance<br>\n- The More actions menu now includes only actions that apply to the cart as a whole. Other actions have moved closer to where they’re used, either in the Smart Grid or directly in the cart. <br>\n- Multi-select in the cart lets staff edit or modify multiple items at once, reducing repetitive actions on larger orders <br>\n- Key actions including Customers and Staff attribution now open in a dedicated left side panel, reducing pop ups and keeping staff oriented during checkout </p>\n\n<p><strong>Smarter Add customer flows</strong> <br>\n- A smarter Add customer flow with better customer matching and autofill, making it easier to attach the right customer and avoid duplicate customer entries  </p>\n\n<p><strong>Faster, more consistent checkout</strong> <br>\n- The cart remains visible throughout checkout, maintaining context from item selection through payment <br>\n- Faster and clearer payment selection, so staff can move quickly between tender types <br>\n- Larger number pads for cash and split payments, now displayed in the left side panel to reduce pop ups during checkout <br>\n- Simplified split payment flow that’s easier to complete </p>\n\n<p><strong>Refined post purchase experience</strong> <br>\n- Clearer receipt selection and post purchase actions <br>\n- Improved buyer facing screens and receipt selection on tablet and mobile, creating a more consistent experience for customers </p>\n\n<p><strong>Performance and reliability improvements</strong> <br>\n- Performance upgrades across search, product selection, and cart building <br>\n- Faster checkout transitions and payment processing for a smoother end to end transaction </p>\n\n<p>Shopify POS app v11.0 represents a foundational upgrade to how staff build carts, complete checkout, and handle post purchase actions. These improvements work together to reduce friction across the core selling flow, helping staff move confidently through transactions and deliver the best possible in-store experience. </p>\n\n<p>See all the updates and more in the <a href=\"https://www.shopify.com/blog/retail-release-roundup\">Retail Blog</a>. </p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify POSバージョン11.0のリリース",
+          "summarizedJa": "Shopify POS v11.0がリリースされ、カート機能と販売フローに大幅な改善が加えられました。カートレイアウトの改善、複数商品の一括編集、顧客追加フローの最適化、チェックアウト時のカート表示維持など、店舗スタッフが繁忙時により速く正確に作業できる機能が実装されています。パフォーマンス向上により、検索・商品選択・決済処理がより高速になり、スムーズな店舗運営を実現します。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-02-20T00:05:09.013Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1567,
+            "output": 264
+          },
+          "estimatedCost": 0.008661
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify POS バージョン 11.0",
+          "summarizedJa": "Shopify POS バージョン 11.0がリリースされ、カート操作と販売フローが大幅に改善されました。これにより、スタッフはより迅速かつ効率的に作業でき、顧客体験も向上します。特に、カートの視認性向上、顧客追加の効率化、決済フローの高速化、パフォーマンス改善が特徴です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-02-20T00:05:17.410Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1245,
+            "output": 146
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-remaining-line-items-weight-available-for-fulfillment-orders",
       "source": "developer-changelog",
@@ -1535,6 +1845,57 @@
           "tokenUsage": {
             "input": 885,
             "output": 190
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-shopify-account-web-component-for-storefronts",
+      "source": "developer-changelog",
+      "title": "Shopify-account web component for storefronts",
+      "link": "https://shopify.dev/changelog/shopify-account-web-component-for-storefronts",
+      "publishedAt": "2026-01-21T17:00:00.000Z",
+      "collectedAt": "2026-02-20T00:04:10.438Z",
+      "category": [
+        "Platform",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>Simplify customer account implementation with our new <code>shopify-account</code> component. This web component allows customers to sign in and access account navigation menu—all without leaving the storefront.</p>\n<h2>What's included</h2>\n<ul>\n<li>Sign-in methods: passwordless sign-in, social sign-in with Facebook and Google, and automatic sign-in with Shop recognition</li>\n<li>Account navigation menu with customizable quick links</li>\n<li>Styling control via CSS variables</li>\n<li>Automatic feature updates from Shopify without requiring you to update your code</li>\n</ul>\n<p>This component eliminates the guesswork around customer account implementation. It's fully integrated with the latest version of customer accounts, offers customizable styling to match your brand, and enables seamless sign-in for your customers.</p>\n<p>Visit our <a href=\"https://shopify.dev/docs/api/storefront-web-components/components/shopify-account\" target=\"_blank\" class=\"body-link\">dev docs</a> to get started now.</p>\n<p>The account component is available now in the latest version of the Horizon themes. If stores you manage are using a Horizon theme, update your theme now to get this component live on your storefront.</p>\n<h2>Coming soon</h2>\n<p>The <code>shopify-account</code> component will soon be required for all themes submitted to or updated in the Theme Store. If you're a theme partner, we recommend <a href=\"https://shopify.dev/docs/storefronts/themes/customer-engagement/account-component\" target=\"_blank\" class=\"body-link\">adding it to your themes</a> now.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "ストアフロント向けShopify-accountウェブコンポーネント",
+          "summarizedJa": "顧客アカウント機能を簡単に実装できる新しい`shopify-account`ウェブコンポーネントがリリースされました。パスワードレスサインイン、ソーシャルログイン、カスタマイズ可能なアカウントナビゲーションなどを提供し、ストアフロントから離れることなく顧客がサインインできます。近日中にテーマストアへの提出・更新時に必須となる予定のため、テーマパートナーは早めの対応が推奨されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-02-20T00:05:22.403Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1324,
+            "output": 268
+          },
+          "estimatedCost": 0.007991999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "ストアフロント向けShopifyアカウントWebコンポーネント",
+          "summarizedJa": "Shopifyは、ストアフロント上で顧客がサインインやアカウント管理をシームレスに行える新しいWebコンポーネント「shopify-account」をリリースしました。これにより、パスワードレスやソーシャルサインイン、Shop認識による自動サインインが可能になり、マーチャントは顧客アカウントの実装を簡素化できます。将来的には、テーマストアに提出される全てのテーマでこのコンポーネントの導入が必須となるため、テーマパートナーは早期の対応が推奨されます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 17,
+          "analyzedAt": "2026-02-20T00:05:27.473Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 979,
+            "output": 178
           },
           "estimatedCost": 0
         }
