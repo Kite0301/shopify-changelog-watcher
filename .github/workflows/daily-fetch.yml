@@ -164,7 +164,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "*New Articles:*\n${{ steps.extract_titles.outputs.titles }}"
+                    "text": ${{ toJSON(format('*New Articles:*\n{0}', steps.extract_titles.outputs.titles)) }}
                   }
                 },
                 {
