@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-20T00:04:11.521Z",
+  "lastUpdated": "2026-02-21T00:04:16.202Z",
   "entries": [
     {
       "id": "developer-changelog-changelog-reduced-metafield-value-sizes",
@@ -9320,6 +9320,59 @@
       }
     },
     {
+      "id": "developer-changelog-changelog-due-on-fulfillment-payment-term-available-for-pre-orders",
+      "source": "developer-changelog",
+      "title": "Due on Fulfillment payment term available for pre-orders",
+      "link": "https://shopify.dev/changelog/due-on-fulfillment-payment-term-available-for-pre-orders",
+      "publishedAt": "2025-10-01T16:00:00.000Z",
+      "collectedAt": "2026-02-21T00:04:15.177Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-01"
+      ],
+      "description": " <div class=\"\"><p>In the API <code>2026-01</code> release candidate version, a new value, <code>ON_FULFILLMENT</code>, has been added to the <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-01/enums/SellingPlanRemainingBalanceChargeTrigger\" target=\"_blank\" class=\"body-link\"><code>SellingPlanRemainingBalanceChargeTrigger</code></a> enum. This value allows you to set payments for pre-orders to be processed upon order fulfillment, providing flexibility in managing deferred payments. </p>\n<p>For implementation details and further information, see the <a href=\"https://shopify.dev/docs/apps/build/purchase-options/deferred\" target=\"_blank\" class=\"body-link\">pre-orders documentation</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "予約注文に対応した「フルフィルメント時支払い」の決済条件が利用可能に",
+          "summarizedJa": "API 2026-01リリース候補版で、予約注文の支払いを商品発送時に処理できる新しい決済条件「ON_FULFILLMENT」が追加されました。SellingPlanRemainingBalanceChargeTrigger enumに新しい値として追加され、予約注文における支払いタイミングの柔軟な管理が可能になります。事前決済ではなく、フルフィルメント完了時に決済を実行する仕組みを構築できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-02-21T00:04:21.614Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1138,
+            "output": 259
+          },
+          "estimatedCost": 0.007299
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "予約注文でフルフィルメント時支払い条件が利用可能に",
+          "summarizedJa": "Shopify API 2026-01のリリース候補版で、予約注文の支払いタイミングをフルフィルメント時に設定できる新しい値 `ON_FULFILLMENT` が `SellingPlanRemainingBalanceChargeTrigger` enumに追加されました。これにより、マーチャントは予約注文の残高支払いを商品発送時に請求できるようになり、柔軟な支払い管理が可能になります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-02-21T00:04:27.124Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 824,
+            "output": 155
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
       "id": "developer-changelog-changelog-polaris-unified-web-components-are-now-stable",
       "source": "developer-changelog",
       "title": "Polaris unified web components are now stable",
@@ -9452,6 +9505,60 @@
           "totalScore": 13,
           "analyzedAt": "2025-11-08T09:01:42.177Z",
           "model": "claude-sonnet-4-5"
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-metafield-references-added-to-customer-account-api",
+      "source": "developer-changelog",
+      "title": "Metafield references added to Customer Account API",
+      "link": "https://shopify.dev/changelog/metafield-references-added-to-customer-account-api",
+      "publishedAt": "2025-10-01T04:00:00.000Z",
+      "collectedAt": "2026-02-21T00:04:15.177Z",
+      "category": [
+        "API",
+        "New",
+        "Customer Account API",
+        "Admin GraphQL API",
+        "2026-01"
+      ],
+      "description": " <div class=\"\"><p>We have added <code>metafield.reference</code> and <code>metafield.references</code> to the Customer Account API. This means that reference <code>Media</code> types, including <a href=\"https://shopify.dev/docs/api/customer/unstable/objects/MediaImage\" target=\"_blank\" class=\"body-link\">MediaImage</a>, <a href=\"https://shopify.dev/docs/api/customer/unstable/objects/GenericFile\" target=\"_blank\" class=\"body-link\">GenericFile</a>, <a href=\"https://shopify.dev/docs/api/customer/unstable/objects/Model3d\" target=\"_blank\" class=\"body-link\">Model3d</a>, and <a href=\"https://shopify.dev/docs/api/customer/unstable/objects/Video\" target=\"_blank\" class=\"body-link\">Video</a>, now exist on the common query objects that currently support metafields on the Customer Account API.</p>\n<p>Metaobjects can now also be queried through <code>metafield.reference</code> on the Customer Account API. To enable access to metaobjects, toggle the Customer Account API access toggle when editing a metaobject definition in Admin. After toggling this value on, metaobjects are exposed and accessible to apps with <a href=\"https://shopify.dev/docs/api/usage/access-scopes#customer-access-scopes\" target=\"_blank\" class=\"body-link\">the customer_read_metaobjects scope</a>.</p>\n<p>This functionality can also be achieved with new changes to the GraphQL Admin API. We have exposed the ability to create, update, and query <code>CustomerAccess</code>, which can be set to either <code>READ</code> or <code>NONE</code>. You can specify the access on the <a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/objects/MetaobjectAccess\" target=\"_blank\" class=\"body-link\">MetaobjectAccess</a> object when running the <a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/mutations/metaobjectdefinitioncreate\" target=\"_blank\" class=\"body-link\">metaobjectDefinitionCreate</a> or <a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/mutations/metaobjectdefinitionupdate\" target=\"_blank\" class=\"body-link\">metaobjectDefinitionUpdate</a> mutation.</p>\n<p>Below are some example queries of Media types and metaobjects.</p>\n<ol>\n<li>Querying a Media object metafield.reference (MediaImage) through customer:</li>\n</ol>\n<pre><code>\tquery {\n\t\tcustomer {\n\t\t\tmetafield(namespace: &quot;custom&quot;, key: &quot;example&quot;) {\n\t\t\t\tnamespace\n\t\t\t\tkey\n\t\t\t\tjsonValue\n\t\t\t\treference {\n\t\t\t\t\t__typename\n\t\t\t\t\t... on MediaImage {\n\t\t\t\t\t\timage {\n\t\t\t\t\t\t\turl\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n</code></pre>\n<ol start=\"2\">\n<li>Querying a metaobject metafield.reference through an order (note, the metaobject contains a MediaImage reference):</li>\n</ol>\n<pre><code>\torder(id: &quot;gid://shopify/Order/1&quot;) {\n\t\tmetafield(namespace: &quot;custom&quot;, key: &quot;example&quot;) {\n\t\t\t__typename\n\t\t\tnamespace\n\t\t\tkey\n\t\t\treference {\n\t\t\t\t__typename\n\t\t\t\t... on Metaobject {\n\t\t\t\t\tid\n\t\t\t\t\tfields {\n\t\t\t\t\t\ttype\n\t\t\t\t\t\tvalue\n\t\t\t\t\t\tkey\n\t\t\t\t\t\tvalue\n\t\t\t\t\t\treference {\n\t\t\t\t\t\t\t__typename\n\t\t\t\t\t\t\t... on MediaImage {\n\t\t\t\t\t\t\t\tid\n\t\t\t\t\t\t\t\timage {\n\t\t\t\t\t\t\t\t\taltText\n\t\t\t\t\t\t\t\t\turl\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t}\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n</code></pre>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Customer Account APIにメタフィールド参照機能が追加",
+          "summarizedJa": "Customer Account APIで`metafield.reference`と`metafield.references`がサポートされ、画像や動画などのメディアタイプやメタオブジェクトへの参照が可能になりました。メタオブジェクトへのアクセスは管理画面でCustomer Account APIアクセストグルをオンにすることで有効化でき、Admin GraphQL APIでも`CustomerAccess`の設定が可能です。これによりカスタマーアカウント関連の機能でより豊富なデータ参照が実現できます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-02-21T00:04:32.604Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1893,
+            "output": 257
+          },
+          "estimatedCost": 0.009534
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "顧客アカウントAPIでのメタフィールド参照対応",
+          "summarizedJa": "Shopifyの顧客アカウントAPIにメタフィールド参照機能が追加され、顧客アカウントや注文情報から画像・動画などのメディアタイプやカスタムデータ構造であるメタオブジェクトを直接参照・取得できるようになりました。これにより、マーチャントは顧客体験をよりパーソナライズでき、パートナーは顧客向けアプリケーションでリッチなコンテンツ表示やデータ活用が可能になります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-02-21T00:04:40.010Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1494,
+            "output": 147
+          },
+          "estimatedCost": 0
         }
       }
     },
