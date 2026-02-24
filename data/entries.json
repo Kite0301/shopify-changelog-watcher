@@ -1,6 +1,59 @@
 {
-  "lastUpdated": "2026-02-21T00:04:16.202Z",
+  "lastUpdated": "2026-02-24T00:04:03.619Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-subscriptions-apis-introduce-subscriptionbillingattemptstate",
+      "source": "developer-changelog",
+      "title": "Subscriptions APIs: Introduce SubscriptionBillingAttemptState",
+      "link": "https://shopify.dev/changelog/subscriptions-apis-introduce-subscriptionbillingattemptstate",
+      "publishedAt": "2026-02-23T17:00:00.000Z",
+      "collectedAt": "2026-02-24T00:04:02.201Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>As of April 2026, you now have access to the <code>SubscriptionBillingAttemptState</code> field in the GraphQL Admin API. This new field replaces several loosely-typed nullable fields with a discriminated union pattern, enhancing the API's ergonomics and self-documentation.</p>\n<p>| Deprecated Field | New Equivalent | Notes |\n| </p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "サブスクリプションAPI: SubscriptionBillingAttemptStateの導入",
+          "summarizedJa": "2026年4月より、GraphQL Admin APIに新しい`SubscriptionBillingAttemptState`フィールドが追加されます。この新フィールドは、従来の型定義が緩く複数のnull許容フィールドを、判別可能なユニオン型パターンに置き換えることで、APIの使いやすさと自己文書化機能を向上させます。サブスクリプション関連アプリを開発している開発者は、非推奨となるフィールドからの移行が必要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-02-24T00:04:09.618Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1026,
+            "output": 257
+          },
+          "estimatedCost": 0.006933
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "サブスクリプションAPI: SubscriptionBillingAttemptStateの導入",
+          "summarizedJa": "2026年4月より、GraphQL Admin APIに`SubscriptionBillingAttemptState`フィールドが導入されます。この変更により、既存の曖昧な型を持つフィールドが、より明確な判別共用体パターンに置き換わり、APIの使いやすさと自己文書化が向上します。日本のパートナーは、サブスクリプション関連アプリのコードを更新する必要があるでしょう。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-02-24T00:04:16.299Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 721,
+            "output": 158
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-reduced-metafield-value-sizes",
       "source": "developer-changelog",
@@ -1896,6 +1949,56 @@
           "tokenUsage": {
             "input": 979,
             "output": 178
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-improved-product-availability-for-market-specific-inventory",
+      "source": "shopify-changelog",
+      "title": "Improved product availability for market-specific inventory ",
+      "link": "https://changelog.shopify.com/posts/improved-product-availability-for-market-specific-inventory",
+      "publishedAt": "2026-01-20T17:00:00.000Z",
+      "collectedAt": "2026-02-24T00:04:03.610Z",
+      "category": [
+        "Inventory"
+      ],
+      "description": "\n        <p>As of January 2026, products with available inventory in a buyer's market can now be purchased at checkout, even if inventory is negative or zero at other locations. Previously, negative total stock in all locations, including retail locations, could cause products to appear sold out and block checkout, even when the buyer's market had inventory in stock. Now, checkout considers only the inventory at locations that can actually fulfill orders for the buyer's market.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "マーケット別在庫における商品販売可能性の改善",
+          "summarizedJa": "2026年1月より、購入者のマーケットに在庫がある場合、他のロケーションで在庫がマイナスまたはゼロであっても、チェックアウトで商品を購入できるようになりました。以前は小売店舗を含む全ロケーションの合計在庫がマイナスの場合、購入者のマーケットに在庫があっても売り切れと表示され購入がブロックされていました。現在は購入者のマーケットに対して実際にフルフィルメント可能なロケーションの在庫のみがチェックアウト時に考慮されます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-02-24T00:04:21.766Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1000,
+            "output": 289
+          },
+          "estimatedCost": 0.0073349999999999995
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "マーケット別在庫における商品在庫状況の改善",
+          "summarizedJa": "2026年1月より、購入者のマーケットに在庫がある商品は、他のロケーションの在庫状況に関わらず購入可能になりました。以前は、全ロケーションの合計在庫がマイナスだと、購入者のマーケットに在庫があってもチェックアウトがブロックされる問題がありました。この改善により、チェックアウト時には購入者のマーケットへ配送可能なロケーションの在庫のみが考慮され、販売機会の損失を防ぎます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-02-24T00:04:29.648Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 728,
+            "output": 162
           },
           "estimatedCost": 0
         }
