@@ -1,6 +1,106 @@
 {
-  "lastUpdated": "2026-02-25T00:04:35.916Z",
+  "lastUpdated": "2026-02-26T00:04:18.640Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-vat-number-validation-available-in-checkout",
+      "source": "shopify-changelog",
+      "title": "VAT number validation available in checkout ",
+      "link": "https://changelog.shopify.com/posts/vat-number-validation-available-in-checkout",
+      "publishedAt": "2026-02-25T14:50:00.000Z",
+      "collectedAt": "2026-02-26T00:04:18.631Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <h1>VAT Number Validation at Checkout</h1>\n\n<p>Merchants using Shopify Tax in the European Union or United Kingdom can now enable VAT number validation at checkout to automatically apply the reverse charge exemption on eligible orders. </p>\n\n<p>We will be increasing availability over the next few weeks as we roll this out. </p>\n\n<h2>Who this is for</h2>\n\n<p>This applies to merchants who use Shopify Tax in the European Union or United Kingdom and have at least one fulfillment location in the European Union. Reverse charge eligibility is based on the order's fulfillment location country, not your store address.</p>\n\n<h2>How to enable it</h2>\n\n<p>In your checkout settings, set the <strong>Company VAT number</strong> field to <strong>Optional</strong> if you sell B2B to customers in the EU or UK.</p>\n\n<h2>How the reverse charge exemption works</h2>\n\n<p>When the exemption applies, VAT is removed from the order at checkout, and the customer is responsible for reporting and paying VAT on their own tax return.</p>\n\n<p><strong>The exemption applies to:</strong></p>\n\n<ul>\n<li>EU → EU shipments where the destination country differs from the fulfillment location country</li>\n<li>EU → UK shipments</li>\n</ul>\n\n<p><strong>The exemption does not apply to:</strong></p>\n\n<ul>\n<li>UK → EU shipments</li>\n<li>UK → UK shipments</li>\n</ul>\n\n<p><strong>Example:</strong> You fulfill from France and ship to a customer in Ireland with a valid VAT number — the reverse charge exemption applies.</p>\n\n<h2>Validation and customer data</h2>\n\n<p>VAT numbers entered at checkout are automatically validated. The VAT numbers will be saved to the customer profile for future orders.</p>\n\n<h2>VAT invoices</h2>\n\n<p>If you enable the <strong>Company VAT number</strong> field, you may want to also enable <strong>VAT invoices</strong> so customers receive correct documentation. When the exemption is applied, the invoice includes: <em>Reverse Charge Mechanism: Recipient responsible for VAT.</em></p>\n\n<h2>Fraud prevention</h2>\n\n<p>VAT number validation confirms formatting and validity at the time of check, but doesn't guarantee the customer is authorized to use the number. If you suspect fraudulent use — for example, the VAT number doesn't match the customer's company name or country — verify independently using the EU's VIES VAT number validation service and review the order before fulfilling. It's also possible that there have been too many attempts by a customer to validate a VAT number. In such cases, Shopify might enforce a rate limit to protect merchants from possible fraud.</p>\n\n<h2>Multiple fulfillment locations</h2>\n\n<p>If you have multiple locations, keep in mind that you can change which location fulfills an order, and this affects reverse charge eligibility since it's based on the fulfillment location country.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "チェックアウトでのVAT番号検証機能が利用可能に",
+          "summarizedJa": "EU・英国でShopify Taxを利用するマーチャント向けに、チェックアウト時にVAT番号の検証を行い、適格な注文に対してリバースチャージ免税を自動適用できる機能が追加されました。EU内の異なる国への配送やEUから英国への配送が対象となり、VAT番号はチェックアウト時に自動検証され、顧客プロファイルに保存されます。この機能はEU・英国の事業者に特化したもので、日本市場への直接的な影響はありません。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 3
+          },
+          "totalScore": 6,
+          "analyzedAt": "2026-02-26T00:04:24.651Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1639,
+            "output": 276
+          },
+          "estimatedCost": 0.009056999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "チェックアウトでのVAT番号検証機能の提供開始",
+          "summarizedJa": "Shopify Taxを利用し、EUまたは英国にフルフィルメント拠点を持つマーチャント向けに、チェックアウトでVAT番号の自動検証機能が提供開始されました。これにより、対象となるB2B注文に対してリバースチャージ免除が自動適用され、VATが注文から除外され、税務処理が簡素化されます。日本のマーチャントがEU/UK市場でB2B販売を行う際に、この機能は税務コンプライアンスと顧客体験の向上に役立ちます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 2,
+            "japanRelevance": 1,
+            "technicalImportance": 3
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-02-26T00:04:33.796Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1221,
+            "output": 182
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-california-embedded-battery-fee-supported-with-shopify-tax",
+      "source": "shopify-changelog",
+      "title": "California embedded battery fee supported with Shopify Tax",
+      "link": "https://changelog.shopify.com/posts/california-embedded-battery-fee-supported-with-shopify-tax",
+      "publishedAt": "2026-02-25T11:00:00.000Z",
+      "collectedAt": "2026-02-26T00:04:18.631Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <h1>California embedded battery fee supported with Shopify Tax</h1>\n\n<p>As of <strong>January 1, 2026</strong>, California requires a <strong>Covered Battery‑Embedded (CBE) recycling fee</strong> on certain products sold for use in California (as determined by the customer’s shipping address) that contain a battery not designed to be easily removed with common household tools.</p>\n\n<p>To help you stay compliant, <strong>Shopify Tax</strong> will start automatically calculating and collecting this fee on eligible orders when specific product categories are assigned to your product. This change will take effect on March 12, 2026.  </p>\n\n<h2>What you should do</h2>\n\n<ul>\n<li>Confirm product categorization in Shopify so eligible items are identified correctly.</li>\n<li>Review California’s fee guidance and your filing/remittance obligations.</li>\n<li>If you do not wish to collect this fee, you can change the product category to an option that is not listed below, and the fee will not be assessed.</li>\n</ul>\n\n<h2>What product categories trigger the fee?</h2>\n\n<ul>\n<li>Electronics &gt; Video Game Console Accessories &gt; Video Game Controllers</li>\n<li>Electronics &gt; Video Game Consoles</li>\n<li>Electronics &gt; Audio &gt; Audio Components &gt; Speakers &gt; Portable Bluetooth Speakers</li>\n<li>Electronics &gt; Audio &gt; Audio Components &gt; Headphones &amp; Headsets</li>\n<li>Electronics &gt; Audio &gt; Audio Components &gt; Headphones &amp; Headsets &gt; Headphones</li>\n<li>Electronics &gt; Audio &gt; Audio Components &gt; Headphones &amp; Headsets &gt; Headphones &gt; Bone Conduction Headphones</li>\n<li>Electronics &gt; Audio &gt; Audio Components &gt; Headphones &amp; Headsets &gt; Headphones &gt; DJ Headphones</li>\n<li>Electronics &gt; Audio &gt; Audio Components &gt; Headphones &amp; Headsets &gt; Headphones &gt; In-Ear Headphones</li>\n<li>Electronics &gt; Audio &gt; Audio Components &gt; Headphones &amp; Headsets &gt; Headphones &gt; On-Ear Headphones</li>\n<li>Electronics &gt; Audio &gt; Audio Components &gt; Headphones &amp; Headsets &gt; Headphones &gt; Over-Ear Headphones</li>\n<li>Electronics &gt; Audio &gt; Audio Components &gt; Headphones &amp; Headsets &gt; Headphones &gt; Over-Ear Headphones</li>\n<li>Electronics &gt; Audio &gt; Audio Components &gt; Headphones &amp; Headsets &gt; Headsets</li>\n<li>Electronics &gt; Audio &gt; Audio Players &amp; Recorders &gt; Voice Recorders</li>\n<li>Electronics &gt; Audio &gt; Audio Players &amp; Recorders &gt; Handheld Players &amp; Recorders</li>\n<li>Electronics &gt; Audio &gt; Audio Players &amp; Recorders &gt; Radios</li>\n<li>Electronics &gt; Audio &gt; Audio Players &amp; Recorders &gt; Radios &gt; AM/FM Radios</li>\n<li>Electronics &gt; Audio &gt; Audio Players &amp; Recorders &gt; Radios &gt; DAB Radios</li>\n<li>Electronics &gt; Audio &gt; Audio Players &amp; Recorders &gt; Radios &gt; Internet Radios</li>\n<li>Electronics &gt; Audio &gt; Audio Players &amp; Recorders &gt; Radios &gt; Satellite Radios</li>\n<li>Electronics &gt; Audio &gt; Audio Players &amp; Recorders &gt; Radios &gt; Shortwave Radios</li>\n<li>Electronics &gt; Audio &gt; Audio Players &amp; Recorders &gt; Radios &gt; Weather Radios</li>\n<li>Electronics &gt; Audio &gt; Public Address Systems &gt; Portable Public Address Systems</li>\n<li>Electronics &gt; Communications &gt; Communication Radios &gt; Amateur Radios</li>\n<li>Electronics &gt; Computers &gt; Handheld Devices</li>\n<li>Electronics &gt; Computers &gt; Handheld Devices &gt; Data Collectors</li>\n<li>Electronics &gt; Computers &gt; Smart Glasses</li>\n<li>Electronics &gt; Electronics Accessories &gt; Power &gt; Power Adapters &amp; Chargers &gt; Power Banks</li>\n<li>Electronics &gt; Electronics Accessories &gt; Computer Components &gt; Input Devices &gt; Game Controllers</li>\n<li>Electronics &gt; Electronics Accessories &gt; Computer Components &gt; Input Devices &gt; Game Controllers &gt; Game Racing Wheels</li>\n<li>Electronics &gt; Electronics Accessories &gt; Computer Components &gt; Input Devices &gt; Game Controllers &gt; Game Remotes</li>\n<li>Electronics &gt; Electronics Accessories &gt; Computer Components &gt; Input Devices &gt; Game Controllers &gt; Gaming Pads</li>\n<li>Electronics &gt; Electronics Accessories &gt; Computer Components &gt; Input Devices &gt; Game Controllers &gt; Joystick Controllers</li>\n<li>Electronics &gt; Electronics Accessories &gt; Computer Components &gt; Input Devices &gt; Game Controllers &gt; Musical Instrument Game Controllers</li>\n</ul>\n\n<hr>\n\n<h1>How to break down tax lines on your order confirmation emails</h1>\n\n<p>If you would like to break down tax lines on your order confirmation emails, here’s how:</p>\n\n<ol>\n<li>Navigate to your admin</li>\n<li>Go to <strong>Settings &gt; Notifications &gt; Customer Notifications</strong></li>\n<li>Go to your <strong>Order Confirmation</strong> template</li>\n<li>Tap the <strong>edit code</strong> button</li>\n<li>Find the below:</li>\n</ol>\n\n<p><code>liquid<br>\n&lt;tr class=\"subtotal-line\"&gt;<br>\n  &lt;td class=\"subtotal-line__title\"&gt;<br>\n    &lt;p&gt;<br>\n      &lt;span&gt;Taxes&lt;/span&gt;<br>\n    &lt;/p&gt;<br>\n  &lt;/td&gt;<br>\n  &lt;td class=\"subtotal-line__value\"&gt;<br>\n      &lt;strong&gt;{{ tax_price | money }}&lt;/strong&gt;<br>\n  &lt;/td&gt;<br>\n&lt;/tr&gt;<br>\n</code></p>\n\n<p>Replace it with:</p>\n\n<p><code>liquid<br>\n{% for tax_line in tax_lines %}<br>\n&lt;tr class=\"subtotal-line\"&gt;<br>\n  &lt;td class=\"subtotal-line__title\"&gt;<br>\n    &lt;p&gt;<br>\n      &lt;span&gt;{{ tax_line.title }}&lt;/span&gt;<br>\n    &lt;/p&gt;<br>\n  &lt;/td&gt;<br>\n  &lt;td class=\"subtotal-line__value\"&gt;<br>\n      &lt;strong&gt;{{ tax_line.price | money }}&lt;/strong&gt;<br>\n  &lt;/td&gt;<br>\n&lt;/tr&gt;<br>\n{% endfor %}<br>\n</code></p>\n\n<p>Save. Make sure to test this to ensure you have the result you want.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "カリフォルニア州の埋込バッテリー手数料がShopify Taxでサポート開始",
+          "summarizedJa": "2026年1月1日よりカリフォルニア州で施行された埋込バッテリーリサイクル手数料について、Shopify Taxが3月12日から自動計算・徴収を開始します。ゲーム機、ヘッドホン、スピーカーなど特定の商品カテゴリが対象となり、マーチャントは商品カテゴリの設定確認と、州への申告・納付義務の確認が必要です。また、注文確認メールで税金の内訳を表示するためのLiquidコードのカスタマイズ方法も提供されています。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 2,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 7,
+          "analyzedAt": "2026-02-26T00:04:39.627Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2877,
+            "output": 297
+          },
+          "estimatedCost": 0.013086
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify Taxによるカリフォルニア州埋め込みバッテリー手数料のサポート",
+          "summarizedJa": "2026年1月1日より、カリフォルニア州では特定の埋め込みバッテリー製品にリサイクル手数料が義務付けられます。Shopify Taxは、2026年3月12日から対象商品カテゴリに割り当てられた商品に対し、この手数料を自動計算・徴収します。日本のマーチャントがカリフォルニア州の顧客に該当商品を販売する場合、商品カテゴリの確認と、必要に応じて注文確認メールの税金表示の調整が推奨されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-02-26T00:04:47.315Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 2235,
+            "output": 183
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-subscriptions-apis-introduce-subscriptionbillingattemptstate",
       "source": "developer-changelog",
