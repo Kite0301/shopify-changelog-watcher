@@ -1,6 +1,106 @@
 {
-  "lastUpdated": "2026-02-26T00:04:18.640Z",
+  "lastUpdated": "2026-02-27T00:03:53.529Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-see-how-duties-are-calculated-on-your-orders",
+      "source": "shopify-changelog",
+      "title": "See how duties are calculated on your orders",
+      "link": "https://changelog.shopify.com/posts/see-how-duties-are-calculated-on-your-orders",
+      "publishedAt": "2026-02-26T23:00:00.000Z",
+      "collectedAt": "2026-02-27T00:03:53.521Z",
+      "category": [
+        "Markets"
+      ],
+      "description": "\n        <p><strong>New release:</strong> we've just released duty calculation breakdowns for merchants using Shopify duties and import taxes. You can now see exactly how duties are calculated on cross-border orders, including rates and tariffs. This is available directly on the order details page. You can now independently verify calculations yourself and confidently explain charges to your customers.</p>\n\n<p>Learn more about <a href=\"https://help.shopify.com/en/manual/international/duties-and-import-taxes/charging-duties\">charging duties and import taxes</a> in our Help Center.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "注文の関税計算の内訳が確認可能に",
+          "summarizedJa": "Shopifyの関税・輸入税機能を利用しているマーチャント向けに、関税計算の詳細な内訳が確認できるようになりました。注文詳細ページで税率や関税率を含む計算方法を直接確認でき、計算内容を独自に検証したり、顧客への説明を自信を持って行えるようになります。越境ECを行うマーチャントの透明性と顧客対応の向上に役立つ機能です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-02-27T00:03:59.228Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1036,
+            "output": 245
+          },
+          "estimatedCost": 0.006783
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "注文の関税計算内訳を確認",
+          "summarizedJa": "Shopifyの関税・輸入税機能を利用しているマーチャント向けに、越境EC注文の関税計算内訳が表示される新機能がリリースされました。これにより、注文詳細ページで税率や関税率を含む詳細な計算過程を確認できるようになります。マーチャントは計算を独自に検証し、顧客に対して料金を自信を持って説明できるようになります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-02-27T00:04:03.191Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 755,
+            "output": 149
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-legacy-customer-accounts-are-now-deprecated",
+      "source": "shopify-changelog",
+      "title": "Legacy customer accounts are deprecated",
+      "link": "https://changelog.shopify.com/posts/legacy-customer-accounts-are-now-deprecated",
+      "publishedAt": "2026-02-26T15:15:00.000Z",
+      "collectedAt": "2026-02-27T00:03:53.521Z",
+      "category": [
+        "Customer-account"
+      ],
+      "description": "\n        <p>Legacy customer accounts are no longer available to new stores and existing stores not using it. Shopify will stop providing feature updates and technical support for this older version. A final sunset date for legacy customer accounts will be announced later in 2026.</p>\n\n<p>We strongly recommend that merchants <a href=\"https://admin.shopify.com/admin/settings/customer_accounts?source=mer_changelog&amp;source_id=legacyannounce0226\">upgrade</a> to the latest version of customer accounts as soon as possible to take advantage of the latest features and improvements: </p>\n\n<ul>\n<li><strong>More secure sign-in</strong>: Customers sign in with their email and a one-time code—faster, more secure, and no more password resets or support tickets from locked-out customers.</li>\n<li><strong>Built-in features</strong>: Store credit, self-serve returns, B2B support, and more features are natively supported. You get new features automatically as we ship—no code editing required.</li>\n<li><strong>No-code customizations with apps</strong>: Customize the functionality and appearance of your customer accounts using app blocks that are upgrade-safe, secure, and easy to manage from the visual editor. </li>\n</ul>\n\n<p><a href=\"https://help.shopify.com/en/manual/customers/customer-accounts/upgrade\">View the upgrade guide</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "旧カスタマーアカウントが非推奨に",
+          "summarizedJa": "旧バージョンのカスタマーアカウントは新規ストアおよび未使用の既存ストアでは利用できなくなり、機能更新とサポートが終了しました。2026年後半に完全廃止日が発表される予定のため、ワンタイムコードによる安全なログイン、ストアクレジット、セルフサービス返品、B2B対応などの機能を持つ最新版への早急なアップグレードが強く推奨されています。",
+          "scores": {
+            "merchantImpact": 5,
+            "partnerImpact": 5,
+            "japanRelevance": 5,
+            "technicalImportance": 5
+          },
+          "totalScore": 20,
+          "analyzedAt": "2026-02-27T00:04:07.913Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1232,
+            "output": 249
+          },
+          "estimatedCost": 0.007431
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "レガシー顧客アカウントの非推奨化",
+          "summarizedJa": "Shopifyは、従来の顧客アカウント（レガシー顧客アカウント）の新規ストアへの提供および未使用ストアでの利用を停止しました。今後、この古いバージョンに対する機能更新や技術サポートは提供されなくなり、2026年後半には最終的な廃止日が発表される予定です。マーチャントは、より安全なサインイン、ストアクレジットやB2Bサポートなどの組み込み機能、ノーコードでのカスタマイズといった最新機能を利用するため、速やかに新しい顧客アカウントへのアップグレードが強く推奨されます。",
+          "scores": {
+            "merchantImpact": 5,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 5
+          },
+          "totalScore": 18,
+          "analyzedAt": "2026-02-27T00:04:14.385Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 923,
+            "output": 183
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-vat-number-validation-available-in-checkout",
       "source": "shopify-changelog",
@@ -202,6 +302,57 @@
           "tokenUsage": {
             "input": 6237,
             "output": 163
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-legacy-customer-accounts-are-deprecated",
+      "source": "developer-changelog",
+      "title": "Legacy customer accounts are now deprecated",
+      "link": "https://shopify.dev/changelog/legacy-customer-accounts-are-deprecated",
+      "publishedAt": "2026-02-20T04:00:00.000Z",
+      "collectedAt": "2026-02-27T00:03:52.546Z",
+      "category": [
+        "Platform",
+        "Deprecation Announcement"
+      ],
+      "description": " <div class=\"\"><p>Legacy customer accounts are no longer available to new stores and existing stores not using it. Shopify will stop providing feature updates and technical support for this older version. </p>\n<p>A final sunset date for legacy customer accounts will be announced later in 2026. We strongly recommend that merchants <a href=\"https://help.shopify.com/en/manual/customers/customer-accounts/upgrade\" target=\"_blank\" class=\"body-link\">upgrade</a> their customer accounts ahead of the deadline.</p>\n<h2>If you build themes</h2>\n<p>Theme developers should no longer include legacy customer account liquid files. Any store that is on legacy customer accounts, that upgrades to a theme without the legacy files, will automatically be upgraded to the latest version of customer accounts. </p>\n<p>Simplify customer account implementation across your themes with our new <a href=\"https://shopify.dev/docs/storefronts/themes/customer-engagement/account-component\" target=\"_blank\" class=\"body-link\">shopify-account web component</a> that automatically redirects to the latest version of customer accounts. </p>\n<h2>If you build apps</h2>\n<p>Developers can use Shopify Extensions to develop apps that customize and extend customer accounts in a way that does not require customizing liquid templates. If your app relies on legacy customer account liquid pages, it won’t work for merchants on the latest version of customer accounts.</p>\n<p>With <a href=\"https://shopify.dev/docs/api/customer-account-ui-extensions/latest\" target=\"_blank\" class=\"body-link\">customer account UI extensions</a>, you can enhance native pages like order status, order list, profile, and even build unique full-page experiences. <a href=\"https://apps.shopify.com/extensions/customer-account\" target=\"_blank\" class=\"body-link\">800+ apps</a> have already made the switch. <a href=\"https://shopify.dev/docs/apps/build/customer-accounts\" target=\"_blank\" class=\"body-link\">Build your first customer account extension</a> now and put your app in front of over 70% of Shopify merchants (and growing) already using customer accounts.</p>\n<h2>If you build custom storefronts</h2>\n<p>Use the <a href=\"https://shopify.dev/docs/api/customer/latest\" target=\"_blank\" class=\"body-link\">Customer Account API</a> as your source for customer-scoped data and authenticated customer actions in order to create the most secure customer experiences. </p>\n<p>If you build custom storefronts or apps that currently use Storefront API customer-scoped mutations, we recommend switching to the Customer Account API as soon as possible.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "レガシーカスタマーアカウントが非推奨化されました",
+          "summarizedJa": "従来のカスタマーアカウント機能が非推奨となり、新規ストアおよび未使用の既存ストアでは利用できなくなりました。2026年後半に完全終了日が発表される予定のため、マーチャントは期限前にアップグレードする必要があります。テーマ開発者はレガシーファイルの削除、アプリ開発者はCustomer Account UI Extensionsへの移行、カスタムストアフロント開発者はCustomer Account APIへの切り替えが推奨されています。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 5
+          },
+          "totalScore": 18,
+          "analyzedAt": "2026-02-27T00:04:19.365Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1541,
+            "output": 266
+          },
+          "estimatedCost": 0.008613
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "レガシー顧客アカウントの非推奨化",
+          "summarizedJa": "Shopifyは従来の顧客アカウントのサポートを終了し、新規ストアや未使用のストアでは利用できなくなりました。2026年中に最終的な廃止日が発表されるため、マーチャントは最新の顧客アカウントへのアップグレードが強く推奨されます。テーマ、アプリ、カスタムストアフロントを開発するパートナーは、新しい顧客アカウントUI拡張機能やCustomer Account APIへの移行が必須となります。",
+          "scores": {
+            "merchantImpact": 5,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 5
+          },
+          "totalScore": 19,
+          "analyzedAt": "2026-02-27T00:04:25.671Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1210,
+            "output": 157
           },
           "estimatedCost": 0
         }
