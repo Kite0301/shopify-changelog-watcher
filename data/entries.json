@@ -1,6 +1,107 @@
 {
-  "lastUpdated": "2026-02-27T00:03:53.529Z",
+  "lastUpdated": "2026-02-28T00:02:08.782Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-updates-effective-february-27-to-our-partner-program-agreement-and-api-license-and-terms-of-use",
+      "source": "developer-changelog",
+      "title": "Updates effective February 27 to our Partner Program Agreement and API License and Terms of Use",
+      "link": "https://shopify.dev/changelog/updates-effective-february-27-to-our-partner-program-agreement-and-api-license-and-terms-of-use",
+      "publishedAt": "2026-02-27T20:00:00.000Z",
+      "collectedAt": "2026-02-28T00:02:07.822Z",
+      "category": [
+        "Shopify App Store",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>Effective Friday, February 27, 2026, <strong>Action Required</strong></p>\n<p>We have updated our <a href=\"https://www.shopify.ca/partners/terms?shpxid=823b80d5-C747-48F6-6CF0-832254EC6F4B\" target=\"_blank\" class=\"body-link\">Partner Program Agreement</a> and <a href=\"https://www.shopify.com/legal/api-terms?shpxid=823b80d5-C747-48F6-6CF0-832254EC6F4B\" target=\"_blank\" class=\"body-link\">API License and Terms of Use</a>. These changes clarify roles, enhance data protection, and support new platform features.</p>\n<p>By continuing to use Shopify services on or after February 27, 2026, you confirm that you have read, understood, and accepted these new terms.</p>\n<p>For more information and frequently asked questions, please visit the <a href=\"https://help.shopify.com/en/partners/ppa-api-faq?shpxid=823b80d5-C747-48F6-6CF0-832254EC6F4B\" target=\"_blank\" class=\"body-link\">Shopify Help Center</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "パートナープログラム規約とAPIライセンス利用規約の2月27日改定について",
+          "summarizedJa": "2026年2月27日付けで、Shopifyパートナープログラム規約とAPIライセンス利用規約が更新されます。今回の変更は、役割の明確化、データ保護の強化、新しいプラットフォーム機能のサポートを目的としています。2月27日以降もShopifyサービスを継続利用する場合は、新しい規約への同意が必要となります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-02-28T00:02:13.567Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1256,
+            "output": 232
+          },
+          "estimatedCost": 0.007247999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "パートナープログラム規約およびAPI利用規約の更新（2月27日発効）",
+          "summarizedJa": "2026年2月27日より、Shopifyのパートナープログラム規約およびAPIライセンス・利用規約が更新されます。これらの変更は、役割の明確化、データ保護の強化、および新しいプラットフォーム機能のサポートを目的としています。パートナーは、この日以降もShopifyサービスを継続利用する場合、新しい規約に同意したものとみなされるため、内容を確認することが推奨されます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-02-28T00:02:21.835Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 992,
+            "output": 173
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-pos-editor-now-supports-editing-smart-grid-tiles-and-screen-settings",
+      "source": "shopify-changelog",
+      "title": "POS editor now supports editing Smart grid tiles and screen settings",
+      "link": "https://changelog.shopify.com/posts/pos-editor-now-supports-editing-smart-grid-tiles-and-screen-settings",
+      "publishedAt": "2026-02-27T17:00:00.000Z",
+      "collectedAt": "2026-02-28T00:02:08.773Z",
+      "category": [
+        "Pos"
+      ],
+      "description": "\n        <p>We’ve added editing to Smart grid tiles in the POS editor because it’s faster to update tiles than deleting and rebuilding them. Now you can change an assigned product and update tile input fields (like fee label and amount) directly using the Smart grid tile editor. This reduces setup time and makes layout changes easier to maintain.</p>\n\n<p>Lock screen and customer display options in the POS editor are now available in dedicated layout sections instead of being tucked under Settings to make it easier to discover and understand what you’re customizing. Now you can customize backgrounds, colors, images, and logos more quickly using the Lock screen and Customer display layout options. This streamlines configuration and makes screen-specific changes clearer, especially when working across multiple POS surfaces.</p>\n\n<p>Learn more about customizing Shopify POS with the POS editor in the Shopify Help Center.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "POSエディターでスマートグリッドタイルと画面設定の編集が可能に",
+          "summarizedJa": "POSエディターでスマートグリッドタイルの直接編集が可能になり、削除・再構築不要で商品割り当てや入力フィールドを更新できるようになりました。また、ロック画面とカスタマーディスプレイの設定が専用レイアウトセクションに移動し、背景、色、画像、ロゴのカスタマイズがより迅速かつ直感的に行えるようになりました。これにより、POS画面のセットアップ時間が短縮され、レイアウト変更の管理が容易になります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-02-28T00:02:26.908Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1108,
+            "output": 286
+          },
+          "estimatedCost": 0.007614000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "POSエディタがスマートグリッドタイルと画面設定の編集に対応",
+          "summarizedJa": "Shopify POSエディタで、スマートグリッドタイルの直接編集が可能になり、商品の変更や入力フィールドの更新が削除・再構築なしで行えるようになりました。これにより設定時間が短縮され、レイアウト管理が容易になります。また、ロック画面と顧客ディスプレイのオプションが専用のレイアウトセクションに移動し、背景やロゴなどのカスタマイズがより直感的かつ迅速に行えるようになり、特に複数のPOS端末での設定が効率化されます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-02-28T00:02:31.196Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 818,
+            "output": 177
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-see-how-duties-are-calculated-on-your-orders",
       "source": "shopify-changelog",
@@ -46,6 +147,56 @@
           "tokenUsage": {
             "input": 755,
             "output": 149
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-dhl-kleinpaket-now-available-for-small-package-shipping-in-germany",
+      "source": "shopify-changelog",
+      "title": "DHL Kleinpaket now available for small package shipping in Germany",
+      "link": "https://changelog.shopify.com/posts/dhl-kleinpaket-now-available-for-small-package-shipping-in-germany",
+      "publishedAt": "2026-02-26T17:00:00.000Z",
+      "collectedAt": "2026-02-28T00:02:08.773Z",
+      "category": [
+        "Shipping"
+      ],
+      "description": "\n        <p>You can now access DHL Kleinpaket when buying shipping labels in your Shopify admin. This service offers affordable rates for small packages with the reliability of DHL’s network. Ideal for small goods like accessories or cosmetics. </p>\n\n<p>Package limits:<br>\n* Minimum dimensions: Length 10.0 cm, Width 7.0 cm, Height 0.1 cm<br>\n* Maximum dimensions: Length 35.3 cm, Width 25.0 cm, Height 8.0 cm<br>\n* Maximum weight: 1,000 g</p>\n\n<p>Learn more about <a href=\"https://help.shopify.com/en/manual/fulfillment/fulfilling-orders/shipping-labels/shipping-carriers/dhl/dhl-de\">DHL shipping options in our Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "ドイツでの小型荷物配送にDHL Kleinpaketが利用可能に",
+          "summarizedJa": "Shopify管理画面で配送ラベルを購入する際に、ドイツ向けのDHL Kleinpaketサービスが利用できるようになりました。このサービスは最大1kgまでの小型荷物（アクセサリーや化粧品など）向けで、DHLネットワークの信頼性と手頃な料金を提供します。パッケージサイズは最小10×7×0.1cm、最大35.3×25×8cmに制限されています。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 5,
+          "analyzedAt": "2026-02-28T00:02:35.796Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1123,
+            "output": 253
+          },
+          "estimatedCost": 0.007164
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "DHL Kleinpaketがドイツでの小型荷物配送に利用可能に",
+          "summarizedJa": "Shopify管理画面で、ドイツ国内向けの小型荷物配送サービス「DHL Kleinpaket」の配送ラベル購入が可能になりました。このサービスは、DHLの信頼性の高いネットワークを利用し、手頃な料金で小型商品を発送できるため、アクセサリーや化粧品などの配送に適しています。最小・最大寸法や最大重量1,000gといった荷物制限が設定されています。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 5,
+          "analyzedAt": "2026-02-28T00:02:41.689Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 829,
+            "output": 158
           },
           "estimatedCost": 0
         }
