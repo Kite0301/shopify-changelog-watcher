@@ -1,6 +1,206 @@
 {
-  "lastUpdated": "2026-02-28T00:02:08.782Z",
+  "lastUpdated": "2026-03-03T00:03:38.464Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-shipping-in-quick-sale",
+      "source": "shopify-changelog",
+      "title": "Shipping in quick sale",
+      "link": "https://changelog.shopify.com/posts/shipping-in-quick-sale",
+      "publishedAt": "2026-03-02T19:00:00.000Z",
+      "collectedAt": "2026-03-03T00:03:38.454Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <h3>What's new</h3>\n\n<p>*<em>Shipping in quick sale. *</em><br>\nAdd shipping to any quick sale cart. Your buyer pays for delivery at checkout and enters their address. The order shows up in your Orders tab, ready to ship. Useful for selling to friends before your store is ready, replying to DMs with a payment link, or shipping custom orders without building a catalog. No store needed.</p>\n\n<p>*<em>Payment links now support shipping. *</em><br>\nCreate a cart, add shipping, share the payment link. Works anywhere: text, email, Instagram DM, WhatsApp.</p>\n\n<h3>How it works</h3>\n\n<ul>\n<li>Add products to your quick sale cart</li>\n<li>Choose \"Add shipping\" from the menu</li>\n<li>Share the payment link via text, DM, or email</li>\n<li>Buyer enters address and pays</li>\n<li>Ship from your Orders tab</li>\n</ul>\n\n<h3>Availability</h3>\n\n<p>Rolling out to merchants in the United States, Canada, the United Kingdom, Australia, the Netherlands, Luxembourg, New Zealand, Switzerland, Singapore (only Android devices), and Finland. Requires the Shopify mobile app.</p>\n\n<p>Learn more at Shopify Help Center</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "クイック販売での配送機能",
+          "summarizedJa": "クイック販売カートに配送オプションを追加できるようになりました。購入者はチェックアウト時に配送先住所を入力し配送料を支払うことができ、注文は通常の注文タブに表示されます。決済リンクに配送を含めてSNSのDMやメールで共有でき、ストアを構築せずにカスタム注文の配送が可能です。現在、米国、カナダ、英国など一部の国でShopifyモバイルアプリを通じて展開中ですが、日本は対象地域に含まれていません。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 6,
+          "analyzedAt": "2026-03-03T00:03:44.696Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1216,
+            "output": 270
+          },
+          "estimatedCost": 0.007698
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "クイックセールでの配送対応",
+          "summarizedJa": "Shopifyのクイックセール機能が強化され、支払いリンクに配送オプションを追加できるようになりました。これにより、マーチャントは商品と配送料を含むリンクを顧客に共有し、顧客は住所を入力して支払うことで、注文を発送できるようになります。店舗準備前やDMでの販売、カスタム注文などに活用できますが、現時点では日本市場は対象外です。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 3
+          },
+          "totalScore": 6,
+          "analyzedAt": "2026-03-03T00:03:50.338Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 877,
+            "output": 148
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-fedex-duties-prepaid-labels-available-on-managed-markets",
+      "source": "shopify-changelog",
+      "title": "FedEx duties prepaid labels available on Managed Markets",
+      "link": "https://changelog.shopify.com/posts/fedex-duties-prepaid-labels-available-on-managed-markets",
+      "publishedAt": "2026-03-02T17:00:00.000Z",
+      "collectedAt": "2026-03-03T00:03:38.454Z",
+      "category": [
+        "Markets"
+      ],
+      "description": "\n        <p>We've added FedEx International Connect Plus to Managed Markets, giving you a fast, reliable way to ship international orders to 195 countries -- with full tracking, shipping coverage, and Delivery Duty Paid (DDP) support built in. </p>\n\n<p>Here's what you get with FedEx International Connect Plus on Managed Markets:</p>\n\n<ul>\n<li><strong>2-5 business day delivery</strong> to 195 countries and territories</li>\n<li><strong>Delivery Duty Paid (DDP)</strong> -- your customers won't be surprised by duties or taxes at the door</li>\n<li><strong>End-to-end tracking</strong> so you and your customers always know where a shipment is</li>\n<li><strong>Shipping coverage</strong> included on every label you purchase</li>\n</ul>\n\n<p>Learn more about FedEx International Connect Plus in the <a href=\"https://help.shopify.com/en/manual/international/managed-markets/shipping/fedex\">Shopify Help Center</a>.</p>\n\n<p>Managed Markets FedEx International Conect Plus labels are available for purchase in Shopify Admin and via <a href=\"https://help.shopify.com/en/manual/international/managed-markets/fulfillment#fulfillment-partners\">our integrated external fulfillment partners</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Managed MarketsでFedExの関税元払いラベルが利用可能に",
+          "summarizedJa": "Managed MarketsにFedEx International Connect Plusが追加され、195カ国への国際配送が可能になりました。2-5営業日配送、DDP（関税元払い）対応、完全追跡、配送補償が含まれます。Shopify管理画面および連携フルフィルメントパートナー経由でラベル購入が可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-03-03T00:03:55.390Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1240,
+            "output": 214
+          },
+          "estimatedCost": 0.00693
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Managed MarketsでFedExの関税前払いラベルが利用可能に",
+          "summarizedJa": "ShopifyのManaged MarketsにFedEx International Connect Plusが追加され、日本のマーチャントは世界195カ国へ迅速かつ信頼性の高い国際配送が可能になります。このサービスでは、関税・消費税を事前に支払うDDP（Delivery Duty Paid）に対応しており、顧客が商品受け取り時に予期せぬ費用を請求される心配がなくなります。これにより、国際販売における顧客体験の向上が期待されます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-03-03T00:04:02.501Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 900,
+            "output": 171
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-shopify-pos-hub-now-available",
+      "source": "shopify-changelog",
+      "title": "Shopify POS Hub Now Available",
+      "link": "https://changelog.shopify.com/posts/shopify-pos-hub-now-available",
+      "publishedAt": "2026-03-02T16:45:00.000Z",
+      "collectedAt": "2026-03-03T00:03:38.454Z",
+      "category": [
+        "Pos"
+      ],
+      "description": "\n        <p>The Shopify POS Hub is now generally available on the Hardware Store, and we’ll start shipping units to all merchants who pre-ordered.</p>\n\n<p><strong>What’s important to know about the Hub?</strong><br>\nPOS Hub is a small countertop device that connects your POS iPad or Android tablet to essential checkout hardware. It solves the common pain point of peripherals, like card readers, receipt printers, barcode scanners, and cash drawers, dropping mid-shift due to flaky Bluetooth. By connecting supported devices over stable, wired USB, it keeps your checkout running smoothly and reliably.</p>\n\n<ul>\n<li><p><strong>Rock-solid, wired connectivity:</strong> POS Hub replaces Bluetooth connections with stable USB, keeping card readers, printers, scanners, and cash drawers reliably connected. </p></li>\n<li><p><strong>Made for Shopify POS, Apple Certified:</strong> Built-in software actively monitors and manages connected devices, showing real-time status and alerts for your peripherals in POS. Apple MFi certification ensures reliable multi-device connectivity on iPad.</p></li>\n<li><p><strong>Fast, simple setup:</strong> Plug in, connect hardware, and follow guided setup in Shopify POS. Ongoing maintenance is minimized, so staff can focus on serving customers, not worrying about hardware. </p></li>\n</ul>\n\n<p>You can order the POS Hub in the <a href=\"https://hardware.shopify.com/pages/poshub\">Shopify Hardware Store</a>. Learn more about  how to set up your hardware in the <a href=\"https://help.shopify.com/pos/hardware/hub\">Shopify Help Center.</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify POS Hubが正式リリース",
+          "summarizedJa": "Shopify POS Hubがハードウェアストアで正式販売開始されました。このコンパクトなカウンタートップデバイスは、iPadやAndroidタブレットとカードリーダー、レシートプリンター、バーコードスキャナー、キャッシュドロワーなどの周辺機器を安定したUSB有線接続で結び、Bluetooth接続の不安定さを解消します。Apple MFi認証取得済みで、Shopify POS上でデバイスの状態をリアルタイムで監視でき、セットアップも簡単です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-03-03T00:04:07.563Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1313,
+            "output": 271
+          },
+          "estimatedCost": 0.008003999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify POS Hub」が一般提供開始",
+          "summarizedJa": "Shopify POS Hubは、POS iPadやAndroidタブレットをレジ周辺機器（カードリーダー、プリンター、スキャナー、キャッシュドロワーなど）に安定した有線USBで接続する小型デバイスです。これにより、Bluetooth接続の不安定さによる機器の切断を防ぎ、スムーズで信頼性の高いレジ操作を実現します。日本の実店舗を持つマーチャントのレジ業務の安定性向上に大きく貢献するでしょう。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-03-03T00:04:13.775Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 969,
+            "output": 167
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-see-the-bank-s-reasoning-behind-chargebacks",
+      "source": "shopify-changelog",
+      "title": "Issuer memos now available for disputes",
+      "link": "https://changelog.shopify.com/posts/see-the-bank-s-reasoning-behind-chargebacks",
+      "publishedAt": "2026-03-02T16:00:00.000Z",
+      "collectedAt": "2026-03-03T00:03:38.454Z",
+      "category": [
+        "Payments"
+      ],
+      "description": "\n        <p>We've made issuer memos available to view and download directly from the dispute details page in Shopify admin. Issuer memos are documents provided by the cardholder's bank that explain why a chargeback was opened or why it was decided in the cardholder's favor. When a memo is available you'll see a summary of the bank's decision along with a link to download the full document. Use these insights to better understand dispute outcomes and improve evidence for future chargebacks. This update is available to all merchants using Shopify Payments.</p>\n\n<p>Learn more about issuer memos in the <a href=\"https://help.shopify.com/en/manual/payments/chargebacks/chargebacks-in-admin#issuer-claims-responses\">Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "チャージバックの発行者メモが利用可能に",
+          "summarizedJa": "Shopify Paymentsを利用するマーチャント向けに、チャージバック詳細ページから発行者メモの閲覧・ダウンロードが可能になりました。発行者メモとは、カード会社がチャージバックを開始した理由や、カード保有者に有利な判定を下した理由を説明する書類です。この情報を活用することで、チャージバックの結果をより深く理解し、今後の証拠提出の改善に役立てることができます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-03-03T00:04:18.316Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1091,
+            "output": 251
+          },
+          "estimatedCost": 0.007037999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "チャージバック紛争における発行者メモの提供開始",
+          "summarizedJa": "Shopify管理画面の紛争詳細ページで、チャージバックの理由を説明する「発行者メモ」が閲覧・ダウンロード可能になりました。これにより、マーチャントはチャージバックの決定理由を深く理解し、将来の紛争に対する証拠提出の改善に役立てることができます。本機能はShopifyペイメントを利用する全てのマーチャントが対象です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-03-03T00:04:25.599Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 794,
+            "output": 156
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-updates-effective-february-27-to-our-partner-program-agreement-and-api-license-and-terms-of-use",
       "source": "developer-changelog",
@@ -97,6 +297,58 @@
           "tokenUsage": {
             "input": 818,
             "output": 177
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-bare-query-strings-no-longer-bust-the-cache-for-assets",
+      "source": "developer-changelog",
+      "title": "Bare query strings no longer bust the cache for assets",
+      "link": "https://shopify.dev/changelog/bare-query-strings-no-longer-bust-the-cache-for-assets",
+      "publishedAt": "2026-02-27T17:00:00.000Z",
+      "collectedAt": "2026-03-03T00:03:37.516Z",
+      "category": [
+        "Action Required",
+        "Themes",
+        "New"
+      ],
+      "description": " <div class=\"\"><h2>Action required</h2>\n<p>We're enhancing Shopify's asset caching to improve load times. As part of this update, we are modifying the URL query parameters recognized for cache busting.</p>\n<p>Effective March 24, 2026, bare query strings (a <code>?</code> followed by a value with no key) will not refresh cached assets. Previously, these strings appeared to refresh assets because altering the URL could bypass the cache; this incidental behavior will be discontinued.</p>\n<p>If your asset URLs are generated with Liquid filters (such as <code>asset_url</code>), you’re already compatible—no changes are necessary.</p>\n<h2>What’s changing</h2>\n<p>Referencing assets (e.g., images, fonts) with a URL containing a bare query string will no longer refresh the cached asset when the value is updated.</p>\n<p>For example:</p>\n<pre><code>image.png?123\n</code></pre>\n<p>The same applies within CSS:</p>\n<pre><code class=\"language-css\">background-image: url('image.png?123');\n</code></pre>\n<h2>What to do</h2>\n<p>Use the appropriate Liquid filter to generate URLs (e.g., <code>asset_url</code>, <code>file_url</code>). Shopify handles versioning and updates the URL automatically whenever the asset changes.</p>\n<p>In templates:</p>\n<pre><code class=\"language-liquid\">{{ 'image.png' | asset_url }}\n</code></pre>\n<p>This outputs a URL with a version parameter:</p>\n<pre><code>image.png?v=1384022871\n</code></pre>\n<p>In CSS, use a <code>.css.liquid</code> file to incorporate Liquid:</p>\n<pre><code class=\"language-css\">background-image: url('{{ &quot;image.png&quot; | asset_url }}');\n</code></pre>\n<h2>Why this matters</h2>\n<p>Continuing to use bare query strings may result in stale assets being served until the cache expires. Using Liquid filters ensures that the correct, current version of each asset is delivered, enhancing performance by enabling more effective CDN and browser caching.</p>\n<h2>Learn more</h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/liquid/filters/asset_url\" target=\"_blank\" class=\"body-link\">asset_url</a> filter</li>\n<li><a href=\"https://shopify.dev/docs/api/liquid/filters/file_url\" target=\"_blank\" class=\"body-link\">file_url</a> filter</li>\n<li><a href=\"https://shopify.dev/docs/storefronts/themes/best-practices/performance/platform#css-syntax-to-ensure-automatic-updates\" target=\"_blank\" class=\"body-link\">CSS syntax to ensure automatic updates</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "アセットのキャッシュバスティングで空のクエリ文字列が無効化されます",
+          "summarizedJa": "2026年3月24日より、アセットURLに「?123」のようなキー名のないクエリ文字列を使用してもキャッシュが更新されなくなります。Liquidフィルター（asset_url、file_urlなど）を使用したURL生成に移行する必要があり、これによりShopifyが自動的にバージョン管理を行い、正しいアセットが配信されます。対応しない場合、古いアセットが表示され続ける可能性があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-03-03T00:04:31.264Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1651,
+            "output": 257
+          },
+          "estimatedCost": 0.008808
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "アセットのキャッシュ無効化におけるキーなしクエリ文字列の挙動変更",
+          "summarizedJa": "Shopifyはアセットのキャッシュ機能を強化し、2026年3月24日以降、キーのないクエリ文字列（例: `image.png?123`）ではアセットのキャッシュが更新されなくなります。これにより、Liquidフィルターを使用せずにアセットURLを生成している場合、古いアセットが配信される可能性があります。マーチャントやパートナーは、`asset_url`などのLiquidフィルターを使用してアセットURLを生成することで、常に最新のアセットを配信し、ストアのパフォーマンスを最適化できます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-03-03T00:04:39.884Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1293,
+            "output": 194
           },
           "estimatedCost": 0
         }
@@ -353,6 +605,111 @@
       }
     },
     {
+      "id": "developer-changelog-changelog-enhanced-discounts-support-in-the-shopify-functions-cart",
+      "source": "developer-changelog",
+      "title": "Enhanced discounts support in the Shopify Functions Cart",
+      "link": "https://shopify.dev/changelog/enhanced-discounts-support-in-the-shopify-functions-cart",
+      "publishedAt": "2026-02-24T17:00:00.000Z",
+      "collectedAt": "2026-03-03T00:03:37.516Z",
+      "category": [
+        "API",
+        "New",
+        "Functions",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>As of GraphQL API version <code>2026-04</code>, Shopify Functions can now access detailed discount information at three levels:</p>\n<ol>\n<li><strong>Cart-level</strong>: All discount applications on the cart.</li>\n<li><strong>Line item-level</strong>: Discounts allocated to specific line items.</li>\n<li><strong>Delivery-level</strong>: Discounts allocated to delivery groups.</li>\n</ol>\n<p>Based on the <a href=\"https://shopify.dev/docs/api/functions/2026-04#function-execution-order-in-checkout\" target=\"_blank\" class=\"body-link\">function execution order</a>, only functions that execute after discounts can see complete discount information. </p>\n<p>Learn more about <a href=\"https://shopify.dev/docs/api/functions/2026-04#graphql-schema-and-versioning\" target=\"_blank\" class=\"body-link\">function inputs</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify Functions Cartでの割引情報サポートの強化",
+          "summarizedJa": "GraphQL API バージョン2026-04以降、Shopify Functionsでカート、ライン項目、配送の3つのレベルで詳細な割引情報にアクセスできるようになりました。関数の実行順序に基づき、割引処理後に実行される関数のみが完全な割引情報を取得できます。この機能により、より高度なカスタマイズや条件分岐が可能になります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-03-03T00:04:44.895Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1166,
+            "output": 229
+          },
+          "estimatedCost": 0.006933
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify Functionsカートにおける割引サポートの強化",
+          "summarizedJa": "GraphQL APIバージョン2026-04以降、Shopify Functionsがカート、ラインアイテム、配送グループの3つのレベルで詳細な割引情報にアクセスできるようになりました。これにより、日本のパートナー（開発者）は、既存の割引情報を考慮したより複雑で高度なカスタム割引ロジックやチェックアウト体験を構築することが可能になります。ただし、完全な割引情報を参照するには、Functionsが割引適用後に実行される必要があります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-03-03T00:04:50.344Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 860,
+            "output": 164
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-support-for-market-aware-auth-urls-in-customer-account-api",
+      "source": "developer-changelog",
+      "title": "Support for market-aware auth URLs in Customer Account API ",
+      "link": "https://shopify.dev/changelog/support-for-market-aware-auth-urls-in-customer-account-api",
+      "publishedAt": "2026-02-24T17:00:00.000Z",
+      "collectedAt": "2026-03-03T00:03:37.516Z",
+      "category": [
+        "API",
+        "Update",
+        "Customer Account API"
+      ],
+      "description": " <div class=\"\"><p>You can now pass <code>locale</code> and <code>region_country</code> parameters to the Customer Account API authorization endpoint to build<br> market-aware login experiences in headless storefronts.</p>\n<p>Liquid storefronts handle this automatically with <code>{{ routes.account_login_url }}</code>, but headless storefronts previously had no\ndocumented way to construct login URLs that respect market context. We've added documentation and support for two optional<br>authorization parameters:                                                                                                     </p>\n<ul>\n<li><strong><a href=\"https://shopify.dev/docs/api/customer#authorization\" target=\"_blank\" class=\"body-link\"><code>locale</code></a></strong>: Controls the language of the login screen. Supports regional variants like <code>fr-CA</code> and <code>en-GB</code>, which load market-specific translations set through Translate &amp; Adapt.</li>\n<li><strong><a href=\"https://shopify.dev/docs/api/customer#authorization\" target=\"_blank\" class=\"body-link\"><code>region_country</code></a></strong>: Controls the market context for policies, branding, and other non-translation content. Uses an ISO 3166-1 Alpha-2 country code.</li>\n</ul>\n<p>These parameters can be used independently or together for a fully localized login experience.</p>\n<p>Learn more about <a href=\"https://shopify.dev/docs/storefronts/headless/building-with-the-customer-account-api/market-aware-auth-urls\" target=\"_blank\" class=\"body-link\">building market-aware auth URLs for headless stores</a>. For the full list of authorization parameters, refer to the <a href=\"https://shopify.dev/docs/api/customer#authorization\" target=\"_blank\" class=\"body-link\">Customer Account API authorization reference</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Customer Account APIでマーケット対応認証URLをサポート",
+          "summarizedJa": "ヘッドレスストアフロント向けのCustomer Account API認証エンドポイントに、`locale`と`region_country`パラメータが追加されました。これにより、言語や地域に応じたログイン画面を構築できるようになり、多言語・多地域展開を行うヘッドレスストアでローカライズされたログイン体験を提供可能になります。Liquidストアフロントでは自動対応されていた機能が、ヘッドレス環境でも利用可能になりました。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-03-03T00:04:55.712Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1380,
+            "output": 256
+          },
+          "estimatedCost": 0.00798
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "顧客アカウントAPIにおける市場別認証URLのサポート",
+          "summarizedJa": "ヘッドレスストアフロントにおいて、顧客アカウントAPIの認証エンドポイントに`locale`と`region_country`パラメータを渡せるようになりました。これにより、言語や地域に応じた市場別のログイン画面を構築でき、顧客体験を向上させることが可能です。特に、複数の国や地域でビジネスを展開するマーチャントにとって、よりパーソナライズされた顧客体験を提供できるようになります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-03-03T00:05:02.364Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1042,
+            "output": 153
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
       "id": "developer-changelog-changelog-subscriptions-apis-introduce-subscriptionbillingattemptstate",
       "source": "developer-changelog",
       "title": "Subscriptions APIs: Introduce SubscriptionBillingAttemptState",
@@ -400,6 +757,59 @@
           "tokenUsage": {
             "input": 721,
             "output": 158
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-new-rejection-reason-codes-and-merchant-message-added-to-verificationsessionreject-mutation",
+      "source": "developer-changelog",
+      "title": "New rejection reason codes and merchant message added to `verificationSessionReject` mutation",
+      "link": "https://shopify.dev/changelog/new-rejection-reason-codes-and-merchant-message-added-to-verificationsessionreject-mutation",
+      "publishedAt": "2026-02-21T17:00:00.000Z",
+      "collectedAt": "2026-03-03T00:03:37.516Z",
+      "category": [
+        "API",
+        "Update",
+        "Payments Apps API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>The <a href=\"https://shopify.dev/docs/api/payments-apps/latest/mutations/verificationSessionReject\" target=\"_blank\" class=\"body-link\"><code>verificationSessionReject</code> mutation</a> in the Payments Apps API now supports two new rejection reason codes and an optional merchant-facing message. The <a href=\"https://shopify.dev/docs/api/payments-apps/latest/mutations/verificationSessionReject#arguments-reason.fields.code\" target=\"_blank\" class=\"body-link\">new enum values</a> on <a href=\"https://shopify.dev/docs/api/payments-apps/latest/enums/VerificationSessionStateReason\" target=\"_blank\" class=\"body-link\"><code>VerificationSessionStateReason</code></a> include:</p>\n<ul>\n<li><code>RESOURCE_NOT_FOUND</code>: The payment method could not be found in the payment provider's system.</li>\n<li><code>RESOURCE_INVALID</code>: The payment token is not valid for this use case (for example, a mismatch between customer and payment method).</li>\n</ul>\n<p>A new input field on <code>VerificationSessionRejectionReasonInput</code>(<a href=\"https://shopify.dev/docs/api/payments-apps/2026-04/input-objects/VerificationSessionRejectionReasonInput\" target=\"_blank\" class=\"body-link\">https://shopify.dev/docs/api/payments-apps/2026-04/input-objects/VerificationSessionRejectionReasonInput</a>) has also been added:</p>\n<ul>\n<li><code>merchantMessage</code> (string, optional): A custom, localized message to provide to the merchant when a verification is rejected.</li>\n</ul>\n<p>These changes give payment apps more granular control over verification rejection reporting.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "verificationSessionRejectミューテーションに新しい拒否理由コードとマーチャント向けメッセージを追加",
+          "summarizedJa": "Payments Apps APIのverificationSessionRejectミューテーションに、2つの新しい拒否理由コード（RESOURCE_NOT_FOUNDとRESOURCE_INVALID）が追加されました。また、検証が拒否された際にマーチャントに表示するカスタムメッセージ（merchantMessage）をオプションで設定できるようになりました。これにより、決済アプリは検証拒否時のエラー報告をより詳細に制御できるようになります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-03-03T00:05:06.769Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1398,
+            "output": 260
+          },
+          "estimatedCost": 0.008094
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "`verificationSessionReject`ミューテーションに新しい拒否理由コードとマーチャント向けメッセージが追加",
+          "summarizedJa": "ShopifyのPayments Apps APIにある`verificationSessionReject`ミューテーションに、支払い検証の拒否理由として「リソースが見つからない」「リソースが無効」という2つの新しいコードが追加されました。これにより、決済アプリはより詳細な拒否理由を報告できるようになります。また、マーチャント向けにカスタムのローカライズされたメッセージを送信するオプションも追加され、拒否の状況をより明確に伝えられるようになります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-03-03T00:05:11.415Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1047,
+            "output": 181
           },
           "estimatedCost": 0
         }
@@ -4679,6 +5089,56 @@
           "tokenUsage": {
             "input": 782,
             "output": 145
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-create-and-edit-resources-directly-in-the-theme-editor",
+      "source": "shopify-changelog",
+      "title": "Create and edit resources directly in the theme editor",
+      "link": "https://changelog.shopify.com/posts/create-and-edit-resources-directly-in-the-theme-editor",
+      "publishedAt": "2025-12-15T17:00:00.000Z",
+      "collectedAt": "2026-03-03T00:03:38.455Z",
+      "category": [
+        "Themes"
+      ],
+      "description": "\n        <p>You can now create and edit key resources — products, collections, markets, and metaobjects — directly from the theme editor. When you select a resource in the editor, you'll see an edit button that opens an overlay where you can make changes. Your updates are reflected immediately in the editor preview, streamlining your workflow and reducing context switching.</p>\n\n<p>For more information on using the theme editor to customize your online store, see <a href=\"https://help.shopify.com/en/manual/online-store/themes/customizing-themes\">Customize your online store with the theme editor</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "テーマエディターから直接リソースを作成・編集可能に",
+          "summarizedJa": "テーマエディター内から商品、コレクション、マーケット、メタオブジェクトを直接作成・編集できるようになりました。エディター上で選択したリソースの編集ボタンからオーバーレイが開き、変更内容はプレビューに即座に反映されます。これにより画面切り替えが減り、作業効率が大幅に向上します。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-03-03T00:05:14.738Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1048,
+            "output": 223
+          },
+          "estimatedCost": 0.006489
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "テーマエディター内でリソースを直接作成・編集",
+          "summarizedJa": "Shopifyのテーマエディター内で、商品、コレクション、マーケット、メタオブジェクトといった主要なリソースを直接作成・編集できるようになりました。エディターでリソースを選択すると表示される編集ボタンからオーバーレイを開き、変更を加えることができます。これにより、更新がエディタープレビューに即座に反映され、ワークフローが効率化され、コンテキスト切り替えが削減されます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-03-03T00:05:20.540Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 765,
+            "output": 160
           },
           "estimatedCost": 0
         }
