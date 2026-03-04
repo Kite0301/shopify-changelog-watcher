@@ -1,6 +1,106 @@
 {
-  "lastUpdated": "2026-03-03T00:03:38.464Z",
+  "lastUpdated": "2026-03-04T00:03:28.089Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-smarter-international-pricing-with-managed-markets",
+      "source": "shopify-changelog",
+      "title": "Smarter international pricing with Managed Markets",
+      "link": "https://changelog.shopify.com/posts/smarter-international-pricing-with-managed-markets",
+      "publishedAt": "2026-03-03T20:00:00.000Z",
+      "collectedAt": "2026-03-04T00:03:28.079Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>Adaptive pricing for Managed Markets automatically adjusts your international product prices to include duties, taxes, currency conversion, and merchant of record fees. This means customers see transparent, localized prices at checkout with no surprise charges, and your payout amounts stay consistent with your domestic orders.</p>\n\n<p>Learn more about adaptive pricing in the <a href=\"https://help.shopify.com/en/manual/international/managed-markets/adaptive-pricing\">Shopify Help Center</a>.</p>\n\n<h2>How it works</h2>\n\n<p>When you turn on adaptive pricing, we start from your domestic prices and automatically derive international prices for each market. Here's what we do behind the scenes:</p>\n\n<ul>\n<li><strong>Convert to local currency</strong> using a stabilized exchange rate that we guarantee for a week - so your customers see consistent, predictable prices instead of numbers that change every hour</li>\n<li><strong>Include duties and import taxes</strong> directly in the product price, so your customers pay one clear price at checkout with no surprise fees later</li>\n<li><strong>Include Managed Markets and FX fees</strong> in the price, so your margins stay predictable</li>\n<li><strong>Apply smart rounding</strong> to keep prices looking clean and natural in every currency</li>\n</ul>\n\n<p>The result: your international customers see localized, all-inclusive prices that feel just like buying from a local store. And your payouts work just like they do domestically -- you get your domestic price minus payment processing fees, and we handle the rest.</p>\n\n<h2>What you see in your Shopify admin</h2>\n\n<p>We've built new tools into your admin so you can see exactly what's happening with adaptive pricing:</p>\n\n<ul>\n<li><strong>A toggle on each market's details page</strong> to turn adaptive pricing on or off per market</li>\n<li><strong>A payout breakdown modal on the order details page</strong> that shows you how your payout amount is calculated - including the duties, taxes, FX, and fees that were included in the customer's price</li>\n<li><strong>A pricing audit trail</strong> so you can see how each product's price was derived, from your domestic price through every adjustment</li>\n</ul>\n\n<h2>Getting started</h2>\n\n<p>Adaptive pricing is available now for all Managed Markets merchants powered by Shopify Payments. If you're new to Managed Markets, adaptive pricing is enabled by default when you onboard.</p>\n\n<p>If you're an existing Managed Markets merchant, you can turn it on from your admin:</p>\n\n<ol>\n<li>Go to <strong>Settings &gt; Markets</strong>.</li>\n<li>Click on a market managed by Managed Markets.</li>\n<li>In the pricing section, toggle <strong>adaptive pricing</strong> on.</li>\n</ol>\n\n<p>That's it. We'll start deriving localized, all-inclusive prices for that market right away.</p>\n\n<h2>A few things to keep in mind</h2>\n\n<ul>\n<li>Adaptive pricing is available on <strong>Managed Markets powered by Shopify Payments</strong>. Merchants that joined after October 14, 2025 have access today; those that joined prior will gain access March 26, 2026.</li>\n<li>Prices are stabilized on a <strong>weekly cadence</strong>, so your customers see consistent pricing between updates.</li>\n<li>If you've set <strong>fixed prices</strong> for specific products in a market, they will not be adapted. You are responsible for ensuring they leave you with sufficient margin after duties, taxes, and cross border fees.</li>\n<li><strong>Gift cards</strong> are excluded from adaptive pricing adjustments.</li>\n<li><strong>Refunds</strong> are handled automatically. Duties and taxes included in the price are returned to you when recoverable. FX and Managed Markets fees are not returned.</li>\n<li><strong>Order edits</strong> are supported - if you modify an order before fulfillment, the included duties and taxes are recalculated and any difference is credited or debited accordingly.</li>\n<li>You can turn adaptive pricing off at any time. When you do, your markets will revert to the standard duty-exclusive pricing model.</li>\n</ul>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Managed Marketsでより賢い国際価格設定を実現",
+          "summarizedJa": "Managed Marketsの適応価格設定機能により、国際的な商品価格に関税、税金、通貨換算、手数料が自動的に含まれるようになりました。顧客はチェックアウト時に透明性の高いローカライズされた価格を確認でき、予期せぬ追加料金がなくなり、マーチャントの支払額は国内注文と一貫性が保たれます。この機能はShopify Paymentsを利用するManaged Marketsマーチャント向けに提供され、市場ごとにオン・オフを切り替え可能で、価格の内訳や算出過程も管理画面で確認できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-03-04T00:03:35.165Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1926,
+            "output": 305
+          },
+          "estimatedCost": 0.010353000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Managed Marketsによるスマートな国際価格設定",
+          "summarizedJa": "Managed Markets向けの新機能「Adaptive pricing」は、国際販売における商品価格に関税、税金、通貨換算、手数料を自動で含め、顧客に透明でローカライズされた最終価格を提供します。これにより、マーチャントは国内注文と同様に安定した受取額を確保しつつ、国際販売の価格設定の複雑さを大幅に軽減できます。本機能はShopify Paymentsを利用するManaged Marketsマーチャントが対象です。",
+          "scores": {
+            "merchantImpact": 5,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-03-04T00:03:42.453Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1472,
+            "output": 168
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-enhanced-payment-method-support-for-merchants",
+      "source": "shopify-changelog",
+      "title": "Enhanced Payment Method Support for Merchants",
+      "link": "https://changelog.shopify.com/posts/enhanced-payment-method-support-for-merchants",
+      "publishedAt": "2026-03-03T17:00:00.000Z",
+      "collectedAt": "2026-03-04T00:03:28.079Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>We've added support for multiple payment methods to the Billing product. Now merchants can streamline their transactions by utilizing various payment options, reducing complexity in their billing processes. This is beneficial because it offers greater flexibility and convenience for managing payments effectively. Learn more about the enhanced payment methods in the <a href=\"https://help.shopify.com/en/manual/your-account/manage-billing/paying-your-bills/managing-payments/managing-payment-methods\">Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "マーチャント向け支払い方法サポートの強化",
+          "summarizedJa": "Shopifyの請求機能において、複数の支払い方法のサポートが追加されました。これにより、マーチャントは様々な支払いオプションを利用でき、請求プロセスの複雑さを軽減できます。支払い管理の柔軟性と利便性が向上し、より効果的な決済管理が可能になります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-03-04T00:03:45.995Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1013,
+            "output": 209
+          },
+          "estimatedCost": 0.006174000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "マーチャント向け支払い方法サポートの強化",
+          "summarizedJa": "Shopifyの請求機能において、複数の支払い方法がサポートされるようになりました。これにより、マーチャントはShopifyへの支払いを多様なオプションで管理できるようになり、請求プロセスがより柔軟で便利になります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-03-04T00:03:51.452Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 733,
+            "output": 116
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-shipping-in-quick-sale",
       "source": "shopify-changelog",
