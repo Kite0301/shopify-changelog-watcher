@@ -1,6 +1,109 @@
 {
-  "lastUpdated": "2026-03-04T00:03:28.089Z",
+  "lastUpdated": "2026-03-06T00:09:03.780Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-marketing-automations-are-moving-on-march-24",
+      "source": "shopify-changelog",
+      "title": "Marketing automations are moving on March 24",
+      "link": "https://changelog.shopify.com/posts/marketing-automations-are-moving-on-march-24",
+      "publishedAt": "2026-03-05T19:45:00.000Z",
+      "collectedAt": "2026-03-06T00:09:03.770Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>We’re making changes to where your marketing automations show under ‘Marketing’ &gt; ‘Automations’ in Shopify. </p>\n\n<p>On March 24, 2026: </p>\n\n<ul>\n<li><p>Marketing automations that use Shopify Messaging emails will move to the Shopify Messaging app. </p></li>\n<li><p>Automations that have marketing activities from other apps will be available in the Shopify Flow app. </p></li>\n</ul>\n\n<p>You don't need to take any action, and your marketing automations will keep working as expected. </p>\n\n<p>Learn more about managing <a href=\"https://help.shopify.com/en/manual/promoting-marketing/create-marketing/marketing-automations?utm_source=mozart&amp;utm_medium=email&amp;utm_campaign=marketingautomations&amp;utm_term=notice\">marketing automations</a> in the Shopify Help Center. </p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "マーケティングオートメーションが3月24日に移動します",
+          "summarizedJa": "2026年3月24日より、Shopify管理画面のマーケティングオートメーションの表示場所が変更されます。Shopify Messagingメールを使用するオートメーションはShopify Messagingアプリへ、他のアプリのマーケティングアクティビティを含むオートメーションはShopify Flowアプリへ移動しますが、マーチャント側での対応は不要で、機能は引き続き正常に動作します。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 2,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-03-06T00:09:09.753Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1146,
+            "output": 241
+          },
+          "estimatedCost": 0.007053
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "マーケティングオートメーションの表示場所が3月24日に変更されます",
+          "summarizedJa": "Shopifyのマーケティングオートメーションの表示場所が2026年3月24日に変更されます。Shopify Messagingメールを使用するオートメーションはShopify Messagingアプリへ、他のアプリの活動を含むオートメーションはShopify Flowアプリへ移動します。マーチャント側での対応は不要で、既存のオートメーションは引き続き正常に動作します。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 1
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-03-06T00:09:13.886Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 850,
+            "output": 160
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-new-analyticsqueryable-capability-for-metafield-definitions",
+      "source": "developer-changelog",
+      "title": "New analyticsQueryable capability for Metafield Definitions",
+      "link": "https://shopify.dev/changelog/new-analyticsqueryable-capability-for-metafield-definitions",
+      "publishedAt": "2026-03-05T17:00:00.000Z",
+      "collectedAt": "2026-03-06T00:09:02.844Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>The <code>analyticsQueryable</code> capability is now available on the <code>MetafieldDefinition</code> type in the GraphQL Admin API, enabling you to specify whether a metafield can be queried in Shopify Analytics. This enhancement allows merchants to leverage custom metafield values for filtering and grouping data, providing deeper insights into their store's performance.</p>\n<p>You can access this capability via the <code>MetafieldDefinition.capabilities</code> field. It can be set during the creation or update of a metafield definition using the <code>metafieldDefinitionCreate</code> and <code>metafieldDefinitionUpdate</code> mutations.</p>\n<p>Once enabled, the metafield becomes a dimension and filter in ShopifyQL and Shopify's Analytics, empowering merchants to refine their data analysis. Currently, this functionality supports the following <code>MetafieldDefinition.ownerType</code> values:</p>\n<ul>\n<li><code>PRODUCT</code></li>\n<li><code>PRODUCTVARIANT</code></li>\n<li><code>ORDER</code></li>\n<li><code>CUSTOMER</code></li>\n</ul>\n<p><strong>Example: Enabling Analytics Queryable on a New Metafield Definition</strong></p>\n<p>The following GraphQL mutation demonstrates how to enable the <code>analyticsQueryable</code> capability for a new metafield definition. This example sets up a metafield for products, allowing it to be used in analytics queries:</p>\n<pre><code class=\"language-graphql\">mutation {\n  metafieldDefinitionCreate(definition: {\n    name: &quot;Fabric&quot;\n    namespace: &quot;custom&quot;\n    key: &quot;fabric&quot;\n    type: &quot;single_line_text_field&quot;\n    ownerType: PRODUCT\n    capabilities: {\n      analyticsQueryable: { enabled: true }\n    }\n  }) {\n    createdDefinition {\n      id\n      capabilities {\n        analyticsQueryable {\n          enabled\n        }\n      }\n    }\n    userErrors {\n      field\n      message\n    }\n  }\n}\n</code></pre>\n<p>This mutation creates a new metafield definition with the <code>analyticsQueryable</code> capability enabled, making it available for use in Shopify Analytics.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "メタフィールド定義に新しいanalyticsQueryable機能を追加",
+          "summarizedJa": "GraphQL Admin APIのMetafieldDefinitionタイプに`analyticsQueryable`機能が追加され、メタフィールドをShopify Analyticsでクエリ可能に設定できるようになりました。この機能により、商品、商品バリエーション、注文、顧客のカスタムメタフィールド値を使用してデータのフィルタリングやグループ化が可能になり、より詳細な分析が実現します。メタフィールド定義の作成・更新時に設定でき、有効化するとShopifyQLやAnalyticsでディメンションやフィルターとして利用できます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-03-06T00:09:18.899Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1504,
+            "output": 285
+          },
+          "estimatedCost": 0.008787
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "メタフィールド定義に`analyticsQueryable`機能が追加",
+          "summarizedJa": "ShopifyのGraphQL Admin APIにおいて、メタフィールド定義に`analyticsQueryable`機能が追加されました。これにより、マーチャントはカスタムメタフィールドの値をShopify Analyticsでフィルタリングやグループ化に利用できるようになり、ストアのパフォーマンスに関するより深い洞察を得ることが可能になります。この機能は、商品、商品バリアント、注文、顧客のメタフィールドで利用でき、データ分析の精度向上に貢献します。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-03-06T00:09:24.729Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1113,
+            "output": 166
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-smarter-international-pricing-with-managed-markets",
       "source": "shopify-changelog",
