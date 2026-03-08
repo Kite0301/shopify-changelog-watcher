@@ -1,6 +1,58 @@
 {
-  "lastUpdated": "2026-03-07T00:02:46.674Z",
+  "lastUpdated": "2026-03-08T00:01:32.740Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-shop-minis-february-2026-update",
+      "source": "developer-changelog",
+      "title": "Shop Minis February 2026 update",
+      "link": "https://shopify.dev/changelog/shop-minis-february-2026-update",
+      "publishedAt": "2026-03-06T17:00:00.000Z",
+      "collectedAt": "2026-03-08T00:01:31.778Z",
+      "category": [
+        "API",
+        "Update",
+        "Shop Minis"
+      ],
+      "description": " <div class=\"\"><h2>New Features</h2>\n<p>The following new features are available for Shopify Minis as of February 2026:</p>\n<h3>Product Tagging for User-Generated Content</h3>\n<p>The <code>useCreateImageContent</code> <a href=\"https://shopify.dev/docs/api/shop-minis/hooks/content/usecreateimagecontent\" target=\"_blank\" class=\"body-link\">hook</a> now supports tagging products directly to user-generated content. Three new parameters provide partners with enhanced control over content creation:</p>\n<ul>\n<li><code>productIds</code>: Associate one or more products with a piece of content.</li>\n<li><code>externalId</code>: Link content to an identifier in your own system.</li>\n<li><code>description</code>: Add a text description to content.</li>\n</ul>\n<pre><code class=\"language-jsx\">import {useCreateImageContent} from '@shopify/shop-minis-react';\nconst {createImageContent} = useCreateImageContent();\nawait createImageContent({\n  imageUri: 'https://example.com/photo.jpg',\n  productIds: [\n    'gid://shopify/Product/123',\n    'gid://shopify/Product/456',\n  ],\n  externalId: 'my-content-abc',\n  description: 'Styled with our summer collection',\n});\n</code></pre>\n<p>This feature enables shoppable UGC experiences, allowing users browsing content to discover and purchase tagged products directly.</p>\n<h3>SafeArea Component and useSafeArea Hook</h3>\n<p>A new <code>SafeArea</code> (<a href=\"https://shopify.dev/docs/api/shop-minis/components/primitives/safearea\" target=\"_blank\" class=\"body-link\">documentation</a>) component and <code>useSafeArea</code> (<a href=\"https://shopify.dev/docs/api/shop-minis/hooks/util/usesafearea\" target=\"_blank\" class=\"body-link\">documentation</a>) hook help minis handle device safe area insets. This is especially important for minis that render full-screen or use custom layouts on notched devices.</p>\n<pre><code class=\"language-jsx\">import {SafeArea, useSafeArea} from '@shopify/shop-minis-react';\n\n// Option 1: Wrap content in the SafeArea component\nfunction MyMini() {\n  return (\n    &lt;SafeArea&gt;\n      &lt;MyContent /&gt;\n    &lt;/SafeArea&gt;\n  );\n}\n\n// Option 2: Use the hook for manual control\nfunction MyComponent() {\n  const {top, bottom, left, right} = useSafeArea();\n  return &lt;View style={{paddingTop: top, paddingBottom: bottom}} /&gt;;\n}\n</code></pre>\n<h3>CLI Enable and Disable Commands</h3>\n<p>The Shop Minis CLI now includes <code>enable</code> and <code>disable</code> commands for toggling minis directly from the command line. This is useful for testing development minis or managing mini availability during the review process.</p>\n<pre><code class=\"language-bash\">npx minis enable\nnpx minis disable\n</code></pre>\n<p><a href=\"https://shopify.dev/docs/api/shop-minis/commands/enable\" target=\"_blank\" class=\"body-link\">Additional documentation here</a></p>\n<h3>Consent Flow &amp; Scopes</h3>\n<ul>\n<li><strong>Terms consent toast</strong>: Users see a confirmation toast when accepting terms, improving clarity.</li>\n<li><strong>Development mode consent</strong>: The consent dialog now appears in dev mode when a mini requests scopes, facilitating easier testing of the consent flow during development.</li>\n<li><strong>Favorite and unfavorite bypass</strong>: Tapping favorite or unfavorite on a mini no longer triggers the consent popup, reducing unnecessary friction.</li>\n<li><strong>Removed Consent Scopes</strong>: Unused read scopes have been removed from the platform. Minis that only use <code>ProductCard</code> or <code>ProductLink</code> no longer require the <code>product_list:write</code> scope, reducing the consent burden for simpler minis.</li>\n<li><strong>OpenId scope removed</strong>: The <code>openid</code> scope is no longer required for custom backend support. It is only needed if your Mini uses the public user ID (<code>publicId</code>) for personalization or data persistence.</li>\n</ul>\n<h3>Home Page Quick Link</h3>\n<p>Minis are now accessible through a quick link on the Shop App home screen, making it easier for users to discover and browse the Explore section. This enhancement gives minis greater visibility across the app.</p>\n<h2>Documentation Updates</h2>\n<p>The following documentation updates accompany these changes:</p>\n<h3>Manifest File</h3>\n<p><a href=\"https://shopify.dev/docs/api/shop-minis/manifest-file\" target=\"_blank\" class=\"body-link\">Updated documentation</a> reflects the removal of legacy read scopes from the manifest file. Partners using removed scopes should update their <code>manifest.json</code> accordingly.</p>\n<h3>Custom Backend</h3>\n<p>The <a href=\"https://shopify.dev/docs/api/shop-minis/custom-backend\" target=\"_blank\" class=\"body-link\">custom backend guide</a> has been revised with clearer instructions and updated markdown formatting.</p>\n<h2>Other Changes</h2>\n<ul>\n<li>Removed the unused <code>variants</code> field, continuing cleanup from January.</li>\n<li>The CLI template no longer includes unnecessary scopes in the default <code>manifest.json</code>.</li>\n<li>Development minis can now be queried by UUID before they are enabled, supporting consent checks during development.</li>\n</ul>\n<h2>Summary</h2>\n<p>February focuses on richer content, better developer experience, and reducing friction:</p>\n<ol>\n<li><strong>Product tagging for UGC</strong>: Tag products directly to user-generated content for shoppable experiences.</li>\n<li><strong>SafeArea support</strong>: New component and hook for handling device safe areas in full-screen minis.</li>\n<li><strong>CLI enable/disable</strong>: Toggle minis directly from the command line.</li>\n<li><strong>Consent improvements</strong>: Smoother consent flow with dev mode support and fewer unnecessary popups.</li>\n<li><strong>Scope simplification</strong>: Removed legacy read scopes and reduced consent requirements for simpler minis.</li>\n<li><strong>Explore quick link</strong>: Greater visibility for minis on the Shop App home screen.</li>\n</ol>\n<p>For questions or feedback, reach out to the Shop Minis team or post in the <a href=\"https://community.shopify.dev/c/shop-minis/33\" target=\"_blank\" class=\"body-link\">community forums</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shop Minis 2026年2月アップデート",
+          "summarizedJa": "Shop Minisに、ユーザー生成コンテンツへの商品タグ付け機能、SafeAreaコンポーネント、CLI有効化/無効化コマンドが追加されました。また、同意フローが改善され、不要なスコープが削除されることで、よりシンプルなMini開発が可能になりました。Shop Appホーム画面にMinisへのクイックリンクが追加され、ユーザーの発見性も向上しています。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-03-08T00:01:38.392Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2686,
+            "output": 237
+          },
+          "estimatedCost": 0.011612999999999998
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shop Minis 2026年2月アップデート",
+          "summarizedJa": "Shop Minisの2026年2月アップデートでは、ユーザー生成コンテンツへの商品タグ付け機能が追加され、マーチャントはより購買に繋がりやすいUGC体験を提供できるようになります。開発者向けには、SafeArea対応やCLIコマンドの追加、同意フローの改善、不要なスコープの削除が行われ、開発効率とミニの公開プロセスが大幅に向上します。これにより、Shopアプリ内でのミニの発見性も高まり、全体的なユーザー体験と開発者体験が強化されます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 17,
+          "analyzedAt": "2026-03-08T00:01:47.222Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 2072,
+            "output": 184
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-marketing-automations-are-moving-on-march-24",
       "source": "shopify-changelog",
