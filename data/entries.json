@@ -1,6 +1,164 @@
 {
-  "lastUpdated": "2026-03-08T00:01:32.740Z",
+  "lastUpdated": "2026-03-10T00:02:07.211Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-inventorylevelscheduledchanges-field-is-being-removed-with-no-replacement",
+      "source": "developer-changelog",
+      "title": "`InventoryLevel.scheduledChanges` field is being removed with no replacement",
+      "link": "https://shopify.dev/changelog/inventorylevelscheduledchanges-field-is-being-removed-with-no-replacement",
+      "publishedAt": "2026-03-09T16:00:00.000Z",
+      "collectedAt": "2026-03-10T00:02:06.052Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Breaking API Change",
+        "Admin GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>The <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-04/objects/InventoryLevel#field-InventoryLevel.fields.scheduledChanges\" target=\"_blank\" class=\"body-link\"><code>InventoryLevel.scheduledChanges</code></a> field will be removed from the GraphQL Admin AP in version <code>2026-07</code>. This field has no replacement, so any apps currently querying it should stop relying on it to avoid disruptions.</p>\n<p>This change is part of our ongoing efforts to streamline and modernize the inventory management APIs, focusing on more robust and consistent methods for handling inventory updates.</p>\n<h3>What you need to do</h3>\n<p>Review your app's code for any queries of <code>InventoryLevel.scheduledChanges</code> and remove them. If your app depends on scheduled inventory information, consider alternative approaches such as using other inventory-related fields or mutations like <a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/mutations/inventoryadjustquantities\" target=\"_blank\" class=\"body-link\"><code>inventoryAdjustQuantities</code></a> for adjustments. Refer to the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest\" target=\"_blank\" class=\"body-link\">API reference</a> for available options.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "InventoryLevel.scheduledChangesフィールドが代替なしで削除されます",
+          "summarizedJa": "GraphQL Admin APIのバージョン2026-07から、InventoryLevel.scheduledChangesフィールドが代替機能なしで削除されます。このフィールドを現在使用しているアプリは、中断を避けるためにコードを見直し、クエリから削除する必要があります。在庫予定情報が必要な場合は、inventoryAdjustQuantitiesなどの他の在庫関連フィールドやミューテーションの使用を検討してください。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-03-10T00:02:12.210Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1285,
+            "output": 245
+          },
+          "estimatedCost": 0.00753
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "「InventoryLevel.scheduledChanges」フィールドの削除（代替なし）",
+          "summarizedJa": "ShopifyのGraphQL Admin APIから、在庫レベルのスケジュールされた変更を扱う`InventoryLevel.scheduledChanges`フィールドが2026年7月バージョンで削除されます。このフィールドには代替がないため、現在このフィールドを利用しているアプリは、機能停止を避けるためにコードの修正が必要です。開発者は、他の在庫関連フィールドや`inventoryAdjustQuantities`などのミューテーションの利用を検討する必要があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-03-10T00:02:17.215Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 950,
+            "output": 165
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-inventorysetscheduledchanges-mutation-is-being-removed-with-no-replacement",
+      "source": "developer-changelog",
+      "title": "`inventorySetScheduledChanges` mutation is being removed with no replacement",
+      "link": "https://shopify.dev/changelog/inventorysetscheduledchanges-mutation-is-being-removed-with-no-replacement",
+      "publishedAt": "2026-03-09T16:00:00.000Z",
+      "collectedAt": "2026-03-10T00:02:06.052Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Breaking API Change",
+        "Admin GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>The <a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/mutations/inventorysetscheduledchanges\" target=\"_blank\" class=\"body-link\"><code>inventorySetScheduledChanges</code></a> mutation will be removed from the GraphQL Admin API in version <code>2026-07</code>. This mutation has no replacement, so any apps currently using it should stop relying on it to avoid disruptions.</p>\n<p>This change is part of our ongoing efforts to streamline and modernize the inventory management APIs, focusing on more robust and consistent methods for handling inventory updates.</p>\n<h3>What you need to do</h3>\n<p>Review your app's code for any uses of <code>inventorySetScheduledChanges</code> and remove them. If your app depends on scheduled inventory changes, consider alternative approaches such as using the <a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/mutations/inventoryadjustquantities\" target=\"_blank\" class=\"body-link\"><code>inventoryAdjustQuantities</code></a> mutation for immediate adjustments or integrating with other inventory tools. Refer to the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest\" target=\"_blank\" class=\"body-link\">API reference</a> for available options.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "`inventorySetScheduledChanges`ミューテーションが代替なしで削除されます",
+          "summarizedJa": "GraphQL Admin APIの`inventorySetScheduledChanges`ミューテーションが2026-07バージョンで削除され、代替機能は提供されません。このミューテーションを使用しているアプリは、コードから削除する必要があります。在庫の即時調整には`inventoryAdjustQuantities`ミューテーションの利用を検討してください。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-03-10T00:02:21.923Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1267,
+            "output": 214
+          },
+          "estimatedCost": 0.007011
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "inventorySetScheduledChangesミューテーションが代替なしで削除されます",
+          "summarizedJa": "ShopifyのGraphQL Admin APIから、在庫のスケジュール変更を行う`inventorySetScheduledChanges`ミューテーションが2026年7月版で削除されます。この機能には代替がないため、現在このミューテーションを使用しているアプリは、中断を避けるためにコードから削除する必要があります。アプリ開発者は、即時調整には`inventoryAdjustQuantities`ミューテーションの使用や、他の在庫管理ツールとの連携を検討してください。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-03-10T00:02:27.239Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 936,
+            "output": 169
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-improved-visual-hierarchy-for-line-items-in-orders-and-returns",
+      "source": "shopify-changelog",
+      "title": "Improved visual hierarchy for line items in orders and returns",
+      "link": "https://changelog.shopify.com/posts/improved-visual-hierarchy-for-line-items-in-orders-and-returns",
+      "publishedAt": "2026-03-09T15:00:00.000Z",
+      "collectedAt": "2026-03-10T00:02:07.203Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>We've released a streamlined line item design for orders and returns in admin. This improvement gives merchants a consistent layout, clearer pricing and fee details, and a cleaner display of item details, simplifying the process of scanning, comparing, and managing orders and returns.</p>\n\n<p>Key changes include:<br>\n* Consistent layout for line item information across all relevant pages for quicker visual scanning<br>\n* Pricing is now grouped in the price column, with discount details available on hover or tap<br>\n* Line item metadata has moved to a collapsible footer row that remembers your display preference across pages</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "注文と返品の商品明細行の視覚的階層の改善",
+          "summarizedJa": "管理画面の注文と返品ページにおける商品明細行のデザインが改善されました。一貫性のあるレイアウト、価格と手数料の詳細が明確化され、割引情報はホバーまたはタップで確認可能になりました。また、商品のメタデータは折りたたみ可能なフッター行に移動し、表示設定がページ間で記憶されるようになりました。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-03-10T00:02:31.661Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1051,
+            "output": 234
+          },
+          "estimatedCost": 0.0066630000000000005
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "注文と返品における明細項目の視覚的階層の改善",
+          "summarizedJa": "Shopify管理画面の注文と返品における明細項目のデザインが改善されました。これにより、一貫性のあるレイアウト、明確な価格表示、および詳細情報の整理により、マーチャントは注文や返品の確認・管理をより効率的に行えるようになります。特に、価格表示のグループ化や、明細メタデータの折りたたみ可能なフッターへの移動が主な変更点です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-03-10T00:02:37.251Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 766,
+            "output": 163
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-shop-minis-february-2026-update",
       "source": "developer-changelog",
