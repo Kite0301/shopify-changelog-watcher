@@ -1,6 +1,106 @@
 {
-  "lastUpdated": "2026-03-10T00:02:07.211Z",
+  "lastUpdated": "2026-03-11T00:01:54.912Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-in-store-pickup-can-now-transfer-from-multiple-locations",
+      "source": "shopify-changelog",
+      "title": "Pickup in store can now transfer from multiple locations",
+      "link": "https://changelog.shopify.com/posts/in-store-pickup-can-now-transfer-from-multiple-locations",
+      "publishedAt": "2026-03-10T21:00:00.000Z",
+      "collectedAt": "2026-03-11T00:01:54.903Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>Orders placed for pickup in store can now be fulfilled using transfers from multiple locations. If a customer selects a store that doesn’t have enough inventory and no single location can fulfill the order, transfers will be created from several locations to complete the fulfillment.</p>\n\n<p>Learn more about setting up transfers for pickup in store in the <a href=\"https://help.shopify.com/en/manual/fulfillment/setup/delivery-methods/pickup-in-store\">Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "店舗受け取りで複数ロケーションからの在庫移動が可能に",
+          "summarizedJa": "店舗受け取り注文において、選択された店舗に十分な在庫がない場合、複数のロケーションから在庫移動を行ってフルフィルメントを完了できるようになりました。単一のロケーションでは注文を満たせない場合でも、複数の拠点から商品を集約して店舗受け取りに対応できます。複数店舗や倉庫を運営するマーチャントの在庫効率が向上します。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-03-11T00:02:01.171Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1026,
+            "output": 251
+          },
+          "estimatedCost": 0.006843
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "店舗受け取り注文、複数ロケーションからの在庫移動に対応",
+          "summarizedJa": "店舗受け取り注文のフルフィルメントにおいて、複数のロケーションからの在庫移動が可能になりました。これにより、顧客が選択した店舗に在庫が不足している場合でも、複数の倉庫や店舗から在庫を集めて注文を完了できるようになります。在庫不足による機会損失を防ぎ、顧客満足度の向上に貢献します。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-03-11T00:02:08.652Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 742,
+            "output": 140
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-flow-document-any-workflow-with-notes-that-stay-with-it",
+      "source": "shopify-changelog",
+      "title": "Flow: Document workflows with notes",
+      "link": "https://changelog.shopify.com/posts/flow-document-any-workflow-with-notes-that-stay-with-it",
+      "publishedAt": "2026-03-10T16:00:00.000Z",
+      "collectedAt": "2026-03-11T00:01:54.903Z",
+      "category": [
+        "Apps"
+      ],
+      "description": "\n        <p>Add a note to any workflow from the workflow editor's \"More action\" menu. Use it to describe what the workflow does, note any dependencies, list fields that need to be configured, and link to external documentation. A new person can open the workflow and immediately understand it, without digging through Slack threads or asking the person who built it.</p>\n\n<p>Notes are copied with the workflow when it's duplicated and persist when it's moved between stores. Anyone with edit access to a workflow can update the note.</p>\n\n<p>For more information, visit the <a href=\"https://help.shopify.com/en/manual/shopify-flow/create/create-workflow\">documentation</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Flow: ワークフローにメモを追加してドキュメント化が可能に",
+          "summarizedJa": "Shopify Flowのワークフローエディターから、各ワークフローにメモを追加できるようになりました。ワークフローの目的、依存関係、設定が必要なフィールド、外部ドキュメントへのリンクなどを記録でき、チーム内での引き継ぎや理解を容易にします。メモはワークフローの複製時にコピーされ、ストア間の移動時にも保持されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-03-11T00:02:12.907Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1066,
+            "output": 242
+          },
+          "estimatedCost": 0.006828000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Flow: ワークフローにメモを追加して文書化",
+          "summarizedJa": "Shopify Flowのワークフローエディタから、各ワークフローにメモを追加できるようになりました。これにより、ワークフローの目的、依存関係、設定項目、外部ドキュメントへのリンクなどを記録でき、新しい担当者でもすぐに内容を理解しやすくなります。メモはワークフローの複製やストア間の移動時にも引き継がれるため、チーム内での情報共有と運用効率が大幅に向上します。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-03-11T00:02:17.970Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 787,
+            "output": 162
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-inventorylevelscheduledchanges-field-is-being-removed-with-no-replacement",
       "source": "developer-changelog",
@@ -609,6 +709,57 @@
           "tokenUsage": {
             "input": 794,
             "output": 156
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-process-refunds-only-through-the-original-payment-processor-requirement-update",
+      "source": "developer-changelog",
+      "title": "Process refunds only through the original payment processor – Requirement update",
+      "link": "https://shopify.dev/changelog/process-refunds-only-through-the-original-payment-processor-requirement-update",
+      "publishedAt": "2026-02-27T21:00:00.000Z",
+      "collectedAt": "2026-03-11T00:01:53.972Z",
+      "category": [
+        "Shopify App Store",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>We've updated <a href=\"https://shopify.dev/docs/apps/launch/shopify-app-store/app-store-requirements#process-refunds-only-through-the-original-payment-processor\" target=\"_blank\" class=\"body-link\">requirement 1.1.15</a> for Shopify App Store apps. </p>\n<p>Apps must now process refunds only through the original payment processor. Previously, apps were prohibited from offering methods for processing refunds outside of the original payment processor. With this update, if your app issues store credits during a refund, it must use either the '<a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/refundCreate\" target=\"_blank\" class=\"body-link\">refundCreate</a>' or '<a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/returnProcess\" target=\"_blank\" class=\"body-link\">returnProcess</a>' mutation. This change ensures that refunds and store credits are handled securely and consistently within Shopify’s platform.</p>\n<p>For more details on the updated requirement, please refer to the <a href=\"https://shopify.dev/docs/apps/launch/shopify-app-store/app-store-requirements#process-refunds-only-through-the-original-payment-processor\" target=\"_blank\" class=\"body-link\">Shopify App Store requirements documentation</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "返金処理は元の決済プロセッサー経由のみ – 要件の更新",
+          "summarizedJa": "Shopify App Storeの要件1.1.15が更新され、アプリは返金処理を元の決済プロセッサー経由でのみ行う必要があります。ストアクレジットを発行する場合は、refundCreateまたはreturnProcessミューテーションを使用することが必須となりました。この変更により、返金とストアクレジットがShopifyプラットフォーム内で安全かつ一貫して処理されることが保証されます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-03-11T00:02:23.491Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1264,
+            "output": 250
+          },
+          "estimatedCost": 0.007542
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "返金は元の決済プロセッサー経由のみに限定 – 要件更新",
+          "summarizedJa": "Shopifyアプリストアの要件1.1.15が更新され、アプリは返金を元の決済プロセッサー経由でのみ処理することが必須となりました。これにより、アプリが返金時にストアクレジットを発行する場合、`refundCreate`または`returnProcess`のAPIを使用する必要があります。この変更は、Shopifyプラットフォーム内での返金とストアクレジットの処理をより安全かつ一貫性のあるものにすることを目的としています。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-03-11T00:02:30.474Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 960,
+            "output": 177
           },
           "estimatedCost": 0
         }
