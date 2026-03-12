@@ -1,6 +1,156 @@
 {
-  "lastUpdated": "2026-03-11T00:01:54.912Z",
+  "lastUpdated": "2026-03-12T00:02:46.048Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-track-app-activity-and-permissions-from-settings",
+      "source": "shopify-changelog",
+      "title": "Track app activity and permissions from Settings",
+      "link": "https://changelog.shopify.com/posts/track-app-activity-and-permissions-from-settings",
+      "publishedAt": "2026-03-11T19:15:00.000Z",
+      "collectedAt": "2026-03-12T00:02:46.037Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>You can now see what your apps are doing and make more informed decisions about your app stack.</p>\n\n<p>Go to Settings &gt; Apps to view activity and permission information for each app:</p>\n\n<ul>\n<li><strong>Admin API activity:</strong> See how many requests each app made across different areas of your store in the last 30 days. </li>\n<li><strong>Data privacy:</strong> Understand which apps have access to sensitive customer data or other personal data. </li>\n<li><strong>App history:</strong> See when staff have granted updated app permissions. </li>\n</ul>\n\n<p>To learn more about app activity and permissions, visit the <a href=\"https://help.shopify.com/en/manual/apps/managing-apps#review-app-permissions\">Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "設定画面からアプリのアクティビティと権限を追跡可能に",
+          "summarizedJa": "管理画面の「設定 > アプリ」から、インストール済みアプリの詳細な活動状況を確認できるようになりました。過去30日間のAdmin APIリクエスト数、顧客データなど機密情報へのアクセス権限、スタッフによる権限付与履歴を一元的に把握でき、アプリスタックの管理とセキュリティ判断がより適切に行えます。日本のマーチャントにとって、個人情報保護法対応の観点からも重要な機能強化です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-03-12T00:02:52.700Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1097,
+            "output": 272
+          },
+          "estimatedCost": 0.007371000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "設定からアプリのアクティビティと権限を追跡・確認",
+          "summarizedJa": "Shopifyストアの設定画面から、各アプリの活動状況と付与されている権限を詳細に確認できるようになりました。これにより、過去30日間のAdmin API利用状況、顧客データへのアクセス状況、スタッフによる権限変更履歴などを一元的に把握できます。マーチャントは、導入しているアプリがどのような操作を行っているかをより明確に理解し、アプリ構成に関する情報に基づいた意思決定を改善できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-03-12T00:02:59.136Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 799,
+            "output": 168
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-shopify-forms-update-with-sign-in-with-shop",
+      "source": "shopify-changelog",
+      "title": "Sign in with Shop now works on more lead capture forms",
+      "link": "https://changelog.shopify.com/posts/shopify-forms-update-with-sign-in-with-shop",
+      "publishedAt": "2026-03-11T16:00:00.000Z",
+      "collectedAt": "2026-03-12T00:02:46.037Z",
+      "category": [
+        "Shop"
+      ],
+      "description": "\n        <p>We've rebuilt Sign in with Shop for lead capture forms to deliver the seamless, 1-tap experience buyers expect.</p>\n\n<p>What's new:</p>\n\n<ol>\n<li><strong>Works on more forms</strong> - Sign in with Shop now supports forms that don't offer a discount, and on storefronts that do not have Shop Pay enabled. </li>\n<li><strong>True 1-tap recognition</strong> - Recognized buyers with an existing Shop account can subscribe instantly without filling out form fields.</li>\n<li><strong>Account sign-ups</strong> - New buyers can create a Shop account directly from the form.</li>\n<li><strong>Storefront sign-in &amp; Faster checkout</strong> - Completing a lead capture form now creates a storefront session, so buyers are already signed in when they reach checkout.</li>\n</ol>\n\n<p>This experience is enabled on Shopify forms by default with the use of Sign in with Shop. <br>\n<img src=\"https://screenshot.click/25-41-pi2e2-dj0sk.png\" alt=\"\"><br>\n<img src=\"https://screenshot.click/25-42-cvly9-uzywh.png\" alt=\"\"></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Sign in with Shopがより多くのリードキャプチャフォームで利用可能に",
+          "summarizedJa": "リードキャプチャフォーム向けのSign in with Shopが刷新され、割引を提供しないフォームやShop Pay未導入のストアでも利用可能になりました。既存のShopアカウントを持つ顧客はワンタップで登録でき、フォーム完了後は自動的にストアフロントにサインインされた状態でチェックアウトに進めるため、コンバージョン率の向上が期待できます。Shopifyフォームではデフォルトで有効化されています。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-03-12T00:03:04.244Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1202,
+            "output": 266
+          },
+          "estimatedCost": 0.007596
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "「Shopでサインイン」がより多くのリード獲得フォームで利用可能に",
+          "summarizedJa": "「Shopでサインイン」機能がリード獲得フォーム向けに強化され、割引提供のないフォームやShop Payが有効でないストアでも利用可能になりました。これにより、既存顧客はワンタップで登録でき、新規顧客もフォームからShopアカウントを作成可能に。フォーム完了でストアフロントにサインイン状態となるため、チェックアウトがよりスムーズになり、顧客体験とコンバージョン率の向上が期待されます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-03-12T00:03:11.615Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 898,
+            "output": 165
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-shopify-simgym-is-now-available-in-ai-research-preview-for-all-eligible-merchants",
+      "source": "shopify-changelog",
+      "title": "Shopify SimGym is now available in AI Research Preview for all eligible merchants",
+      "link": "https://changelog.shopify.com/posts/shopify-simgym-is-now-available-in-ai-research-preview-for-all-eligible-merchants",
+      "publishedAt": "2026-03-11T14:00:00.000Z",
+      "collectedAt": "2026-03-12T00:02:46.037Z",
+      "category": [
+        "Apps"
+      ],
+      "description": "\n        <p>SimGym is now available to all eligible merchants with no waitlist required. Install the app and start running simulations right away.</p>\n\n<p>SimGym uses AI shoppers with human-like profiles to simulate how real buyers would interact with your storefront. Select an unpublished theme from your theme library, run a simulation against your current theme, and get a detailed report covering:</p>\n\n<p>Navigation and product discovery<br>\nAdd-to-cart flow and friction points<br>\nDirectional performance indicators for add-to-cart, navigation and more</p>\n\n<p>Each simulation surfaces what's working, what's not, and recommends which theme performs better so you can make storefront decisions backed by data, not guesswork.</p>\n\n<p>Install the <a href=\"https://apps.shopify.com/simgym\">Shopify SimGym app</a> from the Shopify App Store to get started. Learn more about SimGym in our <a href=\"https://help.shopify.com/en/manual/online-store/simgym\">help documentation</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify SimGymがAI Research Previewとして全対象マーチャントに提供開始",
+          "summarizedJa": "SimGymアプリが待機リストなしで全対象マーチャントに提供開始されました。人間のような行動をするAI買い物客を使ってストアフロントをシミュレーションし、ナビゲーション、カート追加フロー、パフォーマンス指標などの詳細レポートを取得できます。未公開テーマと現在のテーマを比較し、データに基づいた意思決定が可能になります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-03-12T00:03:16.060Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1183,
+            "output": 248
+          },
+          "estimatedCost": 0.007269
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify SimGymがAI研究プレビューとして、すべての対象マーチャントに提供開始",
+          "summarizedJa": "Shopify SimGymが、すべての対象マーチャント向けにAI研究プレビューとして提供開始され、待機リストなしで利用可能になりました。このアプリは、AIショッパーを用いてストアフロントでの顧客行動をシミュレーションし、未公開テーマと現在のテーマを比較して、ナビゲーションやカート追加フローなどの詳細なレポートを提供します。これにより、データに基づいたテーマ選択とストア改善が可能になります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-03-12T00:03:20.659Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 884,
+            "output": 170
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-in-store-pickup-can-now-transfer-from-multiple-locations",
       "source": "shopify-changelog",
