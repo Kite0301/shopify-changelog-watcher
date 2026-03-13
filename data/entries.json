@@ -1,6 +1,108 @@
 {
-  "lastUpdated": "2026-03-12T00:02:46.048Z",
+  "lastUpdated": "2026-03-13T00:02:56.587Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-shopify-scripts-can-no-longer-be-edited-or-published",
+      "source": "shopify-changelog",
+      "title": "Shopify Scripts can no longer be edited or published starting April 15, 2026",
+      "link": "https://changelog.shopify.com/posts/shopify-scripts-can-no-longer-be-edited-or-published",
+      "publishedAt": "2026-03-12T16:00:00.000Z",
+      "collectedAt": "2026-03-13T00:02:56.575Z",
+      "category": [
+        "Plus"
+      ],
+      "description": "\n        <p>Starting April 15, 2026, you will no longer be able to edit or publish new Shopify Scripts. Your existing published Scripts will continue to run until June 30, 2026, when all Shopify Scripts will stop executing. We strongly encourage you to migrate to Shopify Functions as soon as possible. To help with your migration planning, use the <a href=\"https://help.shopify.com/en/manual/checkout-settings/script-editor/migrating#functions-migrate\">Shopify Scripts customizatinos report</a> to identify which customizations can be replaced with Shopify Functions or public apps.</p>\n\n<p>Learn more about migrating from Shopify Scripts to Shopify Functions in the <a href=\"https://help.shopify.com/en/manual/checkout-settings/script-editor/migrating\">Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "2026年4月15日以降、Shopify Scriptsの編集・公開が不可能に",
+          "summarizedJa": "2026年4月15日からShopify Scriptsの編集・新規公開ができなくなり、6月30日にはすべてのScriptsが実行停止します。既存のScriptsを使用しているマーチャントは、できるだけ早くShopify Functionsへの移行が必要です。移行計画には、Shopify Scriptsカスタマイゼーションレポートを活用して、どのカスタマイズをShopify Functionsやアプリで置き換えられるか確認することが推奨されています。",
+          "scores": {
+            "merchantImpact": 5,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 5
+          },
+          "totalScore": 19,
+          "analyzedAt": "2026-03-13T00:03:04.910Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1122,
+            "output": 267
+          },
+          "estimatedCost": 0.007371
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify Scriptsの編集・公開が2026年4月15日より停止",
+          "summarizedJa": "2026年4月15日以降、Shopify Scriptsの編集および新規公開ができなくなり、既存の公開済みスクリプトも2026年6月30日にはすべて実行を停止します。マーチャントは早急にShopify Functionsへの移行を強く推奨されており、移行計画のためにカスタマイズレポートの活用が促されています。",
+          "scores": {
+            "merchantImpact": 5,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 5
+          },
+          "totalScore": 19,
+          "analyzedAt": "2026-03-13T00:03:12.003Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 831,
+            "output": 163
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-clearer-standards-for-app-listing-images",
+      "source": "developer-changelog",
+      "title": "Clearer standards for app listing images ",
+      "link": "https://shopify.dev/changelog/clearer-standards-for-app-listing-images",
+      "publishedAt": "2026-03-12T16:00:00.000Z",
+      "collectedAt": "2026-03-13T00:02:55.750Z",
+      "category": [
+        "Action Required",
+        "Shopify App Store",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>We've updated requirement 4.4.4 and added a new requirement 4.4.5 for Shopify App Store apps.</p>\n<p><strong><a href=\"https://shopify.dev/docs/apps/launch/shopify-app-store/app-store-requirements#provide-clear-focused-images\" target=\"_blank\" class=\"body-link\">Requirement 4.4.4</a> now provides clearer standards for image quality:</strong> images should primarily show your app's actual user interface and features. Screenshots must not include desktop backgrounds or browser windows. Feature images and screenshots that solely contain your app logo are not permitted.</p>\n<p><strong><a href=\"https://shopify.dev/docs/apps/launch/shopify-app-store/app-store-requirements#provide-unique-images\" target=\"_blank\" class=\"body-link\">New requirement 4.4.5</a> introduces a dedicated standard for image uniqueness:</strong> each image in your app listing must be unique. Screenshots should showcase different features, views, or states of your app. Don't submit duplicate or near-identical images. </p>\n<p>If your app listing already uses distinct screenshots showing different parts of your app, no action is required. These requirements will be enforced starting March 26, 2026.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "アプリ掲載画像の基準を明確化",
+          "summarizedJa": "Shopifyアプリストアのアプリ掲載要件が更新され、画像品質と独自性に関する基準が明確化されました。要件4.4.4では、実際のアプリUIを示す高品質な画像が必須となり、デスクトップ背景やブラウザウィンドウを含むスクリーンショット、ロゴのみの画像は禁止されます。新要件4.4.5では、各画像が異なる機能や画面を示す必要があり、重複や類似画像の提出は認められません。2026年3月26日から施行されます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-03-13T00:03:17.377Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1217,
+            "output": 278
+          },
+          "estimatedCost": 0.007821
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "アプリ掲載画像の基準を明確化",
+          "summarizedJa": "Shopifyアプリストアにおいて、アプリ掲載画像の品質と独自性に関する新たな要件（4.4.4および4.4.5）が導入されました。これにより、アプリの実際のUIや異なる機能を明確に示すユニークな画像の使用が必須となります。既存のアプリで既に要件を満たしている場合は対応不要ですが、2026年3月26日より適用が開始されます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-03-13T00:03:25.304Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 923,
+            "output": 156
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-track-app-activity-and-permissions-from-settings",
       "source": "shopify-changelog",
