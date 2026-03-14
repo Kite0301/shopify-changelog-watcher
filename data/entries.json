@@ -1,6 +1,108 @@
 {
-  "lastUpdated": "2026-03-13T00:02:56.587Z",
+  "lastUpdated": "2026-03-14T00:04:24.904Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-customize-settings-and-app-embeds-per-market-for-themes",
+      "source": "shopify-changelog",
+      "title": "Customize settings and app embeds per Market for Themes",
+      "link": "https://changelog.shopify.com/posts/customize-settings-and-app-embeds-per-market-for-themes",
+      "publishedAt": "2026-03-13T21:00:00.000Z",
+      "collectedAt": "2026-03-14T00:04:24.896Z",
+      "category": [
+        "Online store"
+      ],
+      "description": "\n        <p>We've just released the ability to customize theme settings and app embeds per Market for Themes. This will help Merchants to tailor their storefront experience for different markets without being limited to a single global configuration. Market-specific theme setting and app embed overrides will let merchants customize colors, typography, app embeds, custom CSS, and more for each Market or Rollout directly in the Online Store Editor. It's now available for all merchants with plans that have access to Market customizations for Themes. 🎨🌍</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "テーマのマーケット別設定とアプリ埋め込みのカスタマイズが可能に",
+          "summarizedJa": "テーマの設定とアプリ埋め込みをマーケット（市場）ごとにカスタマイズできる機能がリリースされました。オンラインストアエディタから、色やタイポグラフィ、アプリ埋め込み、カスタムCSSなどをマーケットごとに設定でき、グローバル展開する事業者が市場ごとに最適化されたストアフロント体験を提供できるようになります。マーケットカスタマイズ機能を利用できるプランの全マーチャントが利用可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-03-14T00:04:31.394Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1031,
+            "output": 288
+          },
+          "estimatedCost": 0.007413
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "テーマのマーケット別設定とアプリ埋め込みのカスタマイズ機能",
+          "summarizedJa": "Shopifyは、テーマの設定とアプリ埋め込みをマーケットごとにカスタマイズできる機能をリリースしました。これにより、マーチャントは単一のグローバル設定に縛られず、各マーケットの顧客体験をオンラインストアエディターで直接調整できるようになります。色やタイポグラフィ、アプリ埋め込みなどをマーケット別に設定できるため、グローバル展開する日本のマーチャントにとってストアの最適化が容易になります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-03-14T00:04:39.283Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 741,
+            "output": 170
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-checkout-and-customer-account-ui-extensions-available-by-default-in-new-development-shops",
+      "source": "developer-changelog",
+      "title": "Checkout and Customer Account UI extensions available by default in new development shops",
+      "link": "https://shopify.dev/changelog/checkout-and-customer-account-ui-extensions-available-by-default-in-new-development-shops",
+      "publishedAt": "2026-03-13T18:45:00.000Z",
+      "collectedAt": "2026-03-14T00:04:23.604Z",
+      "category": [
+        "Platform",
+        "Update",
+        "2026-01"
+      ],
+      "description": " <div class=\"\"><p>We are ending the developer preview for checkout and customer account UI extensions. With this update:</p>\n<ul>\n<li>All <strong>new</strong> development shops on the Shopify Plus plan have access to checkout UI extensions</li>\n<li>All <strong>new</strong> development shops on all plans have access to customer account UI extensions</li>\n<li>All <strong>existing</strong> development shops will not be affected by this change</li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "新規開発ストアでチェックアウトおよび顧客アカウントUIエクステンションがデフォルトで利用可能に",
+          "summarizedJa": "チェックアウトおよび顧客アカウントUIエクステンションの開発者プレビューが終了しました。今後、新規作成されるShopify Plus開発ストアではチェックアウトUIエクステンションが、全プランの新規開発ストアでは顧客アカウントUIエクステンションがデフォルトで利用可能になります。既存の開発ストアには影響はありません。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-03-14T00:04:43.574Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1045,
+            "output": 251
+          },
+          "estimatedCost": 0.0069
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "新規開発ストアでチェックアウトおよび顧客アカウントUI拡張機能がデフォルトで利用可能に",
+          "summarizedJa": "Shopifyは、チェックアウトおよび顧客アカウントのUI拡張機能の開発者プレビューを終了しました。この更新により、新規に作成される開発ストアでは、Shopify Plusプランの場合にチェックアウトUI拡張機能が、すべてのプランで顧客アカウントUI拡張機能がデフォルトで利用可能になります。既存の開発ストアには影響ありません。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-03-14T00:04:50.832Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 741,
+            "output": 150
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-shopify-scripts-can-no-longer-be-edited-or-published",
       "source": "shopify-changelog",
@@ -198,6 +300,59 @@
           "tokenUsage": {
             "input": 898,
             "output": 165
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-custom-id-identifier-support-added-to-the-productupdate-mutation",
+      "source": "developer-changelog",
+      "title": "Custom ID identifier support added to the productUpdate mutation",
+      "link": "https://shopify.dev/changelog/custom-id-identifier-support-added-to-the-productupdate-mutation",
+      "publishedAt": "2026-03-11T16:00:00.000Z",
+      "collectedAt": "2026-03-14T00:04:23.604Z",
+      "category": [
+        "API",
+        "Update",
+        "Admin GraphQL API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>You can now update products using custom identifiers with the <code>productUpdate</code> mutation. By specifying the <code>identifier</code> parameter with a <code>customId</code> field, you can update products based on unique metafield values rather than Shopify's internal product IDs. This feature is particularly beneficial for integrations where external systems use their own product identifiers, facilitating seamless data synchronization without the need to store and map Shopify product IDs.</p>\n<p>Previously available in the <code>productSet</code> mutation, this functionality is now extended to <code>productUpdate</code>. To implement this feature, provide an <code>identifier.customId</code> object containing the <code>namespace</code>, <code>key</code>, and <code>value</code> of a unique metafield definition on the product. For more information, explore the <a href=\"https://shopify.dev/docs/apps/build/product-merchandising/products-and-collections\" target=\"_blank\" class=\"body-link\">product model</a> and learn how to add <a href=\"https://shopify.dev/docs/apps/build/product-merchandising/products-and-collections/add-data\" target=\"_blank\" class=\"body-link\">product data</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "productUpdate mutationにカスタムID識別子のサポートを追加",
+          "summarizedJa": "GraphQL Admin APIのproductUpdate mutationで、カスタムID識別子を使用した商品更新が可能になりました。metafieldの値を商品識別子として利用できるため、外部システムとの連携時にShopifyの内部IDをマッピングする必要がなくなります。既にproductSet mutationで利用可能だった機能が、productUpdateにも拡張されました。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-03-14T00:04:55.122Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1229,
+            "output": 217
+          },
+          "estimatedCost": 0.006942
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "productUpdateミューテーションにカスタムID識別子のサポートが追加",
+          "summarizedJa": "ShopifyのproductUpdateミューテーションで、Shopifyの内部IDではなく、カスタムID（ユニークなメタフィールド値）を使用して商品を更新できるようになりました。これにより、外部システムが独自のIDで商品を管理している場合でも、ShopifyのIDをマッピングすることなく、スムーズなデータ連携と同期が可能になります。この機能は、外部システムとの連携を強化したいマーチャントや、その開発を担うパートナーにとって非常に有用な改善です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 17,
+          "analyzedAt": "2026-03-14T00:05:00.535Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 908,
+            "output": 172
           },
           "estimatedCost": 0
         }
