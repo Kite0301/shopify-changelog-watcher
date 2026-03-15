@@ -1,6 +1,56 @@
 {
-  "lastUpdated": "2026-03-14T00:04:24.904Z",
+  "lastUpdated": "2026-03-15T00:03:16.280Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-returns-metrics-renamed-to-reversals",
+      "source": "shopify-changelog",
+      "title": "Returns metrics renamed to reversals",
+      "link": "https://changelog.shopify.com/posts/returns-metrics-renamed-to-reversals",
+      "publishedAt": "2026-03-14T00:30:00.000Z",
+      "collectedAt": "2026-03-15T00:03:16.270Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>We’ve updated the names of certain Returns fields in analytics to Sales reversals and Reversed quantity. These fields still capture the same order adjustments as before, including refunds, returns, order edits, and cancellations, but now have names that more accurately reflect their scope.</p>\n\n<p>This change helps distinguish between:<br>\n* Sales reversals / Reversed quantity: Captures all adjustments to orders (refunds, returns, edits, cancellations)<br>\n* Quantity returned / Return line item reason: Shows only physical items returned, with return reasons now tracked for each line item</p>\n\n<p>The meaning of these metrics hasn’t changed—only the names and descriptions have been updated for clarity. This update makes it easier to understand the difference between overall order adjustments and actual physical returns.</p>\n\n<p><a href=\"https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/default-reports/sales-report\">Learn more about the updated fields.</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "返品メトリクスが売上逆転指標に名称変更",
+          "summarizedJa": "Shopifyの分析レポートにおいて、「返品」関連のフィールド名が「売上逆転（Sales reversals）」および「逆転数量（Reversed quantity）」に変更されました。これらの指標は従来通り返金、返品、注文編集、キャンセルなどすべての注文調整を含みますが、より正確に範囲を反映する名称になりました。指標の意味自体は変わらず、名称と説明のみが明確化のために更新されています。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-03-15T00:03:21.917Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1133,
+            "output": 252
+          },
+          "estimatedCost": 0.007179
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "返品指標が「リバーサル」に名称変更",
+          "summarizedJa": "Shopifyのアナリティクスにおいて、「返品」関連の指標名が「Sales reversals（売上リバーサル）」および「Reversed quantity（リバーサル数量）」に変更されました。この変更は、返金、返品、注文編集、キャンセルを含む全ての注文調整を指す「リバーサル」と、実際に物理的に返品された商品のみを指す指標との区別を明確にすることを目的としています。指標の計算方法自体に変更はなく、名称変更によりレポートの理解が向上します。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-03-15T00:03:27.340Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 844,
+            "output": 181
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-customize-settings-and-app-embeds-per-market-for-themes",
       "source": "shopify-changelog",
@@ -816,6 +866,60 @@
           "tokenUsage": {
             "input": 1113,
             "output": 166
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-shopifyql-returns-fields-deprecated-and-replaced-with-sales-reversals-fields",
+      "source": "developer-changelog",
+      "title": "ShopifyQL returns fields deprecated and replaced with sales reversals fields",
+      "link": "https://shopify.dev/changelog/shopifyql-returns-fields-deprecated-and-replaced-with-sales-reversals-fields",
+      "publishedAt": "2026-03-05T17:00:00.000Z",
+      "collectedAt": "2026-03-15T00:03:15.234Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Deprecation Announcement",
+        "Admin GraphQL API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>In GraphQL Admin API version <code>2026-04</code>, several Returns fields in analytics, which can be queried through <a href=\"https://shopify.dev/docs/api/shopifyql\" target=\"_blank\" class=\"body-link\">ShopifyQL</a>, have been deprecated and replaced with renamed versions (e.g., <code>sales_reversals</code>, <code>reversed_quantity</code>) to better reflect that they capture all order adjustments, including refunds, returns, order edits, and cancellations. The definitions remain unchanged.</p>\n<h2>Deprecation timeline</h2>\n<p>Deprecated fields will be removed in version 2026-07, but will still be accessible via older API versions until 2027-04.</p>\n<h2>Why we did this</h2>\n<p>The new field names clarify the difference between broad order adjustments (sales reversals) and physical returns. With the launch of return reason reporting, you can now see physical quantities returned and their reasons at the line item level, separate from overall order adjustments. Access these details in the returns schema using <code>returned_quantity</code>, <code>return_line_item_reason</code>, and <code>is_unverified_return_line_item</code>.</p>\n<h2>What you need to do</h2>\n<p>Update your ShopifyQL queries to use the new <code>sales_reversals</code> and <code>reversed_quantity</code> fields (see mapping table below)</p>\n<p>| Deprecated field | New replacement field |\n| :</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "ShopifyQLの返品関連フィールドが非推奨化され、売上調整フィールドに置き換え",
+          "summarizedJa": "GraphQL Admin API version 2026-04において、ShopifyQLで利用可能な返品関連の分析フィールドが非推奨となり、より正確な意味を表す売上調整（sales reversals）フィールドに名称変更されます。非推奨フィールドは2026-07で削除されますが、古いAPIバージョンでは2027-04まで利用可能です。ShopifyQLクエリを使用している場合は、新しいフィールド名への更新が必要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-03-15T00:03:32.283Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1321,
+            "output": 262
+          },
+          "estimatedCost": 0.007893
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "ShopifyQLの返品フィールドが非推奨化され、売上取消しフィールドに置き換え",
+          "summarizedJa": "ShopifyQLで利用できる返品関連の分析フィールドが、2026年4月版のGraphQL Admin APIで非推奨となり、`sales_reversals`などの新しいフィールドに置き換えられます。これは、返金、返品、注文編集、キャンセルといった全ての注文調整をより正確に反映するためです。開発者やパートナーは、既存のShopifyQLクエリを新しいフィールドに更新する必要があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-03-15T00:03:39.190Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 993,
+            "output": 172
           },
           "estimatedCost": 0
         }
