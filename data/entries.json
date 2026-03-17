@@ -1,6 +1,162 @@
 {
-  "lastUpdated": "2026-03-15T00:03:16.280Z",
+  "lastUpdated": "2026-03-17T00:03:36.335Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-customize-checkout-and-customer-accounts-by-market",
+      "source": "shopify-changelog",
+      "title": "Customize checkout and customer accounts by market",
+      "link": "https://changelog.shopify.com/posts/customize-checkout-and-customer-accounts-by-market",
+      "publishedAt": "2026-03-16T16:30:00.000Z",
+      "collectedAt": "2026-03-17T00:03:36.325Z",
+      "category": [
+        "Checkout"
+      ],
+      "description": "\n        <p>The checkout and accounts editor now lets merchants on Advanced and Plus customize settings, branding, and blocks by market. Tailor the buyer experience for specific countries or B2B buyers by selecting a market in the editor and making changes that apply only to that market.</p>\n\n<p><a href=\"https://help.shopify.com/en/manual/checkout-settings/customize-checkout-configurations/markets\">Learn more</a> about customizing your checkout and accounts experience by market in our help docs.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "マーケット別にチェックアウトと顧客アカウントをカスタマイズ可能に",
+          "summarizedJa": "AdvancedプランおよびPlusプランのマーチャントは、チェックアウトと顧客アカウントの設定、ブランディング、ブロックをマーケット別にカスタマイズできるようになりました。エディター内でマーケットを選択することで、特定の国やB2B購入者向けに購入体験を最適化できます。日本市場と他国向けで異なるチェックアウト体験を提供することが可能になります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-03-17T00:03:41.500Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1017,
+            "output": 256
+          },
+          "estimatedCost": 0.0068909999999999996
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "市場ごとにチェックアウトと顧客アカウントをカスタマイズ",
+          "summarizedJa": "AdvancedおよびPlusプランのマーチャントは、チェックアウトおよびアカウントエディターを使用して、市場（マーケット）ごとに設定、ブランディング、ブロックをカスタマイズできるようになりました。これにより、特定の国やB2Bバイヤー向けに購入体験を最適化し、各市場に合わせた変更を適用することが可能になります。",
+          "scores": {
+            "merchantImpact": 5,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-03-17T00:03:47.499Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 734,
+            "output": 142
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-new-rejection-reason-codes-in-payments-apps-graphql-api",
+      "source": "developer-changelog",
+      "title": "New rejection reason codes in Payments Apps API",
+      "link": "https://shopify.dev/changelog/new-rejection-reason-codes-in-payments-apps-graphql-api",
+      "publishedAt": "2026-03-16T16:00:00.000Z",
+      "collectedAt": "2026-03-17T00:03:35.041Z",
+      "category": [
+        "API",
+        "New",
+        "Payments Apps API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>The Payments Apps API now provides more granular decline reason codes for rejected payment sessions. Multiple new rejection codes have been added to the <a href=\"https://shopify.dev/docs/api/payments-apps/2026-04/enums/PaymentSessionStateRejectedReason\" target=\"_blank\" class=\"body-link\"><code>PaymentSessionStateRejectedReason</code></a> enum alongside a new source field, giving payments apps more standardized, actionable ways to communicate to merchants why a payment was declined.</p>\n<h2>New rejection reason codes</h2>\n<p>The following error codes expand the existing set of rejection reasons with more specific rejection information:</p>\n<p>| Error Code | Description |\n|</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Payments Apps APIに新しい拒否理由コードを追加",
+          "summarizedJa": "Payments Apps APIで決済セッションが拒否された際の理由コードがより詳細になりました。PaymentSessionStateRejectedReason列挙型に複数の新しい拒否コードとソースフィールドが追加され、決済アプリがマーチャントに対して決済が拒否された理由をより標準化された形で明確に伝えられるようになります。これにより、決済エラーの原因特定と対応がより容易になります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-03-17T00:03:52.280Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1099,
+            "output": 237
+          },
+          "estimatedCost": 0.006852
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Payments Apps APIにおける新しい拒否理由コード",
+          "summarizedJa": "Payments Apps APIに、決済セッションが拒否された際のより詳細な理由コードが追加されました。これにより、決済アプリはマーチャントに対し、支払いが拒否された具体的な理由をより標準化された形で伝えられるようになります。マーチャントは、支払い拒否の原因をより正確に把握し、対応策を講じることが可能になります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-03-17T00:03:58.539Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 799,
+            "output": 148
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-making-fielddefinitions-optional-in-metaobjectdefinitioncreate",
+      "source": "developer-changelog",
+      "title": "Making `fieldDefinitions` optional in `metaobjectDefinitionCreate`",
+      "link": "https://shopify.dev/changelog/making-fielddefinitions-optional-in-metaobjectdefinitioncreate",
+      "publishedAt": "2026-03-14T16:00:00.000Z",
+      "collectedAt": "2026-03-17T00:03:35.041Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>Starting in April 2026, the <a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/mutations/metaobjectDefinitionCreate#arguments-definition.fields.fieldDefinitions\" target=\"_blank\" class=\"body-link\"><code>fieldDefinitions</code></a> input argument for the <a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/mutations/metaobjectDefinitionCreate\" target=\"_blank\" class=\"body-link\"><code>metaobjectDefinitionCreate</code></a> mutation will become optional. This change means that developers will no longer be required to specify <code>fieldDefinitions</code> when creating a new metaobject definition. Existing implementations that rely on <code>fieldDefinitions</code> will continue to function as before, but developers can now choose to omit this argument if it is not needed for their specific use case.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "`metaobjectDefinitionCreate`における`fieldDefinitions`のオプション化",
+          "summarizedJa": "2026年4月以降、Admin GraphQL APIの`metaobjectDefinitionCreate`ミューテーションにおいて、`fieldDefinitions`引数がオプションになります。これにより、メタオブジェクト定義を作成する際に、必要に応じて`fieldDefinitions`の指定を省略できるようになります。既存の実装は引き続き機能し、後方互換性は保たれます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-03-17T00:04:02.361Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1153,
+            "output": 221
+          },
+          "estimatedCost": 0.0067740000000000005
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "metaobjectDefinitionCreateにおけるfieldDefinitionsのオプション化",
+          "summarizedJa": "2026年4月より、ShopifyのAdmin GraphQL APIにある`metaobjectDefinitionCreate`ミューテーションにおいて、`fieldDefinitions`引数がオプションになります。これにより、開発者はメタオブジェクト定義を作成する際に、フィールド定義の指定が必須ではなくなり、より柔軟なデータモデル構築が可能になります。既存の実装は引き続き機能するため、既存のコードへの影響はありません。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-03-17T00:04:09.744Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 833,
+            "output": 154
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-returns-metrics-renamed-to-reversals",
       "source": "shopify-changelog",
@@ -148,6 +304,109 @@
           "tokenUsage": {
             "input": 741,
             "output": 150
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-track-discount-promotions-with-marketing-campaigns",
+      "source": "shopify-changelog",
+      "title": "Track discounts with marketing campaigns",
+      "link": "https://changelog.shopify.com/posts/track-discount-promotions-with-marketing-campaigns",
+      "publishedAt": "2026-03-13T16:00:00.000Z",
+      "collectedAt": "2026-03-17T00:03:36.325Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>When generating a shareable link for a discount code, you now have the option to select an existing marketing campaign. Selecting a campaign automatically adds its UTM identifier and source to the shareable link. </p>\n\n<p>This change streamlines the process of adding tracking parameters, allowing you to easily monitor the performance of your discount promotions in your marketing campaign reports. The new option is available under <strong>Promote &gt; Get a shareable link</strong> on your saved discount code page.</p>\n\n<p>Learn more about <a href=\"https://help.shopify.com/en/manual/discounts/managing-discounts#promote-a-discount-using-a-shareable-link\">shareable links</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "マーケティングキャンペーンとディスカウントの連携トラッキング機能",
+          "summarizedJa": "ディスカウントコードの共有リンクを生成する際に、既存のマーケティングキャンペーンを選択できるようになりました。キャンペーンを選択すると、UTMパラメータとソースが自動的にリンクに追加され、マーケティングキャンペーンレポートでディスカウントプロモーションの効果を簡単に測定できます。この機能は、保存したディスカウントコードページの「プロモーション > 共有リンクを取得」から利用可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-03-17T00:04:14.462Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1067,
+            "output": 270
+          },
+          "estimatedCost": 0.007251
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "マーケティングキャンペーンで割引を追跡",
+          "summarizedJa": "Shopifyの割引コードの共有可能なリンク生成時に、既存のマーケティングキャンペーンを選択するオプションが追加されました。これにより、UTM識別子とソースが自動的にリンクに付与され、割引プロモーションのパフォーマンスをマーケティングキャンペーンレポートで簡単に追跡・分析できるようになります。この機能は、割引コードページの「プロモーション > 共有可能なリンクを取得」から利用可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-03-17T00:04:19.684Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 782,
+            "output": 153
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-adding-createdat-and-updatedat-fields-to-metaobjectdefinition-objects",
+      "source": "developer-changelog",
+      "title": "Adding `createdAt` and `updatedAt` fields to `MetaobjectDefinition` objects",
+      "link": "https://shopify.dev/changelog/adding-createdat-and-updatedat-fields-to-metaobjectdefinition-objects",
+      "publishedAt": "2026-03-13T16:00:00.000Z",
+      "collectedAt": "2026-03-17T00:03:35.041Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>The <a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/objects/metaobjectdefinition#field-MetaobjectDefinition.fields.createdAt\" target=\"_blank\" class=\"body-link\"><code>createdAt</code></a> and  <a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/objects/metaobjectdefinition#field-MetaobjectDefinition.fields.updatedAt\" target=\"_blank\" class=\"body-link\"><code>updatedAt</code></a> fields will become available on <a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/objects/metaobjectdefinition\" target=\"_blank\" class=\"body-link\"><code>MetaobjectDefinition</code></a> objects in API version <code>2026-04</code></p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "MetaobjectDefinitionオブジェクトに`createdAt`と`updatedAt`フィールドを追加",
+          "summarizedJa": "APIバージョン2026-04から、MetaobjectDefinitionオブジェクトに作成日時（createdAt）と更新日時（updatedAt）のフィールドが利用可能になります。これにより、メタオブジェクト定義の作成時刻と最終更新時刻を取得できるようになり、管理やトラッキングが容易になります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-03-17T00:04:23.469Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1164,
+            "output": 223
+          },
+          "estimatedCost": 0.006837
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "MetaobjectDefinitionオブジェクトに`createdAt`および`updatedAt`フィールドが追加されます",
+          "summarizedJa": "ShopifyのAdmin GraphQL APIにおいて、`MetaobjectDefinition`オブジェクトに`createdAt`（作成日時）と`updatedAt`（更新日時）のフィールドが追加されます。これにより、カスタムデータ構造の定義がいつ作成され、いつ最後に更新されたかをAPI経由で確認できるようになります。この機能は、特にカスタムデータを活用するアプリ開発者やパートナーにとって、メタオブジェクト定義の管理や監査をより詳細に行う上で役立ちます。APIバージョン2026-04から利用可能になります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-03-17T00:04:30.002Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 833,
+            "output": 190
           },
           "estimatedCost": 0
         }
@@ -4711,6 +4970,60 @@
           "tokenUsage": {
             "input": 1042,
             "output": 189
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-new-payment-decline-codes-added-to-ordertransactionerrorcode-enum",
+      "source": "developer-changelog",
+      "title": "New payment decline codes added to `OrderTransactionErrorCode` enum",
+      "link": "https://shopify.dev/changelog/new-payment-decline-codes-added-to-ordertransactionerrorcode-enum",
+      "publishedAt": "2026-01-09T17:00:00.000Z",
+      "collectedAt": "2026-03-17T00:03:35.042Z",
+      "category": [
+        "Action Required",
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>We're adding new error codes to the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/enums/OrderTransactionErrorCode\" target=\"_blank\" class=\"body-link\">OrderTransactionErrorCode</a> enum to provide more granular detail about the transaction failure. You can use this more detailed response to improve customer interactions.</p>\n<h3>What's new</h3>\n<p>These error codes enable precise identification of transaction issues:</p>\n<p>| Error Code | Description |\n|</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "OrderTransactionErrorCode enumに新しい決済エラーコードを追加",
+          "summarizedJa": "Admin GraphQL APIのOrderTransactionErrorCode列挙型に、より詳細な決済失敗情報を提供する新しいエラーコードが追加されます。これにより、トランザクション失敗の原因を正確に特定し、顧客対応の品質を向上させることができます。2026-04 APIバージョンから利用可能です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-03-17T00:04:34.482Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1066,
+            "output": 207
+          },
+          "estimatedCost": 0.006303
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "`OrderTransactionErrorCode` enumに新しい決済拒否コードが追加",
+          "summarizedJa": "Shopifyは、決済失敗時の詳細な原因を特定できるよう、`OrderTransactionErrorCode` enumに新しいエラーコードを追加しました。これにより、取引の問題をより正確に把握し、顧客対応の改善に役立てることができます。開発者はこれらの新しいコードを認識し、アプリケーションでの処理を検討する必要があります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-03-17T00:04:39.617Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 772,
+            "output": 140
           },
           "estimatedCost": 0
         }
