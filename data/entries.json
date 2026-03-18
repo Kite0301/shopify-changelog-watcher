@@ -1,6 +1,59 @@
 {
-  "lastUpdated": "2026-03-17T00:03:36.335Z",
+  "lastUpdated": "2026-03-18T00:04:46.316Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-inventorytransferdelete-adds-invalidstate-error-code-for-transfers-with-in-progress-product-import",
+      "source": "developer-changelog",
+      "title": "`inventoryTransferDelete` adds `INVALID_STATE` error code for transfers with in-progress product import",
+      "link": "https://shopify.dev/changelog/inventorytransferdelete-adds-invalidstate-error-code-for-transfers-with-in-progress-product-import",
+      "publishedAt": "2026-03-17T13:00:00.000Z",
+      "collectedAt": "2026-03-18T00:04:45.308Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>Starting in version 2026-07, the <code>inventoryTransferDelete</code> mutation will return a new error code: <code>INVALID_STATE</code>. This error will be returned when a client attempts to delete an inventory transfer while a product import related to that transfer is in progress.</p>\n<ul>\n<li><strong>New error code added:</strong> <code>INVALID_STATE</code>  </li>\n<li><strong>API affected:</strong> <code>inventoryTransferDelete</code> mutation  </li>\n<li><strong>Error enum updated:</strong> <code>InventoryTransferDeleteUserErrorCode</code></li>\n</ul>\n<p>For older API versions, the mutation will not include the <code>INVALID_STATE</code> code in the error payload. However, the <code>message</code> field will still provide context about the blocking product import.</p>\n<p>For more details, see the updated <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/enums/InventoryTransferDeleteUserErrorCode\" target=\"_blank\" class=\"body-link\">InventoryTransferDeleteUserErrorCode enum</a> and the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/inventoryTransferDelete\" target=\"_blank\" class=\"body-link\">inventoryTransferDelete mutation documentation</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "inventoryTransferDelete に商品インポート進行中の転送に対する INVALID_STATE エラーコードを追加",
+          "summarizedJa": "2026-07バージョンから、inventoryTransferDelete ミューテーションに新しいエラーコード INVALID_STATE が追加されます。このエラーは、商品インポートが進行中の在庫転送を削除しようとした場合に返されます。古いAPIバージョンではこのエラーコードは含まれませんが、メッセージフィールドで同様の情報が提供されます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-03-18T00:04:51.892Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1293,
+            "output": 235
+          },
+          "estimatedCost": 0.007404000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "inventoryTransferDeleteが、商品インポート中の在庫移動に対してINVALID_STATEエラーコードを追加",
+          "summarizedJa": "Shopify APIバージョン2026-07以降、`inventoryTransferDelete`ミューテーションに新しいエラーコード`INVALID_STATE`が追加されます。これは、関連する商品インポートが進行中の在庫移動を削除しようとした際に返され、データ整合性を保つための変更です。Shopifyパートナーは、この新しいエラーコードを適切に処理するよう、アプリや連携システムのコードを更新する必要があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-03-18T00:04:58.113Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 940,
+            "output": 170
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-customize-checkout-and-customer-accounts-by-market",
       "source": "shopify-changelog",
@@ -99,6 +152,108 @@
           "tokenUsage": {
             "input": 799,
             "output": 148
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-easier-smart-grid-setup-for-discount-tiles",
+      "source": "shopify-changelog",
+      "title": "Easier Smart Grid setup for discount tiles",
+      "link": "https://changelog.shopify.com/posts/easier-smart-grid-setup-for-discount-tiles",
+      "publishedAt": "2026-03-16T16:00:00.000Z",
+      "collectedAt": "2026-03-18T00:04:46.307Z",
+      "category": [
+        "Pos"
+      ],
+      "description": "\n        <p>Now, when creating a Discount tile in the Smart Grid editor, you can select from available discount codes using a drop down instead of manually typing them, reducing typos, mismatches, and failed tiles. Each tile is now directly linked to a valid discount code from Admin, ensuring the correct logic, eligibility rules, and values are applied instantly at checkout.</p>\n\n<p>Head to <strong>Shopify admin &gt; Point of Sale &gt; Settings &gt; Configure &gt; POS app</strong> to add or update Discount tiles and try the improved discount flow on your next transaction.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "ディスカウントタイルのSmart Grid設定が簡単に",
+          "summarizedJa": "Smart Gridエディターでディスカウントタイルを作成する際、手動入力ではなくドロップダウンから利用可能なディスカウントコードを選択できるようになりました。これにより、タイプミスやコードの不一致、タイル機能の失敗が減り、管理画面の有効なディスカウントコードと直接リンクされることで、正確な割引ロジックや適用条件がチェックアウト時に即座に反映されます。POS設定からディスカウントタイルを追加・更新して、改善されたフローを試すことができます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-03-18T00:05:03.690Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1039,
+            "output": 283
+          },
+          "estimatedCost": 0.007362
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "割引タイル向けSmart Grid設定の簡素化",
+          "summarizedJa": "Shopify POSのSmart Gridエディタで割引タイルを作成する際、割引コードを手動入力する代わりにドロップダウンから選択できるようになりました。これにより、入力ミスや不一致が減り、管理画面の有効な割引コードに直接リンクされるため、POSレジでの正確な割引適用が保証されます。日本のPOS利用マーチャントにとって、設定の効率化とエラー削減に繋がる改善です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-03-18T00:05:08.979Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 753,
+            "output": 162
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-pos-ui-extensions-can-now-run-without-network-access",
+      "source": "developer-changelog",
+      "title": "POS UI extensions can now run without network access",
+      "link": "https://shopify.dev/changelog/pos-ui-extensions-can-now-run-without-network-access",
+      "publishedAt": "2026-03-16T16:00:00.000Z",
+      "collectedAt": "2026-03-18T00:04:45.308Z",
+      "category": [
+        "API",
+        "New",
+        "POS Extensions"
+      ],
+      "description": " <div class=\"\"><p>POS UI extensions can now declare offline support by setting <code>runs_offline = true</code> in the <code>[extensions.supported_features]</code> section. Enabling this feature allows extensions to function without interruption even if the merchant's device loses network access, ensuring seamless service. Offline support is particularly beneficial in environments with unreliable internet connectivity, enabling merchants to maintain operations smoothly. For more details on configuring your extension for offline use, please refer to our <a href=\"https://shopify.dev/docs/api/pos-ui-extensions/latest#run-extensions-offline\" target=\"_blank\" class=\"body-link\">dev docs</a>.</p>\n<p>This capability is available starting from POS version 11.0 and requires Shopify CLI v3.92 or later. </p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "POS UI拡張機能がオフライン環境でも動作可能に",
+          "summarizedJa": "POS UI拡張機能の設定で「runs_offline = true」を宣言することで、ネットワーク接続がない状態でも拡張機能が動作するようになりました。この機能はPOSバージョン11.0以降で利用可能で、不安定なインターネット環境でもマーチャントがスムーズに店舗運営を継続できるようになります。利用にはShopify CLI v3.92以降が必要です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-03-18T00:05:12.915Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1107,
+            "output": 240
+          },
+          "estimatedCost": 0.006921
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "POS UI拡張機能がネットワークなしで動作可能に",
+          "summarizedJa": "Shopify POS UI拡張機能がオフラインでの動作をサポートするようになりました。これにより、ネットワーク接続がない環境でもPOS拡張機能が中断なく利用でき、日本の店舗運営における安定性が向上します。特にインターネット環境が不安定な場所でのスムーズな決済や業務継続に貢献します。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-03-18T00:05:18.490Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 807,
+            "output": 134
           },
           "estimatedCost": 0
         }
@@ -9331,6 +9486,56 @@
           "tokenUsage": {
             "input": 729,
             "output": 136
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-shop-now-available-in-10-additional-languages",
+      "source": "shopify-changelog",
+      "title": "Shop now available in 10 additional languages",
+      "link": "https://changelog.shopify.com/posts/shop-now-available-in-10-additional-languages",
+      "publishedAt": "2025-11-20T17:00:00.000Z",
+      "collectedAt": "2026-03-18T00:04:46.307Z",
+      "category": [
+        "Shop"
+      ],
+      "description": "\n        <p>We’ve expanded Shop’s language support. In addition to the four languages already available, Shop buyers globally can now view and purchase products from their favorite merchants in these newly enabled languages:<br>\n* Czech<br>\n* Danish<br>\n* Dutch<br>\n* Italian<br>\n* Lithuanian<br>\n* Norwegian<br>\n* Polish<br>\n* Portuguese<br>\n* Romanian<br>\n* Swedish</p>\n\n<p>Display language is determined based on the user’s device settings, if available. Product pages and other merchant-owned content will continue to be displayed in the languages that you have enabled. You can enable translations on your product details pages (PDPs) by using the Translate &amp; Adapt app in the Shopify admin. </p>\n\n<p>You can find more information about customizing your Shop Store <a href=\"https://help.shopify.com/en/manual/online-sales-channels/shop/manage-shop-store/customize#displaying-your-shop-store-in-other-languages\">here</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopアプリが10言語に新たに対応",
+          "summarizedJa": "Shopアプリが新たに10言語（チェコ語、デンマーク語、オランダ語、イタリア語、リトアニア語、ノルウェー語、ポーランド語、ポルトガル語、ルーマニア語、スウェーデン語）に対応しました。表示言語はユーザーのデバイス設定に基づいて自動的に決定されます。商品ページなどのマーチャント管理コンテンツは、Translate & Adaptアプリで有効にした言語で表示されます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 2,
+            "japanRelevance": 2,
+            "technicalImportance": 2
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-03-18T00:05:22.622Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1148,
+            "output": 262
+          },
+          "estimatedCost": 0.007374
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopアプリが新たに10言語に対応",
+          "summarizedJa": "Shopアプリが既存の4言語に加え、チェコ語、デンマーク語、オランダ語など新たに10言語に対応し、グローバルな購入体験が向上しました。これにより、これらの言語圏のユーザーはShopアプリでより快適に商品を購入できるようになります。日本のマーチャントは、商品ページなどのコンテンツを多言語対応させるために、引き続き「Translate & Adapt」アプリでの設定が必要です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-03-18T00:05:30.626Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 870,
+            "output": 157
           },
           "estimatedCost": 0
         }
