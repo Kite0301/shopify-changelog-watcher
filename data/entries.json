@@ -1,6 +1,59 @@
 {
-  "lastUpdated": "2026-03-18T00:04:46.316Z",
+  "lastUpdated": "2026-03-19T00:03:37.256Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-add-includeinactive-argument-to-inventorylevels-and-inventorylevel-fields",
+      "source": "developer-changelog",
+      "title": "Add `includeInactive` argument to `inventoryLevels` and `inventoryLevel` fields",
+      "link": "https://shopify.dev/changelog/add-includeinactive-argument-to-inventorylevels-and-inventorylevel-fields",
+      "publishedAt": "2026-03-17T16:00:00.000Z",
+      "collectedAt": "2026-03-19T00:03:36.205Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>As of API version 2026-04, you can pass <code>includeInactive: true</code> when querying the <code>inventoryLevels</code> or <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/InventoryLevel\" target=\"_blank\" class=\"body-link\"><code>inventoryLevel</code></a> fields on [<code>InventoryItem</code>] (<a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/InventoryItem\" target=\"_blank\" class=\"body-link\">https://shopify.dev/docs/api/admin-graphql/latest/objects/InventoryItem</a>) and <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/Location\" target=\"_blank\" class=\"body-link\"><code>Location</code></a> to include inactive inventory levels in the response. By default, only active inventory levels are returned.</p>\n<h3>Why we made this change</h3>\n<p>Previously, there was no way to retrieve inactive inventory levels through the API. The <code>includeInactive</code> argument gives apps explicit control over whether inactive levels are included in results.</p>\n<h3>Impact on your app</h3>\n<ul>\n<li>GraphQL: In the 2026-04 and later API versions, the fields <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-04/objects/InventoryItem#field-InventoryItem.fields.inventoryLevels\" target=\"_blank\" class=\"body-link\"><code>InventoryItem.inventoryLevels</code></a>, <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-04/objects/InventoryItem#field-InventoryItem.fields.inventoryLevel\" target=\"_blank\" class=\"body-link\"><code>InventoryItem.inventoryLevel</code></a>, <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-04/objects/Location#field-Location.fields.inventoryLevels\" target=\"_blank\" class=\"body-link\"><code>Location.inventoryLevels</code></a>, and <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-04/objects/Location#field-Location.fields.inventoryLevel\" target=\"_blank\" class=\"body-link\"><code>Location.inventoryLevel</code></a> accept a new optional <code>includeInactive</code> boolean argument. The default is false, ensuring existing queries remain unaffected.</li>\n</ul>\n<h3>What you need to do</h3>\n<ul>\n<li>No changes are required for existing queries, as they will continue to return only active inventory levels.</li>\n<li>To access inactive inventory levels, include <code>includeInactive: true</code> in your queries.</li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "inventoryLevelsおよびinventoryLevelフィールドにincludeInactive引数を追加",
+          "summarizedJa": "2026-04バージョンから、InventoryItemおよびLocationオブジェクトのinventoryLevelsとinventoryLevelフィールドに、includeInactive引数が追加されました。この引数をtrueに設定することで、これまで取得できなかった非アクティブな在庫レベルをAPI経由で取得できるようになります。既存のクエリには影響がなく、デフォルトではアクティブな在庫レベルのみが返されます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-03-19T00:03:42.672Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1666,
+            "output": 251
+          },
+          "estimatedCost": 0.008763
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "inventoryLevelsおよびinventoryLevelフィールドに`includeInactive`引数を追加",
+          "summarizedJa": "Shopify APIの2026-04バージョン以降で、在庫レベルの取得時に`includeInactive: true`引数を指定することで、非アクティブな在庫レベルも取得できるようになりました。これにより、アプリや連携システムは、より詳細な在庫状況を把握し、高度な在庫管理や分析が可能になります。既存のAPI連携への影響はなく、非アクティブな在庫情報が必要な場合にのみ設定を変更してください。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-03-19T00:03:49.776Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1251,
+            "output": 168
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-inventorytransferdelete-adds-invalidstate-error-code-for-transfers-with-in-progress-product-import",
       "source": "developer-changelog",
@@ -254,6 +307,56 @@
           "tokenUsage": {
             "input": 807,
             "output": 134
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-storefront-filter-urls-now-use-stable-identifiers-instead-of-text-values",
+      "source": "shopify-changelog",
+      "title": "Storefront filter URLs now use stable identifiers instead of text values",
+      "link": "https://changelog.shopify.com/posts/storefront-filter-urls-now-use-stable-identifiers-instead-of-text-values",
+      "publishedAt": "2026-03-16T16:00:00.000Z",
+      "collectedAt": "2026-03-19T00:03:37.246Z",
+      "category": [
+        "Online store"
+      ],
+      "description": "\n        <p>Starting March 16, 2026, storefront filter URLs use stable group identifiers instead of text values when filtering by a filter group. Previously, filtering a collection or search results page using a text-based filter like product option \"Color\" produced a URL like this for filter group values:</p>\n\n<p><code>yourstore.com/collections/all?filter.v.option.color=Blue</code></p>\n\n<p>These URLs now use a stable group identifier:</p>\n\n<p><code>yourstore.com/collections/all?filter.v.option.color=gid://shopify/FilterSettingGroup/123</code></p>\n\n<p><strong>What you need to do</strong></p>\n\n<p>If you've shared URLs with filters in ad campaigns, emails, social media posts, or anywhere on or outside your Shopify store, those links will no longer apply the expected filters.</p>\n\n<p>To get the updated URLs:</p>\n\n<ol>\n<li>Go to the collection page in your online store</li>\n<li>Select the filters you want</li>\n<li>Copy the updated URL from your browser's address bar</li>\n<li>Replace the old links wherever they were shared</li>\n</ol>\n\n<p>Filter navigation within your store works as expected — customers selecting filters on your storefront will automatically get the correct URLs.</p>\n\n<p><strong>Why we made this change</strong></p>\n\n<p>Stable identifiers make links with filters more reliable across languages and when filter labels are renamed. This brings text-based filters in line with how all other filter types already work.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "ストアフロントのフィルターURLがテキスト値から安定した識別子に変更",
+          "summarizedJa": "2026年3月16日より、コレクションや検索結果ページのフィルターURLが、テキストベースの値から安定したグループ識別子(gid)に変更されます。広告キャンペーン、メール、SNSなどで共有済みのフィルター付きURLは機能しなくなるため、更新が必要です。ストア内のフィルター操作は自動的に新しいURL形式に対応します。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-03-19T00:03:54.323Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1296,
+            "output": 241
+          },
+          "estimatedCost": 0.007503
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "ストアフロントのフィルターURLがテキスト値から安定した識別子を使用するように変更",
+          "summarizedJa": "2026年3月16日より、ShopifyストアフロントのフィルターURLが、商品オプションなどのテキスト値ではなく、安定したグループ識別子を使用するよう変更されます。これにより、広告キャンペーンやSNSなどで共有された古いフィルター付きURLは機能しなくなるため、マーチャントは新しいURLに更新する必要があります。この変更は、多言語対応やフィルター名の変更時におけるリンクの信頼性向上を目的としています。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-03-19T00:04:00.068Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 991,
+            "output": 171
           },
           "estimatedCost": 0
         }
@@ -562,6 +665,57 @@
           "tokenUsage": {
             "input": 833,
             "output": 190
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-admin-intents-now-support-settings",
+      "source": "developer-changelog",
+      "title": "Admin intents now support Settings",
+      "link": "https://shopify.dev/changelog/admin-intents-now-support-settings",
+      "publishedAt": "2026-03-13T16:00:00.000Z",
+      "collectedAt": "2026-03-19T00:03:36.205Z",
+      "category": [
+        "API",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>We're excited to announce that <a href=\"/docs/apps/build/admin/admin-intents\" target=\"_blank\" class=\"body-link\">admin intents</a> now support Settings. This new feature allows apps to direct merchants straight to specific <strong>Settings</strong> pages within the Shopify admin.</p>\n<h3>What's new?</h3>\n<p>Previously, directing merchants to a specific <strong>Settings</strong> page required deep links or manual navigation instructions. Now, with Settings support for admin intents, your app can open a Settings route with a single API call. This keeps merchants focused and eliminates unnecessary navigation steps.</p>\n<h3>Supported intents</h3>\n<p>The following Settings intents are now available:</p>\n<p><strong>General</strong></p>\n<ul>\n<li><code>edit:settings/StoreDetails</code></li>\n<li><code>edit:settings/StoreDefaults</code></li>\n<li><code>edit:settings/OrderIdFormat</code></li>\n<li><code>edit:settings/OrderProcessing</code></li>\n</ul>\n<p><strong>Locations</strong></p>\n<ul>\n<li><code>create:shopify/Location</code></li>\n<li><code>edit:shopify/Location</code></li>\n<li><code>edit:settings/LocationDefault</code></li>\n</ul>\n<h3>How it works</h3>\n<p>When your app invokes a Settings intent, the Shopify admin opens the relevant <strong>Settings</strong> page within a page stack, which organizes pages in a layered manner. The Shopify admin automatically scrolls to the targeted card, ensuring merchants land precisely where they need to be.</p>\n<p>Sidekick uses Settings intents to streamline configuration tasks, providing merchants with a link that opens the correct <strong>Settings</strong> page upon clicking.</p>\n<h3>Learn more</h3>\n<p>To get started, refer to the <a href=\"/docs/apps/build/admin/admin-intents\" target=\"_blank\" class=\"body-link\">admin intents documentation</a> and the <a href=\"/docs/api/app-home/apis/intents\" target=\"_blank\" class=\"body-link\">Intents API reference</a>.</p>\n<h3>Holler at us</h3>\n<p>Leave us feedback, comments, and questions in the <a href=\"https://community.shopify.dev/c/extensions/5\" target=\"_blank\" class=\"body-link\">Shopify Developer Community</a>. We'd love to hear from you. </p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Admin IntentsがSettings（設定）に対応",
+          "summarizedJa": "Admin IntentsがShopify管理画面の「設定」ページに対応し、アプリから直接特定の設定画面へマーチャントを誘導できるようになりました。ストア詳細、注文処理、ロケーション設定など主要な設定ページへのインテントが利用可能となり、アプリ開発者はディープリンクや手動の案内なしに、単一のAPI呼び出しで適切な設定ページを開けるようになります。これによりマーチャントの操作が簡素化され、アプリのユーザー体験が向上します。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-03-19T00:04:05.565Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1541,
+            "output": 271
+          },
+          "estimatedCost": 0.008688
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "管理画面インテントが設定ページに対応",
+          "summarizedJa": "ShopifyアプリがマーチャントをShopify管理画面の特定の設定ページへ直接誘導できるようになりました。これにより、アプリから設定変更が必要な箇所へスムーズに移動でき、マーチャントの設定作業効率が向上します。アプリ開発者は、ストア詳細やロケーション設定など、様々な設定ページへの直接リンクをアプリに組み込むことが可能になります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-03-19T00:04:13.198Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1127,
+            "output": 146
           },
           "estimatedCost": 0
         }
