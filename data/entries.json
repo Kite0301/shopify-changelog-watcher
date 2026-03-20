@@ -1,6 +1,106 @@
 {
-  "lastUpdated": "2026-03-19T00:03:37.256Z",
+  "lastUpdated": "2026-03-20T00:03:49.003Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-flow-new-actions-to-get-data-about-markets-and-articles",
+      "source": "shopify-changelog",
+      "title": "Flow: New actions to get data about markets and articles",
+      "link": "https://changelog.shopify.com/posts/flow-new-actions-to-get-data-about-markets-and-articles",
+      "publishedAt": "2026-03-19T17:40:00.000Z",
+      "collectedAt": "2026-03-20T00:03:48.996Z",
+      "category": [
+        "Apps"
+      ],
+      "description": "\n        <p>Flow now has more actions to fetch data from your Shopify store to use in workflows. These \"Get data\" actions call a query with a set of filters, for example to get resources updated in the last day, and return a list of data that matches. Like other similar actions, these actions return a list of up to 100 resources.  </p>\n\n<p>The <a href=\"https://help.shopify.com/en/manual/shopify-flow/reference/actions/get-market-data\">Get market data</a> action retrieves market information from your Shopify store. <a href=\"https://help.shopify.com/en/manual/markets\">Markets</a> let you customize your online store for customers in different regions, with localized content, pricing, and domains.  </p>\n\n<p>The <a href=\"https://help.shopify.com/en/manual/shopify-flow/reference/actions/get-article-data\">Get article data</a> action retrieves blog article information from your Shopify store. <a href=\"https://help.shopify.com/en/manual/online-store/blogs\">Articles</a> are blog posts that you can create to share news, updates, and other content with your customers.</p>\n\n<p>For more information, visit the documentation. For questions and feedback, visit the <a href=\"https://community.shopify.com/c/shopify-flow/304\">Shopify community</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Flow: マーケットと記事データを取得する新しいアクションの追加",
+          "summarizedJa": "Shopify Flowに、マーケット情報とブログ記事情報を取得できる新しい「データ取得」アクションが追加されました。これらのアクションは最大100件のリソースをフィルター条件に基づいて取得でき、ワークフロー内で活用できます。マーケットデータの取得により地域ごとのカスタマイズ情報を、記事データの取得によりブログコンテンツ情報を自動化ワークフローに組み込めるようになります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-03-20T00:03:55.428Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1251,
+            "output": 261
+          },
+          "estimatedCost": 0.0076679999999999995
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Flow: マーケットと記事のデータを取得する新しいアクション",
+          "summarizedJa": "Shopify Flowに「マーケットデータ取得」と「記事データ取得」の新しいアクションが追加されました。これにより、マーチャントは地域ごとのストア設定（Shopify Markets）やブログ記事の情報をワークフロー内で活用し、より高度な自動化やデータに基づいた運用が可能になります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-03-20T00:04:02.138Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 951,
+            "output": 138
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-collect-credit-remittances-through-shopify-payments-in-texas",
+      "source": "shopify-changelog",
+      "title": "Collect Credit remittances through Shopify Payments in Texas",
+      "link": "https://changelog.shopify.com/posts/collect-credit-remittances-through-shopify-payments-in-texas",
+      "publishedAt": "2026-03-19T16:00:00.000Z",
+      "collectedAt": "2026-03-20T00:03:48.996Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>Due to new legal requirements in Texas, Shopify Credit began collecting remittances through Shopify Payments for all financings repaying from sales with the \"Pay over Time from Sales\" repayment method, starting January 12, 2026. </p>\n\n<p>For these financings, the repayment amount is automatically deducted from each day’s Shopify Payments payout before the payout is deposited into the merchant’s bank account.</p>\n\n<p>Please note:<br>\nThis change applies only to \"Pay over Time from Sales\" repayments. \"Pay in Full\" monthly repayments will continue to be collected through ACH direct debit.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "テキサス州でShopify Paymentsを通じたShopify Creditの返済回収を開始",
+          "summarizedJa": "テキサス州の新しい法的要件により、2026年1月12日から「売上からの分割払い」返済方式を利用するShopify Creditの返済が、Shopify Paymentsを通じて自動的に回収されるようになりました。該当する融資の返済額は、毎日のShopify Payments入金から自動控除されてから銀行口座に入金されます。なお「一括払い」の月次返済は従来通りACH口座振替で回収されます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 5,
+          "analyzedAt": "2026-03-20T00:04:07.720Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1069,
+            "output": 260
+          },
+          "estimatedCost": 0.0071070000000000005
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "テキサス州におけるShopifyペイメントを通じたShopifyクレジットの返済回収",
+          "summarizedJa": "テキサス州の新たな法的要件により、2026年1月12日より、Shopifyクレジットの「売上からの分割払い」による返済がShopifyペイメントを通じて回収されるようになりました。これにより、返済額はマーチャントの銀行口座に入金される前に、毎日のShopifyペイメントの支払いから自動的に差し引かれます。この変更は「売上からの分割払い」にのみ適用され、「一括払い」の返済方法には影響しません。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 5,
+          "analyzedAt": "2026-03-20T00:04:13.278Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 766,
+            "output": 191
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-add-includeinactive-argument-to-inventorylevels-and-inventorylevel-fields",
       "source": "developer-changelog",
@@ -716,6 +816,56 @@
           "tokenUsage": {
             "input": 1127,
             "output": 146
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-address-autocomplete-and-validation-improvements-for-us-au-ca-nl-fr",
+      "source": "shopify-changelog",
+      "title": "Address Autocomplete and Validation Improvements for US, AU, CA, NL, FR",
+      "link": "https://changelog.shopify.com/posts/address-autocomplete-and-validation-improvements-for-us-au-ca-nl-fr",
+      "publishedAt": "2026-03-13T16:00:00.000Z",
+      "collectedAt": "2026-03-20T00:03:48.996Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p><strong>New release:</strong> As of today, we've improved our address autocomplete and validation systems for the US, Australia, Canada, the Netherlands, and France. Customers in these countries will now experience faster response times and more accurate address suggestions and validations, fully powered by Shopify.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "米国、オーストラリア、カナダ、オランダ、フランス向け住所自動補完および検証機能の改善",
+          "summarizedJa": "米国、オーストラリア、カナダ、オランダ、フランスの5カ国において、住所の自動補完と検証システムが改善されました。これらの国の顧客は、より高速なレスポンスタイムと正確な住所提案・検証を体験できるようになり、すべてShopifyが独自に提供します。現時点では日本は対象外ですが、今後同様の改善が展開される可能性があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 2,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 7,
+          "analyzedAt": "2026-03-20T00:04:17.920Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 991,
+            "output": 259
+          },
+          "estimatedCost": 0.0068579999999999995
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "米国、オーストラリア、カナダ、オランダ、フランス向け住所自動補完および検証機能の改善",
+          "summarizedJa": "Shopifyは、米国、オーストラリア、カナダ、オランダ、フランス向けに住所の自動補完と検証システムを改善しました。これにより、これらの国の顧客は、より高速な応答時間と正確な住所の提案および検証を体験できるようになります。この機能はShopifyによって完全に提供されます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 5,
+          "analyzedAt": "2026-03-20T00:04:25.692Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 705,
+            "output": 153
           },
           "estimatedCost": 0
         }
