@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-20T00:03:49.003Z",
+  "lastUpdated": "2026-03-21T00:03:12.189Z",
   "entries": [
     {
       "id": "shopify-changelog-posts-flow-new-actions-to-get-data-about-markets-and-articles",
@@ -866,6 +866,60 @@
           "tokenUsage": {
             "input": 705,
             "output": 153
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-expiring-offline-access-tokens-required-for-public-apps-april-1-2026",
+      "source": "developer-changelog",
+      "title": "Expiring offline access tokens required for new public apps as of April 1, 2026",
+      "link": "https://shopify.dev/changelog/expiring-offline-access-tokens-required-for-public-apps-april-1-2026",
+      "publishedAt": "2026-03-13T16:00:00.000Z",
+      "collectedAt": "2026-03-21T00:03:11.146Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Deprecation Announcement",
+        "Admin GraphQL API",
+        "Admin REST API"
+      ],
+      "description": " <div class=\"\"><p>We're updating how public apps handle offline access tokens to enhance merchant data protection. Starting April 1, 2026, all new public apps must request and use <a href=\"https://shopify.dev/docs/apps/build/authentication-authorization/access-tokens/offline-access-tokens#expiring-vs-non-expiring-offline-tokens\" target=\"_blank\" class=\"body-link\">expiring offline access tokens</a>.</p>\n<h2>What apps are affected</h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/apps/launch/distribution#capabilities-and-requirements\" target=\"_blank\" class=\"body-link\">Public apps</a> created on or after April 1, 2026 that call the Admin API</li>\n</ul>\n<h2>What apps are not affected</h2>\n<ul>\n<li>Public apps created before April 1, 2026</li>\n<li>Custom apps created at any time</li>\n<li>Apps created by merchants either in the Dev Dashboard or in the admin</li>\n</ul>\n<h2>Why we’re making this change</h2>\n<p>Expiring tokens enhance security. If a token is ever leaked, its limited lifespan significantly narrows the risk to both your app and the merchants who trust it. This change aligns with modern OAuth practices, and as a developer it lets you build your app around predictable refresh flows.</p>\n<h2>Action required</h2>\n<p><strong>New public apps</strong>: Implement expiring offline access tokens. If you use Shopify’s app templates and libraries this is already handled for you.</p>\n<p>Need help? Engage with the <a href=\"https://community.shopify.dev/c/dev-platform/32\" target=\"_blank\" class=\"body-link\">dev platform community</a> for support and questions.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "2026年4月1日以降、新規パブリックアプリで期限付きオフラインアクセストークンが必須に",
+          "summarizedJa": "2026年4月1日以降に作成される新規パブリックアプリは、セキュリティ強化のため期限付きオフラインアクセストークンの使用が必須となります。既存のパブリックアプリやカスタムアプリは影響を受けません。Shopifyの公式テンプレートやライブラリを使用している場合は自動的に対応されますが、独自実装の場合はトークンリフレッシュフローの実装が必要です。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-03-21T00:03:22.146Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1394,
+            "output": 266
+          },
+          "estimatedCost": 0.008172
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "2026年4月1日以降、新規公開アプリに有効期限付きオフラインアクセストークンが必須に",
+          "summarizedJa": "Shopifyはマーチャントのデータ保護強化のため、2026年4月1日以降に新規作成される公開アプリに対し、有効期限付きオフラインアクセストークンの利用を義務付けます。これにより、トークン漏洩時のリスクが軽減され、セキュリティが向上します。既存の公開アプリやカスタムアプリは影響を受けませんが、新規公開アプリを開発するパートナーは、この変更に対応する必要があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-03-21T00:03:29.262Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1054,
+            "output": 179
           },
           "estimatedCost": 0
         }
