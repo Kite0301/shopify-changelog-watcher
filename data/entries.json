@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-21T00:03:12.189Z",
+  "lastUpdated": "2026-03-22T00:02:34.849Z",
   "entries": [
     {
       "id": "shopify-changelog-posts-flow-new-actions-to-get-data-about-markets-and-articles",
@@ -96,6 +96,56 @@
           "tokenUsage": {
             "input": 766,
             "output": 191
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-faster-discount-entry-in-pos",
+      "source": "shopify-changelog",
+      "title": "Faster discount entry in POS",
+      "link": "https://changelog.shopify.com/posts/faster-discount-entry-in-pos",
+      "publishedAt": "2026-03-18T16:00:00.000Z",
+      "collectedAt": "2026-03-22T00:02:34.834Z",
+      "category": [
+        "Pos"
+      ],
+      "description": "\n        <p>Discounts are one of the most common actions at the POS - now they’re faster and easier to apply, even during your busiest moments.</p>\n\n<p>We’ve streamlined the Manage discount experience in the Shopify POS app so staff can quickly find and apply the right discount without slowing down the line. Whether it’s a promo code or quick % off, everything is easier to access and faster to enter.</p>\n\n<p><strong>What’s improved:</strong><br>\n* Improved number pad: Quickly enter custom discount amounts or percentages with more responsive input<br>\n* Faster access to discount codes: Recently used codes are surfaced so staff can reapply common discounts instantly<br>\n* Fewer taps to apply discounts: A simplified flow reduces friction during checkout</p>\n\n<p>Update to version 11.2 of the Shopify POS app to get started. </p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "POSでの割引入力が高速化",
+          "summarizedJa": "Shopify POSアプリのバージョン11.2で、割引適用のプロセスが大幅に改善されました。改良されたテンキー入力、最近使用した割引コードのクイックアクセス、タップ数の削減により、混雑時でもスタッフが素早く割引を適用できるようになります。実店舗でのチェックアウト業務の効率化が期待できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-03-22T00:02:40.917Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1110,
+            "output": 221
+          },
+          "estimatedCost": 0.006645000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "POSでの割引入力の高速化",
+          "summarizedJa": "Shopify POSアプリにおいて、割引の適用プロセスがより迅速かつ簡単になるよう合理化されました。改善されたテンキー、最近使用した割引コードへの素早いアクセス、そして少ないタップ数での割引適用により、レジでの顧客対応がスムーズになります。これにより、特に忙しい時間帯でもスタッフは効率的に割引を適用できるようになり、マーチャントの業務効率向上に貢献します。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 1,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-03-22T00:02:45.419Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 812,
+            "output": 154
           },
           "estimatedCost": 0
         }
