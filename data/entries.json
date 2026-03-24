@@ -1,6 +1,212 @@
 {
-  "lastUpdated": "2026-03-22T00:02:34.849Z",
+  "lastUpdated": "2026-03-24T00:03:43.797Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-updated-handling-of-customer-data-erasure-requests-with-recent-orders",
+      "source": "developer-changelog",
+      "title": "Updated handling of customer data erasure requests with recent orders",
+      "link": "https://shopify.dev/changelog/updated-handling-of-customer-data-erasure-requests-with-recent-orders",
+      "publishedAt": "2026-03-23T21:30:00.000Z",
+      "collectedAt": "2026-03-24T00:03:42.540Z",
+      "category": [
+        "Platform",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>As of March 23, 2026, <a href=\"https://help.shopify.com/en/manual/privacy-and-security/privacy/processing-customer-data-requests#erase-customer-personal-data\" target=\"_blank\" class=\"body-link\">customer data erasure requests</a> will no longer be held in a pending state for 180 days from the date of the customer's most recent order. </p>\n<p>Erasure requests will now be processed 10 days after the request was submitted, regardless of when the customer's most recent order was placed. For recipients of gift cards that have been scheduled to send, the erasure request will remain in a pending state until the gift card has been delivered.</p>\n<p>This update simplifies the overall experience for managing customer data requests.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "最近の注文がある顧客データ削除リクエストの処理方法の更新",
+          "summarizedJa": "2026年3月23日より、顧客データ削除リクエストの処理方法が変更されました。これまで最新の注文から180日間保留されていたリクエストが、リクエスト送信から10日後に処理されるようになります。この変更により、個人情報保護法に基づく顧客データリクエストの管理がシンプルになります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-03-24T00:03:48.620Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1105,
+            "output": 220
+          },
+          "estimatedCost": 0.006615
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "顧客データ消去リクエストの処理方法を更新",
+          "summarizedJa": "2026年3月23日より、Shopifyにおける顧客データ消去リクエストの処理方法が変更されます。これまで最新の注文日から180日間保留されていたリクエストは、今後はリクエスト提出から10日後に処理されるようになります。ただし、配送予定のギフトカード受取人のリクエストは、ギフトカードが配送されるまで保留されます。この変更により、顧客データリクエストの管理が簡素化されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-03-24T00:03:54.797Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 823,
+            "output": 172
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-quick-sale-is-now-available-in-every-country",
+      "source": "shopify-changelog",
+      "title": "Quick sale is now available in every country",
+      "link": "https://changelog.shopify.com/posts/quick-sale-is-now-available-in-every-country",
+      "publishedAt": "2026-03-23T16:00:00.000Z",
+      "collectedAt": "2026-03-24T00:03:43.784Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>Quick sale now works in every country where Shopify operates. All merchants get payment links and cash. Build a cart in the Shopify mobile app, add products, and collect payment on the spot in cash or send a link for the customer to pay from their phone.</p>\n\n<p>In markets where Tap to Pay is available, card payments are also accepted in person. One tool, everywhere. No separate version for different regions.</p>\n\n<p>For more information, visit the <a href=\"https://help.shopify.com/en/manual/sell-in-person/quick-sale\">documentation</a>. </p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "クイックセール機能が全ての国で利用可能に",
+          "summarizedJa": "クイックセール機能が、Shopifyが展開する全ての国で利用可能になりました。Shopifyモバイルアプリでカートを作成し、商品を追加して、現金での支払いやリンク送信による決済が可能です。Tap to Pay対応地域では、カード決済も対面で受け付けられます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-03-24T00:03:59.706Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1047,
+            "output": 214
+          },
+          "estimatedCost": 0.006351
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "「クイックセール」機能が全世界で利用可能に",
+          "summarizedJa": "Shopifyの「クイックセール」機能が、Shopifyが運営するすべての国で利用可能になりました。これにより、日本のマーチャントもShopifyモバイルアプリを使って、対面で商品を販売し、現金での支払いを受け付けたり、顧客に支払いリンクを送信してスマートフォンから決済してもらうことが可能になります。Tap to Payが利用可能な地域ではカード決済も可能ですが、日本でも現金や支払いリンクを活用した柔軟な対面販売が可能になります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-03-24T00:04:05.828Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 764,
+            "output": 172
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-removal-of-pretaxprice-from-the-order-rest-admin-api",
+      "source": "developer-changelog",
+      "title": "Removal of pre_tax_price from the Order REST Admin API",
+      "link": "https://shopify.dev/changelog/removal-of-pretaxprice-from-the-order-rest-admin-api",
+      "publishedAt": "2026-03-23T16:00:00.000Z",
+      "collectedAt": "2026-03-24T00:03:42.540Z",
+      "category": [
+        "API",
+        "Breaking API Change",
+        "Admin REST API"
+      ],
+      "description": " <div class=\"\"><p>The <code>pre_tax_price</code> and <code>pre_tax_price_set</code> fields on order line items in the <a href=\"https://shopify.dev/docs/api/admin-rest\" target=\"_blank\" class=\"body-link\">REST Admin API</a> are being removed. These fields were previously available to stores with the Avalara AvaTax 1.0 integration enabled, which was deprecated in April 2025.</p>\n<h3>What you should do</h3>\n<p>Use the GraphQL Admin API to access order line item pricing data. </p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Order REST Admin APIからpre_tax_priceフィールドの削除",
+          "summarizedJa": "REST Admin APIのorder line itemsから`pre_tax_price`と`pre_tax_price_set`フィールドが削除されます。これらのフィールドは2025年4月に非推奨となったAvalara AvaTax 1.0統合でのみ利用可能でした。注文明細の価格データにアクセスする場合は、GraphQL Admin APIの使用を推奨します。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 2,
+            "japanRelevance": 1,
+            "technicalImportance": 3
+          },
+          "totalScore": 7,
+          "analyzedAt": "2026-03-24T00:04:10.112Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1072,
+            "output": 215
+          },
+          "estimatedCost": 0.0064410000000000005
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Order REST Admin APIからのpre_tax_priceフィールドの削除",
+          "summarizedJa": "Order REST Admin APIにおける注文明細の`pre_tax_price`および`pre_tax_price_set`フィールドが削除されます。これらのフィールドは、2025年4月に非推奨となったAvalara AvaTax 1.0連携を利用するストア向けのものでした。今後は、注文明細の価格データにアクセスするにはGraphQL Admin APIの利用が推奨されます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 2,
+            "japanRelevance": 1,
+            "technicalImportance": 4
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-03-24T00:04:16.720Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 773,
+            "output": 160
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-adding-barcode-support-to-inventory-shipments-api",
+      "source": "developer-changelog",
+      "title": "Adding barcode support to inventory shipments API",
+      "link": "https://shopify.dev/changelog/adding-barcode-support-to-inventory-shipments-api",
+      "publishedAt": "2026-03-23T16:00:00.000Z",
+      "collectedAt": "2026-03-24T00:03:42.540Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>We're adding barcode support to inventory shipments in version <code>2026-04</code>, enabling merchants to assign barcodes to shipments for faster receiving workflows.</p>\n<p>The following API changes are included:</p>\n<p><strong>New field on <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/InventoryShipment\" target=\"_blank\" class=\"body-link\"><code>InventoryShipment</code></a></strong></p>\n<ul>\n<li><code>barcode: String</code> - A nullable field representing the unique barcode assigned to a shipment.</li>\n</ul>\n<p><strong>Updated <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/inventoryShipmentCreate\" target=\"_blank\" class=\"body-link\"><code>inventoryShipmentCreate</code></a> mutation</strong></p>\n<ul>\n<li>The <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/input-objects/InventoryShipmentCreateInput\" target=\"_blank\" class=\"body-link\"><code>InventoryShipmentCreateInput</code></a> now accepts an optional <code>barcode: String</code> field to assign a barcode when creating a shipment.</li>\n</ul>\n<p><strong>New <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/inventoryShipmentSetBarcode\" target=\"_blank\" class=\"body-link\"><code>inventoryShipmentSetBarcode</code></a> mutation</strong></p>\n<ul>\n<li>Sets or clears the barcode on an existing shipment. Pass an empty string to clear the barcode.</li>\n</ul>\n<p>Example usage:</p>\n<pre><code class=\"language-graphql\">mutation {\n  inventoryShipmentSetBarcode(\n    inventoryShipmentId: &quot;gid://shopify/InventoryShipment/123&quot;\n    barcode: &quot;SHIP-2026-0001&quot;\n  ) {\n    inventoryShipment {\n      id\n      barcode\n    }\n    userErrors {\n      code\n      field\n      message\n    }\n  }\n}\n</code></pre>\n<p><strong>What you need to know</strong></p>\n<ul>\n<li>Barcodes must be unique per shop. Two shipments in the same shop cannot share the same barcode.</li>\n<li>Barcodes have a maximum length of <code>255</code> characters.</li>\n<li>Leading/trailing whitespace is automatically stripped. Barcodes consisting only of whitespace are treated as empty.</li>\n</ul>\n<p><strong>Error codes</strong></p>\n<ul>\n<li><code>DUPLICATE_BARCODE</code>: Another shipment in the same shop already has this barcode.</li>\n<li><code>SHIPMENT_NOT_FOUND</code>: The specified shipment does not exist.</li>\n<li><code>BARCODE_TOO_LONG</code>: The barcode exceeds the maximum length of <code>255</code> characters.</li>\n</ul>\n<p><strong>Why we made this change</strong>\nMerchants transferring inventory between locations, for example, from a warehouse to a retail store, currently have to scan and receive each item in a shipment one by one. This is slow and error-prone for large shipments. Shipment barcodes let warehouse systems and 3PLs attach a scannable identifier (such as a GS1-128 code) to a shipment so that the entire shipment can be identified and received in a single scan.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "在庫出荷APIへのバーコードサポート追加",
+          "summarizedJa": "2026-04バージョンから在庫出荷APIにバーコード機能が追加され、出荷にバーコードを割り当てることで入荷作業を高速化できるようになります。InventoryShipmentオブジェクトにbarcodeフィールドが追加され、inventoryShipmentCreateミューテーションでのバーコード指定や、新しいinventoryShipmentSetBarcodeミューテーションでの既存出荷へのバーコード設定が可能になります。バーコードはショップ内で一意である必要があり、最大255文字まで対応します。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-03-24T00:04:22.769Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1832,
+            "output": 275
+          },
+          "estimatedCost": 0.009621000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "在庫出荷APIへのバーコードサポート追加",
+          "summarizedJa": "Shopifyの在庫出荷APIにバーコード機能が追加され、マーチャントは出荷にバーコードを割り当てられるようになります。これにより、倉庫から店舗への在庫移動や3PLとの連携において、大量の在庫受け取り作業を単一のスキャンで迅速かつ正確に行うことが可能になります。パートナーは、この新機能を利用してマーチャントの在庫管理効率を向上させるソリューションを構築できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-03-24T00:04:29.796Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1380,
+            "output": 161
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-flow-new-actions-to-get-data-about-markets-and-articles",
       "source": "shopify-changelog",
@@ -199,6 +405,59 @@
           "tokenUsage": {
             "input": 1251,
             "output": 168
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-add-isactive-field-to-inventorylevel",
+      "source": "developer-changelog",
+      "title": "Add `isActive` field to `InventoryLevel`",
+      "link": "https://shopify.dev/changelog/add-isactive-field-to-inventorylevel",
+      "publishedAt": "2026-03-17T16:00:00.000Z",
+      "collectedAt": "2026-03-24T00:03:42.540Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>As of GraphQL Admin API version 2026-04 the <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-04/objects/InventoryLevel\" target=\"_blank\" class=\"body-link\"><code>InventoryLevel</code></a> object now includes an <code>isActive</code> boolean field, which indicates whether an inventory level is currently active. In this version, you can optionally query for inactive inventory levels, and the <code>isActive</code> field will help you distinguish between active and inactive levels.</p>\n<h3>Why We Made This Change</h3>\n<p>Previously, deactivating an inventory level would clear its associated quantities, and these inactive levels were not visible through the API. Starting with version 2026-04, deactivating an inventory level no longer clears its quantities. Inactive levels can be adjusted just like active ones, so the API now returns these inactive levels. The <code>isActive</code> field provides visibility into the activation status, allowing apps to differentiate between locations where inventory tracking has never occurred and those where it has been deactivated.</p>\n<h3>Impact on Your App</h3>\n<p>From GraphQL Admin API version 2026-04 onwards, queries on <code>InventoryLevel</code> may return inactive inventory levels that were previously excluded. Each inventory level now includes an <code>isActive</code> field, which you can use to filter or display activation status.</p>\n<h3>What You Need to Do</h3>\n<ul>\n<li>No changes are required for existing queries, as they will continue to return only active inventory levels.</li>\n<li>If you choose to <a href=\"https://shopify.dev/changelog/add-includeinactive-argument-to-inventorylevels-and-inventorylevel-fields\" target=\"_blank\" class=\"body-link\">include inactive levels</a> in your query, review any logic that assumes all returned inventory levels are active. Use the <code>isActive</code> field to filter results if your app only requires active inventory levels.</li>\n<li>Update any inventory level counts or aggregations to account for the inclusion of inactive levels.</li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "InventoryLevelに`isActive`フィールドを追加",
+          "summarizedJa": "GraphQL Admin API バージョン2026-04から、InventoryLevelオブジェクトに在庫レベルのアクティブ状態を示す`isActive`フィールドが追加されました。これまで非アクティブ化すると在庫数がクリアされていましたが、今後は数量が保持され、非アクティブな在庫レベルもAPIで取得可能になります。既存のクエリは引き続きアクティブな在庫のみを返すため、デフォルトでは影響ありませんが、非アクティブな在庫を含める場合は`isActive`フィールドでフィルタリングする必要があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-03-24T00:04:35.812Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1438,
+            "output": 294
+          },
+          "estimatedCost": 0.008723999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "InventoryLevelにisActiveフィールドを追加",
+          "summarizedJa": "ShopifyのAdmin GraphQL API 2026-04より、`InventoryLevel`オブジェクトに`isActive`フィールドが追加されます。これにより、非アクティブな在庫レベルもAPIで取得可能となり、その状態を判別できるようになります。既存のアプリは影響ありませんが、非アクティブな在庫レベルを含めて取得する場合は、アプリのロジックや在庫集計の見直しが必要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-03-24T00:04:43.554Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1084,
+            "output": 155
           },
           "estimatedCost": 0
         }
