@@ -1,6 +1,156 @@
 {
-  "lastUpdated": "2026-03-24T00:03:43.797Z",
+  "lastUpdated": "2026-03-25T00:03:57.241Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-flow-new-actions-to-get-data-about-workflow-runs-abandoned-checkouts-inventory-items-catalogs-and-pages",
+      "source": "shopify-changelog",
+      "title": "Flow: New actions to get data about workflow runs, abandoned checkouts, inventory items, catalogs, and pages",
+      "link": "https://changelog.shopify.com/posts/flow-new-actions-to-get-data-about-workflow-runs-abandoned-checkouts-inventory-items-catalogs-and-pages",
+      "publishedAt": "2026-03-24T21:00:00.000Z",
+      "collectedAt": "2026-03-25T00:03:57.229Z",
+      "category": [
+        "Apps"
+      ],
+      "description": "\n        <p>Flow now has more actions to fetch data from your Shopify store to use in workflows. These \"Get data\" actions call a query with a set of filters and return a list of data that matches. Like other similar actions, these actions return a list of up to 100 resources.</p>\n\n<p>The <a href=\"https://help.shopify.com/en/manual/shopify-flow/reference/actions/get-workflow-run-data\">Get workflow run data</a> action retrieves information about a workflow run, including the workflow it belongs to, the event that triggered it, retry attempts, and timing details. Use this to build workflows that monitor or report on other workflow activity — for example, to track retry patterns or audit trigger sources.</p>\n\n<p>The <a href=\"https://help.shopify.com/en/manual/shopify-flow/reference/actions/get-abandoned-checkout-data\">Get abandoned checkout data</a> action retrieves abandoned checkout information from your Shopify store. Abandoned checkouts are carts that a customer started but didn't complete. Use this to build workflows that follow up on lost sales, generate reports, or trigger recovery campaigns.</p>\n\n<p>The <a href=\"https://help.shopify.com/en/manual/shopify-flow/reference/actions/get-inventory-item-data\">Get inventory item data</a> action retrieves inventory item information from your Shopify store. Inventory items represent the physical goods that you track stock for. Use this to build workflows that monitor stock changes, and flag recently updated items.</p>\n\n<p>The <a href=\"https://help.shopify.com/en/manual/shopify-flow/reference/actions/get-page-data\">Get page data</a> action retrieves page information from your Shopify store. Pages are standalone content like About Us, Contact, or FAQ pages. Use this to build workflows that audit published content, track page updates, or manage your online store's static pages.</p>\n\n<p>For more information, visit the <a href=\"https://help.shopify.com/manual/shopify-flow/reference/actions\">documentation</a>. For questions and feedback, visit the <a href=\"https://community.shopify.com/\">Shopify community</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Flow: ワークフロー実行、カゴ落ち、在庫アイテム、カタログ、ページのデータ取得アクションを追加",
+          "summarizedJa": "Shopify Flowに5つの新しい「データ取得」アクションが追加されました。ワークフロー実行履歴、カゴ落ちチェックアウト、在庫アイテム、ページ情報を取得し、最大100件のデータをワークフローで活用できます。これにより、売上回復キャンペーン、在庫監視、コンテンツ監査などの自動化ワークフローの構築が可能になります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-03-25T00:04:05.522Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1456,
+            "output": 268
+          },
+          "estimatedCost": 0.008388
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Flow: ワークフロー実行、カゴ落ち、在庫アイテム、カタログ、ページに関するデータを取得する新しいアクション",
+          "summarizedJa": "Shopify Flowに、ワークフロー実行、カゴ落ち、在庫アイテム、ページに関するストアデータを取得する新しいアクションが追加されました。これにより、マーチャントはカゴ落ちリカバリー、在庫管理、コンテンツ監査、他のワークフロー活動の監視といった自動化をより詳細に構築できるようになります。これらのアクションは、最大100件のリソースをリストとして返します。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-03-25T00:04:13.425Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1147,
+            "output": 167
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-flow-more-of-shopify-s-admin-api-is-now-a-native-action",
+      "source": "shopify-changelog",
+      "title": "Flow: More fields from Shopify Admin API are available ",
+      "link": "https://changelog.shopify.com/posts/flow-more-of-shopify-s-admin-api-is-now-a-native-action",
+      "publishedAt": "2026-03-24T21:00:00.000Z",
+      "collectedAt": "2026-03-25T00:03:57.229Z",
+      "category": [
+        "Apps"
+      ],
+      "description": "\n        <p>Nearly all of Shopify's Admin API fields are now available natively in Flow, including those that requirement arguments to use, such as <code>product.inCollection</code>, which requires a collection ID to access. </p>\n\n<p>Previously, fetching these fields required building a \"Send HTTP request\" action manually. Since natively supported fields are managed by Flow as the API changes, we recommend you adopt these fields where possible, but you can migrate at your own pace. Existing configurations will remain working.</p>\n\n<p>For more information, visit the <a href=\"https://help.shopify.com/en/manual/shopify-flow/getting-started/concepts/fields-arguments\">documentation</a>. </p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Flow: Shopify Admin APIのより多くのフィールドが利用可能に",
+          "summarizedJa": "Shopify Flowで、Admin APIのほぼすべてのフィールドがネイティブに利用可能になりました。これには引数が必要な`product.inCollection`などのフィールドも含まれます。従来は「HTTPリクエストを送信」アクションを手動で構築する必要がありましたが、ネイティブサポートによりAPI変更時の管理がFlowによって自動化されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-03-25T00:04:17.946Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1083,
+            "output": 227
+          },
+          "estimatedCost": 0.006654
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Flow: Shopify Admin APIのより多くのフィールドが利用可能に",
+          "summarizedJa": "Shopify Flowにおいて、Shopify Admin APIのほぼ全てのフィールドがネイティブで利用可能になりました。これにより、これまで手動で「HTTPリクエストを送信」アクションを構築する必要があった、引数を必要とするフィールド（例: product.inCollection）も直接利用できるようになります。FlowがAPIの変更を管理するため、既存のワークフローを新しいネイティブフィールドに移行することが推奨されますが、既存の設定は引き続き機能します。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-03-25T00:04:25.388Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 794,
+            "output": 168
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-shipping-and-delivery-settings-are-now-easier-to-scan",
+      "source": "shopify-changelog",
+      "title": "Shipping and delivery settings are now easier to scan",
+      "link": "https://changelog.shopify.com/posts/shipping-and-delivery-settings-are-now-easier-to-scan",
+      "publishedAt": "2026-03-24T18:00:00.000Z",
+      "collectedAt": "2026-03-25T00:03:57.229Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>The Shipping and delivery settings page has been refreshed to help you find what you need faster. Related settings are now grouped, profile rows are cleaner, and all your profiles appear in one easy-to-scan list—no workflow changes, just a smoother experience.</p>\n\n<p><strong>What's new:</strong><br>\n- Organized by delivery method: Shipping methods appear first, followed by additional delivery options and general settings<br>\n- Cleaner profile rows: Products, locations, and zones now display in a three-column layout with icons<br>\n- Unified profile list: Default, custom, and app shipping profiles live together in one list<br>\n- Quick-glance context: Section headers show key counts like active carriers for faster scanning<br>\n- Same configuration flows: All modals, forms, and settings work just as before</p>\n\n<p>Learn more about <a href=\"https://help.shopify.com/en/manual/fulfillment/setup\">Shipping and delivery settings</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "配送設定ページが見やすく改善されました",
+          "summarizedJa": "Shopify管理画面の配送設定ページのデザインが刷新され、より見やすく使いやすくなりました。配送方法ごとにグループ化され、プロフィール情報が3カラムレイアウトで表示されるようになり、すべてのプロフィールが1つのリストに統合されました。設定フローや機能自体に変更はなく、UIの改善のみが行われています。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 1,
+            "japanRelevance": 3,
+            "technicalImportance": 1
+          },
+          "totalScore": 7,
+          "analyzedAt": "2026-03-25T00:04:30.151Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1142,
+            "output": 226
+          },
+          "estimatedCost": 0.006816
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "配送・配達設定の視認性が向上",
+          "summarizedJa": "Shopify管理画面の配送・配達設定ページが刷新され、関連設定のグループ化、プロファイル行の表示改善、すべての配送プロファイルの一元化により、必要な情報を見つけやすくなりました。設定フロー自体に変更はなく、マーチャントはよりスムーズに配送設定を管理できるようになります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-03-25T00:04:35.200Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 852,
+            "output": 137
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-updated-handling-of-customer-data-erasure-requests-with-recent-orders",
       "source": "developer-changelog",
@@ -47,6 +197,56 @@
           "tokenUsage": {
             "input": 823,
             "output": 172
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-collect-marketing-consent-on-the-customer-sign-in-page",
+      "source": "shopify-changelog",
+      "title": "Collect marketing consent on the customer sign-in page",
+      "link": "https://changelog.shopify.com/posts/collect-marketing-consent-on-the-customer-sign-in-page",
+      "publishedAt": "2026-03-23T17:00:00.000Z",
+      "collectedAt": "2026-03-25T00:03:57.229Z",
+      "category": [
+        "Customer-account"
+      ],
+      "description": "\n        <p>The customer sign-in page now supports marketing consent collection. If you've already enabled marketing consent at checkout, the same checkbox now appears during customer sign-in, using the same preselected region settings you've already configured. Customers can also manage their marketing preferences anytime from their account profile page.</p>\n\n<p>This improvement enables our merchants to grow your subscriber list by capturing high-quality marketing opt-ins earlier in the customer journey.</p>\n\n<p>If you haven't enabled marketing consent, go to <a href=\"https://admin.shopify.com/settings/checkout\">Checkout settings</a> in your Shopify admin and adjust Marketing opt-in.</p>\n\n<p>Learn more about <a href=\"https://help.shopify.com/en/manual/promoting-marketing/create-marketing/customer-contact-information#collect-customer-emails-from-checkout-and-sign-in\">email marketing consent settings</a> in the Shopify Help Center. Please note that options to surface marketing consent at checkout only and sign-in only will be a fast-follow to this release.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "顧客サインインページでマーケティング同意を収集可能に",
+          "summarizedJa": "顧客がアカウントにサインインする際に、マーケティング配信への同意を収集できるようになりました。チェックアウト時にマーケティング同意を有効にしている場合、同じ設定がサインインページにも適用され、顧客は後からアカウントプロフィールページで配信設定を変更できます。この機能により、カスタマージャーニーの早い段階で質の高いメールマーケティングの購読者を獲得できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-03-25T00:04:40.741Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1159,
+            "output": 251
+          },
+          "estimatedCost": 0.007242
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "顧客サインインページでのマーケティング同意収集",
+          "summarizedJa": "Shopifyの顧客サインインページで、マーケティング同意の収集が可能になりました。これにより、チェックアウト時に設定済みの同意オプションがサインイン時にも表示され、顧客はアカウントプロフィールからいつでも設定を管理できます。マーチャントは、顧客ジャーニーの早い段階で質の高いオプトインを獲得し、購読者リストを効果的に拡大できるようになります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-03-25T00:04:46.577Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 872,
+            "output": 150
           },
           "estimatedCost": 0
         }
