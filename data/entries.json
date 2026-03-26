@@ -1,6 +1,58 @@
 {
-  "lastUpdated": "2026-03-25T00:03:57.241Z",
+  "lastUpdated": "2026-03-26T00:06:18.297Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-the-shopify-cli-app-release-force-flag-is-deprecated-and-will-be-removed",
+      "source": "developer-changelog",
+      "title": "The Shopify CLI app release `--force` flag is deprecated and will be removed",
+      "link": "https://shopify.dev/changelog/the-shopify-cli-app-release-force-flag-is-deprecated-and-will-be-removed",
+      "publishedAt": "2026-03-25T14:00:00.000Z",
+      "collectedAt": "2026-03-26T00:06:17.252Z",
+      "category": [
+        "Action Required",
+        "Tools",
+        "Deprecation Announcement"
+      ],
+      "description": " <div class=\"\"><p>We are deprecating the <code>--force</code> flag on the <code>shopify app deploy</code> and <code>shopify app release</code> commands. The flag will be removed in a Shopify CLI release in May 2026.</p>\n<h2>Why we're making this change</h2>\n<p>The <code>--force</code> flag skips all confirmation prompts, including for extension deletions that can permanently remove data on installed shops. It doesn't distinguish between low-risk operations (adding or updating extensions) and high-risk ones (deleting them). The <a href=\"https://shopify.dev/changelog/more-control-over-app-deploys-in-cicd-pipelines\" target=\"_blank\" class=\"body-link\">previously released</a> <code>--allow-updates</code> and <code>--allow-deletes</code> flags give you granular control, so your CI/CD pipelines can run unattended without the risk of accidental, irreversible deletions.</p>\n<h2>What you should do</h2>\n<p>If you are <a href=\"https://shopify.dev/docs/apps/launch/deployment/deploy-in-ci-cd-pipeline\" target=\"_blank\" class=\"body-link\">automating your app releases in a CI/CD environment</a>, you should adjust your scripts to use the <a href=\"https://shopify.dev/docs/api/shopify-cli/app/app-deploy#flags-propertydetail-allowupdates\" target=\"_blank\" class=\"body-link\"><code>--allow-updates</code></a> flag instead, which will ensure that extensions can be added and updated, but not deleted.</p>\n<p>For example:  </p>\n<pre><code>shopify app deploy --config production --allow-updates\n</code></pre>\n<p>When extension deletion is needed, you can utilize an interactive <code>deploy</code> or enable the <a href=\"https://shopify.dev/docs/api/shopify-cli/app/app-deploy#flags-propertydetail-allowdeletes\" target=\"_blank\" class=\"body-link\"><code>--allow-deletes</code></a> flag. Use caution and enable <code>--allow-deletes</code> only for manual workflow runs when you are certain that you want to delete an extension and all its configuration on installed shops.</p>\n<p>For more information, see <a href=\"https://shopify.dev/docs/apps/launch/deployment/deploy-in-ci-cd-pipeline#controlling-extension-and-configuration-deployment\" target=\"_blank\" class=\"body-link\">documentation on CI/CD deployment for apps</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify CLIアプリリリースの`--force`フラグが非推奨となり削除予定",
+          "summarizedJa": "Shopify CLIの`shopify app deploy`および`shopify app release`コマンドの`--force`フラグが非推奨となり、2026年5月に削除されます。CI/CD環境でアプリリリースを自動化している場合は、より安全な`--allow-updates`フラグへの移行が必要です。`--force`は拡張機能の削除による永久的なデータ損失のリスクがあるため、より細かい制御が可能な新しいフラグの使用が推奨されます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-03-26T00:06:23.881Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1574,
+            "output": 266
+          },
+          "estimatedCost": 0.008712000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify CLIアプリの`--force`フラグが非推奨に、2026年5月に削除予定",
+          "summarizedJa": "Shopify CLIの`shopify app deploy`および`shopify app release`コマンドで使用されていた`--force`フラグが非推奨となり、2026年5月に削除されます。これは、データ損失のリスクを伴う拡張機能の誤削除を防ぐためです。今後は、CI/CD環境では`--allow-updates`を、拡張機能の削除が必要な場合は`--allow-deletes`を慎重に使用することが推奨されます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-03-26T00:06:30.030Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1213,
+            "output": 185
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-flow-new-actions-to-get-data-about-workflow-runs-abandoned-checkouts-inventory-items-catalogs-and-pages",
       "source": "shopify-changelog",
