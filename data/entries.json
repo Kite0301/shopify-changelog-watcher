@@ -1,6 +1,206 @@
 {
-  "lastUpdated": "2026-03-26T00:06:18.297Z",
+  "lastUpdated": "2026-03-27T00:05:03.268Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-updates-to-setting-up-shipping-options",
+      "source": "shopify-changelog",
+      "title": "Updates to setting up shipping options",
+      "link": "https://changelog.shopify.com/posts/updates-to-setting-up-shipping-options",
+      "publishedAt": "2026-03-26T16:00:00.000Z",
+      "collectedAt": "2026-03-27T00:05:03.255Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>Setting up shipping options, previously called rates, is now simpler and gives you more control and flexibility. Each option can now include a separate transit time and description. This allows you to give customers more details at checkout. You can now also offer free shipping by setting a minimum order value on a shipping option.</p>\n\n<p>This update lets you:<br>\n* Set weight or price range conditions in a single shipping option<br>\n* Add a custom description for each shipping option to display at checkout<br>\n* Offer free shipping automatically when an order reaches a specified threshold</p>\n\n<p>For more details, <a href=\"https://help.shopify.com/en/manual/fulfillment/setup/shipping-rates/setting-up-shipping-rates\">learn about setting up shipping options</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "配送オプション設定機能のアップデート",
+          "summarizedJa": "配送オプション（旧称：配送料金）の設定がよりシンプルになり、各オプションに配送日数や説明文を個別に設定できるようになりました。重量や価格の範囲条件を1つの配送オプションで設定でき、最低注文金額を設定することで送料無料を自動適用できるようになります。チェックアウト時に顧客へより詳細な配送情報を提供できるため、購入体験の向上が期待できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-03-27T00:05:08.883Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1082,
+            "output": 246
+          },
+          "estimatedCost": 0.006936
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "配送オプション設定のアップデート",
+          "summarizedJa": "Shopifyの配送オプション設定がよりシンプルになり、各オプションに個別の配送期間と説明を追加できるようになりました。これにより、チェックアウト時にお客様へ詳細な情報を提供できます。また、最低注文金額を設定することで、自動的に無料配送を提供できるようになり、重量または価格範囲の条件を単一の配送オプション内で設定することも可能になりました。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-03-27T00:05:12.800Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 800,
+            "output": 141
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-run-a-deep-analysis-on-your-online-store-theme-with-simgym",
+      "source": "shopify-changelog",
+      "title": "Run a deep analysis on your online store theme with SimGym",
+      "link": "https://changelog.shopify.com/posts/run-a-deep-analysis-on-your-online-store-theme-with-simgym",
+      "publishedAt": "2026-03-26T15:00:00.000Z",
+      "collectedAt": "2026-03-27T00:05:03.255Z",
+      "category": [
+        "Apps"
+      ],
+      "description": "\n        <p>SimGym now lets you analyze any single theme on its own. Instead of setting up a comparison between two themes, you can run a deep analysis and get feedback from AI-shoppers who browse your store like real customers would. You can focus the analysis on specific areas of your store, like your homepage, product pages, collection pages, or cart. Each analysis gives you findings that are specific to your store, not generic advice. You'll see what's working well and where there's room to improve, along with clear next steps you can act on right away. </p>\n\n<p>To get started, go to the SimGym app in your Shopify admin, select \"Analyze a theme,\" choose any live or draft theme, and optionally pick the site areas you want to focus on. Learn more about analyzing a single theme using SimGym in our <a href=\"https://help.shopify.com/en/manual/online-store/simgym\">help documentation</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "SimGymでオンラインストアテーマの詳細分析が可能に",
+          "summarizedJa": "SimGymアプリで単一テーマの詳細分析が可能になりました。AI顧客が実際の顧客のようにストアを閲覧し、ホームページ、商品ページ、コレクションページ、カートなど特定エリアに焦点を当てた分析を実施できます。一般的なアドバイスではなく、ストア固有の改善点と具体的なアクションステップが提示されます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-03-27T00:05:16.729Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1134,
+            "output": 238
+          },
+          "estimatedCost": 0.006972000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "SimGymでオンラインストアのテーマを詳細分析",
+          "summarizedJa": "「SimGym」アプリが、単一のストアテーマを詳細に分析する新機能を提供します。AIショッパーが実際の顧客のようにストアを閲覧し、ホームページや商品ページなど特定のエリアに焦点を当てた具体的なフィードバックと改善策を提供します。これにより、マーチャントはストアのパフォーマンス向上に直結する洞察を得られます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-03-27T00:05:22.911Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 851,
+            "output": 149
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-customize-your-product-detail-pages-on-shop-with-blocks",
+      "source": "shopify-changelog",
+      "title": "Customize your product detail pages on Shop with blocks",
+      "link": "https://changelog.shopify.com/posts/customize-your-product-detail-pages-on-shop-with-blocks",
+      "publishedAt": "2026-03-25T17:30:00.000Z",
+      "collectedAt": "2026-03-27T00:05:03.255Z",
+      "category": [
+        "Shop"
+      ],
+      "description": "\n        <p>We’ve added blocks in the Shop Editor so you can now add rich, branded sections below your product details — the same kind of customization you're used to on your online store.</p>\n\n<p>There are 5 different block types that you can add to your product detail pages via sections (max 2 per PDP):</p>\n\n<ul>\n<li>Image - lifestyle shots, size guides, or brand visuals</li>\n<li>Video - show your product in action</li>\n<li>Slideshow - a carousel of images and videos with text overlays</li>\n<li>Product Group - cross-sell up to 4 related products</li>\n<li>Shoppable Video - video with tagged products buyers can purchase directly</li>\n</ul>\n\n<p>You can also set up product templates to apply these customizations to specific products, so running shoe PDPs can feature a sizing chart while hat PDPs highlight a style guide.</p>\n\n<p>Your customizations appear on both the Shop mobile app and shop.app on the web.</p>\n\n<p>To get started, open the Shop channel in your Shopify admin and go to <a href=\"https://admin.shopify.com/apps/shop-72/merchant/editor\">Shop Editor</a>.</p>\n\n<p>Learn more about blocks in the <a href=\"https://help.shopify.com/en/manual/online-sales-channels/shop/manage-shop-store/customize/product-page\">Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopアプリの商品詳細ページをブロックでカスタマイズ可能に",
+          "summarizedJa": "Shopエディターにブロック機能が追加され、商品詳細ページに画像、動画、スライドショー、関連商品、ショッパブル動画など5種類のブロックを最大2つまで追加できるようになりました。商品テンプレートを使って特定の商品にカスタマイズを適用でき、ShopアプリとWeb版の両方に反映されます。オンラインストアと同様のブランディングと商品訴求が可能になります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-03-27T00:05:28.585Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1264,
+            "output": 257
+          },
+          "estimatedCost": 0.007647
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopアプリの商品詳細ページをブロックでカスタマイズ",
+          "summarizedJa": "ShopifyのShopアプリにおいて、商品詳細ページ（PDP）をブロックを使って自由にカスタマイズできるようになりました。画像、動画、スライドショー、関連商品グループ、購入可能な動画など5種類のブロックを使い、オンラインストアのようにブランドイメージに合わせたリッチなコンテンツを追加できます。これにより、特定の商品に合わせたテンプレート設定も可能になり、Shopアプリでの顧客体験と販売促進が強化されます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-03-27T00:05:34.760Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 946,
+            "output": 158
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-redesigned-theme-editor-navigation",
+      "source": "shopify-changelog",
+      "title": "Redesigned theme editor navigation",
+      "link": "https://changelog.shopify.com/posts/redesigned-theme-editor-navigation",
+      "publishedAt": "2026-03-25T17:00:00.000Z",
+      "collectedAt": "2026-03-27T00:05:03.255Z",
+      "category": [
+        "Themes"
+      ],
+      "description": "\n        <p>The theme editor has a new layout that puts your site preview front and center. The left navigation has moved to the top bar, giving you more horizontal space to see your storefront as you edit. You can now collapse the right sidebar when you don't need it - so you spend less time managing panels and more time designing your store.</p>\n\n<p>On laptops and smaller screens, the editor works differently too. When you select a section or block, the settings panel slides up from the bottom of the screen instead of covering your page tree. You can drag the divider to adjust the split, keeping both the page structure and your settings visible at all times. No more losing track of where you are.</p>\n\n<p>To learn more about navigating the theme editor, visit the <a href=\"https://help.shopify.com/en/manual/online-store/themes/theme-editing\">Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "テーマエディターのナビゲーションが刷新",
+          "summarizedJa": "テーマエディターのレイアウトが刷新され、左側のナビゲーションが上部バーに移動したことで、ストアフロントの編集画面が広く表示されるようになりました。右サイドバーの折りたたみが可能になり、ノートPCなどの小さな画面では設定パネルが画面下部からスライド表示されるようになり、ページ構造と設定を同時に確認できるようになりました。これによりパネル管理の時間が削減され、ストアデザインに集中できるようになります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-03-27T00:05:39.534Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1102,
+            "output": 270
+          },
+          "estimatedCost": 0.007356
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "テーマエディターのナビゲーション刷新",
+          "summarizedJa": "Shopifyのテーマエディターが刷新され、サイトプレビューが中央に配置される新レイアウトになりました。左側のナビゲーションが上部のバーに移動し、右側のサイドバーも折りたたみ可能になったことで、より広々としたスペースでストアデザインに集中できます。また、小型スクリーンでは設定パネルが画面下部からスライドアップするようになり、ページ構造と設定の両方を常に確認しながら編集できるよう改善されました。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-03-27T00:05:45.416Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 820,
+            "output": 166
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-the-shopify-cli-app-release-force-flag-is-deprecated-and-will-be-removed",
       "source": "developer-changelog",
