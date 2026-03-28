@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-27T00:05:03.268Z",
+  "lastUpdated": "2026-03-28T00:04:26.342Z",
   "entries": [
     {
       "id": "shopify-changelog-posts-updates-to-setting-up-shipping-options",
@@ -963,6 +963,56 @@
           "tokenUsage": {
             "input": 940,
             "output": 170
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-enrich-customer-records-with-data-from-external-identity-providers",
+      "source": "shopify-changelog",
+      "title": "Automatically sync customer data from your identity provider",
+      "link": "https://changelog.shopify.com/posts/enrich-customer-records-with-data-from-external-identity-providers",
+      "publishedAt": "2026-03-17T13:00:00.000Z",
+      "collectedAt": "2026-03-28T00:04:26.326Z",
+      "category": [
+        "Customer-account"
+      ],
+      "description": "\n        <p>Merchants using their own identity providers for customer sign-in can now automatically retrieve and store key customer profile data within their Shopify customer records. This keeps customer records complete and up to date without manual data entry or custom integrations.</p>\n\n<p>When a customer signs in through your identity provider, the following attributes are automatically synced to their Shopify customer record:</p>\n\n<ul>\n<li>First and last name</li>\n<li>Email address</li>\n<li>Phone number</li>\n<li>Addresses (including multiple addresses)</li>\n<li>Customer tags</li>\n</ul>\n\n<p>This update removes the need for manual data entry or data synchronization through custom webhook and API integrations, making it easier for merchants to keep customer records complete and up-to-date across Shopify and their own identity provider.</p>\n\n<p>Availability: <strong>Plus merchants</strong></p>\n\n<p>Learn more about <a href=\"https://help.shopify.com/en/manual/customers/customer-accounts/sign-in-options/identity-provider/sync-customer-data\">syncing customer data from your identity provider</a> in the Help Center.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "外部IDプロバイダーから顧客データを自動同期",
+          "summarizedJa": "独自のIDプロバイダーを使用しているPlusマーチャント向けに、顧客がサインインした際に顧客情報（氏名、メールアドレス、電話番号、住所、タグ）をShopifyの顧客レコードに自動同期する機能が追加されました。これにより、手動でのデータ入力やカスタムWebhook/API連携が不要になり、顧客情報を常に最新の状態に保つことができます。Plusプラン限定の機能です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-03-28T00:04:31.970Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1188,
+            "output": 257
+          },
+          "estimatedCost": 0.007419
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "IDプロバイダーからの顧客データ自動同期",
+          "summarizedJa": "Shopify Plusマーチャントは、独自のIDプロバイダーを利用して顧客がサインインする際に、氏名、メールアドレス、電話番号、住所、顧客タグなどの主要な顧客データをShopifyの顧客レコードに自動的に同期できるようになりました。これにより、手動入力やカスタム連携なしで顧客情報を常に最新の状態に保ち、管理の手間を大幅に削減できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-03-28T00:04:38.451Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 871,
+            "output": 153
           },
           "estimatedCost": 0
         }
