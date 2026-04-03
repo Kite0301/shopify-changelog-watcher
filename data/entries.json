@@ -1,6 +1,106 @@
 {
-  "lastUpdated": "2026-04-02T00:05:08.326Z",
+  "lastUpdated": "2026-04-03T00:05:50.792Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-key-b2b-features-now-available-on-non-plus-plans",
+      "source": "shopify-changelog",
+      "title": "Key B2B features now available on non-Plus plans",
+      "link": "https://changelog.shopify.com/posts/key-b2b-features-now-available-on-non-plus-plans",
+      "publishedAt": "2026-04-02T17:18:00.000Z",
+      "collectedAt": "2026-04-03T00:05:50.777Z",
+      "category": [
+        "B2b"
+      ],
+      "description": "\n        <p>Merchants on Basic, Grow, and Advanced plans can start selling wholesale using native B2B features, available in their admin. This includes up to 3 active B2B catalogs (assigned via Markets), company profiles, payment terms, volume pricing, ACH payments (U.S. only), and vaulted credit cards. </p>\n\n<p>These features are available to use at no additional cost. Unlimited catalogs for customer-specific pricing, direct catalog assignment to companies and locations, partial payments, and deposits remain exclusive to Plus. <a href=\"https://help.shopify.com/en/manual/b2b\">Learn more about Shopify B2B</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "主要なB2B機能が非Plusプランでも利用可能に",
+          "summarizedJa": "Basic、Grow、Advancedプランでも、ネイティブB2B機能を使用した卸売販売が可能になりました。最大3つのB2Bカタログ（マーケット経由で割り当て）、会社プロフィール、支払い条件、ボリューム価格設定、ACH決済（米国のみ）、保管されたクレジットカードが追加費用なしで利用できます。無制限のカタログ、会社や拠点への直接カタログ割り当て、分割払い、デポジットはPlusプラン限定のままです。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-04-03T00:05:56.246Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1071,
+            "output": 280
+          },
+          "estimatedCost": 0.0074129999999999995
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "主要なB2B機能がPlus以外のプランでも利用可能に",
+          "summarizedJa": "ShopifyのBasic、Grow、Advancedプランのマーチャントは、管理画面からネイティブのB2B機能を利用できるようになりました。これにより、最大3つのB2Bカタログ、会社プロフィール、支払い条件、数量割引、ACH決済（米国のみ）、保管済みクレジットカードなどの機能が追加費用なしで利用可能です。ただし、無制限カタログや一部の高度な支払い機能は引き続きPlusプラン限定となります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-04-03T00:06:03.295Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 783,
+            "output": 164
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-new-cash-management-foundations-for-shopify-pos",
+      "source": "shopify-changelog",
+      "title": "New Cash Management Foundations for Shopify POS",
+      "link": "https://changelog.shopify.com/posts/new-cash-management-foundations-for-shopify-pos",
+      "publishedAt": "2026-04-02T16:00:00.000Z",
+      "collectedAt": "2026-04-03T00:05:50.777Z",
+      "category": [
+        "Pos"
+      ],
+      "description": "\n        <p>We rebuilt cash management across POS and the POS channel in Admin, and added new register extension targets and APIs. Track, control, and reconcile cash with register sessions, reason codes, and a new cash drawer and ledger model.</p>\n\n<h6>What’s new in POS</h6>\n\n<ul>\n<li><strong>Updated Register UX:</strong> See a clear summary of each register session on device, including improved cash tracking, a breakdown of payments, and granular cash activity that shows when a drawer was opened and by which staff member.</li>\n<li><strong>Native cash reason codes:</strong> Require a reason code for any non‑order cash activity (for example, opening the drawer or making adjustments). Enable and customize codes from the POS channel to get the audit trail you need.</li>\n<li><strong>Open drawer setting:</strong> Control whether a device automatically opens the cash drawer after an order—useful for staff using mobile devices on the sales floor.</li>\n</ul>\n\n<h6>What’s new in Admin (POS channel)</h6>\n\n<ul>\n<li><strong>Register sessions tab:</strong> A dedicated tab in Admin shows sessions opened and closed, and expected cash balances across locations and per location. Improved filtering and export make accounting and reconciliation faster.</li>\n</ul>\n\n<h6>New Foundation, APIs, Extensions</h6>\n\n<ul>\n<li><strong>Cash drawer and ledger model:</strong> Multiple devices can contribute to a single cash drawer. Move beyond “one device = one session” with sessions across devices that roll up to one drawer via an updated data model and APIs. Payment reporting stays device‑level; cash reporting can span contributing devices with a ledger that provides full auditability of every cash event.</li>\n<li><strong>Register extension targets:</strong> New POS targets let apps plug into open/close procedures, show alerts when balances exceed float/min/max thresholds, and enrich session details with custom logic or reporting.</li>\n<li><strong>Automated workflows via API:</strong> Use APIs to open and close sessions programmatically, create cash drawers and reason codes, assign devices to a drawer, and pull custom reports.</li>\n</ul>\n\n<p>If you run multiple registers, share drawers across staff and devices, or need tighter control over how cash moves in and out of stores, these features give you more accountable, end‑to‑end cash tracking.</p>\n\n<h6>Get started</h6>\n\n<ul>\n<li>See <a href=\"https://help.shopify.com/en/manual/sell-in-person/shopify-pos/cash-register-management\">Help Center</a> for in‑app workflows.</li>\n<li>Read the developer <a href=\"https://shopify.dev/changelog/new-retail-cash-management-capabilities\">changelog</a></li>\n<li>Explore <a href=\"https://shopify.dev/docs/api/pos-ui-extensions/latest/targets/register-details\">POS UI extension targets</a></li>\n</ul>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify POS向け新しい現金管理基盤",
+          "summarizedJa": "Shopify POSとPOSチャネルの現金管理機能を全面刷新し、レジセッション管理、理由コード、新しいキャッシュドロワーと台帳モデルを導入しました。複数デバイスで1つのキャッシュドロワーを共有できるようになり、現金の出入金をより詳細に追跡・管理・照合できます。新しいレジスター拡張ターゲットとAPIにより、開発者はカスタムロジックやレポート機能を統合可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-04-03T00:06:09.080Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1619,
+            "output": 264
+          },
+          "estimatedCost": 0.008817
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify POSの新たな現金管理基盤",
+          "summarizedJa": "Shopify POSの現金管理機能が刷新され、POSアプリと管理画面の両方で大幅に改善されました。レジセッション、理由コード、新しいキャッシュドロワーと台帳モデルにより、現金追跡、管理、照合が強化されます。これにより、複数のレジや共有ドロワーを使用するマーチャントはより厳格な現金管理と監査が可能になり、パートナーは新しいAPIや拡張機能を通じてカスタムソリューションを提供できるようになります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 5
+          },
+          "totalScore": 18,
+          "analyzedAt": "2026-04-03T00:06:16.062Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1216,
+            "output": 170
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-see-which-apps-use-extensions-and-functions-to-power-your-checkout-online-store-and-more",
       "source": "shopify-changelog",
