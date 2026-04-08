@@ -1,6 +1,56 @@
 {
-  "lastUpdated": "2026-04-03T00:05:50.792Z",
+  "lastUpdated": "2026-04-08T00:08:00.435Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-updates-is-now-posts-publish-shoppable-content-to-the-shop-feed",
+      "source": "shopify-changelog",
+      "title": "Updates is now Posts — publish shoppable content to the Shop feed",
+      "link": "https://changelog.shopify.com/posts/updates-is-now-posts-publish-shoppable-content-to-the-shop-feed",
+      "publishedAt": "2026-04-07T12:31:00.000Z",
+      "collectedAt": "2026-04-08T00:08:00.424Z",
+      "category": [
+        "Shop"
+      ],
+      "description": "\n        <p>Updates is now <strong>Posts</strong> — a more powerful way to create shoppable content that reaches both followers and new shoppers in the Shop feed.</p>\n\n<p>With Posts, you can:</p>\n\n<ul>\n<li>Add images or videos (up to 2 min) with a caption and optional headline</li>\n<li>Tag up to 10 products or a collection to make your content shoppable</li>\n<li>Schedule posts for later and set an optional expiration date</li>\n<li>Connect apps like Tolstoy, Videowise, and others to automatically sync shoppable video content</li>\n</ul>\n\n<p>Unlike Updates, Posts aren't limited to your followers — they appear in the main Shop feed and are ranked by relevancy, giving your content broader reach.</p>\n\n<p>To get started, go to the new <a href=\"https://admin.shopify.com/apps/shop-72/merchant/posts\">Posts</a> page within the Shop channel. You can also connect supported apps from the Posts page to sync video content automatically.</p>\n\n<p>Learn more about Posts in the <a href=\"http://help.shopify.com/manual/online-sales-channels/shop/marketing/posts\">Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "UpdatesがPostsに名称変更 — Shopフィードに買い物可能なコンテンツを配信",
+          "summarizedJa": "Shop販売チャネルの「Updates」機能が「Posts」にリニューアルされ、より強力なショッピング可能コンテンツ作成機能になりました。画像・動画の投稿、最大10商品またはコレクションのタグ付け、投稿のスケジュール設定が可能で、従来はフォロワー限定だった配信がShopフィードのメインに表示され、より幅広いユーザーにリーチできるようになりました。Tolstoy、Videowiseなどの動画アプリとの連携も可能です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-04-08T00:08:07.285Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1222,
+            "output": 285
+          },
+          "estimatedCost": 0.007941
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "「Updates」が「Posts」に — Shopフィードで購買可能なコンテンツを公開",
+          "summarizedJa": "Shopifyの「Updates」機能が「Posts」として刷新され、Shopアプリのメインフィードで購買可能なコンテンツを公開できるようになりました。画像や動画の投稿、商品タグ付け、予約投稿が可能で、フォロワーだけでなく新しい顧客にもリーチを拡大できます。日本のマーチャントは、この新機能によりShopアプリを通じてより効果的に商品をプロモーションし、売上向上に繋げることが期待されます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-04-08T00:08:14.039Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 908,
+            "output": 170
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-key-b2b-features-now-available-on-non-plus-plans",
       "source": "shopify-changelog",
