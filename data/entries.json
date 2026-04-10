@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-08T00:08:00.435Z",
+  "lastUpdated": "2026-04-10T00:07:54.658Z",
   "entries": [
     {
       "id": "shopify-changelog-posts-updates-is-now-posts-publish-shoppable-content-to-the-shop-feed",
@@ -146,6 +146,57 @@
           "tokenUsage": {
             "input": 1216,
             "output": 170
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-shopify-ai-toolkit-connect-your-ai-tools-to-the-shopify-platform",
+      "source": "developer-changelog",
+      "title": "Shopify AI Toolkit: Connect your AI tools to the Shopify platform",
+      "link": "https://shopify.dev/changelog/shopify-ai-toolkit-connect-your-ai-tools-to-the-shopify-platform",
+      "publishedAt": "2026-04-02T14:00:00.000Z",
+      "collectedAt": "2026-04-10T00:07:53.174Z",
+      "category": [
+        "Tools",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>The Shopify AI Toolkit is now available. With the Toolkit, you can build apps using Shopify's documentation, API schemas, and code validation, and manage your Shopify store through the CLI's store execute capabilities. </p>\n<p>We're also releasing a new plugin to install the Toolkit. The plugin auto-updates, so your agent stays up to date as we release new capabilities.</p>\n<h2>Supported tools</h2>\n<ul>\n<li>Claude Code</li>\n<li>Cursor</li>\n<li>Gemini CLI</li>\n<li>Visual Studio Code</li>\n<li>Codex CLI (skills and MCP only)</li>\n</ul>\n<h2>Get started</h2>\n<p>Plugin installation takes just one or two steps on supported tools. For instructions, see <a href=\"/docs/apps/build/ai-toolkit\" target=\"_blank\" class=\"body-link\">Shopify AI Toolkit</a>.</p>\n<p>If you'd prefer, you can also set up the Toolkit via <a href=\"/docs/apps/build/ai-toolkit#install-with-agent-skills\" target=\"_blank\" class=\"body-link\">agent skills</a> or the <a href=\"/docs/apps/build/ai-toolkit#install-with-the-dev-mcp-server\" target=\"_blank\" class=\"body-link\">Dev MCP server</a> instead of the plugin.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify AI Toolkit: AIツールをShopifyプラットフォームに接続",
+          "summarizedJa": "Shopify AI Toolkitが利用可能になりました。このツールキットを使用すると、Shopifyのドキュメント、APIスキーマ、コード検証を活用してアプリを構築でき、CLIのstore execute機能を通じてストアを管理できます。Claude Code、Cursor、Gemini CLI、Visual Studio Code、Codex CLIなどの主要な開発ツールに対応しており、プラグインは自動更新されるため常に最新の機能を利用できます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-04-10T00:08:00.258Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1272,
+            "output": 251
+          },
+          "estimatedCost": 0.007580999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify AIツールキット：AIツールをShopifyプラットフォームに接続",
+          "summarizedJa": "Shopify AIツールキットがリリースされ、開発者はShopifyのドキュメント、APIスキーマ、コード検証を活用してAIアプリを構築し、CLIを通じてストアを管理できるようになります。Claude CodeやVisual Studio Codeなど主要なAI開発ツールに対応しており、日本のShopifyパートナーはAIを活用したアプリ開発やストア管理を効率化できます。これにより、マーチャントはより高度なAI機能を搭載したアプリを利用できるようになる可能性があります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-04-10T00:08:07.891Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 931,
+            "output": 171
           },
           "estimatedCost": 0
         }
