@@ -1,6 +1,59 @@
 {
-  "lastUpdated": "2026-04-10T00:07:54.658Z",
+  "lastUpdated": "2026-04-11T00:06:38.846Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-shopify-scripts-will-be-deprecated-on-june-30-2026",
+      "source": "developer-changelog",
+      "title": "Shopify Scripts will be deprecated on June 30, 2026",
+      "link": "https://shopify.dev/changelog/shopify-scripts-will-be-deprecated-on-june-30-2026",
+      "publishedAt": "2026-04-09T16:00:00.000Z",
+      "collectedAt": "2026-04-11T00:06:37.978Z",
+      "category": [
+        "API",
+        "Deprecation Announcement",
+        "Functions",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>We are enhancing <a href=\"https://shopify.dev/docs/apps/build/checkout#shopify-functions\" target=\"_blank\" class=\"body-link\">Shopify Functions</a> with new capabilities for discounts, shipping, and payments. These improvements aim to replace the functionalities you previously achieved using Shopify Scripts, allowing you to build custom logic tailored to your unique business needs.</p>\n<p>To assist with your migration planning, we recommend using the <a href=\"https://help.shopify.com/en/manual/checkout-settings/script-editor/transitioning-to-functions#functions-migrate\" target=\"_blank\" class=\"body-link\">Shopify Scripts customizations report</a>. This tool will help you identify which of your current customizations can be transitioned to Shopify Functions or public apps.</p>\n<p>Here are the key dates to keep in mind as we approach the deprecation of Shopify Scripts:</p>\n<ul>\n<li><strong>April 15, 2026</strong>—Editing and publishing new Shopify Scripts will no longer be possible.</li>\n<li><strong>June 30, 2026</strong>—All Shopify Scripts will cease to execute entirely.</li>\n</ul>\n<p>We strongly encourage you to begin your migration as soon as possible.</p>\n<p>For more information on migrating from Shopify Scripts to Shopify Functions, please visit the <a href=\"https://help.shopify.com/en/manual/checkout-settings/script-editor/transitioning-to-functions\" target=\"_blank\" class=\"body-link\">Shopify Help Center</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify Scriptsは2026年6月30日に廃止されます",
+          "summarizedJa": "Shopify Scriptsは2026年6月30日に完全に廃止され、Shopify Functionsに置き換えられます。2026年4月15日以降は新規作成・編集ができなくなるため、早急な移行が推奨されます。移行計画にはShopify Scriptsカスタマイゼーションレポートの活用が推奨されています。",
+          "scores": {
+            "merchantImpact": 5,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 5
+          },
+          "totalScore": 19,
+          "analyzedAt": "2026-04-11T00:06:43.305Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1321,
+            "output": 213
+          },
+          "estimatedCost": 0.007157999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify Scriptsは2026年6月30日に廃止されます",
+          "summarizedJa": "Shopify Scriptsは2026年6月30日をもって完全に廃止され、割引、配送、決済の新しい機能を提供するShopify Functionsに置き換えられます。既存のカスタムロジックを持つマーチャントは、提供されるレポートツールを活用し、Functionsまたは公開アプリへの移行を計画する必要があります。2026年4月15日以降は新規スクリプトの編集・公開ができなくなるため、早急な移行対応が強く推奨されます。",
+          "scores": {
+            "merchantImpact": 5,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 5
+          },
+          "totalScore": 19,
+          "analyzedAt": "2026-04-11T00:06:50.097Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1001,
+            "output": 181
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-updates-is-now-posts-publish-shoppable-content-to-the-shop-feed",
       "source": "shopify-changelog",
@@ -3801,6 +3854,59 @@
           "tokenUsage": {
             "input": 2072,
             "output": 184
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-new-discount-fields-in-the-storefront-cart-graphql-api",
+      "source": "developer-changelog",
+      "title": "New discount fields in the Storefront API's cart types",
+      "link": "https://shopify.dev/changelog/new-discount-fields-in-the-storefront-cart-graphql-api",
+      "publishedAt": "2026-03-06T17:00:00.000Z",
+      "collectedAt": "2026-04-11T00:06:37.978Z",
+      "category": [
+        "API",
+        "Deprecation Announcement",
+        "Storefront GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>As of API version 2026-07, several changes have been introduced to the discount fields and amounts in the <a href=\"https://shopify.dev/docs/api/storefront/latest\" target=\"_blank\" class=\"body-link\">Storefront API</a>.</p>\n<h2>What's changed</h2>\n<p><strong>Deprecated Fields</strong>:</p>\n<ul>\n<li>The <a href=\"https://shopify.dev/docs/api/storefront/2026-07/objects/Cart#field-discountAllocations\" target=\"_blank\" class=\"body-link\"><code>cart.discountAllocations</code></a> field is deprecated. Use <code>cart.lines[].discountAllocations(lineLevelOnly: false)</code> and <code>cart.deliveryGroups[].discountAllocations</code> instead.</li>\n<li>The <a href=\"https://shopify.dev/docs/api/storefront/2026-07/interfaces/CartDiscountAllocation#field-discountApplication\" target=\"_blank\" class=\"body-link\"><code>cartDiscountAllocation.discountApplication</code></a> field is deprecated. Use <code>sourceDiscountApplication</code> instead. Note: the <code>value</code> field on <code>discountApplication</code> incorrectly returns the per-line allocated amount rather than the configured discount amount (for example, a $10 fixed discount allocated as $4 to one line shows <code>value: $4</code>). The new <code>sourceDiscountApplication</code> field returns the correct value.</li>\n</ul>\n<p><strong>New Fields</strong>: </p>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/storefront/2026-07/objects/Cart#field-discountApplications\" target=\"_blank\" class=\"body-link\"><code>cart.discountApplications</code></a>: Lists all discounts (for example, product, shipping, and order) currently applied to the cart.</li>\n<li><a href=\"https://shopify.dev/docs/api/storefront/2026-07/interfaces/CartDiscountAllocation#field-sourceDiscountApplication\" target=\"_blank\" class=\"body-link\"><code>cartDiscountAllocation.sourceDiscountApplication</code></a>: Returns the discount application with the correct configured discount value and concrete type information. For example, a $10 fixed discount will show <code>value: $10</code> regardless of how it's allocated across lines. Access type-specific fields using GraphQL fragments, for example <code>sourceDiscountApplication { … on CartCodeDiscountApplication { code } }</code>.</li>\n<li><a href=\"https://shopify.dev/docs/api/storefront/2026-07/interfaces/BaseCartDiscountApplication#field-totalAllocatedAmount\" target=\"_blank\" class=\"body-link\"><code>baseCartDiscountApplication.totalAllocatedAmount</code></a>: Shows the total discount amount allocated across the entire cart. For instance, if a 10% discount splits as $4 on line A and $6 on line B, both lines will show <code>totalAllocatedAmount: $10</code>.</li>\n<li><a href=\"https://shopify.dev/docs/api/storefront/2026-07/objects/CartDeliveryGroup#field-discountAllocations\" target=\"_blank\" class=\"body-link\"><code>cart.deliveryGroups[].discountAllocations</code></a>: Displays the discounts allocated to the delivery group.</li>\n</ul>\n<p><strong>New Argument</strong>:</p>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/storefront/2026-07/objects/CartLine#field-discountAllocations\" target=\"_blank\" class=\"body-link\"><code>cart.lines[].discountAllocations(lineLevelOnly: Boolean)</code></a>: The <code>lineLevelOnly</code> argument lets you request either only product-level discounts or all discounts allocated to the cart line. It defaults to <code>true</code> for backward compatibility.</li>\n</ul>\n<h2>What you need to do</h2>\n<ul>\n<li>Update queries to use <code>cart.discountApplications</code> instead of <code>cart.discountAllocations</code> for reading all discount applications on a cart.</li>\n<li>Replace <code>cartDiscountAllocation.discountApplication</code> with <code>sourceDiscountApplication</code> for accurate discount values and type-specific fields.</li>\n<li>Move product allocation queries to <code>cart.lines[].discountAllocations(lineLevelOnly: false)</code>.</li>\n<li>Move shipping allocation queries to <code>cart.deliveryGroups[].discountAllocations</code>.</li>\n<li>Test your discount calculations with percentage, fixed amount, and free shipping discounts.</li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Storefront APIのカートタイプに新しいディスカウントフィールドを追加",
+          "summarizedJa": "2026-07バージョンより、Storefront APIのカート関連のディスカウントフィールドが大幅に変更されます。既存の`cart.discountAllocations`や`discountApplication`フィールドが非推奨となり、より正確な割引情報を取得できる新しいフィールド（`cart.discountApplications`、`sourceDiscountApplication`など）が追加されます。カスタムストアフロントを開発しているパートナーは、クエリの更新と動作確認が必要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-04-11T00:06:55.605Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2141,
+            "output": 260
+          },
+          "estimatedCost": 0.010322999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "ストアフロントAPIのカートタイプにおける新しい割引フィールド",
+          "summarizedJa": "ShopifyのストアフロントAPIにおいて、APIバージョン2026-07からカートの割引関連フィールドが大幅に更新されます。既存のいくつかのフィールドが非推奨となり、より正確な割引額や詳細な割り当て情報を提供する新しいフィールドや引数が追加されます。日本のShopifyパートナーは、顧客のカートや割引表示が正しく機能するよう、既存のAPIクエリを新しいフィールドに更新する必要があります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-04-11T00:07:04.392Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1651,
+            "output": 163
           },
           "estimatedCost": 0
         }
