@@ -1,6 +1,211 @@
 {
-  "lastUpdated": "2026-04-11T00:06:38.846Z",
+  "lastUpdated": "2026-04-14T00:10:53.569Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-customers-can-now-set-and-manage-default-addresses-in-checkout",
+      "source": "shopify-changelog",
+      "title": "Customers can set and manage default addresses in checkout ",
+      "link": "https://changelog.shopify.com/posts/customers-can-now-set-and-manage-default-addresses-in-checkout",
+      "publishedAt": "2026-04-13T20:35:00.000Z",
+      "collectedAt": "2026-04-14T00:10:53.560Z",
+      "category": [
+        "Checkout"
+      ],
+      "description": "\n        <p>Customers who are logged in during checkout can now set a default address, replacing the previous \"last used address\" logic.<br>\n* A default address is automatically set when a customer adds their first address or places their first order.<br>\n* Customers can update their default address anytime from checkout or their account profile.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "チェックアウト時に顧客がデフォルト住所を設定・管理可能に",
+          "summarizedJa": "ログイン中の顧客がチェックアウト時にデフォルト住所を設定できるようになりました。従来の「最後に使用した住所」のロジックから変更され、初回の住所追加または注文時に自動的にデフォルト住所が設定されます。顧客はチェックアウトまたはアカウントプロフィールからいつでもデフォルト住所を更新できます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-04-14T00:10:58.536Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 986,
+            "output": 239
+          },
+          "estimatedCost": 0.006543
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "顧客がチェックアウト時にデフォルトの住所を設定・管理可能に",
+          "summarizedJa": "ログイン中の顧客は、チェックアウト時にデフォルトの配送先住所を設定・管理できるようになりました。これにより、以前の「最後に使用した住所」ではなく、顧客が指定した住所が自動的に適用されます。顧客は初回注文時や初回住所登録時にデフォルトが設定され、その後はチェックアウト時やアカウントプロフィールからいつでも変更可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-04-14T00:11:03.273Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 706,
+            "output": 147
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-new-css-variable-for-mobile-safe-area-insets",
+      "source": "developer-changelog",
+      "title": "New CSS variable for mobile safe area insets",
+      "link": "https://shopify.dev/changelog/new-css-variable-for-mobile-safe-area-insets",
+      "publishedAt": "2026-04-13T19:00:00.000Z",
+      "collectedAt": "2026-04-14T00:10:52.621Z",
+      "category": [
+        "Action Required",
+        "API",
+        "New",
+        "App Bridge"
+      ],
+      "description": " <div class=\"\"><h2>New CSS Variable for Mobile Safe Area Insets</h2>\n<p>A new CSS custom property, <code>--shopify-safe-area-inset-bottom</code>, is now available for embedded apps running on Shopify Mobile. This property provides the exact pixel value of host UI overlays, such as the floating bottom navigation bar, to prevent apps from placing fixed-position content over these overlays.</p>\n<ul>\n<li>The <code>var(--shopify-safe-area-inset-bottom)</code> is automatically set by App Bridge. It defaults to <code>0px</code> when no overlay is present, and adjusts to the height of the overlay in CSS pixels when the mobile floating bottom bar is active.</li>\n<li>This variable automatically adds bottom padding to the <code>&lt;body&gt;</code>, ensuring most apps function correctly without content being obscured by the floating bar.</li>\n<li>If your app includes custom fixed-bottom elements, such as sticky footers or floating action buttons (FABs), incorporate this variable into your styles:</li>\n</ul>\n<pre><code class=\"language-css\">  .my-floating-button {\n    bottom: calc(16px + var(--shopify-safe-area-inset-bottom, 0px));\n  }\n</code></pre>\n<h2>Who's Affected</h2>\n<p>All embedded apps running on Shopify Mobile that utilize fixed or sticky elements at the bottom of the viewport.</p>\n<h2>When the Changes Take Effect</h2>\n<p>These changes will be implemented for all affected apps on April 15th, 2026.</p>\n<h2>What You Should Do</h2>\n<p>For most apps, no action is required as bottom padding is automatically applied. However, if your app has custom fixed-bottom UI elements, use <code>var(--shopify-safe-area-inset-bottom, 0px)</code> in your CSS to ensure these elements are positioned above the native floating bottom bar.</p>\n<h2>References</h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/app-home/apis/authentication-and-data/environment-api\" target=\"_blank\" class=\"body-link\">https://shopify.dev/docs/api/app-home/apis/authentication-and-data/environment-api</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "モバイルセーフエリアインセット用の新しいCSS変数",
+          "summarizedJa": "Shopify Mobileで動作する埋め込みアプリ向けに、新しいCSS変数`--shopify-safe-area-inset-bottom`が追加されました。この変数は、フローティングボトムナビゲーションバーなどのホストUIオーバーレイの高さをピクセル値で提供し、固定位置のコンテンツがオーバーレイに重ならないようにします。カスタムの固定ボトム要素を持つアプリは、2026年4月15日の実装までにこの変数をCSSに組み込む必要があります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-04-14T00:11:09.756Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1489,
+            "output": 279
+          },
+          "estimatedCost": 0.008652
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "モバイルセーフエリアインセット用CSS変数の導入",
+          "summarizedJa": "Shopifyモバイルアプリで埋め込みアプリが利用する新しいCSSカスタムプロパティ`--shopify-safe-area-inset-bottom`が導入されます。これは、モバイルのフローティングナビゲーションバーなどのホストUIオーバーレイによって、アプリの固定配置コンテンツが隠れるのを防ぐためのものです。ほとんどのアプリでは自動的にボトムパディングが適用されるため対応不要ですが、カスタムの固定下部UI要素を持つアプリは、2026年4月15日までにこの変数をCSSに組み込む必要があります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-04-14T00:11:17.389Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1131,
+            "output": 190
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-checkout-blocks-order-value-limits-available-on-all-plans",
+      "source": "shopify-changelog",
+      "title": "Checkout Blocks: Order value limits available on all plans",
+      "link": "https://changelog.shopify.com/posts/checkout-blocks-order-value-limits-available-on-all-plans",
+      "publishedAt": "2026-04-13T14:00:00.000Z",
+      "collectedAt": "2026-04-14T00:10:53.560Z",
+      "category": [
+        "Apps"
+      ],
+      "description": "\n        <p>Order value limits in Checkout Blocks are now available on Basic, Grow, Advanced, and Plus plans. This change follows our expansion of key B2B features to select non‑Plus plans. Now more merchants can set a minimum and/or maximum order subtotal to enforce order limits in checkout.</p>\n\n<p>Learn more in the <a href=\"https://help.shopify.com/en/manual/checkout-settings/checkout-blocks/order-value-limits\">Shopify Help Center</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "チェックアウトブロック：注文金額制限が全プランで利用可能に",
+          "summarizedJa": "チェックアウトブロックの注文金額制限機能が、Basic、Grow、Advanced、Plusの全プランで利用可能になりました。これにより、より多くのマーチャントがチェックアウト時に最小・最大注文金額の制限を設定できるようになります。この変更はB2B機能の非Plusプランへの拡張の一環として実施されました。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-04-14T00:11:21.103Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1028,
+            "output": 225
+          },
+          "estimatedCost": 0.0064589999999999995
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "チェックアウトブロック：注文金額制限が全プランで利用可能に",
+          "summarizedJa": "チェックアウトブロックにおける注文金額の制限機能が、Basic、Grow、Advanced、Plusの全プランで利用可能になりました。これにより、より多くのマーチャントが、注文の最小・最大小計を設定し、チェックアウト時に注文制限を適用できるようになります。これは、主要なB2B機能がPlus以外のプランにも拡大されたことによるものです。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-04-14T00:11:28.015Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 744,
+            "output": 152
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-draftorderlineitemgrams-field-removed-in-2026-07",
+      "source": "developer-changelog",
+      "title": " DraftOrderLineItem.grams field removed in 2026-07",
+      "link": "https://shopify.dev/changelog/draftorderlineitemgrams-field-removed-in-2026-07",
+      "publishedAt": "2026-04-11T16:00:00.000Z",
+      "collectedAt": "2026-04-14T00:10:52.621Z",
+      "category": [
+        "API",
+        "Breaking API Change",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><h2>What's changing</h2>\n<p>We are removing the grams field from the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/DraftOrderLineItem\" target=\"_blank\" class=\"body-link\">DraftOrderLineItem</a> object in the Admin GraphQL API, starting with version 2026-07. This field was deprecated over 8 years ago. \tAfter the 2026-04 API version becomes unsupported, any queries referencing DraftOrderLineItem.grams will return an error.</p>\n<h2>What you need to do</h2>\n<p>  Replace any usage of grams with the weight field on <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/DraftOrderLineItem\" target=\"_blank\" class=\"body-link\">DraftOrderLineItem</a>. The weight field returns both a value and a unit, giving you more flexibility than the old grams integer.</p>\n<p>  Before (deprecated):</p>\n<pre><code class=\"language-query\">  draftOrder(id: &quot;gid://shopify/DraftOrder/1&quot;) {\n    lineItems(first: 5) {\n      nodes {\n        grams\n      }\n    }\n  }\n}\n</code></pre>\n<p>  After:</p>\n<pre><code class=\"language-query\">  draftOrder(id: &quot;gid://shopify/DraftOrder/1&quot;) {\n    lineItems(first: 5) {\n      nodes {\n        weight {\n          value\n          unit\n        }\n      }\n    }\n  }\n}```\n\n## Why we made this change\nThe grams field only supported one unit and could overflow for large weights. The weight field uses a WeightInput with both value and unit, which is more flexible and consistent with how weight works elsewhere in the platform.\n\t\n## Need help?\nFor more details, see the [DraftOrderLineItem](https://shopify.dev/docs/api/admin-graphql/latest/objects/DraftOrderLineItem) reference docs. If you have questions about this change, please reach out through the Shopify Partners community (https://community.shopify.com/?utm_source=changelog&amp;utm_medium=changelog&amp;utm_campaign=draftorderlineitem_grams_deprecation&amp;utm_content=partner_community_link).\n</code></pre>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "DraftOrderLineItem.gramsフィールドが2026-07で削除",
+          "summarizedJa": "Admin GraphQL APIのDraftOrderLineItemオブジェクトから、8年前に非推奨となったgramsフィールドが2026-07バージョンで削除されます。今後はweightフィールドを使用する必要があり、こちらは値と単位の両方を返すため、より柔軟な重量管理が可能になります。2026-04バージョンのサポート終了後、gramsフィールドを参照するクエリはエラーを返します。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-04-14T00:11:33.394Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1521,
+            "output": 241
+          },
+          "estimatedCost": 0.008178000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "「DraftOrderLineItem.grams」フィールドが2026年7月に削除されます",
+          "summarizedJa": "ShopifyのAdmin GraphQL APIにおいて、下書き注文の品目（DraftOrderLineItem）から「grams」フィールドが2026年7月（APIバージョン2026-07）以降に削除されます。これは8年以上前に非推奨となっていたフィールドであり、既存のAPI連携で「grams」を使用しているパートナーは、より柔軟で単位も指定できる「weight」フィールドへの移行が必須となります。マーチャントへの直接的な影響は少ないですが、連携アプリの更新が必要になる場合があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-04-14T00:11:41.949Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1197,
+            "output": 192
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-shopify-scripts-will-be-deprecated-on-june-30-2026",
       "source": "developer-changelog",
