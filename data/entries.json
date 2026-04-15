@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-14T00:10:53.569Z",
+  "lastUpdated": "2026-04-15T00:11:21.595Z",
   "entries": [
     {
       "id": "shopify-changelog-posts-customers-can-now-set-and-manage-default-addresses-in-checkout",
@@ -254,6 +254,62 @@
           "tokenUsage": {
             "input": 1001,
             "output": 181
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-automated-testing-for-shopify-ui-extensions-with-shopify-ui-extensions-tester",
+      "source": "developer-changelog",
+      "title": "Automated testing for Shopify UI extensions with @shopify/ui-extensions-tester",
+      "link": "https://shopify.dev/changelog/automated-testing-for-shopify-ui-extensions-with-shopify-ui-extensions-tester",
+      "publishedAt": "2026-04-07T16:00:00.000Z",
+      "collectedAt": "2026-04-15T00:11:20.602Z",
+      "category": [
+        "API",
+        "New",
+        "Admin Extensions",
+        "Checkout UI",
+        "Customer Accounts",
+        "POS Extensions",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>As of API version 2026-04, Shopify provides an official testing library for UI extensions. <code>@shopify/ui-extensions-tester</code> lets you write unit tests for extensions on any surface — Checkout, Admin, Customer Accounts, and POS — without a running Shopify host.</p>\n<h3>What it does</h3>\n<p>The library provides strongly typed mocks of the extension API, so you can render extensions in isolation, simulate user interactions, and verify behaviour against public APIs with full type safety.</p>\n<h3>Key capabilities</h3>\n<ul>\n<li><strong>Render and query</strong>: Render your extension in a standard DOM environment and query the output using standard testing patterns.</li>\n<li><strong>Type-safe mocks</strong>: The mocked <code>shopify</code> global uses the same types as the real API, catching incorrect API usage at test time.</li>\n<li><strong>Surface-specific defaults</strong>: Sensible mock defaults for each target surface (Checkout, Admin, Customer Accounts, POS) so tests work out of the box.</li>\n<li><strong>Event simulation</strong>: Trigger user interactions and test async state changes with <code>dispatchEvent()</code> or <code>@testing-library/preact</code>.</li>\n<li><strong>AI-agent friendly</strong>: Strongly typed mocks and predictable test patterns make the library well-suited for AI-assisted test-driven development.</li>\n</ul>\n<h3>Getting started</h3>\n<p>Read <a href=\"https://github.com/Shopify/ui-extensions/blob/2026-04/packages/ui-extensions-tester/README.md\" target=\"_blank\" class=\"body-link\">documentation</a> to learn more. \nGet started with <a href=\"https://github.com/Shopify/ui-extensions/tree/2026-04/examples/testing\" target=\"_blank\" class=\"body-link\">example test suites</a> for every surface.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "@shopify/ui-extensions-testerによるShopify UI拡張機能の自動テスト",
+          "summarizedJa": "2026-04 APIバージョンより、Shopify UI拡張機能向けの公式テストライブラリ「@shopify/ui-extensions-tester」が提供されます。このライブラリは、Checkout、Admin、Customer Accounts、POSなど、すべてのサーフェスの拡張機能に対して、Shopifyホストを起動せずにユニットテストを記述できます。型安全なモックAPI、イベントシミュレーション、各サーフェス固有のデフォルト設定などを提供し、AI支援によるテスト駆動開発にも対応しています。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-04-15T00:11:28.134Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1445,
+            "output": 284
+          },
+          "estimatedCost": 0.008595
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "@shopify/ui-extensions-tester を使用したShopify UI拡張機能の自動テスト",
+          "summarizedJa": "APIバージョン2026-04より、Shopify UI拡張機能向けの公式テストライブラリ `@shopify/ui-extensions-tester` が提供されます。これにより、開発者はCheckout、管理画面、顧客アカウント、POSなど、あらゆるUI拡張機能の単体テストをShopify環境なしで効率的に行えるようになります。このツールは、タイプセーフなモックやイベントシミュレーションを提供し、パートナーがより高品質で信頼性の高い拡張機能を開発するのに役立ちます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-04-15T00:11:36.067Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1070,
+            "output": 188
           },
           "estimatedCost": 0
         }
