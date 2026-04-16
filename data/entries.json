@@ -1,6 +1,59 @@
 {
-  "lastUpdated": "2026-04-15T00:11:21.595Z",
+  "lastUpdated": "2026-04-16T00:11:33.583Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-removing-deprecated-private-and-publicread-enums-on-metaobject-definitions",
+      "source": "developer-changelog",
+      "title": "Removing deprecated PRIVATE and PUBLIC_READ enums on metaobject definitions",
+      "link": "https://shopify.dev/changelog/removing-deprecated-private-and-publicread-enums-on-metaobject-definitions",
+      "publishedAt": "2026-04-15T16:00:00.000Z",
+      "collectedAt": "2026-04-16T00:11:32.571Z",
+      "category": [
+        "API",
+        "Deprecation Announcement",
+        "Admin GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>We are updating the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/enums/MetaobjectAdminAccess\" target=\"_blank\" class=\"body-link\"><code>MetaobjectAdminAccess</code></a> enum by deprecating the <code>PRIVATE</code> and <code>PUBLIC_READ</code> values. These values are now obsolete and are never returned by the API.</p>\n<p>This change removes ambiguity, as the deprecated access values do not accurately reflect the intended access behaviors. There are no required changes, but updating your code will help maintain clarity and prevent potential access issues.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "メタオブジェクト定義における非推奨のPRIVATEおよびPUBLIC_READ列挙値の削除",
+          "summarizedJa": "Admin GraphQL APIの`MetaobjectAdminAccess`列挙型から、`PRIVATE`と`PUBLIC_READ`の値が非推奨となり削除されます。これらの値は既にAPIから返されることはなく、曖昧さを解消するための変更です。必須の対応はありませんが、コードを更新することで明確性を保ち、潜在的なアクセス問題を防ぐことができます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-04-16T00:11:38.783Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1096,
+            "output": 245
+          },
+          "estimatedCost": 0.0069630000000000004
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "メタオブジェクト定義における非推奨のPRIVATEおよびPUBLIC_READ列挙型の削除",
+          "summarizedJa": "Shopifyのメタオブジェクト定義において、`MetaobjectAdminAccess`列挙型内の`PRIVATE`および`PUBLIC_READ`という値が非推奨となり、APIから返されなくなります。これは、これらの値が実際のアクセス動作を正確に反映していなかったためです。既存のコードの変更は必須ではありませんが、コードを更新することで明確性が向上し、将来的な潜在的なアクセス問題を未然に防ぐことができます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-04-16T00:11:46.097Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 785,
+            "output": 170
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-customers-can-now-set-and-manage-default-addresses-in-checkout",
       "source": "shopify-changelog",
@@ -105,6 +158,109 @@
       }
     },
     {
+      "id": "shopify-changelog-posts-search-filter-and-saved-views-for-orders-products-and-more",
+      "source": "shopify-changelog",
+      "title": " Search, filter, and saved views for Orders, Products, and more",
+      "link": "https://changelog.shopify.com/posts/search-filter-and-saved-views-for-orders-products-and-more",
+      "publishedAt": "2026-04-13T16:00:00.000Z",
+      "collectedAt": "2026-04-16T00:11:33.572Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>Filters, search, and saved views now work together in one bar on your Orders, Products, Customers, Discounts, Collections, and Metaobjects pages.</p>\n\n<p><strong>What's new:</strong><br>\n* Type to search, add filters as inline chips, and switch between saved views — all from the search bar<br>\n* Save any filter, column, and sort configuration as a named view. Set it up once and it's there every time you come back<br>\n* Edit a saved view and save it as new without changing the original<br>\n* Keyboard shortcuts: spacebar to add filters, commas to separate terms, quotes for exact match<br>\n* Ask Sidekick to navigate directly to any filtered view</p>\n\n<p>Learn more in the Help Center </p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "注文、商品などのページに統合された検索、フィルター、保存ビュー機能",
+          "summarizedJa": "注文、商品、顧客、ディスカウント、コレクション、メタオブジェクトの各ページで、検索・フィルター・保存ビューが1つのバーに統合されました。検索バーから直接フィルターをチップとして追加でき、フィルター・カラム・並び替えの設定を名前付きビューとして保存することで、毎回同じ設定を簡単に呼び出せます。キーボードショートカットやSidekickによるナビゲーションにも対応しています。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-04-16T00:11:51.106Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1103,
+            "output": 273
+          },
+          "estimatedCost": 0.007404000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "注文、商品などの検索、フィルター、保存済みビュー機能の統合と強化",
+          "summarizedJa": "Shopify管理画面の注文、商品、顧客などのページで、検索、フィルター、保存済みビューの機能が1つのバーに統合され、大幅に強化されました。これにより、カスタムビューの保存や編集、キーボードショートカットの利用が可能になり、ストア管理の効率が向上します。特に、頻繁に特定の条件でデータを参照するマーチャントにとって、日々の業務負担が軽減されるでしょう。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-04-16T00:11:59.258Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 818,
+            "output": 167
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-lineitem-weight-field-now-available-in-public-admin-api",
+      "source": "developer-changelog",
+      "title": "`LineItem.weight` field now available in public Admin API",
+      "link": "https://shopify.dev/changelog/lineitem-weight-field-now-available-in-public-admin-api",
+      "publishedAt": "2026-04-13T16:00:00.000Z",
+      "collectedAt": "2026-04-16T00:11:32.571Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>Starting in version <code>2026-07</code> of the <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/LineItem#field-LineItem.fields.weight\" target=\"_blank\" class=\"body-link\">GraphQL Admin API</a>, you can query the <code>weight</code> field on the <code>LineItem</code> type in the GraphQL Admin API. This field returns a <code>Weight</code> object with <code>value</code> and <code>unit</code>, making it easy to access line item weights without converting from the REST API's <code>grams</code> field.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "GraphQL Admin APIで`LineItem.weight`フィールドが利用可能に",
+          "summarizedJa": "2026-07バージョンのGraphQL Admin APIから、`LineItem`タイプに`weight`フィールドが追加されます。このフィールドは`value`と`unit`を持つ`Weight`オブジェクトを返すため、REST APIの`grams`フィールドからの変換作業が不要になり、商品の重量情報へのアクセスが容易になります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-04-16T00:12:03.176Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1089,
+            "output": 215
+          },
+          "estimatedCost": 0.0064919999999999995
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "LineItem.weightフィールドが公開Admin APIで利用可能に",
+          "summarizedJa": "ShopifyのAdmin GraphQL APIバージョン2026-07より、LineItemタイプにweightフィールドが追加されました。これにより、商品の重さをvalueとunitを持つWeightオブジェクトとして直接取得できるようになります。従来のREST APIでgramsから変換する手間が省け、開発者はより簡単に正確な重さ情報を扱えるようになります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-04-16T00:12:09.860Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 793,
+            "output": 147
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
       "id": "shopify-changelog-posts-checkout-blocks-order-value-limits-available-on-all-plans",
       "source": "shopify-changelog",
       "title": "Checkout Blocks: Order value limits available on all plans",
@@ -201,6 +357,59 @@
           "tokenUsage": {
             "input": 1197,
             "output": 192
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-primary-action-icon-replaces-actionbar-on-mobile",
+      "source": "developer-changelog",
+      "title": "`ActionBar` removed on mobile: `TitleBar` primary action now renders as an icon button",
+      "link": "https://shopify.dev/changelog/primary-action-icon-replaces-actionbar-on-mobile",
+      "publishedAt": "2026-04-10T16:00:00.000Z",
+      "collectedAt": "2026-04-16T00:11:32.571Z",
+      "category": [
+        "Action Required",
+        "API",
+        "New",
+        "App Bridge"
+      ],
+      "description": " <div class=\"\"><h2>Mobile primary action now renders as an icon in the title bar</h2>\n<p>On mobile, the primary and secondary actions defined on your <a href=\"https://shopify.dev/docs/api/app-bridge-library/reference/title-bar\" target=\"_blank\" class=\"body-link\"><code>TitleBar</code></a> are changing how they render:</p>\n<ul>\n<li>The primary action now displays as an icon-only button in the mobile header, rather than in a bottom bar with icon and text.</li>\n<li>Secondary actions now appear in the overflow menu, creating a more consistent mobile interface.</li>\n<li>If you don't pass an <code>icon</code> property with your primary action, it defaults to a <strong>+</strong> (plus) icon.</li>\n</ul>\n<h2>Who's affected</h2>\n<p>All embedded apps that define a primary action or secondary actions on their <a href=\"https://shopify.dev/docs/api/app-bridge-library/reference/title-bar\" target=\"_blank\" class=\"body-link\"><code>TitleBar</code></a>.</p>\n<h2>When the changes go into effect</h2>\n<p>Changes go live to all affected apps on April 15th, 2026.</p>\n<h2>What you should do</h2>\n<p>If the default <strong>+</strong> icon fits your use case, no changes are needed. Otherwise:</p>\n<ul>\n<li>Pass an explicit <code>icon</code> with the primary action on your <a href=\"https://shopify.dev/docs/api/app-bridge-library/reference/title-bar\" target=\"_blank\" class=\"body-link\"><code>TitleBar</code></a> to ensure the most contextually appropriate icon displays on mobile.</li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "モバイルでの`ActionBar`削除：`TitleBar`のプライマリアクションがアイコンボタンとして表示されるように変更",
+          "summarizedJa": "2026年4月15日より、埋め込みアプリのモバイル表示において、TitleBarのプライマリアクションが下部バーではなくヘッダーにアイコンのみで表示されるようになります。セカンダリアクションはオーバーフローメニューに移動し、iconプロパティを指定しない場合はデフォルトで「+」アイコンが表示されます。影響を受けるアプリ開発者は、適切なアイコンを明示的に指定することが推奨されます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-04-16T00:12:14.520Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1372,
+            "output": 286
+          },
+          "estimatedCost": 0.008406
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "モバイル版でActionBarが廃止され、TitleBarの主要アクションがアイコンボタンとして表示されるように変更",
+          "summarizedJa": "Shopifyアプリのモバイル版において、TitleBarの主要アクションが下部のActionBarからヘッダーのアイコンボタンに変更されます。これにより、セカンダリアクションはオーバーフローメニューに移動し、より一貫したモバイルUIが提供されます。アプリ開発者は、主要アクションに適切なアイコンが表示されるよう、明示的にアイコンを設定する必要があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-04-16T00:12:25.371Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1023,
+            "output": 158
           },
           "estimatedCost": 0
         }
@@ -511,6 +720,56 @@
           "tokenUsage": {
             "input": 931,
             "output": 171
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-add-tags-to-your-discounts",
+      "source": "shopify-changelog",
+      "title": "Add tags to your discounts",
+      "link": "https://changelog.shopify.com/posts/add-tags-to-your-discounts",
+      "publishedAt": "2026-04-01T21:00:00.000Z",
+      "collectedAt": "2026-04-16T00:11:33.572Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <h2>What's new</h2>\n\n<p>You can now add tags to any discount and use them to group, search, and filter across all your Discounts.</p>\n\n<h2>How to use it</h2>\n\n<ul>\n<li>Go to Discounts in your Shopify admin</li>\n<li>Select an existing discount or create a new one</li>\n<li>Add tags in the Tags field</li>\n<li>Use the search bar or filters on the Discounts page to find discounts by tag</li>\n</ul>\n\n<p><a href=\"https://help.shopify.com/en/manual/discounts/managing-discounts\">Learn more</a> about managing discounts.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "ディスカウントにタグを追加可能に",
+          "summarizedJa": "Shopify管理画面のディスカウント機能に、タグを追加できる機能が実装されました。タグを使用することで、複数のディスカウントをグループ化したり、検索やフィルタリングが容易になります。既存のディスカウントまたは新規作成時にタグフィールドから設定でき、ディスカウントページの検索バーやフィルターから活用できます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-04-16T00:12:29.749Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1073,
+            "output": 223
+          },
+          "estimatedCost": 0.0065639999999999995
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "割引にタグを追加",
+          "summarizedJa": "Shopify管理画面の割引機能が強化され、マーチャントは作成した割引にタグを追加できるようになりました。この新機能により、多数の割引を効率的にグループ化、検索、フィルタリングすることが可能になり、割引管理の利便性が大幅に向上します。既存または新規の割引にタグを設定し、管理画面の検索バーやフィルターで活用できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-04-16T00:12:34.886Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 753,
+            "output": 146
           },
           "estimatedCost": 0
         }
