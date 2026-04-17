@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-16T00:11:33.583Z",
+  "lastUpdated": "2026-04-17T00:10:25.780Z",
   "entries": [
     {
       "id": "developer-changelog-changelog-removing-deprecated-private-and-publicread-enums-on-metaobject-definitions",
@@ -261,6 +261,58 @@
       }
     },
     {
+      "id": "developer-changelog-changelog-mtls-client-certificate-renewal-for-payments-apps",
+      "source": "developer-changelog",
+      "title": "mTLS client certificate renewal for Payments Apps",
+      "link": "https://shopify.dev/changelog/mtls-client-certificate-renewal-for-payments-apps",
+      "publishedAt": "2026-04-13T16:00:00.000Z",
+      "collectedAt": "2026-04-17T00:10:24.639Z",
+      "category": [
+        "Platform",
+        "Update",
+        "Payments Apps API"
+      ],
+      "description": " <div class=\"\"><p>Starting June 15, 2026, Shopify will renew its mTLS client certificate used by Payments Apps to verify that the client initiating the request is Shopify.</p>\n<p>Unless you're using custom checks or validation logic, this update won't impact your live payments apps, as the new certificate is signed by the same <a href=\"https://shopify.dev/docs/apps/build/payments/considerations#shopifys-self-signed-certificate-authority-ca\" target=\"_blank\" class=\"body-link\">Certificate Authority</a> as the current one.</p>\n<h2>Who's affected</h2>\n<p><a href=\"https://shopify.dev/docs/apps/build/payments\" target=\"_blank\" class=\"body-link\">Payments Apps</a></p>\n<h2>Reason for the change</h2>\n<p>The current certificate will expire on July 24, 2026. It must be renewed before this date to ensure uninterrupted service.</p>\n<h2>What you need to do</h2>\n<p>Action is required if you use custom certification validation.</p>\n<h3>If you use custom certificate validation</h3>\n<p>Action is required before June 15, 2026. If your app checks the Common Name (CN) or other certificate-specific fields, you must update your validation logic to accept the new certificate.</p>\n<h3>If you use standard mTLS validation</h3>\n<p>No action is required. The new certificate is signed by the same CA.</p>\n<p>For more information, refer to the <a href=\"https://shopify.dev/docs/apps/build/payments/considerations#new-certificate-effective-mid-june-2026\" target=\"_blank\" class=\"body-link\">certificate details</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "決済アプリ向けmTLSクライアント証明書の更新",
+          "summarizedJa": "2026年6月15日より、ShopifyがPayments Appsで使用するmTLSクライアント証明書が更新されます。標準的なmTLS検証を使用している場合は対応不要ですが、カスタム証明書検証を実装している場合は2026年6月15日までに検証ロジックの更新が必要です。現在の証明書は2026年7月24日に有効期限を迎えます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-04-17T00:10:30.412Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1346,
+            "output": 234
+          },
+          "estimatedCost": 0.007548
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "決済アプリ向けmTLSクライアント証明書の更新",
+          "summarizedJa": "Shopifyは2026年6月15日より、決済アプリがShopifyからのリクエストを検証するために使用するmTLSクライアント証明書を更新します。ほとんどの決済アプリは、新しい証明書が既存のものと同じ認証局によって署名されているため、特別な対応は不要です。ただし、Common Nameなどの特定のフィールドをチェックするカスタムの証明書検証ロジックを使用しているアプリは、2026年6月15日までに検証ロジックを更新する必要があります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-04-17T00:10:42.792Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1029,
+            "output": 181
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
       "id": "shopify-changelog-posts-checkout-blocks-order-value-limits-available-on-all-plans",
       "source": "shopify-changelog",
       "title": "Checkout Blocks: Order value limits available on all plans",
@@ -463,6 +515,58 @@
           "tokenUsage": {
             "input": 1001,
             "output": 181
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-hydrogen-april-2026-release",
+      "source": "developer-changelog",
+      "title": "Hydrogen April 2026 release",
+      "link": "https://shopify.dev/changelog/hydrogen-april-2026-release",
+      "publishedAt": "2026-04-09T16:00:00.000Z",
+      "collectedAt": "2026-04-17T00:10:24.639Z",
+      "category": [
+        "API",
+        "New",
+        "Hydrogen"
+      ],
+      "description": " <div class=\"\"><p>The Hydrogen April 2026 release (v2026.4.0) is out. This release updates the Storefront API and Customer Account API to 2026-04 and includes breaking changes to consent handling and the API proxy.</p>\n<ul>\n<li>Updated Storefront API and Customer Account API to 2026-04 (<a href=\"https://github.com/Shopify/hydrogen/pull/3651\" target=\"_blank\" class=\"body-link\">#3651</a>)</li>\n<li><strong>Breaking:</strong> The Storefront API proxy is now always enabled. The <code>proxyStandardRoutes</code> option has been removed from <code>createRequestHandler</code>. If your load context does not include a <code>storefront</code> instance, the request handler will throw an error. (<a href=\"https://github.com/Shopify/hydrogen/pull/3649\" target=\"_blank\" class=\"body-link\">#3649</a>)</li>\n<li><strong>Breaking:</strong> Backend consent mode is now on by default, replacing the legacy <code>_tracking_consent</code> JS cookie with server-set cookies via the Storefront API proxy. (<a href=\"https://github.com/Shopify/hydrogen/pull/3649\" target=\"_blank\" class=\"body-link\">#3649</a>)</li>\n</ul>\n<p>Check out the <a href=\"https://github.com/Shopify/hydrogen/releases/tag/%40shopify%2Fhydrogen%402026.4.0\" target=\"_blank\" class=\"body-link\">full release notes</a> for more details. Review the <a href=\"https://shopify.dev/docs/api/release-notes/2026-04\" target=\"_blank\" class=\"body-link\">Storefront API 2026-04 changelog</a> and <a href=\"https://shopify.dev/docs/api/customer/changelog\" target=\"_blank\" class=\"body-link\">Customer Account API 2026-04 changelog</a> for other changes that may affect your storefront. And please drop your comments, feedback, and suggestions in <a href=\"https://github.com/Shopify/hydrogen/discussions\" target=\"_blank\" class=\"body-link\">GitHub Discussions</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Hydrogen 2026年4月リリース",
+          "summarizedJa": "Hydrogen v2026.4.0がリリースされ、Storefront APIとCustomer Account APIが2026-04版に更新されました。Storefront APIプロキシが常時有効化され、同意管理（consent）がバックエンドモードにデフォルト変更されるなど、破壊的変更が含まれています。既存のHydrogenプロジェクトでは、リクエストハンドラーの設定変更とクッキーベースの同意管理への対応が必要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 5
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-04-17T00:10:48.755Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1449,
+            "output": 239
+          },
+          "estimatedCost": 0.007932
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Hydrogen 2026年4月リリース",
+          "summarizedJa": "Hydrogenの2026年4月リリース（v2026.4.0）が公開されました。このリリースでは、Storefront APIとCustomer Account APIが2026-04バージョンに更新され、同意処理とAPIプロキシに破壊的変更が含まれます。特に、APIプロキシは常に有効となり、同意モードはデフォルトでバックエンド処理に切り替わるため、既存のHydrogenストアフロントを運用する開発者は対応が必要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-04-17T00:10:53.698Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1141,
+            "output": 173
           },
           "estimatedCost": 0
         }
@@ -6586,6 +6690,58 @@
       }
     },
     {
+      "id": "developer-changelog-changelog-hydrogen-january-2026-release",
+      "source": "developer-changelog",
+      "title": "Hydrogen January 2026 release",
+      "link": "https://shopify.dev/changelog/hydrogen-january-2026-release",
+      "publishedAt": "2026-02-09T17:00:00.000Z",
+      "collectedAt": "2026-04-17T00:10:24.640Z",
+      "category": [
+        "API",
+        "New",
+        "Hydrogen"
+      ],
+      "description": " <div class=\"\"><p>The Hydrogen January 2026 release (v2026.1.0) is out. This is a quarterly API version bump to Storefront API 2026-01 and Customer Account API 2026-01.</p>\n<ul>\n<li>Updated Storefront API and Customer Account API to 2026-01 (<a href=\"https://github.com/Shopify/hydrogen/pull/3434\" target=\"_blank\" class=\"body-link\">#3434</a>)</li>\n<li>The <code>cartDiscountCodesUpdate</code> mutation now requires the <code>discountCodes</code> argument. If you have custom cart discount code logic, verify your mutations include this field before upgrading.</li>\n</ul>\n<p>Check out the <a href=\"https://github.com/Shopify/hydrogen/releases/tag/%40shopify%2Fhydrogen%402026.1.0\" target=\"_blank\" class=\"body-link\">full release notes</a> for more details. Review the <a href=\"https://shopify.dev/docs/api/release-notes/2026-01\" target=\"_blank\" class=\"body-link\">Storefront API 2026-01 changelog</a> and <a href=\"https://shopify.dev/docs/api/customer/changelog\" target=\"_blank\" class=\"body-link\">Customer Account API 2026-01 changelog</a> for other changes that may affect your storefront. And please drop your comments, feedback, and suggestions in <a href=\"https://github.com/Shopify/hydrogen/discussions\" target=\"_blank\" class=\"body-link\">GitHub Discussions</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Hydrogen 2026年1月リリース",
+          "summarizedJa": "Hydrogen v2026.1.0がリリースされ、Storefront APIとCustomer Account APIが2026-01バージョンに更新されました。重要な変更として、cartDiscountCodesUpdateミューテーションでdiscountCodes引数が必須となったため、カスタムカート割引コードロジックを使用している場合はアップグレード前に確認が必要です。四半期ごとのAPIバージョンアップとなります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-04-17T00:10:57.865Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1298,
+            "output": 221
+          },
+          "estimatedCost": 0.007209
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Hydrogen 2026年1月リリース",
+          "summarizedJa": "Hydrogenの2026年1月リリース（v2026.1.0）が公開され、Storefront APIおよびCustomer Account APIが2026-01バージョンに更新されました。特に、カスタムカート割引コードロジックを使用している場合、`cartDiscountCodesUpdate`ミューテーションに`discountCodes`引数が必須となるため、アップグレード前にコードの確認と更新が必要です。これにより、既存のHydrogenストアフロントの機能に影響が出る可能性があります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-04-17T00:11:03.813Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1006,
+            "output": 176
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
       "id": "shopify-changelog-posts-auto-lock-staff-balance-or-credit-cards",
       "source": "shopify-changelog",
       "title": "Auto-lock staff Balance or Credit cards",
@@ -7147,6 +7303,58 @@
           "tokenUsage": {
             "input": 1437,
             "output": 165
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-hydrogen-october-2025-release",
+      "source": "developer-changelog",
+      "title": "Hydrogen October 2025 release",
+      "link": "https://shopify.dev/changelog/hydrogen-october-2025-release",
+      "publishedAt": "2026-01-30T17:00:00.000Z",
+      "collectedAt": "2026-04-17T00:10:24.640Z",
+      "category": [
+        "API",
+        "New",
+        "Hydrogen"
+      ],
+      "description": " <div class=\"\"><p>The Hydrogen October 2025 release (v2025.10.0) is out. This release updates the Storefront API and Customer Account API to 2025-10 and adds new cart mutations that simplify multi-gift-card and multi-address checkout flows.</p>\n<ul>\n<li>Updated Storefront API and Customer Account API to 2025-10 (<a href=\"https://github.com/Shopify/hydrogen/pull/3352\" target=\"_blank\" class=\"body-link\">#3352</a>)</li>\n<li>Added <code>cart.addGiftCardCodes</code> to append gift card codes without re-submitting existing ones (<a href=\"https://github.com/Shopify/hydrogen/pull/3401\" target=\"_blank\" class=\"body-link\">#3401</a>)</li>\n<li>Added <code>cart.replaceDeliveryAddresses</code> to replace all delivery addresses in a single call (<a href=\"https://github.com/Shopify/hydrogen/pull/3406\" target=\"_blank\" class=\"body-link\">#3406</a>)</li>\n<li><code>cart.updateDeliveryAddresses([])</code> now clears all delivery addresses on the cart. Previously this was a no-op. (<a href=\"https://github.com/Shopify/hydrogen/pull/3393\" target=\"_blank\" class=\"body-link\">#3393</a>)</li>\n<li>Added <code>visitorConsent</code> support on the <code>@inContext</code> directive for Storefront API parity (<a href=\"https://github.com/Shopify/hydrogen/pull/3408\" target=\"_blank\" class=\"body-link\">#3408</a>)</li>\n</ul>\n<p>Check out the <a href=\"https://github.com/Shopify/hydrogen/releases/tag/%40shopify%2Fhydrogen%402025.10.0\" target=\"_blank\" class=\"body-link\">full release notes</a> for more details. And please drop your comments, feedback, and suggestions in <a href=\"https://github.com/Shopify/hydrogen/discussions\" target=\"_blank\" class=\"body-link\">GitHub Discussions</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Hydrogen 2025年10月版リリース",
+          "summarizedJa": "Hydrogen v2025.10.0がリリースされ、Storefront APIとCustomer Account APIが2025-10バージョンに更新されました。複数のギフトカードや複数配送先のチェックアウトフローを簡素化する新しいカートミューテーション（cart.addGiftCardCodes、cart.replaceDeliveryAddresses等）が追加され、訪問者同意のサポートも強化されています。Hydrogenを使用した開発者は、これらの新機能を活用してより柔軟なチェックアウト体験を構築できます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-04-17T00:11:08.549Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1444,
+            "output": 260
+          },
+          "estimatedCost": 0.008232
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Hydrogen 2025年10月リリース",
+          "summarizedJa": "Hydrogenの2025年10月版がリリースされ、Storefront APIとCustomer Account APIが2025-10に更新されました。このリリースでは、複数のギフトカードや配送先住所を扱うチェックアウトフローを簡素化する新しいカートミューテーションが追加され、開発者はより柔軟なカスタマイズが可能になります。特に、既存のギフトカードを再送信せずに新しいギフトカードを追加したり、配送先住所を一括で更新・クリアしたりする機能が強化されています。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-04-17T00:11:15.507Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1124,
+            "output": 182
           },
           "estimatedCost": 0
         }
