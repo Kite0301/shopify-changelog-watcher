@@ -1,6 +1,106 @@
 {
-  "lastUpdated": "2026-04-17T00:10:25.780Z",
+  "lastUpdated": "2026-04-18T00:08:30.412Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-collect-newfoundland-vapour-products-tax-automatically",
+      "source": "shopify-changelog",
+      "title": "Collect Newfoundland Vapour Products Tax automatically",
+      "link": "https://changelog.shopify.com/posts/collect-newfoundland-vapour-products-tax-automatically",
+      "publishedAt": "2026-04-17T16:00:00.000Z",
+      "collectedAt": "2026-04-18T00:08:30.405Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>If you use Basic Tax in Canada and sell vape products to customers in Newfoundland and Labrador, Shopify now automatically calculates the province's 20% Vapour Products Tax (VPT) at checkout.</p>\n\n<p>The VPT applies to electronic liquid vaporizers and cannabis vape pods, and is correctly compounded with HST as required by provincial tax rules — meaning HST is calculated on the item price plus the VPT amount.</p>\n\n<p>No action is required. Eligible tax calculations will update automatically.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "ニューファンドランド・ラブラドール州の電子タバコ製品税を自動徴収",
+          "summarizedJa": "カナダでBasic Taxを使用し、ニューファンドランド・ラブラドール州へ電子タバコ製品を販売するマーチャント向けに、Shopifyが州の電子タバコ製品税（VPT）20%をチェックアウト時に自動計算するようになりました。VPTはHSTと複合課税され、マーチャント側の対応は不要で自動的に適用されます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 5,
+          "analyzedAt": "2026-04-18T00:08:36.056Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1036,
+            "output": 245
+          },
+          "estimatedCost": 0.006783
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "ニューファンドランド州のVapour Products Tax（VPT）を自動徴収",
+          "summarizedJa": "カナダのベーシック税設定を利用し、ニューファンドランド・ラブラドール州の顧客にVAPE製品を販売するマーチャント向けに、Shopifyが20%のVapour Products Tax (VPT) を自動で計算するようになりました。この税金は電子液体VAPEや大麻VAPEポッドに適用され、HSTと複合的に計算されます。マーチャント側での対応は不要で、自動的に更新されます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 5,
+          "analyzedAt": "2026-04-18T00:08:43.721Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 736,
+            "output": 180
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-italy-s-sardinian-province-definitions-updated",
+      "source": "shopify-changelog",
+      "title": "Updates to Italy's Sardinian province definitions",
+      "link": "https://changelog.shopify.com/posts/italy-s-sardinian-province-definitions-updated",
+      "publishedAt": "2026-04-17T16:00:00.000Z",
+      "collectedAt": "2026-04-18T00:08:30.405Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>We've updated Italy's province definitions to reflect the Sardinian administrative restoration that took effect in June 2025:<br>\n* Gallura Nord-Est Sardegna (OT) is now a selectable province<br>\n* Carbonia-Iglesias (CI) has been renamed to Sulcis Iglesiente to match the restored province name.</p>\n\n<p>Merchants shipping to Sardinia may notice updated province names in checkout. Partners using the address validation or autocomplete APIs will get more accurate province assignments for Sardinian addresses.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "イタリア・サルデーニャ州の県定義の更新",
+          "summarizedJa": "2025年6月に施行されたサルデーニャ州の行政区画変更に対応し、イタリアの県定義が更新されました。Gallura Nord-Est Sardegna（OT）が選択可能な県として追加され、Carbonia-Iglesias（CI）がSulcis Iglesienteに名称変更されました。サルデーニャ地域への配送を行うマーチャントはチェックアウト時の県名表示が更新され、住所検証・自動補完APIを利用するパートナーはより正確な県の割り当てが可能になります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 1
+          },
+          "totalScore": 4,
+          "analyzedAt": "2026-04-18T00:08:49.676Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1032,
+            "output": 276
+          },
+          "estimatedCost": 0.007235999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "イタリアのサルデーニャ州の県定義の更新",
+          "summarizedJa": "Shopifyは、2025年6月に施行されたサルデーニャ州の行政区画再編を反映し、イタリアの県定義を更新しました。これにより、「Gallura Nord-Est Sardegna (OT)」が選択可能な県として追加され、「Carbonia-Iglesias (CI)」は「Sulcis Iglesiente」に名称変更されます。サルデーニャ州へ配送する日本のマーチャントはチェックアウト画面で県名の変更に気づく可能性があり、住所検証APIを利用するパートナーはより正確な県名を取得できるようになります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 1
+          },
+          "totalScore": 4,
+          "analyzedAt": "2026-04-18T00:08:54.743Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 747,
+            "output": 191
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-removing-deprecated-private-and-publicread-enums-on-metaobject-definitions",
       "source": "developer-changelog",
