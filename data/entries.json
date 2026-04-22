@@ -1,6 +1,56 @@
 {
-  "lastUpdated": "2026-04-21T00:10:35.355Z",
+  "lastUpdated": "2026-04-22T00:07:34.128Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-updates-to-local-pickup-user-experience-in-checkout",
+      "source": "shopify-changelog",
+      "title": "Updates to local pickup user experience in checkout",
+      "link": "https://changelog.shopify.com/posts/updates-to-local-pickup-user-experience-in-checkout",
+      "publishedAt": "2026-04-21T16:00:00.000Z",
+      "collectedAt": "2026-04-22T00:07:34.117Z",
+      "category": [
+        "Checkout"
+      ],
+      "description": "\n        <p>Previously, checkout listed shipping and local pickup options vertically, creating a long scrollable list that made it hard for customers to quickly scan—especially for complex checkouts with multiple pickup locations. Checkout now displays the first available local pickup location with an option to view and select additional locations. </p>\n\n<p>No action is required to display these updates.  </p>\n\n<ul>\n<li>Shipping and local pickup options now appear inline for easier selection</li>\n<li>Local pickup only displays when locations are available in the buyer's country</li>\n<li>Selecting local pickup shows the nearest location with item availability; a modal displays the full list</li>\n</ul>\n\n<p>You may want to review your checkout extension configuration to ensure any customizations still display correctly with these changes.</p>\n\n<p><img src=\"https://cdn.shopify.com/static/checkout/Checkout%20pickup%20changelog%20.png\" alt=\"\"></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "チェックアウトにおける店舗受け取りのユーザー体験の改善",
+          "summarizedJa": "チェックアウト画面での配送オプションと店舗受け取りオプションの表示方法が改善されました。従来の縦長リスト表示から、配送と店舗受け取りが横並びで表示され、店舗受け取りは最寄りの利用可能な店舗が表示され、その他の店舗はモーダルで確認できるようになりました。マーチャント側での対応は不要ですが、チェックアウト拡張機能をカスタマイズしている場合は、表示の確認が推奨されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-04-22T00:07:40.739Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1124,
+            "output": 278
+          },
+          "estimatedCost": 0.007542
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "チェックアウトにおける店舗受け取りのユーザー体験の改善",
+          "summarizedJa": "Shopifyのチェックアウト画面で、店舗受け取りオプションの表示方法が改善されました。以前の縦長のリスト表示から、最初の利用可能な店舗受け取り場所が優先的に表示され、他の場所はモーダルで選択できるようになり、顧客の操作性が向上します。この変更は自動的に適用されますが、チェックアウト拡張機能を利用しているマーチャントは、表示に問題がないか確認することが推奨されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-04-22T00:07:48.613Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 830,
+            "output": 162
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-new-app-submission-experience-in-the-partner-dashboard",
       "source": "developer-changelog",
