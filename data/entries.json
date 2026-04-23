@@ -1,6 +1,109 @@
 {
-  "lastUpdated": "2026-04-22T00:07:34.128Z",
+  "lastUpdated": "2026-04-23T00:12:23.926Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-storefront-catalog-mcp-now-implements-ucp",
+      "source": "developer-changelog",
+      "title": "Storefront Catalog MCP now implements UCP",
+      "link": "https://shopify.dev/changelog/storefront-catalog-mcp-now-implements-ucp",
+      "publishedAt": "2026-04-22T19:30:00.000Z",
+      "collectedAt": "2026-04-23T00:12:23.191Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Breaking API Change"
+      ],
+      "description": " <div class=\"\"><h3>What’s changing</h3>\n<p>The following UCP catalog tools in Storefront Catalog are now available:</p>\n<p>  - `search_catalog`:  Search a store's product catalog with filters, pagination, and buyer context<br>  - `lookup_catalog`: Batch lookup products or variants by identifier with inputs correlation<br>  - `get_product`: Retrieve full product details with interactive variant selection, availability signals, and more</p>\n<p>Tool calls can be placed against the <code>https://{storedomain}/api/ucp/mcp</code> endpoint. </p>\n<h3>What you should do</h3>\n<p>The previous search and lookup tools are deprecated in favor of the above tool names and endpoint, as well as related updates to their request and response shapes to match UCP. The old versions will be maintained until June 15th, 2026, but all documentation will refer to the latest version. </p>\n<p>If you’re building with Storefront MCP tools:</p>\n<ul>\n<li>Update tool names to one of the supported tools above.  </li>\n<li>Update endpoints to use <code>https://{storedomain}/api/ucp/mcp</code>.  </li>\n<li>Consult the update request and response schemas for all tool calls and update your app to match.</li>\n</ul>\n<p>See the documentation for <a href=\"https://shopify.dev/docs/agents/catalog/storefront-catalog\" target=\"_blank\" class=\"body-link\">Storefront Catalog MCP</a> for more details.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Storefront Catalog MCPがUCPを実装",
+          "summarizedJa": "Storefront Catalog MCPにおいて、商品検索、バッチ取得、詳細取得のツールがUCP（Unified Catalog Protocol）に準拠した新バージョンとして提供されます。旧バージョンのツールは2026年6月15日まで維持されますが、新しいツール名、エンドポイント、リクエスト/レスポンス形式への移行が必要です。Storefront MCPツールを使用している開発者は、ドキュメントを参照して早急に対応してください。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-04-23T00:12:30.326Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1301,
+            "output": 252
+          },
+          "estimatedCost": 0.007683000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "ストアフロントカタログMCPがUCPを実装",
+          "summarizedJa": "「Storefront Catalog MCP」において、新しいUCPカタログツール（`search_catalog`、`lookup_catalog`、`get_product`）が導入され、新しいエンドポイント`https://{storedomain}/api/ucp/mcp`を使用するよう変更されました。以前の検索・ルックアップツールは2026年6月15日までサポートされますが、それ以降は廃止されるため、既存のアプリは新しいツール名、エンドポイント、リクエスト・レスポンス形式に合わせて更新が必須です。これは開発者にとって対応が求められる破壊的変更です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-04-23T00:12:37.469Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 979,
+            "output": 201
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-update-to-app-uninstall-reasons",
+      "source": "developer-changelog",
+      "title": "Update to app uninstall reasons",
+      "link": "https://shopify.dev/changelog/update-to-app-uninstall-reasons",
+      "publishedAt": "2026-04-22T18:00:00.000Z",
+      "collectedAt": "2026-04-23T00:12:23.192Z",
+      "category": [
+        "Shopify App Store",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>We've updated the app uninstall reasons that appear in your Partner Dashboard. These changes better reflect why merchants uninstall apps, giving you clearer, more actionable insights to improve your app experience.</p>\n<p>The uninstall reason options merchants see have been revised to the following:</p>\n<ul>\n<li>Testing multiple apps </li>\n<li>Store is closing or pausing </li>\n<li>Not using app now </li>\n<li>Not satisfied with app features or support </li>\n<li>Expensive or unexpected cost </li>\n<li>Not working or compatible with store</li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "アプリアンインストール理由の更新",
+          "summarizedJa": "パートナーダッシュボードに表示されるアプリのアンインストール理由が更新されました。マーチャントがアプリを削除する理由がより明確になり、「複数アプリのテスト中」「ストアの閉鎖・一時停止」「現在アプリを使用していない」「機能やサポートに不満」「価格が高い・予期しないコスト」「ストアとの互換性がない」の6つの選択肢に改訂されました。アプリ開発者はこれらの洞察を活用してアプリ体験を改善できます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-04-23T00:12:42.577Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1059,
+            "output": 276
+          },
+          "estimatedCost": 0.007317
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "アプリのアンインストール理由の更新",
+          "summarizedJa": "Shopifyは、パートナーダッシュボードに表示されるアプリのアンインストール理由の選択肢を更新しました。これにより、マーチャントがアプリをアンインストールする真の理由がより明確になり、パートナーはアプリの改善に役立つ具体的な洞察を得られるようになります。新しい選択肢は、アプリのテスト、ストアの閉鎖、機能不満、費用、互換性など、より詳細なフィードバックを可能にします。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-04-23T00:12:48.426Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 743,
+            "output": 164
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-updates-to-local-pickup-user-experience-in-checkout",
       "source": "shopify-changelog",
