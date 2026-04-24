@@ -1,6 +1,56 @@
 {
-  "lastUpdated": "2026-04-23T00:12:23.926Z",
+  "lastUpdated": "2026-04-24T00:12:04.217Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-compare-multiple-metrics-on-one-chart",
+      "source": "shopify-changelog",
+      "title": "Compare multiple metrics on one chart",
+      "link": "https://changelog.shopify.com/posts/compare-multiple-metrics-on-one-chart",
+      "publishedAt": "2026-04-23T18:30:00.000Z",
+      "collectedAt": "2026-04-24T00:12:04.209Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>You can now plot multiple metrics on the same chart in <strong>Analytics</strong>. Add up to <strong>4 metrics</strong> to a line chart to see how they trend together, or use the new <strong>\"Bar and line\"</strong> visualization to compare volume and rates side by side, all without toggling between charts.</p>\n\n<p><strong>What's new:</strong><br>\n* <strong>Multi-metric line charts</strong>: Add up to 4 metrics to a single line chart using checkboxes in the config panel. Metrics with different value types (like dollar totals and percentages) automatically get their own Y-axis scale.<br>\n* <strong>Bar and line charts</strong>: A new visualization type that plots one metric as bars and another as a line, useful for pairing metrics like Total Sales and Conversion Rate on a single chart.</p>\n\n<p><strong>Where to find it:</strong><br>\nAvailable in explorations, saved reports, and dashboard cards.</p>\n\n<p><a href=\"https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/custom-reports/visualizations#multi-metric-visualizations\">Learn more</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "1つのチャートで複数の指標を比較可能に",
+          "summarizedJa": "Shopify管理画面の分析機能で、1つのチャートに最大4つの指標を表示できるようになりました。新しい「棒グラフと折れ線グラフ」の組み合わせ表示も追加され、売上高とコンバージョン率など、異なる種類の指標を同時に比較できます。探索レポート、保存済みレポート、ダッシュボードカードで利用可能です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-04-24T00:12:09.686Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1186,
+            "output": 234
+          },
+          "estimatedCost": 0.007068
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "1つのグラフで複数の指標を比較",
+          "summarizedJa": "Shopifyアナリティクスにおいて、複数の指標を1つのグラフで比較できるようになりました。最大4つの指標を折れ線グラフで同時に表示したり、新しい「Bar and line」視覚化タイプを使って売上とコンバージョン率のような異なるタイプの指標を並べて分析することが可能です。これにより、マーチャントは複数のレポートを切り替える手間なく、データの傾向や相関関係をより効率的に把握し、ビジネスインサイトを得ることができます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-04-24T00:12:15.539Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 883,
+            "output": 166
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-storefront-catalog-mcp-now-implements-ucp",
       "source": "developer-changelog",
@@ -488,6 +538,58 @@
           "tokenUsage": {
             "input": 728,
             "output": 157
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-automatic-css-subsetting-for-stylesheet-tags",
+      "source": "developer-changelog",
+      "title": "Automatic CSS subsetting for `{% stylesheet %}` tags",
+      "link": "https://shopify.dev/changelog/automatic-css-subsetting-for-stylesheet-tags",
+      "publishedAt": "2026-04-15T16:00:00.000Z",
+      "collectedAt": "2026-04-24T00:12:03.010Z",
+      "category": [
+        "Action Required",
+        "Themes",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>Shopify is introducing CSS content subsetting for <code>{% stylesheet %}</code> tags to improve storefront performance.</p>\n<p>Starting April 20, 2026, Shopify only delivers the CSS from <code>{% stylesheet %}</code> tags that are relevant to the sections, blocks, and snippets rendered on each page, instead of serving all <code>{% stylesheet %}</code> CSS on every page load.</p>\n<h2>What this means for your theme</h2>\n<p>If your theme's CSS classes are self-contained – each file's <code>{% stylesheet %}</code> only styles HTML elements within that same file or its direct children (rendered via <code>{% render %}</code>) – no changes are needed. Your theme is already compatible.</p>\n<p>However, if a file's <code>{% stylesheet %}</code> defines CSS classes that are used by HTML elements in other, unrelated files, those styles may not be included on pages where the defining file isn't rendered. This is the pattern to watch for and fix.</p>\n<p>Please refer to the <a href=\"https://shopify.dev/docs/storefronts/themes/best-practices/performance/stylesheet-subsetting\" target=\"_blank\" class=\"body-link\">stylesheet subsetting docs</a> for additional detail and guidance.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "`{% stylesheet %}` タグの自動CSS最適化（サブセット化）",
+          "summarizedJa": "2026年4月20日より、Shopifyは`{% stylesheet %}`タグのCSSを自動的に最適化し、各ページで実際にレンダリングされるセクション・ブロック・スニペットに関連するCSSのみを配信するようになります。テーマのCSSクラスが他の無関係なファイルで使用されている場合、スタイルが適用されない可能性があるため、テーマの見直しと修正が必要です。ストアフロントのパフォーマンス向上を目的とした変更です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-04-24T00:12:21.976Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1223,
+            "output": 265
+          },
+          "estimatedCost": 0.007644
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "「{% stylesheet %}」タグのCSS自動最適化（サブセット化）",
+          "summarizedJa": "Shopifyはストアの表示速度を向上させるため、「{% stylesheet %}」タグで読み込まれるCSSを自動的に最適化（サブセット化）する機能を導入します。2026年4月20日以降、各ページで実際に使用されるCSSのみが配信されるようになります。テーマのCSSが自己完結型であれば対応は不要ですが、他のファイルで利用されるCSSを定義している場合は、スタイルが適用されなくなる可能性があるため、テーマの確認と修正が必要になる場合があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-04-24T00:12:29.070Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 916,
+            "output": 185
           },
           "estimatedCost": 0
         }
