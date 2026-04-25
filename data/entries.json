@@ -1,6 +1,109 @@
 {
-  "lastUpdated": "2026-04-24T00:12:04.217Z",
+  "lastUpdated": "2026-04-25T00:09:17.526Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-use-matches-in-shopifyql-to-filter-by-what-customers-did",
+      "source": "shopify-changelog",
+      "title": "Use MATCHES in ShopifyQL to filter by what customers did",
+      "link": "https://changelog.shopify.com/posts/use-matches-in-shopifyql-to-filter-by-what-customers-did",
+      "publishedAt": "2026-04-24T19:00:00.000Z",
+      "collectedAt": "2026-04-25T00:09:17.515Z",
+      "category": [
+        "Analytics"
+      ],
+      "description": "\n        <p>We've added <strong>MATCHES</strong> to the ShopifyQL editor in Analytics so you can <strong>filter your reports by what customers did, not just who they are</strong>. You can now use MATCHES in the WHERE clause to filter by customer behavior. </p>\n\n<p>For example, you may want to see customers who purchased at least 2 products in the last 30 days. </p>\n\n<p><code>sql<br>\nFROM customers<br>\nSHOW customer_id, email<br>\nWHERE products_purchased MATCHES (quantity &gt;= 2, date &gt;= -30d)<br>\nGROUP BY customer_id<br>\n</code> </p>\n\n<p>The same <strong>MATCHES</strong> logic you use in Customer Segmentation works in Analytics, so your segments and reports stay consistent. </p>\n\n<p>For syntax, examples, and limitations, see the <a href=\"https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/shopifyql-editor/shopifyql-syntax#where\">Shopify Help Center</a>. </p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "ShopifyQLのMATCHES機能で顧客の行動履歴によるフィルタリングが可能に",
+          "summarizedJa": "Analytics内のShopifyQLエディターに新たにMATCHES機能が追加され、顧客の属性だけでなく行動履歴に基づいたレポートのフィルタリングが可能になりました。例えば「過去30日間に2つ以上の商品を購入した顧客」など、顧客の購買行動でセグメント化したレポートを作成できます。顧客セグメンテーションと同じMATCHESロジックが使用できるため、セグメントとレポートの一貫性が保たれます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-04-25T00:09:25.767Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1193,
+            "output": 282
+          },
+          "estimatedCost": 0.007809
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "ShopifyQLでMATCHESを活用し、顧客の行動でレポートを絞り込み",
+          "summarizedJa": "ShopifyQLエディタのAnalytics機能に「MATCHES」が追加されました。これにより、顧客の属性だけでなく、「顧客が何をしたか」という行動に基づいてレポートを詳細にフィルタリングできるようになります。例えば、「過去30日間に2つ以上の商品を購入した顧客」といった具体的な行動で顧客をセグメントし、より精度の高い顧客分析やマーケティング施策に活用できます。この機能は顧客セグメンテーションのロジックと一貫性があり、データに基づいた意思決定を強化します。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-04-25T00:09:32.590Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 893,
+            "output": 193
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-customer-tax-settings-now-available-in-admin-api",
+      "source": "developer-changelog",
+      "title": "Customer tax settings now available in Admin API",
+      "link": "https://shopify.dev/changelog/customer-tax-settings-now-available-in-admin-api",
+      "publishedAt": "2026-04-24T16:00:00.000Z",
+      "collectedAt": "2026-04-25T00:09:16.497Z",
+      "category": [
+        "API",
+        "Update",
+        "Admin GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>Starting in API version 2026-07, the <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/Customer\" target=\"_blank\" class=\"body-link\"><code>taxSettings</code> field on the <code>Customer</code> object</a> will be publicly accessible in the Admin GraphQL API. </p>\n<p>Apps with the <code>read_customers</code> or <code>read_taxes</code> access scopes can now query a customer's tax ID, such as a VAT number, which is collected and validated during checkout. This update aligns with the <code>CompanyLocation.taxSettings.taxRegistrationId</code>, which has been available since API version 2025-01 for B2B customers.</p>\n<p>Example query:</p>\n<pre><code class=\"language-json\">{\n  customer(id: &quot;gid://shopify/Customer/customer_id&quot;) {\n    taxSettings {\n      taxId\n    }\n  }\n}\n</code></pre>\n<p>This is a read-only change. The <code>taxId</code> field returns the tax ID as a string or null if the customer hasn't provided one. The <code>taxIdValidation</code> sub-field, which indicates the validation status, is not included in the public API. Apps that need access to this field must have approved protected customer data access. </p>\n<p>For more information, refer to the <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/Customer\" target=\"_blank\" class=\"body-link\"><code>Customer</code> object</a> in the Admin GraphQL API reference.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Admin APIで顧客の税設定が利用可能に",
+          "summarizedJa": "APIバージョン2026-07から、Admin GraphQL APIで顧客オブジェクトの税設定（taxSettings）フィールドが公開されます。read_customersまたはread_taxesスコープを持つアプリは、チェックアウト時に収集・検証された顧客の税ID（VAT番号など）を照会できるようになります。この変更は読み取り専用で、税ID検証ステータスは保護された顧客データアクセスの承認が必要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-04-25T00:09:36.932Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1332,
+            "output": 242
+          },
+          "estimatedCost": 0.007626000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Admin APIで顧客の税設定が利用可能に",
+          "summarizedJa": "APIバージョン2026-07以降、Admin GraphQL APIの`Customer`オブジェクトに`taxSettings`フィールドが追加され、アプリから顧客の税ID（VAT番号など）を読み取れるようになります。これにより、チェックアウト時に収集・検証された顧客の税務情報を、`read_customers`または`read_taxes`スコープを持つアプリが取得可能となり、B2B顧客向けの企業税登録IDとの連携も強化されます。この変更は読み取り専用ですが、税務関連のカスタムアプリ開発やシステム連携において重要な機能追加となります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-04-25T00:09:46.673Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1024,
+            "output": 196
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-compare-multiple-metrics-on-one-chart",
       "source": "shopify-changelog",
@@ -7533,6 +7636,58 @@
           "tokenUsage": {
             "input": 809,
             "output": 166
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-totalunsettledset-calculation-fixed-for-pending-captures",
+      "source": "developer-changelog",
+      "title": "`totalUnsettledSet` calculation fixed for pending captures",
+      "link": "https://shopify.dev/changelog/totalunsettledset-calculation-fixed-for-pending-captures",
+      "publishedAt": "2026-02-04T17:00:00.000Z",
+      "collectedAt": "2026-04-25T00:09:16.498Z",
+      "category": [
+        "API",
+        "Breaking API Change",
+        "Admin GraphQL API"
+      ],
+      "description": " <div class=\"\"><p>The <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/OrderTransaction#field-OrderTransaction.fields.totalUnsettledSet\" target=\"_blank\" class=\"body-link\"><code>totalUnsettledSet</code> field</a> on the <code>OrderTransaction</code> object now correctly calculates the unsettled amount when a capture is in pending status. The affected field is <code>OrderTransaction.totalUnsettledSet</code>.</p>\n<h2>What's changed</h2>\n<p>Previously, when a capture was pending, <code>totalUnsettledSet</code> was double-counting by incorrectly returning the authorization amount plus the pending capture amount. Now it correctly returns the actual unsettled amount.</p>\n<p>For example, for a $100 authorization with a $50 pending capture:</p>\n<ul>\n<li>Before: Returned $150 (incorrect)</li>\n<li>After: Returns $100 (correct)</li>\n</ul>\n<h2>What you need to do</h2>\n<p>Nothing. Your existing queries will continue to work and no changes to your code are required. The returned value will now be correct.</p>\n<h2>What this affects</h2>\n<p>This bug only affects multi-capturable orders, which are orders where partial or multiple captures are supported.</p>\n<p>According to our API breaking change policy, bug fixes that correct values to match documented behavior are applied immediately across all API versions.</p>\n<h2>Why we changed it</h2>\n<p>This update fixes a bug where the calculation double-counted during pending capture states. The <code>totalUnsettledSet</code> field represents the available amount with currency to capture on the gateway, but the previous value didn't reflect this.</p>\n<p>This bug was introduced when multi-capturable support was added, and became more visible after Shopify Payments migrated to a flow where captures transition through <code>PENDING</code> status before <code>SUCCESS</code>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "保留中のキャプチャに対する`totalUnsettledSet`の計算バグを修正",
+          "summarizedJa": "Admin GraphQL APIの`OrderTransaction.totalUnsettledSet`フィールドにおいて、キャプチャが保留中ステータスの際に未決済金額が二重計上されていたバグが修正されました。例えば100ドルのオーソリゼーションに対し50ドルの保留中キャプチャがある場合、以前は誤って150ドルを返していましたが、現在は正しく100ドルを返すようになりました。この修正は複数キャプチャ対応の注文にのみ影響し、コード変更は不要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-04-25T00:09:52.839Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1415,
+            "output": 281
+          },
+          "estimatedCost": 0.00846
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "保留中の売上計上におけるtotalUnsettledSetの計算修正",
+          "summarizedJa": "この変更は、`OrderTransaction` オブジェクトの `totalUnsettledSet` フィールドにおける、保留中の売上計上（キャプチャ）金額の計算バグを修正するものです。以前は、部分的な売上計上が保留中の場合に金額を二重に計上していましたが、今後は正しい未決済金額を返します。マーチャントやパートナー側でのコード変更は不要で、APIからの返却値が正しくなるため、特に対応は必要ありません。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-04-25T00:10:01.220Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1063,
+            "output": 185
           },
           "estimatedCost": 0
         }
