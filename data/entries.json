@@ -1,6 +1,491 @@
 {
-  "lastUpdated": "2026-04-25T00:09:17.526Z",
+  "lastUpdated": "2026-04-28T00:13:35.142Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-set-and-track-targets-in-shopify-analytics",
+      "source": "shopify-changelog",
+      "title": "Set and track targets in Shopify Analytics",
+      "link": "https://changelog.shopify.com/posts/set-and-track-targets-in-shopify-analytics",
+      "publishedAt": "2026-04-27T19:00:00.000Z",
+      "collectedAt": "2026-04-28T00:13:35.132Z",
+      "category": [
+        "Analytics"
+      ],
+      "description": "\n        <p>You can now set targets for key metrics directly in Shopify Analytics.</p>\n\n<p>Pick a <strong>metric</strong> from gross sales, orders, conversion rate, or dozens more, add a <strong>filter</strong> like a specific sales channel or product, set a <strong>time period</strong>, the <strong>amount</strong> you plan to reach and you've got a target! A visual gauge tracks your progress in real time, showing percentage complete, current vs target value, and days remaining.</p>\n\n<p>For example, say you want to hit $20,000 in Net sales from your Online Store this quarter. Create a target, filter it to the Online Store channel, set Q2 as your time period, and the gauge instantly shows where you stand. Add it to your dashboard with <strong>one click</strong> and you'll see it every time you open Analytics.</p>\n\n<p>When you're managing multiple goals, the new <a href=\"https://admin.shopify.com/analytics/targets\">Target index</a> gives you a single view of everything you're tracking. <strong>Targets are designed to grow with your business.</strong> Set them for the week ahead, the month, the quarter, or a custom range up to two years out. Edit them anytime, even after the period ends.</p>\n\n<p>Create your <a href=\"https://admin.shopify.com/analytics/targets/new\">first target</a> today!</p>\n\n<p><a href=\"https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/targets\">Learn more about targets</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify分析でターゲット設定と進捗追跡が可能に",
+          "summarizedJa": "Shopify分析で主要な指標に対してターゲット(目標値)を直接設定できるようになりました。売上高、注文数、コンバージョン率など数十の指標から選択し、販売チャネルや商品でフィルタリングして、期間と目標金額を設定すると、リアルタイムで進捗状況を視覚的に追跡できます。ダッシュボードへの追加もワンクリックで可能で、複数の目標を一元管理できるターゲット一覧ページも新設されました。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-04-28T00:13:41.622Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1283,
+            "output": 273
+          },
+          "estimatedCost": 0.007944
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopifyアナリティクスで目標を設定し、進捗を追跡",
+          "summarizedJa": "Shopifyアナリティクスに、売上やコンバージョン率などの主要な指標に対する目標設定機能が追加されました。マーチャントは、特定の指標、販売チャネル、期間、目標金額を設定でき、リアルタイムで進捗を視覚的に追跡できます。設定した目標はダッシュボードに追加可能で、複数の目標を一元管理できるインデックスページも提供され、ビジネスの成長を強力にサポートします。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-04-28T00:13:51.106Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 981,
+            "output": 169
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-returns-and-exchanges-in-cart-for-pos",
+      "source": "shopify-changelog",
+      "title": "Returns and exchanges in cart for POS",
+      "link": "https://changelog.shopify.com/posts/returns-and-exchanges-in-cart-for-pos",
+      "publishedAt": "2026-04-27T18:05:00.000Z",
+      "collectedAt": "2026-04-28T00:13:35.132Z",
+      "category": [
+        "Pos"
+      ],
+      "description": "\n        <p>Returns, refunds, and exchanges now happen directly in the cart in Shopify POS v11.4. Instead of moving through separate workflows, staff can now complete these transactions in one place. This updated experience makes it faster and simpler to process returns and exchanges at the counter, while supporting a wider range of return and exchange scenarios.</p>\n\n<p>This update extends existing operational controls to the new in-cart workflow, including support for return reasons, Smart Grid and full cart functionality, refund handling, and staff permissions for return and exchange actions.</p>\n\n<p>We’ve also introduced new Return permissions in POS, including Manage item restock, Remove unfulfilled items, and Complete in-progress returns, which are all allowed by default at launch. The Require return reasons setting is also available and is turned off by default at launch. Review these permissions and settings to make sure they’re configured the way you want for your staff.</p>\n\n<p>If your Return &amp; exchange orders manager approval setting was already enabled, it now applies to Manage item restock and Complete in-progress returns. Manager approval for Remove unfulfilled items is enabled by default.</p>\n\n<p><a href=\"https://www.youtube.com/watch?v=kN4OAaUpprg\">Watch the walkthrough</a> and learn more in the Help Center documentation: <a href=\"https://help.shopify.com/en/manual/sell-in-person/shopify-pos/order-management/complete-refund-orders\">Processing returns and refunds using Shopify POS</a> and <a href=\"https://help.shopify.com/en/manual/sell-in-person/shopify-pos/order-management/exchange\">Exchanging an order on Shopify POS</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "POSのカート内で返品・交換処理が可能に",
+          "summarizedJa": "Shopify POS v11.4で、返品・返金・交換処理をカート内で直接完了できるようになりました。従来の別ワークフローではなく、一箇所で処理が完結するため、店頭での対応がより迅速かつシンプルになります。新たに「商品の再入庫管理」「未発送商品の削除」「進行中の返品完了」などの権限設定が追加され、デフォルトで許可されていますが、スタッフ向けに適切に設定の確認が推奨されています。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-04-28T00:13:57.366Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1308,
+            "output": 267
+          },
+          "estimatedCost": 0.007928999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "POSのカート内での返品・交換処理",
+          "summarizedJa": "Shopify POS v11.4では、返品・返金・交換処理がカート内で直接完結するようになり、スタッフはより迅速かつシンプルにこれらの取引を処理できるようになります。これにより、多様な返品・交換シナリオに対応し、既存の運用管理機能（返品理由、スタッフ権限など）も統合されます。新しい返品関連の権限も追加され、店舗での顧客対応が大幅に効率化されるでしょう。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-04-28T00:14:05.241Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1000,
+            "output": 166
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-mid-session-cash-counts",
+      "source": "shopify-changelog",
+      "title": "Mid-session cash counts",
+      "link": "https://changelog.shopify.com/posts/mid-session-cash-counts",
+      "publishedAt": "2026-04-27T17:00:00.000Z",
+      "collectedAt": "2026-04-28T00:13:35.132Z",
+      "category": [
+        "Pos"
+      ],
+      "description": "\n        <p>Previously, you could only count the cash in your register when opening or closing a session. Now, staff can perform a cash count at any point during an active shift. Simply tap the Register icon and select Count cash to verify the amount in your drawer whenever needed—whether you're doing a till check during a busy day, handing off to a new staff member mid-shift, or reconciling after a large cash deposit or removal. The count is automatically logged to your register session, helping you catch discrepancies early and maintain tighter control over your cash flow throughout the day.</p>\n\n<p>Learn more about the mid-session cash counts in the <a href=\"https://help.shopify.com/manual/sell-in-person/shopify-pos/cash-register-management\">Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "営業中のレジ現金カウント機能",
+          "summarizedJa": "Shopify POSで、営業セッション中の任意のタイミングでレジ内の現金カウントが可能になりました。これまでは開店時・閉店時のみでしたが、忙しい時間帯のチェック、スタッフ交代時、大量の現金入出金後など、必要に応じてレジアイコンから「現金カウント」を実行できます。カウント結果は自動的にセッションに記録され、差異の早期発見とキャッシュフロー管理の強化に役立ちます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-04-28T00:14:10.664Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1076,
+            "output": 262
+          },
+          "estimatedCost": 0.007158
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "セッション中の現金カウント機能",
+          "summarizedJa": "これまでレジの現金カウントはセッション開始時と終了時に限られていましたが、今回の更新により、スタッフは営業中の任意のタイミングで現金カウントを実行できるようになりました。これにより、忙しい時間帯のレジチェック、シフト交代時の引き継ぎ、多額の入出金後の照合などが容易になり、現金の管理と差異の早期発見に役立ちます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-04-28T00:14:17.841Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 791,
+            "output": 149
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-keyboard-shortcuts-and-navigation-in-shopify-pos",
+      "source": "shopify-changelog",
+      "title": "Keyboard shortcuts and navigation in Shopify POS",
+      "link": "https://changelog.shopify.com/posts/keyboard-shortcuts-and-navigation-in-shopify-pos",
+      "publishedAt": "2026-04-27T16:00:00.000Z",
+      "collectedAt": "2026-04-28T00:13:35.132Z",
+      "category": [
+        "Pos"
+      ],
+      "description": "\n        <p>We've added keyboard navigation to Shopify POS so cart-building no longer requires switching between keyboard and touch. Retail staff on iPad and Android tablets with a hardware keyboard can now:<br>\n- Open search with CMD+K and see all available shortcuts by holding CMD<br>\n- Navigate Products, Orders, and Customers lists with arrow keys<br>\n- Select a cart item or list result with Enter, or jump to one of the first nine with CMD+1–CMD+9<br>\n- Start checkout with CMD+Enter and exit flows with Escape</p>\n\n<p>This removes friction during the most type-heavy moments like product search, customer lookup, and checkout and establishes a consistent keyboard interaction model that Shopify and partner teams can extend across POS.</p>\n\n<p>Learn more about keyboard shortcuts the Shopify <a href=\"https://help.shopify.com/en/manual/sell-in-person/getting-started/keyboard-shortcuts\">Help Center</a> and the <a href=\"https://pos.docs.shopify.io/pos/development/pos/ui-ux/external-keyboard/\">developer documentation</a> for building keyboard-aware POS extensions.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify POSのキーボードショートカットとナビゲーション機能",
+          "summarizedJa": "Shopify POSに外付けキーボードを使ったナビゲーション機能が追加されました。iPadやAndroidタブレットで外付けキーボードを使用する際、CMD+Kで検索を開いたり、矢印キーで商品・注文・顧客リストを移動したり、CMD+Enterでチェックアウトを開始できるようになります。商品検索や顧客検索、チェックアウトなどタイピングが多い場面で、キーボードとタッチ操作を切り替える必要がなくなり、作業効率が向上します。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-04-28T00:14:22.920Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1179,
+            "output": 281
+          },
+          "estimatedCost": 0.007752
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify POSにおけるキーボードショートカットとナビゲーション",
+          "summarizedJa": "Shopify POSにキーボードナビゲーション機能が追加され、iPadやAndroidタブレットでハードウェアキーボードを使用する店舗スタッフは、商品検索や顧客検索、チェックアウトなどの操作をキーボードのみで行えるようになります。これにより、入力作業が多い場面での操作性が大幅に向上し、作業効率の改善が期待されます。また、パートナーはキーボード対応のPOS拡張機能を開発するための基盤として活用できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-04-28T00:14:28.078Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 879,
+            "output": 166
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-scan-discount-codes-in-shopify-pos",
+      "source": "shopify-changelog",
+      "title": "Scan discount codes",
+      "link": "https://changelog.shopify.com/posts/scan-discount-codes-in-shopify-pos",
+      "publishedAt": "2026-04-27T16:00:00.000Z",
+      "collectedAt": "2026-04-28T00:13:35.132Z",
+      "category": [
+        "Pos"
+      ],
+      "description": "\n        <p>Staff can now apply discount codes at checkout by scanning a QR code - no more typing long codes by hand. You can also generate scannable QR codes for any discount code from the Shopify admin, print them, share them with customers, or keep them at the counter for staff use.</p>\n\n<p><strong>What's new</strong><br>\n- <strong>Generate QR codes in the admin</strong>: open any discount code and download a scannable QR code to share with customers or display in-store.<br>\n- <strong>Scan to apply in POS</strong>: apply discounts in POS via the device camera or a connected hardware scanner.<br>\n- <strong>Scan to apply online</strong>: share a QR with customers that they can use when shopping online.<br>\n- <strong>Faster than typing</strong>: applying a discount by scan is meaningfully faster than typing codes on a keypad, which reduces checkout friction for staff.</p>\n\n<p>This update works with product-specific and order-level discount codes. Automatic discounts are not included (no code to scan).</p>\n\n<p><strong>For developers &amp; partners</strong><br>\n- QR codes encode the existing shareable link format: https://{shop}.myshopify.com/discount/{CODE} - the same URL Shopify has always used for shareable discount links. GS1 Digital Link is not used in this release.<br>\n- If your app generates its own QR codes for Shopify discount codes, use this URL format so they're compatible with POS scanning.<br>\n- Note: codes with special characters are URL-encoded twice by Shopify's route helper. For standard alphanumeric codes (e.g. SUMMER20) this is a no-op; for codes with special characters, match Shopify's double-encoding so POS can decode them correctly.</p>\n\n<p>Learn more about scanning discount codes in the <a href=\"https://help.shopify.com/en/manual/sell-in-person/shopify-pos/discount-management/applying-discounts\">Help Center</a>. </p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "POSでディスカウントコードをスキャン可能に",
+          "summarizedJa": "Shopify POSのチェックアウト時に、QRコードをスキャンしてディスカウントコードを適用できるようになりました。管理画面から任意のディスカウントコード用のQRコードを生成・印刷でき、手入力の手間を省いてチェックアウトを高速化できます。開発者は既存のShopifyディスカウントリンク形式（https://{shop}.myshopify.com/discount/{CODE}）を使用してPOSスキャンと互換性のあるQRコードを生成できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-04-28T00:14:33.245Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1392,
+            "output": 278
+          },
+          "estimatedCost": 0.008346
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "割引コードのQRスキャン機能",
+          "summarizedJa": "Shopify POSにおいて、スタッフが割引コードを手入力する代わりにQRコードをスキャンして適用できるようになりました。管理画面から割引コードのQRコードを生成し、店頭での利用や顧客への共有が可能です。これによりチェックアウトの効率が向上し、開発者は既存の共有リンク形式に合わせたQRコード生成でPOSスキャンとの互換性を確保できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-04-28T00:14:41.902Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1064,
+            "output": 148
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-find-products-faster-in-shopify-pos-with-inline-search-suggestions",
+      "source": "shopify-changelog",
+      "title": "Find products faster in Shopify POS with inline search suggestions",
+      "link": "https://changelog.shopify.com/posts/find-products-faster-in-shopify-pos-with-inline-search-suggestions",
+      "publishedAt": "2026-04-27T16:00:00.000Z",
+      "collectedAt": "2026-04-28T00:13:35.132Z",
+      "category": [
+        "Pos"
+      ],
+      "description": "\n        <p>Searching for products in Shopify POS just got faster. Starting with POS v11.5, inline suggestions help retail staff complete searches with fewer keystrokes.</p>\n\n<p>As you type in the product search field, the next word completes inline as ghost text drawn from your local catalog. Press Space or Tab to accept the suggestion and jump straight to the product, no need to finish typing the word.</p>\n\n<p>Product search is one of the most frequent actions on the POS. For retailers with large catalogs, faster search means shorter queues, fewer abandoned lookups, and more time at the counter spent with customers instead of on the keyboard.</p>\n\n<p>Availabile for both iOS and Android in version 11.5</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify POSでインライン検索候補により商品検索がより高速に",
+          "summarizedJa": "Shopify POS v11.5から、商品検索時にインライン候補が表示され、より少ないキー入力で検索が完了できるようになりました。入力中にゴーストテキストとして次の単語が自動補完され、スペースキーまたはタブキーで確定できます。大規模な商品カタログを持つ小売店では、レジ待ち時間の短縮と顧客対応時間の増加が期待できます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-04-28T00:14:46.678Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1085,
+            "output": 245
+          },
+          "estimatedCost": 0.00693
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify POSでインライン検索候補により商品検索を高速化",
+          "summarizedJa": "Shopify POS v11.5以降、商品検索がインライン検索候補の導入により高速化されます。入力中にローカルカタログから次の単語が提案され、SpaceやTabキーで簡単に候補を受け入れ、商品に素早くアクセスできます。これにより、特に大規模な商品カタログを持つ小売店では、レジ待ち時間の短縮や顧客対応時間の増加が期待されます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-04-28T00:14:53.579Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 798,
+            "output": 159
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-custom-discount-amounts-on-line-items-in-pos-now-apply-per-item",
+      "source": "shopify-changelog",
+      "title": "Custom discount amounts on line items in POS now apply per item",
+      "link": "https://changelog.shopify.com/posts/custom-discount-amounts-on-line-items-in-pos-now-apply-per-item",
+      "publishedAt": "2026-04-27T16:00:00.000Z",
+      "collectedAt": "2026-04-28T00:13:35.132Z",
+      "category": [
+        "Pos"
+      ],
+      "description": "\n        <p><strong>What's changing</strong><br>\nStarting with version 11.5, when you apply a fixed-amount custom discount to a line item in Shopify POS, the value you enter is now the discount per item instead of a total amount spread across the line.</p>\n\n<p>For example, on a line with 3 sweaters, entering a $5 fixed-amount discount used to take $5 off the whole line ($1.67 off each sweater). Starting in POS v11.5, that same $5 takes $5 off each sweater, for a $15 total discount.</p>\n\n<p>This matches how custom discounts already work in the Shopify admin and on Draft orders, and makes per-item pricing easier to explain to customers at the counter.</p>\n\n<p><a href=\"https://www.youtube.com/watch?v=ONIBwRqgeNY\">View walkthrough</a></p>\n\n<p><strong>What you'll see in POS</strong><br>\n- The amount field on the Add custom discount screen is now labeled Amount per unit with helper text confirming the discount applies to each item on the line.<br>\n- The line item still shows the total discount applied (amount × quantity), so the cart total is clear at a glance.<br>\n- Receipts continue to break out discounts the same way they do today.<br>\n- Percentage discounts and discount codes are unchanged.</p>\n\n<p>If your store uses a third-party POS app that applies fixed-amount discounts (for example, a wholesale or loyalty app), the app will continue to work as it does today. The app developer may release an update later that takes advantage of the new per-item allocation; if you notice a change in how a particular app's discounts apply after that update, contact the app's support team.</p>\n\n<p>Learn more in the <a href=\"https://help.shopify.com/en/manual/sell-in-person/shopify-pos/discount-management/applying-discounts#line-item-custom-discounts\">Help Center</a>.</p>\n\n<p><strong>Action required for developers in 2026-07</strong><br>\nOn API version 2026-07 and later: If your extension calls setLineItemDiscount or bulkSetLineItemDiscounts with FixedAmount, update the values you pass so they represent the per-unit discount. </p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "POSの明細カスタム割引金額が商品単位での適用に変更",
+          "summarizedJa": "Shopify POS v11.5より、明細に固定金額のカスタム割引を適用する際、入力した金額が明細全体ではなく商品1点あたりの割引額として適用されるように変更されました。例えば3点の商品に5ドルの割引を入力すると、従来は明細全体で5ドル引きでしたが、今後は1点あたり5ドル引き（合計15ドル引き）となります。この動作はShopify管理画面や下書き注文と統一され、店頭での説明がより分かりやすくなります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-04-28T00:15:00.529Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1479,
+            "output": 295
+          },
+          "estimatedCost": 0.008862
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "POSのカスタム割引、商品ごとの金額適用へ変更",
+          "summarizedJa": "Shopify POS v11.5以降、固定金額のカスタム割引がラインアイテム全体ではなく、商品1点ごとに適用されるよう変更されます。これにより、管理画面や下書き注文との一貫性が保たれ、顧客への説明が容易になります。APIを利用している開発者は、2026-07以降のバージョンで割引額の渡し方を単位ごとの金額に更新する必要があります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 17,
+          "analyzedAt": "2026-04-28T00:15:08.325Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1168,
+            "output": 160
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-minor-rounding-change-for-custom-line-item-discounts-in-pos-115",
+      "source": "developer-changelog",
+      "title": "Minor rounding change for custom line item discounts in POS 11.5",
+      "link": "https://shopify.dev/changelog/minor-rounding-change-for-custom-line-item-discounts-in-pos-115",
+      "publishedAt": "2026-04-27T16:00:00.000Z",
+      "collectedAt": "2026-04-28T00:13:34.261Z",
+      "category": [
+        "API",
+        "Update",
+        "POS Extensions"
+      ],
+      "description": " <div class=\"\"><p>Starting with POS version 11.5, we are updating the internal calculation method for custom fixed-amount line item discounts. These discounts will now be applied on a per-unit basis rather than across the entire line. Note that this change only affects fixed-amount discounts; percentage discounts remain unchanged.</p>\n<p>If your app uses <code>setLineItemDiscount</code> or <code>bulkSetLineItemDiscounts</code> from the Cart API with a <code>FixedAmount</code> discount type, you can continue to pass the total discount amount for the line item as you currently do. The POS system will automatically handle the conversion.</p>\n<p>In most cases, the total discount will remain the same. However, for amounts that don't divide evenly by quantity, there might be a rounding difference of up to one cent, the smallest denomination in the local currency. For example, a $5.00 discount applied to 3 items becomes $1.67 per unit, totaling $5.01 instead of $5.00.</p>\n<p><strong>No action is required</strong> for extensions using API version 2026-04 or earlier. In a future API version, extensions will need to pass per-unit discount amounts directly. We will provide more details as the release approaches.</p>\n<p>For more information, refer to the <a href=\"https://shopify.dev/docs/api/pos-ui-extensions/latest/target-apis/contextual-apis/cart-api\" target=\"_blank\" class=\"body-link\">Cart API reference</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "POS 11.5におけるカスタムラインアイテム割引の小数点以下丸め処理の変更",
+          "summarizedJa": "POSバージョン11.5以降、固定金額のラインアイテム割引の計算方法が変更され、ライン全体ではなく単位ごとに適用されるようになります。数量で割り切れない金額の場合、最大1セントの丸め誤差が生じる可能性がありますが、APIバージョン2026-04以前を使用している拡張機能では対応は不要です。将来のAPIバージョンでは、単位ごとの割引額を直接渡す必要があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-04-28T00:15:13.427Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1298,
+            "output": 275
+          },
+          "estimatedCost": 0.008019
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "POS 11.5におけるカスタム明細行割引の軽微な端数処理の変更",
+          "summarizedJa": "Shopify POS 11.5より、カスタム固定金額の明細行割引の計算方法が変更され、割引が商品単位で適用されるようになります。これにより、割り切れない場合に最大1セント（現地通貨の最小単位）程度の端数処理の誤差が生じる可能性があります。現在、アプリ開発者は既存のAPIをそのまま利用でき、直ちに対応は不要ですが、将来のAPIバージョンでは単位ごとの割引額を直接渡す必要が出てくる予定です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-04-28T00:15:21.570Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 993,
+            "output": 186
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-u-s-retailers-can-adjust-retail-prices-on-shopify-collective",
+      "source": "shopify-changelog",
+      "title": "U.S. retailers can adjust retail prices on Shopify Collective",
+      "link": "https://changelog.shopify.com/posts/u-s-retailers-can-adjust-retail-prices-on-shopify-collective",
+      "publishedAt": "2026-04-27T14:05:00.000Z",
+      "collectedAt": "2026-04-28T00:13:35.132Z",
+      "category": [
+        "Collective"
+      ],
+      "description": "\n        <p>Retailers connected to suppliers on Shopify Collective have the option to turn off price sync and set their own retail price for imported products, above or below the supplier's listed price. Price sync remains on by default for all existing connections. Retailers must <a href=\"https://help.shopify.com//manual/online-sales-channels/shopify-collective/retailers/importing-products#product-pricing\">change this setting</a> to adjust prices.</p>\n\n<p>Suppliers can view the retail price a retailer has set for their products on the order detail page. Supplier cost price is never affected by retail price changes made by the retailer.</p>\n\n<p>If you're a retailer with existing connections, we recommend reaching out to your suppliers before making retail price changes to align on expectations.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "米国の小売業者がShopify Collectiveで小売価格を調整可能に",
+          "summarizedJa": "Shopify Collectiveで接続されている小売業者は、価格同期をオフにして、サプライヤーの提示価格とは異なる独自の小売価格を設定できるようになりました。価格同期はデフォルトでオンのままであり、小売業者が設定を変更する必要があります。サプライヤーは注文詳細ページで小売業者が設定した小売価格を確認できますが、サプライヤーの原価には影響しません。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 6,
+          "analyzedAt": "2026-04-28T00:15:26.026Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1098,
+            "output": 253
+          },
+          "estimatedCost": 0.007089
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify Collective：米国リテーラーが小売価格を独自設定可能に",
+          "summarizedJa": "Shopify Collectiveを利用する米国のリテーラーは、サプライヤーからの製品の価格同期をオフにし、独自の小売価格を設定できるようになりました。これにより、サプライヤーの提示価格に関わらず、リテーラーが自由に価格戦略を立てることが可能になります。サプライヤーの原価には影響せず、リテーラーは価格変更前にサプライヤーとの連携が推奨されています。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 2,
+            "japanRelevance": 1,
+            "technicalImportance": 3
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-04-28T00:15:33.900Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 812,
+            "output": 158
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-scannable-discount-codes",
+      "source": "developer-changelog",
+      "title": "Scannable discount codes",
+      "link": "https://shopify.dev/changelog/scannable-discount-codes",
+      "publishedAt": "2026-04-27T04:00:00.000Z",
+      "collectedAt": "2026-04-28T00:13:34.262Z",
+      "category": [
+        "Tools",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>As of POS version 11.5, merchants can generate scannable QR codes for any discount code in the Shopify Admin. These QR codes can be applied by both POS staff at checkout and by customers in online store sessions.</p>\n<h3>What this means for discount apps</h3>\n<p>No changes are required with this release. If your app creates discount codes, you can now generate QR codes for them that encode the store's discount URL. </p>\n<h3>What you should do</h3>\n<p>Shopify uses the format https://{shop}.myshopify.com/discount/{CODE} with the following encoding caveats:</p>\n<ul>\n<li><strong>Simple discount codes encode directly.</strong> For example, the discount code <code>SUMMER20</code> becomes <code>SUMMER20</code> in the final QR code URL. </li>\n<li><strong>Special characters are URL-encoded twice.</strong> For example, the discount code <code>SAVE 10%</code> becomes <code>SAVE%252010%2525</code> in the final QR code URL.</li>\n</ul>\n<p>If you want to include QR codes as shareable links in your apps, you’ll need to replicate the same URL-encoding used by Shopify for your discount codes. </p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "スキャン可能なディスカウントコード",
+          "summarizedJa": "POSバージョン11.5以降、管理画面でディスカウントコード用のQRコードを生成できるようになりました。これらのQRコードはPOSスタッフのレジ対応や、オンラインストアでの顧客利用が可能です。ディスカウントアプリ開発者は、特殊文字を含むコードの場合、Shopifyと同じURL二重エンコード方式（例：「SAVE 10%」→「SAVE%252010%2525」）を実装する必要があります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-04-28T00:15:38.945Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1218,
+            "output": 255
+          },
+          "estimatedCost": 0.0074789999999999995
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-use-matches-in-shopifyql-to-filter-by-what-customers-did",
       "source": "shopify-changelog",
@@ -1568,6 +2053,61 @@
           "tokenUsage": {
             "input": 962,
             "output": 169
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-deprecation-of-checkout-metafields-in-checkout-and-customer-account-ui-extensions",
+      "source": "developer-changelog",
+      "title": "Deprecation of checkout metafields in checkout and customer account UI extensions",
+      "link": "https://shopify.dev/changelog/deprecation-of-checkout-metafields-in-checkout-and-customer-account-ui-extensions",
+      "publishedAt": "2026-04-01T17:00:00.000Z",
+      "collectedAt": "2026-04-28T00:13:34.262Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Deprecation Announcement",
+        "Checkout UI",
+        "Customer Accounts",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>As of API version 2026-04, the ability to read and write checkout metafields in checkout and customer account UI extensions has been removed. Instead, checkout metafields have been replaced by cart metafields in checkout UI extensions and order metafields in customer account UI extensions.</p>\n<h3>Action Required</h3>\n<p>If you are using checkout metafields in older API versions, it is essential to upgrade to version 2026-04. Follow our guides to ensure a smooth transition:</p>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/checkout-ui-extensions/2026-04/upgrading-to-2026-04#migrate-to-cart-metafields\" target=\"_blank\" class=\"body-link\">Migrate to cart metafields in checkout UI extensions</a> </li>\n<li><a href=\"https://shopify.dev/docs/api/customer-account-ui-extensions/2026-04/upgrading-to-2026-04#migrate-to-order-metafields\" target=\"_blank\" class=\"body-link\">Migrate to order metafields in customer account UI extensions</a></li>\n</ul>\n<p>Additionally, order metafield definitions now support a new capability that automatically copies values from cart metafields to order metafields upon order creation. This enhancement streamlines data management between cart and order processes. <a href=\"https://shopify.dev/docs/apps/build/metafields/use-metafield-capabilities#cart-to-order-copyable\" target=\"_blank\" class=\"body-link\">Learn more</a></p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "チェックアウトおよびカスタマーアカウントUI拡張機能におけるチェックアウトメタフィールドの廃止",
+          "summarizedJa": "APIバージョン2026-04以降、チェックアウトおよびカスタマーアカウントUI拡張機能におけるチェックアウトメタフィールドの読み書きが廃止されました。チェックアウトUI拡張機能ではカートメタフィールドに、カスタマーアカウントUI拡張機能では注文メタフィールドに置き換えられます。既存の実装を使用している場合は、移行ガイドに従ってバージョン2026-04へのアップグレードが必須となります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-04-28T00:15:44.472Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1328,
+            "output": 291
+          },
+          "estimatedCost": 0.008349
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "チェックアウトおよび顧客アカウントUI拡張機能におけるチェックアウトメタフィールドの廃止",
+          "summarizedJa": "Shopify APIバージョン2026-04より、チェックアウトおよび顧客アカウントUI拡張機能でのチェックアウトメタフィールドの読み書きが廃止されました。今後は、チェックアウトUI拡張機能ではカートメタフィールド、顧客アカウントUI拡張機能では注文メタフィールドを使用する必要があります。既存のアプリやストアでチェックアウトメタフィールドを利用しているマーチャントやパートナーは、新しいAPIバージョンへのアップグレードと、関連するメタフィールドの移行が必須となります。また、カートメタフィールドから注文メタフィールドへの自動コピー機能も追加されました。",
+          "scores": {
+            "merchantImpact": 5,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 18,
+          "analyzedAt": "2026-04-28T00:15:50.315Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1035,
+            "output": 193
           },
           "estimatedCost": 0
         }
