@@ -1,6 +1,56 @@
 {
-  "lastUpdated": "2026-04-28T00:13:35.142Z",
+  "lastUpdated": "2026-04-29T00:14:43.440Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-data-driven-insights-now-appear-on-your-analytics-dashboard",
+      "source": "shopify-changelog",
+      "title": "Data-driven insights now appear on your analytics dashboard",
+      "link": "https://changelog.shopify.com/posts/data-driven-insights-now-appear-on-your-analytics-dashboard",
+      "publishedAt": "2026-04-28T20:00:00.000Z",
+      "collectedAt": "2026-04-29T00:14:43.430Z",
+      "category": [
+        "Analytics"
+      ],
+      "description": "\n        <p>Your analytics dashboard now shows a stream of insights at the top of the page, highlighting the most important trends in your business.</p>\n\n<p>Shopify's analytics insights are run daily, analyzing your sales, sessions, and fulfillment data across products, regions, channels, customer types, and more. We surface the top 5 findings ranked by business impact so that when you open your dashboard, you immediately see what's changed.</p>\n\n<p>Each insight comes with a status badge (Trending Up, Trending Down, or Top Performers). Click \"See why\" to open the full report &amp; Sidekick launches alongside it with the insight pre-loaded so you can ask follow-up questions like \"What should I do next?\"</p>\n\n<p>For example, you might see that sales from returning customers have been trending up for 8 consecutive weeks, a signal to double down on your loyalty campaigns. Or that a specific region just became your top performer by sales, something you'd never have spotted on your own.</p>\n\n<p><a href=\"https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/overview-dashboard#insights\">Learn more about analytics insights</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "データドリブンなインサイトが分析ダッシュボードに表示されるようになりました",
+          "summarizedJa": "分析ダッシュボードの上部にビジネスで最も重要なトレンドを強調表示するインサイト機能が追加されました。売上、セッション、フルフィルメントデータが毎日自動分析され、ビジネスインパクトの高い上位5つの発見が表示されます。各インサイトにはステータスバッジが付き、「詳細を見る」をクリックすると完全なレポートとSidekickが起動し、「次に何をすべきか」などのフォローアップ質問が可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-04-29T00:14:49.703Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1184,
+            "output": 282
+          },
+          "estimatedCost": 0.007782
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "分析ダッシュボードにデータドリブンなインサイトが表示",
+          "summarizedJa": "Shopifyの分析ダッシュボードに、ビジネスの重要なトレンドを強調するデータドリブンなインサイトのストリームが表示されるようになりました。これは売上、セッション、フルフィルメントデータを毎日分析し、ビジネスへの影響度が高い上位5つの発見を提示します。各インサイトはステータスバッジ付きで、詳細レポートやSidekickと連携し、次のアクションを検討するのに役立ちます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-04-29T00:14:55.833Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 900,
+            "output": 164
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-set-and-track-targets-in-shopify-analytics",
       "source": "shopify-changelog",
@@ -3352,6 +3402,56 @@
           "tokenUsage": {
             "input": 820,
             "output": 166
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-capital-launches-in-france",
+      "source": "shopify-changelog",
+      "title": "Capital Launches in France",
+      "link": "https://changelog.shopify.com/posts/capital-launches-in-france",
+      "publishedAt": "2026-03-25T16:00:00.000Z",
+      "collectedAt": "2026-04-29T00:14:43.430Z",
+      "category": [
+        "Shopify capital"
+      ],
+      "description": "\n        <p>We've just released Shopify Capital for merchants in France. This will help French merchants to access essential funding to grow their businesses. Merchants can apply for funding directly through their Shopify admin. It's now available for all eligible Shopify merchants in France.</p>\n\n<p>Learn more about the Shopify Capital in the <a href=\"https://help.shopify.com/en/manual/finance/shopify-capital/france\">Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify Capitalがフランスで提供開始",
+          "summarizedJa": "Shopify Capitalがフランスで利用可能になり、フランスのマーチャントがShopify管理画面から直接資金調達を申請できるようになりました。これによりフランスの適格なマーチャントはビジネス成長に必要な資金へのアクセスが可能になります。現時点では日本での提供はありません。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 1
+          },
+          "totalScore": 4,
+          "analyzedAt": "2026-04-29T00:14:59.794Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1008,
+            "output": 203
+          },
+          "estimatedCost": 0.006069
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify Capitalがフランスで提供開始",
+          "summarizedJa": "Shopify Capitalがフランスのマーチャント向けに提供開始されました。これにより、フランスの対象マーチャントは、ビジネス成長に必要な資金をShopify管理画面から直接申請し、調達できるようになります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 1
+          },
+          "totalScore": 4,
+          "analyzedAt": "2026-04-29T00:15:02.466Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 719,
+            "output": 116
           },
           "estimatedCost": 0
         }
