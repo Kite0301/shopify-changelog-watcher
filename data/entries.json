@@ -1,6 +1,58 @@
 {
-  "lastUpdated": "2026-04-29T00:14:43.440Z",
+  "lastUpdated": "2026-04-30T00:14:40.981Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-analytics-metric-targets-now-available-in-the-graphql-admin-api",
+      "source": "developer-changelog",
+      "title": "Analytics metric targets now available in the GraphQL Admin API",
+      "link": "https://shopify.dev/changelog/analytics-metric-targets-now-available-in-the-graphql-admin-api",
+      "publishedAt": "2026-04-29T16:00:00.000Z",
+      "collectedAt": "2026-04-30T00:14:39.402Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API"
+      ],
+      "description": " <div class=\"\"><p>You can now create and manage metric targets for merchants using four new GraphQL Admin API operations: <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/queries/analyticstargets\" target=\"_blank\" class=\"body-link\"><code>analyticsTargets</code></a>, <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/analyticstargetcreate\" target=\"_blank\" class=\"body-link\"><code>analyticsTargetCreate</code></a>, <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/analyticstargetupdate\" target=\"_blank\" class=\"body-link\"><code>analyticsTargetUpdate</code></a>, and <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/analyticstargetsdelete\" target=\"_blank\" class=\"body-link\"><code>analyticsTargetsDelete</code></a>.</p>\n<p>With targets, merchants can set numeric goals for analytics metrics, such as &quot;achieve $50K in gross sales this quarter,&quot; and track their progress with a visual gauge. The API has been available to apps from the start, enabling you to build on the same foundation that supports targets in the Shopify admin.</p>\n<p>Whether you're developing a goal-setting tool, a reporting dashboard, or a planning app, you can now read and write the same targets that merchants view in their analytics, using the same API, rules, and validation.</p>\n<h3>What you can do</h3>\n<ul>\n<li><strong>Create</strong>: Specify a metric, target amount, time period, and an optional filter (for example, limit to a specific sales channel or product).</li>\n<li><strong>Read</strong>: Retrieve targets for a shop using <code>analyticsTargets</code>, with support for pagination.</li>\n<li><strong>Update</strong>: Modify the metric, name, amount, time period, or filters.</li>\n<li><strong>Delete</strong>: Remove targets using <code>analyticsTargetsDelete</code>. Deleted targets can't be recovered.</li>\n</ul>\n<h3>Key details</h3>\n<ul>\n<li><strong>Scope</strong>: Requires <a href=\"https://shopify.dev/docs/api/usage/access-scopes\" target=\"_blank\" class=\"body-link\"><code>read_reports</code></a> and <a href=\"https://shopify.dev/docs/api/usage/access-scopes\" target=\"_blank\" class=\"body-link\"><code>write_reports</code></a> permissions.</li>\n<li><strong>Deduplication</strong>: The API uniquely identifies each target by its metric, date range, and filters. Attempting to create a duplicate results in a <code>userError</code> with guidance on necessary changes.</li>\n<li><strong>Status computation</strong>: The API automatically derives the status field (In progress, Achieved, Not achieved, Upcoming) from the target's date range and current metric value at query time.</li>\n<li><strong>Filters</strong>: Each target can have one dimension-based filter in the <a href=\"https://shopify.dev/docs/api/shopifyql#where\" target=\"_blank\" class=\"body-link\"><code>WHERE</code> statement of ShopifyQL</a> using <code>=</code> or <code>IN</code> operators.</li>\n</ul>\n<h3>Use cases</h3>\n<ul>\n<li><strong>Goal-setting apps</strong>: Create targets for merchants based on historical performance or industry benchmarks, providing smart defaults.</li>\n<li><strong>Reporting and BI tools</strong>: Access merchant targets and display progress alongside your visualizations, ensuring consistency with Shopify.</li>\n<li><strong>Planning and forecasting apps</strong>: Integrate external goals into Shopify Analytics, offering merchants a unified place to track all targets.</li>\n<li><strong>Agency dashboards</strong>: Programmatically set and monitor targets across multiple client stores.</li>\n</ul>\n<p>Targets created by your app appear alongside merchant-created targets in the Shopify admin, on the <strong>Targets</strong> index page with their own target gauge, and on merchant dashboards. Merchants can manage them consistently, regardless of their origin.</p>\n<p><a href=\"https://shopify.dev/docs/api/admin-graphql/latest/queries/analyticstargets\" target=\"_blank\" class=\"body-link\">View the API reference →</a></p>\n<h3>Related: new <code>ColumnDataType</code> enum values</h3>\n<p>API version <code>2026-04</code> adds two new enum values to <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/enums/ColumnDataType\" target=\"_blank\" class=\"body-link\"><code>ColumnDataType</code></a> in <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/ShopifyqlTableDataColumn\" target=\"_blank\" class=\"body-link\"><code>ShopifyqlTableDataColumn</code></a>:</p>\n<ul>\n<li><code>UNITLESS_SCALAR</code>: Represents a dimensionless numeric score with no associated unit. Applied to web performance metrics: <code>p50_cls</code>, <code>p75_cls</code>, <code>p90_cls</code>, <code>p99_cls</code> (Cumulative Layout Shift percentiles).</li>\n<li><code>MULTIPLIER</code>: Represents a ratio or multiplier value (for example, 3.2x). Applied to <code>shop_campaign_return_on_ad_spend</code> (Return on ad spend).</li>\n</ul>\n<p>These metrics previously returned <code>FLOAT</code>. This change doesn't affect callers on API versions prior to <code>2026-04</code>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "GraphQL Admin APIで分析指標の目標設定が利用可能に",
+          "summarizedJa": "GraphQL Admin APIに4つの新しい操作が追加され、マーチャントの分析指標に対する数値目標の作成・管理が可能になりました。売上高や顧客数などの指標に対して「今四半期に5万ドルの売上」といった目標を設定でき、進捗状況をビジュアルゲージで追跡できます。目標設定アプリ、レポートダッシュボード、予測ツールなどの開発が可能で、Shopify管理画面と同じ基盤を使用します。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-04-30T00:14:47.480Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2382,
+            "output": 267
+          },
+          "estimatedCost": 0.011151
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "GraphQL Admin APIで分析メトリックの目標設定が可能に",
+          "summarizedJa": "ShopifyのGraphQL Admin APIを通じて、マーチャントが設定する売上目標などの分析メトリックの目標をプログラムで作成・管理できるようになりました。これにより、パートナーは目標設定ツールやレポートダッシュボードを開発し、マーチャントの目標達成を支援したり、複数のクライアントストアの目標を一元的に管理したりできます。マーチャントは、アプリで設定された目標もShopify管理画面で確認・追跡でき、より効果的な目標管理が可能になります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-04-30T00:14:54.939Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1824,
+            "output": 177
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-data-driven-insights-now-appear-on-your-analytics-dashboard",
       "source": "shopify-changelog",
