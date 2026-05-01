@@ -1,6 +1,56 @@
 {
-  "lastUpdated": "2026-04-30T00:14:40.981Z",
+  "lastUpdated": "2026-05-01T00:14:30.167Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-flow-new-triggers-for-inventory-transfers-completed-and-inventory-transfer-ready-to-ship",
+      "source": "shopify-changelog",
+      "title": "Flow: New triggers for inventory transfer completed and inventory transfer ready to ship",
+      "link": "https://changelog.shopify.com/posts/flow-new-triggers-for-inventory-transfers-completed-and-inventory-transfer-ready-to-ship",
+      "publishedAt": "2026-04-30T21:00:00.000Z",
+      "collectedAt": "2026-05-01T00:14:30.154Z",
+      "category": [
+        "Apps"
+      ],
+      "description": "\n        <p>Flow now has new triggers that start workflows when inventory transfers change status. Inventory transfers represent stock moving between your business locations — like sending products from a warehouse to a retail store.</p>\n\n<p>The <a href=\"https://help.shopify.com/manual/shopify-flow/reference/triggers/inventory-transfer-ready-to-ship\">Inventory transfer ready to ship</a> trigger starts a workflow when a transfer has been prepared and is marked \"ready to ship\". Use this to build workflows that alert the receiving location, update logistics dashboards, and more.</p>\n\n<p>The <a href=\"http://help.shopify.com/manual/shopify-flow/reference/triggers/inventory-transfer-complete\">Inventory transfer completed</a> trigger starts a workflow when a transfer is fully received at its destination (either accepted or rejected). Use this to build workflows that update internal records, notify teams that stock has arrived, or kick off follow-up tasks like shelf stocking or inventory reconciliation.</p>\n\n<p>For more information, visit the <a href=\"https://help.shopify.com/manual/shopify-flow/reference/triggers\">documentation</a>. For questions and feedback, visit the <a href=\"https://community.shopify.dev/c/shopify-flow/21\">Shopify Flow community</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Flow: 在庫移動の完了と出荷準備完了の新しいトリガーを追加",
+          "summarizedJa": "Shopify Flowに、在庫移動のステータス変更時にワークフローを開始する2つの新しいトリガーが追加されました。「出荷準備完了」トリガーは移動在庫が出荷可能になった時点で、「在庫移動完了」トリガーは在庫が目的地で受領された時点でワークフローを実行します。これにより、受取拠点への通知、物流ダッシュボードの更新、在庫調整などの自動化が可能になります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-05-01T00:14:36.350Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1224,
+            "output": 269
+          },
+          "estimatedCost": 0.0077069999999999994
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify Flow: 在庫移動完了と出荷準備完了の新しいトリガー",
+          "summarizedJa": "Shopify Flowに、在庫移動のステータス変更を検知する新しいトリガーが追加されました。「在庫移動出荷準備完了」トリガーは、移動が準備され「出荷準備完了」とマークされた際にワークフローを開始します。また、「在庫移動完了」トリガーは、移動が目的地で完全に受領された（承認または拒否された）際にワークフローを開始します。これにより、倉庫から店舗への在庫移動など、ビジネス拠点間の在庫管理プロセスを自動化し、効率を向上させることが可能になります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-05-01T00:14:43.631Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 928,
+            "output": 191
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-analytics-metric-targets-now-available-in-the-graphql-admin-api",
       "source": "developer-changelog",
@@ -1798,6 +1848,59 @@
           "tokenUsage": {
             "input": 1141,
             "output": 173
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-multiple-product-discounts-can-apply-on-a-single-cart-line",
+      "source": "developer-changelog",
+      "title": "Multiple product discounts can apply on a single cart line",
+      "link": "https://shopify.dev/changelog/multiple-product-discounts-can-apply-on-a-single-cart-line",
+      "publishedAt": "2026-04-07T23:00:00.000Z",
+      "collectedAt": "2026-05-01T00:14:23.855Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>In version <code>2026-04</code> of the GraphQL Admin API, we're introducing support for applying multiple product discounts on a single cart line. This feature will enable merchants to continue migrating Scripts ahead of the June 30th, 2026 sunset date.</p>\n<p>To learn more about configuring discount combinations, please refer to the documentation for the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/DiscountAutomaticBasic#field-DiscountAutomaticBasic.fields.combinesWith\" target=\"_blank\" class=\"body-link\">GraphQL Admin API</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "1つのカート行に複数の商品ディスカウントを適用可能に",
+          "summarizedJa": "GraphQL Admin APIのバージョン2026-04から、1つのカート行に複数の商品ディスカウントを適用できる機能が導入されます。この機能は、2026年6月30日のScripts終了に向けて、マーチャントがスムーズに移行できるよう支援するものです。ディスカウントの組み合わせ設定については、GraphQL Admin APIのドキュメントで詳細を確認できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-05-01T00:14:48.015Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1085,
+            "output": 237
+          },
+          "estimatedCost": 0.00681
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "単一カートラインに複数の商品割引を適用可能に",
+          "summarizedJa": "GraphQL Admin APIのバージョン2026-04より、単一のカートラインに対して複数の商品割引を適用できるようになります。これにより、2026年6月30日に廃止されるShopify Scriptsからの移行がスムーズに進み、より柔軟な割引設定が可能になります。割引の組み合わせ設定については、Admin GraphQL APIのドキュメントで詳細を確認できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 17,
+          "analyzedAt": "2026-05-01T00:14:54.029Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 791,
+            "output": 155
           },
           "estimatedCost": 0
         }
