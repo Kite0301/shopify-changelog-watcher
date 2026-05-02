@@ -1,6 +1,56 @@
 {
-  "lastUpdated": "2026-05-01T00:14:30.167Z",
+  "lastUpdated": "2026-05-02T00:14:03.623Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-manage-inventory-at-locations-without-activating-them-for-fulfillment",
+      "source": "shopify-changelog",
+      "title": "Track inventory that isn't for sale or fulfillment",
+      "link": "https://changelog.shopify.com/posts/manage-inventory-at-locations-without-activating-them-for-fulfillment",
+      "publishedAt": "2026-05-01T22:00:00.000Z",
+      "collectedAt": "2026-05-02T00:14:03.610Z",
+      "category": [
+        "Inventory"
+      ],
+      "description": "\n        <p>You can now view and update on-hand inventory at any active location.</p>\n\n<p><strong>New:</strong> For variants that don’t fulfill orders from that location:<br>\n- On-hand inventory is now shown and can be updated. <br>\n- Any existing committed or unavailable quantities remain visible until they’re reduced to zero.<br>\n- Available quantity won’t be shown, because the location isn’t used to fulfill new orders:<br>\n    - On the Inventory page, this is shown as \"—\" with a warning that \"Location doesn't fulfill this variant\"<br>\n    - On the Product variant page, this is shown as blank, with a warning, on the Location, that \"Location doesn't fulfill this variant\"</p>\n\n<p><strong>Changed:</strong> On-hand inventory at these locations still won't be used to fulfill new orders, but can continue to be used for fulfilling existing committed orders.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "販売やフルフィルメント対象外の在庫を追跡可能に",
+          "summarizedJa": "アクティブなロケーションで、そのロケーションから注文のフルフィルメントを行わないバリアントについても、現物在庫の確認と更新ができるようになりました。在庫ページおよび商品バリアントページで、フルフィルメント対象外のロケーションには警告が表示され、利用可能数量は「—」または空欄として表示されます。既存のコミット済み注文のフルフィルメントには引き続き使用できます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-05-02T00:14:09.813Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1124,
+            "output": 255
+          },
+          "estimatedCost": 0.007197
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "販売・フルフィルメント対象外の在庫追跡",
+          "summarizedJa": "Shopifyのマーチャントは、フルフィルメントに利用しないロケーションでも、手持ち在庫の確認と更新が可能になりました。これにより、販売や新規注文の出荷には使われないものの、既存のコミット済み注文には利用できる在庫を正確に管理できるようになります。利用可能な在庫数は表示されませんが、手持ち在庫やコミット済み在庫は確認できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-05-02T00:14:17.174Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 842,
+            "output": 154
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-flow-new-triggers-for-inventory-transfers-completed-and-inventory-transfer-ready-to-ship",
       "source": "shopify-changelog",
