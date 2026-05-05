@@ -1,6 +1,210 @@
 {
-  "lastUpdated": "2026-05-02T00:14:03.623Z",
+  "lastUpdated": "2026-05-05T00:14:43.104Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-apply-discounts-to-items-on-the-refund-page",
+      "source": "shopify-changelog",
+      "title": "Apply discounts to items on the refund page",
+      "link": "https://changelog.shopify.com/posts/apply-discounts-to-items-on-the-refund-page",
+      "publishedAt": "2026-05-04T16:00:00.000Z",
+      "collectedAt": "2026-05-05T00:14:43.091Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p><strong>What changed</strong><br>\nWhen issuing a refund from the refund page, you can now add, update, or remove a discount on eligible items without leaving the refund page.</p>\n\n<p><strong>How it works</strong><br>\n1. Open an order and navigate to the refund page.<br>\n2. Add, update, or remove a discount on any eligible item.<br>\n3. The page updates with the revised outstanding balance.<br>\n4. Issue the refund against the discounted amount.</p>\n\n<p><strong>Why it matters</strong><br>\nPreviously, applying a discount before issuing a refund required merchants to navigate to the order editing page first — adding unnecessary steps. Now merchants can apply the discount directly from the refund page.</p>\n\n<p>Applying a discount ensures your sales and tax reporting is accurate when issuing a refund.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "返金ページで商品に割引を適用可能に",
+          "summarizedJa": "返金処理時に、返金ページから直接商品に割引を追加・更新・削除できるようになりました。これまでは注文編集ページに移動する必要がありましたが、その手間が省かれ、返金額に割引を反映させることで売上・税務レポートの正確性も確保できます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-05-05T00:14:48.356Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1115,
+            "output": 197
+          },
+          "estimatedCost": 0.0063
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "返金ページでの商品割引適用",
+          "summarizedJa": "Shopifyの返金ページから、対象商品への割引を直接追加・更新・削除できるようになりました。これにより、以前は必要だった注文編集ページへの移動が不要になり、返金処理の手順が簡素化されます。正確な売上および税務報告にも貢献します。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-05-05T00:14:54.574Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 818,
+            "output": 131
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-default-value-of-appliesonsubscription-changed-to-true-for-app-discount-inputs",
+      "source": "developer-changelog",
+      "title": "Default value of `appliesOnSubscription` changed to `true` for app discount inputs",
+      "link": "https://shopify.dev/changelog/default-value-of-appliesonsubscription-changed-to-true-for-app-discount-inputs",
+      "publishedAt": "2026-05-04T16:00:00.000Z",
+      "collectedAt": "2026-05-05T00:14:41.578Z",
+      "category": [
+        "API",
+        "Update",
+        "Admin GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>The default value of <code>appliesOnSubscription</code> has been changed from <code>false</code> to <code>true</code> on the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/input-objects/DiscountCodeAppInput\" target=\"_blank\" class=\"body-link\"><code>DiscountCodeAppInput</code></a> and <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/input-objects/DiscountAutomaticAppInput\" target=\"_blank\" class=\"body-link\"><code>DiscountAutomaticAppInput</code></a> input types in GraphQL Admin API.</p>\n<p><strong>No action is required.</strong> This default value change has no effect on how discounts are applied at checkout. If your app explicitly sets <code>appliesOnSubscription</code> when creating or updating app discounts, your behavior is unchanged.</p>\n<p>This change applies across all active API versions. The <code>appliesOnOneTimePurchase</code> field already defaults to <code>true</code> and is unchanged.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "アプリディスカウント入力の`appliesOnSubscription`のデフォルト値が`true`に変更",
+          "summarizedJa": "GraphQL Admin APIの`DiscountCodeAppInput`と`DiscountAutomaticAppInput`において、`appliesOnSubscription`のデフォルト値が`false`から`true`に変更されました。この変更はチェックアウト時のディスカウント適用には影響せず、アプリで明示的に値を設定している場合は動作に変更はありません。すべてのアクティブなAPIバージョンに適用されます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-05-05T00:14:58.587Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1215,
+            "output": 241
+          },
+          "estimatedCost": 0.00726
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "アプリ割引入力における`appliesOnSubscription`のデフォルト値が`true`に変更",
+          "summarizedJa": "Shopify Admin GraphQL APIにおいて、アプリ割引作成時の`appliesOnSubscription`フィールドのデフォルト値が`false`から`true`に変更されました。この変更は、既存の割引適用方法に影響を与えず、マーチャントやパートナーによる特別な対応は不要です。アプリがこのフィールドを明示的に設定している場合は、動作に変更はありません。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 3,
+            "technicalImportance": 1
+          },
+          "totalScore": 6,
+          "analyzedAt": "2026-05-05T00:15:04.710Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 885,
+            "output": 156
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-monitor-admin-web-vitals-in-the-dev-dashboard",
+      "source": "developer-changelog",
+      "title": "Monitor admin web vitals in the Dev Dashboard",
+      "link": "https://shopify.dev/changelog/monitor-admin-web-vitals-in-the-dev-dashboard",
+      "publishedAt": "2026-05-04T12:00:00.000Z",
+      "collectedAt": "2026-05-05T00:14:41.578Z",
+      "category": [
+        "Tools",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>Your app's admin performance data is now available in the Dev Dashboard, alongside your existing monitoring tools. This change eliminates the need to switch between Partner Dashboard tabs to check web vitals.</p>\n<h2>What's changed</h2>\n<p>The admin performance dashboards have moved from the Partner Dashboard to the Dev Dashboard. You can now access daily and 28-day P75 rollups for three Core Web Vitals:</p>\n<ul>\n<li><strong>LCP (Largest Contentful Paint):</strong> Measures loading performance.</li>\n<li><strong>INP (Interaction to Next Paint):</strong> Assesses interactivity.</li>\n<li><strong>CLS (Cumulative Layout Shift):</strong> Evaluates visual stability.</li>\n</ul>\n<p><strong>Note</strong>: FID (First Input Delay) has been retired. INP has replaced it as a Core Web Vital, and the dashboards reflect this update.</p>\n<p>Each metric provides a clear pass/fail status based on the thresholds used for the Built for Shopify evaluation. The data displayed is the same as that used by the App Store to assess your app's compliance, ensuring consistency.</p>\n<h2>What you need to do</h2>\n<p>No code changes are required. Your app's web vitals telemetry will continue to function as before.</p>\n<p>If you've bookmarked admin performance pages in the Partner Dashboard, those URLs will automatically redirect to the Dev Dashboard.</p>\n<p>Links on the app ‘Distribution’ page now point to the new location.</p>\n<p><strong>Resources</strong></p>\n<ul>\n<li><a href=\"#\" target=\"_blank\" class=\"body-link\">Built for Shopify requirements</a></li>\n<li><a href=\"#\" target=\"_blank\" class=\"body-link\">Core Web Vitals documentation</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Dev Dashboardで管理画面のWeb Vitalsを監視可能に",
+          "summarizedJa": "アプリの管理画面のパフォーマンスデータが、Partner DashboardからDev Dashboardに移動しました。LCP、INP、CLSの3つのCore Web Vitalsを1箇所で確認できるようになり、Built for Shopifyの評価基準との整合性も確保されています。コード変更は不要で、既存のブックマークは自動的にリダイレクトされます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-05-05T00:15:09.928Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1372,
+            "output": 222
+          },
+          "estimatedCost": 0.0074459999999999995
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "開発者ダッシュボードで管理画面のWeb Vitalsを監視",
+          "summarizedJa": "Shopifyアプリの管理画面パフォーマンスデータ（Web Vitals: LCP, INP, CLS）が、パートナーダッシュボードから開発者ダッシュボードに統合されました。これにより、アプリ開発者は一元的にパフォーマンスを監視し、「Built for Shopify」の評価基準に沿った改善がしやすくなります。既存のアプリへのコード変更は不要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-05-05T00:15:18.010Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1016,
+            "output": 155
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-mark-fulfillments-without-tracking-as-delivered",
+      "source": "shopify-changelog",
+      "title": "Mark fulfillments without tracking as delivered",
+      "link": "https://changelog.shopify.com/posts/mark-fulfillments-without-tracking-as-delivered",
+      "publishedAt": "2026-05-03T16:00:00.000Z",
+      "collectedAt": "2026-05-05T00:14:43.091Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p><strong>Mark as Delivered</strong> allows shipping fulfillments without carrier tracking in the Shopify admin to be marked as delivered. This allows merchants who ship with unsupported carriers to keep order delivery status accurate. Mark as delivered lets staff mark a shipping fulfillment as delivered from an order's Fulfilled card, or update multiple orders at once from the Orders page.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "トラッキングなしのフルフィルメントを配達完了としてマーク可能に",
+          "summarizedJa": "Shopify管理画面で、配送業者のトラッキング情報がないフルフィルメントを「配達完了」としてマークできる機能が追加されました。サポートされていない配送業者を使用するマーチャントが、注文の配達ステータスを正確に保つことができます。個別注文のフルフィルメントカードから、または注文ページから複数の注文を一括で配達完了にすることが可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 5,
+            "technicalImportance": 2
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-05-05T00:15:23.359Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 986,
+            "output": 247
+          },
+          "estimatedCost": 0.006663
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "追跡情報のない配送を配達済みに設定",
+          "summarizedJa": "Shopify管理画面で、追跡情報のない配送（フルフィルメント）を「配達済み」として手動でマークできるようになりました。これにより、サポートされていない配送業者を利用しているマーチャントでも、注文の配送ステータスを正確に保つことができます。この機能は、個別の注文のフルフィルメントカードから、または注文一覧ページから複数の注文に対して一括で設定可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-05-05T00:15:30.175Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 699,
+            "output": 157
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-manage-inventory-at-locations-without-activating-them-for-fulfillment",
       "source": "shopify-changelog",
@@ -46,6 +250,60 @@
           "tokenUsage": {
             "input": 842,
             "output": 154
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-add-actor-field-to-subscription-contract-and-billing-attempt-mutations",
+      "source": "developer-changelog",
+      "title": "Add actor field to subscription contract and billing attempt mutations",
+      "link": "https://shopify.dev/changelog/add-actor-field-to-subscription-contract-and-billing-attempt-mutations",
+      "publishedAt": "2026-05-01T16:00:00.000Z",
+      "collectedAt": "2026-05-05T00:14:41.578Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "Customer Account API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>We have introduced a new <code>actor</code> field in subscription mutations to help you track who initiated an action - whether it was the customer, the merchant, or the partner app's automated system.</p>\n<p>You can now include an <code>actor</code> argument when creating billing attempts or editing subscription contracts. This field accepts the following values:</p>\n<ul>\n<li><code>customer</code>: The buyer initiated the action (e.g., clicking &quot;pay now&quot; in a customer portal).</li>\n<li><code>merchant</code>: A merchant or their staff manually initiated the action.</li>\n<li><code>partner</code>: The partner app's automated system initiated the action (e.g., scheduled billing or retry logic).</li>\n</ul>\n<p>This field is available in the following Admin API mutations:</p>\n<p><strong>Billing Attempts:</strong></p>\n<ul>\n<li><code>subscriptionBillingAttemptCreate</code> (via <code>subscriptionBillingAttemptInput.actor</code>)</li>\n<li><code>subscriptionBillingCycleCharge</code></li>\n<li><code>subscriptionBillingCycleBulkCharge</code></li>\n</ul>\n<p><strong>Contract Edits:</strong></p>\n<ul>\n<li><code>subscriptionContractCreate</code></li>\n<li><code>subscriptionContractUpdate</code></li>\n<li><code>subscriptionContractAtomicCreate</code></li>\n<li><code>subscriptionContractProductChange</code></li>\n<li><code>subscriptionBillingCycleContractEdit</code></li>\n</ul>\n<p><strong>Status Updates:</strong></p>\n<ul>\n<li><code>subscriptionContractActivate</code></li>\n<li><code>subscriptionContractPause</code></li>\n<li><code>subscriptionContractCancel</code></li>\n<li><code>subscriptionContractFail</code></li>\n<li><code>subscriptionContractExpire</code></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "サブスクリプション契約と請求試行のミューテーションにactorフィールドを追加",
+          "summarizedJa": "サブスクリプション関連のGraphQL APIミューテーションに、アクションの実行者（顧客、マーチャント、パートナーアプリの自動システム）を追跡するための新しい`actor`フィールドが追加されました。このフィールドは請求試行の作成、契約の編集、ステータス更新など、サブスクリプション関連のすべての主要なミューテーションで利用可能です。これにより、誰がどのようなアクションを実行したかを明確に追跡できるようになります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-05-05T00:15:35.865Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1460,
+            "output": 275
+          },
+          "estimatedCost": 0.008505
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "サブスクリプション契約および請求試行のミューテーションにactorフィールドを追加",
+          "summarizedJa": "Shopifyは、サブスクリプション関連のミューテーションに新しい`actor`フィールドを導入しました。これにより、サブスクリプション契約の変更や請求試行などのアクションを、顧客、マーチャント、またはパートナーアプリの自動システムのうち誰が開始したかを追跡できるようになります。この機能は、サブスクリプション管理における透明性と監査能力を向上させます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-05-05T00:15:44.241Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1003,
+            "output": 163
           },
           "estimatedCost": 0
         }
