@@ -1,6 +1,159 @@
 {
-  "lastUpdated": "2026-05-05T00:14:43.104Z",
+  "lastUpdated": "2026-05-06T00:13:42.485Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-annotations-bring-store-event-context-directly-to-your-analytics",
+      "source": "shopify-changelog",
+      "title": "Annotations bring store event context directly to your analytics",
+      "link": "https://changelog.shopify.com/posts/annotations-bring-store-event-context-directly-to-your-analytics",
+      "publishedAt": "2026-05-05T22:30:00.000Z",
+      "collectedAt": "2026-05-06T00:13:42.472Z",
+      "category": [
+        "Analytics"
+      ],
+      "description": "\n        <p>We now visually display annotations with color-coded markers that show when store events happened alongside your data.</p>\n\n<p>Say your conversion rate drops on a Tuesday. Instead of wondering what happened, you hover over an annotation marker and see that a new theme was published that same day. Click it to open the annotation panel, which shows a full daily breakdown with every product published, every app installed, every event that might explain what you're seeing.</p>\n\n<p>To get started, open any report, turn on <strong>Show annotations</strong> in the Visualization panel, and markers appear on your chart immediately. You can filter down to specific event types like just product publishes or just system events from the annotation panel. Use the arrow buttons to navigate between days and spot patterns across time.</p>\n\n<p>Annotations cover three categories today: <br>\n- Product events (published, unpublished)<br>\n- Store changes (theme published, app installed, app uninstalled)<br>\n- System events (data delays, metric definition changes). </p>\n\n<p>Product annotations are ranked by revenue, so your highest-impact events always surface first. </p>\n\n<p>Annotations are generated from your store activity which means no setup &amp; nothing to configure. </p>\n\n<p><a href=\"https://help.shopify.com/manual/reports-and-analytics/shopify-reports/report-types/custom-reports/annotations\">Learn more about analytics annotations</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "アノテーション機能により、ストアイベントの文脈が分析画面に直接表示されるように",
+          "summarizedJa": "Shopifyのレポート画面で、データの変動とストアイベント（商品公開、テーマ変更、アプリインストールなど）を紐付けて表示する「アノテーション機能」が追加されました。チャート上にカラーマーカーで表示され、コンバージョン率の変化などの原因を視覚的に把握できます。設定不要で自動的に生成され、レポートの可視化パネルから「Show annotations」をオンにするだけで利用できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-05-06T00:13:48.855Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1240,
+            "output": 267
+          },
+          "estimatedCost": 0.007725
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "アナリティクスにストアイベントの注釈機能が追加",
+          "summarizedJa": "Shopifyアナリティクスに、ストアイベント（商品公開、テーマ変更、アプリインストールなど）の発生を色分けされたマーカーで表示する注釈機能が追加されました。これにより、コンバージョン率の変動などのデータ変化の背景にあるイベントを視覚的に把握しやすくなります。設定不要でストア活動から自動生成されるため、データ分析の効率化と問題特定に役立ちます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-05-06T00:13:55.277Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 952,
+            "output": 163
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-flow-see-exactly-what-changed-in-any-workflow-and-roll-it-back",
+      "source": "shopify-changelog",
+      "title": "Flow: View who edited, activated, or deactivated a workflow version",
+      "link": "https://changelog.shopify.com/posts/flow-see-exactly-what-changed-in-any-workflow-and-roll-it-back",
+      "publishedAt": "2026-05-05T16:00:00.000Z",
+      "collectedAt": "2026-05-06T00:13:42.472Z",
+      "category": [
+        "Apps"
+      ],
+      "description": "\n        <p>Every workflow now keeps a version history — edits, activations, and deactivations are logged with the staff member and timestamp. When something breaks, open version history from the workflow detail page to see who changed the workflow and when. </p>\n\n<p>Version history is available on all workflows. Any staff member with access to the Flow app can view the history and browse past versions. </p>\n\n<p>For more information, visit the <a href=\"https://help.shopify.com/manual/shopify-flow/manage/version-history\">documentation</a>. For questions and feedback, visit the <a href=\"https://community.shopify.com/\">Shopify community</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Flow: ワークフローバージョンの編集者、有効化・無効化の履歴を確認可能に",
+          "summarizedJa": "Shopify Flowの全ワークフローにバージョン履歴機能が追加されました。編集、有効化、無効化の操作が、実行したスタッフメンバーとタイムスタンプと共に記録されるようになり、問題発生時に誰がいつ変更したかを確認できます。Flowアプリにアクセス権のあるスタッフメンバーは誰でも履歴を閲覧し、過去のバージョンを参照できます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-05-06T00:14:00.559Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1078,
+            "output": 263
+          },
+          "estimatedCost": 0.007179
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Flow: ワークフローの編集者、有効化/無効化の実行者を確認可能に",
+          "summarizedJa": "Shopify Flowのワークフローにバージョン履歴機能が追加されました。これにより、ワークフローの編集、有効化、無効化を行ったスタッフと日時が記録され、問題発生時に変更履歴を追跡しやすくなります。Flowアプリにアクセスできるスタッフであれば、誰でもこの履歴を確認し、過去のバージョンを閲覧できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-05-06T00:14:05.821Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 791,
+            "output": 154
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-inventory-transfer-webhooks-include-origin-and-destination-location-ids-and-mutation-documentation-clarified",
+      "source": "developer-changelog",
+      "title": "Inventory transfer webhooks include origin and destination location IDs, and mutation documentation clarified",
+      "link": "https://shopify.dev/changelog/inventory-transfer-webhooks-include-origin-and-destination-location-ids-and-mutation-documentation-clarified",
+      "publishedAt": "2026-05-05T16:00:00.000Z",
+      "collectedAt": "2026-05-06T00:13:41.201Z",
+      "category": [
+        "API",
+        "Update",
+        "Admin GraphQL API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><h3>Inventory transfer webhooks: new origin and destination fields</h3>\n<p> Payloads for the following webhook topics now include the source and destination location of the transfer as Location\n Global IDs:</p>\n<ul>\n<li>inventory_transfers/add_items</li>\n<li>inventory_transfers/update_item_quantities</li>\n<li>inventory_transfers/remove_items</li>\n<li>inventory_transfers/ready_to_ship</li>\n<li>inventory_transfers/cancel</li>\n<li>inventory_transfers/complete</li>\n</ul>\n<p> Each payload now includes:</p>\n<ul>\n<li>origin.id — for example, gid://shopify/Location/123</li>\n<li>destination.id — for example, gid://shopify/Location/456</li>\n</ul>\n<p> You can use these IDs to identify where inventory is moving without making an additional API call to fetch the\n transfer.</p>\n<p> The new fields are scoped to subscriptions whose webhook API version includes this change. If your subscription is on\n an earlier version, or the transfer's source or destination is not a Location (for example, a supplier-fulfilled\n transfer), the keys are omitted from the payload entirely rather than returned as null.</p>\n<p> Available now on the unstable API version. See the Inventory transfer webhook reference for details.</p>\n<h3>Clarified documentation for inventoryTransferSetItems</h3>\n<p> We've updated the description on inventoryTransferSetItems to better describe how it actually behaves. The behavior\n itself has not changed.</p>\n<ul>\n<li>inventoryTransferSetItems is an upsert. Only the inventory items you include in lineItems are affected; line items\n already on the transfer that you don't reference are left unchanged. Each inventoryItemId may appear at most once per\n call.</li>\n<li>On a READY_TO_SHIP or IN_PROGRESS transfer, the quantity you pass replaces only the processableQuantity;\n already-shipped or picked quantity is preserved, and the resulting total is the preserved portion plus the provided\n quantity.</li>\n<li>quantity: 0 is only valid on DRAFT transfers, where it leaves a zero-quantity line item on the transfer. To remove\n a line item, use inventoryTransferRemoveItems. On READY_TO_SHIP or IN_PROGRESS transfers, 0 returns an\n INVALID_QUANTITY error.</li>\n</ul>\n<h3>Clarified documentation for inventoryTransferRemoveItems</h3>\n<p> We've also updated the description on inventoryTransferRemoveItems to better describe its behavior:</p>\n<ul>\n<li>The mutation can be called on transfers in DRAFT or READY_TO_SHIP status.</li>\n<li>For each line item you reference, if its full quantity is still unallocated to a shipment, the line item is\n removed; otherwise the line item remains on the transfer with its quantity reduced to the allocated portion. Quantity\n allocated to a shipment — whether the shipment is still a draft, in transit, or already received — is preserved.</li>\n<li>On READY_TO_SHIP transfers, removing items returns the affected reserved quantity to available inventory at the\n origin location.</li>\n<li>Passing an omitted or empty transferLineItemIds is now treated as a no-op and returns the transfer unchanged.</li>\n<li>To change the quantity of a line item without removing it, use inventoryTransferSetItems.</li>\n</ul>\n<h3>Clearer error messages on inventory transfer mutations</h3>\n<p> Several user errors returned by the inventory transfer mutations now have more descriptive messages so that you can\n act on them without consulting additional docs:</p>\n<ul>\n<li>READY_TO_SHIP_TRANSFER_REQUIRES_AT_LEAST_ONE_ITEM — now explains that you cannot remove every line item from a\n READY_TO_SHIP transfer and that, to empty one, you should cancel it instead.</li>\n<li>ITEM_FULLY_SHIPPED — now clarifies that the check fires when the full quantity of the item is allocated to one or\n more shipments (including draft shipments where the item has been picked), and that the error name refers to the\n underlying allocation check rather than physical shipment.</li>\n<li>ITEM_PRESENT_ON_DRAFT_SHIPMENT_WITH_ZERO_QUANTITY — now states plainly that the line item appears on a draft\n shipment with quantity 0.</li>\n</ul>\n<p> Error codes themselves are unchanged, so existing handling in your apps continues to work.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "在庫転送webhookに発送元・発送先ロケーションIDが追加、ミューテーションのドキュメントも明確化",
+          "summarizedJa": "在庫転送関連のwebhookペイロードに発送元・発送先ロケーションのGlobal IDが追加され、追加のAPI呼び出しなしでロケーション情報を取得できるようになりました。また、inventoryTransferSetItemsとinventoryTransferRemoveItemsのドキュメントが実際の挙動に合わせて明確化され、エラーメッセージもより分かりやすくなりました。動作自体に変更はありませんが、在庫管理機能を実装している開発者にとって有用な改善です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-05-06T00:14:12.165Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2066,
+            "output": 290
+          },
+          "estimatedCost": 0.010548
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "在庫移動ウェブフックに発着ロケーションIDが追加され、ミューテーションのドキュメントが明確化",
+          "summarizedJa": "Shopifyの在庫移動に関するウェブフックに、移動元と移動先のロケーションIDが直接含まれるようになり、外部システムとの連携時に追加のAPI呼び出しなしで在庫の動きを追跡できるようになります。また、在庫移動を操作するAPI（ミューテーション）の挙動に関するドキュメントが明確化され、エラーメッセージも詳細になったため、開発者はより正確で堅牢な在庫管理システムを構築できるようになります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-05-06T00:14:19.370Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1596,
+            "output": 184
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-apply-discounts-to-items-on-the-refund-page",
       "source": "shopify-changelog",
@@ -360,6 +513,56 @@
       }
     },
     {
+      "id": "shopify-changelog-posts-manage-all-your-pos-settings-in-one-place-with-the-new-pos-editor",
+      "source": "shopify-changelog",
+      "title": "Manage all your POS settings in one place with the new POS Editor",
+      "link": "https://changelog.shopify.com/posts/manage-all-your-pos-settings-in-one-place-with-the-new-pos-editor",
+      "publishedAt": "2026-04-30T16:00:00.000Z",
+      "collectedAt": "2026-05-06T00:13:42.472Z",
+      "category": [
+        "Pos"
+      ],
+      "description": "\n        <p>No more hopping between settings pages. The new POS Editor brings payments, receipts, tips, customer info, and apps into a single, familiar editor with a cleaner layout and faster navigation. </p>\n\n<p><strong>What's changing:</strong><br>\n- <strong>One editor, one navigation</strong>. Payments, offline payments, local payment methods, app extensions, customer info, and receipt settings now live alongside Smart grid, Lock screen, Customer display, and Receipts - all in the POS Editor.<br>\n- <strong>Cleaner payments experience.</strong> Turn a payment method on or off with a visibility toggle right where you're designing the checkout. Shop Pay, Tap to Pay, and local payment methods display their setup status inline; entity-level settings deep-link to the right admin surface.<br>\n- <strong>Global settings, surfaced.</strong> Staff attribution, required checkout information, and customer receipt selection are grouped under a Global settings section for faster access.<br>\n- <strong>Updated app management.</strong> Enabling an app in the editor now activates its POS block and action extensions in one step - no second trip to settings.<br>\n- <strong>New split-panel navigation.</strong> The editor uses the same layout as the Online Store editor, so changes you make in a sub-panel stay in context with what you're previewing.</p>\n\n<p><strong>What you need to do:</strong><br>\nNothing! The updated editor rolls out automatically over the coming weeks. Existing permissions still apply. Staff who can manage payment providers or POS settings today will see the new editor with the same access.</p>\n\n<p>Learn more about customizing your POS with the POS Editor in the <a href=\"https://help.shopify.com/en/manual/sell-in-person/shopify-pos/customize-pos/pos-editor\">Help Center</a>. </p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "新しいPOSエディターで全てのPOS設定を一か所で管理",
+          "summarizedJa": "Shopify POSの設定画面が刷新され、決済、レシート、チップ、顧客情報、アプリなどの設定が単一のエディター内で管理できるようになりました。オンラインストアエディターと同様の分割パネルナビゲーションを採用し、設定ページ間の移動が不要になり、より直感的で効率的な設定が可能になります。自動的にロールアウトされ、既存の権限設定はそのまま適用されます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-05-06T00:14:25.478Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1355,
+            "output": 258
+          },
+          "estimatedCost": 0.007935
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "新しいPOSエディターでPOS設定をすべて一箇所で管理",
+          "summarizedJa": "新しいPOSエディターが導入され、支払い、レシート、顧客情報、アプリなど、すべてのPOS設定が一箇所で管理できるようになります。これにより、よりクリーンなレイアウトと高速なナビゲーションで設定作業が効率化され、日本のマーチャントはPOSのカスタマイズをより簡単に行えるようになります。特別な対応は不要で、自動的に展開されます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-05-06T00:14:32.296Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1042,
+            "output": 159
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
       "id": "developer-changelog-changelog-analytics-metric-targets-now-available-in-the-graphql-admin-api",
       "source": "developer-changelog",
       "title": "Analytics metric targets now available in the GraphQL Admin API",
@@ -406,6 +609,56 @@
           "tokenUsage": {
             "input": 1824,
             "output": 177
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-shopify-balance-domestic-wire-transfers",
+      "source": "shopify-changelog",
+      "title": "Shopify Balance Domestic Wire Transfers ",
+      "link": "https://changelog.shopify.com/posts/shopify-balance-domestic-wire-transfers",
+      "publishedAt": "2026-04-29T16:00:00.000Z",
+      "collectedAt": "2026-05-06T00:13:42.472Z",
+      "category": [
+        "Balance"
+      ],
+      "description": "\n        <p>We've added the capability for US merchants to initiate domestic wire transfers using Shopify Balance. This improvement allows business owners to manage their payments more efficiently and securely. Merchants can now send US domestic wire transfers to pay thier suppliers, contractors, vendors etc. Learn more about enabling US domestic wire transfers in the <a href=\"https://help.shopify.com/en/manual/finance/shopify-balance/managing-account/transfers\">Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify Balance 国内電信送金機能",
+          "summarizedJa": "米国のマーチャント向けに、Shopify Balanceから国内電信送金を行える機能が追加されました。サプライヤーや契約業者、ベンダーへの支払いをより効率的かつ安全に管理できるようになります。この機能は米国内の電信送金に対応しています。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 5,
+          "analyzedAt": "2026-05-06T00:14:36.421Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1011,
+            "output": 193
+          },
+          "estimatedCost": 0.005928
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify Balance 米国内電信送金",
+          "summarizedJa": "Shopify Balanceに、米国のマーチャントが米国内の電信送金を開始できる機能が追加されました。これにより、サプライヤーや請負業者などへの支払いをより効率的かつ安全に行うことができます。ただし、この機能は現在のところ米国マーチャント限定です。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 3
+          },
+          "totalScore": 6,
+          "analyzedAt": "2026-05-06T00:14:42.092Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 724,
+            "output": 133
           },
           "estimatedCost": 0
         }
