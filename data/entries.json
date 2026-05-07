@@ -1,6 +1,161 @@
 {
-  "lastUpdated": "2026-05-06T00:13:42.485Z",
+  "lastUpdated": "2026-05-07T00:14:07.951Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-target-discounts-to-specific-markets",
+      "source": "developer-changelog",
+      "title": "Target discounts to specific markets ",
+      "link": "https://shopify.dev/changelog/target-discounts-to-specific-markets",
+      "publishedAt": "2026-05-06T16:00:00.000Z",
+      "collectedAt": "2026-05-07T00:14:06.519Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API"
+      ],
+      "description": " <div class=\"\"><p>We've introduced <code>markets</code> as a new option in <code>DiscountContextInput</code>, enabling you to target discounts to specific regional markets, retail locations, or B2B company locations. This option can be used alongside existing eligibility options such as <code>all</code>, <code>customerSegments</code>, and <code>customers</code>.</p>\n<p>You can now set market eligibility for all discount types, including:</p>\n<ul>\n<li>Basic, BXGY, App, and Free Shipping discounts (both automatic and code-based).</li>\n<li>Note that eligibility types are mutually exclusive—you can target either markets OR customer segments, but not both simultaneously.</li>\n</ul>\n<p><strong>What you can do:</strong></p>\n<ul>\n<li>Assign market eligibility to a discount by using <code>markets</code> in <code>DiscountContextInput</code> when creating or updating a discount.</li>\n<li>Query the <code>discounts</code> and <code>discountsCount</code> fields on a <code>Market</code> to view the list of discount customizations for that market.</li>\n<li>Filter discounts by any market eligibility using <code>context:market</code> or by specific markets using <code>market_ids</code> in <code>discountNodes</code>.</li>\n</ul>\n<p><strong>What you need to know:</strong></p>\n<ul>\n<li>Discounts do not inherit across different market types (e.g., from regional to B2B or retail). When you assign a discount to a regional market, it automatically applies to sub-markets of the same type (e.g., from &quot;North America&quot; to &quot;Canada&quot;).</li>\n<li>If you are using API versions prior to 2026-07, discounts with market eligibility will be filtered out, as these versions cannot represent them (both in node queries and specific discounts by ID).</li>\n</ul>\n<p>For more information, refer to the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/input-objects/discountcontextinput#fields-markets\" target=\"_blank\" class=\"body-link\">Admin GraphQL API documentation</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "特定のマーケットをターゲットにした割引設定が可能に",
+          "summarizedJa": "Admin GraphQL APIの`DiscountContextInput`に新たに`markets`オプションが追加され、地域市場、実店舗、B2B企業拠点など特定のマーケットに対して割引を設定できるようになりました。すべての割引タイプ（ベーシック、BXGY、アプリ、送料無料）で利用可能ですが、マーケットターゲティングと顧客セグメントの同時指定はできません。API version 2026-07以前では、マーケット対象の割引は表示されないため注意が必要です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-05-07T00:14:13.903Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1468,
+            "output": 274
+          },
+          "estimatedCost": 0.008514
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "割引の市場別ターゲティング機能",
+          "summarizedJa": "Shopifyの割引機能が強化され、Admin GraphQL APIを通じて、割引の対象を特定の地域市場、実店舗、またはB2B企業ロケーションに設定できるようになりました。これにより、マーチャントはよりきめ細やかなプロモーション戦略を展開でき、パートナーは市場に特化した割引管理ソリューションを構築・提供することが可能になります。ただし、割引の対象は市場または顧客セグメントのいずれか一方のみであり、APIバージョン2026-07以前では市場別割引が正しく表示されない点に注意が必要です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-05-07T00:14:20.096Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1084,
+            "output": 187
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-app-deployment-in-cicd-is-now-available-for-all-apps",
+      "source": "developer-changelog",
+      "title": "App deployment in CI/CD is now available for all apps",
+      "link": "https://shopify.dev/changelog/app-deployment-in-cicd-is-now-available-for-all-apps",
+      "publishedAt": "2026-05-06T16:00:00.000Z",
+      "collectedAt": "2026-05-07T00:14:06.519Z",
+      "category": [
+        "Action Required",
+        "Tools",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>App deployment in CI/CD is now available for all apps through app automation tokens on the Dev Dashboard. These tokens offer app-scoped authentication, allowing you to use the latest Shopify CLI to automate app releases in GitHub Workflows and similar tools. App-scoped authentication ensures that each token is specific to an individual app, enhancing security and control.</p>\n<p>To deploy your app using an app automation token, set the token as an environment variable and execute the deployment command:</p>\n<pre><code class=\"language-bash\">export SHOPIFY_APP_AUTOMATION_TOKEN=&quot;your-app-automation-token&quot;\nshopify app deploy --config production --allow-updates\n</code></pre>\n<p>App automation tokens replace the CLI tokens previously generated on the Partner Dashboard. While existing CLI tokens will remain functional until they expire, transitioning to app automation tokens is recommended for enhanced security and functionality. <a href=\"https://shopify.dev/docs/apps/build/dev-dashboard/app-automation-tokens#migrate-from-partner-dashboard-tokens\" target=\"_blank\" class=\"body-link\">Learn more about migrating to app automation tokens</a>.</p>\n<p>For further information on app automation tokens, visit Shopify.dev:</p>\n<ul>\n<li><a href=\"https://shopify.dev/docs/apps/build/dev-dashboard/app-automation-tokens\" target=\"_blank\" class=\"body-link\">Managing app automation tokens</a></li>\n<li><a href=\"https://shopify.dev/docs/apps/launch/deployment/deploy-in-ci-cd-pipeline\" target=\"_blank\" class=\"body-link\">Deploy app components in a CD pipeline</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "CI/CDでのアプリデプロイメントが全アプリで利用可能に",
+          "summarizedJa": "開発ダッシュボードで生成できるアプリ自動化トークンを使用して、GitHub Workflowなどの自動化ツールでアプリのデプロイメントが可能になりました。アプリごとに認証トークンが発行されるため、セキュリティと管理が強化されます。パートナーダッシュボードで生成された既存のCLIトークンは有効期限まで使用できますが、新しいアプリ自動化トークンへの移行が推奨されています。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-05-07T00:14:25.403Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1323,
+            "output": 263
+          },
+          "estimatedCost": 0.007914000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "CI/CDでのアプリデプロイがすべてのアプリで利用可能に",
+          "summarizedJa": "Shopifyは、Dev Dashboardのアプリ自動化トークンを通じて、すべてのアプリでCI/CD環境でのデプロイを可能にしました。これにより、開発者はShopify CLIとGitHub Workflowsなどを利用してアプリのリリースプロセスを自動化できます。セキュリティと機能向上のため、既存のCLIトークンから新しいアプリ自動化トークンへの移行が推奨されています。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-05-07T00:14:31.894Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1014,
+            "output": 157
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-more-admin-intents-now-support-settings",
+      "source": "developer-changelog",
+      "title": "More admin intents now support Settings",
+      "link": "https://shopify.dev/changelog/more-admin-intents-now-support-settings",
+      "publishedAt": "2026-05-06T12:30:00.000Z",
+      "collectedAt": "2026-05-07T00:14:06.519Z",
+      "category": [
+        "API",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>Seven new Settings intents let apps open editors for notifications, payment capture, gift cards, delivery profiles, and business details. This builds on the <a href=\"https://shopify.dev/changelog/admin-intents-now-support-settings\" target=\"_blank\" class=\"body-link\">initial Settings intents release</a> from March.</p>\n<p>With a single API call, your app opens the relevant Settings section as a contextual overlay and scrolls the merchant directly to the field they need to edit.</p>\n<h2>New intents</h2>\n<h3>Notifications</h3>\n<ul>\n<li><code>edit:settings/NotificationsSenderEmail</code></li>\n<li><code>edit:settings/NotificationsStaff</code></li>\n</ul>\n<h3>Payments and gift cards</h3>\n<ul>\n<li><code>edit:settings/PaymentCaptureMethod</code></li>\n<li><code>edit:settings/GiftCardExpiration</code></li>\n</ul>\n<h3>Delivery</h3>\n<ul>\n<li><code>create:shopify/DeliveryProfile</code></li>\n<li><code>edit:shopify/DeliveryProfile</code></li>\n</ul>\n<h3>Business</h3>\n<ul>\n<li><code>edit:settings/BusinessDetails</code></li>\n</ul>\n<p>Each intent opens the relevant Settings page in a page stack and scrolls the merchant directly to the targeted card, following the pattern established in the initial release.</p>\n<h2>Resources</h2>\n<ul>\n<li>Read up on <a href=\"https://shopify.dev/docs/apps/build/admin/admin-intents\" target=\"_blank\" class=\"body-link\">admin intents</a></li>\n<li>Learn more about <a href=\"https://shopify.dev/docs/apps/build/admin/admin-intents#supported-resources\" target=\"_blank\" class=\"body-link\">supported Shopify resources</a></li>\n<li>Leave us feedback in the <a href=\"https://community.shopify.dev/\" target=\"_blank\" class=\"body-link\">Shopify Developer Community</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "管理画面インテントで設定項目のサポートが拡大",
+          "summarizedJa": "アプリから管理画面の設定ページを直接開けるadmin intentsに、7つの新しい設定項目が追加されました。通知、支払い、ギフトカード、配送プロファイル、ビジネス詳細の各設定に、1回のAPI呼び出しでマーチャントを該当箇所まで誘導できるようになります。これにより、アプリ開発者はよりスムーズなユーザー体験を提供できます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-05-07T00:14:37.073Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1454,
+            "output": 245
+          },
+          "estimatedCost": 0.008036999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "管理画面インテントによる設定機能のサポートが拡大",
+          "summarizedJa": "Shopifyアプリが管理画面の設定項目を直接開けるAdmin Intentsに、新たに7つの機能が追加されました。これにより、アプリから通知、支払い、ギフトカード、配送プロファイル、ビジネス詳細などの設定エディタを直接呼び出し、マーチャントを編集したいフィールドへスムーズに誘導できるようになります。マーチャントは設定変更の利便性が向上し、パートナーはより統合されたアプリ体験を提供できるようになります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-05-07T00:14:43.414Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1026,
+            "output": 164
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-annotations-bring-store-event-context-directly-to-your-analytics",
       "source": "shopify-changelog",
@@ -1347,6 +1502,64 @@
           "tokenUsage": {
             "input": 883,
             "output": 166
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-ship-and-pickup-in-one-order-feature-preview",
+      "source": "developer-changelog",
+      "title": "Ship and pickup in one order now available in feature preview",
+      "link": "https://shopify.dev/changelog/ship-and-pickup-in-one-order-feature-preview",
+      "publishedAt": "2026-04-23T16:00:00.000Z",
+      "collectedAt": "2026-05-07T00:14:06.519Z",
+      "category": [
+        "Action Required",
+        "API",
+        "New",
+        "Admin Extensions",
+        "Admin GraphQL API",
+        "Checkout UI",
+        "Customer Accounts",
+        "Functions",
+        "Storefront GraphQL API"
+      ],
+      "description": " <div class=\"\"><p>Shopify Plus and Enterprise merchants will soon be able to enable a single checkout experience where customers can choose both shipping and store pickup within the same order. Previously, customers had to place separate orders for each delivery method.</p>\n<p>This change impacts how delivery and fulfillment information flows through checkout. If your app reads, calculates, or displays delivery and fulfillment information, the testing window is open now. Enable <a href=\"https://dev.shopify.com/dashboard\" target=\"_blank\" class=\"body-link\">feature preview</a> and make the necessary updates before this rolls out to merchants.</p>\n<p>Apps that have not been updated may cause checkout errors, incorrect calculations, or failed fulfillment routing, impacting the merchant's checkout experience.</p>\n<p><strong>What changed</strong>\nWhen a merchant has both shipping and local pickup enabled, customers can now choose between store pickup or shipping for each item in their cart during checkout. This creates a single order with multiple fulfillment orders: one for shipping, one for pickup.</p>\n<p>There are no new API fields or breaking schema changes. However, existing API fields now return data in new combinations:</p>\n<ul>\n<li>Checkouts can have multiple deliveryGroups: each group represents how different items are to be fulfilled.</li>\n<li>Orders can contain fulfillment orders with different delivery methods (SHIPPING and PICK_UP) within the same order.</li>\n<li>Fulfillment orders include a delivery_method field that identifies the fulfillment method for each group.</li>\n</ul>\n<p><strong>What you need to do</strong></p>\n<ol>\n<li>Review the <a href=\"https://cdn.shopify.com/static/checkout/Dev%20Feature%20Preview%20Testing%20Guide%20(2).pdf\" target=\"_blank\" class=\"body-link\">testing guide</a>. </li>\n<li>Audit your app's assumptions. <strong>Identify any logic that assumes a single delivery method per order.</strong></li>\n<li>Test your app in <a href=\"https://dev.shopify.com/dashboard\" target=\"_blank\" class=\"body-link\">feature preview</a><ul>\n<li>Go to &quot;Dev stores&quot; and create a dev store.</li>\n<li>Make sure to select &quot;Plus&quot; under Shopify Plan and &quot;Ship and pickup&quot; under Test a feature preview on this store.</li>\n</ul>\n</li>\n<li>Verify your app handles the order correctly end-to-end. <ul>\n<li>Place a test order with both shipped and pickup items. </li>\n<li>Ensure your app reads the delivery_method field on fulfillment orders and routes items accordingly.</li>\n</ul>\n</li>\n<li>If your app update changes merchant-facing behavior or workflows, communicate those changes to your merchants as soon as possible.</li>\n</ol>\n<p>Visit the <a href=\"https://community.shopify.dev/t/ship-and-pickup-in-one-order-is-coming-test-now-in-feature-preview/33009\" target=\"_blank\" class=\"body-link\">developer forum</a> for questions and updates. </p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "1つの注文で配送と店舗受取が可能に - 機能プレビュー開始",
+          "summarizedJa": "Shopify PlusおよびEnterpriseマーチャント向けに、1つの注文内で商品ごとに配送と店舗受取を選択できる新機能がプレビュー公開されました。配送・フルフィルメント情報を扱うアプリは、チェックアウトエラーや計算ミスを防ぐため、機能プレビュー環境でテストし必要な対応を行う必要があります。注文ごとに単一の配送方法を前提としているロジックの見直しが必須です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 17,
+          "analyzedAt": "2026-05-07T00:14:49.214Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1703,
+            "output": 274
+          },
+          "estimatedCost": 0.009219000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "1つの注文で配送と店舗受け取りが可能に（機能プレビュー）",
+          "summarizedJa": "Shopify PlusおよびEnterpriseマーチャント向けに、1つの注文で配送と店舗受け取りを同時に選択できる機能がプレビュー公開されました。これにより、顧客は異なる配送方法の商品をまとめて購入できるようになります。この変更は、配送およびフルフィルメント情報の流れに影響を与えるため、関連するアプリを使用しているマーチャントや、アプリを開発しているパートナーは、テストと対応が必要です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 17,
+          "analyzedAt": "2026-05-07T00:14:56.688Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1333,
+            "output": 163
           },
           "estimatedCost": 0
         }
