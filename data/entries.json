@@ -1,6 +1,312 @@
 {
-  "lastUpdated": "2026-05-07T00:14:07.951Z",
+  "lastUpdated": "2026-05-08T00:14:56.790Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-benchmark-comparisons-in-analytics-will-be-removed-on-may-19th",
+      "source": "shopify-changelog",
+      "title": "Benchmark Comparisons in Analytics will be removed on May 19th",
+      "link": "https://changelog.shopify.com/posts/benchmark-comparisons-in-analytics-will-be-removed-on-may-19th",
+      "publishedAt": "2026-05-07T20:30:00.000Z",
+      "collectedAt": "2026-05-08T00:14:56.783Z",
+      "category": [
+        "Analytics"
+      ],
+      "description": "\n        <p>Benchmark Comparison data in Shopify Analytics will no longer show new data, and the feature will be fully removed on <strong>May 19, 2026</strong>.</p>\n\n<p>Alternatives: Use <a href=\"https://help.shopify.com/manual/reports-and-analytics/shopify-reports/report-types/targets\">Metric Targets</a> to set and track your own performance targets directly in your reports, or ask Sidekick for personalized guidance on your store's performance.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Analyticsのベンチマーク比較機能が5月19日に廃止されます",
+          "summarizedJa": "Shopify Analyticsのベンチマーク比較機能は、2026年5月19日に完全に廃止されます。代替手段として、レポート内で独自のパフォーマンス目標を設定できる「指標ターゲット」機能、またはストアのパフォーマンスに関するパーソナライズされたガイダンスを提供するSidekickの活用が推奨されています。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-05-08T00:15:02.470Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1040,
+            "output": 232
+          },
+          "estimatedCost": 0.0066
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "アナリティクスにおけるベンチマーク比較機能が5月19日に削除されます",
+          "summarizedJa": "Shopifyアナリティクスで提供されていたベンチマーク比較機能は、2026年5月19日をもって完全に削除されます。この日以降、新しいデータは表示されなくなります。代替機能として、レポート内で目標設定・追跡ができる「メトリックターゲット」や、ストアのパフォーマンスに関する個別ガイダンスを提供する「Sidekick」の利用が推奨されています。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-05-08T00:15:09.576Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 751,
+            "output": 160
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-bots-and-agents-should-identify-themselves-via-web-bot-auth",
+      "source": "developer-changelog",
+      "title": "Bots and agents should identify themselves via Web Bot Auth",
+      "link": "https://shopify.dev/changelog/bots-and-agents-should-identify-themselves-via-web-bot-auth",
+      "publishedAt": "2026-05-07T19:00:00.000Z",
+      "collectedAt": "2026-05-08T00:14:55.636Z",
+      "category": [
+        "Action Required",
+        "Platform",
+        "Update"
+      ],
+      "description": " <div class=\"\"><h3>What's changing</h3>\n<p>Shopify now applies stricter rate limits to bots and agents that access the Storefront API and Shopify-hosted online store pages. Bots and agents that don't sign their requests are subject to the strictest limits. To qualify for higher rate limits, operators should sign their requests with Web Bot Auth. For more details, see <a href=\"https://shopify.dev/docs/api/usage/limits#storefront-api-rate-limits\" target=\"_blank\" class=\"body-link\">Storefront rate limits</a>.</p>\n<h3>What you should do</h3>\n<p>If you operate a bot or agent accessing Shopify storefronts, sign your requests using <a href=\"https://datatracker.ietf.org/doc/draft-meunier-web-bot-auth-architecture/\" target=\"_blank\" class=\"body-link\">Web Bot Auth</a>. To get started, review the Web Bot Auth architecture and Cloudflare's <a href=\"https://developers.cloudflare.com/bots/concepts/bot/verified-bots/web-bot-auth/\" target=\"_blank\" class=\"body-link\">implementation guide</a> — for context only, you do not need to enroll with Cloudflare. </p>\n<h4>Higher access tiers</h4>\n<p>If you require higher rate limits than those provided to Web Bot Auth traffic, please contact us <a href=\"https://forms.gle/V88RD31uAVirqE4e9\" target=\"_blank\" class=\"body-link\">through this form</a>.</p>\n<h4>Shopify Merchants</h4>\n<p>Shopify merchants who want to <a href=\"https://help.shopify.com/en/manual/promoting-marketing/seo/crawling-your-store\" target=\"_blank\" class=\"body-link\">crawl their own stores</a> can find ready-to-use Web Bot Auth signatures in the Shopify admin.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "ボットとエージェントはWeb Bot Authによる識別が必要に",
+          "summarizedJa": "Shopifyは、Storefront APIやオンラインストアにアクセスするボットやエージェントに対して、より厳格なレート制限を適用するようになりました。Web Bot Authでリクエストに署名していないボット・エージェントには最も厳しい制限が適用され、より高いレート制限を受けるにはWeb Bot Authによる署名が必要です。マーチャントが自身のストアをクロールする場合は、Shopify管理画面ですぐに使えるWeb Bot Auth署名が提供されています。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-05-08T00:15:15.919Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1403,
+            "output": 264
+          },
+          "estimatedCost": 0.008169
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "ボット・エージェントはWeb Bot Authで自己識別を",
+          "summarizedJa": "Shopifyは、Storefront APIやオンラインストアページにアクセスするボットやエージェントに対し、レート制限を強化しました。より高いレート制限を適用されるには、Web Bot Authを使用してリクエストに署名する必要があります。パートナーは、自身が運用するボットやエージェントにWeb Bot Authを導入することで、サービス品質への影響を軽減できます。マーチャントは、自身のストアをクロールする際にShopify管理画面でWeb Bot Auth署名を利用できます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-05-08T00:15:23.753Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1057,
+            "output": 180
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-product-variant-publishing",
+      "source": "shopify-changelog",
+      "title": "Product Variant Publishing",
+      "link": "https://changelog.shopify.com/posts/product-variant-publishing",
+      "publishedAt": "2026-05-07T17:00:00.000Z",
+      "collectedAt": "2026-05-08T00:14:56.783Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>We've just released variant-level publishing for sales channels and catalogs. This helps merchants control exactly which product variants are visible to buyers in each channel or catalog without having to delete variants or create duplicate products. </p>\n\n<p>You can now unpublish individual variants from the product details page, the variant details page, or the bulk editor — keeping the variant and its history in your admin while hiding it from storefronts on the channels you choose. Use it to stage upcoming variants before launch by creating new variants in the unpublished state. Retire discontinued options, restrict region-specific variants like plug types to the right markets, offer bulk-quantity variants only to B2B customers, or keep limited-edition variants exclusive to your online store. </p>\n\n<p><a href=\"https://help.shopify.com/en/manual/products/variants/publish-variants\">Learn more about variant publishing</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "商品バリエーションの公開設定機能",
+          "summarizedJa": "販売チャネルやカタログごとに、商品バリエーション単位で公開・非公開を設定できる機能がリリースされました。バリエーションを削除したり商品を複製することなく、チャネルごとに表示する在庫を細かくコントロールできるようになり、地域限定商品やB2B専用バリエーション、発売前の新商品準備などに活用できます。商品詳細ページ、バリエーション詳細ページ、または一括編集画面から個別に設定可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-05-08T00:15:29.138Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1092,
+            "output": 261
+          },
+          "estimatedCost": 0.007191
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "商品バリアントの公開設定",
+          "summarizedJa": "Shopifyは、販売チャネルやカタログごとに商品バリアントの公開・非公開を個別に設定できる機能をリリースしました。これにより、マーチャントはバリアントを削除したり重複商品を作成することなく、特定のバリアントを非表示にしたり、B2B顧客専用にしたり、地域限定で公開したりすることが可能になります。新商品の準備、廃盤商品の管理、特定の市場への限定販売など、柔軟な商品運用を強力にサポートします。",
+          "scores": {
+            "merchantImpact": 5,
+            "partnerImpact": 4,
+            "japanRelevance": 5,
+            "technicalImportance": 4
+          },
+          "totalScore": 18,
+          "analyzedAt": "2026-05-08T00:15:36.363Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 808,
+            "output": 170
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-assign-discounts-to-specific-markets",
+      "source": "shopify-changelog",
+      "title": "Assign discounts to specific markets",
+      "link": "https://changelog.shopify.com/posts/assign-discounts-to-specific-markets",
+      "publishedAt": "2026-05-07T16:00:00.000Z",
+      "collectedAt": "2026-05-08T00:14:56.783Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>Assign discounts to specific markets and control exactly where they apply. Run an online-only flash sale without it hitting your retail locations. Create a wholesale offer that only reaches your B2B buyers. No workarounds needed.</p>\n\n<p>What's new:<br>\n- <strong>Eligibility selector on the Discount Details page</strong>: Assign any code-based or automatic discount to one or more markets<br>\n- <strong>Market and customer filters on the discounts list</strong>: Filter by market, customer segment, or specific customers to find what's active where<br>\n- <strong>Discounts on the Market Details page</strong>: See all discounts assigned to a market at a glance. Preview how discounts resolve in context with the View-As mode in Markets graph view.</p>\n\n<p>Discounts by Market is available for all merchants on Basic plans and above who are on the new version of Markets. Learn more in our <a href=\"https://help.shopify.com/en/manual/discounts/managing-discounts#eligibility\">help documentation</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "特定のマーケットにディスカウントを割り当てる機能",
+          "summarizedJa": "ディスカウント（割引）を特定のマーケットに割り当てて、適用範囲を正確にコントロールできるようになりました。オンライン限定のフラッシュセールや、B2Bバイヤー専用の卸売オファーなどを、回避策なしで簡単に作成できます。Basicプラン以上で新バージョンのMarketsを利用しているマーチャントが対象です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-05-08T00:15:41.201Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1152,
+            "output": 235
+          },
+          "estimatedCost": 0.006980999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "割引の市場別適用",
+          "summarizedJa": "Shopifyの新しい機能により、割引を特定の市場に限定して適用できるようになりました。これにより、オンライン限定のセールやB2B向けの卸売割引など、より戦略的なプロモーションが可能になります。割引詳細ページでの市場選択、割引リストでのフィルタリング、市場詳細ページでの割引一覧表示など、管理機能も強化されています。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-05-08T00:15:48.495Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 852,
+            "output": 139
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-inventory-adjustment-workflow-now-with-full-change-tracking",
+      "source": "shopify-changelog",
+      "title": "Inventory adjustment workflow now with full change tracking",
+      "link": "https://changelog.shopify.com/posts/inventory-adjustment-workflow-now-with-full-change-tracking",
+      "publishedAt": "2026-05-07T16:00:00.000Z",
+      "collectedAt": "2026-05-08T00:14:56.783Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>When you adjust inventory in your admin, you’ll now see two modes in the popover:</p>\n\n<ul>\n<li><strong>\"Set To\"</strong> - Enter your quantity. Shopify tracks the change automatically.</li>\n<li><strong>\"Adjust By\"</strong> - Pick a source and destination for full movement tracking.</li>\n</ul>\n\n<p>Every adjustment, regardless of mode, now records the source, destination, who made the change, and when. You can view your full adjustment history any time. </p>\n\n<p>The Bulk Editor is unchanged and you can keep using it to set available quantities directly, no source or destination required. </p>\n\n<p>To learn more about these changes in detail, visit our help <a href=\"https://help.shopify.com/manual/products/inventory/adjusting-inventory/adjusting-inventory-quantities\">documentation</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "在庫調整ワークフローに完全な変更履歴追跡機能を追加",
+          "summarizedJa": "管理画面での在庫調整時に、「数量を設定」と「数量を調整」の2つのモードが利用可能になりました。すべての調整で、調整元・調整先・実行者・実行日時が自動記録され、完全な調整履歴をいつでも確認できるようになります。一括編集機能は従来通り、調整元・調整先の指定なしで利用可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-05-08T00:15:53.548Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1115,
+            "output": 237
+          },
+          "estimatedCost": 0.0069
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "在庫調整ワークフローに完全な変更履歴追跡機能が追加",
+          "summarizedJa": "Shopify管理画面での在庫調整ワークフローが改善され、「設定値に設定 (Set To)」と「調整量で調整 (Adjust By)」の2つのモードが導入されました。「調整量で調整」モードでは、在庫の移動元と移動先を指定して詳細な追跡が可能です。これにより、すべての在庫調整について、変更者、日時、移動元、移動先が記録され、完全な履歴を確認できるようになります。なお、一括編集機能はこれまで通り利用でき、直接数量を設定可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-05-08T00:16:00.686Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 820,
+            "output": 186
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-publish-and-unpublish-product-variants-independently-from-product",
+      "source": "developer-changelog",
+      "title": "Publish and unpublish product variants independently from product",
+      "link": "https://shopify.dev/changelog/publish-and-unpublish-product-variants-independently-from-product",
+      "publishedAt": "2026-05-07T16:00:00.000Z",
+      "collectedAt": "2026-05-08T00:14:55.636Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "Storefront GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p><code>ProductVariant</code> is now a <code>Publishable</code>. Variants can be published or unpublished per publication (channel or catalog) in API version 2026-07, giving merchants — and your apps — fine-grained control over where each variant is visible without deleting variants, duplicating products, or hiding them via storefront code.</p>\n<p>This is a non-breaking, additive change:</p>\n<ul>\n<li>Product-level publishing is unchanged and still takes precedence. A product must be active and published to a channel for any of its variants to render there.  </li>\n<li>Variants default to published (opt-out model). Existing apps that publish at the product level continue to work without modification.  </li>\n<li>Variants can be created in an unpublished state in order to prevent early exposure to buyers.</li>\n</ul>\n<h4>What's new in the Admin GraphQL API</h4>\n<ul>\n<li><code>publishablePublish</code> and <code>publishableUnpublish</code> now accept <code>ProductVariant</code> IDs.  </li>\n<li><code>ProductVariant</code> now adheres to the <code>Publishable</code> interface, similar to <code>Product</code> and  <code>Collection</code>, which includes <code>resourcePublicationv2</code> and <code>publishedOnPublication</code>  </li>\n<li>Product feed webhooks fire with a product update for variant added and deleted when variants are published to the feed’s channel.  </li>\n<li><code>variant_publication/create/update/delete</code> webhooks are still under development and will be shipped imminently.</li>\n</ul>\n<h4>What this means for your app</h4>\n<ul>\n<li>Channel apps using product feeds should not require any changes to work - the product feed adds and removes variants to the product and an incremental sync webhook is triggered.  </li>\n<li>Channels or pseudo channels that do not use product feeds and rely on reading publication state via the admin graphql API should implement support by reading the respective publication state of variants via <code>ProductVariant.resourcePublicationsv2</code>.  </li>\n<li>Apps that create variants after product publication occurs: new variants default to published in all of the parent product's publications. If your app plans to create variants in an unpublished state,  <code>productSet</code> and <code>productVariantBulkCreate</code> both include a <code>variant.published: false</code>  field to create variants as unpublished.  </li>\n<li>Apps that publish products: no changes required. Continue calling publishablePublish on products as before. Consider implementing variant publishing support if unpublishing variants is relevant to your apps workflows.</li>\n</ul>\n<p><a href=\"https://shopify.dev/docs/apps/build/sales-channels/product-publishing#variant-level-publishing\" target=\"_blank\" class=\"body-link\">Read the developer guide →</a>  </p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "商品バリエーションを商品本体とは独立して公開・非公開にできるように",
+          "summarizedJa": "API version 2026-07から、商品バリエーション単位で販売チャネルやカタログごとに公開・非公開を設定できるようになりました。これにより、バリエーションを削除したり商品を複製することなく、特定のチャネルで特定のバリエーションのみを表示する細かな制御が可能になります。既存の商品レベルでの公開機能は変更なく、バリエーションはデフォルトで公開状態となるため、既存アプリへの影響はありません。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-05-08T00:16:06.209Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1668,
+            "output": 269
+          },
+          "estimatedCost": 0.009038999999999998
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "商品から独立したバリアントの公開・非公開管理",
+          "summarizedJa": "Shopifyは、商品バリアントを商品本体とは独立して、販売チャネルごとに公開・非公開できるようになりました。これにより、マーチャントは各バリアントの表示をより細かく制御でき、アプリ開発者はこの新しいAPIを活用して、より柔軟な販売戦略をサポートする機能を提供できます。既存のアプリは大きな変更なしに動作しますが、新しいAPIバージョン2026-07で提供されるこの機能を活用することで、より高度なバリアント管理が可能になります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-05-08T00:16:13.246Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1235,
+            "output": 182
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-target-discounts-to-specific-markets",
       "source": "developer-changelog",
