@@ -1,6 +1,56 @@
 {
-  "lastUpdated": "2026-05-08T00:14:56.790Z",
+  "lastUpdated": "2026-05-09T00:16:10.535Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-collect-marketing-consent-on-the-account-component",
+      "source": "shopify-changelog",
+      "title": "Collect marketing consent on the account component",
+      "link": "https://changelog.shopify.com/posts/collect-marketing-consent-on-the-account-component",
+      "publishedAt": "2026-05-08T14:00:00.000Z",
+      "collectedAt": "2026-05-09T00:16:10.525Z",
+      "category": [
+        "Customer-account"
+      ],
+      "description": "\n        <p>The account component on your storefront now includes a marketing opt-in checkbox below the email field. Customers who select it are added to your email marketing subscriber list when they complete signing in.</p>\n\n<p>The checkbox uses the same email marketing opt-in setting for checkout and sign-in. To enable or change it, go to <strong>Settings</strong> &gt; <strong>Checkout</strong> &gt; <strong>Marketing opt-in</strong>  in your admin.</p>\n\n<p>To learn more, refer to <a href=\"https://help.shopify.com/manual/customers/customer-accounts/customize-customer-accounts/account-component\">Adding an account component menu to your online store</a> and <a href=\"https://help.shopify.com/manual/promoting-marketing/create-marketing/customer-contact-information\">Collecting customer contact information</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "アカウントコンポーネントでマーケティング同意を収集可能に",
+          "summarizedJa": "ストアフロントのアカウントコンポーネントに、メールマーケティングのオプトインチェックボックスが追加されました。顧客がサインイン時にチェックを入れると、自動的にメールマーケティングの購読者リストに追加されます。この設定は管理画面の「設定」>「チェックアウト」>「マーケティングオプトイン」から有効化・変更が可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-05-09T00:16:16.417Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1111,
+            "output": 240
+          },
+          "estimatedCost": 0.006933
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "顧客アカウントコンポーネントでのマーケティング同意収集",
+          "summarizedJa": "Shopifyストアフロントの顧客アカウントコンポーネントに、メールアドレス入力欄の下にマーケティング同意のオプトインチェックボックスが追加されます。これにより、顧客はサインイン時にメール購読に同意できるようになり、同意した顧客は自動的に購読者リストに追加されます。この機能は、管理画面の「設定」>「チェックアウト」>「マーケティングオプトイン」で、既存のチェックアウトやサインイン時の設定と共通で管理できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-05-09T00:16:24.060Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 816,
+            "output": 175
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-benchmark-comparisons-in-analytics-will-be-removed-on-may-19th",
       "source": "shopify-changelog",
