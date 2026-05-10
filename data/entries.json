@@ -1,6 +1,56 @@
 {
-  "lastUpdated": "2026-05-09T00:16:10.535Z",
+  "lastUpdated": "2026-05-10T00:13:53.255Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-flow-new-action-to-get-analytics-data-using-shopifyql",
+      "source": "shopify-changelog",
+      "title": "Flow: New action to get analytics data using ShopifyQL",
+      "link": "https://changelog.shopify.com/posts/flow-new-action-to-get-analytics-data-using-shopifyql",
+      "publishedAt": "2026-05-09T13:00:00.000Z",
+      "collectedAt": "2026-05-10T00:13:53.247Z",
+      "category": [
+        "Apps"
+      ],
+      "description": "\n        <p>Using the new \"Get analytics data\" action, you can now use ShopifyQL inside your workflows to pull data from Shopify analytics (sales figures, sessions, inventory levels) and act on what you find. Query results become variables you can use in subsequent conditions and actions.</p>\n\n<p>Some examples of what you can do:<br>\n* Schedule a report that includes your analytics data to go to Slack<br>\n* Send an alert when sales drop below a certain threshold<br>\n* Tag products when they hit a certain sales milestone<br>\n* Get notified when sessions drop or increase on your storefront</p>\n\n<p>For more information, including limitations, visit the <a href=\"https://help.shopify.com/en/manual/shopify-flow/reference/actions/get-analytics-data\">documentation</a>. For questions and feedback, visit the <a href=\"https://community.shopify.com/c/shopify-flow/304\">Shopify community</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Flow: ShopifyQLを使用した分析データ取得アクションが追加",
+          "summarizedJa": "Shopify Flowに新しい「分析データを取得」アクションが追加され、ShopifyQLを使用してワークフロー内で売上、セッション数、在庫レベルなどの分析データを取得できるようになりました。クエリ結果は変数として保存され、後続の条件やアクションで活用可能です。売上が一定の閾値を下回った際のアラート送信や、セッション数の変動通知、売上マイルストーン達成時の商品タグ付けなど、データに基づく自動化が可能になります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-05-10T00:13:59.407Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1144,
+            "output": 275
+          },
+          "estimatedCost": 0.007557
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Flow: ShopifyQLを用いた分析データ取得の新しいアクション",
+          "summarizedJa": "Shopify Flowに「分析データを取得」という新しいアクションが追加されました。これにより、ShopifyQLを使って売上、セッション、在庫レベルなどのShopify分析データをワークフロー内で直接取得し、その結果を変数として後続の条件やアクションに利用できるようになります。例えば、売上低下時のアラート送信や、特定の販売目標達成時の商品タグ付けなど、データに基づいた高度な自動化が可能になり、日本のマーチャントはより効率的なビジネス運営を実現できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-05-10T00:14:05.319Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 852,
+            "output": 177
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-collect-marketing-consent-on-the-account-component",
       "source": "shopify-changelog",
