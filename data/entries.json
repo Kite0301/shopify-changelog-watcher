@@ -1,6 +1,156 @@
 {
-  "lastUpdated": "2026-05-10T00:13:53.255Z",
+  "lastUpdated": "2026-05-12T00:16:32.164Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-print-packing-slips-for-inventory-transfers",
+      "source": "shopify-changelog",
+      "title": "Print packing slips for inventory transfers",
+      "link": "https://changelog.shopify.com/posts/print-packing-slips-for-inventory-transfers",
+      "publishedAt": "2026-05-11T20:00:00.000Z",
+      "collectedAt": "2026-05-12T00:16:32.150Z",
+      "category": [
+        "Pos"
+      ],
+      "description": "\n        <p>Previously, staff fulfilling outgoing inventory transfers in Shopify POS had no way to print a packing slip to include with the shipment. Now, staff on POS Pro can generate and print a packing slip directly from the shipment details for any outgoing transfer. </p>\n\n<p>The slip uses the same familiar format as order packing slips, adapted for transfers — it lists the items being sent (variant name and quantity), the origin and destination locations, and transfer details like the reference name, date, notes, and tags. This gives staff and receiving locations a simple manifest to reference during handoff, helping reduce confusion about what was sent and what should arrive when moving inventory across stores, state lines, or borders. </p>\n\n<p>Available in POS v11.6 for locations on POS Pro; the staff role needs the \"Inventory\" &gt; \"Manage transfers\" permission to access it.</p>\n\n<p>Learn more about printing packing slips for transfers in the <a href=\"https://help.shopify.com/en/manual/sell-in-person/shopify-pos/inventory-management/fulfilling-and-receiving-transfers#fulfill\">Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "在庫移動の梱包明細書を印刷可能に",
+          "summarizedJa": "Shopify POS Proで、出荷する在庫移動の梱包明細書を直接印刷できるようになりました。商品名・数量・移動元/先のロケーション・参照名・日付・メモなど、注文用の梱包明細書と同じ形式で印刷でき、店舗間や国境を越えた在庫移動時の混乱を減らすことができます。POS v11.6以降、「在庫」>「移動を管理する」権限を持つスタッフが利用可能です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-05-12T00:16:38.265Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1178,
+            "output": 263
+          },
+          "estimatedCost": 0.0074789999999999995
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "在庫移動の梱包伝票を印刷",
+          "summarizedJa": "Shopify POS Proで、在庫移動時の梱包伝票を直接印刷できるようになりました。これにより、店舗間の在庫移動時に、出荷される商品の詳細（商品名、数量、移動元・移動先など）を記載した伝票を簡単に作成でき、受け渡し時の混乱を減らすことができます。POS v11.6以降で利用可能で、在庫管理権限が必要です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-05-12T00:16:43.326Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 877,
+            "output": 152
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-a-new-home-for-agentic-storefronts-in-your-admin",
+      "source": "shopify-changelog",
+      "title": "A new home for Agentic Storefronts in your admin ",
+      "link": "https://changelog.shopify.com/posts/a-new-home-for-agentic-storefronts-in-your-admin",
+      "publishedAt": "2026-05-11T19:30:00.000Z",
+      "collectedAt": "2026-05-12T00:16:32.150Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>Agentic Storefronts now has its own page in your Shopify <a href=\"http://admin.shopify.com/agentic\">admin</a>. Your products are automatically accessible to AI channels like ChatGPT and Copilot through Shopify Catalog. Now you can track performance, see which queries you rank for, and get recommendations to improve your product data.</p>\n\n<p>Learn more about Agentic Storefronts by visiting our <a href=\"https://help.shopify.com/en/manual/online-sales-channels/agentic-storefronts\">Help Center</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "管理画面にAgentic Storefrontsの専用ページが追加されました",
+          "summarizedJa": "Agentic StorefrontsがShopify管理画面に専用ページとして追加されました。Shopify Catalogを通じて、ChatGPTやCopilotなどのAIチャネルから自動的に商品にアクセスできるようになり、パフォーマンスの追跡、ランキング表示されているクエリの確認、商品データ改善のための推奨事項の取得が可能になります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-05-12T00:16:48.211Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1072,
+            "output": 231
+          },
+          "estimatedCost": 0.006681
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "管理画面にAgentic Storefronts専用ページが登場",
+          "summarizedJa": "Shopify管理画面にAgentic Storefronts専用ページが新設されました。これにより、マーチャントはAIチャネル（ChatGPTやCopilotなど）でのストアフロントのパフォーマンス追跡、検索クエリランキングの確認、商品データ改善のためのレコメンデーションを受けられるようになります。Shopify Catalogを通じて商品が自動的にAIチャネルに連携されるため、AIを活用した販売機会の最適化が期待されます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-05-12T00:16:54.388Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 765,
+            "output": 165
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-sell-gift-cards-in-your-customers-local-currency",
+      "source": "shopify-changelog",
+      "title": "Sell gift cards in your customers' local currency",
+      "link": "https://changelog.shopify.com/posts/sell-gift-cards-in-your-customers-local-currency",
+      "publishedAt": "2026-05-11T16:00:00.000Z",
+      "collectedAt": "2026-05-12T00:16:32.150Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>Merchants selling to multiple markets from a single shop can now sell and issue gift cards in any currency they operate it, not just the shop's primary currency. A USD-based store can issue EUR, CAD, GBP, or any other market currency gift card, with the value held in that currency end-to-end.</p>\n\n<p>This removes a long-standing blocker for merchants expanding internationally and for retail merchants in particular: a 10 USD gift card no longer shows up as 14.07 CAD at checkout for a Canadian buyer, and balances stay stable regardless of exchange rate movement between purchase and redemption.</p>\n\n<p>When creating a local currency gift card, you can choose how it can be redeemed:</p>\n\n<ul>\n<li><strong>Redeemable only in its issued currency</strong> - the buyer experience and balance stay fixed, with no FX exposure.</li>\n<li><strong>Redeemable in any store currency</strong> - the gift card can be used at any of your markets, with conversion applied at the time of redemption using the current exchange rate.</li>\n</ul>\n\n<p>This setting is selected at creation and can't be changed afterward.</p>\n\n<p>To get started, create a gift card product priced in a market currency and publish it to that market's catalog, or issue a gift card directly from the Gift cards section of your admin.</p>\n\n<p><a href=\"https://help.shopify.com/en/manual/international/pricing/gift-cards#local-currency-gift-cards\">Learn more about local currency gift cards</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "顧客の現地通貨でギフトカードを販売可能に",
+          "summarizedJa": "複数のマーケットで販売するマーチャントが、ストアの基本通貨だけでなく、各マーケットの現地通貨でギフトカードを発行・販売できるようになりました。例えば米ドルベースのストアでもユーロやカナダドル、ポンドなどのギフトカードを発行でき、残高はその通貨で保持されます。発行時に「発行通貨のみで利用可能」または「全通貨で利用可能（レート換算あり）」のいずれかを選択できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-05-12T00:17:00.090Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1277,
+            "output": 273
+          },
+          "estimatedCost": 0.007926
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "顧客の現地通貨でギフトカードを販売",
+          "summarizedJa": "Shopifyストアは、ストアの主要通貨だけでなく、複数の市場で運営している任意の現地通貨でギフトカードを発行・販売できるようになりました。これにより、国際展開しているマーチャントは、顧客が購入時と利用時の為替変動の影響を受けずに、現地通貨建てでギフトカードを利用できるようになります。発行時に、その通貨のみで利用可能にするか、他のストア通貨でも利用可能にするかを選択できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-05-12T00:17:08.349Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 971,
+            "output": 159
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-flow-new-action-to-get-analytics-data-using-shopifyql",
       "source": "shopify-changelog",
