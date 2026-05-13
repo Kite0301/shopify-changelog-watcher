@@ -1,6 +1,159 @@
 {
-  "lastUpdated": "2026-05-12T00:16:32.164Z",
+  "lastUpdated": "2026-05-13T00:17:47.964Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-more-shopify-payments-methods-available-in-shop-pay-checkout",
+      "source": "shopify-changelog",
+      "title": "All Shopify Payments payment methods now available in Shop Pay checkout.",
+      "link": "https://changelog.shopify.com/posts/more-shopify-payments-methods-available-in-shop-pay-checkout",
+      "publishedAt": "2026-05-12T16:00:00.000Z",
+      "collectedAt": "2026-05-13T00:17:41.350Z",
+      "category": [
+        "Payments"
+      ],
+      "description": "\n        <p>Shop Pay checkout now supports more of the payment methods you offer through Shopify Payments, so buyers are more likely to complete the order in Shop Pay instead of switching flows.</p>\n\n<p><strong>Details</strong><br>\n* What it is: Greater parity between Shop Pay and guest checkout for which Shopify Payments methods appear, including local and regional options (such as Bancontact, BLIK, EPS, MobilePay, Multibanco, Przelewy24, Swish, TWINT, and USDC)—only where you already have them enabled through Shopify Payments and where rollout includes that market.<br>\n* Who it affects: Merchants using Shopify Payments with Shop Pay enabled; buyer experience varies by market and method.<br>\n* Action required: For most merchants, none—keep your existing payments and Shop Pay settings. Turn on individual methods in Settings → Payments if you want them available at checkout.<br>\n* Rollout: Phased; not every method is available in every country on day one.</p>\n\n<p>Also note: We have also revamped the payment methods section of Shop Pay to better remember buyer preferences and maximize conversion.</p>\n\n<p>Learn more:  https://help.shopify.com/en/manual/payments/shop-pay/shop-pay</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shop Payチェックアウトで全てのShopify Payments決済方法が利用可能に",
+          "summarizedJa": "Shop PayチェックアウトがShopify Paymentsで提供される地域別決済方法（Bancontact、BLIK、EPS、MobilePayなど）に対応し、ゲストチェックアウトとの機能差が縮小されました。これにより購入者がShop Payでの注文完了率が向上します。段階的なロールアウトのため、すべての国で即座に利用可能ではありません。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-05-13T00:17:53.397Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1223,
+            "output": 238
+          },
+          "estimatedCost": 0.007239
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shop PayチェックアウトでShopifyペイメントの全決済方法が利用可能に",
+          "summarizedJa": "Shop PayチェックアウトがShopifyペイメントで提供されるより多くの決済方法に対応するようになりました。これにより、購入者はShop Pay内で注文を完了しやすくなり、コンバージョン率の向上が期待されます。特に、地域ごとの決済方法もShop Payで利用可能になるため、Shop Payを利用する購入者の利便性が向上します。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-05-13T00:18:00.560Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 908,
+            "output": 152
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-new-productunavailableinbuyerlocation-warning-code-in-the-storefront-api-cart",
+      "source": "developer-changelog",
+      "title": "New `PRODUCT_UNAVAILABLE_IN_BUYER_LOCATION` warning code in the Storefront API Cart",
+      "link": "https://shopify.dev/changelog/new-productunavailableinbuyerlocation-warning-code-in-the-storefront-api-cart",
+      "publishedAt": "2026-05-12T16:00:00.000Z",
+      "collectedAt": "2026-05-13T00:17:47.950Z",
+      "category": [
+        "API",
+        "New",
+        "Storefront GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>Starting with the 2026-07 version of the Storefront API, the <a href=\"https://shopify.dev/docs/api/storefront/2026-07/objects/Cart\" target=\"_blank\" class=\"body-link\">Cart</a> emits a <a href=\"https://shopify.dev/docs/api/storefront/2026-07/objects/CartWarning#field-CartWarning.fields.code.PRODUCT_UNAVAILABLE_IN_BUYER_LOCATION\" target=\"_blank\" class=\"body-link\"><code>PRODUCT_UNAVAILABLE_IN_BUYER_LOCATION</code></a> warning when a <a href=\"https://shopify.dev/docs/api/storefront/2026-07/objects/CartLine\" target=\"_blank\" class=\"body-link\">cart line</a> contains a product that isn't available in the buyer's location.</p>\n<p>Each affected cart line returns its own warning. The warning's target is set to the <code>CartLine</code> ID so you can map it back to the line in your UI.</p>\n<p>For background on cart warnings and an example of handling them, refer to our docs on <a href=\"https://shopify.dev/docs/storefronts/headless/building-with-the-storefront-api/cart/cart-warnings\" target=\"_blank\" class=\"body-link\">cart warnings</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Storefront APIカートに新しい警告コード「PRODUCT_UNAVAILABLE_IN_BUYER_LOCATION」を追加",
+          "summarizedJa": "2026-07バージョンのStorefront APIから、購入者の所在地では購入できない商品がカートに含まれている場合に「PRODUCT_UNAVAILABLE_IN_BUYER_LOCATION」という警告が発行されるようになります。影響を受けるカートラインごとに個別の警告が返され、警告のターゲットにはCartLine IDが設定されるため、UI上で該当する行を特定できます。カート警告の詳細とハンドリング方法については公式ドキュメントを参照してください。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-05-13T00:18:05.385Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1287,
+            "output": 270
+          },
+          "estimatedCost": 0.007911
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Storefront APIカートに新しい`PRODUCT_UNAVAILABLE_IN_BUYER_LOCATION`警告コードが追加",
+          "summarizedJa": "2026-07版のStorefront APIより、購入者の所在地で商品が利用できない場合に、カートに新しい警告コード`PRODUCT_UNAVAILABLE_IN_BUYER_LOCATION`が発行されるようになります。この警告は影響を受けるカートラインごとに表示され、UIで該当するラインを特定できるようCartLine IDがターゲットとして設定されます。これにより、マーチャントは購入者に対して地域ごとの商品在庫状況をより明確に伝えることが可能になります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-05-13T00:18:12.564Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 985,
+            "output": 187
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-simpler-inventory-transfers",
+      "source": "shopify-changelog",
+      "title": "Simpler inventory transfers",
+      "link": "https://changelog.shopify.com/posts/simpler-inventory-transfers",
+      "publishedAt": "2026-05-12T03:00:00.000Z",
+      "collectedAt": "2026-05-13T00:17:41.350Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>We redesigned the inventory transfer workflow to match how merchants actually move inventory.</p>\n\n<p><strong>Shipment creation is optional.</strong> No more manually creating, packing, and shipping a shipment for every transfer. Just create a transfer, move it to in transit, and receive at the destination.</p>\n\n<p><strong>Redesigned transfer page</strong>. See your transfer progress at a glance with quantity changes at origin and destination visible at every step.</p>\n\n<p><strong>Tracking info when you need it.</strong> Shipping details like tracking number and carrier are available inline, tucked away until you need them.</p>\n\n<p><strong>\"Ready to Ship\" is optional.</strong> Go straight from draft to in transit, or use Ready to Ship if you want to prepare items first.</p>\n\n<p>*<em>Link purchase orders. *</em> Connect a purchase order to your transfer to keep cost information in one place.</p>\n\n<p>To learn more about these changes in detail, visit our help <a href=\"https://help.shopify.com/en/manual/products/inventory/inventory-transfers/creating-and-managing-transfers\">documentation</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "在庫移動機能のシンプル化",
+          "summarizedJa": "在庫移動のワークフローが再設計され、出荷処理の作成が任意になりました。下書きから直接「輸送中」ステータスに移行でき、移動先での受け取りまでの進捗状況が一目で確認できるようになりました。また、発注書との連携により、コスト情報を一元管理することも可能になっています。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-05-13T00:18:17.412Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1166,
+            "output": 208
+          },
+          "estimatedCost": 0.006618
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "在庫移動の簡素化",
+          "summarizedJa": "Shopifyは在庫移動のワークフローを再設計し、マーチャントがより効率的に在庫を管理できるようにしました。今回の更新により、出荷作成が任意となり、転送状況が一目でわかるページデザインに変更されました。また、追跡情報の必要な時のみ表示や、発注書との連携機能も追加され、在庫管理の負担が軽減されます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-05-13T00:18:22.395Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 869,
+            "output": 146
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-print-packing-slips-for-inventory-transfers",
       "source": "shopify-changelog",
@@ -96,6 +249,108 @@
           "tokenUsage": {
             "input": 765,
             "output": 165
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-app-events-see-app-usage-and-performance-data-in-your-dev-dashboard",
+      "source": "developer-changelog",
+      "title": "App Events: See app usage and performance data in your Dev Dashboard",
+      "link": "https://shopify.dev/changelog/app-events-see-app-usage-and-performance-data-in-your-dev-dashboard",
+      "publishedAt": "2026-05-11T18:00:00.000Z",
+      "collectedAt": "2026-05-13T00:17:47.950Z",
+      "category": [
+        "API",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>The App Events API lets you send any event from your app to Shopify. App event data appears in your Dev Dashboard Logs alongside webhooks, Function executions, and API calls.</p>\n<p><strong>How it works:</strong></p>\n<p>**1. Send app events to a single API endpoint:**Define the <code>event_handle</code> and attributes you want to track and send them to the App Events API, including:</p>\n<ul>\n<li>Feature usage: <code>bulk_edit_completed</code>, <code>report_generated</code>, <code>automation_created</code></li>\n<li>Workflows: <code>onboarding_completed</code>, <code>campaign_sent</code>, <code>export_finished</code></li>\n<li>Performance: <code>sync_failed</code>, <code>api_timeout</code>, <code>rate_limit_hit</code></li>\n<li>Conversion signals: <code>limit_hit</code>, <code>premium_viewed</code>, <code>milestone_achieved</code></li>\n<li>Billable activities: <code>order_processed</code>, <code>email_sent</code>, <code>label_printed</code></li>\n</ul>\n<p>**2. View events in Dev Dashboard:**All app events flow into Dev Dashboard Logs automatically for monitoring, alongside data Shopify provides about your app, i.e: Webhooks, Functions executions, and API calls.</p>\n<p><strong>3. Optional: Turn app events into billing:</strong> On <a href=\"https://shopify.dev/docs/apps/launch/billing/shopify-app-pricing\" target=\"_blank\" class=\"body-link\">Shopify App Pricing</a>, any app event can become a usage-based charge. Define a meter in the Partner Dashboard, match it to an event_handle, and Shopify handles metering and invoicing. No additional code required.</p>\n<p>App Events is available now for all apps, regardless of billing method. <a href=\"https://shopify.dev/docs/apps/build/app-events\" target=\"_blank\" class=\"body-link\">Learn more</a> </p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "App Events API: Dev Dashboardでアプリの使用状況とパフォーマンスデータを確認可能に",
+          "summarizedJa": "App Events APIを使用することで、アプリから任意のイベントをShopifyに送信し、Dev Dashboardのログで一元的に監視できるようになりました。機能の使用状況、ワークフロー、パフォーマンス、コンバージョン指標などを追跡でき、さらにこれらのイベントを従量課金の基準として活用することも可能です。すべてのアプリで利用可能で、課金方式に関わらず使用できます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-05-13T00:18:27.959Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1444,
+            "output": 260
+          },
+          "estimatedCost": 0.008232
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "アプリイベント：開発者ダッシュボードでアプリの利用状況とパフォーマンスデータを確認",
+          "summarizedJa": "App Events APIにより、アプリから任意のイベント（機能利用、ワークフロー、パフォーマンスなど）をShopifyに送信できるようになりました。これらのイベントデータは開発者ダッシュボードのログで一元的に確認でき、アプリの利用状況やパフォーマンスを詳細に把握できます。さらに、このイベントデータは追加コードなしで従量課金に連携することも可能です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-05-13T00:18:33.808Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1082,
+            "output": 157
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-shopify-app-pricing-charge-for-usage-recurring-subscriptions-or-both",
+      "source": "developer-changelog",
+      "title": "Shopify App Pricing: charge for usage, recurring subscriptions, or both",
+      "link": "https://shopify.dev/changelog/shopify-app-pricing-charge-for-usage-recurring-subscriptions-or-both",
+      "publishedAt": "2026-05-11T18:00:00.000Z",
+      "collectedAt": "2026-05-13T00:17:47.950Z",
+      "category": [
+        "Shopify App Store",
+        "New"
+      ],
+      "description": " <div class=\"\"><p><a href=\"https://shopify.dev/docs/apps/launch/billing/shopify-app-pricing\" target=\"_blank\" class=\"body-link\">Shopify App Pricing</a> supports subscriptions, usage-based charges, or combined models, configured in the Partner Dashboard.</p>\n<p><strong>What's new:</strong></p>\n<p><strong>Managed Pricing is now Shopify App Pricing</strong>\nShopify App Pricing replaces Managed Pricing as Shopify’s default billing solution that gets configured during app submission in the Partner Dashboard. Apps previously on Managed Pricing will now see “Shopify App Pricing” as their selected billing solution. </p>\n<p><strong>Usage-based billing now possible with App Events API</strong>\nCharge based on merchant usage using the App Events API. Send events from your app, define meters in the Partner Dashboard, and Shopify handles aggregation, calculation, and invoicing. Three pricing structures supported: fixed, graduated, and volume. Supports negative reporting for automatic charge corrections.</p>\n<p><strong>New APIs make billing data more accurate</strong>\n<a href=\"https://shopify.dev/docs/apps/launch/billing/shopify-app-pricing#query-subscription-data\" target=\"_blank\" class=\"body-link\">Active Subscription API</a>: Real-time subscription status (active, pending, cancelled, frozen) that persists beyond uninstall\n[Historical API:](<a href=\"https://shopify.dev/docs/apps/launch/billing/shopify-app-pricing#app\" target=\"_blank\" class=\"body-link\">https://shopify.dev/docs/apps/launch/billing/shopify-app-pricing#app</a></p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify App Pricing: 従量課金、サブスクリプション、または両方の組み合わせに対応",
+          "summarizedJa": "Shopify App Pricingが、従来のManaged Pricingに代わる新しいデフォルトの課金ソリューションとして導入されました。App Events APIを使用した従量課金が可能になり、固定・段階・ボリュームの3つの価格体系に対応します。新しいActive Subscription APIとHistorical APIにより、リアルタイムのサブスクリプション状態の取得や、より正確な課金データの管理が可能になりました。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 5
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-05-13T00:18:38.452Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1333,
+            "output": 258
+          },
+          "estimatedCost": 0.007869
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopifyアプリの料金設定：従量課金、定期課金、またはその両方",
+          "summarizedJa": "Shopifyアプリの課金システムが「Shopify App Pricing」として刷新され、アプリ開発者は従量課金、定期課金、またはその両方を柔軟に設定できるようになりました。App Events APIの導入により、マーチャントのアプリ利用状況に応じた課金が可能となり、より多様なビジネスモデルに対応できます。これにより、パートナーは収益機会を拡大し、マーチャントは利用状況に応じた透明性の高い課金モデルのアプリを利用できるようになります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-05-13T00:18:45.218Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 997,
+            "output": 184
           },
           "estimatedCost": 0
         }
@@ -2358,6 +2613,59 @@
       }
     },
     {
+      "id": "developer-changelog-changelog-new-field-carttoken-added-to-the-order-graphql-admin-api",
+      "source": "developer-changelog",
+      "title": "New `cartToken` field added to the `Order` object",
+      "link": "https://shopify.dev/changelog/new-field-carttoken-added-to-the-order-graphql-admin-api",
+      "publishedAt": "2026-04-20T16:00:00.000Z",
+      "collectedAt": "2026-05-13T00:17:47.951Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>The <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/order#field-Order.fields.cartToken\" target=\"_blank\" class=\"body-link\"><code>cartToken</code></a> field is now available on the GraphQL Admin API's <code>Order</code> object. This field returns the token associated with the cart that was used to create the order, matching the existing <code>cart_token</code> field in the REST Admin API.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Orderオブジェクトに新しい`cartToken`フィールドが追加",
+          "summarizedJa": "GraphQL Admin APIの`Order`オブジェクトに`cartToken`フィールドが追加されました。このフィールドは注文の作成に使用されたカートに関連付けられたトークンを返し、REST Admin APIの既存の`cart_token`フィールドと同じ情報を提供します。GraphQLとREST APIの機能が統一され、開発者がより柔軟にカート情報を取得できるようになります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-05-13T00:18:49.539Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1052,
+            "output": 234
+          },
+          "estimatedCost": 0.006666
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "「Order」オブジェクトに新しい「cartToken」フィールドが追加",
+          "summarizedJa": "ShopifyのGraphQL Admin APIの「Order」オブジェクトに、新しい「cartToken」フィールドが追加されました。このフィールドは、注文作成に使用されたカートに関連付けられたトークンを返します。これにより、既存のREST Admin APIの「cart_token」フィールドと同等の情報がGraphQLでも利用可能になります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-05-13T00:18:54.637Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 765,
+            "output": 142
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
       "id": "shopify-changelog-posts-collect-newfoundland-vapour-products-tax-automatically",
       "source": "shopify-changelog",
       "title": "Collect Newfoundland Vapour Products Tax automatically",
@@ -2918,6 +3226,59 @@
           "tokenUsage": {
             "input": 1029,
             "output": 181
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-lineitem-priceafteralldiscountsbeforetaxesset-field-now-available",
+      "source": "developer-changelog",
+      "title": "`LineItem.priceAfterAllDiscountsBeforeTaxesSet` field now available",
+      "link": "https://shopify.dev/changelog/lineitem-priceafteralldiscountsbeforetaxesset-field-now-available",
+      "publishedAt": "2026-04-13T16:00:00.000Z",
+      "collectedAt": "2026-05-13T00:17:47.951Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>The <code>LineItem</code> object in the GraphQL Admin API now includes a [<code>priceAfterAllDiscountsBeforeTaxesSet</code>(<a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/LineItem#field-LineItem.fields.priceAfterAllDiscountsBeforeTaxesSet\" target=\"_blank\" class=\"body-link\">https://shopify.dev/docs/api/admin-graphql/2026-07/objects/LineItem#field-LineItem.fields.priceAfterAllDiscountsBeforeTaxesSet</a>) field, which is equivalent to the REST API's <code>current_subtotal_price_set</code> on line items. This field returns the total price of a line item in both shop and presentment currencies after all discounts have been applied, excluding refunded and removed quantities. The value doesn't include taxes.</p>\n<p>This is useful for order export workflows where you need the line-level subtotal after discounts but before tax.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "LineItem.priceAfterAllDiscountsBeforeTaxesSetフィールドが利用可能に",
+          "summarizedJa": "GraphQL Admin APIのLineItemオブジェクトに、新しく`priceAfterAllDiscountsBeforeTaxesSet`フィールドが追加されました。このフィールドは、すべての割引適用後、税抜きの商品明細の合計金額をショップ通貨と表示通貨の両方で返します。REST APIの`current_subtotal_price_set`に相当し、注文のエクスポートワークフローなどで、割引後・税抜きの明細レベルの小計が必要な場合に便利です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-05-13T00:18:59.706Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1198,
+            "output": 268
+          },
+          "estimatedCost": 0.007614
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "LineItem.priceAfterAllDiscountsBeforeTaxesSetフィールドが利用可能になりました",
+          "summarizedJa": "GraphQL Admin APIのLineItemオブジェクトに、新しいフィールド`priceAfterAllDiscountsBeforeTaxesSet`が追加されました。このフィールドは、すべての割引適用後かつ税金計算前の、返金・削除数量を除いたラインアイテムの合計価格を、ショップ通貨と表示通貨の両方で提供します。割引適用後かつ税金前のラインレベル小計が必要な注文エクスポートワークフローにおいて特に有用です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-05-13T00:19:05.718Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 885,
+            "output": 170
           },
           "estimatedCost": 0
         }
