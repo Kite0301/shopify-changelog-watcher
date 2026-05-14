@@ -1,6 +1,210 @@
 {
-  "lastUpdated": "2026-05-13T00:17:47.964Z",
+  "lastUpdated": "2026-05-14T00:19:25.652Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-polaris-web-components-migration-guides-now-available-for-checkout-and-customer-account-ui-extensions",
+      "source": "developer-changelog",
+      "title": "Polaris web components migration guides now available for Checkout and Customer Account UI extensions",
+      "link": "https://shopify.dev/changelog/polaris-web-components-migration-guides-now-available-for-checkout-and-customer-account-ui-extensions",
+      "publishedAt": "2026-05-13T20:30:00.000Z",
+      "collectedAt": "2026-05-14T00:19:24.337Z",
+      "category": [
+        "API",
+        "Update",
+        "Checkout UI",
+        "Customer Accounts"
+      ],
+      "description": " <div class=\"\"><p>We’ve published new migration guides to help you upgrade Checkout and Customer Account UI extensions to the latest API version and Polaris web components.</p>\n<p>The new guides include:</p>\n<ul>\n<li>Guidance for moving from React or JavaScript extension APIs to Preact, Polaris web components, and the global <code>shopify</code> object.  </li>\n<li>More than 60 component-specific migration pages, covering components such as <code>Button</code>, <code>Checkbox</code>, <code>TextField</code>, <code>Banner</code> and <code>View</code> for <a href=\"https://shopify.dev/docs/apps/build/checkout/migrate-to-web-components#mapping-legacy-components-to-web-components\" target=\"_blank\" class=\"body-link\">Checkout</a> and <a href=\"https://shopify.dev/docs/apps/build/customer-accounts/migrate-to-web-components#mapping-legacy-components-to-web-components\" target=\"_blank\" class=\"body-link\">Customer Account</a> UI extensions.  </li>\n<li>Instructions for migrating checkout metafields to cart metafields</li>\n</ul>\n<p>If your extension uses an API version earlier than <code>2025-10</code>, use these guides to adopt Polaris web components, which are the default in API version <code>2025-10</code> and later.</p>\n<p>Start with:</p>\n<ul>\n<li><a href=\"https://shopify.dev/docs/apps/build/checkout/migrate-to-web-components\" target=\"_blank\" class=\"body-link\">Checkout UI extensions migration guide</a>  </li>\n<li><a href=\"https://shopify.dev/docs/apps/build/customer-accounts/migrate-to-web-components\" target=\"_blank\" class=\"body-link\">Customer Account UI extensions migration guide</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "CheckoutおよびCustomer Account UI拡張機能向けのPolaris Webコンポーネント移行ガイドが公開",
+          "summarizedJa": "CheckoutおよびCustomer Account UI拡張機能を最新APIバージョンとPolaris Webコンポーネントにアップグレードするための移行ガイドが公開されました。APIバージョン2025-10以前を使用している拡張機能向けに、ReactやJavaScriptからPreactとPolaris Webコンポーネントへの移行方法、60以上のコンポーネント別移行ページ、checkout metafieldsからcart metafieldsへの移行手順などが含まれています。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 5
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-05-14T00:19:31.319Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1410,
+            "output": 267
+          },
+          "estimatedCost": 0.008235
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "チェックアウトおよび顧客アカウントUI拡張機能向けPolarisウェブコンポーネント移行ガイドが公開",
+          "summarizedJa": "この更新は、Shopifyのチェックアウトおよび顧客アカウントUI拡張機能の開発者向けに、最新のAPIバージョンとPolarisウェブコンポーネントへの移行ガイドを提供するものです。特に、APIバージョン2025-10以前の拡張機能を使用している場合は、これらのガイドに従って新しいコンポーネントへの移行が推奨されます。これにより、拡張機能の互換性と最新機能への対応が保証されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 5
+          },
+          "totalScore": 17,
+          "analyzedAt": "2026-05-14T00:19:38.192Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1063,
+            "output": 172
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-function-run-log-details-are-now-automatically-visible-with-the-right-access-scopes",
+      "source": "developer-changelog",
+      "title": "Function run log details are now automatically visible with the right access scopes",
+      "link": "https://shopify.dev/changelog/function-run-log-details-are-now-automatically-visible-with-the-right-access-scopes",
+      "publishedAt": "2026-05-13T20:00:00.000Z",
+      "collectedAt": "2026-05-14T00:19:24.337Z",
+      "category": [
+        "Platform",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>You no longer need to ask merchants to share function run logs with you. These logs are now automatically available in the Dev Dashboard for any function your app has the necessary access scopes to view.</p>\n<h2>What's Changed</h2>\n<p>Function run logs in the Dev Dashboard are now accessible based on the access scopes granted to your app by the merchant. The required scopes to view a log are determined by the function's input query. If your app has the necessary scopes to read these fields via the GraphQL Admin API, you will automatically see the run details without needing any additional action from the merchant.</p>\n<h2>What You Need to Do</h2>\n<p>If you expect to see function run details but don't, ensure your app has the scopes required by the input query. Here's how you can check:</p>\n<ol>\n<li><p><strong>Request the scopes during your app's installation/authentication process:</strong> This is ideal for scopes your app consistently needs. Refer to <a href=\"https://shopify.dev/docs/api/usage/access-scopes\" target=\"_blank\" class=\"body-link\">Access scopes</a> for instructions on declaring and requesting access scopes.</p>\n</li>\n<li><p><strong>Request protected customer data scopes when accessing customer data:</strong> Some fields, like customer details and addresses, require additional protected customer data access. Consult <a href=\"https://shopify.dev/docs/apps/launch/protected-customer-data\" target=\"_blank\" class=\"body-link\">Protected customer data</a> for the approval process and necessary data-level scopes.</p>\n</li>\n<li><p><strong>Use optional scopes for temporary or debugging access:</strong> If a scope is needed occasionally, such as for debugging, request it as an <a href=\"https://shopify.dev/docs/apps/build/authentication-authorization/app-installation/manage-access-scopes#request-new-access-scopes-dynamically\" target=\"_blank\" class=\"body-link\">optional scope</a>. Merchants can grant or revoke it without reinstalling the app.</p>\n</li>\n</ol>\n<p>Once the required scopes are granted, the run details will automatically be visible the next time you access the log.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "適切なアクセススコープがあればファンクション実行ログの詳細が自動的に表示されるように",
+          "summarizedJa": "アプリ開発者は、マーチャントに依頼しなくてもファンクション実行ログを自動的に閲覧できるようになりました。Dev Dashboardでは、アプリに付与されたアクセススコープに基づいてログが表示されます。必要なスコープはファンクションの入力クエリによって決まり、GraphQL Admin APIで該当フィールドを読み取る権限があれば、追加のアクションなしでログ詳細が自動表示されます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-05-14T00:19:44.139Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1460,
+            "output": 266
+          },
+          "estimatedCost": 0.00837
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Function実行ログの詳細が、適切なアクセススコープがあれば自動的に表示されるようになりました",
+          "summarizedJa": "Shopify Functionsの実行ログが、マーチャントからの共有なしに、アプリ開発者向けダッシュボードで自動的に確認できるようになりました。これは、アプリがFunctionの入力クエリに必要なアクセススコープを持っている場合に限られます。パートナーは、アプリが適切なスコープを保持しているか確認し、必要に応じて追加することで、デバッグや問題解決がより効率的に行えるようになります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-05-14T00:19:50.074Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1125,
+            "output": 162
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-shopify-tax-has-expanded-to-canada",
+      "source": "shopify-changelog",
+      "title": "Shopify Tax has expanded to Canada",
+      "link": "https://changelog.shopify.com/posts/shopify-tax-has-expanded-to-canada",
+      "publishedAt": "2026-05-13T16:00:00.000Z",
+      "collectedAt": "2026-05-14T00:19:25.639Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>Managing Canadian sales tax is complicated, which is why we're committed to making it better. Shopify Tax is bringing brand new features to your admin that will make it easier to collect the right amounts at the right time, and know where your business is liable.</p>\n\n<p><strong>New</strong></p>\n\n<p><strong>Enhanced calculations</strong><br>\nStay confidently compliant selling across Canada knowing that Shopify Tax is accurately calculating sales tax rates (GST, HST, PST, QST, and RST) based on your customer's province and showing each of those rates individually to your buyers.</p>\n\n<p><strong>Smart categorization</strong><br>\nIs a single donut a snack, or breakfast? Five donuts? Six? In Canada, six or more donuts is zero-rated as a basic grocery; five or fewer is taxable as a snack food. We may never settle the philosophical question, but at Shopify, we can help you categorize your donuts (and everything else) for tax purposes. Shopify suggests the relevant category for your products and automatically applies the right rate based on Canadian rules.</p>\n\n<p>Furthermore, taxes assessed on shipping will now follow the rate on each individual good, ensuring that zero rated goods or orders with mixed tax rates are accurately taxed.</p>\n\n<p><strong>Tax liability insights per province</strong><br>\nTax liability insights are no longer just at the country level. Now, you’ll be able to track where you may have tax obligations across each province and territory. Liability insights analyzes your store's sales and compares it to government requirements to let you know where and how you may be required to register and collect.</p>\n\n<p><strong>Learn more</strong><br>\nShopify Tax in Canada is currently being released to Shopify stores that sell in and to Canada. New stores can start using it immediately, and existing stores will be notified by email as the product becomes available. Additional features soon to come. Learn more about these new features in the <a href=\"https://help.shopify.com/en/manual/taxes/shopify-tax/shopify-tax-canada\">Help Center</a>. </p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify Taxがカナダに拡大",
+          "summarizedJa": "Shopify Taxがカナダに拡大し、GST、HST、PST、QST、RSTなどの複雑なカナダの消費税を正確に計算する機能が追加されました。商品の自動カテゴリー分類、州ごとの税務義務インサイトなど、カナダ国内販売における税務コンプライアンスを支援する機能が強化されています。カナダで販売するShopifyストアに順次展開される予定です。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 3
+          },
+          "totalScore": 6,
+          "analyzedAt": "2026-05-14T00:19:54.964Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1394,
+            "output": 239
+          },
+          "estimatedCost": 0.007767
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify Taxがカナダでの提供を開始",
+          "summarizedJa": "Shopify Taxがカナダ市場向けに機能拡張され、複雑なカナダの売上税（GST、HST、PSTなど）の管理が大幅に簡素化されます。これにより、顧客の州に基づいた正確な税率計算、商品カテゴリに応じた適切な税率適用、および州ごとの納税義務の把握が可能となり、カナダで販売するマーチャントの税務コンプライアンス維持を支援します。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 2,
+            "japanRelevance": 1,
+            "technicalImportance": 4
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-05-14T00:20:01.670Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1073,
+            "output": 166
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-draft-unified-branding-customization-across-checkout-and-customer-accounts",
+      "source": "shopify-changelog",
+      "title": "Unified branding customization across checkout and customer accounts",
+      "link": "https://changelog.shopify.com/posts/draft-unified-branding-customization-across-checkout-and-customer-accounts",
+      "publishedAt": "2026-05-13T15:00:00.000Z",
+      "collectedAt": "2026-05-14T00:19:25.639Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>Your checkout branding settings now apply consistently across checkout, customer accounts, and sign-in pages — all from the checkout and accounts editor. </p>\n\n<ul>\n<li><strong>Set your brand once</strong>. Configure your logo, colors, typography, and section styles in one place, and they carry through consistently across checkout, customer account, and sign-in surfaces. No more discovering that a change in checkout looks broken on your customer account or sign-in pages. </li>\n<li><strong>Set your colors easily</strong>. Set any color you want using direct color values instead of configuring and assigning a limited number of color schemes. For convenience, save your brand colors to a reusable palette of up to 20 colors. Update a palette color once, and it changes everywhere it's used. </li>\n<li><strong>Override when your brands call for it</strong>. Set a different logo or main background color on your pages for a tailored brand flavor. Shopify Plus merchants can access more advanced surface-specific overrides through the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/checkoutAndAccountsConfigurationUpdate\">Checkout and Accounts Configuration API</a>.</li>\n</ul>\n\n<p>Try it now in the <a href=\"https://admin.shopify.com/admin/settings/checkout/editor\">checkout and accounts editor</a> to get your brand looking right across checkout, customer accounts, and sign-in.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "チェックアウトと顧客アカウント全体で統一されたブランディングカスタマイズ",
+          "summarizedJa": "チェックアウト、顧客アカウント、サインインページのブランディング設定が一元管理できるようになりました。ロゴ、カラー、タイポグラフィを一箇所で設定すれば、すべてのページに一貫して反映されます。最大20色のカラーパレット保存機能や、ページごとの個別カスタマイズも可能で、Shopify Plusマーチャントは高度なAPI経由のカスタマイズにも対応しています。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-05-14T00:20:07.204Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1251,
+            "output": 265
+          },
+          "estimatedCost": 0.0077280000000000005
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "チェックアウトと顧客アカウント全体でのブランド統一カスタマイズ",
+          "summarizedJa": "Shopifyのチェックアウト、顧客アカウント、サインインページ全体でブランド設定（ロゴ、色、タイポグラフィなど）が一元的に管理できるようになりました。これにより、一度設定するだけで一貫したブランド表現が可能になり、直接色を指定したり、再利用可能なカラーパレットを作成したりできます。Shopify PlusマーチャントはAPIを通じてより詳細なカスタマイズも可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-05-14T00:20:12.372Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 931,
+            "output": 157
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-more-shopify-payments-methods-available-in-shop-pay-checkout",
       "source": "shopify-changelog",
@@ -401,6 +605,59 @@
           "tokenUsage": {
             "input": 971,
             "output": 159
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-the-storefront-apis-cart-object-now-exposes-warnings-for-unavailable-delivery-options",
+      "source": "developer-changelog",
+      "title": "The Storefront API's Cart object now exposes warnings for unavailable delivery options",
+      "link": "https://shopify.dev/changelog/the-storefront-apis-cart-object-now-exposes-warnings-for-unavailable-delivery-options",
+      "publishedAt": "2026-05-11T16:00:00.000Z",
+      "collectedAt": "2026-05-14T00:19:24.337Z",
+      "category": [
+        "API",
+        "New",
+        "Storefront GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>As of version <code>2026-07</code> of the GraphQL Storefront API, the <code>Cart</code> object issues a warning when a buyer's selected delivery option becomes unavailable.</p>\n<p>Previously, if a buyer's chosen delivery option was no longer available (for example, after changes to the cart's address or contents) the system would automatically switch to a different option without notifying the buyer. This lack of notification made it challenging for developers to inform buyers of the change.</p>\n<p>Now, with the introduction of the <code>DELIVERY_SELECTED_OPTION_NOT_AVAILABLE</code> value in the <a href=\"https://shopify.dev/docs/api/storefront/2026-07/objects/CartWarning\" target=\"_blank\" class=\"body-link\"><code>CartWarning</code></a>, developers can programmatically detect when a selected delivery option is unavailable. This allows you to prompt buyers to confirm or choose a new delivery option, ensuring they are aware of any changes.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Storefront APIのCartオブジェクトが利用不可な配送オプションの警告を表示するようになりました",
+          "summarizedJa": "GraphQL Storefront APIのバージョン2026-07から、購入者が選択した配送オプションが利用できなくなった場合に警告が発行されるようになりました。新しい`DELIVERY_SELECTED_OPTION_NOT_AVAILABLE`という警告値により、開発者は配送オプションが利用不可になったことを検知し、購入者に確認や再選択を促すことができます。以前は自動的に別のオプションに切り替わり、購入者に通知されませんでしたが、この変更によりユーザー体験が向上します。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-05-14T00:20:17.564Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1180,
+            "output": 283
+          },
+          "estimatedCost": 0.007785
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Storefront APIのカートオブジェクト、利用不可の配送オプションに関する警告を通知可能に",
+          "summarizedJa": "Shopify Storefront APIのバージョン2026-07より、カートオブジェクトが、選択された配送オプションが利用不可になった際に警告を発するようになりました。これまでは、配送オプションが自動的に変更されても購入者に通知されませんでしたが、今後は開発者がこの警告を検知し、購入者に新しい配送オプションの選択や確認を促すことが可能になります。これにより、購入者への透明性が向上し、より良い購入体験を提供できるようになります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-05-14T00:20:24.976Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 884,
+            "output": 179
           },
           "estimatedCost": 0
         }
@@ -3704,6 +3961,58 @@
       }
     },
     {
+      "id": "developer-changelog-changelog-replacing-or-deleting-a-shopify-hosted-file-no-longer-purges-its-cdn-url",
+      "source": "developer-changelog",
+      "title": "Replacing or deleting a Shopify-hosted file no longer purges its CDN URL",
+      "link": "https://shopify.dev/changelog/replacing-or-deleting-a-shopify-hosted-file-no-longer-purges-its-cdn-url",
+      "publishedAt": "2026-04-07T04:00:00.000Z",
+      "collectedAt": "2026-05-14T00:19:24.338Z",
+      "category": [
+        "Action Required",
+        "Platform",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>As of April 7, 2026, when you replace or delete a file in the Shopify admin, Shopify will no longer proactively purge the file's URL on cdn.shopify.com/.... The previously cached content will continue to be served until the URL's TTL (Time to Live) expires. This change aims to reduce CDN purge volume and improve consistency across our edge providers.</p>\n<p>To ensure your customers receive updated content after a file replacement, use Shopify's URL helpers to render file references. This ensures the current versioned URL (?v=...) is always emitted:</p>\n<ul>\n<li><strong>In themes:</strong> Use the Liquid filters <a href=\"https://shopify.dev/docs/api/liquid/filters/file_url\" target=\"_blank\" class=\"body-link\">file_url</a>, <a href=\"https://shopify.dev/docs/api/liquid/filters/image_url\" target=\"_blank\" class=\"body-link\">image_url</a>, and <a href=\"https://shopify.dev/docs/api/liquid/filters/asset_url\" target=\"_blank\" class=\"body-link\">asset_url</a>.</li>\n<li><strong>In products:</strong> Insert images and videos via the native <a href=\"https://shopify.dev/docs/apps/build/online-store/product-media\" target=\"_blank\" class=\"body-link\">Media uploader</a> rather than pasting <code>&lt;img src=&quot;...&quot;&gt;</code> into descriptions.</li>\n<li><strong>In apps and external integrations:</strong> Fetch file URLs at request time from the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/queries/files\" target=\"_blank\" class=\"body-link\">Admin GraphQL API</a> or <a href=\"https://shopify.dev/docs/api/storefront/latest/interfaces/Media\" target=\"_blank\" class=\"body-link\">Storefront API</a> instead of caching them.</li>\n</ul>\n<p>Hardcoded cdn.shopify.com/... URLs in product descriptions, blog posts, theme code, or printed materials will continue to return the original content after a file replacement. We recommend migrating to one of the dynamic patterns above to ensure updated content is served.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopifyホスティングファイルの置換・削除時にCDN URLのパージが行われなくなります",
+          "summarizedJa": "2026年4月7日より、Shopify管理画面でファイルを置換または削除してもCDN URLのキャッシュが即座にクリアされなくなります。顧客に最新コンテンツを確実に配信するには、テーマではLiquidフィルター（file_url、image_url、asset_url）を使用し、アプリではAdmin APIから動的にURLを取得する必要があります。ハードコードされたcdn.shopify.com URLは古いコンテンツを表示し続けるため、バージョン付きURLを生成する動的な方法への移行が推奨されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-05-14T00:20:30.977Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1491,
+            "output": 294
+          },
+          "estimatedCost": 0.008882999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopifyホストファイルの置換・削除時、CDN URLの即時パージが停止",
+          "summarizedJa": "2026年4月7日以降、Shopify管理画面でファイルを更新・削除しても、CDN上のURLは即座にパージされなくなり、古いキャッシュがTTL期限まで表示され続けます。常に最新のコンテンツを表示するためには、Liquidフィルターやメディアアップローダー、APIなどShopifyのURLヘルパーを使用して動的にURLを生成することが必須となります。ハードコードされたCDN URLは古いコンテンツを表示し続けるため、動的なURL生成への移行が強く推奨されます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 17,
+          "analyzedAt": "2026-05-14T00:20:39.200Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1148,
+            "output": 188
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
       "id": "shopify-changelog-posts-key-b2b-features-now-available-on-non-plus-plans",
       "source": "shopify-changelog",
       "title": "Key B2B features now available on non-Plus plans",
@@ -3949,6 +4258,59 @@
           "tokenUsage": {
             "input": 962,
             "output": 169
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-checkout-and-accounts-configuration-api-for-unified-branding-across-checkout-customer-accounts-and-sign-in",
+      "source": "developer-changelog",
+      "title": "Checkout And Accounts Configuration API for unified branding across checkout, customer accounts, and sign-in",
+      "link": "https://shopify.dev/changelog/checkout-and-accounts-configuration-api-for-unified-branding-across-checkout-customer-accounts-and-sign-in",
+      "publishedAt": "2026-04-01T18:00:00.000Z",
+      "collectedAt": "2026-05-14T00:19:24.338Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>As of API version 2026-04, the new Checkout And Accounts Configuration API is now available to unlock consistent branding customizations across checkout, customer accounts, and sign-in surfaces. This API is exclusively available to Shopify Plus merchants. </p>\n<p>This new API replaces the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/queries/CheckoutProfile\" target=\"_blank\" class=\"body-link\">Checkout Profile API</a> and <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/CheckoutBrandingUpsert\" target=\"_blank\" class=\"body-link\">Checkout Branding API</a> (both are now deprecated). All capabilities to customize settings and branding for checkout, and customer accounts, and sign-in are now consolidated into one single API.</p>\n<p>What you can do: </p>\n<ul>\n<li><p><strong>Shared branding settings:</strong> Use shared designTokens and components to set branding once and apply consistently across checkout, customer accounts, and sign-in pages. Section styles (padding, shadows, colors, borders, and border radius) previously available for checkout only can now be applied to customer account pages. </p>\n</li>\n<li><p><strong>Surface-specific overrides:</strong> Apply targeted overrides under surfaces.checkout, surfaces.customerAccounts, and surfaces.signIn for logos, colors, and section styles.</p>\n</li>\n<li><p><strong>Direct color settings</strong>: Set color using HEX values or palette colors directly on sections like main, header, and orderSummary — no more mapping through a limited number of color schemes. Save your brand colors to an editable color palette of up to 20 colors and reference anywhere you make a color selection. Update a palette color, and it changes everywhere it is referenced.</p>\n</li>\n<li><p><strong>Customize branding per market</strong>: Customize your pages for each market with unique branding settings.</p>\n</li>\n</ul>\n<p>View <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/checkoutAndAccountsConfigurationUpdate\" target=\"_blank\" class=\"body-link\">developer documentation</a> for more detail.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "チェックアウト、顧客アカウント、サインインの統一ブランディングを実現するCheckout And Accounts Configuration API",
+          "summarizedJa": "2026-04 APIバージョンより、チェックアウト、顧客アカウント、サインインの3つの領域で一貫したブランディングをカスタマイズできる新しいAPIがShopify Plus加盟店向けに提供開始されました。従来のCheckout Profile APIとCheckout Branding APIは非推奨となり、全機能が統合されました。共有ブランディング設定、各画面ごとの個別カスタマイズ、HEXカラー値の直接指定、マーケット別のブランディング設定などが可能になります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 5
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-05-14T00:20:45.412Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1493,
+            "output": 289
+          },
+          "estimatedCost": 0.008813999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "チェックアウトと顧客アカウント設定API：チェックアウト、顧客アカウント、サインインの統一ブランディング",
+          "summarizedJa": "Shopify Plusマーチャント向けに、チェックアウト、顧客アカウント、サインインページ全体で統一されたブランディングを可能にする新しいAPIがリリースされました。このAPIは既存のCheckout Profile APIとCheckout Branding APIを統合し、デザイン設定の一元化、市場ごとのカスタマイズ、HEX値での直接的な色設定などを可能にします。パートナーは既存のAPIからの移行が必要になります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 17,
+          "analyzedAt": "2026-05-14T00:20:52.136Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1143,
+            "output": 167
           },
           "estimatedCost": 0
         }
