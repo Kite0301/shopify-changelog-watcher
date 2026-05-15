@@ -1,6 +1,70 @@
 {
-  "lastUpdated": "2026-05-14T00:19:25.652Z",
+  "lastUpdated": "2026-05-15T00:16:22.202Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-flow-sidekick-generates-test-cases-for-your-workflows",
+      "source": "shopify-changelog",
+      "title": "Flow: Make test events for your workflows with existing shop data",
+      "link": "https://changelog.shopify.com/posts/flow-sidekick-generates-test-cases-for-your-workflows",
+      "publishedAt": "2026-05-14T20:00:00.000Z",
+      "collectedAt": "2026-05-15T00:16:22.192Z",
+      "category": [
+        "Apps"
+      ],
+      "description": "\n        <p>You can now more easily test workflows with existing shop data. Suppose that a recent order was fraudulent and you've built a workflow to block the next one. You can choose that fraudulent order and see if it works. You can also add tests to make sure it doesn't block other other orders. </p>\n\n<p>Additionally, by clicking \"Generate test events\", Sidekick will analyze the workflow and find real shop data to test the logical paths in your workflow. Each test event contains the data needed to test run your workflow. Review the generated cases, edit or remove any that don't apply, and add your own. You can test it immediately, no further setup required. </p>\n\n<p>For more information, visit the <a href=\"https://help.shopify.com/en/manual/shopify-flow/manage/test-workflow\">documentation</a>. For questions and feedback, visit the <a href=\"https://community.shopify.com/c/shopify-flow/304\">Shopify community</a>.</p>\n\n      ",
+      "analyses": {
+        "gemini-2.5-flash": {
+          "titleJa": "Flow: 既存のストアデータでワークフローのテストイベントを作成",
+          "summarizedJa": "Shopify Flowにおいて、既存のストアデータを使用してワークフローのテストイベントを簡単に作成できるようになりました。これにより、実際の注文データなどを用いて、構築したワークフローが意図通りに機能するかを正確に検証できます。さらに、Sidekickがワークフローを分析し、論理パスをカバーするテストイベントを自動生成するため、テストの効率と網羅性が向上します。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-05-15T00:16:33.554Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 858,
+            "output": 158
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-enhanced-balance-app-design",
+      "source": "shopify-changelog",
+      "title": "The Balance mobile app has a new look",
+      "link": "https://changelog.shopify.com/posts/enhanced-balance-app-design",
+      "publishedAt": "2026-05-14T18:00:00.000Z",
+      "collectedAt": "2026-05-15T00:16:22.192Z",
+      "category": [
+        "Balance"
+      ],
+      "description": "\n        <p>The Balance mobile app has been redesigned with a new look and feel. You can still access all the same features and functionality, now with greater ease. You can access your cash, cards, recent activity, and a new flow for transfering money, making it more convenient to manage your finances. </p>\n\n<p><a href=\"http://help.shopify.com/en/manual/finance/shopify-balance/mobile-app\">Learn more</a> about the Balance app. </p>\n\n      ",
+      "analyses": {
+        "gemini-2.5-flash": {
+          "titleJa": "Balanceモバイルアプリが新しいデザインに刷新",
+          "summarizedJa": "Shopify Balanceモバイルアプリが、新しいデザインと操作感に刷新されました。既存の機能はそのままに、現金、カード、最近のアクティビティへのアクセスや、新しい送金フローが改善され、財務管理がより便利になります。この変更は、アプリの使いやすさ向上を目的としています。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 5,
+          "analyzedAt": "2026-05-15T00:16:42.394Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 727,
+            "output": 139
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-polaris-web-components-migration-guides-now-available-for-checkout-and-customer-account-ui-extensions",
       "source": "developer-changelog",
