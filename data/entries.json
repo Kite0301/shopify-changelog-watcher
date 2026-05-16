@@ -1,6 +1,56 @@
 {
-  "lastUpdated": "2026-05-15T00:16:22.202Z",
+  "lastUpdated": "2026-05-16T00:15:00.202Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-sell-from-multiple-legal-entities-in-the-same-country-using-shopify-payments",
+      "source": "shopify-changelog",
+      "title": "Sell from multiple legal entities in the same country using Shopify Payments",
+      "link": "https://changelog.shopify.com/posts/sell-from-multiple-legal-entities-in-the-same-country-using-shopify-payments",
+      "publishedAt": "2026-05-15T17:00:00.000Z",
+      "collectedAt": "2026-05-16T00:15:00.189Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>Merchants with more complex business structures can now sell from multiple legal entities in the same country using Shopify Payments.</p>\n\n<p>Previously, merchants often needed separate stores or expansion store workarounds when different parts of their business operated under different legal entities in the same country. Now, eligible merchants can configure multiple Shopify Payments accounts within a single store using Markets.</p>\n\n<p>This makes it easier to:<br>\n* Sell online and in retail under separate legal entities in the same country<br>\n* Support different legal entities for different retail locations<br>\n* Separate B2B and D2C sales under different entities<br>\n* Attribute sales, payouts, and compliance requirements to the right business entity<br>\n* Reduce duplicated admin work across multiple stores<br>\n* This update helps merchants keep their business structure flexible while managing more of their operations from one Shopify store.</p>\n\n<p>This update helps merchants keep their business structure flexible while managing more of their operations from one Shopify store.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify Paymentsで同一国内の複数法人からの販売に対応",
+          "summarizedJa": "複雑なビジネス構造を持つマーチャントが、Shopify Paymentsを使用して同一国内の複数の法人から販売できるようになりました。Markets機能を使って1つのストア内で複数のShopify Paymentsアカウントを設定することで、オンラインと実店舗で別法人を使い分けたり、B2BとD2Cを異なる法人で運用したりすることが可能になり、複数ストアの管理工数を削減できます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 2,
+            "japanRelevance": 1,
+            "technicalImportance": 3
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-05-16T00:15:06.095Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1157,
+            "output": 257
+          },
+          "estimatedCost": 0.007326000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopifyペイメントで同一国内の複数法人から販売可能に",
+          "summarizedJa": "Shopifyペイメントを利用するマーチャントは、同一国内で複数の法人格を持つ場合でも、単一のストア（Markets機能経由）で販売できるようになりました。これにより、B2BとD2C、オンラインと実店舗など複雑な事業構造を持つマーチャントは、管理作業を削減し、売上や支払いを適切な法人に紐付けやすくなります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-05-16T00:15:14.460Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 860,
+            "output": 158
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-flow-sidekick-generates-test-cases-for-your-workflows",
       "source": "shopify-changelog",
