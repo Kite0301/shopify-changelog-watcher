@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-16T00:15:00.202Z",
+  "lastUpdated": "2026-05-19T00:20:02.333Z",
   "entries": [
     {
       "id": "shopify-changelog-posts-sell-from-multiple-legal-entities-in-the-same-country-using-shopify-payments",
@@ -46,6 +46,59 @@
           "tokenUsage": {
             "input": 860,
             "output": 158
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-shipping-line-field-now-available-on-fulfillmentorderlineitem",
+      "source": "developer-changelog",
+      "title": "Shipping line field now available on FulfillmentOrderLineItem",
+      "link": "https://shopify.dev/changelog/shipping-line-field-now-available-on-fulfillmentorderlineitem",
+      "publishedAt": "2026-05-15T16:00:00.000Z",
+      "collectedAt": "2026-05-19T00:20:01.280Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>You can query the <code>shippingLine</code> field on <code>FulfillmentOrderLineItem</code>.</p>\n<p>This field returns the <code>ShippingLine</code> associated with a fulfillment order line item, if available. This feature simplifies the process for order management and fulfillment apps to identify the shipping method for each line item. It is particularly useful in scenarios where fulfillment orders are merged across different delivery profiles, and the original per-line shipping service is not identified by the fulfillment order's delivery method.</p>\n<p>For example, apps can use properties such as <code>shippingLine.code</code>, <code>shippingLine.title</code>, and <code>shippingLine.source</code> to accurately map line items to the correct carrier service or shipping method.</p>\n<p>For more information, refer to the <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/FulfillmentOrderLineItem\" target=\"_blank\" class=\"body-link\"><code>FulfillmentOrderLineItem</code></a> reference.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "FulfillmentOrderLineItemでshippingLineフィールドが利用可能に",
+          "summarizedJa": "Admin GraphQL APIのFulfillmentOrderLineItemオブジェクトに、配送ラインの情報を取得できるshippingLineフィールドが追加されました。これにより、異なる配送プロファイルをまたいだフルフィルメントオーダーがマージされた場合でも、各ラインアイテムに紐づく配送方法を正確に識別できるようになります。注文管理やフルフィルメントアプリの開発者にとって、配送サービスへのマッピングがより簡単になります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-05-19T00:20:07.904Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1202,
+            "output": 265
+          },
+          "estimatedCost": 0.007581
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "FulfillmentOrderLineItemに配送ラインフィールドが利用可能に",
+          "summarizedJa": "FulfillmentOrderLineItemオブジェクトに`shippingLine`フィールドが追加されました。これにより、フルフィルメントオーダーの各商品アイテムに紐づく配送方法を直接取得できるようになります。特に、複数の配送プロファイルが統合されたフルフィルメントオーダーにおいて、各商品アイテムの正確な配送サービスを特定し、注文管理やフルフィルメントアプリの連携を簡素化します。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-05-19T00:20:14.863Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 876,
+            "output": 157
           },
           "estimatedCost": 0
         }
