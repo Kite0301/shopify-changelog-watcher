@@ -1,6 +1,108 @@
 {
-  "lastUpdated": "2026-05-19T00:20:02.333Z",
+  "lastUpdated": "2026-05-20T00:20:15.488Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-create-sms-marketing-automations-in-shopify-messaging",
+      "source": "shopify-changelog",
+      "title": "Create SMS marketing automations in Shopify Messaging ",
+      "link": "https://changelog.shopify.com/posts/create-sms-marketing-automations-in-shopify-messaging",
+      "publishedAt": "2026-05-19T16:00:00.000Z",
+      "collectedAt": "2026-05-20T00:20:15.480Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>Now you can automatically engage your customers with well-timed SMS messages. Send automated SMS with Shopify Messaging using pre-built templates for abandoned carts, abandoned checkouts, and browse abandonment, or create your own.</p>\n\n<p>Set up your SMS marketing automations from Shopify Messaging &gt; Automations, and manage your SMS spending threshold from Shopify Messaging &gt; Settings. </p>\n\n<p>Learn more about <a href=\"https://help.shopify.com/en/manual/promoting-marketing/create-marketing/marketing-automations?utm_source=mozart&amp;utm_medium=email&amp;utm_campaign=marketingautomations&amp;utm_term=notice\">SMS marketing automations</a> in the Shopify Help Center. </p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify MessagingでSMSマーケティングオートメーションが作成可能に",
+          "summarizedJa": "Shopify Messagingで自動SMS配信機能が利用可能になりました。カート放棄、チェックアウト放棄、閲覧放棄に対応した事前構築テンプレートを使用するか、独自のSMSオートメーションを作成できます。設定はShopify Messagingの「Automations」から行い、SMS配信の予算上限は「Settings」で管理できます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 2,
+            "japanRelevance": 1,
+            "technicalImportance": 3
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-05-20T00:20:20.586Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1096,
+            "output": 230
+          },
+          "estimatedCost": 0.006738
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "ShopifyメッセージングでSMSマーケティング自動化機能が利用可能に",
+          "summarizedJa": "ShopifyメッセージングにSMSマーケティングの自動化機能が追加されました。これにより、カゴ落ち、チェックアウト放棄、閲覧放棄といった顧客行動に対し、事前に用意されたテンプレートやカスタムメッセージを用いて自動的にSMSを送信し、顧客エンゲージメントを高めることができます。設定はShopifyメッセージングの「自動化」セクションから行い、SMS利用の上限額も管理可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-05-20T00:20:28.478Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 797,
+            "output": 161
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-next-generation-events-now-available-in-developer-preview",
+      "source": "developer-changelog",
+      "title": "Next Generation Events now available in developer preview",
+      "link": "https://shopify.dev/changelog/next-generation-events-now-available-in-developer-preview",
+      "publishedAt": "2026-05-19T14:00:00.000Z",
+      "collectedAt": "2026-05-20T00:20:14.321Z",
+      "category": [
+        "API",
+        "New",
+        "Webhook"
+      ],
+      "description": " <div class=\"\"><p><a href=\"https://shopify.dev/docs/api/events/latest\" target=\"_blank\" class=\"body-link\">Next Generation Events</a> are now available in developer preview, with field-level control over when events fire, what data they carry, and what triggered each delivery.</p>\n<ul>\n<li><strong>Subscribe to exactly what you care about.</strong> Field-level <code>triggers</code> pre-qualify deliveries before they reach your endpoint. A subscription scoped to <code>product.variants.price</code> won't fire on title edits, tag updates, or status changes. Only when the price changes.</li>\n<li><strong>Get the payload your app needs, not a fixed schema.</strong> You define the delivery payload with a standard Admin GraphQL query. No over-fetching fields you'll discard. No extra API call to get the data you actually wanted after the webhook lands.</li>\n<li><strong>Know what fired for each delivery.</strong> Every delivery includes <code>fields_changed</code>: an explicit list of the fields that triggered the event, with full entity paths and IDs. That means you don't need to infer, or diff against prior state.</li>\n<li><strong>Filter on current state.</strong> <code>query_filter</code> narrows deliveries based on the current state of your query output. Use it to skip events that don't meet your conditions, like only delivering for active products.</li>\n<li><strong>Configure in code.</strong> Subscriptions live in <code>shopify.app.toml</code> alongside your other app configuration. Version-controlled, reviewable, and deployable.</li>\n</ul>\n<p>As a developer preview, Events are available in the <code>unstable</code> API version and APIs may change. <code>Product</code> and <code>Customer</code> topics are live today. </p>\n<h3>Configuration and payload</h3>\n<pre><code>[events]\napi_version = &quot;unstable&quot;\n\n[[events.subscription]]\nhandle = &quot;price_sync&quot;\ntopic = &quot;Product&quot;\nactions = [&quot;update&quot;]\ntriggers = [&quot;product.variants.price&quot;, &quot;product.variants.compareAtPrice&quot;]\n\nuri = &quot;/api/events&quot;\n\nquery = &quot;&quot;&quot;\n\tquery priceSync($productId: ID!, $variantsId: ID!) {\n\t\tproductVariant(id: $variantsId) {\n\t\t\tid\n\t\t\tprice\n\t\t\tcompareAtPrice\n\t\t\tsku\n\t\t}\n\t\tproduct(id: $productId) {\n\t\t\tid\n\t\t\ttitle\n\t\t\tstatus\n\t\t}\n\t}\n&quot;&quot;&quot;\nquery_filter = &quot;product.status:'ACTIVE'&quot;\n</code></pre>\n<p>Every delivery includes <code>fields_changed</code>, <code>data</code> from your query, and <code>query_variables</code> used to fetch it:</p>\n<pre><code class=\"language-json\">{\n  &quot;topic&quot;: &quot;Product&quot;,\n  &quot;action&quot;: &quot;update&quot;,\n  &quot;handle&quot;: &quot;price_sync&quot;,\n  &quot;data&quot;: {\n    &quot;productVariant&quot;: {\n      &quot;id&quot;: &quot;gid://shopify/ProductVariant/456&quot;,\n      &quot;price&quot;: &quot;24.99&quot;,\n      &quot;compareAtPrice&quot;: &quot;34.99&quot;,\n      &quot;sku&quot;: &quot;SIGNAL-NOT-NOISE&quot;\n    },\n    &quot;product&quot;: {\n      &quot;id&quot;: &quot;gid://shopify/Product/123&quot;,\n      &quot;title&quot;: &quot;Peace &amp; Quiet Tee&quot;,\n      &quot;status&quot;: &quot;ACTIVE&quot;\n    }\n  },\n  &quot;fields_changed&quot;: [\n    &quot;product[id: 'gid://shopify/Product/123'].variants[id: 'gid://shopify/ProductVariant/456'].price&quot;\n  ],\n  &quot;query_variables&quot;: {\n    &quot;productId&quot;: &quot;gid://shopify/Product/123&quot;,\n    &quot;variantsId&quot;: &quot;gid://shopify/ProductVariant/456&quot;\n  }\n}\n</code></pre>\n<h3>Learn more</h3>\n<p>Learn more about how Events relate to Webhooks: <a href=\"https://shopify.dev/docs/apps/build/events-webhooks\" target=\"_blank\" class=\"body-link\">https://shopify.dev/docs/apps/build/events-webhooks</a>\nGet started by <a href=\"https://shopify.dev/docs/apps/build/events/get-started\" target=\"_blank\" class=\"body-link\">Creating an Events subscription</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "次世代イベント機能が開発者プレビューで利用可能に",
+          "summarizedJa": "Shopifyの新しいイベントシステムが開発者プレビューとして公開されました。フィールドレベルでのイベントトリガー制御、GraphQLクエリによるカスタムペイロード定義、変更されたフィールドの明示的な通知など、従来のWebhookよりも柔軟で効率的なイベント処理が可能になります。現在はProduct及びCustomerトピックがunstable APIバージョンで利用可能で、shopify.app.tomlでの設定管理に対応しています。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 5
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-05-20T00:20:34.164Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2173,
+            "output": 264
+          },
+          "estimatedCost": 0.010479
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "次世代イベントが開発者プレビューで利用可能に",
+          "summarizedJa": "Shopifyは、イベント（Webhook）の次世代版を開発者プレビューとして公開しました。これにより、開発者は商品の価格変更など特定のフィールドの更新のみをトリガーとしてイベントを発生させたり、必要なデータだけをGraphQLクエリで指定して取得したりできるようになります。これは、アプリの効率性と精度を大幅に向上させ、マーチャントのビジネスロジックに合わせた柔軟な連携を可能にする重要な機能です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 5
+          },
+          "totalScore": 17,
+          "analyzedAt": "2026-05-20T00:20:40.451Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1747,
+            "output": 168
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-sell-from-multiple-legal-entities-in-the-same-country-using-shopify-payments",
       "source": "shopify-changelog",
