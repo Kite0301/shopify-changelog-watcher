@@ -1,6 +1,108 @@
 {
-  "lastUpdated": "2026-05-20T00:20:15.488Z",
+  "lastUpdated": "2026-05-21T00:20:34.119Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-view-cumulative-metrics-over-time-in-analytics",
+      "source": "shopify-changelog",
+      "title": "View cumulative metrics over time in Analytics",
+      "link": "https://changelog.shopify.com/posts/view-cumulative-metrics-over-time-in-analytics",
+      "publishedAt": "2026-05-20T19:00:00.000Z",
+      "collectedAt": "2026-05-21T00:20:34.104Z",
+      "category": [
+        "Analytics"
+      ],
+      "description": "\n        <p>We've added cumulative metrics to Analytics so you can see how your metrics build up over time. </p>\n\n<p>When you turn on the Cumulative toggle in the Visualization panel (or add WITH CUMULATIVE_VALUES to your ShopifyQL query), your time-series chart shows a running total instead of individual daily values making it easy to see progress toward a goal or how a metric is trending across a period.</p>\n\n<p>Cumulative view works in three ways:<br>\n* On its own: See how a metric accumulates day by day across a date range. Useful for understanding growth patterns at a glance.<br>\n* <a href=\"https://help.shopify.com/manual/reports-and-analytics/shopify-reports/overview-dashboard/targets\">With targets</a>: Compare your running total against a target line to see whether you're on pace to hit your goal.<br>\n* With prior-period comparisons: Layer in a comparison to the same period last year (or another period), so you can spot how this period's trajectory compares to the last year.</p>\n\n<p><a href=\"https://help.shopify.com/manual/reports-and-analytics/shopify-reports/report-types/custom-reports/visualizations#cumulative-visualizations\">Learn more here</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Analyticsで累積指標の推移を表示可能に",
+          "summarizedJa": "Shopify Analyticsに累積指標表示機能が追加されました。ビジュアライゼーションパネルの「Cumulative」トグルをオンにするか、ShopifyQLクエリに「WITH CUMULATIVE_VALUES」を追加することで、日別の個別値ではなく累計値を時系列チャートで確認できます。目標との比較や前年同期比較と組み合わせることで、目標達成のペースや成長傾向を一目で把握できるようになります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-05-21T00:20:40.106Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1206,
+            "output": 246
+          },
+          "estimatedCost": 0.007308
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "アナリティクスで累積指標を時系列で表示",
+          "summarizedJa": "Shopifyアナリティクスに累積指標機能が追加されました。これにより、日々の値だけでなく、売上などの指標が時間とともにどのように積み上がっていくかを時系列で確認できるようになります。この機能は、目標達成に向けた進捗確認、成長パターンの把握、過去期間との比較によるトレンド分析に役立ち、マーチャントのデータ分析能力を向上させます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-05-21T00:20:45.101Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 912,
+            "output": 155
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-shop-minis-march-april-2026-update",
+      "source": "developer-changelog",
+      "title": "Shop Minis March April 2026 update",
+      "link": "https://shopify.dev/changelog/shop-minis-march-april-2026-update",
+      "publishedAt": "2026-05-20T16:00:00.000Z",
+      "collectedAt": "2026-05-21T00:20:32.824Z",
+      "category": [
+        "API",
+        "Update",
+        "Shop Minis"
+      ],
+      "description": " <div class=\"\"><h2>New Features</h2>\n<h3>Optional Consent</h3>\n<p>Users can now reject scopes and continue using your Mini. Consent is no longer all-or-nothing — if a user declines a scope, your Mini should gracefully degrade rather than block the experience. If your Mini hard-fails when a scope is rejected, please update it using the new hooks below.</p>\n<h3>useCheckScopesConsent Hook</h3>\n<p>Check at runtime which scopes a user has granted. Use this to conditionally render features that depend on a particular scope.</p>\n<p><strong>Usage:</strong></p>\n<pre><code>import {useCheckScopesConsent} from '@shopify/shop-minis-react'\n\nfunction MyMini() {\n  const {scopes} = useCheckScopesConsent()\n\n  if (scopes.includes('product_lists:write')) {\n    return &lt;SaveToListButton /&gt;\n  }\n  return &lt;SignInPrompt /&gt;\n}\n</code></pre>\n<h3>useRequestScopesConsent Hook</h3>\n<p>Re-request consent after a user has previously declined. The hook must be invoked from a user interaction — you cannot re-prompt automatically. Use this for flows where granting consent unlocks a clear, user-initiated action.</p>\n<p><strong>Usage:</strong></p>\n<pre><code>import {useRequestScopesConsent} from '@shopify/shop-minis-react'\n\nfunction GrantAccessButton() {\n  const {requestScopesConsent} = useRequestScopesConsent()\n\n  return (\n    &lt;button onClick={() =&gt; requestScopesConsent(['product_lists:write'])}&gt;\n      Enable saving products\n    &lt;/button&gt;\n  )\n}\n</code></pre>\n<h3>useCheckPermissions Hook</h3>\n<p>Separate from scopes, <code>useCheckPermissions</code> lets your Mini check OS-level permissions (camera, photo library, and so on) before invoking an action that requires them.</p>\n<p><strong>Usage:</strong></p>\n<pre><code>import {useCheckPermissions} from '@shopify/shop-minis-react'\n\nfunction CameraFeature() {\n  const {permissions} = useCheckPermissions(['camera'])\n\n  if (permissions.camera === 'granted') {\n    return &lt;CameraView /&gt;\n  }\n  return &lt;RequestCameraButton /&gt;\n}\n</code></pre>\n<h3>request_blocked Sentinel</h3>\n<p>When a user has declined a scope or permission and the platform will not re-prompt, the relevant hooks now return a <code>request_blocked</code> sentinel value instead of <code>null</code>. This lets you distinguish &quot;not asked yet&quot; from &quot;asked and blocked&quot; and tailor your UI accordingly. See the Scopes Consent docs on shopify.dev for the full state machine.</p>\n<h3>Intents</h3>\n<p>Intents are a new communication layer between the Shop app and Shop Minis. The Shop app launches your Mini from contextually relevant moments — such as a product detail page — and passes along the context (typically a product). For partners, this opens a new path to distribution: instead of relying on the Explore tab alone, your Mini can be surfaced where buyer intent is highest.</p>\n<p>Two intents are supported today:</p>\n<p>| Intent | What it's for |\n| :</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shop Minis 2026年3月・4月アップデート",
+          "summarizedJa": "Shop Minisにオプション同意機能が追加され、ユーザーが一部のスコープを拒否してもMiniを継続利用できるようになりました。スコープ同意状態を確認・再要求するための新しいフック（useCheckScopesConsent、useRequestScopesConsent）、OS権限を確認するuseCheckPermissionsフック、そしてShopアプリから商品詳細ページなどの文脈に応じてMiniを起動できるIntents機能が導入されました。開発者は拒否された権限に対して適切に対応するようMiniを更新する必要があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 2,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-05-21T00:20:50.937Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1789,
+            "output": 281
+          },
+          "estimatedCost": 0.009582
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shop Minis 2026年3月・4月アップデート",
+          "summarizedJa": "このアップデートにより、Shop Minisはユーザーが特定の権限を拒否しても利用を継続できるようになり、開発者は新しいフックを使って同意状況を柔軟に管理する必要があります。また、「Intents」機能の導入により、Shopアプリの文脈に応じたMiniの起動が可能となり、パートナーはMiniの新たな流通経路を獲得し、マーチャントはより高い購入意欲を持つ顧客にMiniを届けられる機会が増えます。既存のMiniは、同意拒否時に機能が停止しないよう、適切に動作するよう更新が求められます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 5
+          },
+          "totalScore": 17,
+          "analyzedAt": "2026-05-21T00:20:59.237Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1383,
+            "output": 194
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-create-sms-marketing-automations-in-shopify-messaging",
       "source": "shopify-changelog",
@@ -927,6 +1029,60 @@
           "tokenUsage": {
             "input": 884,
             "output": 179
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-expiring-offline-access-tokens-required-for-all-public-apps-as-of-january-1-2027",
+      "source": "developer-changelog",
+      "title": "Expiring offline access tokens required for all public apps as of January 1, 2027",
+      "link": "https://shopify.dev/changelog/expiring-offline-access-tokens-required-for-all-public-apps-as-of-january-1-2027",
+      "publishedAt": "2026-05-11T16:00:00.000Z",
+      "collectedAt": "2026-05-21T00:20:32.824Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Breaking API Change",
+        "Admin GraphQL API",
+        "Admin REST API"
+      ],
+      "description": " <div class=\"\"><p>We're changing how public apps handle offline access tokens to enhance merchant data protection. Starting January 1, 2027, all public apps must use <a href=\"https://shopify.dev/docs/apps/build/authentication-authorization/access-tokens/offline-access-tokens#expiring-vs-non-expiring-offline-tokens\" target=\"_blank\" class=\"body-link\">expiring offline access tokens</a> when calling the Admin API. After that date, public apps still using non-expiring tokens will receive authentication errors.</p>\n<p>This extends the <a href=\"https://shopify.dev/changelog/expiring-offline-access-tokens-required-for-public-apps-april-1-2026\" target=\"_blank\" class=\"body-link\">April 1, 2026 change</a>, which applied only to newly created public apps, to all public apps, including those created before April 1, 2026.</p>\n<h2>What apps are affected</h2>\n<p><a href=\"https://shopify.dev/docs/apps/launch/distribution#capabilities-and-requirements\" target=\"_blank\" class=\"body-link\">Public apps</a> making Admin API requests using non-expiring offline access tokens, including apps created before April 1, 2026</p>\n<h2>What apps are unaffected</h2>\n<ul>\n<li>Custom apps</li>\n<li>Apps created by merchants either in the Dev Dashboard or in the admin</li>\n</ul>\n<h2>Why we're making this change</h2>\n<p>Non-expiring tokens, if leaked, remain valid indefinitely. Expiring tokens close that window in 60 minutes and rotate automatically, dramatically reducing the impact of a credential leak. This aligns with modern OAuth best practices, and as a developer it gives your app a predictable refresh flow.</p>\n<h2>Action required</h2>\n<p><strong>Existing public apps</strong>: Migrate from non-expiring to expiring offline access tokens. </p>\n<p>Merchants don't need to reinstall, as your app exchanges existing tokens through code. Follow the <a href=\"https://shopify.dev/docs/apps/build/authentication-authorization/access-tokens/offline-access-tokens#migrating-from-non-expiring-to-expiring-tokens\" target=\"_blank\" class=\"body-link\">migration guide</a> for the step-by-step path. If you use Shopify's app templates and official API libraries, refresh handling is already implemented; you only need to handle the token exchange and storage updates.</p>\n<p>Need help? Engage with the <a href=\"https://community.shopify.dev/c/dev-platform/32\" target=\"_blank\" class=\"body-link\">dev platform community</a> for support and questions.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "2027年1月1日より全パブリックアプリで有効期限付きオフラインアクセストークンが必須に",
+          "summarizedJa": "2027年1月1日以降、すべてのパブリックアプリでAdmin API呼び出し時に有効期限付きオフラインアクセストークンの使用が必須となります。2026年4月1日以前に作成されたアプリも含め、無期限トークンを使用しているパブリックアプリは認証エラーが発生するため、移行対応が必要です。カスタムアプリやマーチャントが作成したアプリは影響を受けません。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 5
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-05-21T00:21:06.124Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1612,
+            "output": 266
+          },
+          "estimatedCost": 0.008826
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "2027年1月1日より、すべての公開アプリで有効期限付きオフラインアクセストークンが必須に",
+          "summarizedJa": "Shopifyはマーチャントのデータ保護強化のため、2027年1月1日以降、すべての公開アプリに対し、Admin API呼び出し時に有効期限付きオフラインアクセストークンの使用を義務付けます。これにより、既存の公開アプリも非有効期限付きトークンから有効期限付きトークンへの移行が必要となり、移行しない場合は認証エラーが発生します。マーチャントによるアプリの再インストールは不要で、アプリ開発者は提供される移行ガイドに従って対応する必要があります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-05-21T00:21:13.935Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1285,
+            "output": 195
           },
           "estimatedCost": 0
         }
