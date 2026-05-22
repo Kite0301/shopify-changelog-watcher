@@ -1,6 +1,107 @@
 {
-  "lastUpdated": "2026-05-21T00:20:34.119Z",
+  "lastUpdated": "2026-05-22T00:18:50.647Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-shopify-cli-40-semver-auto-updates-removing-deprecated-flags-and-commands",
+      "source": "developer-changelog",
+      "title": "Shopify CLI 4.0: SemVer, auto-updates, removing deprecated flags and commands",
+      "link": "https://shopify.dev/changelog/shopify-cli-40-semver-auto-updates-removing-deprecated-flags-and-commands",
+      "publishedAt": "2026-05-21T21:00:00.000Z",
+      "collectedAt": "2026-05-22T00:18:49.591Z",
+      "category": [
+        "Tools",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>The release of Shopify CLI 4.0 today brings clarity to CLI versioning, the introduction of automatic updates, and the <a href=\"https://shopify.dev/changelog/the-shopify-cli-app-release-force-flag-is-deprecated-and-will-be-removed\" target=\"_blank\" class=\"body-link\">announced removal</a> of the deprecated <code>--force</code> flag from <code>shopify app deploy</code>.</p>\n<h2>Semantic Versioning</h2>\n<p>Shopify CLI is now following semantic versioning practices. Releases with new features will be minor versions, and bug fixes will be patch versions. When required, major version releases will be used to communicate breaking changes to CLI command structure or behavior.</p>\n<p>For more information, see <a href=\"https://community.shopify.dev/t/from-romantic-to-semantic-shopify-cli-versioning-and-auto-updates/33069\" target=\"_blank\" class=\"body-link\">our announcement of the move to SemVer</a>.</p>\n<h2>Automatic Upgrades</h2>\n<p>Starting with Shopify CLI 4.0, Shopify CLI upgrades itself automatically using the package manager you installed it with. Auto-upgrade is skipped in CI, project-local installs, and for major version releases. Automatic upgrades can be disabled with the <code>shopify config autoupgrade off</code> command.</p>\n<p>For more information, see <a href=\"https://shopify.dev/docs/api/shopify-cli#upgrade-shopify-cli\" target=\"_blank\" class=\"body-link\">Shopify CLI documentation</a>.</p>\n<h2>Removal of the <code>--force</code> flag for app releases</h2>\n<p>The <code>--force</code> flag on the <code>app deploy</code> and <code>app release</code> commands didn’t distinguish between low-risk operations (adding or updating extensions) and high-risk ones (deleting them). This flag has been removed in Shopify CLI 4.0. The previously released <code>--allow-updates</code> and <code>--allow-deletes</code> flags give you granular control, so your CI/CD pipelines can run unattended without the risk of accidental, irreversible deletions.</p>\n<p>For more information, see <a href=\"https://shopify.dev/changelog/the-shopify-cli-app-release-force-flag-is-deprecated-and-will-be-removed\" target=\"_blank\" class=\"body-link\">the March 2026 changelog</a>.</p>\n<h2>Other removed commands and flags</h2>\n<p>The following deprecated commands and flags have also been removed in Shopify CLI 4.0:</p>\n<ul>\n<li><code>shopify webhook trigger</code> (use <code>shopify app webhook trigger</code>)  </li>\n<li><code>shopify theme serve</code> (use <code>shopify theme dev</code>)  </li>\n<li><code>shopify app generate schema</code> (use <code>shopify app function schema</code>)  </li>\n<li><code>shopify app webhook trigger --shared-secret</code> (use <code>--client-secret</code>)  </li>\n<li><code>shopify app generate extension --type</code> (use <code>--template</code>)</li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify CLI 4.0: セマンティックバージョニング、自動アップデート、非推奨フラグとコマンドの削除",
+          "summarizedJa": "Shopify CLI 4.0がリリースされ、セマンティックバージョニングの採用、自動アップデート機能の導入、および非推奨の`--force`フラグの削除が行われました。マイナーバージョンでは新機能、パッチバージョンではバグ修正がリリースされ、メジャーバージョンでは破壊的変更が通知されます。また、`app deploy`コマンドの`--force`フラグは削除され、より安全な`--allow-updates`と`--allow-deletes`フラグに置き換えられています。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-05-22T00:18:56.719Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1775,
+            "output": 297
+          },
+          "estimatedCost": 0.00978
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify CLI 4.0: セマンティックバージョニング、自動アップデート、非推奨フラグとコマンドの削除",
+          "summarizedJa": "Shopify CLI 4.0がリリースされ、セマンティックバージョニングの導入によりバージョン管理が明確化され、自動アップデート機能が追加されました。また、`shopify app deploy`および`shopify app release`コマンドの`--force`フラグが削除され、より安全な`--allow-updates`と`--allow-deletes`に置き換えられたほか、複数の非推奨コマンドやフラグが廃止されました。これにより、開発者はCLIの利用方法やCI/CDパイプラインの調整が必要となります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-05-22T00:19:04.556Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1335,
+            "output": 204
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-draft-a-refreshed-sign-in-page-for-customer-accounts-now-customizable-in-the-editor",
+      "source": "shopify-changelog",
+      "title": "A refreshed sign-in page for customer accounts, now customizable in the editor",
+      "link": "https://changelog.shopify.com/posts/draft-a-refreshed-sign-in-page-for-customer-accounts-now-customizable-in-the-editor",
+      "publishedAt": "2026-05-20T21:00:00.000Z",
+      "collectedAt": "2026-05-22T00:18:50.634Z",
+      "category": [
+        "Customer-account"
+      ],
+      "description": "\n        <p>Today, the customer account sign-in page has a refreshed design that gives you greater control over how it looks.</p>\n\n<p>The sign-in page now offers a two-column layout, with the sign-in form shifted to the left and a customizable background image on the right, enabling you to express your brand more visually beyond the logo.</p>\n\n<p><img src=\"https://cdn.shopify.com/static/Account%20Sign-in%20page.png\" alt=\"Account Sign-in page\"></p>\n\n<p>You can now customize and preview the sign-in page directly in the checkout and accounts <a href=\"https://admin.shopify.com/settings/checkout/editor?page=signIn\">editor</a>. Set shared settings that apply consistently across all surfaces, and tailor styling elements to give your sign-in page a unique look. Plus merchants have more advanced customization control via the <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-04/mutations/checkoutAndAccountsConfigurationUpdate\">Checkout And Accounts Configuration API</a>.</p>\n\n<p>This is available exclusively on the latest version of customer accounts. If you’re using legacy customer accounts, follow our <a href=\"https://help.shopify.com/en/manual/customers/customer-accounts/upgrade\">guide</a> and complete your upgrade.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "カスタマーアカウントのサインインページがリニューアル、エディターでカスタマイズ可能に",
+          "summarizedJa": "カスタマーアカウントのサインインページのデザインが刷新され、2カラムレイアウトとカスタマイズ可能な背景画像が追加されました。チェックアウトとアカウントエディターから直接カスタマイズとプレビューが可能になり、ブランドの視覚的表現を強化できます。この機能は最新版のカスタマーアカウントでのみ利用可能で、レガシー版を使用している場合はアップグレードが必要です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-05-22T00:19:09.514Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1248,
+            "output": 274
+          },
+          "estimatedCost": 0.007854
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "顧客アカウントのサインインページが刷新され、エディターでカスタマイズ可能に",
+          "summarizedJa": "Shopifyの顧客アカウントサインインページが新デザインに刷新され、エディターから直接カスタマイズできるようになりました。これにより、ブランドイメージをより視覚的に表現できる2カラムレイアウトが導入され、背景画像の設定も可能です。最新版の顧客アカウントでのみ利用可能で、APIを通じた高度なカスタマイズもサポートされます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-05-22T00:19:16.037Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 957,
+            "output": 157
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-view-cumulative-metrics-over-time-in-analytics",
       "source": "shopify-changelog",
@@ -3342,6 +3443,57 @@
           "tokenUsage": {
             "input": 765,
             "output": 142
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-feature-preview-customer-account-improvements",
+      "source": "developer-changelog",
+      "title": "Feature preview: Customer account improvements",
+      "link": "https://shopify.dev/changelog/feature-preview-customer-account-improvements",
+      "publishedAt": "2026-04-19T16:00:00.000Z",
+      "collectedAt": "2026-05-22T00:18:49.591Z",
+      "category": [
+        "Platform",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>Customer accounts are getting a visual refresh, featuring improved navigation, layout, and consistency across devices. You can preview these changes now and test your Shopify Extensions within the updated layout.</p>\n<p><strong>What's changing:</strong></p>\n<ul>\n<li><strong>Single-column native pages</strong>: These are now consistent across both desktop and mobile, with simplified navigation. Inline extensions will render in a narrower page width compared to the previous wider layout. Full-page extensions can either adopt our mobile-first, narrow layout that matches native pages or expand to a wider layout for data-heavy content.</li>\n<li><strong>Increased visibility for order action extensions</strong>: Order action extensions are now more visible, and order summary extensions are no longer hidden behind a tap on mobile devices. This change makes it easier for customers to discover and use the features you've built.</li>\n<li><strong>Existing extension targets are mapped to the new layout</strong>: Ensuring compatibility with the new design. See <a href=\"https://shopify.dev/docs/apps/build/customer-accounts/feature-preview-customer-account-improvements#extension-targets-by-page\" target=\"_blank\" class=\"body-link\">extension targets by page</a>.</li>\n</ul>\n<p>All current extension targets remain supported. However, this is an ideal time to review them. Testing now gives you a head start on any adjustments needed to ensure your extensions integrate seamlessly before these design updates are released to merchants. The feature preview will be available until June 12, 2026.</p>\n<p>Read our <a href=\"https://shopify.dev/docs/apps/build/customer-accounts/feature-preview-customer-account-improvements\" target=\"_blank\" class=\"body-link\">documentation</a> to start the preview. You can ask questions and share feedback in the <a href=\"https://community.shopify.dev/t/feature-preview-customer-account-design-improvements/34162\" target=\"_blank\" class=\"body-link\">Shopify community</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "機能プレビュー: カスタマーアカウントの改善",
+          "summarizedJa": "カスタマーアカウントページのデザインが刷新され、ナビゲーション、レイアウト、デバイス間の一貫性が向上します。シングルカラムレイアウトの採用、注文アクション拡張機能の視認性向上などが含まれ、2026年6月12日まで機能プレビューで事前テストが可能です。アプリ開発者は既存のShopify Extensionsが新しいレイアウトで正しく動作するか確認し、必要に応じて調整することが推奨されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-05-22T00:19:21.576Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1375,
+            "output": 271
+          },
+          "estimatedCost": 0.00819
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "顧客アカウントの改善機能プレビュー",
+          "summarizedJa": "Shopifyの顧客アカウントが、ナビゲーション、レイアウト、デバイス間の一貫性を改善する視覚的な刷新を受けます。この変更により、拡張機能の表示方法、特にインライン拡張機能の幅や注文アクション拡張機能の視認性が影響を受けます。パートナーは、公式リリース前に既存の拡張機能が新しいレイアウトでシームレスに動作するかをテストし、必要に応じて調整することが推奨されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-05-22T00:19:26.652Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1062,
+            "output": 161
           },
           "estimatedCost": 0
         }
