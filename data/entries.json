@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-26T00:18:31.276Z",
+  "lastUpdated": "2026-05-28T00:18:09.529Z",
   "entries": [
     {
       "id": "shopify-changelog-posts-clearer-payout-balance-and-reserve-information-in-shopify-payments",
@@ -79,6 +79,59 @@
           "tokenUsage": {
             "input": 1335,
             "output": 204
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-build-app-home-as-a-ui-extension",
+      "source": "developer-changelog",
+      "title": "Build App Home as a UI extension",
+      "link": "https://shopify.dev/changelog/build-app-home-as-a-ui-extension",
+      "publishedAt": "2026-05-21T16:00:00.000Z",
+      "collectedAt": "2026-05-28T00:18:08.643Z",
+      "category": [
+        "API",
+        "New",
+        "Admin Extensions",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>You can now create your app's landing page in App Home as a Preact-based admin UI extension using the new <a href=\"https://shopify.dev/docs/api/app-home-ui-extension/latest/targets\" target=\"_blank\" class=\"body-link\"><code>admin.app.home.render</code></a> target. This means your App Home UI extensions are bundled with your other admin UI extensions, eliminating the need for a separate web server to render your app's primary workspace.</p>\n<p>Use this extension type when you want:</p>\n<ul>\n<li>A persistent, full-page app workspace that's integrated into your extension bundle, rather than a separate iframe-hosted web app.</li>\n<li>A unified source of truth for your app's primary UI, alongside your other admin UI extensions.</li>\n<li>The performance and design-system advantages of <a href=\"https://shopify.dev/docs/api/app-home-ui-extension/latest/web-components\" target=\"_blank\" class=\"body-link\">Polaris web components</a> without the need for hosting a web server for the App Home experience.</li>\n</ul>\n<h3>Availability</h3>\n<p>App Home UI extensions are available starting from API version <code>2026-07</code> and are intended for <strong>custom-distribution apps</strong>. If you're developing a public app for the Shopify App Store, you should continue using the <a href=\"https://shopify.dev/docs/api/app-home\" target=\"_blank\" class=\"body-link\">iframe-based App Home</a> solution.</p>\n<h3>Get started</h3>\n<p>To begin, scaffold a new extension-only app by selecting <strong>Build an extension-only app</strong> when prompted:</p>\n<pre><code>shopify app init\n</code></pre>\n<p>Alternatively, add an App Home UI extension to an existing app by selecting <strong>App home</strong> when prompted:</p>\n<pre><code>shopify app generate extension\n</code></pre>\n<p>For a comprehensive list of target APIs, web components, and configuration options, refer to the <a href=\"https://shopify.dev/docs/api/app-home-ui-extension/latest\" target=\"_blank\" class=\"body-link\">App Home UI extension reference</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "App HomeをUIエクステンションとして構築可能に",
+          "summarizedJa": "2026-07 APIバージョンより、App HomeをPreactベースのAdmin UIエクステンションとして構築できるようになりました。これにより別途Webサーバーを用意することなく、他のAdmin UIエクステンションと一緒にバンドルしてアプリのホーム画面を作成できます。この機能はカスタム配布アプリ向けで、公開アプリではこれまで通りiFrameベースのApp Homeを使用する必要があります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-05-28T00:18:15.142Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1476,
+            "output": 240
+          },
+          "estimatedCost": 0.008028
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "アプリホームのUI拡張機能化",
+          "summarizedJa": "ShopifyアプリのランディングページであるApp Homeを、従来のiframe方式ではなく、PreactベースのAdmin UI拡張機能として構築できるようになりました。これにより、個別のWebサーバーが不要になり、パフォーマンス向上やPolarisデザインシステムの活用が容易になります。この機能は主にカスタム配布アプリ向けであり、Shopify App Store向けのパブリックアプリは引き続き従来のiframeベースのApp Homeを使用する必要があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-05-28T00:18:23.270Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1143,
+            "output": 153
           },
           "estimatedCost": 0
         }
