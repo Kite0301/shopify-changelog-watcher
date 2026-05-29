@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-05-28T00:18:09.529Z",
+  "lastUpdated": "2026-05-29T00:21:41.919Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-customize-llmstxt-llms-fulltxt-and-agentsmd",
+      "source": "developer-changelog",
+      "title": "Customize /llms.txt, /llms-full.txt and /agents.md",
+      "link": "https://shopify.dev/changelog/customize-llmstxt-llms-fulltxt-and-agentsmd",
+      "publishedAt": "2026-05-28T20:00:00.000Z",
+      "collectedAt": "2026-05-29T00:21:40.587Z",
+      "category": [
+        "Themes",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>Your store includes a default <code>agents.md</code> file accessible at <code>/agents.md</code>. The paths <code>/llms.txt</code> and <code>/llms-full.txt</code> also point to this content by default.</p>\n<p>Add any of the following templates under Online Store &gt; Themes &gt; Edit code to serve different content per path:</p>\n<ul>\n<li><code>templates/agents.md.liquid</code> — controls /agents.md (and the default for the other two paths)</li>\n<li><code>templates/llms.txt.liquid</code> — controls /llms.txt only</li>\n<li><code>templates/llms-full.txt.liquid</code> — controls /llms-full.txt only</li>\n</ul>\n<p>If no template is present for a given path, it falls back to your agents.md template, then to the Shopify-generated default.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "/llms.txt、/llms-full.txt、/agents.mdのカスタマイズが可能に",
+          "summarizedJa": "ストアにデフォルトで含まれる`agents.md`ファイル（`/agents.md`、`/llms.txt`、`/llms-full.txt`でアクセス可能）を、テーマのテンプレートファイルとしてカスタマイズできるようになりました。テーマエディタで各パス用のLiquidテンプレートを追加することで、パスごとに異なるコンテンツを配信できます。テンプレートが存在しない場合は、agents.mdテンプレート、次にShopifyのデフォルトにフォールバックします。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-05-29T00:21:48.078Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1163,
+            "output": 298
+          },
+          "estimatedCost": 0.007959
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-clearer-payout-balance-and-reserve-information-in-shopify-payments",
       "source": "shopify-changelog",
