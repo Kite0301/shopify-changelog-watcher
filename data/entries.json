@@ -1,6 +1,160 @@
 {
-  "lastUpdated": "2026-05-29T00:21:41.919Z",
+  "lastUpdated": "2026-06-03T00:29:31.417Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-app-quality-checks-now-managed-in-partner-dashboard",
+      "source": "developer-changelog",
+      "title": "App quality checks now managed in Partner Dashboard",
+      "link": "https://shopify.dev/changelog/app-quality-checks-now-managed-in-partner-dashboard",
+      "publishedAt": "2026-06-02T16:00:00.000Z",
+      "collectedAt": "2026-06-03T00:29:29.860Z",
+      "category": [
+        "Shopify App Store",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>The end-to-end review management experience previously launched for <a href=\"https://shopify.dev/changelog/new-app-submission-experience-in-the-partner-dashboard\" target=\"_blank\" class=\"body-link\">new app submissions in the Partner Dashboard</a> now also applies to app audits.</p>\n<p>When a published app undergoes a quality check and requires changes, that feedback appears in the Partner Dashboard under App &gt; Distribution. You’ll see the same requirement-level tracking, a structured fix workflow, and direct messaging used for app submissions.</p>\n<p><strong>What to do if your app has an active audit</strong></p>\n<p>If your published app currently has an open audit with outstanding issues, review and manage all feedback in the Partner Dashboard under App &gt; Distribution. Use your app’s status page there to see required changes, update your app, and respond to the review team, instead of checking your email inbox.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "アプリ品質チェックがパートナーダッシュボードで管理可能に",
+          "summarizedJa": "公開済みアプリの品質チェック(監査)に関するフィードバックが、パートナーダッシュボードの「App > Distribution」で一元管理できるようになりました。新規アプリ申請と同様に、要件レベルの追跡、構造化された修正ワークフロー、レビューチームとの直接メッセージ機能が利用できます。現在監査中のアプリがある場合は、メールではなくダッシュボードで必要な変更を確認し対応してください。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-06-03T00:29:36.985Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1131,
+            "output": 265
+          },
+          "estimatedCost": 0.007368
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "アプリの品質チェック管理がパートナーダッシュボードに統合",
+          "summarizedJa": "Shopifyパートナーダッシュボードにおけるアプリ審査管理機能が、新規アプリ提出だけでなく、公開済みアプリの品質チェック（監査）にも拡大されました。これにより、パートナーはアプリの品質チェックに関するフィードバック、修正ワークフロー、審査チームとのやり取りをすべてパートナーダッシュボードの「アプリ > ディストリビューション」セクションで一元的に行えるようになり、メールでの確認が不要になります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-06-03T00:29:44.361Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 846,
+            "output": 163
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-cart-line-mutations-accept-view-key",
+      "source": "developer-changelog",
+      "title": "Identify cart lines by `view_key` in `cartLinesUpdate` and `cartLinesRemove`",
+      "link": "https://shopify.dev/changelog/cart-line-mutations-accept-view-key",
+      "publishedAt": "2026-06-02T16:00:00.000Z",
+      "collectedAt": "2026-06-03T00:29:29.860Z",
+      "category": [
+        "API",
+        "New",
+        "Storefront GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>You can now identify cart lines by their <code>view_key</code> when calling the <a href=\"https://shopify.dev/docs/api/storefront/latest/mutations/cartLinesUpdate\" target=\"_blank\" class=\"body-link\"><code>cartLinesUpdate</code></a> and <a href=\"https://shopify.dev/docs/api/storefront/latest/mutations/cartLinesRemove\" target=\"_blank\" class=\"body-link\"><code>cartLinesRemove</code></a> mutations, as an alternative to the cart line <code>id</code>.</p>\n<h2>What's new</h2>\n<ul>\n<li><code>cartLinesUpdate</code> accepts a <code>viewKey</code> on each <code>CartLineUpdateInput</code>, mutually exclusive with <code>id</code>.</li>\n<li><code>cartLinesRemove</code> accepts a <code>viewKeys</code> list, mutually exclusive with <code>lineIds</code>.</li>\n</ul>\n<h2>How to use</h2>\n<p>Provide exactly one identifier per line. Existing integrations that use <code>id</code> or <code>lineIds</code> keep working with no changes.</p>\n<pre><code class=\"language-graphql\">mutation RemoveLineByViewKey($cartId: ID!) {\n  cartLinesRemove(cartId: $cartId, viewKeys: [&quot;794864053:7c2a9f...&quot;]) {\n    cart { id }\n    userErrors { field message }\n  }\n}\n</code></pre>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "cartLinesUpdateとcartLinesRemoveで`view_key`によるカート行の識別が可能に",
+          "summarizedJa": "Storefront GraphQL APIの`cartLinesUpdate`と`cartLinesRemove`ミューテーションにおいて、カート行を識別する際に従来の`id`に加えて`view_key`が使用できるようになりました。各ミューテーションで`viewKey`または`viewKeys`パラメータを指定することで、カート行の更新・削除が可能です。既存の`id`ベースの実装はそのまま動作し、変更は不要です。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-06-03T00:29:49.109Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1331,
+            "output": 249
+          },
+          "estimatedCost": 0.007728
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "`cartLinesUpdate`および`cartLinesRemove`で`view_key`によるカートラインの識別が可能に",
+          "summarizedJa": "ShopifyのStorefront GraphQL APIにおいて、`cartLinesUpdate`および`cartLinesRemove`ミューテーションで、カートラインを識別するための新しい方法として`view_key`が利用可能になりました。これにより、開発者は既存の`id`や`lineIds`の代わりに`view_key`を使用してカートラインの更新や削除をより柔軟に行えるようになります。既存の連携は変更なく動作するため、即座の対応は不要ですが、将来的な開発で活用できます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-06-03T00:29:55.964Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 975,
+            "output": 190
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-more-local-payment-methods-are-now-available-in-additional-countries",
+      "source": "shopify-changelog",
+      "title": "Local payment methods are now available in more countries",
+      "link": "https://changelog.shopify.com/posts/more-local-payment-methods-are-now-available-in-additional-countries",
+      "publishedAt": "2026-05-30T16:00:00.000Z",
+      "collectedAt": "2026-06-03T00:29:31.406Z",
+      "category": [
+        "Payments"
+      ],
+      "description": "\n        <p>Offering buyers a familiar, local way to pay can reduce friction and improve conversion at checkout. We've expanded the local payment methods available through Shopify Payments to more countries across Europe and beyond.</p>\n\n<p>Depending on where your business is located, you can now offer:</p>\n\n<p><strong>MobilePay</strong><br>\nAustria, Belgium, Bulgaria, Croatia, Cyprus, Czechia, Estonia, Finland, Greece, Hungary, Ireland, Italy, Latvia, Liechtenstein, Lithuania, Luxembourg, Malta, Poland, Portugal, Romania, Slovenia, and Spain.</p>\n\n<p><strong>TWINT</strong><br>\nAustria, Belgium, Croatia, Cyprus, Czechia, Denmark, Estonia, Finland, Greece, Hungary, Ireland, Italy, Latvia, Liechtenstein, Luxembourg, Malta, Netherlands, Norway, Poland, Portugal, Romania, Slovenia, Spain, and Sweden.</p>\n\n<p><strong>BLIK</strong><br>\nBelgium, Bulgaria, Croatia, Cyprus, Czechia, Denmark, Estonia, Finland, Greece, Hungary, Ireland, Latvia, Liechtenstein, Lithuania, Luxembourg, Malta, Norway, Portugal, Slovenia, and Sweden.</p>\n\n<p><strong>Przelewy24</strong><br>\nAustralia, Belgium, Bulgaria, Croatia, Cyprus, Czechia, Denmark, Estonia, Finland, Greece, Hong Kong SAR, Hungary, Ireland, Japan, Latvia, Liechtenstein, Lithuania, Luxembourg, Malta, Netherlands, Norway, Portugal, Romania, Singapore, Slovenia, Sweden, and Switzerland.</p>\n\n<p>Eligible buyers will see these payment methods at checkout once you turn them on. To get started, go to <strong>Settings &gt; Payments</strong> in your Shopify admin and add the local payment methods you'd like to offer.</p>\n\n<p><a href=\"https://help.shopify.com/en/manual/payments/shopify-payments/local-payment-methods\">Learn more about local payment methods</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "ローカル決済方法の提供国が拡大",
+          "summarizedJa": "Shopify Paymentsを通じて提供されるローカル決済方法が、ヨーロッパを中心に多くの国へ拡大されました。MobilePay、TWINT、BLIK、Przelewy24などの決済方法が、各国のマーチャントで利用可能になり、購入者は馴染みのある決済手段を選択できるようになります。日本はPrzelewy24の対象国に含まれています。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 2,
+            "japanRelevance": 2,
+            "technicalImportance": 2
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-06-03T00:30:00.738Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1363,
+            "output": 231
+          },
+          "estimatedCost": 0.007554000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "ローカル決済方法がより多くの国で利用可能に",
+          "summarizedJa": "Shopifyペイメントを通じて、より多くの国でローカル決済方法が利用可能になりました。これにより、購入者にとって慣れ親しんだ決済手段を提供することで、チェックアウト時の摩擦を減らし、コンバージョン率の向上が期待できます。特にPrzelewy24は日本でも利用可能となり、日本のマーチャントがポーランド市場などへ販売する際に活用できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-06-03T00:30:08.842Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1046,
+            "output": 156
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-customize-llmstxt-llms-fulltxt-and-agentsmd",
       "source": "developer-changelog",
