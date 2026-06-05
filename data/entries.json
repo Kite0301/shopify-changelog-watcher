@@ -1,6 +1,56 @@
 {
-  "lastUpdated": "2026-06-03T00:29:31.417Z",
+  "lastUpdated": "2026-06-05T00:21:51.496Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-scatter-plots-and-radar-charts-are-now-in-shopify-analytics",
+      "source": "shopify-changelog",
+      "title": "Scatter plots and radar charts are now in Shopify Analytics",
+      "link": "https://changelog.shopify.com/posts/scatter-plots-and-radar-charts-are-now-in-shopify-analytics",
+      "publishedAt": "2026-06-04T16:00:00.000Z",
+      "collectedAt": "2026-06-05T00:21:51.487Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>Custom reports in Shopify Analytics now support two new chart types: scatter plots and radar charts. These give you more ways to spot patterns and compare performance across your store data without exporting to a spreadsheet.</p>\n\n<p>Use scatter plots to see how two metrics relate. Plot revenue against units sold per product to find which products move volume but not margin. Plot session count against conversion rate per traffic source to see which channels actually convert, not just bring traffic. Each data point shows up as a dot, so clusters and outliers are easy to spot.</p>\n\n<p>Use radar charts to compare across multiple metrics at once. Look at product categories side by side across average order value, conversion rate, and return rate on one shared axis. The shape that emerges shows the relative strengths and weaknesses of each category at a glance, instead of bouncing between separate line or bar charts.</p>\n\n<p>Both chart types are available now in the visualization picker when you create or edit an existing report with compatible data.</p>\n\n<p>Learn more about chart types in custom reports in the Shopify Help Center.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify Analyticsに散布図とレーダーチャートが追加されました",
+          "summarizedJa": "Shopify Analyticsのカスタムレポートで、散布図とレーダーチャートの2つの新しいグラフタイプが利用可能になりました。散布図では2つの指標の関係性を可視化でき、レーダーチャートでは複数の指標を一度に比較できます。スプレッドシートにエクスポートすることなく、ストアデータのパターン分析やパフォーマンス比較が容易になります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-06-05T00:21:56.575Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1158,
+            "output": 245
+          },
+          "estimatedCost": 0.007148999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopifyアナリティクスで散布図とレーダーチャートが利用可能に",
+          "summarizedJa": "Shopifyアナリティクスのカスタムレポートに、新たに散布図とレーダーチャートが追加されました。これにより、マーチャントはストアデータを外部にエクスポートすることなく、売上と販売数、トラフィックとコンバージョン率など複数の指標間のパターンや関係性を視覚的に分析し、ビジネスパフォーマンスをより深く理解できるようになります。これらの新機能は、既存のレポート作成・編集時に利用可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-06-05T00:22:04.030Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 867,
+            "output": 169
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-app-quality-checks-now-managed-in-partner-dashboard",
       "source": "developer-changelog",
