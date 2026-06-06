@@ -1,6 +1,56 @@
 {
-  "lastUpdated": "2026-06-05T00:21:51.496Z",
+  "lastUpdated": "2026-06-06T00:21:11.261Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-schedule-publish-and-a-b-test-new-themes-and-checkout-and-customer-account-configurations",
+      "source": "shopify-changelog",
+      "title": "Schedule, publish, and A/B test new themes and checkout and customer account configurations",
+      "link": "https://changelog.shopify.com/posts/schedule-publish-and-a-b-test-new-themes-and-checkout-and-customer-account-configurations",
+      "publishedAt": "2026-06-05T14:30:00.000Z",
+      "collectedAt": "2026-06-06T00:21:11.245Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>Rollouts now supports scheduling, gradually publishing and A/B testing your themes and checkout and customer accounts configurations. </p>\n\n<p>You can now:<br>\n1. <strong>Schedule</strong> an entire new checkout or theme to go live at a specific date and time. For example, switch from Dawn to Horizon on a specific date.<br>\n2. <strong>Temporarily swap</strong> to a different theme or checkout setup. For example, activating a BFCM theme for one week with automatic revert.<br>\n3. <strong>Gradually roll out</strong> a new theme or checkout configuration to a percentage of your visitors. For example, rolling out a new branding experience for your customer account pages. <br>\n4. <strong>Run an A/B test</strong> between two entirely different themes or checkout setups to find the winner. For example, A/B testing a new upsell block for your checkout page. <br>\n5. Schedule or test <strong>localized content per market</strong>. For example, test different CTA text for each region to see impact on conversions. </p>\n\n<p>In addition, a copy of your published theme or config is automatically created so you can continue to edit your live theme/checkout independently from your experiment. And with mutually exclusive experiments, you can run multiple live experiments at the same time.</p>\n\n<p>To get started, go to Markets &gt; Rollouts in your Shopify admin and create a Rollout. Learn more about Rollouts in our <a href=\"https://help.shopify.com/manual/markets-new/rollouts\">help documentation</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "テーマ、チェックアウト、カスタマーアカウントの設定をスケジュール公開・A/Bテスト可能に",
+          "summarizedJa": "Rollouts機能が強化され、テーマやチェックアウト、カスタマーアカウントの設定を日時指定で公開したり、段階的なロールアウト、A/Bテストが可能になりました。BFCMなどの期間限定テーマの自動切り替えや、新しいブランディングの段階的展開、マーケット別のローカライズコンテンツのテストなど、柔軟な運用が実現できます。複数の実験を同時に実行することも可能です。",
+          "scores": {
+            "merchantImpact": 5,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 17,
+          "analyzedAt": "2026-06-06T00:21:17.431Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1305,
+            "output": 283
+          },
+          "estimatedCost": 0.00816
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "新しいテーマ、チェックアウト、顧客アカウント設定のスケジュール、公開、A/Bテスト",
+          "summarizedJa": "Shopifyの「Rollouts」機能が拡張され、テーマ、チェックアウト、顧客アカウント設定のスケジュール公開、段階的導入、A/Bテストが可能になりました。これにより、特定の期間でのテーマ切り替え、訪問者への段階的な新デザイン導入、異なる設定間での効果測定などが容易になります。特に、市場ごとのローカライズされたコンテンツのテストも可能となり、日本のマーチャントも顧客体験の最適化やコンバージョン改善に活用できます。",
+          "scores": {
+            "merchantImpact": 5,
+            "partnerImpact": 5,
+            "japanRelevance": 5,
+            "technicalImportance": 4
+          },
+          "totalScore": 19,
+          "analyzedAt": "2026-06-06T00:21:26.213Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 993,
+            "output": 179
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-scatter-plots-and-radar-charts-are-now-in-shopify-analytics",
       "source": "shopify-changelog",
@@ -156,6 +206,59 @@
       }
     },
     {
+      "id": "developer-changelog-changelog-giftcardcashouttransaction-now-resolvable-from-giftcardtransaction",
+      "source": "developer-changelog",
+      "title": "`GiftCardCashOutTransaction` is now resolvable from `GiftCardTransaction`",
+      "link": "https://shopify.dev/changelog/giftcardcashouttransaction-now-resolvable-from-giftcardtransaction",
+      "publishedAt": "2026-06-02T16:00:00.000Z",
+      "collectedAt": "2026-06-06T00:21:10.361Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>Starting with GraphQL Admin API version 2026-07, the [<code>GiftCardCashOutTransaction</code>](<a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/GiftCardCashOutTransaction\" target=\"_blank\" class=\"body-link\">https://shopify.dev/docs/api/admin-graphql/2026-07/objects/GiftCardCashOutTransaction</a> type is introduced as a new variant of the <code>GiftCardTransaction</code> interface. This type specifically represents transactions where a gift card balance is paid out through a point of sale (POS) system.</p>\n<p>In previous API versions, such as 2026-04 and earlier, these transactions were classified as <code>GiftCardDebitTransaction</code>. From version 2026-07 onwards, they are identified as <code>GiftCardCashOutTransaction</code>. To accurately differentiate cash-out transactions from credit and debit transactions, use the <code>__typename</code> field when querying <code>giftCard.transactions</code>.</p>\n<p>Below is an example query:</p>\n<pre><code class=\"language-graphql\">giftCard(id: &quot;...&quot;) {\n  transactions(first: 10) {\n    nodes {\n      __typename\n      ... on GiftCardCashOutTransaction {\n        id\n        amount { amount currencyCode }\n      }\n    }\n  }\n}\n</code></pre>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "GiftCardTransactionから`GiftCardCashOutTransaction`が解決可能に",
+          "summarizedJa": "GraphQL Admin API 2026-07から、ギフトカード残高をPOSシステムで現金化する取引を表す新しい型`GiftCardCashOutTransaction`が導入されました。従来のバージョンでは`GiftCardDebitTransaction`として分類されていましたが、2026-07以降は専用の型として識別されます。現金化取引を正確に区別するには、`giftCard.transactions`のクエリで`__typename`フィールドを使用する必要があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-06-06T00:21:31.096Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1310,
+            "output": 247
+          },
+          "estimatedCost": 0.007634999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "「GiftCardCashOutTransaction」が「GiftCardTransaction」から解決可能に",
+          "summarizedJa": "ShopifyのGraphQL Admin APIバージョン2026-07から、POSシステムを介したギフトカード残高の払い出しを表す新しいタイプ「GiftCardCashOutTransaction」が導入されます。以前は「GiftCardDebitTransaction」として分類されていましたが、今後はこの新しいタイプで明確に識別できるようになります。開発者は、ギフトカードの取引タイプを正確に区別するために「__typename」フィールドを使用する必要があります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-06-06T00:21:35.762Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 984,
+            "output": 171
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
       "id": "shopify-changelog-posts-more-local-payment-methods-are-now-available-in-additional-countries",
       "source": "shopify-changelog",
       "title": "Local payment methods are now available in more countries",
@@ -235,6 +338,59 @@
             "output": 298
           },
           "estimatedCost": 0.007959
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-gift-card-local-currency-support",
+      "source": "developer-changelog",
+      "title": "Local currency support gift cards now available in the GraphQL Admin API",
+      "link": "https://shopify.dev/changelog/gift-card-local-currency-support",
+      "publishedAt": "2026-05-27T16:00:00.000Z",
+      "collectedAt": "2026-06-06T00:21:10.361Z",
+      "category": [
+        "API",
+        "Update",
+        "Admin GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>Starting in API version <code>2026-07</code>, the GraphQL Admin API supports local currency gift cards. You can create gift card products that are issued in a specific currency, and control whether buyers can redeem those gift cards across currencies. If your app creates gift cards directly, migrate from the deprecated <code>initialValue</code> field to <code>initialAmount</code>.</p>\n<h2>What changed</h2>\n<p>Use the new <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/mutations/giftCardProductSet\" target=\"_blank\" class=\"body-link\"><code>giftCardProductSet</code></a> mutation to create and update gift card products. The input includes <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/input-objects/GiftCardProductSetInput#field-GiftCardProductSetInput.fields.issuanceCurrency\" target=\"_blank\" class=\"body-link\"><code>issuanceCurrency</code></a> and <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/input-objects/GiftCardProductSetInput#field-GiftCardProductSetInput.fields.crossCurrencyRedeemable\" target=\"_blank\" class=\"body-link\"><code>crossCurrencyRedeemable</code></a>, and automatically applies the product’s gift card settings to its variants. You can set <code>issuanceCurrency</code> and <code>crossCurrencyRedeemable</code> only when you create the product; you can’t change either field afterward.</p>\n<p>Inspect a product’s settings through <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/Product#field-Product.fields.giftCardSettings\" target=\"_blank\" class=\"body-link\"><code>Product.giftCardSettings</code></a>. If <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/GiftCardProductSettings#field-GiftCardProductSettings.fields.issuanceCurrency\" target=\"_blank\" class=\"body-link\"><code>issuanceCurrency</code></a> is <code>null</code>, Shopify issues gift cards from the product in the shop’s currency. If <code>issuanceCurrency</code> is set, Shopify issues gift cards in the specified currency, and buyers can purchase the product only in that currency. Publish these products only in markets where that currency is supported.</p>\n<p><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/GiftCardProductSettings#field-GiftCardProductSettings.fields.crossCurrencyRedeemable\" target=\"_blank\" class=\"body-link\"><code>crossCurrencyRedeemable</code></a> controls redemption behavior across currencies:</p>\n<ul>\n<li>If <code>crossCurrencyRedeemable</code> is <code>false</code>, issued gift cards use a <code>crossCurrencyRedemptionStrategy</code> of <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/enums/GiftCardCrossCurrencyRedemptionStrategy#enums-NONE\" target=\"_blank\" class=\"body-link\"><code>NONE</code></a>.</li>\n<li>If <code>crossCurrencyRedeemable</code> is <code>true</code> and the product has no issuance currency, gift cards use <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/enums/GiftCardCrossCurrencyRedemptionStrategy#enums-MARKET_FX\" target=\"_blank\" class=\"body-link\"><code>MARKET_FX</code></a>.</li>\n<li>If <code>crossCurrencyRedeemable</code> is <code>true</code> and the product has an issuance currency, gift cards use <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/enums/GiftCardCrossCurrencyRedemptionStrategy#enums-SPOT_FX\" target=\"_blank\" class=\"body-link\"><code>SPOT_FX</code></a>.</li>\n</ul>\n<p>Gift card creation now accepts <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/input-objects/GiftCardCreateInput#field-GiftCardCreateInput.fields.initialAmount\" target=\"_blank\" class=\"body-link\"><code>initialAmount</code></a>, which replaces the deprecated <code>initialValue</code> field. <code>initialAmount</code> includes both the amount and currency. Query <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/GiftCard#field-GiftCard.fields.isRedeemable\" target=\"_blank\" class=\"body-link\"><code>GiftCard.isRedeemable</code></a> and <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/GiftCard#field-GiftCard.fields.crossCurrencyRedemptionStrategy\" target=\"_blank\" class=\"body-link\"><code>GiftCard.crossCurrencyRedemptionStrategy</code></a> to check whether a gift card can be redeemed and how cross-currency conversion is handled.</p>\n<h2>What to do</h2>\n<ol>\n<li>If you create gift cards using <code>giftCardCreate</code>, replace <code>initialValue</code> with <code>initialAmount</code> before you upgrade to <code>2026-07</code>.  </li>\n<li>If you offer multi-currency stores, decide whether new gift card products should be pinned to a single issuance currency. Configure <code>issuanceCurrency</code> and <code>crossCurrencyRedeemable</code> when you create the product; you can’t change either field afterward.  </li>\n<li>Update redemption flows to read <code>GiftCard.crossCurrencyRedemptionStrategy</code> so you can surface accurate cross-currency conversion behavior to merchants and buyers.</li>\n</ol>\n<h2>Related docs</h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/mutations/giftCardProductSet\" target=\"_blank\" class=\"body-link\"><code>giftCardProductSet</code> mutation</a>  </li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/GiftCard\" target=\"_blank\" class=\"body-link\"><code>GiftCard</code> object</a>  </li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/Product#field-Product.fields.giftCardSettings\" target=\"_blank\" class=\"body-link\"><code>Product.giftCardSettings</code></a>  </li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/enums/GiftCardCrossCurrencyRedemptionStrategy\" target=\"_blank\" class=\"body-link\"><code>GiftCardCrossCurrencyRedemptionStrategy</code> enum</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "GraphQL Admin APIでローカル通貨対応ギフトカードが利用可能に",
+          "summarizedJa": "APIバージョン2026-07から、GraphQL Admin APIで特定通貨で発行するギフトカード商品の作成と、通貨を跨いだ利用制御が可能になりました。ギフトカードを直接作成するアプリは、非推奨となった`initialValue`フィールドから`initialAmount`フィールドへの移行が必要です。新しい`giftCardProductSet`ミューテーションで`issuanceCurrency`と`crossCurrencyRedeemable`を設定でき、商品作成後の変更はできないため注意が必要です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-06-06T00:21:42.760Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2748,
+            "output": 276
+          },
+          "estimatedCost": 0.012384
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "GraphQL Admin APIで現地通貨建てギフトカードが利用可能に",
+          "summarizedJa": "このアップデートにより、ShopifyのGraphQL Admin APIで現地通貨建てギフトカードの作成と管理が可能になります。マーチャントは特定の通貨でギフトカードを発行し、複数通貨での引き換え可否を細かく設定できるようになります。アプリ開発者は、APIバージョン2026-07へのアップグレード前に、ギフトカード作成時のフィールド変更（`initialValue`から`initialAmount`へ）や、新しい通貨・引き換え設定への対応が必要です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 17,
+          "analyzedAt": "2026-06-06T00:21:51.379Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 2161,
+            "output": 175
+          },
+          "estimatedCost": 0
         }
       }
     },
