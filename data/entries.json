@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-09T00:18:32.036Z",
+  "lastUpdated": "2026-06-10T00:24:11.371Z",
   "entries": [
     {
       "id": "shopify-changelog-posts-multi-location-pickup-is-now-available-in-pos",
@@ -6501,6 +6501,60 @@
           "tokenUsage": {
             "input": 974,
             "output": 151
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-removing-storefront-visibility-field-on-metaobject-field-definitions",
+      "source": "developer-changelog",
+      "title": "Removing `visible_to_storefront_api` field on metaobject field definitions",
+      "link": "https://shopify.dev/changelog/removing-storefront-visibility-field-on-metaobject-field-definitions",
+      "publishedAt": "2026-03-30T16:00:00.000Z",
+      "collectedAt": "2026-06-10T00:24:09.502Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Deprecation Announcement",
+        "Admin GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><h2>What's changing</h2>\n<p>The <code>visibleToStorefrontApi</code> field/input field is deprecated and removed from the <code>unstable</code> version of the GraphQL Admin API for the following types:</p>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/objects/MetaobjectFieldDefinition\" target=\"_blank\" class=\"body-link\"><code>MetaobjectFieldDefinition</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/input-objects/MetaobjectFieldDefinitionCreateInput\" target=\"_blank\" class=\"body-link\"><code>MetaobjectFieldDefinitionCreateInput</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/input-objects/MetaobjectFieldDefinitionUpdateInput\" target=\"_blank\" class=\"body-link\"><code>MetaobjectFieldDefinitionUpdateInput</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/StandardMetaobjectDefinitionFieldTemplate\" target=\"_blank\" class=\"body-link\"><code>StandardMetaobjectDefinitionFieldTemplate</code></a></li>\n</ul>\n<h2>Who's affected</h2>\n<ul>\n<li>Anyone using <code>visibleToStorefrontApi</code> field or input field on a Metaobject field definition</li>\n</ul>\n<p><strong>NOTE</strong>: With the exception of <code>StandardMetaobjectDefinitionFieldTemplate</code>, this field was only ever exposed in <code>unstable</code>.</p>\n<h2>Why we're making this change</h2>\n<p>This field implies a system behaviour that doesn't exist. It isn't possible to toggle the storefront visibility of individual fields. The only storefront visibility controls are on the <code>access</code> fields of the metaobject definition itself.</p>\n<h2>Action required</h2>\n<p>If your app has a query or mutation that's referencing the <code>visibleToStorefrontApi</code> field on a Metaobject field definition, you need to remove that field.</p>\n<h2>Key dates</h2>\n<p><strong>April 2, 2026</strong>: <code>visibleToStorefrontApi</code> field on metaobject field definitions will be removed from <code>unstable</code> and <code>2026-07</code></p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "メタオブジェクトフィールド定義から`visible_to_storefront_api`フィールドを削除",
+          "summarizedJa": "GraphQL Admin APIのメタオブジェクトフィールド定義における`visibleToStorefrontApi`フィールドが2026年4月2日に削除されます。このフィールドは実際には機能しないシステム動作を示唆していたため廃止され、ストアフロントの可視性制御はメタオブジェクト定義自体の`access`フィールドで行う必要があります。このフィールドを参照しているクエリやミューテーションを使用しているアプリ開発者は、該当フィールドを削除する対応が必要です。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-06-10T00:24:17.547Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1587,
+            "output": 285
+          },
+          "estimatedCost": 0.009036
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "メタオブジェクトフィールド定義における`visibleToStorefrontApi`フィールドの削除",
+          "summarizedJa": "Shopifyは、GraphQL Admin APIのメタオブジェクトフィールド定義から`visibleToStorefrontApi`フィールドを削除します。このフィールドは、個々のフィールドのストアフロント表示を制御できるという誤解を与えていたため、実際の表示制御はメタオブジェクト定義の`access`フィールドで行われます。このフィールドを使用しているアプリやカスタムコードは、2026年4月2日までに該当フィールドを削除する対応が必要です。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-06-10T00:24:25.953Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1158,
+            "output": 169
           },
           "estimatedCost": 0
         }
@@ -19344,6 +19398,62 @@
       }
     },
     {
+      "id": "developer-changelog-changelog-new-unlisted-product-status",
+      "source": "developer-changelog",
+      "title": "New: Unlisted Product Status",
+      "link": "https://shopify.dev/changelog/new-unlisted-product-status",
+      "publishedAt": "2025-10-21T16:15:00.000Z",
+      "collectedAt": "2026-06-10T00:24:09.503Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "Admin REST API",
+        "Webhook",
+        "Liquid",
+        "Storefront GraphQL API"
+      ],
+      "description": " <div class=\"\"><p><code>UNLISTED</code> is available as a new product status value in the 2025-10 GraphQL Admin API and REST Admin APIs, as well as in the Webhooks API. </p>\n<p>The <code>Unlisted</code> status hides products from store search and recommendations (including collections), all sales channels,  internet searches and <a href=\"https://help.shopify.com/en/manual/promoting-marketing/seo/shopify-catalog\" target=\"_blank\" class=\"body-link\">Shopify Catalog</a>, while still allowing access via a direct URL. It will be returned in Storefront API and Liquid only when referenced individually by handle, id, or metafield reference.</p>\n<p><strong>Note</strong>: Previous versions of the Admin APIs will return product status for unlisted products as <code>ACTIVE</code>.</p>\n<p>Learn more about this update in our <a href=\"https://shopify.dev/docs/api/admin-graphql/2025-10/enums/ProductStatus#enums-UNLISTED\" target=\"_blank\" class=\"body-link\">developer documentation</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "新機能: 非公開(Unlisted)商品ステータスの追加",
+          "summarizedJa": "2025-10バージョンのAdmin API、Webhook API、Storefront API、Liquidに新しい商品ステータス「UNLISTED(非公開)」が追加されました。このステータスでは、商品を検索結果やコレクション、販売チャネルから非表示にしながら、直接URLでのアクセスは可能になります。以前のAPIバージョンでは非公開商品は「ACTIVE」として返されるため、バージョン間での互換性に注意が必要です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-06-10T00:24:31.619Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1198,
+            "output": 249
+          },
+          "estimatedCost": 0.007329
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "新機能: 非公開商品ステータス",
+          "summarizedJa": "Shopifyの2025-10 APIバージョンで、新しく「UNLISTED（非公開）」という商品ステータスが導入されました。このステータスを設定した商品は、ストア検索やおすすめ、販売チャネル、インターネット検索からは非表示になりますが、直接URLを知っている顧客はアクセス可能です。これにより、特定の顧客への先行販売や限定公開など、より柔軟な商品管理が可能になります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-06-10T00:24:38.850Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 887,
+            "output": 160
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
       "id": "shopify-changelog-posts-accept-more-local-payment-methods",
       "source": "shopify-changelog",
       "title": "Accept more local payment methods ",
@@ -20388,6 +20498,269 @@
       }
     },
     {
+      "id": "developer-changelog-changelog-introducing-functionhandle",
+      "source": "developer-changelog",
+      "title": "Introducing `functionHandle` for Shopify Functions ",
+      "link": "https://shopify.dev/changelog/introducing-functionhandle",
+      "publishedAt": "2025-10-01T16:00:00.000Z",
+      "collectedAt": "2026-06-10T00:24:09.504Z",
+      "category": [
+        "API",
+        "Deprecation Announcement",
+        "Functions",
+        "2025-10"
+      ],
+      "description": " <div class=\"\"><p>As of the <code>2025-10</code> API version, we’re introducing support for user-defined handles as the identifier for Shopify Functions in GraphQL mutations. Instead of passing a globally unique <code>functionId</code> in mutations that create or manage function owners, you can pass a stable, app-scoped handle that you define in your <code>shopify.extension.toml</code>. All GraphQL mutations that currently accept <code>functionId</code> will accept <code>functionHandle</code>. </p>\n<p><strong>Note</strong>: You must provide either 'functionId' or 'functionHandle' for each call, not both. Providing both will result in a user error.</p>\n<h3>What this does for you</h3>\n<p>Function IDs change with each deployment to a different environment. This forces developers to query for the latest ID before they can create or update a function owner. Handles are stable across environments and scoped to your app, removing the need to query <code>shopifyFunction</code> before creating the function owner.</p>\n<h3>No developer action required</h3>\n<p>These changes will not break your existing integrations. <code>functionId</code> will continue to work. However, we recommend you update your code to use <code>functionHandle</code> instead:</p>\n<ul>\n<li>Remove code that queries for <code>functionId</code> at runtime.</li>\n<li>Use the <code>functionHandle</code> you define in <code>shopify.extension.toml</code> directly in GraphQL mutations.</li>\n</ul>\n<p>Formal deprecation and removal timelines for <code>functionId</code> will be announced separately.</p>\n<h3>Example Usage</h3>\n<ol>\n<li><p>Obtain <code>functionHandle</code> from the function's <code>shopify.extension.toml</code>:</p>\n<pre><code class=\"language-toml\">[[extensions]]\nname = &quot;Payment Customization Function&quot;\nhandle = &quot;YOUR_FUNCTION_HANDLE&quot; \n  type = &quot;function&quot;\n</code></pre>\n</li>\n<li><p>Create the payment customization using <code>functionHandle</code></p>\n<pre><code class=\"language-graphql\">mutation {\n  paymentCustomizationCreate(paymentCustomization: {\n    title: &quot;Payment Customization Title&quot;,\n    enabled: true,\n    functionHandle: &quot;YOUR_FUNCTION_HANDLE&quot;,\n  }) {\n    paymentCustomization {\n      id\n    }\n    userErrors {\n      message\n    }\n  }\n}\n</code></pre>\n</li>\n</ol>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify Functionsに`functionHandle`を導入",
+          "summarizedJa": "2025-10 APIバージョンから、Shopify FunctionsをGraphQL mutationで識別する際に、従来の`functionId`に加えて、開発者が定義する安定した`functionHandle`が利用可能になります。`functionHandle`は環境間で変更されないため、デプロイごとにIDを取得する必要がなくなり、開発が効率化されます。既存の`functionId`も引き続き動作し、即座の対応は不要ですが、将来的な非推奨化が予定されています。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-06-10T00:24:45.476Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1584,
+            "output": 250
+          },
+          "estimatedCost": 0.008502
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify Functions向け`functionHandle`の導入",
+          "summarizedJa": "Shopify Functionsの識別子として、環境間で安定した新しい`functionHandle`が導入されます。これにより、デプロイごとに変更される`functionId`を都度問い合わせる必要がなくなり、開発プロセスが簡素化されます。既存の`functionId`も引き続き利用可能ですが、開発効率向上のため`functionHandle`への移行が推奨されています。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-06-10T00:24:52.279Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1187,
+            "output": 151
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-storefront-api-cart-now-supports-adding-gift-cards",
+      "source": "developer-changelog",
+      "title": "Storefront API Cart now supports adding Gift Cards",
+      "link": "https://shopify.dev/changelog/storefront-api-cart-now-supports-adding-gift-cards",
+      "publishedAt": "2025-10-01T16:00:00.000Z",
+      "collectedAt": "2026-06-10T00:24:09.504Z",
+      "category": [
+        "API",
+        "New",
+        "Storefront GraphQL API",
+        "2025-10"
+      ],
+      "description": " <div class=\"\"><p>As of version 2025-10, you can use the GraphQL Storefront API to add gift cards to a cart without replacing gift cards that have already been applied.</p>\n<p>After a cart has been created, perform the <a href=\"https://shopify.dev/docs/api/storefront/2025-10/mutations/cartGiftCardCodesAdd\" target=\"_blank\" class=\"body-link\">cartGiftCardCodesAdd</a> mutation to add one or more gift cards to the cart.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Storefront APIのカート機能でギフトカードの追加に対応",
+          "summarizedJa": "2025-10バージョンより、GraphQL Storefront APIでカートにギフトカードを追加できるようになりました。新しいcartGiftCardCodesAddミューテーションを使用することで、既に適用されているギフトカードを置き換えることなく、複数のギフトカードを追加できます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-06-10T00:24:56.020Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1048,
+            "output": 197
+          },
+          "estimatedCost": 0.006099
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Storefront APIのカートがギフトカードの追加に対応",
+          "summarizedJa": "ShopifyのStorefront API（2025-10バージョン以降）において、GraphQLを通じてカートにギフトカードを追加する機能が追加されました。この新機能により、既存のギフトカードを置き換えることなく、複数のギフトカードをカートに適用することが可能になります。これにより、マーチャントは顧客体験を向上させ、パートナーはより柔軟なカスタムカート体験を構築できるようになります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-06-10T00:25:02.578Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 767,
+            "output": 158
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-new-support-for-usdc-credit-field-in-shopify-payments-payout-graphql",
+      "source": "developer-changelog",
+      "title": "New: Support for USDC Credit field in Shopify Payments Payout GraphQL",
+      "link": "https://shopify.dev/changelog/new-support-for-usdc-credit-field-in-shopify-payments-payout-graphql",
+      "publishedAt": "2025-10-01T16:00:00.000Z",
+      "collectedAt": "2026-06-10T00:24:09.504Z",
+      "category": [
+        "API",
+        "Update",
+        "Admin GraphQL API",
+        "2025-10"
+      ],
+      "description": " <div class=\"\"><p>As of GraphQL Admin API version <strong>2025-10</strong>, <code>ShopifyPaymentsPayoutSummary</code> now includes a <code>usdcRebateCreditAmount</code> field, which provides a total of all USDC rebate credits issued as part of the payout.</p>\n<p>For more information about <code>ShopifyPaymentsPayoutSummary</code>, visit the <a href=\"https://shopify.dev/docs/api/admin-graphql/2025-10/objects/shopifypaymentspayoutsummary\" target=\"_blank\" class=\"body-link\">Shopify.dev documentation</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify Payments支払いGraphQLにおけるUSDCクレジットフィールドのサポート追加",
+          "summarizedJa": "GraphQL Admin API バージョン2025-10より、ShopifyPaymentsPayoutSummaryオブジェクトに新しく「usdcRebateCreditAmount」フィールドが追加されました。このフィールドは、支払いの一部として発行されたすべてのUSDCリベートクレジットの合計額を提供します。Shopify Paymentsの支払い情報をGraphQL経由で取得しているパートナーは、このフィールドを活用することでより詳細な支払い情報を取得できるようになります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 2,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 6,
+          "analyzedAt": "2026-06-10T00:25:07.795Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1111,
+            "output": 271
+          },
+          "estimatedCost": 0.007397999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify ペイメント支払いGraphQLにUSDCクレジットフィールドを追加",
+          "summarizedJa": "GraphQL Admin API バージョン2025-10より、`ShopifyPaymentsPayoutSummary`オブジェクトに`usdcRebateCreditAmount`フィールドが追加されました。この新しいフィールドは、支払いの一部として発行されたUSDCリベートクレジットの合計額を提供します。これにより、Shopifyペイメントの支払いデータをAPI経由でより詳細に分析できるようになります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-06-10T00:25:14.854Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 792,
+            "output": 155
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-dev-mcp-now-supports-liquid",
+      "source": "developer-changelog",
+      "title": "Shopify Dev MCP now supports Liquid",
+      "link": "https://shopify.dev/changelog/dev-mcp-now-supports-liquid",
+      "publishedAt": "2025-10-01T16:00:00.000Z",
+      "collectedAt": "2026-06-10T00:24:09.504Z",
+      "category": [
+        "Tools",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>The Shopify Dev MCP server can now search for Liquid docs, and validate Liquid to catch common errors before deployment:</p>\n<ul>\n<li><strong>Liquid Documentation:</strong> Your AI assistant can now search the complete Liquid API reference, which includes all objects, filters, and tags. </li>\n<li><strong>Code Validation:</strong> The built-in theme-check integration identifies syntax errors and best practice violations in your generated code, helping you maintain high-quality standards.</li>\n</ul>\n<p>If you're already using the Shopify Dev MCP server, Liquid support is automatically included in the latest version.</p>\n<p>View the <a href=\"https://shopify.dev/docs/apps/build/devmcp\" target=\"_blank\" class=\"body-link\">Shopify Dev MCP server</a> documentation or explore the <a href=\"https://github.com/Shopify/dev-mcp\" target=\"_blank\" class=\"body-link\">source code on GitHub</a> for more details.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify Dev MCPがLiquidをサポート開始",
+          "summarizedJa": "Shopify Dev MCPサーバーが、Liquidドキュメントの検索とコード検証機能に対応しました。AIアシスタントがLiquid APIリファレンス全体を検索できるようになり、組み込みのtheme-checkによってデプロイ前に構文エラーやベストプラクティス違反を検出できます。既存ユーザーは最新版に自動的にLiquidサポートが含まれています。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-06-10T00:25:19.618Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1152,
+            "output": 230
+          },
+          "estimatedCost": 0.006906
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify Dev MCPがLiquidに対応",
+          "summarizedJa": "Shopify Dev MCPサーバーがLiquid言語に対応し、AIアシスタントによるLiquidドキュメント検索と、デプロイ前のコード検証（theme-check連携）が可能になりました。これにより、開発者はLiquidコードの品質を向上させ、エラーを未然に防ぎながら効率的に開発を進めることができます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-06-10T00:25:27.313Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 836,
+            "output": 136
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-multipassidentifier-field-added-to-graphql-admin-api",
+      "source": "developer-changelog",
+      "title": "`multipassIdentifier` field added to GraphQL Admin API",
+      "link": "https://shopify.dev/changelog/multipassidentifier-field-added-to-graphql-admin-api",
+      "publishedAt": "2025-10-01T16:00:00.000Z",
+      "collectedAt": "2026-06-10T00:24:09.504Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2025-10"
+      ],
+      "description": " <div class=\"\"><p>We have introduced the <code>multipassIdentifier</code> field to the Admin GraphQL API, achieving feature parity with the REST Admin API. This update ensures that both APIs offer the same capabilities, enhancing consistency and flexibility for developers.</p>\n<p>The <code>multipassIdentifier</code> field allows you to assign unique identifiers to customers, facilitating seamless authentication between your external website and Shopify store through the Multipass feature.</p>\n<p>You can now utilize this field in both the <code>customerCreate</code> and <code>customerUpdate</code> mutations:</p>\n<pre><code class=\"language-graphql\">mutation {\n  customerUpdate(input: {\n    id: &quot;gid://shopify/Customer/12345678&quot;,\n    multipass_identifier: &quot;your-multipass-identifier-value&quot;\n  }) {\n    customer {\n      id\n      multipassIdentifier\n    }\n    userErrors {\n      field\n      message\n    }\n  }\n}\n</code></pre>\n<p>For further details on working with customers in the Admin GraphQL API, please refer to our <a href=\"https://shopify.dev/docs/api/admin-graphql/current/mutations/customerUpdate\" target=\"_blank\" class=\"body-link\">Customer documentation</a></p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "GraphQL Admin APIに`multipassIdentifier`フィールドが追加",
+          "summarizedJa": "Admin GraphQL APIに`multipassIdentifier`フィールドが追加され、REST Admin APIとの機能パリティが実現されました。このフィールドにより、customerCreateおよびcustomerUpdateミューテーションで顧客に一意の識別子を割り当てることができ、Multipass機能を使った外部サイトとShopifyストア間のシームレスな認証が可能になります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-06-10T00:25:34.450Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1244,
+            "output": 215
+          },
+          "estimatedCost": 0.006957
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "GraphQL Admin APIに`multipassIdentifier`フィールドが追加",
+          "summarizedJa": "このアップデートにより、Admin GraphQL APIに`multipassIdentifier`フィールドが追加され、REST Admin APIとの機能同等性が実現されました。このフィールドは、外部サイトとShopifyストア間でMultipass機能を利用した顧客のシームレスな認証を可能にするため、顧客に一意の識別子を割り当てることができます。これにより、開発者は`customerCreate`および`customerUpdate`ミューテーションでこの機能を利用できるようになります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-06-10T00:25:43.097Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 936,
+            "output": 168
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
       "id": "developer-changelog-changelog-polaris-unified-web-components-are-now-stable",
       "source": "developer-changelog",
       "title": "Polaris unified web components are now stable",
@@ -20572,6 +20945,217 @@
           "tokenUsage": {
             "input": 1494,
             "output": 147
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-dynamic-complexity-for-productvariantsbulkcreate-and-productvariantsbulkupdate-mutations",
+      "source": "developer-changelog",
+      "title": "Dynamic complexity for `productVariantsBulkCreate` and `productVariantsBulkUpdate` mutations",
+      "link": "https://shopify.dev/changelog/dynamic-complexity-for-productvariantsbulkcreate-and-productvariantsbulkupdate-mutations",
+      "publishedAt": "2025-10-01T04:00:00.000Z",
+      "collectedAt": "2026-06-10T00:24:09.504Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API"
+      ],
+      "description": " <div class=\"\"><p>The <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/productVariantsBulkCreate\" target=\"_blank\" class=\"body-link\"><code>productVariantsBulkCreate</code></a> and <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/productvariantsbulkupdate\" target=\"_blank\" class=\"body-link\"><code>productVariantsBulkUpdate</code></a> mutations now use dynamic complexity costing to more accurately reflect the actual computational cost of operations.</p>\n<h3>Support for more complex products</h3>\n<p>The mutations now support products with up to 2,048 variants for merchants on all plans, a significant increase from the previous limit of 100 variants. This enables apps to manage more complex products, and support merchants with diverse business needs.</p>\n<h3>What's changing</h3>\n<p>With the release of Dynamic Complexity, the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/productVariantsBulkCreate\" target=\"_blank\" class=\"body-link\"><code>productVariantsBulkCreate</code></a> and <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/productvariantsbulkupdate\" target=\"_blank\" class=\"body-link\"><code>productVariantsBulkUpdate</code></a> mutations will now have a base cost of 10-points, and additional points will be calcuated based on the complexity of the input. </p>\n<ul>\n<li><strong>Base cost</strong>: 10 points</li>\n<li><strong>Per variant</strong>: 0.2 points</li>\n<li><strong>Per variant media</strong>: 0.6 points  </li>\n<li><strong>Per variant metafield</strong>: 0.4 points</li>\n<li><strong>Per product media</strong>: 1.9 points</li>\n</ul>\n<p>The total complexity is calculated as:</p>\n<pre><code>10 +\n  (variants × 0.2) +\n  (variant_media × 0.6) +\n  (variant_metafields × 0.4) +\n  (product_media × 1.9)\n</code></pre>\n<h3>Migration guidance</h3>\n<p>For most apps, no changes are required.</p>\n<p>For apps working with high-complexity products exceeding the 1000-point single query limit:</p>\n<ul>\n<li>Consider using <a href=\"https://shopify.dev/docs/api/usage/bulk-operations/imports\" target=\"_blank\" class=\"body-link\">bulk mutations</a> for very large operations.</li>\n<li>Split complex operations into separate calls: use the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/productVariantsBulkCreate\" target=\"_blank\" class=\"body-link\"><code>productVariantsBulkCreate</code></a> and <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/productvariantsbulkupdate\" target=\"_blank\" class=\"body-link\"><code>productVariantsBulkUpdate</code></a> mutations for core variant data, then use <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/metafieldsSet\" target=\"_blank\" class=\"body-link\"><code>metafieldsSet</code></a> and <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/fileCreate\" target=\"_blank\" class=\"body-link\"><code>fileCreate</code></a> for additional data.</li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "productVariantsBulkCreateおよびproductVariantsBulkUpdateミューテーションの動的複雑性コスト導入",
+          "summarizedJa": "商品バリアント一括作成・更新のGraphQL APIに動的複雑性コストが導入され、全プランで最大2,048バリアントまで対応可能になりました。基本コスト10ポイントに加え、バリアント数やメディア、メタフィールドに応じた追加コストが計算されます。複雑な商品を扱うアプリは、1000ポイントの制限を超える場合、操作を分割するか一括ミューテーションの利用を検討する必要があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-06-10T00:25:49.928Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1869,
+            "output": 275
+          },
+          "estimatedCost": 0.009732000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "商品バリアント一括作成・更新ミューテーションにおける動的複雑度計算の導入",
+          "summarizedJa": "ShopifyのAdmin GraphQL APIにおいて、`productVariantsBulkCreate`および`productVariantsBulkUpdate`ミューテーションに動的な複雑度計算が導入されました。これにより、1つの商品で管理できるバリアント数が従来の100から最大2,048に大幅に増加し、より複雑な商品構成を持つマーチャントのニーズに対応可能になります。API利用時のコスト計算方法が変更されますが、ほとんどのアプリでは対応不要であり、高複雑度な操作を行うパートナーはバルク操作やAPI呼び出しの分割を検討することが推奨されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-06-10T00:25:56.546Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1418,
+            "output": 204
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-inventoryquantities-limit-in-mutations",
+      "source": "developer-changelog",
+      "title": "`productVariantsBulkCreate` and `productVariantsBulkUpdate` mutations now validate `inventoryQuantities` limits",
+      "link": "https://shopify.dev/changelog/inventoryquantities-limit-in-mutations",
+      "publishedAt": "2025-10-01T04:00:00.000Z",
+      "collectedAt": "2026-06-10T00:24:09.504Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2025-10"
+      ],
+      "description": " <div class=\"\"><h2>What's changing?</h2>\n<p>The <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/productVariantsBulkCreate\" target=\"_blank\" class=\"body-link\"><code>productVariantsBulkCreate</code></a> and <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/productvariantsbulkupdate\" target=\"_blank\" class=\"body-link\"><code>productVariantsBulkUpdate</code></a> mutations now enforce validation limits on inventory quantities as part of supporting the increased variant limit from 100 to 2048 variants per product.</p>\n<h3>Input Validation Limits</h3>\n<p>With the increase in maximum variants per product from 100 to 2048, the mutation now enforces a maximum limit of <strong>50,000 inventory quantities</strong> across all variants in a single mutation. This ensures reliable performance when managing products with many variants across multiple locations.</p>\n<h3>Error response example</h3>\n<pre><code class=\"language-json\">{\n  &quot;data&quot;: {\n    &quot;productVariantsBulkCreate&quot;: {\n      &quot;userErrors&quot;: [{\n        &quot;code&quot;: &quot;INVENTORY_QUANTITIES_LIMIT_EXCEEDED&quot;,\n        &quot;field&quot;: [&quot;variants&quot;],\n        &quot;message&quot;: &quot;Input contains 51200 inventory quantities, which exceeds the limit of 50000&quot;\n      }],\n      &quot;product&quot;: null\n    }\n  }\n}\n</code></pre>\n<h2>Why are we making this change?</h2>\n<h3>Support for 2048 Variants</h3>\n<ul>\n<li><strong>Increased variant limit</strong>: Products can now have up to 2048 variants (previously 100)</li>\n<li><strong>Reliable execution</strong>: Ensures consistent performance when managing complex products</li>\n</ul>\n<h2>Handling Large Inventory Updates</h2>\n<p>If you hit the 50,000 inventory quantity limit, you have several options:</p>\n<ol>\n<li><strong>Batch your operations</strong>: Split large operations into multiple smaller mutations</li>\n<li><strong>Use <code>inventorySetQuantities</code></strong>: For updating inventory across many locations, use the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/inventorySetQuantities\" target=\"_blank\" class=\"body-link\"><code>inventorySetQuantities</code></a></li>\n<li><strong>Use bulk mutations</strong>: For very large datasets, consider using <a href=\"https://shopify.dev/docs/api/usage/bulk-operations/imports\" target=\"_blank\" class=\"body-link\">bulk mutation operations</a></li>\n</ol>\n<h2>Related Changes</h2>\n<ul>\n<li><p>These changes are part of supporting the increased limit of 2048 variants per product. This validation complements the <a href=\"https://shopify.dev/changelog/dynamic-complexity-cost-for-productcreate-and-productupdate-mutations\" target=\"_blank\" class=\"body-link\">dynamic complexity calculation</a>, providing both cost optimization and input validation for the <code>productSet</code> mutation to handle complex products efficiently.</p>\n</li>\n<li><p>The <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/productSet\" target=\"_blank\" class=\"body-link\"><code>productSet</code></a> mutation now <a href=\"https://shopify.dev/changelog/productset-limit-for-inventory-quantities\" target=\"_blank\" class=\"body-link\">enforces <code>inventoryQuantities</code> limits</a> as well.</p>\n</li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "`productVariantsBulkCreate`と`productVariantsBulkUpdate`ミューテーションで`inventoryQuantities`の上限検証を実施",
+          "summarizedJa": "商品バリエーション数の上限が100から2048に増加したことに伴い、`productVariantsBulkCreate`と`productVariantsBulkUpdate`ミューテーションで在庫数量の上限が50,000件に設定されました。この上限を超える場合は、操作を分割するか`inventorySetQuantities`ミューテーションやバルク操作を使用する必要があります。複数ロケーションで多数のバリエーションを持つ商品を管理する際のパフォーマンス向上を目的とした変更です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-06-10T00:26:02.724Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1910,
+            "output": 287
+          },
+          "estimatedCost": 0.010034999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "productVariantsBulkCreateおよびproductVariantsBulkUpdateミューテーションで在庫数量の制限が検証されるようになりました",
+          "summarizedJa": "Shopifyの`productVariantsBulkCreate`および`productVariantsBulkUpdate`ミューテーションにおいて、1商品あたりのバリアント上限が100から2048に増加したことに伴い、単一のミューテーションで処理できる在庫数量が最大50,000に制限されるようになりました。この変更は、多数のバリアントを持つ商品のパフォーマンスと信頼性を確保するためのもので、制限を超過する場合は操作の分割や`inventorySetQuantities`などの代替手段の利用が推奨されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-06-10T00:26:09.115Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1477,
+            "output": 196
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-dynamic-complexity-cost-for-productcreate-and-productupdate-mutations",
+      "source": "developer-changelog",
+      "title": "Dynamic complexity cost for `productCreate` and `productUpdate` mutations",
+      "link": "https://shopify.dev/changelog/dynamic-complexity-cost-for-productcreate-and-productupdate-mutations",
+      "publishedAt": "2025-10-01T04:00:00.000Z",
+      "collectedAt": "2026-06-10T00:24:09.504Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2025-10"
+      ],
+      "description": " <div class=\"\"><p>The <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/productcreate\" target=\"_blank\" class=\"body-link\"><code>productCreate</code></a> and <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/productUpdate\" target=\"_blank\" class=\"body-link\"><code>productUpdate</code></a> mutations now use dynamic complexity costing to more accurately reflect the actual computational cost of operations.</p>\n<h3>What's changing</h3>\n<p>With the release of Dynamic Complexity, the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/productcreate\" target=\"_blank\" class=\"body-link\"><code>productCreate</code></a> and <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/productUpdate\" target=\"_blank\" class=\"body-link\"><code>productUpdate</code></a> mutations will now have a base cost of 10-points, and additional points will be calcuated based on the complexity of the input. </p>\n<ul>\n<li><strong>Base cost</strong>: 10 points</li>\n<li><strong>Per product metafield</strong>: 0.4 points</li>\n<li><strong>Per product media</strong>: 1.9 points</li>\n</ul>\n<p>The total complexity is calculated as:</p>\n<pre><code>10 +\n  (product_metafields × 0.4) +\n  (product_media × 1.9)\n</code></pre>\n<h3>Migration guidance</h3>\n<p>For most apps, no changes are required.</p>\n<p>For apps working with high-complexity products exceeding the 1000-point single query limit:</p>\n<ul>\n<li>Consider using <a href=\"https://shopify.dev/docs/api/usage/bulk-operations/imports\" target=\"_blank\" class=\"body-link\">bulk mutations</a> for very large operations.</li>\n<li>Split complex operations into separate calls: use the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/productcreate\" target=\"_blank\" class=\"body-link\"><code>productCreate</code></a> and <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/productUpdate\" target=\"_blank\" class=\"body-link\"><code>productUpdate</code></a> mutations for core product data, then use <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/metafieldsSet\" target=\"_blank\" class=\"body-link\"><code>metafieldsSet</code></a> and <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/fileCreate\" target=\"_blank\" class=\"body-link\"><code>fileCreate</code></a> for additional data.</li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "productCreateおよびproductUpdateミューテーションの動的複雑度コスト導入",
+          "summarizedJa": "Admin GraphQL APIのproductCreateとproductUpdateミューテーションに動的複雑度コストが導入されました。基本コストは10ポイントで、メタフィールドや商品メディアの数に応じて追加コストが計算されます。複雑な商品データを扱うアプリでは、1000ポイントの制限を超える場合にバルクミューテーションの利用や処理の分割が推奨されます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-06-10T00:26:14.503Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1664,
+            "output": 238
+          },
+          "estimatedCost": 0.008562
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "productCreateおよびproductUpdateミューテーションの動的複雑度コスト",
+          "summarizedJa": "ShopifyのAdmin GraphQL APIにおける`productCreate`および`productUpdate`ミューテーションのコスト計算方法が変更され、操作の複雑さに応じて動的にコストが決定されるようになりました。これにより、商品メタフィールドやメディアの数が多い場合にAPIコストが増加する可能性があります。ほとんどのアプリには影響ありませんが、大量の商品データや複雑な商品を扱うアプリは、API呼び出しの最適化（バルク操作や分割）を検討する必要があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-06-10T00:26:22.775Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1280,
+            "output": 173
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-productset-limit-for-inventory-quantities",
+      "source": "developer-changelog",
+      "title": "`productSet` mutation now validates `inventoryQuantities` limits",
+      "link": "https://shopify.dev/changelog/productset-limit-for-inventory-quantities",
+      "publishedAt": "2025-10-01T04:00:00.000Z",
+      "collectedAt": "2026-06-10T00:24:09.504Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2025-10"
+      ],
+      "description": " <div class=\"\"><h2>What's changing?</h2>\n<p>The <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/productSet\" target=\"_blank\" class=\"body-link\"><code>productSet</code></a> mutations now enforces validation limits on inventory quantities as part of supporting the increased variant limit from 100 to 2048 variants per product.</p>\n<h3>Input Validation Limits</h3>\n<p>With the increase in maximum variants per product from 100 to 2048, the mutation now enforces a maximum limit of <strong>50,000 inventory quantities</strong> across all variants in a single mutation. This ensures reliable performance when managing products with many variants across multiple locations.</p>\n<h3>Error response example</h3>\n<pre><code class=\"language-json\">{\n  &quot;data&quot;: {\n    &quot;productSet&quot;: {\n      &quot;userErrors&quot;: [{\n        &quot;code&quot;: &quot;INVENTORY_QUANTITIES_LIMIT_EXCEEDED&quot;,\n        &quot;field&quot;: [&quot;input&quot;, &quot;variants&quot;],\n        &quot;message&quot;: &quot;Input contains 51200 inventory quantities, which exceeds the limit of 50000&quot;\n      }],\n      &quot;product&quot;: null\n    }\n  }\n}\n</code></pre>\n<h2>Why are we making this change?</h2>\n<h3>Support for 2048 Variants</h3>\n<ul>\n<li><strong>Increased variant limit</strong>: Products can now have up to 2048 variants (previously 100)</li>\n<li><strong>Reliable execution</strong>: Ensures consistent performance when managing complex products</li>\n</ul>\n<h2>Handling Large Inventory Updates</h2>\n<p>If you hit the 50,000 inventory quantity limit, you have several options:</p>\n<ol>\n<li><strong>Batch your operations</strong>: Split large operations into multiple smaller mutations</li>\n<li><strong>Use <code>inventorySetQuantities</code></strong>: For updating inventory across many locations, use the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/inventorySetQuantities\" target=\"_blank\" class=\"body-link\"><code>inventorySetQuantities</code></a></li>\n<li><strong>Use bulk mutations</strong>: For very large datasets, consider using <a href=\"https://shopify.dev/docs/api/usage/bulk-operations/imports\" target=\"_blank\" class=\"body-link\">bulk mutation operations</a></li>\n</ol>\n<h2>Related Changes</h2>\n<ul>\n<li><p>These changes are part of supporting the increased limit of 2048 variants per product. This validation complements the <a href=\"https://shopify.dev/changelog/dynamic-complexity-cost-for-productset-mutation\" target=\"_blank\" class=\"body-link\">dynamic complexity calculation</a>, providing both cost optimization and input validation for the <code>productSet</code> mutation to handle complex products efficiently.</p>\n</li>\n<li><p>The <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/productVariantsBulkCreate\" target=\"_blank\" class=\"body-link\"><code>productVariantsBulkCreate</code></a> and <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/productvariantsbulkupdate\" target=\"_blank\" class=\"body-link\"><code>productVariantsBulkUpdate</code></a> mutations now <a href=\"https://shopify.dev/changelog/inventoryquantities-limit-in-mutations\" target=\"_blank\" class=\"body-link\">enforce <code>inventoryQuantities</code> limits</a> as well.</p>\n</li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "productSet ミューテーションでinventoryQuantitiesの上限検証を実装",
+          "summarizedJa": "Admin GraphQL APIのproductSetミューテーションで、在庫数量の入力に50,000件の上限が設定されました。これは商品あたりのバリエーション上限が100から2048に増加したことに伴う変更で、大量の在庫更新が必要な場合は、操作を分割するか、inventorySetQuantitiesやバルクミューテーションの使用が推奨されます。この制限により、多数のバリエーションと複数ロケーションを持つ商品でも安定したパフォーマンスが保証されます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-06-10T00:26:29.394Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1890,
+            "output": 272
+          },
+          "estimatedCost": 0.00975
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "`productSet`ミューテーションが`inventoryQuantities`の制限を検証するようになりました",
+          "summarizedJa": "Shopifyの`productSet`ミューテーションにおいて、商品バリアント数の上限が2048に拡大されたことに伴い、1回の操作で設定できる在庫数量（`inventoryQuantities`）の合計が50,000に制限されるようになりました。これは、多数のバリアントを持つ商品のパフォーマンスと信頼性を確保するための変更です。この制限を超える場合は、操作を分割するか、`inventorySetQuantities`やバルク操作の利用が推奨されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-06-10T00:26:37.798Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1467,
+            "output": 185
           },
           "estimatedCost": 0
         }
