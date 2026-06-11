@@ -1,6 +1,106 @@
 {
-  "lastUpdated": "2026-06-10T00:24:11.371Z",
+  "lastUpdated": "2026-06-11T00:26:46.423Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-shopify-collective-is-now-available-in-australia",
+      "source": "shopify-changelog",
+      "title": "Shopify Collective is now available in Australia",
+      "link": "https://changelog.shopify.com/posts/shopify-collective-is-now-available-in-australia",
+      "publishedAt": "2026-06-10T18:00:00.000Z",
+      "collectedAt": "2026-06-11T00:26:46.416Z",
+      "category": [
+        "Collective"
+      ],
+      "description": "\n        <p>Shopify Collective is now available to merchants in Australia. Australian<br>\nretailers can partner with Australian suppliers to sell their products directly<br>\nthrough their storefronts.</p>\n\n<p>Retailers can expand their catalog without holding inventory or upfront cost.<br>\nSuppliers can reach new customers by selling through Australian retailers that<br>\nmatch their brand.</p>\n\n<p>To get started, install Shopify Collective from the Shopify App Store. Both<br>\nstores must be based in Australia, use the same currency,<br>\nand have Shopify Payments activated.</p>\n\n<p>Learn more in the <a href=\"https://help.shopify.com/en/manual/online-sales-channels/shopify-collective\">Shopify Collective help docs</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify Collectiveがオーストラリアで利用可能に",
+          "summarizedJa": "Shopify Collectiveがオーストラリアのマーチャント向けに利用可能になりました。オーストラリアの小売業者は、オーストラリアのサプライヤーと提携して在庫を持たずに商品を販売でき、サプライヤーは新たな顧客にリーチできます。利用には両ストアがオーストラリアに拠点を置き、同一通貨を使用し、Shopify Paymentsを有効化している必要があります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 5,
+          "analyzedAt": "2026-06-11T00:26:51.167Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1097,
+            "output": 249
+          },
+          "estimatedCost": 0.007026
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify Collectiveがオーストラリアで利用可能に",
+          "summarizedJa": "Shopify Collectiveがオーストラリアのマーチャント向けに提供開始されました。これにより、オーストラリアの小売業者は在庫を持たずに、現地のサプライヤーから商品を直接販売できるようになります。この機能は現時点ではオーストラリア国内のストア限定であり、日本市場のマーチャントには直接的な影響はありません。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 3
+          },
+          "totalScore": 6,
+          "analyzedAt": "2026-06-11T00:26:57.204Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 800,
+            "output": 140
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-shipping-performance-metrics-and-verified-tracking-badge-in-shopify-collective",
+      "source": "shopify-changelog",
+      "title": "Shipping performance metrics and Verified Tracking badge in Shopify Collective",
+      "link": "https://changelog.shopify.com/posts/shipping-performance-metrics-and-verified-tracking-badge-in-shopify-collective",
+      "publishedAt": "2026-06-10T16:00:00.000Z",
+      "collectedAt": "2026-06-11T00:26:46.416Z",
+      "category": [
+        "Collective"
+      ],
+      "description": "\n        <p>Suppliers on Shopify Collective can now earn a Verified Tracking badge by maintaining consistent carrier tracking coverage across all of their orders. The badge appears on their supplier profile in Discovery, where badged suppliers increase their discoverability to retailers.</p>\n\n<p>Three shipping metrics now appear on the home page of the Collective: Supplier app: carrier tracking coverage, on-time fulfillment, and on-time delivery. </p>\n\n<p>Metrics are calculated from every order in a supplier's Shopify store, not just Collective orders, so existing shipping work counts toward the badge. Suppliers can see their current coverage, the gap to close, and the steps to get there.</p>\n\n<p><a href=\"https://help.shopify.com/manual/online-sales-channels/shopify-collective/suppliers/manage-shipping-performance?utm_source=mozart&amp;utm_medium=email&amp;utm_campaign=shipping_badge_collective\">Learn more</a> about this launch in the Shopify Help Center.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify Collectiveに配送パフォーマンス指標と認証済み追跡バッジを追加",
+          "summarizedJa": "Shopify Collectiveのサプライヤーは、すべての注文で一貫した配送業者の追跡カバレッジを維持することで「認証済み追跡バッジ」を獲得できるようになりました。このバッジはDiscoveryのサプライヤープロフィールに表示され、小売業者からの発見性を高めます。また、Collectiveサプライヤーアプリのホーム画面には、追跡カバレッジ、時間内フルフィルメント、時間内配送の3つの配送指標が表示されるようになりました。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 1,
+            "japanRelevance": 2,
+            "technicalImportance": 2
+          },
+          "totalScore": 7,
+          "analyzedAt": "2026-06-11T00:27:02.762Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1155,
+            "output": 288
+          },
+          "estimatedCost": 0.007785
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify Collectiveにおける配送パフォーマンス指標と追跡確認済みバッジ",
+          "summarizedJa": "Shopify Collectiveのサプライヤーは、一貫した配送追跡情報を提供することで「追跡確認済みバッジ」を獲得できるようになりました。このバッジは、リテーラーに対するサプライヤーの発見可能性を高めます。また、サプライヤーアプリのホーム画面には、追跡カバー率、期日内フルフィルメント、期日内配送の3つの新しい配送パフォーマンス指標が表示され、サプライヤーは自身の配送状況を把握し改善できます。これらの指標はCollective以外の注文も含むため、既存の配送業務も評価対象となります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-06-11T00:27:09.688Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 853,
+            "output": 191
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-multi-location-pickup-is-now-available-in-pos",
       "source": "shopify-changelog",
