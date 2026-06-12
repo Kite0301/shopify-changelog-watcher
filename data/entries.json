@@ -1,6 +1,158 @@
 {
-  "lastUpdated": "2026-06-11T00:26:46.423Z",
+  "lastUpdated": "2026-06-12T00:25:28.116Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-shopify-ai-toolkit-for-upgrading-extensions-to-polaris-web-components",
+      "source": "developer-changelog",
+      "title": "Shopify AI Toolkit for upgrading extensions to Polaris web components",
+      "link": "https://shopify.dev/changelog/shopify-ai-toolkit-for-upgrading-extensions-to-polaris-web-components",
+      "publishedAt": "2026-06-11T18:00:00.000Z",
+      "collectedAt": "2026-06-12T00:25:27.186Z",
+      "category": [
+        "Action Required",
+        "Tools",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>The Shopify AI Toolkit now supports upgrading checkout and customer account UI extensions to new API versions, including the migration to Polaris web components. Use the AI Toolkit with your preferred AI coding agent to skip repetitive manual work and speed up the heavy lifting.</p>\n<p>Your agent will leverage the Shopify AI Toolkit, paired with our enhanced developer documentation, to go through the required migration steps such as handling React to Preact conversion, mapping and replacing legacy components with Polaris web components, and updating extension APIs.</p>\n<p>Extensions built with Polaris web components render significantly faster than legacy React extensions, ensuring optimal loading time and extension performance.</p>\n<h2>Required for future app updates after October 1, 2026</h2>\n<p><a href=\"https://shopify.dev/docs/api/usage/versioning#versioned-and-unversioned-apis\" target=\"_blank\" class=\"body-link\">Shopify CLI blocks apps from being updated</a> if any of their extensions are on an API version that is more than 1 year old. By <strong>October 1, 2026</strong>, any app that contains checkout and customer account UI extensions on API versions 2025-07 or earlier will be unable to be updated.</p>\n<p>All API versions 2025-10 and later use Polaris web components by default. Upgrade your extensions to the latest API version and adopt Polaris web components now to avoid this restriction.</p>\n<h2>Get Started</h2>\n<p>Install the <a href=\"https://shopify.dev/docs/apps/build/ai-toolkit\" target=\"_blank\" class=\"body-link\">Shopify AI Toolkit</a> and follow our dev docs to run the skill in your AI agent:</p>\n<ul>\n<li><a href=\"https://shopify.dev/docs/apps/build/checkout/migrate-to-web-components#migrate-using-ai\" target=\"_blank\" class=\"body-link\">Checkout UI extension migration doc</a></li>\n<li><a href=\"https://shopify.dev/docs/apps/build/customer-accounts/migrate-to-web-components#migrate-using-ai\" target=\"_blank\" class=\"body-link\">Customer account UI extension migration doc</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Polaris Web ComponentsへのエクステンションアップグレードのためのShopify AIツールキット",
+          "summarizedJa": "Shopify AIツールキットが、チェックアウトおよびカスタマーアカウントUIエクステンションを新しいAPIバージョンにアップグレードする機能をサポート開始しました。2026年10月1日以降、APIバージョン2025-07以前のエクステンションを含むアプリは更新ができなくなるため、Polaris Web Componentsへの移行が必須となります。AIエージェントを使用することで、ReactからPreactへの変換や従来コンポーネントの置き換えなど、煩雑な移行作業を効率化できます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 5
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-06-12T00:25:39.998Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1466,
+            "output": 288
+          },
+          "estimatedCost": 0.008718
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify AIツールキット：拡張機能のPolaris Webコンポーネントへのアップグレード支援",
+          "summarizedJa": "Shopify AIツールキットが、チェックアウトおよび顧客アカウントUI拡張機能をPolaris Webコンポーネントへ移行する作業を効率化します。これにより、ReactからPreactへの変換やレガシーコンポーネントの置き換えといった手作業を削減し、開発を加速できます。特に、2026年10月1日以降は古いAPIバージョンを使用する拡張機能を含むアプリの更新がブロックされるため、パートナーは本ツールキットを活用し、最新APIバージョンとPolaris Webコンポーネントへの移行を早急に行う必要があります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 5
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-06-12T00:25:48.875Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1128,
+            "output": 204
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-unified-pos-staff-management",
+      "source": "shopify-changelog",
+      "title": "Unified staff permissions for retail teams",
+      "link": "https://changelog.shopify.com/posts/unified-pos-staff-management",
+      "publishedAt": "2026-06-11T14:15:00.000Z",
+      "collectedAt": "2026-06-12T00:25:28.106Z",
+      "category": [
+        "Pos"
+      ],
+      "description": "\n        <p>Staff management for your entire team—POS and admin users—is now unified in Settings &gt; Users. We’ve also made it easier to manage seasonal staff, high trust permissions and permissions across Shopify Plus organizations. </p>\n\n<p>Your existing users, permissions, and roles have been automatically migrated, so everyone keeps their current access.</p>\n\n<h2>What’s new:</h2>\n\n<p><strong>Manage POS users in admin settings</strong><br>\nSet up POS users, assign roles, and manage PINs in Settings &gt; Users instead of the POS channel. </p>\n\n<p><strong>Assign organization level roles</strong><br>\nShopify Plus merchants can now grant POS staff access across multiple shops within their organization with a single user profile—no duplicates needed.</p>\n\n<p><strong>Suspend and reactivate seasonal staff</strong><br>\nSuspend or deactivate seasonal staff without deleting their accounts. When they return, reactivate them and keep their history.</p>\n\n<p><strong>Assign multiple roles</strong><br>\nCreate custom roles with the permission sets that make sense for your business. Give staff members as many roles as they need—like Store Manager and Marketer.</p>\n\n<p><strong>New high-trust roles</strong><br>\nWe’ve created new POS roles to make it easier to identify users with high-trust access. All users have retained their previous permissions, with one exception:</p>\n\n<ul>\n<li><strong>POS Administrator</strong> (formerly “Full permissions”)</li>\n<li> <strong>POS Device Setup</strong> (for setting up new devices)</li>\n<li><strong>POS User Administrator</strong> (for managing users)</li>\n<li><strong>Organization POS Administrator</strong> (for creating, editing and deleting roles across all stores) </li>\n</ul>\n\n<p><strong>Note:</strong>  <em>The ability to create, edit, or delete roles is now an organization-wide permission, not a shop-level one. For security, we haven’t automatically granted this broader access. If someone on your team previously managed roles for a single shop, you’ll need to assign them the Organization POS Administrator role if you want them to manage roles across all stores.</em></p>\n\n<p><em>Assigning existing roles to users is still possible with the POS User Administrator role, which has been assigned to anyone who had that permission previously.</em></p>\n\n<p>You may need to review and clean up your user and role lists as a result of this change. <a href=\"https://help.shopify.com/en/manual/your-account/users/migrate-legacy-staff-from-pos-channel\">Learn more in the Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "小売チーム向けスタッフ権限管理の統合",
+          "summarizedJa": "POSとオンラインストア管理画面のスタッフ管理が「設定 > ユーザー」に統合されました。季節スタッフの一時停止・再有効化、複数ロールの割り当て、Shopify Plus組織全体でのPOSスタッフアクセス管理が可能になりました。既存のユーザー、権限、ロールは自動移行されますが、ロールの作成・編集・削除権限は組織全体の権限となったため、必要に応じて「Organization POS Administrator」ロールの再割り当てが必要です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-06-12T00:25:54.788Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1542,
+            "output": 276
+          },
+          "estimatedCost": 0.008766
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "POSと管理画面のスタッフ権限統合",
+          "summarizedJa": "ShopifyのPOSと管理画面のスタッフ管理が「設定 > ユーザー」に一元化されました。これにより、季節スタッフの管理、Shopify Plus組織における複数店舗での権限付与、複数ロールの割り当てが容易になります。既存のユーザーと権限は自動移行されますが、組織レベルでのロール管理権限は手動での再設定が必要な場合があります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-06-12T00:26:02.458Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1185,
+            "output": 154
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-unlink-a-customer-from-your-custom-identity-provider",
+      "source": "shopify-changelog",
+      "title": "Unlink a customer from your custom identity provider",
+      "link": "https://changelog.shopify.com/posts/unlink-a-customer-from-your-custom-identity-provider",
+      "publishedAt": "2026-06-11T13:00:00.000Z",
+      "collectedAt": "2026-06-12T00:25:28.106Z",
+      "category": [
+        "Customer-account"
+      ],
+      "description": "\n        <p>If your store uses a connected OpenID Connect (OIDC) identity provider for customer accounts (such as Okta, Auth0, Microsoft Entra ID), you can now unlink a customer from your identity provider directly in the Shopify admin.</p>\n\n<p>When a customer's account is linked to the wrong subject in your identity provider, the customer might see the following error when they try to sign in:</p>\n\n<p>\"The sign-in method you used doesn't match this account.\"</p>\n\n<p>Previously, fixing this required contacting Shopify Support. Now you<br>\ncan resolve it yourself.</p>\n\n<p>To unlink a customer:<br>\n1. From your Shopify admin, go to Customers.<br>\n2. Click the customer that you want to unlink.<br>\n3. In the customer details section, click <strong>Unlink</strong> next to your identity provider's ID, such as Okta ID or Auth0 ID.<br>\n4. Review the subject ID displayed in the confirmation dialog and compare it with the subject ID for this customer in your identity provider, if you have access to that information. If the subject IDs do not match, unlinking the customer should resolve the <em>The sign-in method you used doesn't match this account.</em> error.<br>\n5. Click Unlink to confirm.</p>\n\n<p>After you unlink, the customer is signed out. They can sign back in with their existing credentials, and a new link is created on their next sign-in. The customer's orders, and other store data aren't affected.</p>\n\n<p>This feature is available to stores on the Shopify Plus plan that have connected their own identity provider to customer accounts.</p>\n\n<p>Learn more: https://help.shopify.com/en/manual/customers/customer-accounts/sign-in-options/identity-provider/connect#unlink-customer</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "カスタムIDプロバイダーから顧客のリンクを解除できるように",
+          "summarizedJa": "Shopify Plusストアで、OpenID Connect（OIDC）対応のIDプロバイダー（Okta、Auth0、Microsoft Entra IDなど）を使用している場合、Shopify管理画面から直接顧客とIDプロバイダーのリンクを解除できるようになりました。以前はサポートへの問い合わせが必要でしたが、「サインイン方法がこのアカウントと一致しません」というエラーを管理者自身で解決できるようになります。顧客の注文や店舗データには影響しません。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-06-12T00:26:08.267Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1353,
+            "output": 273
+          },
+          "estimatedCost": 0.008154000000000002
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "顧客をカスタムIDプロバイダーからリンク解除",
+          "summarizedJa": "Shopify Plusプランのストアは、OktaやAuth0などのカスタムOpenID Connect (OIDC) IDプロバイダーを利用している場合、Shopify管理画面から顧客アカウントとIDプロバイダーの連携を直接解除できるようになりました。これにより、「サインイン方法がアカウントと一致しません」といったエラーが発生した際に、以前はShopifyサポートへの問い合わせが必要だった問題が、マーチャント自身で解決可能になります。顧客の注文履歴などのデータには影響せず、再サインイン時に新しい連携が自動的に作成されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-06-12T00:26:15.684Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1052,
+            "output": 184
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-shopify-collective-is-now-available-in-australia",
       "source": "shopify-changelog",
@@ -6131,6 +6283,59 @@
           "tokenUsage": {
             "input": 1093,
             "output": 168
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-fulfillment-order-cancel-error-codes",
+      "source": "developer-changelog",
+      "title": "Improved user errors on the `fulfillmentOrderCancel` mutation",
+      "link": "https://shopify.dev/changelog/fulfillment-order-cancel-error-codes",
+      "publishedAt": "2026-04-01T16:00:00.000Z",
+      "collectedAt": "2026-06-12T00:25:27.187Z",
+      "category": [
+        "API",
+        "Update",
+        "Admin GraphQL API",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>The <code>fulfillmentOrderCancel</code> mutation now returns a specific <code>fulfillmentOrderCancelError</code> type instead of the generic <code>userError</code> type.</p>\n<h2>What's changing:</h2>\n<p>The error response now includes a code field for easier programmatic error handling and identification.</p>\n<h2>Why we made this change:</h2>\n<p>This enhancement supports the new feature for manually marking fulfillment orders as in-progress, which allows merchants to self-report progress on their fulfillment orders. As part of this feature, cancelling fulfillment orders with reported progress is now restricted, and the enhanced error responses help developers handle these restrictions more effectively.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "fulfillmentOrderCancelミューテーションのユーザーエラーを改善",
+          "summarizedJa": "fulfillmentOrderCancelミューテーションが、汎用的なuserErrorの代わりに、より具体的なfulfillmentOrderCancelErrorタイプを返すようになりました。エラーレスポンスにコードフィールドが追加され、プログラムでのエラーハンドリングが容易になります。この変更は、進行中のフルフィルメント注文のキャンセル制限に対応するための機能強化です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-06-12T00:26:20.353Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1096,
+            "output": 235
+          },
+          "estimatedCost": 0.006813
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "`fulfillmentOrderCancel`ミューテーションにおけるユーザーエラーの改善",
+          "summarizedJa": "ShopifyのAPIにおいて、`fulfillmentOrderCancel`ミューテーションのエラー応答が改善されました。これにより、開発者は特定のエラーコードを用いて、フルフィルメントオーダーのキャンセルに関する問題をより正確にプログラムで処理できるようになります。特に、手動で「処理中」とマークされたオーダーのキャンセル制限に対応するために、この変更は開発者が新しい制限を効果的に処理するのに役立ちます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-06-12T00:26:27.956Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 781,
+            "output": 160
           },
           "estimatedCost": 0
         }
