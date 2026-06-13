@@ -1,6 +1,59 @@
 {
-  "lastUpdated": "2026-06-12T00:25:28.116Z",
+  "lastUpdated": "2026-06-13T00:25:57.561Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-cart-line-view-key-field",
+      "source": "developer-changelog",
+      "title": "Read a cart line's `viewKey` from the `CartLine` type",
+      "link": "https://shopify.dev/changelog/cart-line-view-key-field",
+      "publishedAt": "2026-06-12T17:00:00.000Z",
+      "collectedAt": "2026-06-13T00:25:56.351Z",
+      "category": [
+        "API",
+        "New",
+        "Storefront GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>The <a href=\"https://shopify.dev/docs/api/storefront/2026-07/objects/CartLine\" target=\"_blank\" class=\"body-link\"><code>CartLine</code></a> type now exposes a <code>viewKey</code> field, so you can correlate a returned cart line with the <code>viewKey</code> you sent to <a href=\"https://shopify.dev/docs/api/storefront/2026-07/mutations/cartLinesUpdate\" target=\"_blank\" class=\"body-link\"><code>cartLinesUpdate</code></a> and <a href=\"https://shopify.dev/docs/api/storefront/2026-07/mutations/cartLinesRemove\" target=\"_blank\" class=\"body-link\"><code>cartLinesRemove</code></a>.</p>\n<h2>What's new</h2>\n<ul>\n<li><code>CartLine.viewKey</code> returns the same <code>viewKey</code> your Liquid storefront renders, alongside the existing UUID <code>id</code>.</li>\n</ul>\n<h2>How to use</h2>\n<p>Previously, identifying a line by <code>viewKey</code> was input-only: you could send a <code>viewKey</code>, but the response returned a UUID <code>id</code> with no <code>viewKey</code> to map back. You can now read it directly off the line.</p>\n<pre><code class=\"language-graphql\">query CartLines($cartId: ID!) {\n  cart(id: $cartId) {\n    lines(first: 10) {\n      edges {\n        node {\n          id\n          viewKey\n        }\n      }\n    }\n  }\n}\n</code></pre>\n<p>The field reads a value the cart already stores, so existing UUID-based correlation keeps working unchanged.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "CartLine型から`viewKey`が読み取り可能に",
+          "summarizedJa": "Storefront GraphQL APIの`CartLine`型に`viewKey`フィールドが追加されました。これにより、`cartLinesUpdate`や`cartLinesRemove`で送信した`viewKey`と返却されたカート行を直接関連付けることが可能になります。従来はUUIDの`id`のみが返却されていましたが、Liquidストアフロントと同じ`viewKey`を取得できるようになり、カート行の識別が容易になります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-06-13T00:26:02.783Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1378,
+            "output": 233
+          },
+          "estimatedCost": 0.007629
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "CartLineタイプからカートラインの`viewKey`を読み取り可能に",
+          "summarizedJa": "ShopifyのStorefront GraphQL APIにおいて、`CartLine`タイプに`viewKey`フィールドが追加され、カートラインの識別と管理が向上しました。これにより、`cartLinesUpdate`や`cartLinesRemove`で送信した`viewKey`と、返されるカートラインを直接関連付けて読み取ることが可能になり、開発者はカートラインの状態をより正確に追跡できます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-06-13T00:26:10.889Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1042,
+            "output": 163
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-shopify-ai-toolkit-for-upgrading-extensions-to-polaris-web-components",
       "source": "developer-changelog",
@@ -48,6 +101,59 @@
           "tokenUsage": {
             "input": 1128,
             "output": 204
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-streamlined-metaobject-api",
+      "source": "developer-changelog",
+      "title": "Streamlined Metaobject API",
+      "link": "https://shopify.dev/changelog/streamlined-metaobject-api",
+      "publishedAt": "2026-06-11T16:00:00.000Z",
+      "collectedAt": "2026-06-13T00:25:56.351Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>It’s now easier to work with metaobjects. </p>\n<p>With <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/Metaobject#field-Metaobject.fields.values\" target=\"_blank\" class=\"body-link\">the new <code>values</code> property</a>, you can fetch all fields of a metaobject in a single call without handling deserialization in your app. The API returns a JSON-compatible object that’s ready to use directly.</p>\n<p>You can also use <code>values</code> when <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/mutations/metaobjectUpsert#arguments-values\" target=\"_blank\" class=\"body-link\">creating or updating metaobjects</a>. Provide a JSON-style object that matches your metaobject’s field keys, and the API handles serialization for you. Optional fields are straightforward as well: any fields defined on the Metaobject that you omit from <code>values</code> are cleared.</p>\n<p>You can continue to use <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/Metaobject#field-Metaobject.fields.field\" target=\"_blank\" class=\"body-link\"><code>field</code></a> and <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/Metaobject#field-Metaobject.fields.fields\" target=\"_blank\" class=\"body-link\"><code>fields</code></a> if you need additional details about a field (such as <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/Metaobject#field-Metaobject.fields.type\" target=\"_blank\" class=\"body-link\"><code>type</code></a>), or if you prefer patch-style behavior when mutating metaobjects, where any unspecified fields are left as-is.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "メタオブジェクトAPIの簡素化",
+          "summarizedJa": "メタオブジェクトの操作がより簡単になりました。新しい`values`プロパティにより、デシリアライゼーション処理なしで全フィールドを一度に取得でき、JSON互換オブジェクトとして直接利用可能です。作成・更新時もJSON形式でデータを提供するだけで、APIが自動的にシリアライゼーションを処理します。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-06-13T00:26:15.948Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1428,
+            "output": 219
+          },
+          "estimatedCost": 0.007568999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "メタオブジェクトAPIの効率化",
+          "summarizedJa": "ShopifyのメタオブジェクトAPIが効率化され、新しい`values`プロパティの導入により、メタオブジェクトの全フィールドを単一のAPIコールで簡単に取得・更新できるようになりました。これにより、アプリケーション側でのデータのシリアライズ・デシリアライズ処理が不要となり、開発者はより直感的にメタオブジェクトを扱えるようになります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-06-13T00:26:21.226Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1082,
+            "output": 144
           },
           "estimatedCost": 0
         }
