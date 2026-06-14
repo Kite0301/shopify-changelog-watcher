@@ -1,6 +1,109 @@
 {
-  "lastUpdated": "2026-06-13T00:25:57.561Z",
+  "lastUpdated": "2026-06-14T00:21:38.371Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-expanded-multi-currency-payout-support-in-us-hk-and-sg",
+      "source": "shopify-changelog",
+      "title": "Expanded multi-currency payout support in US, HK and SG",
+      "link": "https://changelog.shopify.com/posts/expanded-multi-currency-payout-support-in-us-hk-and-sg",
+      "publishedAt": "2026-06-13T16:00:00.000Z",
+      "collectedAt": "2026-06-14T00:21:38.359Z",
+      "category": [
+        "Payments"
+      ],
+      "description": "\n        <p>We’ve expanded Multi-Currency Payouts for eligible Shopify Payments merchants. For the first time, merchants in the United States can receive payouts in multiple currencies, with support for CAD, EUR, AUD and GBP. We’ve also added more supported payout currencies in Singapore and Hong Kong: Singapore merchants can now receive payouts in EUR, GBP, and JPY, and Hong Kong merchants can now receive payouts in EUR, GBP, and JPY. This gives merchants more flexibility to get paid in the currencies they sell in and manage funds across markets without currency conversion.  </p>\n\n<p><a href=\"https://help.shopify.com/en/manual/payments/shopify-payments/store-currency/payouts-in-multiple-currencies\">Help docs</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "米国・香港・シンガポールで複数通貨での支払い受取サポートを拡大",
+          "summarizedJa": "Shopify Paymentsの対象マーチャント向けに、複数通貨での支払い受取機能が拡大されました。米国では初めてCAD、EUR、AUD、GBPでの受取が可能になり、シンガポールと香港ではEUR、GBP、JPYが追加されました。これにより、販売通貨で直接支払いを受け取り、通貨換算なしで資金管理ができるようになります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 2,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 7,
+          "analyzedAt": "2026-06-14T00:21:43.708Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1101,
+            "output": 246
+          },
+          "estimatedCost": 0.006993
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "米国、香港、シンガポールにおける多通貨ペイアウトサポートの拡大",
+          "summarizedJa": "このアップデートにより、米国、香港、シンガポールの対象Shopifyペイメントマーチャント向けに多通貨でのペイアウト（入金）サポートが拡大されました。具体的には、米国マーチャントはCAD、EUR、AUD、GBPで、シンガポールおよび香港マーチャントはEUR、GBP、JPYで入金を受け取れるようになります。これにより、販売通貨での入金受取や、為替変換なしでの資金管理が可能になり、国際的なビジネス展開の柔軟性が向上します。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 3
+          },
+          "totalScore": 6,
+          "analyzedAt": "2026-06-14T00:21:51.064Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 805,
+            "output": 186
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-shop-user-metafields-in-shopify-functions",
+      "source": "developer-changelog",
+      "title": "Shop User Metafields in Shopify Functions",
+      "link": "https://shopify.dev/changelog/shop-user-metafields-in-shopify-functions",
+      "publishedAt": "2026-06-13T16:00:00.000Z",
+      "collectedAt": "2026-06-14T00:21:37.269Z",
+      "category": [
+        "API",
+        "New",
+        "Functions",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>Shop User is Shopify’s cross-merchant buyer identity. Partners who use metafields on Shop Users can now read those metafields during checkout using Shopify Functions. To learn more, see the Shop User metafields guide in the Shopify developer documentation: <a href=\"https://shopify.dev/docs/api/shop/guides/use-cases/metafields\" target=\"_blank\" class=\"body-link\">https://shopify.dev/docs/api/shop/guides/use-cases/metafields</a></p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify FunctionsでShopユーザーメタフィールドが利用可能に",
+          "summarizedJa": "Shopユーザー（Shopifyの複数マーチャント間で共通の購入者ID）に設定されたメタフィールドを、Shopify Functionsを使ってチェックアウト時に読み取れるようになりました。これにより、パートナーは購入者の属性情報を活用したチェックアウトのカスタマイズが可能になります。詳細はShop Userメタフィールドガイドを参照してください。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-06-14T00:21:56.900Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1045,
+            "output": 242
+          },
+          "estimatedCost": 0.006765
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify FunctionsでのShopユーザーメタフィールドの利用",
+          "summarizedJa": "Shop UserはShopify全体で共通の購入者IDです。今回の更新により、パートナーはShop Userに設定したメタフィールドをShopify Functionsを通じてチェックアウト時に読み取れるようになりました。これにより、購入者IDに基づいたより高度なカスタマイズやパーソナライズされたチェックアウト体験の提供が可能になります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-06-14T00:22:02.687Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 753,
+            "output": 141
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-cart-line-view-key-field",
       "source": "developer-changelog",
