@@ -1,6 +1,160 @@
 {
-  "lastUpdated": "2026-06-14T00:21:38.371Z",
+  "lastUpdated": "2026-06-17T00:25:12.445Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-reduced-bot-noise-in-abandoned-checkouts",
+      "source": "shopify-changelog",
+      "title": "Reduced bot noise in abandoned checkouts",
+      "link": "https://changelog.shopify.com/posts/reduced-bot-noise-in-abandoned-checkouts",
+      "publishedAt": "2026-06-17T00:00:00.000Z",
+      "collectedAt": "2026-06-17T00:25:12.435Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>When bots test your checkout with stolen card numbers and don't complete payment, Shopify no longer creates an abandoned checkout for that session. Previously, these bot attempts filled your recovery list with sessions that were never real customers. Now your abandoned checkout list stays focused on buyers who are worth following up with.</p>\n\n<p>Learn more about recovering <a href=\"https://help.shopify.com/en/manual/promoting-marketing/create-marketing/abandoned-checkouts\">abandoned checkouts</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "カゴ落ちリストからボットノイズを削減",
+          "summarizedJa": "盗難カード番号を使ったボットのテストによる決済未完了セッションが、カゴ落ちリストに表示されなくなりました。これまではボットの試行がリカバリーリストを埋め尽くしていましたが、今後は実際にフォローアップする価値のある本物の顧客のみが表示されるようになり、カゴ落ちリストの精度が向上します。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-06-17T00:25:17.805Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1016,
+            "output": 229
+          },
+          "estimatedCost": 0.006483
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "放棄されたチェックアウトにおけるボットノイズの削減",
+          "summarizedJa": "Shopifyは、盗まれたカード情報でチェックアウトを試みるボットによるセッションについて、放棄されたチェックアウトを作成しないようになりました。これにより、以前はボットの試行によって偽の顧客で埋め尽くされていたリカバリーリストが、実際の顧客に焦点を当てたものになります。マーチャントは、追跡する価値のある購入者に集中できるようになります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-06-17T00:25:23.049Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 738,
+            "output": 154
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-metafields-now-require-a-definition-to-be-accessed-through-the-customer-account-api",
+      "source": "developer-changelog",
+      "title": "Metafields now require a definition to be accessed through the Customer Account API",
+      "link": "https://shopify.dev/changelog/metafields-now-require-a-definition-to-be-accessed-through-the-customer-account-api",
+      "publishedAt": "2026-06-16T16:00:00.000Z",
+      "collectedAt": "2026-06-17T00:25:11.228Z",
+      "category": [
+        "Action Required",
+        "Platform",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>Starting today, metafields stored on the app resource must have a metafield <a href=\"https://shopify.dev/docs/apps/build/metafields#metafield-definitions\" target=\"_blank\" class=\"body-link\">definition</a> and customer accounts <a href=\"https://shopify.dev/docs/apps/build/metafields#customer-accounts-permissions\" target=\"_blank\" class=\"body-link\">permissions</a> to be accessible through the Customer Account API. Going forward, when calling the Customer Accounts API, app metafields without a definition will no longer return a value. If your app has functionality which depends on these fields, update those metafields to use definitions with the Customer Account API permission to avoid disruption.</p>\n<h2>Action required:</h2>\n<p>You must ensure that every metafield your app uses for customer account UI extensions, a Hydrogen or a Headless store, has a definition. </p>\n<ul>\n<li>Run the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/metafieldDefinitionCreate\" target=\"_blank\" class=\"body-link\">metafieldDefinitionCreate</a> for every store that installs your app to ensure the metafields are correctly defined. </li>\n<li>For app-owned metafields, configure <a href=\"https://shopify.dev/docs/apps/build/metafields/definitions#toml-app-owned-example\" target=\"_blank\" class=\"body-link\">declarative metafields</a> in your app’s TOML file.</li>\n<li>Configure the <a href=\"https://shopify.dev/docs/apps/build/metafields#customer-accounts-permissions\" target=\"_blank\" class=\"body-link\">access settings</a> on your definition to allow customer accounts API access.</li>\n</ul>\n<p><em>Metafields owned by Customer or Order resources will not be affected by this change.</em></p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Customer Account API経由でメタフィールドにアクセスするには定義が必須に",
+          "summarizedJa": "本日より、Customer Account API経由でアプリリソースに保存されたメタフィールドにアクセスするには、メタフィールド定義とカスタマーアカウント権限の設定が必須となりました。カスタマーアカウントUI拡張機能、Hydrogen、ヘッドレスストアで使用するメタフィールドについて、定義を作成し適切な権限を設定する必要があります。定義のないアプリメタフィールドは値を返さなくなるため、対応が必要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-06-17T00:25:28.801Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1401,
+            "output": 267
+          },
+          "estimatedCost": 0.008208
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "顧客アカウントAPI経由のMetafieldアクセスに定義が必須化",
+          "summarizedJa": "Shopifyの顧客アカウントAPIを通じてアプリのMetafieldにアクセスする際、2026年6月16日以降はMetafieldの定義と顧客アカウント権限が必須となります。これにより、顧客アカウントUI拡張やヘッドレスストアでMetafieldを利用しているアプリは、定義を設定し、適切なアクセス権限を付与しないとデータが取得できなくなります。日本のパートナーは、顧客のストアで利用しているアプリが影響を受けないよう、早急な対応が求められます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-06-17T00:25:36.852Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1066,
+            "output": 182
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-new-appsubscriptioncancel-mutation-in-the-partner-api",
+      "source": "developer-changelog",
+      "title": "New appSubscriptionCancel mutation in the Partner API   ",
+      "link": "https://shopify.dev/changelog/new-appsubscriptioncancel-mutation-in-the-partner-api",
+      "publishedAt": "2026-06-16T16:00:00.000Z",
+      "collectedAt": "2026-06-17T00:25:11.228Z",
+      "category": [
+        "API",
+        "New",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>Starting with API version 2026-07, Partner API clients can use the new <a href=\"https://shopify.dev/docs/api/partner/2026-07/app-subscription-cancel\" target=\"_blank\" class=\"body-link\"><code>appSubscriptionCancel</code></a> mutation to cancel app subscriptions for public apps they own.</p>\n<p>The mutation supports:</p>\n<ul>\n<li>Immediate cancellation</li>\n<li>Deferred cancellation at the end of the current billing cycle</li>\n<li>Requesting prorated credits, when applicable</li>\n<li>Optionally skipping the final usage charge for usage-billed subscriptions</li>\n</ul>\n<p>This mutation is available to Partner API clients that have the <strong>View financials</strong> permission in the Partner Dashboard.</p>\n<p>Learn more in the <a href=\"https://shopify.dev/docs/api/partner/2026-07\" target=\"_blank\" class=\"body-link\">Partner API 2026-07 documentation</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Partner APIに新しいappSubscriptionCancel mutationを追加",
+          "summarizedJa": "2026-07バージョンより、Partner APIに新しいappSubscriptionCancel mutationが追加されました。パブリックアプリの所有者は、このmutationを使用してアプリのサブスクリプションをキャンセルできるようになります。即時キャンセル、課金サイクル終了時のキャンセル、按分クレジットのリクエスト、使用量課金の最終請求スキップなどの機能をサポートしており、Partner Dashboardで「財務情報の閲覧」権限を持つクライアントが利用可能です。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-06-17T00:25:42.602Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1182,
+            "output": 268
+          },
+          "estimatedCost": 0.007566000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Partner APIに新しい`appSubscriptionCancel`ミューテーションが追加",
+          "summarizedJa": "ShopifyのPartner APIに、アプリのサブスクリプションをキャンセルするための新しい機能「`appSubscriptionCancel`ミューテーション」が追加されました。これにより、パートナーは自身が所有する公開アプリのサブスクリプションを、即時または請求サイクル終了時にキャンセルできるようになります。この機能は、課金管理の柔軟性を高め、パートナーダッシュボードの「財務情報の表示」権限を持つパートナーが利用可能です。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-06-17T00:25:49.593Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 868,
+            "output": 169
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-expanded-multi-currency-payout-support-in-us-hk-and-sg",
       "source": "shopify-changelog",
