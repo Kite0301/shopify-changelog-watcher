@@ -1,6 +1,1366 @@
 {
-  "lastUpdated": "2026-06-17T00:25:12.445Z",
+  "lastUpdated": "2026-06-18T00:25:59.649Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-updated-disclosure-for-subscription-purchases-on-checkout",
+      "source": "shopify-changelog",
+      "title": "Updated disclosure for subscription purchases on Checkout",
+      "link": "https://changelog.shopify.com/posts/updated-disclosure-for-subscription-purchases-on-checkout",
+      "publishedAt": "2026-06-17T19:00:00.000Z",
+      "collectedAt": "2026-06-18T00:25:59.636Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>As checkout evolves over time, we refine defaults to keep your buyer experience clear and consistent. This update refines the disclosure so your buyers see up-to-date information about subscriptions at checkout. </p>\n\n<p>As part of this change, we will begin using the following new translation keys for this disclosure: <br>\n* Purchase options subscription agreement label<br>\n* Purchase options subscription consent text<br>\n* Purchase options subscription cancellation instructions<br>\n* Purchase options subscription cancel text</p>\n\n<p>On June 22, the default disclosure will be shown if no customizations have been made. Review the updated disclousure in Checkout settings <a href=\"https://admin.shopify.com/settings/checkout?utm_source=mozart&amp;utm_medium=email&amp;utm_campaign=subscriptions&amp;utm_content=textupdate\">in admin</a>. Read <a href=\"https://help.shopify.com/en/manual/products/purchase-options/subscriptions/considerations#non-editable\">help doc</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "チェックアウトにおけるサブスクリプション購入の開示表示を更新",
+          "summarizedJa": "チェックアウト時のサブスクリプション購入に関する開示表示が改善され、購入者により明確な情報が提供されるようになります。6月22日より、カスタマイズしていない場合は新しいデフォルトの開示表示が適用され、4つの新しい翻訳キーが導入されます。管理画面のチェックアウト設定で更新内容を確認し、必要に応じて対応してください。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-06-18T00:26:04.941Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1150,
+            "output": 247
+          },
+          "estimatedCost": 0.007155
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "チェックアウトにおける定期購入の開示情報更新",
+          "summarizedJa": "Shopifyは、チェックアウトでの定期購入に関する表示を更新し、購入者体験をより明確かつ一貫性のあるものにします。この変更には、定期購入に関する新しい翻訳キーの導入が含まれており、2026年6月22日以降、カスタマイズされていないストアでは新しいデフォルトの表示が適用されます。日本のマーチャントは、チェックアウト設定で更新された開示内容を確認することが推奨されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-06-18T00:26:11.521Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 862,
+            "output": 165
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-new-purchasetype-and-recurringcyclelimit-fields-available-in-the-discount-ui-extension-api",
+      "source": "developer-changelog",
+      "title": "New purchaseType and recurringCycleLimit fields in the discounts API for discount UI extensions",
+      "link": "https://shopify.dev/changelog/new-purchasetype-and-recurringcyclelimit-fields-available-in-the-discount-ui-extension-api",
+      "publishedAt": "2026-06-17T18:00:00.000Z",
+      "collectedAt": "2026-06-18T00:25:58.795Z",
+      "category": [
+        "API",
+        "New",
+        "Admin Extensions",
+        "2026-04"
+      ],
+      "description": " <div class=\"\"><p>You can now configure <code>purchaseType</code> and <code>recurringCycleLimit</code> for app discounts directly from discount UI extensions using the discounts plugin.</p>\n<p>Previously, these fields were only accessible through the GraphQL Admin API. App developers building discount UI extensions had no way to let merchants control whether a discount applies to one-time purchases, subscriptions, or both, or how many subscription billing cycles a discount should apply to.</p>\n<p>The following fields are now available through the discounts plugin:</p>\n<ul>\n<li><strong><code>purchaseType</code></strong>: control whether the discount applies to one-time purchases, subscriptions, or both</li>\n<li><strong><code>recurringCycleLimit</code></strong>: set the number of billing cycles a subscription discount applies to (such as, a value of 4 applies the discount on the first 4 orders, then stops). A value of 0 means unlimited.</li>\n</ul>\n<p>These fields work with both <code>DiscountCodeApp</code> and <code>DiscountAutomaticApp</code> discount types, and the values are enforced by purchase type filtering at checkout.</p>\n<p><strong>No action is required.</strong> To start using these fields, update your discount UI extension to include them in your discounts plugin configuration.</p>\n<p>For more details, see the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/input-objects/DiscountAutomaticAppInput\" target=\"_blank\" class=\"body-link\">API documentation for <code>DiscountAutomaticAppInput</code></a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "ディスカウントUI拡張機能のAPIに新しいpurchaseTypeとrecurringCycleLimitフィールドを追加",
+          "summarizedJa": "ディスカウントUI拡張機能において、purchaseType（単発購入・サブスクリプション・両方の選択）とrecurringCycleLimit（サブスクリプション割引の適用サイクル数）の2つのフィールドが利用可能になりました。これまでGraphQL Admin APIでのみ設定可能でしたが、UI拡張機能から直接設定できるようになり、マーチャントがより柔軟に割引を管理できるようになります。アプリ開発者は、discountsプラグインの設定を更新するだけで利用開始できます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-06-18T00:26:17.034Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1348,
+            "output": 296
+          },
+          "estimatedCost": 0.008483999999999998
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "割引UI拡張機能のDiscounts APIに`purchaseType`および`recurringCycleLimit`フィールドが追加",
+          "summarizedJa": "Shopifyの割引UI拡張機能を通じて、アプリ割引の適用対象（1回限り購入、定期購入、または両方）や、定期購入割引の適用回数を直接設定できるようになりました。これにより、マーチャントはより柔軟に割引キャンペーンを管理でき、パートナーは顧客のニーズに合わせた高度な割引設定機能をアプリで提供できるようになります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-06-18T00:26:23.038Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 990,
+            "output": 160
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-the-spring-26-edition-is-live",
+      "source": "shopify-changelog",
+      "title": "The Spring '26 Edition is live",
+      "link": "https://changelog.shopify.com/posts/the-spring-26-edition-is-live",
+      "publishedAt": "2026-06-17T16:10:00.000Z",
+      "collectedAt": "2026-06-18T00:25:59.636Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>Announcing 150+ updates to Shopify.</p>\n\n<p><a href=\"https://www.shopify.com/editions/spring2026\">See the updates</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Spring '26 Editionが公開されました",
+          "summarizedJa": "Shopifyの2026年春版アップデートが公開されました。150以上の新機能や改善が含まれています。詳細は公式のEditionsページで確認できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-06-18T00:26:26.572Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 948,
+            "output": 148
+          },
+          "estimatedCost": 0.005063999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "「Spring '26 Edition」が公開されました",
+          "summarizedJa": "Shopifyの「Spring '26 Edition」が発表され、150以上の新機能や改善が導入されました。このエディションには、マーチャントのビジネス運営を強化し、顧客体験を向上させるための幅広いアップデートが含まれており、詳細は公式リンクから確認できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-06-18T00:26:31.501Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 674,
+            "output": 134
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-purchase-type-filtering-now-enforced-for-app-discounts",
+      "source": "developer-changelog",
+      "title": "Purchase-type filtering now enforced for app discounts ",
+      "link": "https://shopify.dev/changelog/purchase-type-filtering-now-enforced-for-app-discounts",
+      "publishedAt": "2026-06-17T16:00:00.000Z",
+      "collectedAt": "2026-06-18T00:25:58.795Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API"
+      ],
+      "description": " <div class=\"\"><p>The <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/input-objects/DiscountAutomaticAppInput#fields-appliesOnSubscription\" target=\"_blank\" class=\"body-link\"><code>appliesOnSubscription</code></a> and <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/input-objects/DiscountAutomaticAppInput#fields-appliesOnOneTimePurchase\" target=\"_blank\" class=\"body-link\"><code>appliesOnOneTimePurchase</code></a> fields on app discounts are now enforced at checkout. Previously, these fields existed on <code>DiscountCodeAppInput</code> and <code>DiscountAutomaticAppInput</code> but had no effect. All app discounts applied to every line item regardless of purchase type.</p>\n<h2>What changed</h2>\n<p>If an app discount is configured with <code>appliesOnSubscription: false</code>, it will only apply to one-time purchase line items, and vice versa. This filtering happens at the platform level after your discount function runs, so function-targeted lines that don't match the purchase type configuration will be excluded.</p>\n<p>As part of this change, we also backfilled all existing app discounts to <code>appliesOnSubscription: true</code> and <code>appliesOnOneTimePurchase: true</code>. This means existing discounts continue to apply to all line items, so there's no behavior change for current discounts.</p>\n<h2>What you need to do</h2>\n<p>No action is required. If you're building a full-page app discount experience, you can now use these fields to control which purchase types your discount applies to. </p>\n<h2>Related docs</h2>\n<p>For more details, see the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/input-objects/DiscountAutomaticAppInput\" target=\"_blank\" class=\"body-link\">API documentation for <code>DiscountAutomaticAppInput</code></a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "アプリディスカウントの購入タイプフィルタリングが適用開始",
+          "summarizedJa": "アプリディスカウントの`appliesOnSubscription`と`appliesOnOneTimePurchase`フィールドが、チェックアウト時に実際に適用されるようになりました。これまではこれらのフィールドは存在していましたが機能しておらず、すべてのアプリディスカウントが購入タイプに関係なく適用されていました。既存のディスカウントはすべて両方のフィールドがtrueに設定され、動作に変更はありません。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-06-18T00:26:36.432Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1433,
+            "output": 253
+          },
+          "estimatedCost": 0.008094
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "アプリ割引における購入タイプ別フィルタリングの適用開始",
+          "summarizedJa": "Shopifyのアプリ割引において、これまで機能していなかった`appliesOnSubscription`と`appliesOnOneTimePurchase`フィールドがチェックアウト時に適用されるようになりました。これにより、アプリ割引を定期購入品目または1回限りの購入品目のいずれか、あるいは両方に限定して適用できるようになります。既存の割引には影響がなく、マーチャントやパートナー側で特別な対応は不要ですが、アプリ開発者はこの新機能を利用してより柔軟な割引体験を構築できます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-06-18T00:26:42.288Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1064,
+            "output": 176
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-admin-graphql-api-now-supports-app-owned-delivery-profiles-that-cover-all-shippable-items",
+      "source": "developer-changelog",
+      "title": "Admin GraphQL API now supports app-owned delivery profiles that cover all shippable items",
+      "link": "https://shopify.dev/changelog/admin-graphql-api-now-supports-app-owned-delivery-profiles-that-cover-all-shippable-items",
+      "publishedAt": "2026-06-17T16:00:00.000Z",
+      "collectedAt": "2026-06-18T00:25:58.795Z",
+      "category": [
+        "API",
+        "Update",
+        "Admin GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>As of GraphQL Admin API version 2026-07, app-owned shipping delivery profiles support a new boolean <code>coversAllItems</code> field.</p>\n<p>Use <code>coversAllItems</code> on app-owned shipping delivery profiles to indicate that a profile applies to every shippable product variant in the store, without explicitly assigning each product or variant to that profile.</p>\n<p>The field is available on the <code>DeliveryProfile</code> type:</p>\n<pre><code class=\"language-graphql\">query {\n  deliveryProfiles(first: 10) {\n    nodes {\n      id\n      name\n      coversAllItems\n    }\n  }\n}\n</code></pre>\n<p>You can also set <code>coversAllItems</code> through <code>DeliveryProfileInput</code> when creating or updating an app-owned shipping delivery profile:</p>\n<pre><code class=\"language-graphql\">mutation {\n  deliveryProfileUpdate(\n    id: &quot;gid://shopify/DeliveryProfile/123&quot;\n    profile: {\n      coversAllItems: true\n    }\n  ) {\n    profile {\n      id\n      coversAllItems\n    }\n    userErrors {\n      field\n      message\n    }\n  }\n}\n</code></pre>\n<p>When <code>coversAllItems</code> is <code>true</code>, rates from the app-owned shipping delivery profile apply to all shippable items at checkout, overriding any explicit product or variant assignments.</p>\n<p><code>coversAllItems</code> is only supported for authorized API clients on app-owned shipping delivery profiles. It is not supported on merchant-managed delivery profiles or on non-shipping profiles.</p>\n<p>If you omit <code>coversAllItems</code> when creating a profile, it defaults to <code>false</code>. If you omit it when updating a profile, the existing value is preserved.</p>\n<p>Learn more in the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/DeliveryProfile\" target=\"_blank\" class=\"body-link\">delivery profiles documentation</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Admin GraphQL APIがすべての配送可能商品をカバーするアプリ所有の配送プロファイルをサポート",
+          "summarizedJa": "GraphQL Admin API 2026-07バージョンから、アプリ所有の配送プロファイルに新しい真偽値フィールド「coversAllItems」が追加されました。このフィールドをtrueに設定することで、個別に商品やバリエーションを割り当てることなく、ストア内のすべての配送可能な商品バリエーションに配送プロファイルを適用できるようになります。この機能は認証されたAPIクライアントのアプリ所有配送プロファイルでのみ利用可能で、マーチャント管理の配送プロファイルではサポートされません。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-06-18T00:26:50.211Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1478,
+            "output": 305
+          },
+          "estimatedCost": 0.009009
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Admin GraphQL APIが、すべての配送可能商品をカバーするアプリ所有の配送プロファイルをサポート",
+          "summarizedJa": "ShopifyのAdmin GraphQL APIに、アプリが所有する配送プロファイルで利用できる新しい`coversAllItems`フィールドが追加されました。この機能により、アプリはストア内のすべての配送可能商品に一括で配送設定を適用できるようになり、個別の商品割り当ての手間を省くことができます。これにより、特にストア全体の配送ロジックを管理するアプリ開発者は、より柔軟かつ効率的に配送設定を運用できるようになります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-06-18T00:26:58.060Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1140,
+            "output": 174
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-intents-api-file-picker",
+      "source": "developer-changelog",
+      "title": "Apps can now open Shopify’s file picker with the Intents API",
+      "link": "https://shopify.dev/changelog/intents-api-file-picker",
+      "publishedAt": "2026-06-17T16:00:00.000Z",
+      "collectedAt": "2026-06-18T00:25:58.795Z",
+      "category": [
+        "Tools",
+        "New",
+        "Admin Extensions",
+        "App Bridge"
+      ],
+      "description": " <div class=\"\"><p>Apps can now open Shopify’s native file picker with the Intents API. This lets your app prompt merchants to choose files from their Shopify file library without building a custom picker or sending them through a separate flow.</p>\n<p>With a single API call, your app can open the file picker, optionally filter by media type, enable multiple selection, and preselect files. When the merchant finishes selecting files, your app receives the selected file IDs as an array in <code>response.data.ids</code>.</p>\n<h2>New intent</h2>\n<p>The following intent is now available:</p>\n<ul>\n<li><code>pick:shopify/File</code></li>\n</ul>\n<h2>How it works</h2>\n<p>Invoke the intent from App Home or a UI extension:</p>\n<pre><code class=\"language-js\">const activity = await shopify.intents.invoke('pick:shopify/File');\n\nconst response = await activity.complete;\n\nif (response.code === 'ok') {\n  console.log('Selected file IDs:', response.data.ids);\n  // response.data.ids is an array of selected file IDs\n}\n</code></pre>\n<p>Learn more in the <a href=\"https://shopify.dev/docs/api/app-home/apis/user-interface-and-interactions/intents-api?example=pick-files\" target=\"_blank\" class=\"body-link\">App Home (iframe) Intents docs</a> and <a href=\"https://shopify.dev/docs/api/app-home-ui-extension/latest/target-apis/utility-apis/intents-api?example=pick-files\" target=\"_blank\" class=\"body-link\">App Home (UI extension) Intents docs</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Intents APIでShopifyのファイルピッカーが開けるようになりました",
+          "summarizedJa": "アプリからIntents APIを使用してShopifyのネイティブファイルピッカーを開けるようになりました。1回のAPI呼び出しで、マーチャントがShopifyのファイルライブラリからファイルを選択できるようになり、メディアタイプでのフィルタリング、複数選択、ファイルの事前選択などが可能です。カスタムピッカーの構築や別のフローを経由する必要がなくなります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-06-18T00:27:03.114Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1351,
+            "output": 248
+          },
+          "estimatedCost": 0.007773
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "アプリがIntents APIでShopifyのファイルピッカーを開けるようになりました",
+          "summarizedJa": "ShopifyアプリがIntents APIを使って、Shopifyの標準ファイルピッカーを直接開けるようになりました。これにより、マーチャントはアプリ内でShopifyのファイルライブラリから簡単にファイルを選択でき、アプリ側で独自のファイル選択機能を開発する必要がなくなります。メディアタイプでのフィルタリングや複数選択も可能で、アプリ開発の効率化とマーチャントの利便性向上に貢献します。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-06-18T00:27:09.224Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1018,
+            "output": 165
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-define-and-set-metafields-on-inventory-transfers-in-the-admin-graphql-api",
+      "source": "developer-changelog",
+      "title": "Define and set metafields on inventory transfers in the GraphQL Admin API",
+      "link": "https://shopify.dev/changelog/define-and-set-metafields-on-inventory-transfers-in-the-admin-graphql-api",
+      "publishedAt": "2026-06-17T16:00:00.000Z",
+      "collectedAt": "2026-06-18T00:25:58.795Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>As of GraphQL Admin API version <code>2026-07</code>, you can define metafields for inventory transfers and set metafields directly when creating or editing transfers.</p>\n<p>Use <code>MetafieldOwnerType.TRANSFER</code> with metafield definition mutations to create transfer-specific metafield definitions. You can also pass metafields in the <code>metafields</code> input on the following mutations:</p>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/mutations/inventoryTransferCreate\" target=\"_blank\" class=\"body-link\"><code>inventoryTransferCreate</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/mutations/inventoryTransferCreateAsReadyToShip\" target=\"_blank\" class=\"body-link\"><code>inventoryTransferCreateAsReadyToShip</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/mutations/inventoryTransferEdit\" target=\"_blank\" class=\"body-link\"><code>inventoryTransferEdit</code></a></li>\n</ul>\n<p>Duplicating a transfer will also duplicates its metafields on <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/mutations/inventoryTransferDuplicate\" target=\"_blank\" class=\"body-link\"><code>inventoryTransferDuplicate</code></a>. This lets apps define, validate, and write transfer-specific custom data, such as ERP references, handling instructions, review teams, or other metadata, without requiring a separate <code>metafieldsSet</code> call after creating or editing a transfer.</p>\n<p>Learn more about <a href=\"https://shopify.dev/docs/apps/build/custom-data/metafields\" target=\"_blank\" class=\"body-link\">metafields</a> and the <a href=\"https://shopify.dev/docs/api/admin-graphql\" target=\"_blank\" class=\"body-link\">Admin GraphQL API</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "GraphQL Admin APIで在庫移動にメタフィールドを定義・設定可能に",
+          "summarizedJa": "GraphQL Admin API バージョン2026-07より、在庫移動（inventory transfers）に対してメタフィールドを定義し、作成・編集時に直接設定できるようになりました。MetafieldOwnerType.TRANSFERを使用して在庫移動専用のメタフィールド定義を作成でき、inventoryTransferCreateなどのミューテーションでメタフィールドを直接渡すことが可能です。これにより、ERP参照番号や取扱指示などのカスタムデータを、別途metafieldsSet呼び出しをせずに管理できます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-06-18T00:27:14.987Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1469,
+            "output": 284
+          },
+          "estimatedCost": 0.008667000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "GraphQL Admin API: 在庫移動にメタフィールドの定義・設定が可能に",
+          "summarizedJa": "ShopifyのGraphQL Admin APIバージョン2026-07以降、在庫移動（Inventory Transfer）に直接メタフィールドを定義・設定できるようになりました。これにより、ERP連携情報や特別な処理指示など、在庫移動に関するカスタムデータを効率的に管理・連携することが可能になります。特に開発者は、在庫移動の作成や編集時にメタフィールドを直接設定できるため、より柔軟で強力なカスタムデータ管理機能を構築できるようになります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-06-18T00:27:22.100Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1119,
+            "output": 170
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-flow-automatic-charging-for-vaulted-payment-methods",
+      "source": "shopify-changelog",
+      "title": "Flow: Automatic charging for vaulted payment methods",
+      "link": "https://changelog.shopify.com/posts/flow-automatic-charging-for-vaulted-payment-methods",
+      "publishedAt": "2026-06-17T15:50:00.000Z",
+      "collectedAt": "2026-06-18T00:25:59.636Z",
+      "category": [
+        "B2b"
+      ],
+      "description": "\n        <p>The Charge vaulted payment for B2B order action charges a customer's <a href=\"https://help.shopify.com/en/manual/b2b/checkout-and-orders/vaulted-cards\">vaulted credit card</a> or debits a <a href=\"https://help.shopify.com/en/manual/b2b/checkout-and-orders/vaulted-bank-accounts\">vaulted bank account</a> for an order with payment terms when payment is due.</p>\n\n<p>Learn more about the Charge vaulted payment for B2B order Flow action in the <a href=\"https://help.shopify.com/en/manual/shopify-flow/reference/actions/charge-vaulted-payment-for-b2b-order\">Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Flow: 保管済み決済方法の自動課金",
+          "summarizedJa": "Shopify FlowにB2B注文向けの新しいアクション「保管済み決済方法への課金」が追加されました。このアクションにより、支払期限が到来したB2B注文に対して、顧客の保管済みクレジットカードまたは銀行口座から自動的に課金・引き落としができるようになります。決済条件付きのB2B取引における回収業務の自動化が可能になります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-06-18T00:27:26.788Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1107,
+            "output": 231
+          },
+          "estimatedCost": 0.006786
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Flow: 保存済み決済方法の自動請求",
+          "summarizedJa": "Shopify Flowに「B2B注文の保存済み決済方法を請求」アクションが追加されました。この新機能により、B2B注文で支払い条件が設定されている場合、期日になると顧客の保存済みクレジットカードまたは銀行口座から自動的に請求を行うことが可能になります。これにより、B2Bマーチャントは支払いの回収プロセスを効率化し、手作業を削減できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-06-18T00:27:37.834Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 807,
+            "output": 156
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-online-store-editor-with-sidekick-on-mobile",
+      "source": "shopify-changelog",
+      "title": "Online Store Editor with Sidekick on mobile",
+      "link": "https://changelog.shopify.com/posts/online-store-editor-with-sidekick-on-mobile",
+      "publishedAt": "2026-06-17T15:45:00.000Z",
+      "collectedAt": "2026-06-18T00:25:59.636Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>The mobile Online Store Editor has been rebuilt to keep your store canvas visible while you make changes. This update also includes touch controls and Sidekick integration.</p>\n\n<p><strong>What's new:</strong><br>\n* The canvas stays visible while you edit. Settings open in a compact sheet that does not cover your store<br>\n* Tap any section or block directly on the canvas to open its settings and see changes as you make them<br>\n* Controls and inputs are redesigned for finger use: larger targets, clearer states, consistent across iOS and Android<br>\n* Sidekick is now in the editor. Ask a question or request a store edit from anywhere in the editor<br>\n* A new layer map shows your store's full structure. Find any section, block, theme setting, or app embed without scrolling the canvas<br>\n* Select a specific section or block and a contextual Sidekick input appears, already aware of what you are looking at</p>\n\n<p>Learn more in the <a href=\"https://help.shopify.com/en/manual/shopify-admin/shopify-app/mobile-online-store#theme-editor\">Help Center</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "モバイル版オンラインストアエディターにSidekick機能を統合",
+          "summarizedJa": "モバイル版のオンラインストアエディターが全面刷新され、編集中もストアのキャンバスが常に表示されるようになりました。タッチ操作に最適化されたコントロール、AIアシスタントSidekickの統合、レイヤーマップによる構造の可視化など、モバイルでのテーマ編集体験が大幅に向上しています。iOS・Android両方で一貫した操作性を提供します。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-06-18T00:27:43.148Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1179,
+            "output": 246
+          },
+          "estimatedCost": 0.007227
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "モバイル版オンラインストアエディタにSidekickを搭載",
+          "summarizedJa": "モバイル版オンラインストアエディタが刷新され、編集中にストアのプレビューが常に表示されるようになりました。タッチ操作が改善され、AIアシスタント「Sidekick」が統合されたことで、モバイルデバイスからでも直感的かつ効率的にストアを編集できるようになります。新しいレイヤーマップにより、ストア構造の把握も容易になり、日本のマーチャントにとってストア管理の利便性が大幅に向上します。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-06-18T00:27:48.182Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 887,
+            "output": 164
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-checkout-blocks-block-non-compliant-shipping-addresses-at-checkout",
+      "source": "shopify-changelog",
+      "title": "Checkout Blocks: Prevent non-compliant shipping addresses at checkout",
+      "link": "https://changelog.shopify.com/posts/checkout-blocks-block-non-compliant-shipping-addresses-at-checkout",
+      "publishedAt": "2026-06-17T15:45:00.000Z",
+      "collectedAt": "2026-06-18T00:25:59.636Z",
+      "category": [
+        "Apps"
+      ],
+      "description": "\n        <p>Address format validation in Checkout Blocks is now available to all merchants. Use the new <a href=\"https://admin.shopify.com/settings/checkout#checkoutrules\">checkout rule</a> to block non‑compliant shipping addresses. This can be found by going to <strong>Settings → Checkout → Checkout rules → Address format validation</strong> in the Shopify admin.</p>\n\n<p>Rules are enforced consistently in checkouts across online and agentic experiences. Buyers see an inline error and can't complete checkout until the address is corrected.</p>\n\n<p>The Checkout Blocks <a href=\"https://help.shopify.com/manual/checkout-settings/checkout-blocks/blocks/create-block/address-blocker\">Address Blocker</a> is now deprecated and will sunset on <strong>August 31, 2026</strong>. If you currently use the Address Blocker, we’ll automatically move any compatible settings to address format validation over the next few weeks — no action required.</p>\n\n<p>For more information, visit the <a href=\"https://help.shopify.com/manual/checkout-settings/checkout-blocks/customizations/address-format-validation\">help center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "チェックアウトブロック：規格外の配送先住所を防止する機能の追加",
+          "summarizedJa": "チェックアウトブロックに住所形式検証機能が全マーチャント向けに提供開始されました。管理画面の「設定→チェックアウト→チェックアウトルール→住所形式検証」から、規格に準拠していない配送先住所をブロックできます。既存のAddress Blockerアプリは2026年8月31日に廃止され、互換性のある設定は自動的に新機能へ移行されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-06-18T00:27:54.195Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1201,
+            "output": 248
+          },
+          "estimatedCost": 0.0073230000000000005
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "チェックアウトブロック：チェックアウト時の不適切な配送先住所の入力を防止",
+          "summarizedJa": "Shopifyのチェックアウトブロックで、配送先住所の形式検証機能が全マーチャントに提供開始されました。これにより、設定から不適切な住所の入力をブロックできるようになり、購入者は正しい住所を入力するまでチェックアウトを完了できません。既存のAddress Blocker機能は2026年8月31日に廃止され、互換性のある設定は自動的に移行されます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-06-18T00:28:01.667Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 893,
+            "output": 164
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-customer-accounts-get-a-design-uplift",
+      "source": "shopify-changelog",
+      "title": "Customer accounts get a design uplift",
+      "link": "https://changelog.shopify.com/posts/customer-accounts-get-a-design-uplift",
+      "publishedAt": "2026-06-17T15:45:00.000Z",
+      "collectedAt": "2026-06-18T00:25:59.636Z",
+      "category": [
+        "Customer-account"
+      ],
+      "description": "\n        <p>Customer account pages get a design uplift that makes it easier for your customers to navigate their account, track orders, and take actions. The refreshed pages now use a streamlined single-column layout, feature more intuitive and accessible navigation, and include mobile-first optimizations.</p>\n\n<p><img src=\"https://cdn.shopify.com/static/Account%20Uplift%20-%20Changelog%20-%20Optimized.gif\" alt=\"Customer account design improvements\"></p>\n\n<h2>What’s new for your buyer experience</h2>\n\n<ul>\n<li><strong>Account menus with up to 4 navigation links are now displayed inline on mobile</strong>, at the top of the page instead of collapsing behind a hamburger icon, so navigation is always within reach on every screen size.</li>\n<li><strong>Order details are easier to scan on mobile</strong>. The order summary is displayed inline on the page instead of collapsed, product images link straight to the product page, and any app features you've added to the order summary show up without extra taps. </li>\n<li><strong>More order actions are surfaced on the order list and order status pages for improved access</strong>. Native and extension-based order actions appear right at the top of each order summary instead of being tucked away inside a menu, so your customers can easily find and take their desired action. </li>\n<li><strong>Customers with no orders can see product recommendations you curate</strong>, instead of an empty state, so they will discover more of what you sell. </li>\n<li><strong>The sign-in page now allows for more customization controls</strong> for logo, colors, section styles, and a unique brand image.</li>\n</ul>\n\n<p>You can customize your refreshed account pages for a unique branded look and add more features with apps using the <a href=\"https://admin.shopify.com/settings/checkout/editor?page=order-status\">checkout and account editor</a>.</p>\n\n<h2>Availability</h2>\n\n<p>We're starting to roll these updates out today. Over the coming weeks, they'll be available to all stores on the latest version of customer accounts. </p>\n\n<p>Stores on legacy customer accounts with the new order status page will also receive updates on this page. To bring the full refreshed design to all of your account pages, follow our <a href=\"https://help.shopify.com/en/manual/customers/customer-accounts/upgrade\">guide</a> to upgrade to the latest version of customer accounts.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "カスタマーアカウントページのデザインがリニューアル",
+          "summarizedJa": "カスタマーアカウントページがデザイン刷新され、シングルカラムレイアウトとモバイルファーストの最適化により、顧客の注文追跡やアカウント管理がより簡単になります。モバイルでのナビゲーション表示改善、注文詳細の視認性向上、注文アクションへのアクセス改善、サインインページのカスタマイズ強化などが含まれます。最新版のカスタマーアカウントを利用している全ストアに今後数週間で段階的に展開されます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-06-18T00:28:07.338Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1489,
+            "output": 275
+          },
+          "estimatedCost": 0.008592
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "顧客アカウントのデザイン刷新",
+          "summarizedJa": "Shopifyの顧客アカウントページがデザイン刷新され、顧客はより簡単にアカウントを操作し、注文を追跡できるようになります。モバイル最適化が進み、注文詳細の見やすさ向上、注文アクションへのアクセス改善、サインインページのカスタマイズ性強化などが含まれます。これにより、顧客体験が向上し、マーチャントはブランドに合わせた顧客アカウントを提供できるようになります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-06-18T00:28:13.007Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1151,
+            "output": 147
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-ship-and-pickup-in-one-order",
+      "source": "shopify-changelog",
+      "title": "Ship and pickup in one order available for Plus and Enterprise plans",
+      "link": "https://changelog.shopify.com/posts/ship-and-pickup-in-one-order",
+      "publishedAt": "2026-06-17T15:45:00.000Z",
+      "collectedAt": "2026-06-18T00:25:59.636Z",
+      "category": [
+        "Checkout"
+      ],
+      "description": "\n        <p>Merchants on Plus and Enterprise plans can now offer customers the flexibility to select shipping and store pickup for different items within a single checkout. Previously, customers had to create separate orders for each delivery method.</p>\n\n<ul>\n<li>Customers can see all available delivery options for each item based on the shop’s configured locations, inventory, and delivery methods.</li>\n<li>Customers can choose to ship or pick up all of their items, or choose some items for pickup and others for shipping to their address.</li>\n<li>When an order is created, separate fulfillments will link to the order in the Shopify admin to show which items are for pickup or shipping. </li>\n</ul>\n\n<p>Enable the feature through <a href=\"https://admin.shopify.com/settings/test-drive\">Feature test drives</a>. The feature auto-releases to all eligible checkouts on <strong>April 2027</strong>.</p>\n\n<p>If your store uses any third-party or custom apps, workflows, or integrations that interact with delivery, fulfillment, or order logic, you'll need to thoroughly test them with this feature. Reach out to your app developers to confirm they've updated their apps to support split orders to ensure your checkout experience stays smooth and fulfillment routing works as expected.</p>\n\n<ul>\n<li>Review <a href=\"https://help.shopify.com/manual/checkout-settings/ship-and-pickup\">help doc</a></li>\n<li>See developer instructions in the <a href=\"https://shopify.dev/changelog/ship-and-pickup-in-one-order-feature-preview\">developer changelog</a></li>\n<li>Leave questions and feedback in the <a href=\"https://community.shopify.com/t/ship-and-pickup-in-one-order-available-for-plus-and-enterprise-plans/637688\">community forum</a>. </li>\n</ul>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "1つの注文で配送とピックアップを選択可能に（PlusおよびEnterpriseプラン向け）",
+          "summarizedJa": "PlusおよびEnterpriseプランのマーチャントは、顧客が1回のチェックアウトで商品ごとに配送と店舗受取を選択できる機能を利用可能になりました。2027年4月に全対象チェックアウトへ自動適用されるため、配送・フルフィルメント・注文処理に関連するサードパーティアプリやカスタム実装を使用している場合は、事前のテストと開発者への確認が必要です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-06-18T00:28:18.685Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1352,
+            "output": 267
+          },
+          "estimatedCost": 0.008060999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "PlusおよびEnterpriseプランで、配送と店舗受け取りを1つの注文で利用可能に",
+          "summarizedJa": "Shopify PlusおよびEnterpriseプランのマーチャントは、顧客が1つの注文内で配送と店舗受け取りを組み合わせて選択できる新機能を利用できるようになります。これにより、顧客は商品ごとに最適な受け取り方法を選べ、マーチャントは管理画面で配送と受け取りのフルフィルメントを個別に管理できます。ただし、既存の配送・フルフィルメント関連のアプリやカスタム連携を使用している場合は、開発者と連携し、この新機能への対応状況を必ず確認し、十分なテストを行う必要があります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 17,
+          "analyzedAt": "2026-06-18T00:28:25.843Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1035,
+            "output": 193
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-visualize-your-data-with-bubble-and-sunburst-charts-in-analytics",
+      "source": "shopify-changelog",
+      "title": "Visualize your data with bubble and sunburst charts in Analytics",
+      "link": "https://changelog.shopify.com/posts/visualize-your-data-with-bubble-and-sunburst-charts-in-analytics",
+      "publishedAt": "2026-06-17T15:45:00.000Z",
+      "collectedAt": "2026-06-18T00:25:59.636Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>Bubble and sunburst charts are now available in Analytics. These two new chart types give you more ways to explore your store data, whether you're comparing multiple metrics at once or breaking down totals across nested categories. The new chart types appear in the visualization picker when you create or edit a report.</p>\n\n<p>Bubble charts plot three metrics together so you can spot outliers, like products with high sales volume that also have a high return rate. Sunburst charts show how a total breaks down across nested categories so you can see how the parts add up to the whole, like which product categories drive the most sales and which sub-categories perform best within them.</p>\n\n<p>Learn more about <a href=\"https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/custom-reports/selecting-visualizations#bubble-chart\">bubble</a> and <a href=\"https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/custom-reports/selecting-visualizations#sunburst\">sunburst</a> charts in the Shopify Help Center.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "分析機能にバブルチャートとサンバーストチャートが追加",
+          "summarizedJa": "Shopify Analyticsに2つの新しいチャートタイプ、バブルチャートとサンバーストチャートが追加されました。バブルチャートは3つの指標を同時に比較でき、売上が多いが返品率も高い商品などの異常値を発見できます。サンバーストチャートは階層化されたカテゴリー全体での内訳を視覚化し、どの商品カテゴリーが最も売上に貢献しているかなどを把握できます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-06-18T00:28:30.625Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1183,
+            "output": 259
+          },
+          "estimatedCost": 0.007434
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "アナリティクスでバブルチャートとサンバーストチャートを使ってデータを可視化",
+          "summarizedJa": "Shopifyアナリティクスに、バブルチャートとサンバーストチャートという新しいグラフタイプが追加されました。これにより、マーチャントは複数の指標を比較したり、ネストされたカテゴリで合計を分解したりすることで、ストアデータをより深く分析できるようになります。例えば、バブルチャートで外れ値を発見したり、サンバーストチャートで売上を牽引するカテゴリを特定したりすることが可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-06-18T00:28:35.790Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 886,
+            "output": 166
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-the-marketing-tab-is-now-the-growth-tab",
+      "source": "shopify-changelog",
+      "title": "The Marketing tab is now the Growth tab",
+      "link": "https://changelog.shopify.com/posts/the-marketing-tab-is-now-the-growth-tab",
+      "publishedAt": "2026-06-17T15:45:00.000Z",
+      "collectedAt": "2026-06-18T00:25:59.636Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>The Marketing tab in your admin has a new name and a new look. It's now called Growth, and it's where you'll find everything related to growing your business, including Campaigns, Attribution, and the new Autopilot experience.</p>\n\n<p>Here's where to find things:<br>\n* Campaigns and Attribution are in the Growth tab, right where you'd expect them<br>\n* Automations now live in the <a href=\"https://apps.shopify.com/shopify-messaging\">Shopify Messaging app</a><br>\n* Campaign Autopilot is available in early access. Sign up via the Growth tab. <br>\n* <a href=\"https://apps.shopify.com/categories/marketing-and-conversion?\">Explore marketing apps</a> in the app store </p>\n\n<p>Everything you've already set up is still accessible. Learn more about growth and marketing in the <a href=\"https://help.shopify.com/en/manual/promoting-marketing\">help docs</a>. </p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "マーケティングタブがグロースタブに名称変更",
+          "summarizedJa": "Shopify管理画面の「マーケティング」タブが「グロース（Growth）」タブに名称変更され、デザインも刷新されました。キャンペーンやアトリビューション機能に加え、新しいAutopilot機能がこのタブに集約され、ビジネス成長に関連する機能が一箇所で管理できるようになります。なお、自動化機能はShopify Messagingアプリに移動しました。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-06-18T00:28:40.944Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1145,
+            "output": 237
+          },
+          "estimatedCost": 0.00699
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "「マーケティング」タブが「グロース」タブに名称変更",
+          "summarizedJa": "Shopify管理画面の「マーケティング」タブが「グロース」タブに名称変更され、デザインも一新されました。このタブには、キャンペーン、アトリビューション、新しいAutopilot機能など、ビジネス成長に関連する全ての機能が集約されます。既存の設定は引き続き利用可能で、オートメーション機能はShopify Messagingアプリへ移行しました。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-06-18T00:28:46.153Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 857,
+            "output": 155
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-product-listings-now-support-a-disclosures-field",
+      "source": "shopify-changelog",
+      "title": "Product listings now support a disclosures field",
+      "link": "https://changelog.shopify.com/posts/product-listings-now-support-a-disclosures-field",
+      "publishedAt": "2026-06-17T15:45:00.000Z",
+      "collectedAt": "2026-06-18T00:25:59.636Z",
+      "category": [
+        "Products"
+      ],
+      "description": "\n        <p>Merchants can now add structured product disclosures directly in Shopify admin instead of storing warnings in product descriptions, theme code, or custom workarounds.</p>\n\n<p>Product disclosures are stored as product metafields and support built-in disclosure types for California Proposition 65 warnings and choking-hazard notices, plus custom disclosure types for other product-specific warnings or notices.</p>\n\n<p>On supported Online Store themes, populated disclosures display on the product detail page in a new Disclosures section. Custom storefronts and unsupported themes can access the disclosure metafields and render them manually.</p>\n\n<p>Merchants are responsible for determining when disclosures are required and entering appropriate disclosure content.</p>\n\n<p>Learn more about setting up product disclosures in the <a href=\"https://help.shopify.com/manual/products/product-disclosures\">Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "商品リストにdisclosuresフィールドのサポートを追加",
+          "summarizedJa": "Shopify管理画面で商品に対する警告や注意事項を構造化されたフィールドとして直接追加できるようになりました。カリフォルニア州プロポジション65警告や窒息危険性の通知などの組み込みタイプに加え、カスタムタイプもサポートしており、商品説明やテーマコードに埋め込む必要がなくなります。対応テーマでは商品詳細ページに自動表示され、カスタムストアフロントでもメタフィールド経由でアクセス可能です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-06-18T00:28:52.268Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1123,
+            "output": 274
+          },
+          "estimatedCost": 0.007479
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "商品リスティングが「開示情報」フィールドに対応",
+          "summarizedJa": "Shopify管理画面で、商品に構造化された「開示情報」を直接追加できるようになりました。これにより、商品説明やテーマコードに警告を記載する手間が省け、カリフォルニア州プロポジション65や窒息危険警告などの組み込みタイプに加え、カスタムタイプも利用可能です。対応テーマでは商品詳細ページに表示され、カスタムストアフロントでもメタフィールド経由でアクセスできるため、日本のマーチャントも独自の規制や警告に対応しやすくなります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-06-18T00:29:00.007Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 818,
+            "output": 175
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-set-channel-specific-prices-availability-and-currency-with-markets",
+      "source": "shopify-changelog",
+      "title": "Set channel-specific prices, availability and currency with Markets",
+      "link": "https://changelog.shopify.com/posts/set-channel-specific-prices-availability-and-currency-with-markets",
+      "publishedAt": "2026-06-17T15:45:00.000Z",
+      "collectedAt": "2026-06-18T00:25:59.636Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>Channels are now available as a market type in Shopify Markets. This enables merchants to create a market for one or more sales channels and, optionally, region(s), assign a catalog, and customize pricing, product availability, and currency while keeping each channel’s own publishing controls in place. Channel Markets are now available to all merchants using Markets.</p>\n\n<p>Learn more about using Markets with sales channels in <a href=\"https://help.shopify.com/en/manual/online-sales-channels/channel-markets\">Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Marketsでチャネル別の価格、在庫状況、通貨設定が可能に",
+          "summarizedJa": "Shopify Marketsでチャネルをマーケットタイプとして利用できるようになりました。これにより、1つ以上の販売チャネルやリージョンに対してマーケットを作成し、カタログの割り当て、価格設定、商品の在庫状況、通貨のカスタマイズが可能になります。各チャネル独自の公開コントロールは維持されたまま、すべてのマーチャントが利用可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-06-18T00:29:04.640Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1038,
+            "output": 253
+          },
+          "estimatedCost": 0.006909
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Marketsでチャネル固有の価格、在庫状況、通貨を設定",
+          "summarizedJa": "Shopify Marketsに「チャネル」がマーケットタイプとして追加されました。これにより、マーチャントは特定の販売チャネル（およびオプションで地域）ごとにマーケットを作成し、価格、商品の在庫状況、通貨を個別に設定できるようになります。各チャネルの公開設定は維持され、Marketsを利用しているすべてのマーチャントがこの機能を利用可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-06-18T00:29:12.203Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 756,
+            "output": 150
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-understand-your-markets-setup-at-a-glance-with-the-redesigned-graph",
+      "source": "shopify-changelog",
+      "title": "Understand your Markets setup at a glance with the redesigned graph ",
+      "link": "https://changelog.shopify.com/posts/understand-your-markets-setup-at-a-glance-with-the-redesigned-graph",
+      "publishedAt": "2026-06-17T15:45:00.000Z",
+      "collectedAt": "2026-06-18T00:25:59.636Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>The Markets graph now makes your configuration easy to understand at a glance. No more clicking into individual market pages to simply verify the number of products or mentally tracing what settings each sub-market inherits from its parent.</p>\n\n<ul>\n<li><strong>Redesigned graph</strong> — A clearer visual map with product images on nodes, number of products and discounts for each node.</li>\n<li><strong>Aggregated panel for all markets</strong> — See what settings are carried over vs. customized for each market in one place, instead of digging through individual market pages.</li>\n</ul>\n\n<p>Learn more about the Markets graph view in our <a href=\"https://help.shopify.com/manual/markets/graph-view\">help documentation</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "再設計されたグラフでマーケット設定を一目で把握可能に",
+          "summarizedJa": "Marketsのグラフ表示が再設計され、各マーケットの商品数や割引、設定の継承関係を一目で確認できるようになりました。個別のマーケットページを開かなくても、商品画像付きのノード表示と、全マーケットの設定が継承されているか独自設定されているかを一覧できる集約パネルが追加されました。複数市場に展開しているマーチャントの設定管理が大幅に効率化されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-06-18T00:29:18.462Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1102,
+            "output": 254
+          },
+          "estimatedCost": 0.007116
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "再設計されたグラフでMarketsの設定を一目で把握",
+          "summarizedJa": "Shopify Marketsの設定画面が改善され、再設計されたグラフにより、複数のマーケット設定や商品数、割引状況、設定の継承関係などを一目で把握できるようになります。これにより、個別のマーケットページに移動することなく、設定状況を効率的に確認できるようになり、越境EC運営の管理が大幅に簡素化されます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-06-18T00:29:24.449Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 798,
+            "output": 145
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-smart-delivery-in-shopify-messaging",
+      "source": "shopify-changelog",
+      "title": "Smart delivery in Shopify Messaging ",
+      "link": "https://changelog.shopify.com/posts/smart-delivery-in-shopify-messaging",
+      "publishedAt": "2026-06-17T15:45:00.000Z",
+      "collectedAt": "2026-06-18T00:25:59.636Z",
+      "category": [
+        "Apps"
+      ],
+      "description": "\n        <p>Shopify Messaging now includes smart delivery, a feature that intelligently prioritizes which messages to send and hold back, helping you optimize for conversion while lowering unsubscribes and marketing costs.</p>\n\n<p>For example, if a customer hasn’t opened your recent marketing emails, they may be filtered from your next campaign. That way, you can focus your sends on customers who are more likely to engage.</p>\n\n<p>This is a built-in delivery setting in the Shopify Messaging app. To learn more, please visit the <a href=\"https://help.shopify.com/en/manual/promoting-marketing/create-marketing/shopify-messaging/delivery\">Shopify Help Center.</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify Messagingにスマート配信機能が追加",
+          "summarizedJa": "Shopify Messagingに、メッセージの送信を最適化するスマート配信機能が追加されました。この機能は、最近マーケティングメールを開封していない顧客を自動的にフィルタリングし、エンゲージメントの高い顧客に絞って配信することで、コンバージョン率の向上と配信停止率・マーケティングコストの削減を実現します。Shopify Messagingアプリの標準配信設定として利用可能です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-06-18T00:29:29.943Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1064,
+            "output": 247
+          },
+          "estimatedCost": 0.006897
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopifyメッセージングにおけるスマート配信",
+          "summarizedJa": "Shopifyメッセージングに「スマート配信」機能が追加されました。この機能は、顧客のエンゲージメント状況に基づいてメッセージの配信優先順位をインテリジェントに調整し、コンバージョン率の最適化、購読解除率の低減、マーケティングコストの削減に貢献します。例えば、最近マーケティングメールを開封していない顧客を次のキャンペーンから除外するなど、よりエンゲージメントの高い顧客に焦点を当てた効果的なメッセージ配信が可能になります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-06-18T00:29:34.728Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 774,
+            "output": 172
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-manage-whatsapp-marketing-consent-in-shopify",
+      "source": "shopify-changelog",
+      "title": "Manage WhatsApp marketing consent in Shopify ",
+      "link": "https://changelog.shopify.com/posts/manage-whatsapp-marketing-consent-in-shopify",
+      "publishedAt": "2026-06-17T15:45:00.000Z",
+      "collectedAt": "2026-06-18T00:25:59.636Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>Now you can manage WhatsApp marketing consent directly in each customer's profile in Shopify, alongside email and SMS consent. This gives you a more complete view of each customer’s marketing preferences across all channels. </p>\n\n<p>You can also save time using the bulk import and export tool to add consent from an existing subscriber list or export your current subscriber data. </p>\n\n<p>To learn more about managing WhatsApp consent in admin, visit the <a href=\"https://help.shopify.com/en/manual/customers/manage-customers#edit-customer-profiles\">Shopify Help Center</a>. </p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "ShopifyでWhatsAppマーケティング同意を管理可能に",
+          "summarizedJa": "顧客プロフィール画面で、メールやSMSと並んでWhatsAppマーケティングの同意管理が可能になりました。一括インポート・エクスポートツールを使用して、既存の購読者リストから同意情報を追加したり、現在の購読者データをエクスポートすることもできます。これにより、すべてのチャネルにわたる顧客のマーケティング設定を一元的に把握できるようになります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 2,
+            "japanRelevance": 2,
+            "technicalImportance": 2
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-06-18T00:29:39.036Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1050,
+            "output": 243
+          },
+          "estimatedCost": 0.006795
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "ShopifyでWhatsAppマーケティングの同意を管理",
+          "summarizedJa": "Shopifyの顧客プロフィールで、メールやSMSの同意と並行してWhatsAppマーケティングの同意を直接管理できるようになりました。これにより、顧客のマーケティング設定を一元的に把握しやすくなります。また、一括インポート・エクスポートツールを活用して、既存リストからの同意追加や現在の購読者データのエクスポートも可能です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-06-18T00:29:45.037Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 759,
+            "output": 147
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-bulk-queries-now-execute-faster",
+      "source": "developer-changelog",
+      "title": "Bulk queries now execute up to 4X faster",
+      "link": "https://shopify.dev/changelog/bulk-queries-now-execute-faster",
+      "publishedAt": "2026-06-17T15:45:00.000Z",
+      "collectedAt": "2026-06-18T00:25:58.795Z",
+      "category": [
+        "API",
+        "Update",
+        "Admin GraphQL API"
+      ],
+      "description": " <div class=\"\"><p>Exporting large datasets from Shopify is now up to 4X faster, thanks to optimizations to <a href=\"https://shopify.dev/docs/api/usage/bulk-operations/queries\" target=\"_blank\" class=\"body-link\">bulk queries</a>.</p>\n<p>Bulk operations are the most efficient way to import and export data from Shopify stores. Compared to synchronous use of the Admin API, you can build functionality faster with bulk operations, process large datasets in less time, and spend less on infrastructure.</p>\n<p>Other recent improvements to bulk operations include:</p>\n<ul>\n<li><a href=\"https://shopify.dev/changelog/new-queries-for-bulk-operations\" target=\"_blank\" class=\"body-link\">New queries for managing bulk operations</a>  </li>\n<li><a href=\"https://shopify.dev/changelog/faster-bulk-operations\" target=\"_blank\" class=\"body-link\">Support for all mutations and up to 5 concurrent bulk operations</a>  </li>\n<li><a href=\"https://shopify.dev/changelog/use-the-admin-api-and-bulk-operations-in-shopify-cli\" target=\"_blank\" class=\"body-link\">Support for bulk operations in Shopify CLI</a></li>\n</ul>\n<p>You can run your own comparison of bulk queries and mutations against synchronous API calls with the <a href=\"https://github.com/Shopify/bulk-operations-sample-app/\" target=\"_blank\" class=\"body-link\">bulk operations sample app</a>, or read more about bulk <a href=\"https://shopify.dev/docs/api/usage/bulk-operations/queries\" target=\"_blank\" class=\"body-link\">queries</a> and <a href=\"https://shopify.dev/docs/api/usage/bulk-operations/imports\" target=\"_blank\" class=\"body-link\">mutations</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "バルククエリの実行速度が最大4倍高速化",
+          "summarizedJa": "ShopifyのAdmin GraphQL APIにおけるバルククエリ（一括データ取得処理）が最適化され、大量データのエクスポート速度が最大4倍高速化されました。バルクオペレーションは同期的なAPI呼び出しと比較して、より効率的にデータのインポート・エクスポートが可能で、インフラコストの削減にもつながります。最近では5つの同時実行対応や全ミューテーションのサポート、Shopify CLIでの対応など、継続的な改善が行われています。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-06-18T00:29:51.501Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1366,
+            "output": 268
+          },
+          "estimatedCost": 0.008118
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "一括クエリの実行速度が最大4倍向上",
+          "summarizedJa": "Shopifyの一括クエリが最適化され、大規模なデータセットのエクスポートが最大4倍高速になりました。これにより、パートナーはShopifyストアからのデータインポート・エクスポート機能をより効率的に開発でき、マーチャントはデータ処理時間の短縮とインフラコストの削減というメリットを享受できます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-06-18T00:29:58.841Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1043,
+            "output": 144
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-color-palettes",
+      "source": "developer-changelog",
+      "title": "Color palettes in Themes",
+      "link": "https://shopify.dev/changelog/color-palettes",
+      "publishedAt": "2026-06-17T15:45:00.000Z",
+      "collectedAt": "2026-06-18T00:25:58.795Z",
+      "category": [
+        "Themes",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>Themes now support a new <code>color_palette</code> setting type. Palettes give merchants a single grid of colors they can edit directly, and changes apply across the entire theme. Individual <code>color</code> and <code>color_background</code> settings can reference palette entries as defaults, and merchants can override any color at the section or block level for local control.</p>\n<p>Color schemes continue to work, so existing themes don't need to change, and color palettes aren't required for new themes or Theme Store submissions. We're focusing future development on palettes because they give merchants a better editing experience, so we recommend them when building new themes.</p>\n<p>To see how this works in practice, try the latest version of Horizon (4.0.0), which uses the new palette system throughout.</p>\n<p>For implementation details, see the <a href=\"https://shopify.dev/docs/storefronts/themes/architecture/settings/input-settings#color_palette\" target=\"_blank\" class=\"body-link\"><code>color_palette</code> developer documentation</a>. </p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "テーマにカラーパレット機能を追加",
+          "summarizedJa": "Shopifyテーマに新しい`color_palette`設定タイプが追加されました。マーチャントは単一のカラーグリッドから色を編集でき、変更がテーマ全体に適用されます。従来のカラースキームも引き続き利用可能ですが、今後の開発はパレット機能に注力するため、新規テーマ開発時にはカラーパレットの使用が推奨されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-06-18T00:30:03.296Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1154,
+            "output": 230
+          },
+          "estimatedCost": 0.006912
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "テーマにおけるカラーパレット",
+          "summarizedJa": "Shopifyテーマに新しい`color_palette`設定タイプが導入されました。これにより、マーチャントは一元化されたカラーパレットを直接編集し、その変更をテーマ全体に適用できるようになります。既存のカラースキームも引き続き機能しますが、より良い編集体験を提供するため、新規テーマ開発時にはこのカラーパレットの利用が推奨されます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-06-18T00:30:09.195Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 854,
+            "output": 145
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-create-channel-markets-with-the-graphql-admin-api",
+      "source": "developer-changelog",
+      "title": "Create channel markets with the GraphQL Admin API",
+      "link": "https://shopify.dev/changelog/create-channel-markets-with-the-graphql-admin-api",
+      "publishedAt": "2026-06-17T15:45:00.000Z",
+      "collectedAt": "2026-06-18T00:25:58.796Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>Starting in API version <code>2026-07</code>, the GraphQL Admin API supports channel markets. Apps can now create and update Markets that apply to one or more sales channels, then use existing catalog and market APIs to manage channel-specific product availability, pricing, and currency.</p>\n<p>This is an additive change. Existing apps don’t need to make updates unless they create, query, or make assumptions about Markets or market catalogs types.</p>\n<h2>What changed</h2>\n<p>You can now:</p>\n<ul>\n<li>Use <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/enums/MarketType\" target=\"_blank\" class=\"body-link\"><code>MarketType.CHANNEL</code></a> and <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/enums/MarketConditionType\" target=\"_blank\" class=\"body-link\"><code>MarketConditionType.CHANNEL</code></a> to identify channel markets.</li>\n<li>Create channel markets with <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/input-objects/MarketConditionsInput#fields-channelsCondition\" target=\"_blank\" class=\"body-link\"><code>MarketCreateInput.conditions.channelsCondition</code></a> and <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/input-objects/MarketConditionsChannelsInput#fields-channelIds\" target=\"_blank\" class=\"body-link\"><code>MarketConditionsChannelsInput.channelIds</code></a>.</li>\n<li>Add or remove channel conditions through <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/input-objects/MarketUpdateInput#fields-conditions\" target=\"_blank\" class=\"body-link\"><code>MarketUpdateInput.conditions</code></a>.</li>\n<li>Query a market’s channels with <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/Market#field-Market.fields.channels\" target=\"_blank\" class=\"body-link\"><code>Market.channels</code></a> and <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/Market#field-Market.fields.channelsCount\" target=\"_blank\" class=\"body-link\"><code>Market.channelsCount</code></a>.</li>\n<li>Query a channel’s markets with <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/Channel#field-Channel.fields.markets\" target=\"_blank\" class=\"body-link\"><code>Channel.markets</code></a> and <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/Channel#field-Channel.fields.marketsCount\" target=\"_blank\" class=\"body-link\"><code>Channel.marketsCount</code></a>.</li>\n<li>Use <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/Channel#field-Channel.fields.activeRegions\" target=\"_blank\" class=\"body-link\"><code>Channel.activeRegions</code></a> to read the regions where a channel has active product feeds.</li>\n<li>Filter markets by type with <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/queries/markets#arguments-type\" target=\"_blank\" class=\"body-link\"><code>markets(type: CHANNEL)</code></a>.</li>\n</ul>\n<h2>What to do</h2>\n<p>If your app works with Markets or catalogs, update any logic that assumes markets are only regional, retail-location, company-location, or none-type markets.</p>\n<p>If your app wants to create channel markets, pass channel IDs through <code>channelsCondition.channelIds</code>, then assign catalogs and pricing configuration using the existing Markets and catalog APIs. Product feed output continues to respect both the channel market’s catalog settings and the sales channel’s own publishing controls.</p>\n<h2>Related docs</h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/Market\" target=\"_blank\" class=\"body-link\"><code>Market</code> object</a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/Channel\" target=\"_blank\" class=\"body-link\"><code>Channel</code> object</a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/input-objects/MarketConditionsChannelsInput\" target=\"_blank\" class=\"body-link\"><code>MarketConditionsChannelsInput</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/enums/MarketType\" target=\"_blank\" class=\"body-link\"><code>MarketType</code> enum</a></li>\n<li><a href=\"https://shopify.dev/docs/apps/build/sales-channels/channel-config-extension\" target=\"_blank\" class=\"body-link\">Channel config extension</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "GraphQL Admin APIでチャネルマーケットの作成が可能に",
+          "summarizedJa": "APIバージョン2026-07より、GraphQL Admin APIでチャネルマーケット（販売チャネル単位のマーケット）の作成と更新が可能になりました。アプリは特定の販売チャネルに適用されるマーケットを作成し、既存のカタログAPIとマーケットAPIを使用してチャネル固有の商品の在庫状況、価格、通貨を管理できます。既存のマーケットやカタログを扱うアプリは、地域ベースのマーケットのみを前提としたロジックがある場合は更新が必要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-06-18T00:30:15.314Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2245,
+            "output": 281
+          },
+          "estimatedCost": 0.01095
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-hydrogen-developer-preview",
+      "source": "developer-changelog",
+      "title": "Hydrogen developer preview",
+      "link": "https://shopify.dev/changelog/hydrogen-developer-preview",
+      "publishedAt": "2026-06-17T15:45:00.000Z",
+      "collectedAt": "2026-06-18T00:25:58.796Z",
+      "category": [
+        "API",
+        "New",
+        "Hydrogen"
+      ],
+      "description": " <div class=\"\"><p>The next version of Hydrogen moves the commerce logic out of React Router into a framework-agnostic core. You can build storefronts in any JavaScript framework using Shopify's commerce primitives, and it ships with skills that coding agents use to scaffold a storefront for you. </p>\n<p>This is an early developer preview, and we're looking for your feedback as we keep building it out.</p>\n<p>Learn more about the <a href=\"https://github.com/Shopify/hydrogen/tree/preview\" target=\"_blank\" class=\"body-link\">Hydrogen Developer Preview on Github</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Hydrogen開発者プレビュー版",
+          "summarizedJa": "次期バージョンのHydrogenでは、コマース機能がReact Routerから分離され、フレームワーク非依存のコアとして提供されます。任意のJavaScriptフレームワークでShopifyのコマース機能を利用したストアフロント構築が可能になり、コーディングエージェントによる自動スキャフォールディング機能も搭載されます。現在は初期の開発者プレビュー段階で、フィードバックを募集中です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-06-18T00:30:20.073Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1043,
+            "output": 242
+          },
+          "estimatedCost": 0.006759
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-sidekick-app-extensions-app-store-requirements",
+      "source": "developer-changelog",
+      "title": "New App Store requirements for Sidekick app extensions",
+      "link": "https://shopify.dev/changelog/sidekick-app-extensions-app-store-requirements",
+      "publishedAt": "2026-06-17T15:45:00.000Z",
+      "collectedAt": "2026-06-18T00:25:58.796Z",
+      "category": [
+        "Shopify App Store",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>We’ve introduced two new Shopify <a href=\"https://shopify.dev/docs/apps/launch/shopify-app-store/app-store-requirements\" target=\"_blank\" class=\"body-link\">App Store requirements</a> for <a href=\"https://shopify.dev/docs/apps/build/sidekick\" target=\"_blank\" class=\"body-link\">Sidekick app extensions</a> to protect platform integrity, ensure merchant transparency, and preserve trust.</p>\n<p>Starting today, all <a href=\"https://shopify.dev/docs/apps/build/sidekick\" target=\"_blank\" class=\"body-link\">Sidekick app extensions</a> must comply with the following guidelines:</p>\n<ul>\n<li><a href=\"https://shopify.dev/docs/apps/launch/shopify-app-store/app-store-requirements#sidekick-app-extensions-must-align-with-stated-app-functionality\" target=\"_blank\" class=\"body-link\"><strong>2.2.8 Sidekick app extensions must align with stated app functionality</strong></a>: <a href=\"https://shopify.dev/docs/apps/build/sidekick\" target=\"_blank\" class=\"body-link\">Sidekick app extensions</a> must operate within the scope of your app’s core functionality. To ensure platform integrity and merchant transparency, your extension configuration, public <a href=\"https://shopify.dev/docs/apps/launch/shopify-app-store/best-practices#app-store-listing-content\" target=\"_blank\" class=\"body-link\">App Store listing</a>, and actual runtime execution must be materially consistent. Tools, intents, and actions exposed to Sidekick must be a logical representation of what your app does for the merchant on its own surface.</li>\n<li><a href=\"https://shopify.dev/docs/apps/launch/shopify-app-store/app-store-requirements#dont-display-promotions-advertisements-or-cross-sell-other-services-in-sidekick-app-extensions\" target=\"_blank\" class=\"body-link\"><strong>2.2.9 Don't display promotions, advertisements, or cross-sell other services in Sidekick app extensions</strong></a>: Don't use <a href=\"https://shopify.dev/docs/apps/build/sidekick\" target=\"_blank\" class=\"body-link\">Sidekick app extensions</a> to promote your app, promote related apps, or request reviews.</li>\n</ul>\n<h3>What this means for developers</h3>\n<p>If you’ve built (or plan to build) <a href=\"https://shopify.dev/docs/apps/build/sidekick\" target=\"_blank\" class=\"body-link\">Sidekick app extensions</a>, please review:</p>\n<ul>\n<li>Your extension’s TOML configuration</li>\n<li>Your extension’s runtime behavior in Sidekick</li>\n<li>Your public <a href=\"https://shopify.dev/docs/apps/launch/shopify-app-store/best-practices#app-store-listing-content\" target=\"_blank\" class=\"body-link\">App Store listing</a></li>\n</ul>\n<p>Make sure that:</p>\n<ul>\n<li>The tools, intents, and actions you expose in Sidekick stay within your app’s core functionality.</li>\n<li>Your extension’s configuration and behavior match how your app is described in its App Store listing.</li>\n<li>Your Sidekick app extension does not include promotions, advertisements, cross-sell content, or review requests.</li>\n</ul>\n<p>To learn more, review our <a href=\"https://shopify.dev/docs/apps/launch/shopify-app-store/app-store-requirements\" target=\"_blank\" class=\"body-link\">App Store requirements</a> and <a href=\"https://shopify.dev/docs/apps/build/sidekick\" target=\"_blank\" class=\"body-link\">Sidekick app extensions</a> documentation on <a href=\"https://shopify.dev/docs\" target=\"_blank\" class=\"body-link\">shopify.dev</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Sidekickアプリ拡張機能に関する新しいApp Storeの要件",
+          "summarizedJa": "Shopify App StoreにおいてSidekickアプリ拡張機能に関する2つの新しい要件が導入されました。拡張機能はアプリの中核機能の範囲内で動作する必要があり、またSidekick内でプロモーション、広告、他サービスのクロスセルを表示することが禁止されます。Sidekick拡張機能を開発している、または開発予定のパートナーは、TOML設定、実行時の動作、App Storeリスティングがこれらの要件に準拠しているか確認する必要があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-06-18T00:30:28.054Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1913,
+            "output": 285
+          },
+          "estimatedCost": 0.010014
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Sidekickアプリ拡張機能に関する新しいApp Store要件",
+          "summarizedJa": "Shopifyは、Sidekickアプリ拡張機能に対し、アプリの主要機能との整合性を義務付け、プロモーションや広告の表示を禁止する新しいApp Store要件を導入しました。これはプラットフォームの信頼性とマーチャントへの透明性を確保するためです。Sidekick拡張機能を開発するパートナーは、既存および新規の拡張機能がこれらのガイドラインに準拠しているか、設定と動作、App Store掲載情報を確認し、必要に応じて修正する必要があります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-06-18T00:30:35.557Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1508,
+            "output": 171
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-whatsapp-marketing-consent-now-available",
+      "source": "developer-changelog",
+      "title": "WhatsApp marketing consent now available in the Admin API and Customer Account API",
+      "link": "https://shopify.dev/changelog/whatsapp-marketing-consent-now-available",
+      "publishedAt": "2026-06-17T15:45:00.000Z",
+      "collectedAt": "2026-06-18T00:25:58.796Z",
+      "category": [
+        "Action Required",
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "Customer Account API",
+        "Webhook",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>WhatsApp marketing consent can now be managed through both the Customer Account and Admin APIs. Use the <code>customerWhatsAppMarketingConsentUpdate</code> mutation to update a customer’s WhatsApp marketing consent status for their default phone number. You can read the current WhatsApp marketing consent value from the <code>CustomerPhoneNumber</code> object via the <code>whatsAppMarketingConsent</code> field.</p>\n<p>For more details on managing WhatsApp marketing consent, see the <code>customerWhatsAppMarketingConsentUpdate</code> mutation in the <a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/mutations/customerWhatsAppMarketingConsentUpdate\" target=\"_blank\" class=\"body-link\">Admin API</a> and <a href=\"https://shopify.dev/docs/api/customer/unstable/mutations/customerWhatsAppMarketingConsentUpdate\" target=\"_blank\" class=\"body-link\">Customer Account API</a> references.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "WhatsAppマーケティング同意がAdmin APIおよびCustomer Account APIで利用可能に",
+          "summarizedJa": "顧客のWhatsAppマーケティング同意をAdmin APIとCustomer Account APIの両方で管理できるようになりました。新しい`customerWhatsAppMarketingConsentUpdate`ミューテーションを使用して、顧客のデフォルト電話番号に対するWhatsAppマーケティング同意状態を更新でき、`CustomerPhoneNumber`オブジェクトの`whatsAppMarketingConsent`フィールドから現在の同意状態を読み取ることができます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-06-18T00:30:39.796Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1177,
+            "output": 250
+          },
+          "estimatedCost": 0.007281
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-standard-storefront-events-and-actions",
+      "source": "developer-changelog",
+      "title": "Standard storefront events and actions",
+      "link": "https://shopify.dev/changelog/standard-storefront-events-and-actions",
+      "publishedAt": "2026-06-17T15:45:00.000Z",
+      "collectedAt": "2026-06-18T00:25:58.796Z",
+      "category": [
+        "Themes",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>Liquid storefronts now have a <a href=\"https://shopify.dev/docs/storefronts/themes/architecture/standard-events-and-actions\" target=\"_blank\" class=\"body-link\">standard communication layer</a> between themes and the code that runs on them. Themes emit events, while apps and agents call actions. </p>\n<p>Both work across all themes, and they ship together so you implement only once:</p>\n<ul>\n<li><a href=\"https://shopify.dev/docs/storefronts/themes/architecture/standard-events\" target=\"_blank\" class=\"body-link\">Events</a> are DOM events for commerce interactions: <code>shopify:product:view</code>, <code>shopify:cart:lines-update</code>, <code>shopify:search:update</code>, and others. Theme developers implement these in their theme code. App developers subscribe with plain JavaScript and get payload data directly, no follow-up API call needed.</li>\n<li><a href=\"https://shopify.dev/docs/storefronts/themes/architecture/standard-actions\" target=\"_blank\" class=\"body-link\">Actions</a> go the other direction. <code>Shopify.actions.updateCart</code>, <code>getCart</code>, and <code>openCart</code> are available on every Liquid storefront. Apps and agents call them to trigger theme behaviors. Out of the box, they hit the Storefront API and reload the page. Theme developers override them to skip the reload and handle the UI update directly. Actions also emit the corresponding event on success.</li>\n</ul>\n<p>Read the <a href=\"https://shopify.dev/docs/storefronts/themes/architecture/standard-events-and-actions\" target=\"_blank\" class=\"body-link\">documentation</a> for more details. </p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "標準ストアフロントイベントとアクション",
+          "summarizedJa": "Liquidストアフロントにテーマとアプリ間の標準通信レイヤーが追加されました。テーマは商品閲覧やカート更新などのイベントを発行し、アプリやエージェントはアクションを呼び出してテーマの動作をトリガーできます。これによりテーマ開発者とアプリ開発者は一度の実装で全テーマに対応でき、APIコール不要でデータ取得やページリロードなしのUI更新が可能になります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 5
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-06-18T00:30:45.538Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1338,
+            "output": 253
+          },
+          "estimatedCost": 0.007809
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-sidekick-app-extensions-available-today",
+      "source": "developer-changelog",
+      "title": "Sidekick app extensions available today",
+      "link": "https://shopify.dev/changelog/sidekick-app-extensions-available-today",
+      "publishedAt": "2026-06-17T15:45:00.000Z",
+      "collectedAt": "2026-06-18T00:25:58.796Z",
+      "category": [
+        "Platform",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>All app developers can now build Sidekick app extensions. These extensions allow your app to integrate with Sidekick, giving Sidekick the ability to access data or take action within your apps.</p>\n<h3>What's available today</h3>\n<ul>\n<li><strong><a href=\"https://shopify.dev/docs/apps/build/sidekick/build-app-data\" target=\"_blank\" class=\"body-link\">App data</a></strong>: Make your app's content searchable within Sidekick. Merchants can ask questions like &quot;Find my best-performing email subject lines,&quot; and Sidekick will display relevant campaigns from your app along with key metrics.</li>\n<li><strong><a href=\"https://shopify.dev/docs/apps/build/sidekick/build-app-actions\" target=\"_blank\" class=\"body-link\">App actions</a></strong>: Allow merchants to take action within your app directly from Sidekick. Sidekick will navigate to the appropriate page in your app, pre-filled with relevant context, allowing merchants to confirm actions before any changes are made.</li>\n</ul>\n<p>Eighteen launch partners, including Klaviyo, Loop, Smile, Judge.me, Checkout Links, and Matrixify, are already live as part of our developer early access program.</p>\n<h3>Learn more</h3>\n<p>Shopify CLI simplifies the process by scaffolding the entire extension setup, enabling you to deploy a functional extension in minutes. To get started, refer to the <a href=\"https://shopify.dev/docs/apps/build/sidekick\" target=\"_blank\" class=\"body-link\">Sidekick app extensions documentation</a>.</p>\n<h3>Send us feedback</h3>\n<p>We invite you to share your feedback, comments, and questions in the <a href=\"https://community.shopify.dev/c/extensions/5\" target=\"_blank\" class=\"body-link\">Shopify Developer Community</a>. Your insights are invaluable to us, and we look forward to hearing from you.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Sidekickアプリエクステンションが本日より利用可能に",
+          "summarizedJa": "すべてのアプリ開発者がSidekickアプリエクステンションを構築できるようになりました。この機能により、アプリのデータをSidekick内で検索可能にしたり、マーチャントがSidekickから直接アプリ内でアクションを実行できるようになります。KlaviyoやLoopなど18社のローンチパートナーがすでに稼働しており、Shopify CLIを使用して数分で実装可能です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 2,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-06-18T00:30:50.120Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1407,
+            "output": 245
+          },
+          "estimatedCost": 0.007896
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-built-for-shopify-requirements-for-returns-and-exchanges-and-subscription-apps",
+      "source": "developer-changelog",
+      "title": "Built for Shopify requirements for Returns and exchanges apps and Subscription apps (effective December 1, 2026)",
+      "link": "https://shopify.dev/changelog/built-for-shopify-requirements-for-returns-and-exchanges-and-subscription-apps",
+      "publishedAt": "2026-06-17T15:45:00.000Z",
+      "collectedAt": "2026-06-18T00:25:58.796Z",
+      "category": [
+        "Action Required",
+        "Built for Shopify",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p><strong>Effective December 1, 2026</strong>, Returns and exchanges apps and Subscription apps that provide buyer-facing self-service experiences must authenticate customers using the Customer Account API.</p>\n<p>Apps that don't meet this requirement by the deadline are at risk of <a href=\"https://shopify.dev/docs/apps/launch/built-for-shopify/regain-lost-status\" target=\"_blank\" class=\"body-link\">losing Built for Shopify status</a>.</p>\n<h3>What's changing</h3>\n<p><a href=\"https://shopify.dev/docs/apps/launch/built-for-shopify/requirements#returns-use-customer-account-api\" target=\"_blank\" class=\"body-link\">Returns and exchanges</a> and <a href=\"https://shopify.dev/docs/apps/launch/built-for-shopify/requirements#subscriptions-use-customer-account-api\" target=\"_blank\" class=\"body-link\">Subscription</a> apps with buyer-facing self-service experiences must use the Customer Account API for customer authentication. This gives buyers and merchants a single, secure sign-in across their storefront, apps, and customer accounts.</p>\n<h3>Who this affects</h3>\n<p>Your app is affected if it falls into either category and offers buyers a self-service experience (for example, managing returns, tracking exchanges, or updating a subscription).</p>\n<h3>What you need to do</h3>\n<p>Integrate the Customer Account API for customer authentication in your buyer-facing flows. Review the updated <a href=\"https://shopify.dev/docs/apps/launch/built-for-shopify/requirements\" target=\"_blank\" class=\"body-link\">Built for Shopify requirements</a> for full details.</p>\n<h3>Deadline</h3>\n<p>December 1, 2026.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "返品・交換アプリとサブスクリプションアプリのBuilt for Shopify要件（2026年12月1日施行）",
+          "summarizedJa": "2026年12月1日より、返品・交換アプリおよびサブスクリプションアプリで顧客向けセルフサービス機能を提供する場合、Customer Account APIを使用した顧客認証が必須となります。この要件を満たさない場合、Built for Shopifyステータスを失うリスクがあります。対象アプリの開発者は期限までにCustomer Account APIの統合対応が必要です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-06-18T00:30:54.572Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1388,
+            "output": 250
+          },
+          "estimatedCost": 0.007914
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-label-purchase-mutation",
+      "source": "developer-changelog",
+      "title": "Buy Shipping Labels with the GraphQL Admin API",
+      "link": "https://shopify.dev/changelog/label-purchase-mutation",
+      "publishedAt": "2026-06-17T15:45:00.000Z",
+      "collectedAt": "2026-06-18T00:25:58.796Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><h2>New <code>shippingLabelPurchase</code> mutation in the GraphQL Admin API</h2>\n<p>The GraphQL Admin API now includes the <code>shippingLabelPurchase</code> mutation, which lets apps purchase Shopify Shipping labels for eligible fulfillment orders.</p>\n<p>Apps can provide the fulfillment order, shipping date and time, package details, total weight, customer notification preference, and optional preferred carrier/service selection. If a preferred rate isn't provided, Shopify selects the cheapest available rate.</p>\n<p>Label purchase runs asynchronously. The mutation returns a <code>ShippingLabelPurchaseResult</code>, which apps can poll to track the request status:</p>\n<ul>\n<li><code>PENDING_PURCHASE</code>: the purchase is still processing.</li>\n<li><code>PURCHASED</code>: the label was purchased successfully, and the purchased labels are available on <code>shippingLabels</code>.</li>\n<li><code>PURCHASE_FAILED</code>: the purchase failed, and details are available on <code>errors</code>.</li>\n</ul>\n<h2>Requirements</h2>\n<p>The mutation requires the <code>write_orders</code> access scope and a user with the <code>buy_shipping_labels</code> permission. Shops must also accept the Shopify Shipping terms of service before purchasing labels through the API.</p>\n<h2>Related documentation</h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/mutations/shippingLabelPurchase\" target=\"_blank\" class=\"body-link\"><code>shippingLabelPurchase</code> mutation</a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/input-objects/ShippingLabelPurchaseInput\" target=\"_blank\" class=\"body-link\"><code>ShippingLabelPurchaseInput</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/objects/ShippingLabelPurchaseResult\" target=\"_blank\" class=\"body-link\"><code>ShippingLabelPurchaseResult</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/enums/ShippingLabelPurchaseResultStatus\" target=\"_blank\" class=\"body-link\"><code>ShippingLabelPurchaseResultStatus</code></a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "GraphQL Admin APIで配送ラベルを購入可能に",
+          "summarizedJa": "GraphQL Admin APIに新しい`shippingLabelPurchase`ミューテーションが追加され、アプリからShopify Shippingの配送ラベルを購入できるようになりました。フルフィルメント注文に対して、パッケージ詳細や配送日時を指定してラベルを非同期で購入でき、キャリア指定がない場合は最安値のレートが自動選択されます。利用には`write_orders`スコープと`buy_shipping_labels`権限、およびShopify Shipping利用規約への同意が必要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 2,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-06-18T00:31:00.910Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1552,
+            "output": 268
+          },
+          "estimatedCost": 0.008676
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-reduced-bot-noise-in-abandoned-checkouts",
       "source": "shopify-changelog",
