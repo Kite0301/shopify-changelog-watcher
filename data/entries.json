@@ -1,6 +1,107 @@
 {
-  "lastUpdated": "2026-06-18T00:25:59.649Z",
+  "lastUpdated": "2026-06-19T00:28:59.123Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-flow-action-extensions-now-support-relative-paths-for-endpoint-urls",
+      "source": "developer-changelog",
+      "title": "Flow action extensions now support relative paths for endpoint URLs ",
+      "link": "https://shopify.dev/changelog/flow-action-extensions-now-support-relative-paths-for-endpoint-urls",
+      "publishedAt": "2026-06-18T16:00:00.000Z",
+      "collectedAt": "2026-06-19T00:28:58.320Z",
+      "category": [
+        "Tools",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>You can now use relative paths for endpoint URLs in your Flow action <a href=\"https://shopify.dev/docs/apps/build/flow/actions/reference#toml\" target=\"_blank\" class=\"body-link\">extension configuration</a>. The <code>runtime_url</code>, <code>validation_url</code>, <code>config_page_url</code>, and <code>config_page_preview_url</code> properties accept either an absolute HTTPS URL, such as <code>https://example.com/api/flow/actions/place-bid</code>, or a relative path that starts with a single <code>/</code>, such as <code>/api/flow/actions/place-bid</code>.</p>\n<p>When you use a relative path, Shopify CLI resolves it against your development tunnel URL while <code>shopify app dev</code> is running, and against your app’s <code>application_url</code> after you deploy. This means you no longer need to update your <code>runtime_url</code> each time your development tunnel URL changes, making it easier to point Flow actions at routes hosted by your own app.</p>\n<p>Use an absolute HTTPS URL when your endpoint is hosted on a different domain or service than your app, or when you want Flow to call the same URL in every environment. Protocol-relative URLs (such as <code>//example.com/api/execute</code>) aren’t supported, and your app configuration must include an HTTPS <code>application_url</code> before you deploy with relative paths.</p>\n<p>For more details, see the Flow action <a href=\"https://shopify.dev/docs/apps/build/flow/actions/reference\" target=\"_blank\" class=\"body-link\">configuration reference</a> and <a href=\"https://shopify.dev/docs/apps/build/flow/actions/create\" target=\"_blank\" class=\"body-link\">Create a Flow action</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "FlowアクションエクステンションがエンドポイントURLの相対パスに対応",
+          "summarizedJa": "Flowアクションの拡張機能設定で、エンドポイントURLに相対パスが使用できるようになりました。開発時のトンネルURLが変更されるたびにruntime_urlを更新する必要がなくなり、Shopify CLIが自動的に開発環境では開発トンネルURL、デプロイ後はアプリのapplication_URLに対して相対パスを解決します。これにより、Flowアクションの開発がより効率的になります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-06-19T00:29:05.438Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1369,
+            "output": 251
+          },
+          "estimatedCost": 0.007871999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Flowアクション拡張機能、エンドポイントURLでの相対パスに対応",
+          "summarizedJa": "Shopify Flowアクション拡張機能のエンドポイントURL（runtime_urlなど）で、絶対パスに加えて相対パスが利用可能になりました。これにより、開発中のトンネルURL変更時にURLを更新する手間が省け、アプリ内でのFlowアクションのルーティング設定が簡素化されます。特に開発者にとって、Shopify Flowアクションを自社アプリに連携させる際の利便性が向上するアップデートです。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-06-19T00:29:11.775Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1048,
+            "output": 163
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-self-serve-returns-now-support-cancellations",
+      "source": "shopify-changelog",
+      "title": "Self-serve returns now support cancellations",
+      "link": "https://changelog.shopify.com/posts/self-serve-returns-now-support-cancellations",
+      "publishedAt": "2026-06-18T13:30:00.000Z",
+      "collectedAt": "2026-06-19T00:28:59.108Z",
+      "category": [
+        "Customer-account"
+      ],
+      "description": "\n        <p>Buyers can now request order cancellations through self-serve, in addition to requesting returns. You can set cancellation rules alongside your return rules.</p>\n\n<p>Both return and cancellation rules are configurable per market. A default policy applies storewide, with the option to add market-specific rules that override it for individual markets.</p>\n\n<p>This enables merchants selling in the EU to offer a withdrawal policy—from order placement until 14 days after the last item is delivered—without affecting rules elsewhere. The return window can also be extended to avoid ending on a weekend or holiday.</p>\n\n<p>Learn more about <a href=\"https://help.shopify.com/en/manual/fulfillment/managing-orders/returns/self-serve-returns/setup\">self-serve cancellations</a> and how they support the <a href=\"https://help.shopify.com/en/manual/fulfillment/managing-orders/returns/return-rules#eu-right-of-withdrawal\">EU right to withdraw regulation</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "セルフサービス返品機能でキャンセルリクエストに対応",
+          "summarizedJa": "購入者が返品に加えて注文キャンセルもセルフサービスで依頼できるようになりました。キャンセルルールは返品ルールと同様にマーケットごとに設定可能で、デフォルトポリシーに加えて特定マーケット向けのルールを上書き設定できます。EU市場向けには注文から配送後14日間の撤回権ポリシーに対応し、他地域に影響を与えずに設定できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-06-19T00:29:16.901Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1145,
+            "output": 252
+          },
+          "estimatedCost": 0.007214999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "セルフサービス返品機能が注文キャンセルに対応",
+          "summarizedJa": "購入者がセルフサービスで返品だけでなく、注文キャンセルもリクエストできるようになりました。マーチャントは返品ルールと同様にキャンセルルールを設定でき、市場ごとに異なるポリシーを適用可能です。これにより、EUの撤回権のような特定の市場要件にも柔軟に対応し、顧客対応の効率化が期待されます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-06-19T00:29:23.381Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 849,
+            "output": 137
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-updated-disclosure-for-subscription-purchases-on-checkout",
       "source": "shopify-changelog",
