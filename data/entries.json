@@ -1,6 +1,60 @@
 {
-  "lastUpdated": "2026-06-19T00:28:59.123Z",
+  "lastUpdated": "2026-06-20T00:21:30.608Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-removal-of-itemnotstockedatlocation-error",
+      "source": "developer-changelog",
+      "title": "Removal of ITEM_NOT_STOCKED_AT_LOCATION error",
+      "link": "https://shopify.dev/changelog/removal-of-itemnotstockedatlocation-error",
+      "publishedAt": "2026-06-19T16:00:00.000Z",
+      "collectedAt": "2026-06-20T00:21:29.497Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Breaking API Change",
+        "Admin GraphQL API",
+        "2026-10"
+      ],
+      "description": " <div class=\"\"><p>The <code>ITEM_NOT_STOCKED_AT_LOCATION</code> error will be removed from <code>InventoryAdjustQuantities</code>, <code>InventoryMoveQuantities</code>, <code>InventorySetOnHandQuantities</code>, and <code>InventorySetQuantitiesUserErrorCode</code> as of API version 2026-10.</p>\n<p>Following the changes described <a href=\"https://changelog.shopify.com/posts/manage-inventory-at-locations-without-activating-them-for-fulfillment\" target=\"_blank\" class=\"body-link\">here</a>, inventory quantities can now be adjusted at any location. As a result, the condition that previously triggered <code>ITEM_NOT_STOCKED_AT_LOCATION</code> can no longer occur, and this error is no longer emitted.</p>\n<p>This update removes an obsolete error code. If your app currently handles <code>ITEM_NOT_STOCKED_AT_LOCATION</code>, you can safely remove any logic that depends on this specific error.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "ITEM_NOT_STOCKED_AT_LOCATIONエラーの削除",
+          "summarizedJa": "APIバージョン2026-10より、在庫調整関連のGraphQL APIから`ITEM_NOT_STOCKED_AT_LOCATION`エラーが削除されます。在庫管理の仕様変更により、フルフィルメントに有効化していないロケーションでも在庫数量を調整できるようになったため、このエラーが発生しなくなりました。このエラーコードをハンドリングしているアプリは、該当するロジックを安全に削除できます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-06-20T00:21:36.290Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1196,
+            "output": 249
+          },
+          "estimatedCost": 0.007323
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "「ITEM_NOT_STOCKED_AT_LOCATION」エラーの廃止",
+          "summarizedJa": "Shopify APIバージョン2026-10より、在庫関連のGraphQLミューテーションで発生していた「ITEM_NOT_STOCKED_AT_LOCATION」エラーが廃止されます。これは、どのロケーションでも在庫数量の調整が可能になったため、このエラーが発生する状況がなくなったためです。このエラーを処理するロジックを持つShopifyパートナーのアプリは、該当コードを安全に削除でき、マーチャントはより柔軟な在庫管理の恩恵を受けられます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-06-20T00:21:44.323Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 870,
+            "output": 184
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-flow-action-extensions-now-support-relative-paths-for-endpoint-urls",
       "source": "developer-changelog",
