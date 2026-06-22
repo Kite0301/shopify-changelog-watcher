@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20T00:21:30.608Z",
+  "lastUpdated": "2026-06-22T00:22:47.356Z",
   "entries": [
     {
       "id": "developer-changelog-changelog-removal-of-itemnotstockedatlocation-error",
@@ -1513,6 +1513,61 @@
             "output": 268
           },
           "estimatedCost": 0.008676
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-new-collection-model-and-apis-now-available",
+      "source": "developer-changelog",
+      "title": "New Collection model and APIs now available",
+      "link": "https://shopify.dev/changelog/new-collection-model-and-apis-now-available",
+      "publishedAt": "2026-06-17T13:00:00.000Z",
+      "collectedAt": "2026-06-22T00:22:46.290Z",
+      "category": [
+        "Action Required",
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "Functions",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>The 2026-07 release replaces a collection’s single <code>ruleSet</code> with a multi-source model in the GraphQL Admin API. Each collection now has one or more <code>CollectionSource</code> objects that define typed inclusion and exclusion conditions, plus manual selections. Shopify Functions also gain variant-level collection membership fields on the <code>ProductVariant</code> type.</p>\n<p>In API version 2026-07 and later, collections that use the new sources model are returned from <code>collections</code> queries, <code>collection(id:)</code> lookups, and other collection-returning fields. In earlier API versions, those same collections using new features are filtered out because the legacy <code>ruleSet</code> shape can’t represent them. Migrate to the 2026-07 API version to see and manage all collections in a shop.</p>\n<p>These changes are non-breaking: deprecated members remain queryable in 2026-07 so you can migrate incrementally.</p>\n<h2>What’s new in the GraphQL Admin API</h2>\n<h3>Collection sources and conditions</h3>\n<p>A new <code>Collection.sources</code> field returns one or more <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/interfaces/CollectionSource\" target=\"_blank\" class=\"body-link\">sources</a> that back the collection. Two concrete types implement the new <code>CollectionSource</code> interface:</p>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/objects/CollectionConditionsSource\" target=\"_blank\" class=\"body-link\"><code>CollectionConditionsSource</code></a>: includes products through typed inclusion <code>conditions</code> plus manual <code>selections</code>, and can optionally exclude products through exclusion <code>conditions</code>. Each source must target either <code>PRODUCTS</code> or <code>VARIANTS</code>, set by the new <code>CollectionSourceTargetType</code> enum.</li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/CollectionSubCollectionsSource\" target=\"_blank\" class=\"body-link\"><code>CollectionSubCollectionsSource</code></a>: pulls membership from one or more referenced collections.</li>\n</ul>\n<p>Conditions are strongly typed: each condition uses a concrete type with a matching input type. Exclusion conditions include a subset of inclusion conditions or use a collection-based exclusion condition to target specific collections. Matching behavior for a set of conditions is controlled by the new <code>CollectionConditionMatchType</code> enum: <code>ANY</code> means at least one condition must match; <code>ALL</code> means every condition must match.</p>\n<p>To define sources on a collection, <code>collectionCreate</code> and <code>collectionUpdate</code> now accept a <code>collection</code> argument typed as the new <code>CollectionCreateInput</code> or <code>CollectionUpdateInput</code>. <code>CollectionUpdateInput</code> exposes <code>sourcesToCreate</code>, <code>sourcesToUpdate</code>, and <code>sourcesToDelete</code> so you can update sources incrementally without replacing the entire collection definition.</p>\n<h3>Shareable app collection sources</h3>\n<p>A <code>CollectionConditionsSource</code> whose <code>shareable</code> field is <code>true</code> is owned by the calling app and can be linked to many of the shop’s collections. Use three new mutations to manage these shareable sources, and two new top-level queries to discover them:</p>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/mutations/collectionConditionsSourceCreate\" target=\"_blank\" class=\"body-link\"><code>collectionConditionsSourceCreate</code></a>, <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/mutations/collectionConditionsSourceUpdate\" target=\"_blank\" class=\"body-link\"><code>collectionConditionsSourceUpdate</code></a>, and <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/mutations/collectionConditionsSourceDelete\" target=\"_blank\" class=\"body-link\"><code>collectionConditionsSourceDelete</code></a> manage an app's own shareable sources.</li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/queries/collectionConditionsSources\" target=\"_blank\" class=\"body-link\"><code>collectionConditionsSources(appId:)</code></a> returns the shareable sources owned by a specific app.</li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/queries/collectionConditionsSourcesByApp\" target=\"_blank\" class=\"body-link\"><code>collectionConditionsSourcesByApp</code></a> paginates the apps that publish shareable sources for the shop.</li>\n</ul>\n<p>To attach a shareable source to a specific collection, use <code>CollectionShareableSourceInput { sourceId }</code> inside the <code>sources</code> or <code>sourcesToCreate</code> field of the collection’s create or update input. Only the owning app can update or delete its shareable sources. Deleting a shareable source automatically detaches it from every collection that links to it.</p>\n<p>Use shareable sources only when the same logic should be reused across multiple collections. If not, use collection mutations to create, update, or delete sources.</p>\n<h3>Other additions</h3>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/Collection#field-subcollectioneligibility\" target=\"_blank\" class=\"body-link\"><code>Collection.subCollectionEligibility</code></a> returns separate <code>inclusion</code> and <code>exclusion</code> eligibility states for using the collection as a sub-collection target, with a stable <code>SubCollectionIneligibleReason</code> enum.</li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/queries/collectionConditionMetafieldDefinitions\" target=\"_blank\" class=\"body-link\"><code>collectionConditionMetafieldDefinitions</code></a> returns the metafield definitions that can be used in inclusion conditions, scoped to the calling app's access.</li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/input-objects/CollectionSourceExclusionConditionUpdateInput\" target=\"_blank\" class=\"body-link\"><code>CollectionSourceExclusionConditionUpdateInput</code></a> gains a <code>collection</code> field, so you can update a collection-based exclusion condition in place instead of deleting and recreating it.</li>\n</ul>\n<h2>Variant-level collection membership in Shopify Functions</h2>\n<p>The <code>ProductVariant</code>type in Shopify Functions gains two new fields:</p>\n<ul>\n<li><code>inAnyCollection(ids: [ID!]!): Boolean!</code> returns <code>true</code> when the variant is in any of the specified collections.</li>\n<li><code>inCollections(ids: [ID!]!): [CollectionMembership!]!</code> returns per-collection membership for the variant.</li>\n</ul>\n<p>A variant is a member of a collection when the variant itself is included in that collection. Existing <code>Product.inAnyCollection</code> and <code>Product.inCollections</code> continue to return <code>true</code> when the full product is in any of the specified collections, regardless of variant-level membership.</p>\n<h2>Deprecations</h2>\n<ul>\n<li><code>Collection.ruleSet</code> is deprecated in favor of <code>Collection.sources</code>. Each <code>ruleSet</code> rule has an equivalent inclusion condition (for example, a tag rule maps to <code>CollectionSourceInclusionConditionProductTag</code>). Sub-collections, exclusion conditions, and multiple sources aren’t supported in the legacy shape.</li>\n<li><code>collectionCreate(input:)</code> and <code>collectionUpdate(input:)</code> are deprecated in favor of <code>collectionCreate(collection:)</code> and <code>collectionUpdate(collection:)</code>. The legacy <code>input</code> argument continues to accept <code>CollectionInput</code> (with its <code>ruleSet</code> field), but only the new <code>collection</code> argument can define <code>sources</code>. If both arguments are supplied, the <code>collection</code> argument takes precedence.</li>\n<li>If your app reads <code>Collection.ruleSet</code> or writes <code>input.ruleSet</code>, switch to <code>Collection.sources</code> and the new <code>collection</code> argument. The legacy shape can’t express multiple sources, exclusion conditions, or shareable sources, and collections that use those features are filtered out of pre-2026-07 query results.</li>\n<li>If your Function needs variant-level collection membership, call <code>inAnyCollection</code> or <code>inCollections</code> on <code>ProductVariant</code>. The existing <code>Product.inAnyCollection</code> and <code>Product.inCollections</code> fields continue to return product-level membership.</li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "新しいコレクションモデルとAPIが利用可能に",
+          "summarizedJa": "2026-07 APIバージョンにて、コレクションの定義方法が単一のruleSetから複数のソースを持つマルチソースモデルに刷新されました。これにより、除外条件、バリアントレベルのコレクション、再利用可能なアプリソースなど、より柔軟なコレクション管理が可能になります。旧バージョンのAPIでは新機能を使ったコレクションが表示されないため、すべてのコレクションを管理するには2026-07への移行が必要です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 5
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-06-22T00:22:53.939Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 3283,
+            "output": 263
+          },
+          "estimatedCost": 0.013794
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "新しいコレクションモデルとAPIが利用可能に",
+          "summarizedJa": "Shopifyのコレクション管理が、より柔軟なマルチソースモデルに刷新されます。これにより、コレクションの包含・除外条件や、他のコレクションからのメンバーシップ定義が強化され、バリアントレベルでのコレクションメンバーシップチェックも可能になります。既存のAPIは非推奨となりますが、段階的な移行が可能です。日本のマーチャントはより高度なコレクション設定が可能になり、パートナーはAPIのアップデート対応が必要となります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 5
+          },
+          "totalScore": 18,
+          "analyzedAt": "2026-06-22T00:23:01.657Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 2575,
+            "output": 161
+          },
+          "estimatedCost": 0
         }
       }
     },
