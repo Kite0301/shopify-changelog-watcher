@@ -1,6 +1,38 @@
 {
-  "lastUpdated": "2026-06-22T00:22:47.356Z",
+  "lastUpdated": "2026-06-23T00:22:22.957Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-purchase-orders-now-create-transfers-to-move-inventory",
+      "source": "shopify-changelog",
+      "title": "Purchase orders now create transfers to move inventory",
+      "link": "https://changelog.shopify.com/posts/purchase-orders-now-create-transfers-to-move-inventory",
+      "publishedAt": "2026-06-22T16:00:00.000Z",
+      "collectedAt": "2026-06-23T00:22:22.941Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>Purchase orders record what you ordered from a supplier and what it cost. Transfers record inventory movement. The two are now connected. When you’re ready to receive a purchase order, it now creates a transfer. </p>\n\n<p>What this means: </p>\n\n<ul>\n<li><strong>Receive in admin or POS</strong> - Incoming inventory can be received from either, so it can be done wherever the shipment arrives.<br></li>\n<li><strong>Partial deliveries</strong> - A single transfer can have multiple shipments, so shipments that arrive separately, are tracked separately. You can view what's been received and what’s outstanding.<br></li>\n<li><strong>Linked records</strong> - Each transfer stays linked to its purchase order, so what was ordered, what arrived and what it cost, are all connected.<br></li>\n<li><strong>CSV Import</strong> - Import purchase order line items using a CSV<br></li>\n<li><strong>Autofill Information</strong> - Purchase orders now auto-populate with previous purchase prices or the cost per item from the product page.</li>\n</ul>\n\n<p>You can learn more about this change in the <a href=\"https://help.shopify.com/en/manual/products/inventory/purchase-orders/creating-inventory-transfers\">Shopify Help Center</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "発注書から在庫転送が自動作成されるように",
+          "summarizedJa": "発注書(Purchase Order)を受領する際に、在庫転送(Transfer)が自動的に作成されるようになりました。これにより、管理画面またはPOSのどちらからでも入荷処理が可能になり、複数回に分かれた納品の追跡、発注内容と入荷実績の紐付け、CSV一括インポート、過去の仕入価格の自動入力などの機能が利用できるようになります。在庫管理業務の効率化と正確性の向上が期待できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-06-23T00:22:29.069Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1221,
+            "output": 257
+          },
+          "estimatedCost": 0.007518
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-removal-of-itemnotstockedatlocation-error",
       "source": "developer-changelog",
