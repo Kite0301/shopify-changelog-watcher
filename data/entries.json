@@ -1,6 +1,108 @@
 {
-  "lastUpdated": "2026-06-24T00:17:23.859Z",
+  "lastUpdated": "2026-06-25T00:22:16.551Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-improvement-to-draft-order-custom-discount-currency",
+      "source": "shopify-changelog",
+      "title": "Custom draft order line item discounts now use presentment currency",
+      "link": "https://changelog.shopify.com/posts/improvement-to-draft-order-custom-discount-currency",
+      "publishedAt": "2026-06-24T16:00:00.000Z",
+      "collectedAt": "2026-06-25T00:22:16.537Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>Custom discounts added to draft order line items now use the draft order’s presentment currency instead of the shop currency.</p>\n\n<p>This makes discount amounts easier to understand in draft order flows where the customer is checking out in a different currency than the shop’s default currency.</p>\n\n<p>Learn more about custom discounts for draft orders in the <a href=\"https://help.shopify.com/manual/fulfillment/managing-orders/create-orders/discounts#apply-a-discount-to-the-entire-order\">Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "下書き注文のカスタム行項目割引が提示通貨を使用するように改善",
+          "summarizedJa": "下書き注文の行項目に追加されるカスタム割引が、ショップのデフォルト通貨ではなく、注文の提示通貨（顧客が見る通貨）で表示されるようになりました。これにより、ショップのデフォルト通貨と異なる通貨でチェックアウトする顧客に対して、割引金額がより分かりやすくなります。多通貨対応を行っているストアでの下書き注文作成時のユーザビリティが向上します。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-06-25T00:22:22.516Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1037,
+            "output": 268
+          },
+          "estimatedCost": 0.007131
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "下書き注文のカスタム割引が提示通貨を使用するように変更",
+          "summarizedJa": "下書き注文の各商品に適用されるカスタム割引が、ストアのデフォルト通貨ではなく、下書き注文の提示通貨（顧客が選択した通貨）を使用するようになります。これにより、顧客がストアのデフォルト通貨とは異なる通貨でチェックアウトする場合でも、割引額がより分かりやすくなり、国際販売を行うマーチャントにとって利便性が向上します。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-06-25T00:22:27.878Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 756,
+            "output": 151
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-storefront-mcp-cart-tools-are-being-deprecated-in-favour-of-ucp-cart-mcp",
+      "source": "developer-changelog",
+      "title": "Storefront MCP cart tools are being deprecated in favour of UCP Cart MCP",
+      "link": "https://shopify.dev/changelog/storefront-mcp-cart-tools-are-being-deprecated-in-favour-of-ucp-cart-mcp",
+      "publishedAt": "2026-06-24T16:00:00.000Z",
+      "collectedAt": "2026-06-25T00:22:15.291Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Deprecation Announcement"
+      ],
+      "description": " <div class=\"\"><h3>What's changing</h3>\n<p>The cart tools on the Storefront MCP server are being deprecated in\nfavour of the UCP-conforming Cart MCP tools:</p>\n<ul>\n<li><code>get_cart</code> and <code>update_cart</code> on <code>https://{shop}.myshopify.com/api/mcp</code> are deprecated.</li>\n</ul>\n<p>Cart MCP implements the UCP cart capability (<code>dev.ucp.shopping.cart</code>, version\n<code>2026-04-08</code>) and exposes the following tools at the\n<code>https://{shop-domain}/api/ucp/mcp</code> endpoint:</p>\n<ul>\n<li><code>create_cart</code>: Create a new cart with line items and optional buyer context.</li>\n<li><code>get_cart</code>: Retrieve the current state of a cart.</li>\n<li><code>update_cart</code>: Replace the cart's contents.</li>\n<li><code>cancel_cart</code>: Cancel a cart.</li>\n</ul>\n<p>The deprecated tools will be maintained until August 31, 2026, but all\ndocumentation will refer to the Cart MCP tools.</p>\n<h3>What you should do</h3>\n<p>If you're building with the Storefront MCP cart tools:</p>\n<ul>\n<li><p>Migrate <code>get_cart</code> and <code>update_cart</code> calls to the Cart MCP tools, and update\nendpoints to use <code>https://{shop-domain}/api/ucp/mcp</code>.</p>\n</li>\n<li><p>Include a <code>meta</code> object carrying <code>ucp-agent.profile</code> in every request, and a\n<code>meta[&quot;idempotency-key&quot;]</code> (UUID) for <code>cancel_cart</code>.</p>\n</li>\n<li><p>Note that <code>update_cart</code> uses PUT semantics: each request replaces the cart's\nfull state, so send the complete <code>line_items</code> array on every update rather\nthan patching individual fields.</p>\n</li>\n<li><p>Consult the updated request and response schemas for all cart tools and\nupdate your app to match.</p>\n<p>  See the documentation for Cart MCP (<a href=\"https://shopify.dev/docs/agents/carts-and-checkout/cart-mcp\" target=\"_blank\" class=\"body-link\">https://shopify.dev/docs/agents/carts-and-checkout/cart-mcp</a>) for more details.</p>\n</li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Storefront MCP のカートツールが非推奨化され、UCP Cart MCP への移行が必要に",
+          "summarizedJa": "Storefront MCP サーバーの `get_cart` と `update_cart` ツールが非推奨となり、UCP に準拠した Cart MCP ツールへの移行が必要になります。新しいエンドポイント（`https://{shop-domain}/api/ucp/mcp`）では、`create_cart`、`get_cart`、`update_cart`、`cancel_cart` の4つのツールが提供されます。非推奨ツールは2026年8月31日まで維持されますが、早急な移行対応が推奨されます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-06-25T00:22:33.094Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1616,
+            "output": 271
+          },
+          "estimatedCost": 0.008912999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Storefront MCPカートツール非推奨化とUCP Cart MCPへの移行",
+          "summarizedJa": "Shopifyは、既存のStorefront MCPサーバー上のカートツール（`get_cart`, `update_cart`）を非推奨とし、2026年8月31日までにUCP準拠の新しいCart MCPツールへの移行を求めています。この変更により、APIエンドポイントが更新され、`update_cart`の動作が全件置換方式になるなど、開発者は既存のカスタムストアフロントやアプリのコードを大幅に更新する必要があります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 5
+          },
+          "totalScore": 17,
+          "analyzedAt": "2026-06-25T00:22:39.709Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1213,
+            "output": 180
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-b2b-discounts-are-now-available-by-default-on-new-stores",
       "source": "shopify-changelog",
