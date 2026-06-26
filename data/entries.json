@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-25T00:22:16.551Z",
+  "lastUpdated": "2026-06-26T00:23:17.051Z",
   "entries": [
     {
       "id": "shopify-changelog-posts-improvement-to-draft-order-custom-discount-currency",
@@ -3541,6 +3541,59 @@
           "tokenUsage": {
             "input": 876,
             "output": 157
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-new-checkouttoken-field-added-to-the-order-object",
+      "source": "developer-changelog",
+      "title": " New `checkoutToken` field added to the `Order` object",
+      "link": "https://shopify.dev/changelog/new-checkouttoken-field-added-to-the-order-object",
+      "publishedAt": "2026-05-15T16:00:00.000Z",
+      "collectedAt": "2026-06-26T00:23:16.095Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>The <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/Order#field-Order.fields.checkoutToken\" target=\"_blank\" class=\"body-link\"><code>checkoutToken</code></a> field is now available on the GraphQL Admin API's <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/Order\" target=\"_blank\" class=\"body-link\"><code>Order</code></a> object. This field returns the token associated with the checkout that was used to create the order, matching the existing <code>checkout_token</code> field in the REST Admin API.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "OrderオブジェクトにcheckoutTokenフィールドが追加されました",
+          "summarizedJa": "GraphQL Admin APIのOrderオブジェクトに、新しくcheckoutTokenフィールドが追加されました。このフィールドは注文作成時に使用されたチェックアウトに関連するトークンを返すもので、REST Admin APIの既存のcheckout_tokenフィールドと同じ値を取得できます。GraphQL APIとREST APIの機能の整合性が向上しました。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-06-26T00:23:22.045Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1092,
+            "output": 220
+          },
+          "estimatedCost": 0.006576
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Orderオブジェクトに新しい`checkoutToken`フィールドが追加",
+          "summarizedJa": "ShopifyのGraphQL Admin APIの`Order`オブジェクトに、新たに`checkoutToken`フィールドが追加されました。このフィールドは、注文が作成された際のチェックアウトに関連付けられたトークンを返します。これにより、既存のREST Admin APIの`checkout_token`と同様の情報をGraphQL経由で取得できるようになり、開発者は注文とチェックアウトの関連付けをより効率的に追跡・管理できるようになります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-06-26T00:23:28.094Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 802,
+            "output": 162
           },
           "estimatedCost": 0
         }
