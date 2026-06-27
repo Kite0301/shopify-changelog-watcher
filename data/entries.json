@@ -1,6 +1,110 @@
 {
-  "lastUpdated": "2026-06-26T00:23:17.051Z",
+  "lastUpdated": "2026-06-27T00:21:32.115Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-carrier-services-will-no-longer-be-automatically-added-to-the-default-shipping-profile",
+      "source": "developer-changelog",
+      "title": "Carrier services will no longer be automatically added to the default shipping profile",
+      "link": "https://shopify.dev/changelog/carrier-services-will-no-longer-be-automatically-added-to-the-default-shipping-profile",
+      "publishedAt": "2026-06-26T16:00:00.000Z",
+      "collectedAt": "2026-06-27T00:21:32.101Z",
+      "category": [
+        "API",
+        "Breaking API Change",
+        "Admin GraphQL API",
+        "Admin REST API",
+        "2026-10"
+      ],
+      "description": " <div class=\"\"><p>Starting with GraphQL Admin API version 2026-10, creating a carrier service no longer automatically adds it to the shop’s General shipping profile.</p>\n<p>This breaking change affects carrier services created using:</p>\n<ul>\n<li>GraphQL Admin API: <code>carrierServiceCreate</code></li>\n<li>REST Admin API: <code>POST /admin/api/{version}/carrier_services.json</code></li>\n</ul>\n<p>Previously, active API carrier services created through these APIs were automatically added to eligible shipping zones in the shop’s General shipping profile. In API version 2026-10 and later, creating a carrier service only registers the carrier service. Shopify no longer adds that carrier service to the General shipping profile or any of its shipping zones by default.</p>\n<p>If your app relies on the previous behavior where creating a carrier service automatically made rates available to merchants, you must update your integration so that rates are explicitly configured. Without these additional steps, merchants won’t see rates from newly created carrier services at checkout.</p>\n<p>After creating a carrier service, you must ensure that its rates are added to a shipping profile by either:</p>\n<ul>\n<li>(Recommended) Directing merchants to manually add the carrier-calculated rate to the appropriate shipping profile in the Shopify admin.</li>\n<li>Programmatically adding the carrier-calculated rate to the appropriate shipping profile using the shipping profile APIs.</li>\n</ul>\n<p>Older supported API versions will continue to use the existing automatic-add behavior for carrier services in the General shipping profile until those versions are sunset.</p>\n<p>Learn more about <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/carrierServiceCreate\" target=\"_blank\" class=\"body-link\"><code>carrierServiceCreate</code></a> and the <a href=\"https://shopify.dev/docs/api/admin-rest/latest/resources/carrierservice\" target=\"_blank\" class=\"body-link\"><code>CarrierService</code> REST resource</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "配送業者サービスがデフォルトの配送プロファイルに自動追加されなくなります",
+          "summarizedJa": "2026-10バージョンのGraphQL Admin APIより、配送業者サービス(Carrier Service)の作成時に、一般配送プロファイルへの自動追加が行われなくなります。この破壊的変更により、配送業者サービス作成後は、マーチャント自身が管理画面で手動追加するか、APIを使用してプログラム的に配送プロファイルへ追加する必要があります。対応しない場合、新規作成した配送業者サービスの料金がチェックアウト時に表示されません。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-06-27T00:21:38.916Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1426,
+            "output": 277
+          },
+          "estimatedCost": 0.008433
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "配送サービスがデフォルトの配送プロファイルに自動追加されなくなります",
+          "summarizedJa": "ShopifyのGraphQL Admin APIバージョン2026-10以降、配送サービスを新規作成しても、それがショップのデフォルト配送プロファイルに自動的に追加されなくなります。この破壊的変更により、アプリ開発者は配送サービス作成後に、明示的に配送プロファイルへ料金を追加するよう設定を更新する必要があります。この変更に対応しない場合、マーチャントは新しく作成された配送サービスの料金をチェックアウト時に利用できなくなるため、パートナーは早急な対応が求められます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-06-27T00:21:45.412Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1104,
+            "output": 182
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-new-3-eu-import-customs-duty-arrives-july-1",
+      "source": "shopify-changelog",
+      "title": "Shopify now supports €3 EU import customs duty collection",
+      "link": "https://changelog.shopify.com/posts/new-3-eu-import-customs-duty-arrives-july-1",
+      "publishedAt": "2026-06-26T09:00:00.000Z",
+      "collectedAt": "2026-06-27T00:21:21.763Z",
+      "category": [
+        "Markets"
+      ],
+      "description": "\n        <p>Shopify Managed Markets and Shopify's import tax and duty calculation now support the EU's flat €3 customs duty per tariff line on qualifying orders up to €150 shipped into the EU from outside the EU, effective July 1, 2026. If you use either product, Shopify handles this fee for you automatically. No settings changes required.</p>\n\n<p><strong>What’s now supported</strong><br><br>\n<strong>In Shopify Managed Markets:</strong> The €3 fee is calculated, displayed, and collected at checkout. As your merchant of record, Global-e remits the duty to the destination country. Duty amounts shown at checkout are guaranteed, so neither you nor your customer pays more later.</p>\n\n<p><strong>In Shopify import tax and duty calculation:</strong> The €3 fee is included in the duty amount calculated and displayed at checkout, so you can collect it from your customer alongside other duties.</p>\n\n<p>In both cases, the fee is charged in addition to VAT and any national handling fees, consistent with the EU regulation.</p>\n\n<p><strong>What changed and who it affects</strong><br><br>\nThe EU ended the €150 duty-free threshold for low-value imports and replaced it with a flat €3 customs duty per tariff line on qualifying orders up to €150 shipped into the EU from outside the EU. Customs counts the unique tariff classification lines in each parcel and applies €3 per line:</p>\n\n<ul>\n<li>A parcel of only apparel: €3<br></li>\n<li>A parcel of apparel, cosmetics, shoes, and jewelry: €12</li>\n</ul>\n\n<p>This affects you if you ship to EU customers from outside the EU, including from the UK. It does not affect intra-EU shipments. Learn more about these changes in the <a href=\"https://help.shopify.com/manual/taxes/eu/eu-tax-migrate\">Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "ShopifyがEU輸入関税€3の徴収に対応開始",
+          "summarizedJa": "2026年7月1日より、EU域外からEU域内への€150以下の注文に対して、関税分類ライン毎に€3の定額関税が適用されます。Shopify Managed MarketsおよびShopifyの輸入税・関税計算機能では、この関税が自動的に計算・表示・徴収されるため、設定変更は不要です。日本からEU顧客に発送するマーチャントに影響があります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-06-27T00:21:51.959Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1379,
+            "output": 240
+          },
+          "estimatedCost": 0.007737
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "ShopifyがEU輸入関税の3ユーロ定額徴収に対応",
+          "summarizedJa": "Shopifyは2026年7月1日より、EU域外からEUへ発送される150ユーロまでの低額輸入に対する、1品目あたり3ユーロの定額関税徴収に対応します。Shopify Managed MarketsまたはShopifyの輸入税・関税計算機能を利用しているマーチャントは、この関税が自動的に計算・徴収されるため、設定変更は不要です。これは、EUが低額輸入の免税措置を廃止し、新たな定額関税を導入したことによるものです。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-06-27T00:21:59.963Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1059,
+            "output": 199
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-improvement-to-draft-order-custom-discount-currency",
       "source": "shopify-changelog",
