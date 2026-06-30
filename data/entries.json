@@ -1,6 +1,209 @@
 {
-  "lastUpdated": "2026-06-27T00:21:32.115Z",
+  "lastUpdated": "2026-06-30T00:21:23.342Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-view-data-access-changes-with-the-new-app-pixel-activity-log",
+      "source": "shopify-changelog",
+      "title": "View data access changes with the new app pixel activity log",
+      "link": "https://changelog.shopify.com/posts/view-data-access-changes-with-the-new-app-pixel-activity-log",
+      "publishedAt": "2026-06-29T19:00:00.000Z",
+      "collectedAt": "2026-06-30T00:21:23.325Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>We've just released the activity log for app pixels in the Customer events section of your Shopify admin. This helps merchants who share customer data with apps keep track of when and how that access has changed over time. The activity log lets you view the history of data access changes for each app pixel, right from its detail page. The activity log records every data access change from June 3, 2026 onward, so you'll have a complete history going forward. It's now available to all merchants using app pixels. </p>\n\n<p>Learn more about the activity log in <a href=\"https://help.shopify.com/en/manual/promoting-marketing/pixels/app-pixels#view-activity-log\">Shopify Help Centre</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "アプリピクセルのデータアクセス変更履歴を確認できる新しいアクティビティログ機能",
+          "summarizedJa": "Shopify管理画面の「顧客イベント」セクションに、アプリピクセルのアクティビティログ機能が追加されました。この機能により、マーチャントはアプリとの顧客データ共有において、データアクセス権限がいつどのように変更されたかの履歴を確認できるようになります。2026年6月3日以降のすべてのデータアクセス変更が記録され、全てのアプリピクセル利用マーチャントが利用可能です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-06-30T00:21:29.502Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1082,
+            "output": 272
+          },
+          "estimatedCost": 0.007326000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "新しいアプリピクセルアクティビティログでデータアクセス変更を閲覧",
+          "summarizedJa": "Shopify管理画面の「顧客イベント」セクションに、アプリピクセル用のアクティビティログが追加されました。これにより、マーチャントはアプリが顧客データにアクセスした日時や方法の変更履歴を追跡できるようになります。2026年6月3日以降のデータアクセス変更が記録され、アプリピクセルを利用するすべてのマーチャントが利用可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-06-30T00:21:34.085Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 805,
+            "output": 162
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-pos-activity-log",
+      "source": "shopify-changelog",
+      "title": "POS activity log ",
+      "link": "https://changelog.shopify.com/posts/pos-activity-log",
+      "publishedAt": "2026-06-29T18:00:00.000Z",
+      "collectedAt": "2026-06-30T00:21:23.325Z",
+      "category": [
+        "Pos"
+      ],
+      "description": "\n        <p>Introducing the new POS activity log. Keep your team accountable and your store secure. Now high-risk action at the register is logged to a named staff member, with the time, device, and location captured automatically. Use the new sPOS activity log to investigate discrepancies, support loss prevention, and meet compliance requirements at scale. </p>\n\n<p><strong>What's logged</strong><br>\n* Cash drawer operations including open, add cash, remove cash, and mid-session counts<br>\n* Manual discount applied to a cart or line item <br>\n* Transaction voids<br>\n* Returns and refunds<br>\n* Customer record access<br>\n* Manager overrides captured alongside the action they approved </p>\n\n<p><strong>Where to find it</strong><br>\nA new setting page in the POS channel in Shopify Admin, lists events with filters for staff, location, and event type. </p>\n\n<p>Renames and customer record deletions are reflected automatically. Staff and customer names are resolved at read time, so historical entries always show current values without leaving stale PII behind. </p>\n\n<p>Learn more about the new <a href=\"https://help.shopify.com/en/manual/sell-in-person/shopify-pos/staff-management/pos-activity-log\">POS activity log</a> in the Shopify Help Center. </p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "POSアクティビティログ",
+          "summarizedJa": "Shopify POSに新しいアクティビティログ機能が追加されました。レジでの高リスクな操作（現金操作、値引き適用、取引の無効化、返品・返金、顧客情報へのアクセス、管理者による承認操作など）が、スタッフ名・時刻・デバイス・店舗ロケーションとともに自動記録されます。管理画面のPOSチャンネル設定から、スタッフ・店舗・イベント種別でフィルタして確認でき、不正防止やコンプライアンス対応に役立ちます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-06-30T00:21:39.774Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1215,
+            "output": 276
+          },
+          "estimatedCost": 0.007784999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "POSアクティビティログ",
+          "summarizedJa": "Shopify POSに新しいアクティビティログ機能が導入されました。これにより、レジでの現金操作、割引適用、返品・返金などの高リスクな操作が、担当スタッフ、時間、デバイス、場所とともに自動的に記録されます。この機能は、店舗のセキュリティ強化、スタッフの責任追及、不正調査、損失防止、およびコンプライアンス要件への対応に大きく貢献します。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-06-30T00:21:46.784Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 913,
+            "output": 156
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-view-and-manage-all-your-pos-devices-from-shopify-admin",
+      "source": "shopify-changelog",
+      "title": "View and manage all your POS devices from Shopify admin ",
+      "link": "https://changelog.shopify.com/posts/view-and-manage-all-your-pos-devices-from-shopify-admin",
+      "publishedAt": "2026-06-29T14:00:00.000Z",
+      "collectedAt": "2026-06-30T00:21:23.325Z",
+      "category": [
+        "Pos"
+      ],
+      "description": "\n        <p>The Devices view in the POS channel now shows every device running Shopify POS, giving you a single source of truth for your entire fleet of tablets, phones, card readers and mobile POS devices. </p>\n\n<p>Track which devices are online or offline, which POS app version is installed and more. This visibility helps you maintain consistency across your business and quickly identify devices that need attention.</p>\n\n<p>When a device is lost, stolen, or needs to be removed from your system, you can take immediate action by logging it out remotely or removing its access entirely. Device removal requires staff permissions, which you can review and adjust under Settings &gt; Users.</p>\n\n<p><strong>Note:</strong>For businesses with multiple locations we recommend you continue to use mobile device management (MDM) software to manage app versions.</p>\n\n<p>To access the Devices view, open the POS channel in the Shopify admin and select Devices. Only devices running POS 11.9 or higher will appear in the list.</p>\n\n<p>Learn more about <a href=\"https://help.shopify.com/en/manual/sell-in-person/hardware/manage-pos-devices\">managing POS devices in your Shopify admin</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify管理画面からすべてのPOSデバイスを表示・管理可能に",
+          "summarizedJa": "POSチャネルのデバイスビューで、タブレット、スマートフォン、カードリーダーなど全てのShopify POSデバイスを一元管理できるようになりました。オンライン/オフライン状態やアプリバージョンの確認、紛失・盗難時のリモートログアウトやアクセス削除が可能です。POS 11.9以降を実行しているデバイスのみが表示され、複数店舗を持つ事業者にはMDMソフトウェアの利用が推奨されています。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-06-30T00:21:52.420Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1204,
+            "output": 280
+          },
+          "estimatedCost": 0.0078119999999999995
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify管理画面からすべてのPOSデバイスを表示・管理",
+          "summarizedJa": "Shopify管理画面のPOSチャネルに「デバイス」ビューが追加され、すべてのPOSデバイスを一元的に管理できるようになりました。これにより、各デバイスのオンライン状況やアプリバージョンを把握し、紛失・盗難時にはリモートでログアウトやアクセス削除が可能です。複数店舗を運営するマーチャントは、POSデバイスの状態を効率的に管理し、ビジネスの一貫性を保つことができます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-06-30T00:21:57.896Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 902,
+            "output": 160
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-payment-mandates-id-field",
+      "source": "developer-changelog",
+      "title": "Payment mandates now expose an id field",
+      "link": "https://shopify.dev/changelog/payment-mandates-id-field",
+      "publishedAt": "2026-06-27T16:00:00.000Z",
+      "collectedAt": "2026-06-30T00:21:22.000Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>In API version 2026-07 and later, the <code>PaymentMandateResource</code> object includes a new <code>id</code> field.</p>\n<p><code>PaymentMandateResource</code> is returned by the <code>mandates</code> connection on <code>CustomerPaymentMethod</code>. Its <code>id</code> is the same as the corresponding <code>CustomerPaymentMethod.id</code>, which lets you determine which payment method to use for a given mandate scope (for example, the <code>SUBSCRIPTIONS</code> scope) when a single payment instrument is associated with multiple mandate types.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "ペイメントマンデートにidフィールドが追加されました",
+          "summarizedJa": "APIバージョン2026-07以降、PaymentMandateResourceオブジェクトに新しいidフィールドが追加されました。このidはCustomerPaymentMethod.idと同じ値を持ち、1つの決済手段が複数のマンデートタイプに関連付けられている場合に、サブスクリプションなど特定のマンデートスコープに対してどの決済方法を使用すべきか判断できるようになります。定期購入などの決済処理を実装している開発者に有用な機能です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-06-30T00:22:03.202Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1068,
+            "output": 261
+          },
+          "estimatedCost": 0.007119
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "支払いマンデートにIDフィールドが追加",
+          "summarizedJa": "APIバージョン2026-07以降、`PaymentMandateResource`オブジェクトに新しい`id`フィールドが追加されます。この`id`は対応する`CustomerPaymentMethod.id`と同じ値で、単一の決済手段が複数のマンデートタイプ（例：定期購入）を持つ場合に、特定のマンデートスコープにどの決済方法を使用すべきかを判別するのに役立ちます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-06-30T00:22:09.203Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 763,
+            "output": 157
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-carrier-services-will-no-longer-be-automatically-added-to-the-default-shipping-profile",
       "source": "developer-changelog",
