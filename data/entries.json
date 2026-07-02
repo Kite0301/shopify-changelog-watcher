@@ -1,6 +1,589 @@
 {
-  "lastUpdated": "2026-07-01T00:22:09.116Z",
+  "lastUpdated": "2026-07-02T00:21:55.167Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-shop-minis-may-june-2026-update",
+      "source": "developer-changelog",
+      "title": "Shop Minis May June 2026 update",
+      "link": "https://shopify.dev/changelog/shop-minis-may-june-2026-update",
+      "publishedAt": "2026-07-01T20:05:00.000Z",
+      "collectedAt": "2026-07-02T00:21:54.106Z",
+      "category": [
+        "API",
+        "New",
+        "Shop Minis"
+      ],
+      "description": " <div class=\"\"><h2>New Features</h2>\n<h3>Product variant intents</h3>\n<p>The React SDK added typed product variant intent hooks for selecting variants, adding variants to cart, and sending buyers to express checkout:</p>\n<ul>\n<li><code>useSelectVariant</code> wraps <code>select:shopify/ProductVariant</code>.</li>\n<li><code>useAddToCart</code> wraps <code>add_to_cart:shopify/ProductVariant</code>.</li>\n<li><code>useBuyNow</code> wraps <code>buy_now:shopify/ProductVariant</code>.</li>\n</ul>\n<p>These hooks can open the native Shop variant selector sheet over the Mini WebView when a Mini has a product ID but needs the buyer to pick a variant or quantity. Results distinguish successful actions, user dismissal, host errors, navigation to PDP, and referral-product handoffs.</p>\n<p><strong>Usage:</strong></p>\n<pre><code class=\"language-tsx\">const {addToCart} = useAddToCart()\n\nconst result = await addToCart({productId})\n\nif (result.code === 'ok') {\n  switch (result.data.outcome) {\n    case 'added_to_cart':\n      break\n    case 'navigated_to_product':\n      break\n    case 'redirected_to_product':\n      break\n  }\n}\n</code></pre>\n<h3>Build verification during submit</h3>\n<p>The CLI now runs Minis build verification as part of <code>submit</code>. The verification system was also split into per-check orchestration with human-readable progress and JSON output support. Current checks cover dependency validation, ESLint disables, ESLint, TypeScript, build output, and manifest validation.</p>\n<h3>Scoped hook setup warnings</h3>\n<p>The CLI now warns when a Mini uses scoped SDK hooks before completing the required setup. This gives partners earlier feedback when code uses features that depend on declared scopes or account setup.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shop Minis 2026年5月・6月アップデート",
+          "summarizedJa": "Shop MinisのReact SDKに、商品バリアント選択、カート追加、エクスプレスチェックアウトのための型付きフック（useSelectVariant、useAddToCart、useBuyNow）が追加されました。CLI機能も強化され、submit時のビルド検証やスコープ付きフックの設定警告が実装されています。開発者がShop Miniアプリをより効率的に構築できるようになります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-07-02T00:22:01.560Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1416,
+            "output": 229
+          },
+          "estimatedCost": 0.007683000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shop Minis 2026年5月・6月アップデート",
+          "summarizedJa": "このアップデートでは、Shop Minisの機能が強化されました。React SDKに商品バリアントの選択、カート追加、即時購入を容易にする新しいフックが追加され、Shopアプリ内でよりスムーズな購入体験を提供できるようになります。また、CLIによるビルド検証の強化や、スコープ設定に関する警告機能が追加され、Shop Minis開発の品質と効率が向上します。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-07-02T00:22:08.163Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1042,
+            "output": 163
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-market-driven-shipping-now-available-in-feature-preview",
+      "source": "developer-changelog",
+      "title": "Market-driven shipping now available in feature preview",
+      "link": "https://shopify.dev/changelog/market-driven-shipping-now-available-in-feature-preview",
+      "publishedAt": "2026-07-01T19:00:00.000Z",
+      "collectedAt": "2026-07-02T00:21:54.106Z",
+      "category": [
+        "Action Required",
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>Market-driven shipping moves merchant-owned shipping configuration out of delivery profiles and into Markets. Merchants will attach shipping options directly to each market, and then vary rates by product and location conditions within a single option. This makes checkout rate behavior more predictable and easier to understand.</p>\n<p>What this means for your app:</p>\n<ul>\n<li>Merchant shipping configuration (today’s merchant delivery profiles) moves from the delivery profile API to the Markets API.</li>\n<li>App delivery profiles (delivery profiles created by apps) keep using the delivery profile API.</li>\n<li>App-provided rates (rates defined within app delivery profiles) still appear alongside merchant rates in the new experience.</li>\n<li>App delivery profiles are getting more powerful: they can now target all products instead of just a subset, and adding a product to an app profile will no longer impact the merchant configuration.</li>\n<li>If your app reads, creates, or updates merchant shipping settings through the delivery profile API, you’ll need to update it. Market-driven shipping will start rolling out to merchants on October 1, 2026, and all merchants will be on it by July 1, 2027.</li>\n</ul>\n<p>The feature preview is available today. Create a new development store, enable the feature preview, and validate your existing integration and rate logic.</p>\n<p>To learn how market-driven shipping works and how to upgrade your app see <a href=\"https://shopify.dev/docs/apps/build/orders-fulfillment/market-driven-shipping/feature-preview\" target=\"_blank\" class=\"body-link\">Market-driven shipping feature preview</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "マーケット主導型配送設定が機能プレビューで利用可能に",
+          "summarizedJa": "マーチャントの配送設定が配送プロファイルからマーケットAPIに移行されます。配送オプションを各マーケットに直接紐付け、単一オプション内で商品や地域条件ごとに料金を変更できるようになり、チェックアウト時の料金表示がより予測可能で理解しやすくなります。配送プロファイルAPIを使用してマーチャントの配送設定を読み取り・作成・更新しているアプリは、2026年10月1日からのロールアウト開始までに対応が必要です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 5
+          },
+          "totalScore": 18,
+          "analyzedAt": "2026-07-02T00:22:15.059Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1302,
+            "output": 280
+          },
+          "estimatedCost": 0.008105999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "マーケット主導型配送が機能プレビューで利用可能に",
+          "summarizedJa": "「マーケット主導型配送」機能がプレビュー公開され、マーチャントの配送設定が従来の配送プロファイルから「マーケット」機能へ移行します。これにより、各マーケットに直接配送オプションを設定し、商品や地域条件に応じて料金を変動させることが可能になり、チェックアウト時の配送料の予測可能性が高まります。アプリ開発者は、マーチャントの配送設定を配送プロファイルAPI経由で操作している場合、2026年10月1日からの段階的導入に備え、Markets APIへの更新が必須となります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 5
+          },
+          "totalScore": 18,
+          "analyzedAt": "2026-07-02T00:22:22.232Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1004,
+            "output": 194
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-draft-order-deposit-fields-now-available-in-the-admin-and-customer-account-graphql-apis",
+      "source": "developer-changelog",
+      "title": "Draft order deposit fields are now available in the GraphQL Admin API and Customer Account API",
+      "link": "https://shopify.dev/changelog/draft-order-deposit-fields-now-available-in-the-admin-and-customer-account-graphql-apis",
+      "publishedAt": "2026-07-01T16:00:00.000Z",
+      "collectedAt": "2026-07-02T00:21:54.106Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "Customer Accounts",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>As of the 2026-07 API version, draft order deposit fields are available in the GraphQL Admin API and Customer Account API.</p>\n<p>Apps can now set a deposit when creating or updating a draft order with <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/input-objects/DraftOrderInput#fields-deposit\" target=\"_blank\" class=\"body-link\"><code>DraftOrderInput.deposit</code></a> in the GraphQL Admin API. This supports draft order flows where part of the payment is due at checkout and the remaining balance is due later, such as due-on-fulfillment payment terms.</p>\n<p>The <a href=\"https://shopify.dev/docs/api/customer/2026-07/queries/draftOrder#returns-DraftOrder.fields.deposit\" target=\"_blank\" class=\"body-link\">Customer Account API</a> also exposes read-only deposit information on draft orders, including the amount due now and the amount due later.</p>\n<p>This feature is available to Shopify Plus stores.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "GraphQL Admin APIとCustomer Account APIで下書き注文のデポジット項目が利用可能に",
+          "summarizedJa": "2026-07 APIバージョンより、GraphQL Admin APIとCustomer Account APIで下書き注文のデポジット機能が利用可能になりました。これにより、チェックアウト時に一部を支払い、残額を後払いする注文フローをアプリで実装できるようになります。この機能はShopify Plusストア限定で提供されます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-07-02T00:22:27.133Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1205,
+            "output": 218
+          },
+          "estimatedCost": 0.0068850000000000005
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "下書き注文のデポジット（預り金）フィールドがGraphQL Admin APIおよび顧客アカウントAPIで利用可能に",
+          "summarizedJa": "Shopifyの2026-07 APIバージョンより、下書き注文にデポジット（預り金）を設定できるフィールドがGraphQL Admin APIと顧客アカウントAPIで利用可能になりました。これにより、アプリを通じて下書き注文作成・更新時に一部前払い、残金後払いといった柔軟な支払い条件を設定できるようになります。この機能はShopify Plusストア限定で、顧客アカウントAPIではデポジットの支払い状況を顧客側からも確認可能です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-07-02T00:22:33.452Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 913,
+            "output": 186
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-deprecation-of-cumulative-marketing-engagements",
+      "source": "developer-changelog",
+      "title": "Deprecation of cumulative marketing engagements",
+      "link": "https://shopify.dev/changelog/deprecation-of-cumulative-marketing-engagements",
+      "publishedAt": "2026-07-01T16:00:00.000Z",
+      "collectedAt": "2026-07-02T00:21:54.106Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Deprecation Announcement",
+        "Admin GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>The <code>isCumulative</code> argument to the <code>marketingEngagementCreate</code> mutation is being deprecated, defaulting to <code>false</code>. Please update your integration to send non-cumulative engagements, as needed. Existing activities that have been sending cumulative metrics can migrate to non-cumulative at any time.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "累積マーケティングエンゲージメントの廃止",
+          "summarizedJa": "Admin GraphQL APIの`marketingEngagementCreate`ミューテーションにおける`isCumulative`引数が廃止され、デフォルト値が`false`になります。累積指標を送信していた既存の統合は、必要に応じて非累積エンゲージメントを送信するように更新する必要があります。既存のアクティビティはいつでも非累積方式へ移行可能です。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-07-02T00:22:37.792Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1014,
+            "output": 223
+          },
+          "estimatedCost": 0.0063869999999999994
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "累積的なマーケティングエンゲージメントの非推奨化",
+          "summarizedJa": "ShopifyのAdmin GraphQL APIにおける`marketingEngagementCreate`ミューテーションの`isCumulative`引数が非推奨となり、デフォルト値が`false`に変更されます。これにより、このAPIを利用しているアプリや連携システムは、必要に応じて非累積的なエンゲージメントデータを送信するよう更新が必要です。既存の累積指標を利用している場合でも、いつでも非累積形式への移行が可能です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-07-02T00:22:45.041Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 707,
+            "output": 155
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-new-lineitem-field-on-the-giftcard-graphql-object",
+      "source": "developer-changelog",
+      "title": "New `lineItem` field on the `GiftCard` object",
+      "link": "https://shopify.dev/changelog/new-lineitem-field-on-the-giftcard-graphql-object",
+      "publishedAt": "2026-07-01T16:00:00.000Z",
+      "collectedAt": "2026-07-02T00:21:54.106Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>The GraphQL Admin API's <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/GiftCard\" target=\"_blank\" class=\"body-link\"><code>GiftCard</code></a> object now includes a <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/GiftCard#field-GiftCard.fields.lineItem\" target=\"_blank\" class=\"body-link\"><code>lineItem</code></a> field, representing the <code>LineItem</code> from the order that initiated the gift card's creation. The field returns <code>null</code> for gift cards that were issued manually instead of through an order.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "GraphQL `GiftCard` オブジェクトに新しい `lineItem` フィールドを追加",
+          "summarizedJa": "GraphQL Admin APIの`GiftCard`オブジェクトに、ギフトカード作成のきっかけとなった注文の`LineItem`を参照できる`lineItem`フィールドが追加されました。このフィールドは注文経由で発行されたギフトカードの場合に値を返し、手動発行されたギフトカードの場合は`null`を返します。ギフトカードの発行元情報をより詳細に追跡できるようになります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-07-02T00:22:49.610Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1105,
+            "output": 251
+          },
+          "estimatedCost": 0.0070799999999999995
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "GiftCardオブジェクトに新しい`lineItem`フィールドが追加",
+          "summarizedJa": "ShopifyのAdmin GraphQL APIの`GiftCard`オブジェクトに、新たに`lineItem`フィールドが追加されました。このフィールドは、ギフトカードの発行元となった注文の`LineItem`（注文商品）を表します。手動で発行されたギフトカードの場合、このフィールドは`null`を返します。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-07-02T00:22:55.281Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 810,
+            "output": 142
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-discount-application-information-now-available-for-draft-orders-on-the-customer-account-api",
+      "source": "developer-changelog",
+      "title": "Discount application information now available for draft orders on the Customer Account API",
+      "link": "https://shopify.dev/changelog/discount-application-information-now-available-for-draft-orders-on-the-customer-account-api",
+      "publishedAt": "2026-07-01T16:00:00.000Z",
+      "collectedAt": "2026-07-02T00:21:54.106Z",
+      "category": [
+        "API",
+        "New",
+        "Customer Account API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>As of GraphQL Customer Account API version 2026-07, draft orders now expose discount applications.</p>\n<p>You can use the new <a href=\"https://shopify.dev/docs/api/customer/2026-07/objects/DraftOrder#field-DraftOrder.fields.discountApplications\" target=\"_blank\" class=\"body-link\"><code>discountApplications</code></a> field on DraftOrder to query discounts applied to a draft order, and the new <a href=\"https://shopify.dev/docs/api/customer/2026-07/objects/DraftOrderLineItem#field-DraftOrderLineItem.fields.discountAllocations\" target=\"_blank\" class=\"body-link\"><code>discountAllocations</code></a> field on <code>DraftOrderLineItem</code> to query how discounts are allocated across line items.</p>\n<p> For example:</p>\n<pre><code class=\"language-graphql\">  query DraftOrderDiscounts($id: ID!) {\n    draftOrder(id: $id) {\n      discountApplications(first: 10) {\n        nodes {\n          __typename\n          ... on DiscountCodeApplication {\n            code\n          }\n          ... on ManualDiscountApplication {\n            title\n          }\n          allocationMethod\n          targetSelection\n          targetType\n          value {\n            ... on MoneyV2 {\n              amount\n              currencyCode\n            }\n            ... on PricingPercentageValue {\n              percentage\n            }\n          }\n        }\n      }\n      lineItems(first: 10) {\n        nodes {\n          title\n          discountAllocations {\n            allocatedAmount {\n              amount\n              currencyCode\n            }\n            discountApplication {\n              __typename\n            }\n          }\n        }\n      }\n    }\n  }\n</code></pre>\n<p> Use these fields to understand which discounts apply to a draft order and how those discounts affect individual draft order line items.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Customer Account APIで下書き注文のディスカウント適用情報が利用可能に",
+          "summarizedJa": "GraphQL Customer Account API バージョン 2026-07から、下書き注文（Draft Order）でディスカウント適用情報が取得できるようになりました。新しい`discountApplications`フィールドで下書き注文に適用されたディスカウントを照会でき、`discountAllocations`フィールドで各ラインアイテムへのディスカウント配分を確認できます。これにより、下書き注文におけるディスカウントの適用状況と影響をより詳細に把握できるようになります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-07-02T00:23:00.215Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1418,
+            "output": 264
+          },
+          "estimatedCost": 0.008213999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "顧客アカウントAPIで下書き注文の割引適用情報が利用可能に",
+          "summarizedJa": "Shopifyの顧客アカウントAPI（2026-07バージョン以降）において、下書き注文に適用された割引の詳細情報が取得可能になりました。これにより、下書き注文全体に適用された割引や、各商品ラインアイテムへの割引配分を正確に把握できるようになります。カスタムの顧客体験や注文管理システムを構築する日本のマーチャントやパートナーは、割引情報をより詳細に表示・処理できるようになります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-07-02T00:23:07.355Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1097,
+            "output": 169
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-discountedunitprice-on-draftorderlineitem-customer-account-api-deprecation",
+      "source": "developer-changelog",
+      "title": "`discountedUnitPrice` on `DraftOrderLineItem` Customer Account API deprecation",
+      "link": "https://shopify.dev/changelog/discountedunitprice-on-draftorderlineitem-customer-account-api-deprecation",
+      "publishedAt": "2026-07-01T16:00:00.000Z",
+      "collectedAt": "2026-07-02T00:21:54.106Z",
+      "category": [
+        "API",
+        "Deprecation Announcement",
+        "Customer Account API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>The <a href=\"https://shopify.dev/docs/api/customer/2026-04/objects/DraftOrderLineItem#field-DraftOrderLineItem.fields.discountedUnitPrice\" target=\"_blank\" class=\"body-link\"><code>discountedUnitPrice</code></a> field on the <a href=\"https://shopify.dev/docs/api/customer/latest/objects/DraftOrderLineItem#top\" target=\"_blank\" class=\"body-link\"><code>DraftOrderLineItem</code></a> object in the Customer Account API is now deprecated.</p>\n<p>Use <a href=\"https://shopify.dev/docs/api/customer/2026-07/objects/DraftOrderLineItem#field-DraftOrderLineItem.fields.approximateDiscountedUnitPrice\" target=\"_blank\" class=\"body-link\"><code>approximateDiscountedUnitPrice</code></a> instead. This new field calculates the discounted total divided by the quantity, resulting in an approximate per-unit price reduction. Update your queries to use <code>approximateDiscountedUnitPrice</code>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Customer Account APIの`DraftOrderLineItem`における`discountedUnitPrice`フィールドの廃止予定",
+          "summarizedJa": "Customer Account APIの`DraftOrderLineItem`オブジェクトにある`discountedUnitPrice`フィールドが廃止されます。今後は`approximateDiscountedUnitPrice`フィールドを使用する必要があり、こちらは割引後の合計を数量で割った概算の単価を返します。この変更に対応するためクエリの更新が必要です。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-07-02T00:23:11.459Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1213,
+            "output": 223
+          },
+          "estimatedCost": 0.006984000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "顧客アカウントAPIにおける`DraftOrderLineItem`の`discountedUnitPrice`フィールドの非推奨化",
+          "summarizedJa": "顧客アカウントAPIの`DraftOrderLineItem`オブジェクトにある`discountedUnitPrice`フィールドが非推奨になりました。今後は`approximateDiscountedUnitPrice`フィールドを使用する必要があります。この新しいフィールドは、割引後の合計金額を数量で割って近似的な単価を計算するため、関連するAPIクエリを更新する必要があります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-07-02T00:23:16.871Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 892,
+            "output": 152
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-businessentity-now-exposes-legalentityid-in-the-admin-api",
+      "source": "developer-changelog",
+      "title": "`BusinessEntity` now exposes `legalEntityId` in the GraphQL Admin API",
+      "link": "https://shopify.dev/changelog/businessentity-now-exposes-legalentityid-in-the-admin-api",
+      "publishedAt": "2026-07-01T16:00:00.000Z",
+      "collectedAt": "2026-07-02T00:21:54.106Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>As of API version <code>2026-07</code>, the <code>BusinessEntity</code> type in the GraphQL Admin API includes a new <code>legalEntityId</code> field. This field returns the stable Central Legal Entity ID from Shopify's Organizations Platform, giving Partners a consistent identifier for the same legal entity across multiple shops, markets, and sales channels.</p>\n<h2>What's new</h2>\n<p>The <code>BusinessEntity</code> type now includes:</p>\n<ul>\n<li><code>legalEntityId</code> (<code>BigInt</code>, nullable): The stable organization-level legal entity identifier. This ID is consistent across all shops belonging to the same legal entity, enabling partners to recognize the same underlying company regardless of how many shops or markets it operates.</li>\n</ul>\n<p>This field returns <code>null</code> when the business entity has no backing Central Legal Entity or when the legal entity does not have a stable external ID.</p>\n<h2>Example query</h2>\n<pre><code class=\"language-graphql\">query {\n  businessEntity(id: &quot;gid://shopify/BusinessEntity/123456&quot;) {\n    id\n    legalEntityId\n    companyName\n    displayName\n  }\n}\n</code></pre>\n<h2>Example response</h2>\n<pre><code class=\"language-json\">{\n  &quot;data&quot;: {\n    &quot;businessEntity&quot;: {\n      &quot;id&quot;: &quot;gid://shopify/BusinessEntity/123456&quot;,\n      &quot;legalEntityId&quot;: &quot;223432432&quot;,\n      &quot;companyName&quot;: &quot;Acme Corporation&quot;,\n      &quot;displayName&quot;: &quot;Acme US&quot;\n    }\n  }\n}\n</code></pre>\n<h2>Why this matters</h2>\n<p>Previously, <code>BusinessEntity.id</code> was scoped to individual shops, meaning the same company operating multiple shops would appear with different IDs. The new <code>legalEntityId</code> provides a single, stable identifier at the organization level that Partners can use to:</p>\n<ul>\n<li>Map a merchant's legal entity to a company code in their own systems</li>\n<li>Consistently identify the same company across multiple shops and markets</li>\n<li>Correlate legal entity data between the GraphQL Admin API and tax webhook payloads (where the same identifier appears as <code>merchant_business_entity.legal_entity_id</code>)</li>\n</ul>\n<h2>API version</h2>\n<p>This field is available starting in API version <code>2026-07</code> and in <code>unstable</code>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "GraphQL Admin APIの`BusinessEntity`に`legalEntityId`フィールドが追加されました",
+          "summarizedJa": "APIバージョン2026-07より、GraphQL Admin APIの`BusinessEntity`タイプに新しい`legalEntityId`フィールドが追加されました。このフィールドは、Shopifyの組織プラットフォームから取得される安定した法人識別IDを返し、同一の法人が複数のショップやマーケット、販売チャネルを運営している場合でも、一貫して同じ識別子で認識できるようになります。パートナーは自社システムとの連携や、税務Webhookペイロードとのデータ照合に利用できます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-07-02T00:23:22.195Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1627,
+            "output": 276
+          },
+          "estimatedCost": 0.009021
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "GraphQL Admin APIの`BusinessEntity`で`legalEntityId`が利用可能に",
+          "summarizedJa": "ShopifyのGraphQL Admin APIの`BusinessEntity`タイプに、新しい`legalEntityId`フィールドが追加されました。これにより、パートナーは複数のショップや市場にまたがる同一の法人を、安定した組織レベルのIDで一貫して識別できるようになります。この変更は、パートナーがマーチャントの法人情報を自社システムと連携させ、データ管理を効率化する上で非常に重要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-07-02T00:23:29.361Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1244,
+            "output": 167
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-merchant-owned-delivery-profile-apis-are-deprecated-for-market-driven-shipping",
+      "source": "developer-changelog",
+      "title": "Merchant-owned delivery profile APIs are deprecated for market-driven shipping",
+      "link": "https://shopify.dev/changelog/merchant-owned-delivery-profile-apis-are-deprecated-for-market-driven-shipping",
+      "publishedAt": "2026-07-01T13:00:00.000Z",
+      "collectedAt": "2026-07-02T00:21:54.106Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Deprecation Announcement",
+        "Admin GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><h2>What's changing</h2>\n<p>We’re moving merchant-owned shipping configuration from legacy delivery profiles to Markets as part of market-driven shipping, a new model where shipping is configured per Market.</p>\n<p>When a shop uses market-driven shipping, the legacy delivery profile fields and mutations in the Admin GraphQL API no longer represent the shop’s live merchant-owned shipping configuration. Reads may return a stale snapshot of the legacy configuration, and writes may succeed without errors but will not update the merchant’s live shipping settings.</p>\n<p>This affects merchant-owned usage of the following Admin GraphQL delivery profile APIs:</p>\n<ul>\n<li><code>deliveryProfile</code></li>\n<li><code>deliveryProfiles</code></li>\n<li><code>deliveryProfilesCount</code></li>\n<li><code>deliveryProfileLocationGroup</code></li>\n<li><code>deliveryProfileLocationGroups</code></li>\n<li><code>deliveryProfileCreate</code></li>\n<li><code>deliveryProfileUpdate</code></li>\n<li><code>deliveryProfileRemove</code></li>\n</ul>\n<p>App-owned delivery profiles aren’t affected and continue to function as before.</p>\n<h2>What to do</h2>\n<p>If your app currently reads or manages merchant-owned shipping configuration, you must follow the <a href=\"https://shopify.dev/docs/apps/build/orders-fulfillment/market-driven-shipping/upgrade-your-app\" target=\"_blank\" class=\"body-link\">upgrade guide for market-driven shipping</a>. The guide explains how to:</p>\n<ul>\n<li>Detect shops that are using market-driven shipping.</li>\n<li>Stop relying on merchant-owned delivery profile APIs for those shops.</li>\n<li>Migrate to Contextual Product Feeds, app-owned delivery profiles, or Markets APIs, depending on your use case.</li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "マーケット駆動型配送への移行に伴い、マーチャント所有のデリバリープロファイルAPIが非推奨に",
+          "summarizedJa": "Shopifyはマーチャント所有の配送設定を従来のデリバリープロファイルからマーケット単位で管理する新しいモデル「マーケット駆動型配送」へ移行します。マーケット駆動型配送を使用するショップでは、既存のデリバリープロファイル関連のGraphQL APIが実際の配送設定を反映しなくなり、読み取りは古いデータを返し、書き込みは成功してもライブ設定に反映されません。マーチャント所有の配送設定を扱うアプリ開発者は、Markets APIへの移行など、アップグレードガイドに従った対応が必須となります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 5
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-07-02T00:23:37.286Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1410,
+            "output": 330
+          },
+          "estimatedCost": 0.00918
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "マーチャント所有の配送プロファイルAPI、マーケット駆動型配送への移行で非推奨化",
+          "summarizedJa": "Shopifyは配送設定の仕組みを「マーケット駆動型配送」という新しいモデルに移行します。これにより、マーチャントが所有する従来の配送プロファイル関連APIは、この新モデルを使用するストアでは機能しなくなります。アプリ開発者は、影響を受けるストアを検出し、Contextual Product FeedsやMarkets APIなど、新しいAPIへの移行が必須となります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-07-02T00:23:44.896Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1035,
+            "output": 162
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-brazil-cnpj-validation-now-supports-alphanumeric-identifiers",
+      "source": "shopify-changelog",
+      "title": "Brazil CNPJ validation now supports alphanumeric identifiers",
+      "link": "https://changelog.shopify.com/posts/brazil-cnpj-validation-now-supports-alphanumeric-identifiers",
+      "publishedAt": "2026-07-01T04:01:00.000Z",
+      "collectedAt": "2026-07-02T00:21:55.153Z",
+      "category": [
+        "Checkout"
+      ],
+      "description": "\n        <p>We've updated Brazil CNPJ validation to support Receita Federal's new alphanumeric CNPJ format.</p>\n\n<p>New CNPJs can include letters or numbers in the first 12 positions while keeping numeric check digits in the final two positions. Existing numeric CNPJs continue to validate as before.</p>\n\n<p>For example, Shopify can now validate alphanumeric CNPJs such as <code>12.ABC.345/01DE-35</code>.</p>\n\n<p>Partners or apps that validate CNPJ values should make sure they no longer assume CNPJs are numeric only.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "ブラジルCNPJ検証が英数字識別子に対応",
+          "summarizedJa": "ブラジルの企業識別番号CNPJの検証機能が、Receita Federal（連邦歳入庁）の新しい英数字形式に対応しました。新形式では最初の12桁に文字または数字を含めることができ、最後の2桁はチェックディジットとして数字のままです。CNPJを検証するパートナーやアプリは、数字のみを前提とした実装を見直す必要があります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 2,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 6,
+          "analyzedAt": "2026-07-02T00:23:50.180Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1064,
+            "output": 238
+          },
+          "estimatedCost": 0.006762000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "ブラジルCNPJの検証が英数字形式に対応",
+          "summarizedJa": "Shopifyは、ブラジルのCNPJ（法人登録番号）検証システムを更新し、ブラジル税務当局が導入した新しい英数字形式のCNPJに対応しました。これにより、CNPJの最初の12桁に文字を含めることが可能になり、既存の数字のみのCNPJも引き続き有効です。CNPJの検証機能を実装しているパートナーやアプリ開発者は、CNPJが数字のみであるという前提を見直す必要があります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 2,
+            "japanRelevance": 1,
+            "technicalImportance": 3
+          },
+          "totalScore": 7,
+          "analyzedAt": "2026-07-02T00:23:58.552Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 767,
+            "output": 168
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-market-driven-delivery-profiles-admin-api",
+      "source": "developer-changelog",
+      "title": "Market-driven shipping Admin API",
+      "link": "https://shopify.dev/changelog/market-driven-delivery-profiles-admin-api",
+      "publishedAt": "2026-07-01T04:00:00.000Z",
+      "collectedAt": "2026-07-02T00:21:54.106Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>Starting in API version 2026-07, the GraphQL Admin API supports market-driven shipping configuration. You can now configure shipping directly on a market, which helps apps support different shipping strategies for different markets without creating a separate shipping profile resource.</p>\n<h2>What changed</h2>\n<p>The <a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/objects/Market\" target=\"_blank\" class=\"body-link\"><code>Market</code></a> object now includes a <code>delivery</code> field for market delivery settings. Use <code>Market.delivery.shipping</code> to read the shipping configuration for a market.</p>\n<p>Use the existing <code>marketCreate</code> and <code>marketUpdate</code> mutations to create, update, or remove a market's shipping configuration:</p>\n<ul>\n<li>Use <code>MarketCreateInput.delivery.shipping</code> to add shipping configuration when creating a market.  </li>\n<li>Use <code>MarketUpdateInput.delivery.shipping</code> to update shipping configuration on an existing market.  </li>\n<li>Use <code>MarketUpdateInput.delivery.removeShipping</code> to remove a market-level shipping configuration so the market inherits shipping from its parent.</li>\n</ul>\n<p>Shipping options are managed through <code>DeliveryOptionDefinitionCreateInput</code> and <code>DeliveryOptionDefinitionUpdateInput</code>. The API supports these option types:</p>\n<ul>\n<li><code>DeliveryFlatRateOptionDefinition</code> for fixed-price shipping options.  </li>\n<li><code>DeliveryValueBasedOptionDefinition</code> for rates based on cart value.  </li>\n<li><code>DeliveryWeightBasedOptionDefinition</code> for rates based on package weight.  </li>\n<li><code>DeliveryCarrierCalculatedOptionDefinition</code> for rates calculated by carrier services.</li>\n</ul>\n<p>Each shipping option includes fields such as <code>currency</code> and <code>isActive</code>. You can optionally configure a free delivery threshold with <code>freeDeliveryMinimumValue</code>. Flat and value-based options can include one or more rate groups. Weight-based options include exactly one weight-based rate group, and carrier-calculated options include a single carrier-calculated rate group.</p>\n<h2>What you can do</h2>\n<ul>\n<li>Configure shipping options for a specific market.  </li>\n<li>Offer different flat, value-based, weight-based, or carrier-calculated rates by market.  </li>\n<li>Restrict rate groups to specific product collections or origin locations.  </li>\n<li>Unconfigured markets naturally  inherit shipping from their parents.  </li>\n<li>Disable shipping for a market by setting <code>isEnabled</code> to <code>false</code>.</li>\n</ul>\n<h2>What you need to know</h2>\n<ul>\n<li>Queries require <code>read_markets</code> access.  </li>\n<li>Mutations require both <code>read_markets</code> and <code>write_markets</code> access.  </li>\n<li>A <code>null</code> value for <code>Market.delivery.shipping</code> means the market inherits shipping from its parent. For markets without a parent, shipping inherits the shop default of no shipping  </li>\n<li><code>isEnabled: false</code> means customers in that market will not see shipping options at checkout. This also disables any app managed shipping options that may otherwise apply to this market.  </li>\n<li>There are no root queries or standalone mutations for market shipping configuration. Read and write shipping configuration through <code>Market</code>, <code>marketCreate</code>, and <code>marketUpdate</code>.</li>\n</ul>\n<h2>Example query</h2>\n<p>This query reads a market's shipping configuration, including whether shipping is enabled, how many active shipping options are configured, and the details for each flat-rate option.</p>\n<pre><code>{\n  market(id: &quot;gid://shopify/Market/123&quot;) {\n    delivery {\n      shipping {\n        isEnabled\n        activeOptionDefinitionsCount {\n          count\n        }\n        optionDefinitions(first: 10) {\n          nodes {\n            __typename\n            currency\n            isActive\n            freeDeliveryMinimumValue {\n              amount\n              currencyCode\n            }\n            ... on DeliveryFlatRateOptionDefinition {\n              name\n              rateGroups(first: 10) {\n                nodes {\n                  conditions {\n                    collectionsCount {\n                      count\n                    }\n                    originLocationsCount {\n                      count\n                    }\n                  }\n                  rate {\n                    price {\n                      amount\n                      currencyCode\n                    }\n                    transitTimeMinSeconds\n                    transitTimeMaxSeconds\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n}\n</code></pre>\n<h2>Example mutation</h2>\n<p>This mutation updates an existing market with shipping enabled and adds a standard flat-rate shipping option with a fixed price and estimated transit time.</p>\n<pre><code>mutation {\n  marketUpdate(\n    id: &quot;gid://shopify/Market/123&quot;\n    input: {\n      delivery: {\n        shipping: {\n          isEnabled: true\n          optionDefinitionsToCreate: [\n            {\n              flatRate: {\n                name: &quot;Standard Delivery&quot;\n                currency: USD\n                rateGroups: [\n                  {\n                    rate: {\n                      price: { amount: &quot;5.99&quot;, currencyCode: USD }\n                      transitTimeMinSeconds: 432000\n                      transitTimeMaxSeconds: 604800\n                    }\n                  }\n                ]\n              }\n            }\n          ]\n        }\n      }\n    }\n  ) {\n    market {\n      id\n      delivery {\n        shipping {\n          isEnabled\n          optionDefinitions(first: 10) {\n            nodes {\n              __typename\n              currency\n              isActive\n            }\n          }\n        }\n      }\n    }\n    userErrors {\n      field\n      message\n    }\n  }\n}\n</code></pre>\n<h2>Example: Disable shipping for a market</h2>\n<p>Use <code>isEnabled: false</code> when the market should keep its market-level shipping configuration, but not show shipping options at checkout.</p>\n<pre><code>mutation {\n  marketUpdate(\n    id: &quot;gid://shopify/Market/123&quot;\n    input: {\n      delivery: {\n        shipping: {\n          isEnabled: false\n        }\n      }\n    }\n  ) {\n    market {\n      id\n      delivery {\n        shipping {\n          isEnabled\n        }\n      }\n    }\n    userErrors {\n      field\n      message\n    }\n  }\n}\n</code></pre>\n<h2>Example: Remove market-level shipping configuration</h2>\n<p>Use <code>removeShipping: true</code> when the market should inherit shipping from its parent instead of using its own shipping configuration.</p>\n<pre><code>mutation {\n  marketUpdate(\n    id: &quot;gid://shopify/Market/123&quot;\n    input: {\n      delivery: {\n        removeShipping: true\n      }\n    }\n  ) {\n    market {\n      id\n      delivery {\n        shipping {\n          isEnabled\n        }\n      }\n    }\n    userErrors {\n      field\n      message\n    }\n  }\n}\n</code></pre>\n<h2>Example: Add a value-based shipping option</h2>\n<p>This mutation creates a shipping option where the rate depends on cart value.</p>\n<pre><code>mutation {\n  marketUpdate(\n    id: &quot;gid://shopify/Market/123&quot;\n    input: {\n      delivery: {\n        shipping: {\n          optionDefinitionsToCreate: [\n            {\n              valueBased: {\n                name: &quot;Cart Value Shipping&quot;\n                currency: USD\n                isActive: true\n                rateGroups: [\n                  {\n                    rates: [\n                      {\n                        price: { amount: &quot;9.99&quot;, currencyCode: USD }\n                        minValue: { amount: &quot;0.00&quot;, currencyCode: USD }\n                        maxValue: { amount: &quot;49.99&quot;, currencyCode: USD }\n                      }\n                      {\n                        price: { amount: &quot;0.00&quot;, currencyCode: USD }\n                        minValue: { amount: &quot;50.00&quot;, currencyCode: USD }\n                      }\n                    ]\n                  }\n                ]\n              }\n            }\n          ]\n        }\n      }\n    }\n  ) {\n    market {\n      id\n    }\n    userErrors {\n      field\n      message\n    }\n  }\n}\n</code></pre>\n<h2>Example: Add a weight-based shipping option</h2>\n<p>Weight-based options uses a similar form but can only take a single rate group. The rate group can contain weight-based rates.</p>\n<pre><code>mutation {\n  marketUpdate(\n    id: &quot;gid://shopify/Market/123&quot;\n    input: {\n      delivery: {\n        shipping: {\n          optionDefinitionsToCreate: [\n            {\n              weightBased: {\n                name: &quot;Weight-Based Shipping&quot;\n                currency: USD\n                isActive: true\n                rateGroups: [\n\t\t\t\t\t\t\t\t  {\n                    rates: [\n                      {\n                        price: { amount: &quot;12.99&quot;, currencyCode: USD }\n                        minWeight: { value: 0, unit: POUNDS }\n                      }\n                    ]\n                  }\n\t\t\t\t\t\t\t  ]\n              }\n            }\n          ]\n        }\n      }\n    }\n  ) {\n    market {\n      id\n    }\n    userErrors {\n      field\n      message\n    }\n  }\n}\n</code></pre>\n<h2>Example: Add a carrier-calculated shipping option</h2>\n<p>Carrier-calculated options also takes only a single rate group that references an existing carrier service.</p>\n<pre><code>mutation {\n  marketUpdate(\n    id: &quot;gid://shopify/Market/123&quot;\n    input: {\n      delivery: {\n        shipping: {\n          optionDefinitionsToCreate: [\n            {\n              carrierCalculated: {\n                currency: USD\n                isActive: true\n                rateGroups: [\n\t\t\t\t\t\t\t\t  {\n                    carrierServiceId: &quot;gid://shopify/DeliveryCarrierService/987&quot;\n                    autoIncludeNewServices: true\n                    percentageAdjustment: 10\n                  }\n\t\t\t\t\t\t\t]\n            }\n          ]\n        }\n      }\n    }\n  ) {\n    market {\n      id\n    }\n    userErrors {\n      field\n      message\n    }\n  }\n}\n</code></pre>\n<h2>Example: Update an existing flat-rate shipping option</h2>\n<p>Use <code>optionDefinitionsToUpdate</code> with the option ID. For flat-rate options, you can also update individual rate groups.</p>\n<pre><code>mutation {\n  marketUpdate(\n    id: &quot;gid://shopify/Market/123&quot;\n    input: {\n      delivery: {\n        shipping: {\n          optionDefinitionsToUpdate: [\n            {\n              flatRate: {\n                id: &quot;gid://shopify/DeliveryFlatRateOptionDefinition/456&quot;\n                name: &quot;Standard Delivery&quot;\n                isActive: true\n                rateGroupsToUpdate: [\n                  {\n                    id: &quot;gid://shopify/DeliveryFlatRateGroup/789&quot;\n                    rate: {\n                      price: { amount: &quot;6.99&quot;, currencyCode: USD }\n                      transitTimeMinSeconds: 432000\n                      transitTimeMaxSeconds: 604800\n                    }\n                  }\n                ]\n              }\n            }\n          ]\n        }\n      }\n    }\n  ) {\n    market {\n      id\n    }\n    userErrors {\n      field\n      message\n    }\n  }\n}\n</code></pre>\n<h2>Example: Delete a shipping option</h2>\n<p>Use <code>optionDefinitionsToDelete</code> with the shipping option ID.</p>\n<pre><code>mutation {\n  marketUpdate(\n    id: &quot;gid://shopify/Market/123&quot;\n    input: {\n      delivery: {\n        shipping: {\n          optionDefinitionsToDelete: [\n            &quot;gid://shopify/DeliveryFlatRateOptionDefinition/456&quot;\n          ]\n        }\n      }\n    }\n  ) {\n    market {\n      id\n    }\n    userErrors {\n      field\n      message\n    }\n  }\n}\n</code></pre>\n<h2>Related docs</h2>\n<p>Core objects and interfaces:</p>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/objects/Market\" target=\"_blank\" class=\"body-link\"><code>Market</code></a>  </li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/objects/MarketDeliveryConfigurations\" target=\"_blank\" class=\"body-link\"><code>MarketDeliveryConfigurations</code></a>  </li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/objects/ShippingConfiguration\" target=\"_blank\" class=\"body-link\"><code>ShippingConfiguration</code></a>  </li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/interfaces/DeliveryOptionDefinition\" target=\"_blank\" class=\"body-link\"><code>DeliveryOptionDefinition</code></a>  </li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/objects/DeliveryFlatRateOptionDefinition\" target=\"_blank\" class=\"body-link\"><code>DeliveryFlatRateOptionDefinition</code></a>  </li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/objects/DeliveryValueBasedOptionDefinition\" target=\"_blank\" class=\"body-link\"><code>DeliveryValueBasedOptionDefinition</code></a>  </li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/objects/DeliveryWeightBasedOptionDefinition\" target=\"_blank\" class=\"body-link\"><code>DeliveryWeightBasedOptionDefinition</code></a>  </li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/objects/DeliveryCarrierCalculatedOptionDefinition\" target=\"_blank\" class=\"body-link\"><code>DeliveryCarrierCalculatedOptionDefinition</code></a></li>\n</ul>\n<p>Rate groups, rates, and conditions:</p>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/interfaces/DeliveryOptionDefinitionRateGroup\" target=\"_blank\" class=\"body-link\"><code>DeliveryOptionDefinitionRateGroup</code></a>  </li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/objects/DeliveryFlatRateGroup\" target=\"_blank\" class=\"body-link\"><code>DeliveryFlatRateGroup</code></a>  </li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/objects/DeliveryValueBasedRateGroup\" target=\"_blank\" class=\"body-link\"><code>DeliveryValueBasedRateGroup</code></a>  </li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/objects/DeliveryWeightBasedRateGroup\" target=\"_blank\" class=\"body-link\"><code>DeliveryWeightBasedRateGroup</code></a>  </li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/objects/DeliveryCarrierCalculatedRateGroup\" target=\"_blank\" class=\"body-link\"><code>DeliveryCarrierCalculatedRateGroup</code></a>  </li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/interfaces/DeliveryRate\" target=\"_blank\" class=\"body-link\"><code>DeliveryRate</code></a>  </li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/objects/DeliveryRateGroupConditions\" target=\"_blank\" class=\"body-link\"><code>DeliveryRateGroupConditions</code></a></li>\n</ul>\n<p>Mutations and inputs:</p>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/mutations/marketCreate\" target=\"_blank\" class=\"body-link\"><code>marketCreate</code></a>  </li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/mutations/marketUpdate\" target=\"_blank\" class=\"body-link\"><code>marketUpdate</code></a>  </li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/input-objects/MarketCreateInput\" target=\"_blank\" class=\"body-link\"><code>MarketCreateInput</code></a>  </li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/input-objects/MarketUpdateInput\" target=\"_blank\" class=\"body-link\"><code>MarketUpdateInput</code></a>  </li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/input-objects/MarketDeliveryConfigurationsCreateInput\" target=\"_blank\" class=\"body-link\"><code>MarketDeliveryConfigurationsCreateInput</code></a>  </li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/input-objects/MarketDeliveryConfigurationsUpdateInput\" target=\"_blank\" class=\"body-link\"><code>MarketDeliveryConfigurationsUpdateInput</code></a>  </li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/input-objects/ShippingConfigurationCreateInput\" target=\"_blank\" class=\"body-link\"><code>ShippingConfigurationCreateInput</code></a>  </li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/input-objects/ShippingConfigurationUpdateInput\" target=\"_blank\" class=\"body-link\"><code>ShippingConfigurationUpdateInput</code></a>  </li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/input-objects/DeliveryOptionDefinitionCreateInput\" target=\"_blank\" class=\"body-link\"><code>DeliveryOptionDefinitionCreateInput</code></a>  </li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/unstable/input-objects/DeliveryOptionDefinitionUpdateInput\" target=\"_blank\" class=\"body-link\"><code>DeliveryOptionDefinitionUpdateInput</code></a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "マーケット単位での配送設定を可能にする Admin API",
+          "summarizedJa": "2026-07バージョンから、GraphQL Admin APIでマーケット単位での配送設定が可能になりました。これにより、別々の配送プロファイルを作成することなく、マーケットごとに異なる配送戦略を設定できます。固定料金、カート金額ベース、重量ベース、配送業者計算の4種類の配送オプションをサポートし、marketCreateおよびmarketUpdateミューテーションを通じて設定を管理します。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-07-02T00:24:06.409Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 5902,
+            "output": 243
+          },
+          "estimatedCost": 0.021351
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "マーケット別配送設定Admin API",
+          "summarizedJa": "このアップデートにより、ShopifyのAdmin GraphQL APIを通じてマーケット（国や地域）ごとに配送設定を直接管理できるようになります。マーチャントは、固定料金、金額別、重量別、キャリア計算など、各マーケットの特性に合わせた柔軟な配送戦略を構築可能です。パートナーは、このAPIを活用して、よりきめ細やかな国際配送ソリューションを開発・提供できるようになります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 17,
+          "analyzedAt": "2026-07-02T00:24:13.873Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 4772,
+            "output": 152
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-hydrogen-now-deploys-to-vercel",
       "source": "developer-changelog",
