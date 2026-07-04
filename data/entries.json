@@ -1,6 +1,110 @@
 {
-  "lastUpdated": "2026-07-02T00:21:55.167Z",
+  "lastUpdated": "2026-07-04T01:24:45.283Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-markets-apis-now-support-marketregionsubdivision",
+      "source": "developer-changelog",
+      "title": "[DRAFT] Markets APIs now support MarketRegionSubdivision ",
+      "link": "https://shopify.dev/changelog/markets-apis-now-support-marketregionsubdivision",
+      "publishedAt": "2026-07-03T16:00:00.000Z",
+      "collectedAt": "2026-07-04T01:24:44.110Z",
+      "category": [
+        "API",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p><strong>Sub-region Markets are available in the Admin GraphQL API <code>2026-07</code> release candidate</strong></p>\n<p>Apps using Admin GraphQL <code>2026-07</code> can encounter Markets configured with country-subdivision regions, such as states and provinces as merchants upgrade to market-driven shipping.</p>\n<p>Use <code>MarketRegionSubdivision</code> as the stable country-subdivision region type, and read sub-region membership through <code>market.conditions.regionsCondition.regions</code>. Do not use deprecated <code>market.regions</code> as the source of truth for sub-region membership, because it may omit subdivision regions.</p>\n<p>Sub-region Markets support shipping first. Other configurations including Discounts, Catalogs, Theme contextualization, Market metafields, are not yet supported. Unsupported API paths will return validation errors instead of allowing unsupported configurations.</p>\n<p>Shipping apps can get more informtion in the dedicated <a href=\"https://shopify.dev/docs/apps/build/orders-fulfillment/market-driven-shipping/upgrade-your-app\" target=\"_blank\" class=\"body-link\">shipping upgrade guide</a></p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Markets APIが国内のサブリージョン（州・都道府県）に対応",
+          "summarizedJa": "Admin GraphQL API 2026-07から、Marketsで州や都道府県などの国内サブリージョンの設定が可能になりました。アプリ開発者は新しい`MarketRegionSubdivision`型を使用し、`market.conditions.regionsCondition.regions`からサブリージョン情報を取得する必要があります。現時点ではマーケット主導の配送のみがサポートされ、ディスカウントやカタログなど他の機能はまだ未対応です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-07-04T01:24:51.207Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1211,
+            "output": 254
+          },
+          "estimatedCost": 0.007443
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "[ドラフト] Markets APIがMarketRegionSubdivisionに対応",
+          "summarizedJa": "ShopifyのMarkets APIが、国の下位区分（都道府県など）を対象としたマーケット設定に対応しました。これにより、アプリはより詳細な地域設定を持つマーケットを扱えるようになります。現時点では主に配送設定に利用可能で、他の機能（割引、カタログなど）への対応は今後となります。パートナーは、新しいAPIフィールド`MarketRegionSubdivision`と`market.conditions.regionsCondition.regions`を使用して、この機能に対応する必要があります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 17,
+          "analyzedAt": "2026-07-04T01:24:58.187Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 893,
+            "output": 170
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-orderdisplayfulfillmentstatus-now-returns-fulfillmentnotrequired",
+      "source": "developer-changelog",
+      "title": "OrderDisplayFulfillmentStatus now returns FULFILLMENT_NOT_REQUIRED for orders with no items to fulfill",
+      "link": "https://shopify.dev/changelog/orderdisplayfulfillmentstatus-now-returns-fulfillmentnotrequired",
+      "publishedAt": "2026-07-03T16:00:00.000Z",
+      "collectedAt": "2026-07-04T01:24:44.110Z",
+      "category": [
+        "API",
+        "Update",
+        "Admin GraphQL API",
+        "2026-10"
+      ],
+      "description": " <div class=\"\"><p>As of API version 2026-10, the <code>OrderDisplayFulfillmentStatus</code> enum can return a new value: <code>FULFILLMENT_NOT_REQUIRED</code>. It is returned for orders that are not fulfilled but have no items remaining to fulfill — for example, an order that was fully cancelled or fully refunded before any items were fulfilled. Previously, these orders returned <code>UNFULFILLED</code>.</p>\n<p>This is a backward-compatible, additive change: integrations that already handle unrecognized enum values gracefully don't need to do anything. As with all GraphQL enums, treat the set of values as open — new values may be added in future versions.</p>\n<p><strong>What's changing</strong></p>\n<ul>\n<li><code>Order.displayFulfillmentStatus</code> (and any field typed as <code>OrderDisplayFulfillmentStatus</code>) may return <code>FULFILLMENT_NOT_REQUIRED</code> on API version 2026-10 and later.</li>\n<li>This value represents an order whose remaining fulfillable quantity is zero — for example, all line item quantities were removed through order edits, or the order was closed by cancellation.</li>\n<li>API versions earlier than 2026-10 are unchanged and continue to return <code>UNFULFILLED</code> for these orders.</li>\n</ul>\n<p><strong>Why</strong>\nThe <code>UNFULFILLED</code> status was misleading for orders that have nothing left to fulfill. <code>FULFILLMENT_NOT_REQUIRED</code> makes the order's true state clear to merchants and to the apps that read it.</p>\n<p><strong>What you may need to do</strong></p>\n<ul>\n<li>If your app exhaustively maps <code>OrderDisplayFulfillmentStatus</code> values (switch statements, status-to-label/badge maps, or generated types), add handling for <code>FULFILLMENT_NOT_REQUIRED</code> when you adopt 2026-10.</li>\n<li>If your app branches on or filters by <code>UNFULFILLED</code>, note that orders with no fulfillable items report <code>FULFILLMENT_NOT_REQUIRED</code> instead on 2026-10 and later.</li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "OrderDisplayFulfillmentStatusで、フルフィルメント不要な注文に対してFULFILLMENT_NOT_REQUIREDを返すように変更",
+          "summarizedJa": "APIバージョン2026-10以降、フルフィルメントすべき商品が残っていない注文（全キャンセルや全額返金された注文など）に対して、OrderDisplayFulfillmentStatusが従来の「UNFULFILLED（未フルフィルメント）」ではなく「FULFILLMENT_NOT_REQUIRED（フルフィルメント不要）」を返すようになります。この変更は後方互換性があり、アプリ側でswitch文やステータスマッピングを使用している場合は新しい値への対応が必要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-07-04T01:25:04.101Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1504,
+            "output": 293
+          },
+          "estimatedCost": 0.008907
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "OrderDisplayFulfillmentStatusが、フルフィルメント不要な注文に対して「FULFILLMENT_NOT_REQUIRED」を返すように変更",
+          "summarizedJa": "ShopifyのAPIバージョン2026-10以降、注文のフルフィルメントステータスに「FULFILLMENT_NOT_REQUIRED」という新しい値が追加されます。これにより、キャンセルや返金などで出荷すべき商品が残っていない注文は、以前の「UNFULFILLED」ではなく、より正確な「フルフィルメント不要」と表示されるようになります。アプリ開発者は、この新しいステータスに対応するため、アプリのロジックや表示の更新を検討する必要があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-07-04T01:25:11.443Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1131,
+            "output": 196
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-shop-minis-may-june-2026-update",
       "source": "developer-changelog",
