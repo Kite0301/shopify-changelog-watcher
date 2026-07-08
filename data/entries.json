@@ -1,6 +1,210 @@
 {
-  "lastUpdated": "2026-07-07T01:42:08.251Z",
+  "lastUpdated": "2026-07-08T01:16:20.289Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-see-your-pos-selling-environment-health-at-a-glance",
+      "source": "shopify-changelog",
+      "title": "See your POS selling environment health at a glance ",
+      "link": "https://changelog.shopify.com/posts/see-your-pos-selling-environment-health-at-a-glance",
+      "publishedAt": "2026-07-07T18:00:00.000Z",
+      "collectedAt": "2026-07-08T01:16:20.277Z",
+      "category": [
+        "Pos"
+      ],
+      "description": "\n        <p>The connectivity screen in the POS app has been updated to now give a single view of your selling environment health: internet connection, Shopify service status, and hardware connection health. When something is degraded, the panel offers next-best actions, such as guidance on enabling offline checkout, so you can keep selling.</p>\n\n<p>Automatically available in POS v11.10. Access the Connectivity screen by hitting the associated icon on the bottom left of the Shopify POS app.</p>\n\n<p>Learn more about the <a href=\"https://help.shopify.com/en/manual/sell-in-person/shopify-pos/troubleshooting#connectivity\">connectivity screen in POS</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "POS販売環境の健全性が一目で確認可能に",
+          "summarizedJa": "Shopify POSアプリの接続画面が更新され、インターネット接続、Shopifyサービスステータス、ハードウェア接続状態を一元的に確認できるようになりました。接続に問題が発生した際には、オフラインチェックアウトの有効化など、販売を継続するための具体的なアクションが提示されます。POS v11.10で自動的に利用可能で、アプリ左下のアイコンからアクセスできます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-07-08T01:16:25.873Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1076,
+            "output": 247
+          },
+          "estimatedCost": 0.006933
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "POS販売環境の健全性を一目で確認",
+          "summarizedJa": "Shopify POSアプリの接続性画面が更新され、インターネット接続、Shopifyサービス状況、ハードウェア接続の健全性を一目で確認できるようになりました。これにより、販売環境の状態を素早く把握し、問題発生時にはオフライン決済の有効化など、販売を継続するための具体的なガイダンスが得られます。この機能はPOS v11.10で自動的に利用可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-07-08T01:16:31.154Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 784,
+            "output": 153
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-new-and-updated-staff-permissions-for-payments-payouts-disputes-and-tax-documents",
+      "source": "shopify-changelog",
+      "title": "New and updated staff permissions for payments, payouts, disputes, and tax documents",
+      "link": "https://changelog.shopify.com/posts/new-and-updated-staff-permissions-for-payments-payouts-disputes-and-tax-documents",
+      "publishedAt": "2026-07-07T16:00:00.000Z",
+      "collectedAt": "2026-07-08T01:16:20.277Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>We've released four new staff permissions, giving you more granular control over who on your team can access information and manage settings. You can now grant staff only the access they need to do their job, without sharing full account capabilities. The new permissions are:<br>\n* Manage payments settings<br>\n* Manage disputes<br>\n* View payouts<br>\n* View tax documents</p>\n\n<p>These are rolling out now and can be assigned to a staff member's role in Settings → Users → Roles → Permissions. </p>\n\n<p>Learn more about staff roles and permissions in the <a href=\"https://help.shopify.com/en/manual/your-account/users/roles/permissions/store-permissions\">Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "支払い、ペイアウト、チャージバック、税務書類に関する新規および更新されたスタッフ権限",
+          "summarizedJa": "4つの新しいスタッフ権限が追加され、チームメンバーのアクセス権限をより細かく制御できるようになりました。「支払い設定の管理」「チャージバックの管理」「ペイアウトの閲覧」「税務書類の閲覧」の権限を、設定→ユーザー→役割→権限から個別に割り当てることが可能です。これにより、スタッフに必要な権限のみを付与し、セキュリティを強化できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-07-08T01:16:35.913Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1100,
+            "output": 277
+          },
+          "estimatedCost": 0.007455
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "支払い、ペイアウト、チャージバック、税務書類に関するスタッフ権限の新規追加と更新",
+          "summarizedJa": "Shopifyは、支払い、ペイアウト、チャージバック、税務書類に関する4つの新しいスタッフ権限をリリースしました。これにより、マーチャントはチームメンバーのアクセス権限をより詳細に制御できるようになります。これらの権限は「設定 → ユーザー → 役割 → 権限」からスタッフの役割に割り当て可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-07-08T01:16:42.521Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 818,
+            "output": 158
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-shopify-flow-changes-to-action-extensions-result-in-fewer-breaking-changes",
+      "source": "developer-changelog",
+      "title": "Shopify Flow: Changes to Action extensions result in fewer breaking changes",
+      "link": "https://shopify.dev/changelog/shopify-flow-changes-to-action-extensions-result-in-fewer-breaking-changes",
+      "publishedAt": "2026-07-07T16:00:00.000Z",
+      "collectedAt": "2026-07-08T01:16:19.025Z",
+      "category": [
+        "Tools",
+        "Update",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>Your server-side code now has more control over how breaking changes to an action’s configuration fields are handled. Instead of failing validation when there’s a field mismatch, workflows that use older versions of an action will continue to execute, and Shopify will still send the request to the configured endpoint URL. Your server can then decide how to handle schema differences: for example, it can set default values for new required fields, ignore fields that were removed, or reject the request.</p>\n<h2>Why it’s changing</h2>\n<p>Previously, any change to an action’s configuration fields was treated as a breaking change in merchant workflows. Runtime validation would fail, and Shopify wouldn’t send the request to the partner server. For example, if a new required field was added or an existing field was removed, any workflows using an older version of that action would always fail and never reach your endpoint.</p>\n<p>With this change, those workflows continue to run, and your endpoint receives the request even when the payload is based on an older configuration.</p>\n<h2>What you need to do</h2>\n<p>Your action’s endpoint may now receive payloads that don’t exactly match the action’s current configuration, but instead match a previous version that merchants are still using in their workflows. Make sure your endpoint can safely handle:</p>\n<ul>\n<li>Missing fields that have become required in newer versions</li>\n<li>Extra fields that existed in older versions but have since been removed</li>\n<li>Any other unexpected fields or schema differences</li>\n</ul>\n<p>Typical strategies include applying sensible defaults for missing fields, ignoring unknown or legacy fields, or returning a clear error response when the payload can’t be processed safely.</p>\n<p>For more details on how requests are sent and executed, see <a href=\"https://shopify.dev/docs/apps/build/flow/actions/endpoints#flow-action-execution\" target=\"_blank\" class=\"body-link\">Flow action execution</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify Flow: アクション拡張機能の変更により破壊的変更が削減",
+          "summarizedJa": "Shopify Flowのアクション設定フィールドに変更があった場合でも、古いバージョンを使用するワークフローが実行され続け、リクエストがパートナーサーバーに送信されるようになりました。これにより、サーバー側で新しい必須フィールドのデフォルト値設定や削除されたフィールドの無視など、スキーマの差異を柔軟に処理できるようになります。開発者は、異なるバージョンの設定に基づくペイロードを適切に処理できるよう、エンドポイントの実装を見直す必要があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-07-08T01:16:48.782Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1384,
+            "output": 295
+          },
+          "estimatedCost": 0.008577000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify Flow: アクション拡張機能の変更により、破壊的変更が減少",
+          "summarizedJa": "Shopify Flowのアクション拡張機能が変更され、アクションの構成フィールドに互換性のない変更があった場合でも、ワークフローが中断されにくくなりました。以前はフィールドの不一致で実行が停止していましたが、今後はパートナーのエンドポイントにリクエストが送信され続けます。パートナーは、古いバージョンのアクションを使用しているワークフローからのリクエストを適切に処理できるよう、エンドポイント側でスキーマ差異（欠落フィールド、余分なフィールドなど）に対応する必要があります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-07-08T01:16:56.681Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1073,
+            "output": 185
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-shopify-flow-action-runtime-urls-now-update-automatically",
+      "source": "developer-changelog",
+      "title": "Shopify Flow: Action runtime URLs now update automatically",
+      "link": "https://shopify.dev/changelog/shopify-flow-action-runtime-urls-now-update-automatically",
+      "publishedAt": "2026-07-07T16:00:00.000Z",
+      "collectedAt": "2026-07-08T01:16:19.025Z",
+      "category": [
+        "Tools",
+        "Update",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>Shopify Flow now resolves an action’s <code>runtime_url</code> on every execution. When the <code>runtime_url</code> is changed and the app is redeployed, the new URL is automatically used by existing workflows the next time they run. Merchants no longer need to edit or re-save their workflows to use the updated URL.</p>\n<p>During local development, when you use <code>shopify app dev</code>, the <code>runtime_url</code> is also updated automatically in any development shops that have workflows using the action. This mirrors the behavior in production.</p>\n<h2>Why it’s changing</h2>\n<p>Previously, the <code>runtime_url</code> for a Shopify Flow action was hard-coded into the workflow at the time it was activated. As a result, changes to an extension’s <code>runtime_url</code> only took effect after a merchant reactivated (re-saved) the affected workflow. Because merchants might not do this frequently, existing workflows could continue calling an outdated <code>runtime_url</code>.</p>\n<h2>What you need to do</h2>\n<p>No action is required. However, if you previously relied on an action’s <code>runtime_url</code> remaining fixed for a workflow until it was reactivated, be aware that updates now propagate to existing workflows automatically.</p>\n<p>For more details, see <a href=\"https://shopify.dev/docs/apps/build/flow/actions/endpoints\" target=\"_blank\" class=\"body-link\">Create Flow action endpoints</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify Flow: アクションのランタイムURLが自動更新されるように",
+          "summarizedJa": "Shopify Flowのアクションで使用される`runtime_url`が、実行時に毎回解決されるようになりました。アプリの再デプロイ時にURLが変更された場合、既存のワークフローは次回実行時に自動的に新しいURLを使用するため、マーチャントがワークフローを編集・再保存する必要がなくなります。ローカル開発時も同様の動作となり、開発ストアのワークフローでも自動更新されます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-07-08T01:17:01.697Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1294,
+            "output": 252
+          },
+          "estimatedCost": 0.007662
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify Flow: アクションのランタイムURLが自動的に更新されるように",
+          "summarizedJa": "Shopify Flowにおいて、アクションの`runtime_url`が実行ごとに自動的に解決されるようになりました。これにより、アプリの再デプロイやURLの変更があった場合でも、マーチャントが既存のワークフローを再保存することなく、新しいURLが自動的に適用されます。パートナーは、URLの変更がワークフローに即座に反映されるようになったことを認識しておく必要があります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-07-08T01:17:05.901Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 969,
+            "output": 160
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-updated-app-store-requirements-13-always-use-honest-and-transparent-review-practices",
       "source": "developer-changelog",
@@ -205,6 +409,59 @@
           "tokenUsage": {
             "input": 1131,
             "output": 196
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-deprecating-the-usebuyerjourneyintercept-api-on-checkout-ui-extensions",
+      "source": "developer-changelog",
+      "title": "Deprecating the useBuyerJourneyIntercept API on checkout UI extensions",
+      "link": "https://shopify.dev/changelog/deprecating-the-usebuyerjourneyintercept-api-on-checkout-ui-extensions",
+      "publishedAt": "2026-07-02T16:00:00.000Z",
+      "collectedAt": "2026-07-08T01:16:19.025Z",
+      "category": [
+        "Action Required",
+        "Polaris",
+        "Deprecation Announcement",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>Starting in version <code>2026-07</code>, the <a href=\"https://shopify.dev/docs/api/checkout-ui-extensions/latest/target-apis/checkout-apis/buyer-journey-api#useBuyerJourneyIntercept\" target=\"_blank\" class=\"body-link\"><code>useBuyerJourneyIntercept</code></a> hook on checkout UI extensions, and the <a href=\"https://shopify.dev/docs/apps/build/checkout/capabilities#block-progress\" target=\"_blank\" class=\"body-link\"><code>block_progress</code></a> capability it depends on, are deprecated. Existing extensions will continue to work on current and prior API versions, but this API will be <strong>removed in a future version</strong>, so you should plan to migrate.</p>\n<p>If you currently use <code>useBuyerJourneyIntercept</code> to enforce merchant business rules, migrate to a <a href=\"https://shopify.dev/docs/api/functions/latest/cart-and-checkout-validation\" target=\"_blank\" class=\"body-link\">cart and checkout validation Function</a>. These Functions run server-side and apply your rules consistently across all checkout surfaces, including express wallets and agentic checkout.</p>\n<p>If you use <code>useBuyerJourneyIntercept</code> to reject discount codes, migrate that logic to the discount Function API, which <a href=\"https://shopify.dev/changelog/discount-rejection-support-for-discount-functions\" target=\"_blank\" class=\"body-link\">now supports rejecting discount codes with a custom message</a>.</p>\n<p>The following are deprecated:</p>\n<ul>\n<li><code>useBuyerJourneyIntercept</code> (Preact hook) in checkout UI extensions</li>\n<li>The <code>block_progress</code> capability in the extension’s <code>shopify.extension.toml</code> configuration file</li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "チェックアウトUI拡張機能のuseBuyerJourneyIntercept APIの非推奨化",
+          "summarizedJa": "2026-07バージョンから、チェックアウトUI拡張機能の`useBuyerJourneyIntercept`フックと`block_progress`機能が非推奨となり、将来のバージョンで削除されます。現在この機能を使用してビジネスルールを適用している場合は、サーバーサイドで動作するカート・チェックアウト検証Functionへの移行が必要です。ディスカウントコードの拒否機能を使用している場合は、カスタムメッセージをサポートするようになったディスカウントFunction APIへの移行を検討してください。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 5
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-07-08T01:17:11.347Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1422,
+            "output": 292
+          },
+          "estimatedCost": 0.008646000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "チェックアウトUI拡張機能におけるuseBuyerJourneyIntercept APIの非推奨化",
+          "summarizedJa": "Shopifyは、チェックアウトUI拡張機能で利用される`useBuyerJourneyIntercept` APIおよび`block_progress`機能を非推奨化します。これは2026年7月以降に適用され、将来的に完全に削除される予定です。現在このAPIを使用している開発者は、ビジネスルールの適用にはカート・チェックアウト検証Functionへ、割引コードの拒否には割引Function APIへの移行が必要です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 5
+          },
+          "totalScore": 17,
+          "analyzedAt": "2026-07-08T01:17:18.746Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1054,
+            "output": 165
           },
           "estimatedCost": 0
         }
