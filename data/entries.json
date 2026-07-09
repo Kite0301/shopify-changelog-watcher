@@ -1,6 +1,110 @@
 {
-  "lastUpdated": "2026-07-08T01:16:20.289Z",
+  "lastUpdated": "2026-07-09T01:24:18.256Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-security-update-shopify-mobile-app-ios-android",
+      "source": "shopify-changelog",
+      "title": "Security update Shopify Mobile App on Android",
+      "link": "https://changelog.shopify.com/posts/security-update-shopify-mobile-app-ios-android",
+      "publishedAt": "2026-07-08T18:00:00.000Z",
+      "collectedAt": "2026-07-09T01:24:18.244Z",
+      "category": [
+        "Mobile"
+      ],
+      "description": "\n        <p><strong>What's changing:</strong><br>\n* All users must update to the latest version of the app.<br>\n* Minimum OS requirement: The app now requires Android 11 or later.</p>\n\n<p>If your device runs Android 10 or earlier, you can still manage your store at admin.shopify.com from any mobile browser.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify Androidアプリのセキュリティアップデート",
+          "summarizedJa": "Shopify Androidアプリのセキュリティアップデートにより、全ユーザーは最新バージョンへの更新が必須となります。最小OS要件がAndroid 11以降に引き上げられ、Android 10以前の端末では、モバイルブラウザからadmin.shopify.comにアクセスしてストア管理を行う必要があります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-07-09T01:24:25.549Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 989,
+            "output": 211
+          },
+          "estimatedCost": 0.006132
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopifyモバイルアプリ（Android版）のセキュリティアップデート",
+          "summarizedJa": "Android版Shopifyモバイルアプリのセキュリティアップデートがリリースされました。すべてのユーザーは最新バージョンへの更新が必須となり、アプリの最低OS要件がAndroid 11以降に変更されます。Android 10以前のデバイスを使用しているマーチャントは、引き続きモバイルブラウザからadmin.shopify.comでストアを管理できます。",
+          "scores": {
+            "merchantImpact": 5,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-07-09T01:24:30.434Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 709,
+            "output": 144
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-pos-ui-extensions-2026-07-uses-per-unit-fixed-amount-line-item-discounts",
+      "source": "developer-changelog",
+      "title": "POS UI extensions 2026-07 uses per-unit fixed-amount line item discounts",
+      "link": "https://shopify.dev/changelog/pos-ui-extensions-2026-07-uses-per-unit-fixed-amount-line-item-discounts",
+      "publishedAt": "2026-07-08T16:00:00.000Z",
+      "collectedAt": "2026-07-09T01:24:17.345Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Breaking API Change",
+        "POS Extensions",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>Starting with POS UI extensions API version 2026-07, <code>FixedAmount</code> line item discounts passed to <code>setLineItemDiscount</code> and <code>bulkSetLineItemDiscounts</code> from the Cart API must represent a per-unit discount.</p>\n<h2>Why it's changing</h2>\n<p>In API version 2026-04 and earlier, apps could pass a total fixed discount for the entire line item, and Shopify POS automatically converted it to a per-unit value. In API version 2026-07, this conversion no longer occurs. The value you pass is interpreted directly as the discount applied to each unit in the line item.</p>\n<p>For example, in API version 2026-07, if you pass <code>'5.00'</code> on a line item with quantity 2, POS applies a $5.00 discount to each unit, for a $10.00 total discount. To apply a $5.00 total discount to a line item with quantity 2, you must instead pass <code>'2.50'</code> as the per-unit discount.</p>\n<h2>What you need to do</h2>\n<p>This change only affects <code>FixedAmount</code> line item discounts. Percentage discounts are not affected. Apps using API version 2026-04 or earlier do not need to make any changes.</p>\n<p>Apps adopting API version 2026-07 must update their discount calculations before using the new version. If your app currently calculates discounts as a total line discount, compute the per-unit discount before calling <code>setLineItemDiscount</code> or <code>bulkSetLineItemDiscounts</code> — for example, by dividing the total discount by the line item quantity.</p>\n<p>If the total discount does not divide evenly by the line item quantity, choose a rounded per-unit value that matches your app’s intended discount behavior and ensures the final discount is consistent with your logic.</p>\n<p>For more information, see the <a href=\"https://shopify.dev/docs/api/pos-ui-extensions/2026-07/target-apis/contextual-apis/cart-api\" target=\"_blank\" class=\"body-link\">Cart API reference</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "POS UI拡張機能 2026-07では単位あたりの固定金額による商品割引を使用",
+          "summarizedJa": "2026-07バージョンから、POS UI拡張機能のCart APIにおける固定金額の商品割引の扱いが変更されます。これまでは商品全体の割引額を指定していましたが、新バージョンでは単位あたりの割引額として解釈されるようになります。POS UI拡張機能を開発しているパートナーは、2026-07を採用する前に割引計算ロジックの更新が必要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-07-09T01:24:35.558Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1494,
+            "output": 251
+          },
+          "estimatedCost": 0.008246999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "POS UI拡張機能 2026-07: 固定金額ラインアイテム割引が単価ベースに変更",
+          "summarizedJa": "Shopify POS UI拡張機能のAPIバージョン2026-07以降、`FixedAmount`のラインアイテム割引は、合計金額ではなく「商品ごとの単価割引」として扱われるようになります。以前のバージョンでは合計割引額を自動変換していましたが、今後はアプリ側で単価割引額を計算して渡す必要があります。この変更は、バージョン2026-07以降を採用するアプリに影響し、割引計算ロジックの更新が必須となります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-07-09T01:24:40.645Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1184,
+            "output": 192
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-see-your-pos-selling-environment-health-at-a-glance",
       "source": "shopify-changelog",
