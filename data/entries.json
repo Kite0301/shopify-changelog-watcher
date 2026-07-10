@@ -1,6 +1,162 @@
 {
-  "lastUpdated": "2026-07-09T01:24:18.256Z",
+  "lastUpdated": "2026-07-10T01:21:38.045Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-pos-extensions-now-supports-a-background-extension-target",
+      "source": "developer-changelog",
+      "title": "POS Extensions now supports a background extension target",
+      "link": "https://shopify.dev/changelog/pos-extensions-now-supports-a-background-extension-target",
+      "publishedAt": "2026-07-09T19:00:00.000Z",
+      "collectedAt": "2026-07-10T01:21:36.595Z",
+      "category": [
+        "API",
+        "New",
+        "POS Extensions",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>The <code>pos.app.ready.data</code> target runs for the entire POS session, letting your extension observe POS events and run background logic without rendering any UI surface. Use it for event observation, data storage, and calling non-visual background APIs.</p>\n<h2>What you need to do</h2>\n<p>Subscribe to Shopify POS events with <code>shopify.addEventListener()</code>:</p>\n<pre><code class=\"language-js\">shopify.addEventListener('transactioncomplete', (event) =&gt; {\n  console.log('Transaction complete', event);\n});\n</code></pre>\n<h2>Supported events</h2>\n<p>Supported events include:</p>\n<ul>\n<li><code>transactioncomplete</code></li>\n<li><code>cashtrackingsessionstart</code></li>\n<li><code>cashtrackingsessioncomplete</code></li>\n</ul>\n<p> For comprehensive details and best practices, refer to the <a href=\"https://shopify.dev/docs/api/pos-ui-extensions/latest/targets/app-background\" target=\"_blank\" class=\"body-link\">app background target documentation</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "POS Extensionsがバックグラウンド拡張ターゲットに対応",
+          "summarizedJa": "Shopify POSの拡張機能において、UIを表示せずにバックグラウンドでイベント監視やロジック実行が可能な`pos.app.ready.data`ターゲットが追加されました。取引完了やキャッシュトラッキングセッションなどのPOSイベントを監視し、バックグラウンドでデータ処理やAPI呼び出しが行えます。この機能により、POS拡張機能の開発の幅が大きく広がります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-07-10T01:21:44.861Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1217,
+            "output": 255
+          },
+          "estimatedCost": 0.007476
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "POS拡張機能がバックグラウンド拡張ターゲットをサポート",
+          "summarizedJa": "Shopify POS拡張機能が、UIを表示せずにバックグラウンドでロジックを実行できる「バックグラウンド拡張ターゲット」をサポートしました。これにより、POSセッション全体でイベント監視（例: 取引完了）やデータ保存、非視覚的なAPI呼び出しが可能になり、より高度なPOSアプリ開発が可能になります。パートナーは、この機能を利用して、より洗練されたPOS連携アプリを構築できるようになります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-07-10T01:21:48.721Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 880,
+            "output": 164
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-identity-verification-for-partners",
+      "source": "developer-changelog",
+      "title": "Identity verification for Shopify Partners starts today",
+      "link": "https://shopify.dev/changelog/identity-verification-for-partners",
+      "publishedAt": "2026-07-09T17:15:00.000Z",
+      "collectedAt": "2026-07-10T01:21:36.595Z",
+      "category": [
+        "Action Required",
+        "Platform",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>Trust is foundational to the Shopify Partner ecosystem. Partners take actions across Shopify that can directly affect merchants, and merchants need confidence when granting access to their stores. We’re introducing identity verification for partners to help protect merchants, reduce abuse, and make it harder for bad actors to operate, while creating a better experience for legitimate partners.</p>\n<h2>What changed</h2>\n<p>Starting today, Shopify Partners can complete identity verification before requesting collaborator access to merchant stores. Identity verification is optional today and will become mandatory in the coming weeks before sending a new collaborator request.</p>\n<p>For this launch:</p>\n<ul>\n<li>Identity verification applies to sending new collaborator requests. Every user in your partner organization sending a new collaboration will need to verify their identity.</li>\n<li>Identity verification isn’t required just to access collaborator shops where a merchant has already granted access.</li>\n<li>Verification is completed through Stripe and requires a government-issued photo ID and a selfie or liveness check.</li>\n</ul>\n<p>We’re starting with collaborator requests because collaborator access is one of the clearest trust moments between merchants and partners. When a merchant approves a collaborator request, they’re giving a partner access to a live store.</p>\n<h2>Action required</h2>\n<p>If you or anyone in your partner organization sends collaborator requests, complete identity verification on the Request collaborations page in the Dev Dashboard.</p>\n<p>Identity verification is optional today, but we recommend completing it now to avoid interruption when it becomes mandatory in the coming weeks. After enforcement begins, unverified users won’t be able to send new collaborator requests until they complete verification.</p>\n<p>To prepare:</p>\n<ul>\n<li>Complete identity verification before sending new collaborator requests.</li>\n<li>Make sure every user in your partner organization who requests collaborator access verifies their own identity.</li>\n<li>Have a government-issued photo ID ready, along with access to a device that can complete a selfie or liveness check.</li>\n<li>Review the related docs below for more context on identity verification and collaborator access.</li>\n</ul>\n<h2>Related docs</h2>\n<ul>\n<li><a href=\"https://help.shopify.com/en/partners/manage-account/verifying-your-identity\" target=\"_blank\" class=\"body-link\">Verifying your identity as a Shopify Partner</a></li>\n<li><a href=\"https://help.shopify.com/en/partners/manage-clients-stores/working-on-client-stores#information-shared-with-merchants\" target=\"_blank\" class=\"body-link\">Collaborator requests: Information shared with merchants</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopifyパートナーの本人確認が本日より開始",
+          "summarizedJa": "Shopifyパートナーエコシステムの信頼性向上のため、本人確認制度が導入されます。現時点では任意ですが、数週間以内に、マーチャントストアへの新規コラボレーターアクセスをリクエストする際には本人確認が必須となります。本人確認はStripeを通じて行われ、政府発行の写真付き身分証明書とセルフィーまたは生体認証チェックが必要です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-07-10T01:21:54.135Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1550,
+            "output": 243
+          },
+          "estimatedCost": 0.008295
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopifyパートナー向け本人確認が本日より開始",
+          "summarizedJa": "Shopifyは、マーチャントの保護と不正行為の削減のため、本日よりパートナー向け本人確認を導入します。これは現在任意ですが、数週間以内に新しいコラボレーターリクエストを送信する際には必須となります。パートナー組織内でコラボレーターリクエストを送信する各ユーザーは、Stripeを通じて政府発行の身分証明書とセルフィーで本人確認を完了する必要があります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-07-10T01:22:00.342Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1180,
+            "output": 154
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-app-pricing-more-plans-no-charge-plan-testing-and-negative-and-fractional-app-events",
+      "source": "developer-changelog",
+      "title": "App Pricing: more plans, no-charge plan testing, and negative and fractional App Events",
+      "link": "https://shopify.dev/changelog/app-pricing-more-plans-no-charge-plan-testing-and-negative-and-fractional-app-events",
+      "publishedAt": "2026-07-09T16:00:00.000Z",
+      "collectedAt": "2026-07-10T01:21:36.595Z",
+      "category": [
+        "App store",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>We’ve made several updates to App Pricing:</p>\n<p><strong>Increased plan limits:</strong> You can now create up to 8 public plans (previously 4) and 15 private plans (previously 10) per app.</p>\n<p><strong>No-charge plan testing:</strong> Test app billing flows without generating real charges:</p>\n<ul>\n<li>During app review, reviewers can now select any of your existing plans, so you no longer need to create a dedicated test plan.</li>\n<li>In development stores, you can install your own apps and subscribe to any plan at no cost.</li>\n<li>Mark a plan as free to let other partners and developers install your app and test that plan in their own development stores.</li>\n</ul>\n<p><strong>Additional App Events support:</strong> The App Events API now accepts:</p>\n<ul>\n<li>Negative values, to adjust or credit previously reported event usage</li>\n<li>Fractional values, such as <code>1.5</code></li>\n</ul>\n<p>Previously, event values were limited to whole numbers greater than 0.</p>\n<p>For more details, see <a href=\"https://shopify.dev/docs/apps/launch/billing/shopify-app-pricing\" target=\"_blank\" class=\"body-link\">App pricing</a> and the <a href=\"https://shopify.dev/docs/apps/launch/billing/shopify-app-pricing/subscription-billing/build-billing-event#understand-the-request-fields\" target=\"_blank\" class=\"body-link\">App Events API reference</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "アプリ価格設定:プラン数の拡大、無料プランテスト、App Eventsの負数・小数対応",
+          "summarizedJa": "Shopifyアプリの価格設定機能が強化され、公開プランは最大8つ(従来4つ)、非公開プランは最大15(従来10)まで作成可能になりました。開発ストアでのアプリレビューや請求フローのテストが無料で可能になり、専用のテストプランを作成する必要がなくなりました。また、App Events APIで負の値(クレジット調整用)と小数値の送信がサポートされ、より柔軟な使用量ベース課金が実現できます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-07-10T01:22:06.904Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1325,
+            "output": 285
+          },
+          "estimatedCost": 0.00825
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "アプリの料金設定：プラン数の増加、無料プランテスト機能、および負の値・小数値のApp Events対応",
+          "summarizedJa": "Shopifyアプリの料金設定機能が複数更新されました。アプリごとに設定できる公開・非公開プラン数が増加し、開発ストアやアプリ審査時に料金を発生させずにプランをテストできるようになりました。また、App Events APIが負の値や小数値に対応し、より柔軟な従量課金モデルを構築できるようになります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-07-10T01:22:14.733Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 999,
+            "output": 158
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-security-update-shopify-mobile-app-ios-android",
       "source": "shopify-changelog",
@@ -2570,6 +2726,54 @@
           "tokenUsage": {
             "input": 1119,
             "output": 170
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-shopify-s-spring-26-edition-everywhere",
+      "source": "developer-changelog",
+      "title": "Shopify's Spring '26 Edition: Everywhere",
+      "link": "https://shopify.dev/changelog/shopify-s-spring-26-edition-everywhere",
+      "publishedAt": "2026-06-17T16:00:00.000Z",
+      "collectedAt": "2026-07-10T01:21:36.596Z",
+      "category": [],
+      "description": " <div class=\"\"><p>Write a short lede paragraph that summarizes the change in concrete terms. Start with the developer-facing behavior, API, field, command, extension target, limit, policy, or workflow that changed. Include who is affected and whether developers need to take action. If the post announces a preview, beta, deprecation, or breaking change, say that clearly.</p>\n<p>Before submitting, set the sidebar fields that help reviewers and readers classify the post: <strong>Product area</strong>, <strong>Change Type</strong>, <strong>Publish Date &amp; Time</strong>, and <strong>API Version</strong> when the change applies to a specific API version. If developers must act, turn on <strong>Action Required</strong>.</p>\n<h2>What changed</h2>\n<p>Explain the change technically. Name the affected product, API, extension surface, workflow, or docs area. Link to the affected reference or guide when it helps readers verify details. If the change replaces previous behavior, name the old behavior and explain what developers should use instead.</p>\n<p>Keep the tone direct and useful. A reader should understand what changed without needing internal project context. Use present tense and active voice. Use backticks for code elements like <code>fieldName</code>, <code>MutationName</code>, <code>shopify.app.toml</code>, endpoint paths, enum values, and literal values.</p>\n<p>When you link to Shopify Dev Docs, use the full <code>https://shopify.dev/docs/...</code> URL. If you mention the same resource more than once, link only the first occurrence. Use descriptive link text, and don't link words like “here” or “this.”</p>\n<p>If a notice helps readers make a decision or avoid a mistake, put it near the detail it affects. Don't place notices directly next to each other. Add explanatory text between notices, or remove the notice that doesn't change what readers should do.</p>\n<blockquote>\n<p>Tip:\nUse a notice only when it adds context that the surrounding paragraph can't carry clearly.</p>\n</blockquote>\n<p>After a notice, add a sentence that returns readers to the main explanation. Don't place a notice as the final element before the next section.</p>\n<h2>Who's affected</h2>\n<p>Explain which developers, apps, themes, extensions, stores, API versions, or workflows the change applies to. Be specific enough that readers can decide whether they need to keep reading or take action.</p>\n<p>Include both sides when it helps reduce uncertainty. For example, say which apps are affected and which apps aren't affected, or which API versions include the change and which versions don't. If the impact depends on a configuration, permission, scope, feature preview, or rollout, include that condition here.</p>\n<p>If the post is about a developer preview, beta, or limited rollout, say what readers need to enable or request access to before they can use it.</p>\n<blockquote>\n<p>Beta:\nIf this feature requires access, explain how developers can enable the preview or request access. If the access path isn't public, link to the approved docs, forum post, or support path in <strong>Related docs</strong>.</p>\n</blockquote>\n<p>After the notice, add a sentence that explains what developers can do after they get access or what they should read next.</p>\n<h2>Why this matters</h2>\n<p>Keep this section only if the benefit or context isn't obvious from the change itself. Explain the developer or user problem that the change solves. Focus on outcomes, such as fewer API calls, clearer errors, simpler setup, improved type safety, more predictable behavior, or better control.</p>\n<p>If you have evidence from support tickets, forum posts, research, traffic data, partner feedback, or API usage, summarize the pattern briefly. Avoid vague claims like “improves the developer experience” unless you explain exactly how.</p>\n<p>If there are tradeoffs, say so near the feature that they affect. Don't put important constraints in a disconnected limitations section.</p>\n<h2>What to do</h2>\n<p>Tell developers what action to take next. If no action is required, say that clearly and explain why. If action is required, give concrete migration steps. Use a numbered list when there is more than one step, and include code samples when they help developers make the change safely.</p>\n<p>A useful action section usually includes:</p>\n<ol>\n<li>What to check in an existing app, extension, theme, or configuration.</li>\n<li>What to update, such as an API version, query, mutation, scope, setting, or file.</li>\n<li>How to test the change in a development store or preview environment.</li>\n<li>What signal confirms that the update worked.</li>\n</ol>\n<p>If there is a deadline, effective date, or removal date, include it near the action that developers need to take. If developers shouldn't migrate yet, say what they should monitor or prepare instead.</p>\n<pre><code class=\"language-toml\">[example]\napi_version = &quot;unstable&quot;\nenabled = true\n</code></pre>\n<p>After the code sample, explain what the sample demonstrates and what developers should change for their own app. Don't let a code block be the last element in this section.</p>\n<h2>Related docs</h2>\n<p>Add only links that help readers act on the announcement. Prefer affected reference pages, migration guides, release notes, and implementation docs. Use descriptive link text, and replace or remove any links that don't apply before publishing.</p>\n<ul>\n<li><a href=\"https://shopify.dev/docs/apps\" target=\"_blank\" class=\"body-link\">Build Shopify apps</a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql\" target=\"_blank\" class=\"body-link\">GraphQL Admin API reference</a></li>\n<li><a href=\"https://shopify.dev/docs/api/shopify-cli\" target=\"_blank\" class=\"body-link\">Shopify CLI commands</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify Spring '26 Edition: Everywhere - テンプレート文書",
+          "summarizedJa": "このエントリーは実際の変更内容ではなく、Shopify開発者向けchangelog投稿を作成するためのテンプレート文書です。変更内容の書き方、構成、注意事項などのガイドラインが記載されています。日本のマーチャントやパートナーへの直接的な影響はありません。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 1
+          },
+          "totalScore": 4,
+          "analyzedAt": "2026-07-10T01:22:18.974Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2359,
+            "output": 204
+          },
+          "estimatedCost": 0.010137
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "ShopifyのSpring '26エディション: Everywhere",
+          "summarizedJa": "このエントリーは、Shopifyのチェンジログ記事を作成するための詳細なガイドラインです。開発者向けの変更点、影響を受けるユーザー、変更の重要性、および必要な対応を明確に記述するための構成とベストプラクティスが説明されています。これは、Shopifyがパートナーやマーチャントに情報を効果的に伝えるための内部的な指針となります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 3,
+            "technicalImportance": 1
+          },
+          "totalScore": 6,
+          "analyzedAt": "2026-07-10T01:22:27.300Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1947,
+            "output": 150
           },
           "estimatedCost": 0
         }
