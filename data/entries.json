@@ -1,6 +1,106 @@
 {
-  "lastUpdated": "2026-07-10T01:21:38.045Z",
+  "lastUpdated": "2026-07-11T01:15:01.680Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-flow-copy-and-paste-steps-in-your-workflows",
+      "source": "shopify-changelog",
+      "title": "Flow: Copy and paste steps in your workflows",
+      "link": "https://changelog.shopify.com/posts/flow-copy-and-paste-steps-in-your-workflows",
+      "publishedAt": "2026-07-10T19:00:00.000Z",
+      "collectedAt": "2026-07-11T01:15:01.669Z",
+      "category": [
+        "Apps"
+      ],
+      "description": "\n        <p>Building workflows often means recreating steps you've already set up somewhere else. Now you can copy an existing step and paste it, instead of rebuilding it from scratch.</p>\n\n<p>Select an action or condition step and use Cmd/Ctrl+C to copy it, then Cmd/Ctrl+V to paste. Flow keeps the copied step's configuration field values and, for conditions, its logic—so a pasted step  arrives ready to use with only minor edits. You can paste within the same workflow or into a different one.</p>\n\n<p>This makes it faster to reuse steps you've carefully configured, whether you're expanding a single workflow or standardizing steps across several.</p>\n\n<p>A few things to note for this first release:<br><br>\n- You can copy and paste one action or condition step at a time (triggers and multi-select<br><br>\n   copy/paste aren't supported yet).<br><br>\n- Steps that use a custom configuration page, such as Send Marketing Email, can't be copied.</p>\n\n<p>For more information about how it works, visit the documentation. For questions and feedback, visit the <a href=\"https://community.shopify.com/c/shopify-flow/304\">Shopify community</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Flow: ワークフロー内のステップをコピー&ペーストできるように",
+          "summarizedJa": "Shopify Flowでワークフロー構築時に、既存のアクションやコンディションステップをコピー&ペーストできる機能が追加されました。Cmd/Ctrl+CとCmd/Ctrl+Vで、設定値やロジックを保持したままステップを複製できるため、同じワークフロー内や別のワークフロー間で効率的に再利用が可能です。ただし現時点では1ステップずつのコピーのみ対応で、カスタム設定ページを使用するステップは非対応です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-07-11T01:15:07.998Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1197,
+            "output": 269
+          },
+          "estimatedCost": 0.007625999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Flow: ワークフローのステップをコピー＆ペースト",
+          "summarizedJa": "Shopify Flowで、既存のアクションや条件ステップをコピー＆ペーストできるようになりました。これにより、設定済みのステップを同じワークフロー内や別のワークフローで簡単に再利用でき、ワークフロー構築の時間を大幅に短縮できます。ただし、トリガーや一部のカスタム設定ページを持つステップは現時点ではサポートされていません。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-07-11T01:15:13.430Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 917,
+            "output": 147
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-turn-automatic-hreflang-tags-on-or-off-from-your-admin-settings",
+      "source": "shopify-changelog",
+      "title": "Turn automatic hreflang tags on or off from your admin settings",
+      "link": "https://changelog.shopify.com/posts/turn-automatic-hreflang-tags-on-or-off-from-your-admin-settings",
+      "publishedAt": "2026-07-10T16:00:00.000Z",
+      "collectedAt": "2026-07-11T01:15:01.669Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>Hreflang tags tell search engines which language or region version of a page to serve to which visitors. Shopify generates them automatically from your Markets language and domain settings. </p>\n\n<p>The automatic hreflang tag setting is on by default, but you can turn it off if you prefer to manage hreflang tags yourself and want to avoid duplicate tags. To turn it off, go in your Shopify admin to Online Store &gt; <a href=\"https://admin.shopify.com/online_store/preferences\">Preferences</a>, and then change the setting in the Social sharing and SEO section.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "管理画面の設定から自動hreflangタグのオン・オフが可能に",
+          "summarizedJa": "Shopifyが自動生成するhreflangタグを管理画面から制御できるようになりました。デフォルトではオンになっていますが、独自にhreflangタグを管理したい場合は、オンラインストア>環境設定>ソーシャル共有とSEOセクションからオフにすることで、タグの重複を避けられます。この設定はマーケット機能の言語・ドメイン設定から自動生成されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-07-11T01:15:18.716Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1062,
+            "output": 248
+          },
+          "estimatedCost": 0.006906000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "管理設定から自動hreflangタグのオン/オフを切り替え",
+          "summarizedJa": "Shopifyの管理画面から、自動生成されるhreflangタグのオン/オフを切り替えられるようになりました。このタグは、検索エンジンに適切な言語・地域バージョンのページを伝えるために使用され、Shopify Marketsの設定に基づいて自動生成されます。手動でhreflangタグを管理したい場合や重複を避けたい場合に、オンラインストアの環境設定からこの設定をオフにすることが可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-07-11T01:15:23.814Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 774,
+            "output": 165
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-pos-extensions-now-supports-a-background-extension-target",
       "source": "developer-changelog",
