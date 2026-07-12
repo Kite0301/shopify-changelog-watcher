@@ -1,6 +1,56 @@
 {
-  "lastUpdated": "2026-07-11T01:15:01.680Z",
+  "lastUpdated": "2026-07-12T01:16:50.575Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-drive-international-conversion-with-automated-duties-inclusive-pricing-from-shopify-managed-markets",
+      "source": "shopify-changelog",
+      "title": "Drive international conversion with automated duties-inclusive pricing from Shopify Managed Markets",
+      "link": "https://changelog.shopify.com/posts/drive-international-conversion-with-automated-duties-inclusive-pricing-from-shopify-managed-markets",
+      "publishedAt": "2026-07-10T21:00:00.000Z",
+      "collectedAt": "2026-07-12T01:16:50.561Z",
+      "category": [
+        "Markets"
+      ],
+      "description": "\n        <p>Shopify Managed Markets merchants can now use a managed pricing strategy across supported international markets. Pricing will account for cross-border costs like guaranteed duties and import taxes, transaction fees, and currency conversion in product prices, so <strong>international buyers can see stable, transparent pricing throughout their journey with no surprise fees at checkout or delivery.</strong></p>\n\n<p>When managed pricing is active, duties and import taxes are included in the buyer’s product price instead of being shown as a separate duty line at checkout. The duty and import tax amounts displayed to buyers are guaranteed at checkout, which means Shopify Managed Markets covers the difference if the amount charged by customs is different.</p>\n\n<p>Managed international pricing also helps keep your payout amounts consistent with domestic orders. Buyers pay for import taxes, duties, foreign exchange fees, and Managed Markets fees directly through the adapted price, and your payout is processed by Shopify Payments.</p>\n\n<p>You can review the localized price breakdown on the product detail page using the <strong>View as demo</strong>. After an order is placed, you can review the price breakdown in the order’s payment section to see how the international price was calculated.</p>\n\n<p><a href=\"https://help.shopify.com/en/manual/international/managed-markets/adaptive-pricing\">Learn more about international pricing for Shopify Managed Markets</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify Managed Marketsで関税込み価格の自動設定により海外売上のコンバージョンを向上",
+          "summarizedJa": "Shopify Managed Marketsで、関税・輸入税・為替手数料などを商品価格に含めた管理価格戦略が利用可能になりました。海外の購入者は商品閲覧からチェックアウトまで透明性の高い安定した価格を確認でき、配送時の予期せぬ追加料金が発生しません。関税・輸入税はShopifyが保証し、実際の請求額との差額もカバーされます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-07-12T01:16:57.449Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1232,
+            "output": 260
+          },
+          "estimatedCost": 0.007596
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify Managed Marketsによる関税込み自動価格設定で国際的なコンバージョンを促進",
+          "summarizedJa": "Shopify Managed Marketsを利用するマーチャントは、国際市場向けに自動で関税や輸入税、手数料などを含んだ価格設定が可能になりました。これにより、海外の購入者は最終的な支払い額を事前に把握でき、予期せぬ追加費用なしで安心して購入できます。マーチャントは国内注文と変わらない安定した受取額を確保でき、国際販売におけるコンバージョン率向上が期待されます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-07-12T01:17:04.098Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 932,
+            "output": 170
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-flow-copy-and-paste-steps-in-your-workflows",
       "source": "shopify-changelog",
