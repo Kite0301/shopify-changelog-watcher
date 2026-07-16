@@ -1,6 +1,163 @@
 {
-  "lastUpdated": "2026-07-12T01:16:50.575Z",
+  "lastUpdated": "2026-07-16T01:13:53.666Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-updated-app-store-requirements-4-1-2-use-a-unique-name-for-your-app",
+      "source": "developer-changelog",
+      "title": "Updated App Store requirements: 4.1.2 Use a unique name for your app",
+      "link": "https://shopify.dev/changelog/updated-app-store-requirements-4-1-2-use-a-unique-name-for-your-app",
+      "publishedAt": "2026-07-15T16:00:00.000Z",
+      "collectedAt": "2026-07-16T01:13:52.360Z",
+      "category": [
+        "App store",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>Your app's name is what merchants use to discover, identify, and remember your app. We've added <a href=\"https://shopify.dev/docs/apps/launch/shopify-app-store/app-store-requirements#use-a-unique-name-for-your-app\" target=\"_blank\" class=\"body-link\">requirement 4.1.2, &quot;Use a unique name for your app,&quot;</a> to reduce merchant confusion over identical and copycat app names in Shopify’s App Store. </p>\n<p>We know that changing an app name isn't easy — it affects your brand, your discoverability, and your existing merchants. That's why this requirement establishes the standard now, while enforcement will roll out gradually. Affected apps will be audited in waves and given a designated timeframe to achieve compliance.</p>\n<h2>What's changing</h2>\n<p>This requirement gives Shopify the ability to act on app name violations. Non-compliant apps will be notified and given a defined timeframe to update their names where failure to comply may result in being delisted from the App Store. Enforcement actions will roll out gradually, so affected developers will have time to plan and make changes.</p>\n<h2>What this means for you</h2>\n<ul>\n<li><strong>If you believe your published app violates this policy:</strong> Start considering a plan to rename your app to get ahead of enforcement actions. Ensure that your app name starts with your distinctive brand identifier and does not mislead merchants in confusing it with another app, developer, brand, or Shopify product. </li>\n<li><strong>If you're submitting a new app:</strong> Choose a distinct name that represents your own brand. Don't impersonate other apps or mislead merchants with your app name.</li>\n<li><strong>If your app name is being copied:</strong> At this time, we can only accept reports with a valid registered trademark. If your app trademark is being copied, you can <a href=\"https://www.shopify.com/legal/tools/report-an-issue/trademark-infringement\" target=\"_blank\" class=\"body-link\">submit a report to Shopify</a>.</li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "App Store要件の更新: 4.1.2 アプリに固有の名前を使用すること",
+          "summarizedJa": "Shopify App Storeにおいて、アプリ名の重複や模倣によるマーチャントの混乱を防ぐため、新たに要件4.1.2「アプリに固有の名前を使用すること」が追加されました。既存の違反アプリには段階的に通知され、改名の猶予期間が与えられますが、対応しない場合はストアから削除される可能性があります。新規アプリ申請時には独自のブランド名を使用し、既存アプリで違反の可能性がある場合は早めの改名計画が推奨されます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-07-16T01:14:00.612Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1447,
+            "output": 292
+          },
+          "estimatedCost": 0.008721
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "アプリストア要件の更新：4.1.2 アプリに固有の名前を使用する",
+          "summarizedJa": "Shopifyアプリストアにおいて、アプリ名の重複や模倣によるマーチャントの混乱を減らすため、アプリに固有の名前を使用する新要件4.1.2が追加されました。既存アプリは段階的に監査され、違反している場合は名称変更が必要となり、従わない場合はストアから削除される可能性があります。新規アプリ開発者は、独自のブランドを明確に示す名称を選ぶ必要があります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 1
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-07-16T01:14:07.540Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1115,
+            "output": 163
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-new-fields-on-exchangelineitem",
+      "source": "developer-changelog",
+      "title": "`productId`, `title`,`variantSku`, and `variantTitle` fields added to `ExchangeLineItem`",
+      "link": "https://shopify.dev/changelog/new-fields-on-exchangelineitem",
+      "publishedAt": "2026-07-15T16:00:00.000Z",
+      "collectedAt": "2026-07-16T01:13:52.360Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-10"
+      ],
+      "description": " <div class=\"\"></div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "ExchangeLineItemに`productId`、`title`、`variantSku`、`variantTitle`フィールドを追加",
+          "summarizedJa": "Admin GraphQL APIの`ExchangeLineItem`オブジェクトに、商品ID、タイトル、バリアントSKU、バリアントタイトルの4つの新しいフィールドが追加されました。これにより、交換注文の明細情報をより詳細に取得できるようになります。返品・交換機能を実装しているアプリやカスタム開発において、商品情報へのアクセスが簡便になります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-07-16T01:14:12.711Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 937,
+            "output": 249
+          },
+          "estimatedCost": 0.006546
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "ExchangeLineItemに`productId`、`title`、`variantSku`、`variantTitle`フィールドが追加",
+          "summarizedJa": "この更新により、Admin GraphQL APIの`ExchangeLineItem`オブジェクトに、`productId`、`title`、`variantSku`、`variantTitle`の各フィールドが追加されます。これにより、交換品目の詳細な商品情報をAPI経由で直接取得できるようになります。マーチャントは、交換処理を管理するカスタムアプリや連携ツールにおいて、より正確な商品データを活用し、業務効率の向上やデータ分析の強化が期待されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-07-16T01:14:19.646Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 654,
+            "output": 184
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-pos-ui-extensions-2026-07-adds-discount-allocations-to-bundle-components",
+      "source": "developer-changelog",
+      "title": " POS UI Extensions 2026-07 adds discount allocations to bundle components",
+      "link": "https://shopify.dev/changelog/pos-ui-extensions-2026-07-adds-discount-allocations-to-bundle-components",
+      "publishedAt": "2026-07-15T04:00:00.000Z",
+      "collectedAt": "2026-07-16T01:13:52.360Z",
+      "category": [
+        "API",
+        "Update",
+        "POS Extensions",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>Starting with POS UI Extensions API version 2026-07, product bundle components in cart line item data include discount allocation details.                                                                                                                             </p>\n<p>Apps can access component-level discount allocations from bundle components on a cart line item, for example:                      </p>\n<p><code>shopify.cartLineItem.components?.[0]?.discountAllocations</code>                                                                        </p>\n<p>The same <code>LineItem</code> shape is also used in Cart API cart state, so apps that read line items from  <code>shopify.cart.current.value.lineItems</code> can access component discount allocations on bundle components there as well.                 </p>\n<p>Previously, POS UI Extensions exposed discount allocations on the parent line item through <code>lineItem.discountAllocations</code>, while bundle components exposed component-level tax information but not component-level discount allocations. This made it difficult for apps to calculate component-level discount, tax, reporting, or compliance values for discounted product bundles.                     </p>\n<p>This change is additive. Apps using API version 2026-04 or earlier do not need to make any changes.                                </p>\n<p>Apps adopting API version 2026-07 can use <code>components[].discountAllocations</code> when working with discounted product bundles. Apps should handle the property being absent or empty when a bundle component has no discount allocations.                                </p>\n<p>For more information, see the [Cart Line Item API reference](<a href=\"https://shopify.dev/docs/api/pos-ui-extensions/2026-07-rc/target-apis/contextual-apis/cart-line-item-api#cartlineitemapi-\" target=\"_blank\" class=\"body-link\">https://shopify.dev/docs/api/pos-ui-extensions/2026-07-rc/target-apis/contextual-apis/cart-line-item-api#cartlineitemapi-</a> propertydetail-cartlineitem) and the [Cart API <code>current</code>  property](<a href=\"https://shopify.dev/docs/api/pos-ui-extensions/2026-07-rc/target-apis/contextual-apis/cart-api#cartapi-propertydetail-curr\" target=\"_blank\" class=\"body-link\">https://shopify.dev/docs/api/pos-ui-extensions/2026-07-rc/target-apis/contextual-apis/cart-api#cartapi-propertydetail-curr</a> ent). </p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "POS UI Extensions 2026-07でバンドル商品のコンポーネントに割引配分情報を追加",
+          "summarizedJa": "POS UI Extensions API version 2026-07より、バンドル商品の各コンポーネントレベルでの割引配分情報にアクセスできるようになりました。従来は親ラインアイテムの割引情報のみが提供されていましたが、今回の追加により各コンポーネントの割引、税金、レポーティング、コンプライアンス値の正確な計算が可能になります。この変更は追加機能のため、既存のアプリは対応不要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-07-16T01:14:24.561Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1562,
+            "output": 265
+          },
+          "estimatedCost": 0.008661
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "POS UI Extensions 2026-07: バンドル商品の構成要素に割引配分情報を追加",
+          "summarizedJa": "POS UI Extensions APIのバージョン2026-07より、カート内のバンドル商品（セット商品）の各構成要素に対して、割引の配分詳細情報が取得可能になりました。これにより、アプリは個々の構成要素レベルでの割引額、税金、レポート作成、コンプライアンス値の計算をより正確に行えるようになります。これはAPIバージョン2026-07以降を利用する開発者向けの追加機能であり、マーチャントはより詳細な割引情報に基づいた正確なアプリの恩恵を受けられます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-07-16T01:14:32.250Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1240,
+            "output": 203
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-drive-international-conversion-with-automated-duties-inclusive-pricing-from-shopify-managed-markets",
       "source": "shopify-changelog",
