@@ -1,6 +1,71 @@
 {
-  "lastUpdated": "2026-07-16T01:13:53.666Z",
+  "lastUpdated": "2026-07-17T01:17:41.706Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-shopify-managed-markets-now-supports-eu-buyer-cancellation-and-return-requests",
+      "source": "shopify-changelog",
+      "title": "Shopify Managed Markets now supports EU buyer cancellation and return requests",
+      "link": "https://changelog.shopify.com/posts/shopify-managed-markets-now-supports-eu-buyer-cancellation-and-return-requests",
+      "publishedAt": "2026-07-16T20:00:00.000Z",
+      "collectedAt": "2026-07-17T01:17:41.692Z",
+      "category": [
+        "Markets"
+      ],
+      "description": "\n        <p>Shopify Managed Markets now supports buyer cancellation and return requests for applicable EU orders to comply with newly established Right of Withdrawal requirements for online stores. For merchants using Managed Markets to sell into EU countries, Shopify has added a managed 14-day cancellation and return rule for covered EU-bound orders.</p>\n\n<p><strong>What’s supported:</strong><br>\n* Applicable EU Managed Markets orders now include a 14-day cancellation and return rule, managed by Shopify’s Merchant of Record (MOR) partner Global-e.<br>\n* Buyers can request cancellation or return through supported Shopify buyer surfaces. Merchants are responsible for procuring return labels.<br>\n* The rule is managed for as long as you use Managed Markets for the EU region. </p>\n\n<p>No action is required to continue using Managed Markets for applicable EU orders. Learn more about EU tax and customs guidance in the <a href=\"https://help.shopify.com/en/manual/international/managed-markets/requirements-and-considerations#eu-right-of-withdrawal\">Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify Managed MarketsがEUの購入者によるキャンセル・返品リクエストに対応",
+          "summarizedJa": "Shopify Managed Marketsが、EU向けオンラインストアの撤回権要件に準拠するため、EU注文の購入者によるキャンセル・返品リクエストに対応しました。Managed Marketsを使用してEU諸国に販売するマーチャントは、対象となるEU向け注文に対して、Shopifyが管理する14日間のキャンセル・返品ルールが自動的に適用されます。Managed Marketsを継続利用する場合、マーチャント側での特別な対応は不要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 2,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-07-17T01:17:47.850Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1179,
+            "output": 279
+          },
+          "estimatedCost": 0.007722
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-card-deposit-endpoint-now-requires-mtls-certificate",
+      "source": "developer-changelog",
+      "title": "Card deposit endpoint now requires mTLS certificate",
+      "link": "https://shopify.dev/changelog/card-deposit-endpoint-now-requires-mtls-certificate",
+      "publishedAt": "2026-07-16T16:00:00.000Z",
+      "collectedAt": "2026-07-17T01:17:39.318Z",
+      "category": [
+        "API",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>Shopify's card-deposit endpoint now requires a Shopify-issued mTLS client certificate. Apps that store cardholder data with the <code>customerPaymentMethodCreditCardCreate</code> and <code>customerPaymentMethodCreditCardUpdate</code> GraphQL Admin API mutations must first deposit that data at Shopify's <code>/sessions</code> card-deposit endpoint to receive a session identifier. That deposit call must present a Shopify-issued certificate by <strong>October 15, 2026</strong>. This is a required change: after enforcement begins, deposit requests will be required to have a valid certificate. If your app deposits cardholder data, you must update.</p>\n<h2>What changed</h2>\n<p>The card-deposit endpoint at <code>https://checkout-mtls.pci.shopifyinc.com/sessions</code> is unchanged. What's new is that every request to it must present a Shopify-issued mTLS client certificate. Previously, requests to this endpoint did not require a client certificate.</p>\n<p>The GraphQL Admin API vault mutations are unchanged. You continue to call <code>customerPaymentMethodCreditCardCreate</code> and <code>customerPaymentMethodCreditCardUpdate</code> with the session identifier returned by the deposit call, and your GraphQL Admin API OAuth flow is unaffected.</p>\n<p><code>customerPaymentMethodRemoteCreate</code> is out of scope. It imports references to payment methods already held at external gateways and deposits no cardholder data to Shopify.</p>\n<h2>Who's affected</h2>\n<p>This applies to apps that deposit cardholder data to Shopify through <code>customerPaymentMethodCreditCardCreate</code> or <code>customerPaymentMethodCreditCardUpdate</code>.</p>\n<p>Apps that only call <code>customerPaymentMethodRemoteCreate</code> to import payment methods from external gateways such as Stripe, Braintree, Authorize.Net, Adyen, or PayPal are not affected and need to take no action.</p>\n<h2>Why this matters</h2>\n<p>All cardholder-data traffic reaching the deposit endpoint must be attributable to an authenticated caller. Requiring a client certificate lets Shopify verify who is depositing card data ahead of Black Friday and Cyber Monday 2026, and is the prerequisite for rejecting unauthenticated deposit traffic.</p>\n<h2>What to do</h2>\n<p>If your app deposits cardholder data, migrate before <strong>October 15, 2026</strong>:</p>\n<ol>\n<li>Confirm whether your app calls <code>customerPaymentMethodCreditCardCreate</code> or <code>customerPaymentMethodCreditCardUpdate</code>. If it only calls <code>customerPaymentMethodRemoteCreate</code>, no action is required.</li>\n<li>Request a Shopify-issued client certificate at <a href=\"mailto:shopify-mtls-partnerships@shopify.com\" target=\"_blank\" class=\"body-link\">shopify-mtls-partnerships@shopify.com</a>. Include your API client ID and technical point of contact. First certificates are signed manually by Shopify and take a few days, so start early.</li>\n<li>Present the certificate on your <code>/sessions</code> deposit call, and continue passing the returned session identifier to the vault mutations unchanged.</li>\n<li>Confirm your deposit traffic now arrives with a valid certificate. Shopify validates the cutover on our side.</li>\n</ol>\n<p>After your first certificate, rotate it self-serve with Shopify's Certificate Signing Service before the 1-year TTL expires . No Shopify involvement is needed. A missed rotation stops your deposits, so monitor certificate expiry as part of your standard observability.</p>\n<p>Apps that haven't migrated by October 15, 2026 lose the ability to deposit new cardholder data once the certificate requirement is enforced.</p>\n<h2>Related docs</h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/customerPaymentMethodCreditCardCreate\" target=\"_blank\" class=\"body-link\"><code>customerPaymentMethodCreditCardCreate</code> reference</a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/customerPaymentMethodCreditCardUpdate\" target=\"_blank\" class=\"body-link\"><code>customerPaymentMethodCreditCardUpdate</code> reference</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "カード入金エンドポイントでmTLS証明書が必須に",
+          "summarizedJa": "2026年10月15日より、Shopifyのカード情報預託エンドポイントへのアクセスにShopify発行のmTLSクライアント証明書が必須となります。`customerPaymentMethodCreditCardCreate`や`customerPaymentMethodCreditCardUpdate`を使用してカード会員データを保存するアプリは、期日までに証明書を取得し実装を更新する必要があります。外部ゲートウェイからの決済手段インポートのみを行うアプリは影響を受けません。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-07-17T01:17:54.043Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2005,
+            "output": 256
+          },
+          "estimatedCost": 0.009855
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-updated-app-store-requirements-4-1-2-use-a-unique-name-for-your-app",
       "source": "developer-changelog",
@@ -100,6 +165,59 @@
           "tokenUsage": {
             "input": 654,
             "output": 184
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-new-channelid-argument-for-incontext-directive-in-storefront-api-2026-10",
+      "source": "developer-changelog",
+      "title": "Storefront API `@inContext` supports `channelId`",
+      "link": "https://shopify.dev/changelog/new-channelid-argument-for-incontext-directive-in-storefront-api-2026-10",
+      "publishedAt": "2026-07-15T16:00:00.000Z",
+      "collectedAt": "2026-07-17T01:17:39.318Z",
+      "category": [
+        "API",
+        "New",
+        "Storefront API",
+        "2026-10"
+      ],
+      "description": " <div class=\"\"><p>As of Storefront API version <code>2026-10</code>, the <code>@inContext</code> directive accepts an optional <code>channelId</code> argument. Use <code>channelId</code> to apply a specific sales channel’s context to an entire query, including channel-specific product availability and pricing.</p>\n<p>Example:</p>\n<pre><code class=\"language-graphql\">query Product($handle: String!, $channelId: ID!)\n  @inContext(channelId: $channelId) {\n  product(handle: $handle) {\n    id\n    title\n    availableForSale\n    priceRange {\n      minVariantPrice {\n        amount\n        currencyCode\n      }\n    }\n  }\n}\n</code></pre>\n<h2>Why it's changing</h2>\n<p>The existing <code>@inContext</code> directive lets you set buyer context such as <code>country</code> and <code>language</code>. With <code>channelId</code>, you can now:</p>\n<ul>\n<li>Target a specific channel (for example, a marketplace or custom sales channel) when fetching products, prices, and availability.</li>\n<li>Build channel-aware storefronts that show the correct catalog, pricing, and merchandising rules for each channel.</li>\n<li>Reduce custom logic in your app by relying on the API to apply channel-specific behavior.</li>\n</ul>\n<h2>Requirements</h2>\n<p><strong>Access requirement:</strong> You can only pass the ID of a channel created by the API client making the request.</p>\n<p><strong>Fallback behavior:</strong> If you omit <code>channelId</code>, the Storefront API uses the first channel owned by that API client. Pass <code>channelId</code> explicitly when your app owns multiple channels or needs to select a specific channel.</p>\n<p>Learn more about <a href=\"https://shopify.dev/docs/storefronts/headless/building-with-the-storefront-api/in-context\" target=\"_blank\" class=\"body-link\">contextual queries</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Storefront APIの`@inContext`ディレクティブが`channelId`をサポート",
+          "summarizedJa": "Storefront API 2026-10バージョンから、`@inContext`ディレクティブに`channelId`引数が追加されました。これにより、マーケットプレイスやカスタム販売チャネルなど、特定の販売チャネルに応じた商品の在庫状況や価格設定をクエリ全体に適用できるようになります。ヘッドレスコマースやマルチチャネル展開を行うマーチャント・開発者にとって、チャネルごとの商品カタログや価格表示を効率的に実装できる重要な機能です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-07-17T01:18:07.077Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1464,
+            "output": 288
+          },
+          "estimatedCost": 0.008712000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Storefront APIの`@inContext`ディレクティブが`channelId`に対応",
+          "summarizedJa": "Shopify Storefront APIの`@inContext`ディレクティブに、オプションの`channelId`引数が追加されました。これにより、特定の販売チャネル（例：マーケットプレイスやカスタムチャネル）の在庫や価格情報を、APIクエリ全体に適用できるようになります。ヘッドレスコマースを構築する開発者は、チャネルごとの商品表示や価格設定をより簡単に実現でき、アプリ内のカスタムロジックを削減できます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-07-17T01:18:13.162Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1104,
+            "output": 178
           },
           "estimatedCost": 0
         }
@@ -461,6 +579,40 @@
             "output": 158
           },
           "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-hydrogen-developer-preview-update",
+      "source": "developer-changelog",
+      "title": "Hydrogen developer preview update",
+      "link": "https://shopify.dev/changelog/hydrogen-developer-preview-update",
+      "publishedAt": "2026-07-09T16:00:00.000Z",
+      "collectedAt": "2026-07-17T01:17:39.318Z",
+      "category": [
+        "API",
+        "Update",
+        "Hydrogen"
+      ],
+      "description": " <div class=\"\"><p>The Hydrogen developer preview adds new capabilities to the toolkit and extends the ways developers can build Shopify storefronts:</p>\n<ul>\n<li><strong>Storefront API caching for catalog data:</strong> Cache products, collections, and pages at the edge instead of hitting the Storefront API on every request.</li>\n<li><strong>WebMCP tools for in-browser AI agents:</strong> Expose your storefront to in-browser AI agents so they can search the catalog, browse products, and manage the cart. Loads automatically from Shopify's CDN, no extra integration required.</li>\n<li><strong>Customer Account API support:</strong> Build logged-in experiences like order history and profile pages with a typed client that handles login, token refresh, and logout.</li>\n<li><strong>Same-origin predictive search:</strong> Add autocomplete search that runs through your own server instead of calling the Storefront API from the browser.</li>\n<li><strong>Typed routes and redirects:</strong> Describe your URL structure once and reuse it for redirects, predictive-search URLs, and Shopify-standard resource mapping.</li>\n<li><strong>ShopifyScripts for the Shopify browser runtime and unified cart route handling:</strong> Render Shopify's standard script tags and browser runtime in one place, and handle cart routes through a single registration that works the same across frameworks.</li>\n</ul>\n<p>To get started, visit the <a href=\"https://shopify.dev/docs/storefronts/headless/developer-preview\" target=\"_blank\" class=\"body-link\">Hydrogen developer preview documentation</a>. For a detailed breakdown of this release, read the <a href=\"https://hydrogen.shopify.dev/update/developer-preview-release-notes-july-8-2026\" target=\"_blank\" class=\"body-link\">full release notes</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Hydrogen開発者プレビューのアップデート",
+          "summarizedJa": "Hydrogenの開発者プレビュー版に、カタログデータのエッジキャッシング、ブラウザ内AIエージェント用のWebMCPツール、Customer Account APIサポート、同一オリジンの予測検索、型付きルーティングとリダイレクト、統一されたカート処理などの新機能が追加されました。これらの機能により、開発者はより高速で柔軟なShopifyヘッドレスストアフロントの構築が可能になります。詳細はHydrogen開発者プレビューのドキュメントで確認できます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 5
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-07-17T01:18:17.962Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1344,
+            "output": 272
+          },
+          "estimatedCost": 0.008112000000000001
         }
       }
     },
