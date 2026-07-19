@@ -1,6 +1,58 @@
 {
-  "lastUpdated": "2026-07-17T01:17:41.706Z",
+  "lastUpdated": "2026-07-19T01:14:37.763Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-physical-inventory-feature-preview",
+      "source": "developer-changelog",
+      "title": "Physical inventory feature preview",
+      "link": "https://shopify.dev/changelog/physical-inventory-feature-preview",
+      "publishedAt": "2026-07-17T16:00:00.000Z",
+      "collectedAt": "2026-07-19T01:14:36.718Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API"
+      ],
+      "description": " <div class=\"\"><p>The physical inventory feature preview gives you early access to a new set of inventory APIs in the <code>unstable</code> version of the GraphQL Admin API. Enable it on a development store to build and test against the core primitives merchants use to organize a stockroom: bins, counts, and purchase orders.</p>\n<p>Because these APIs are under active development, they're available behind a feature preview. This lets you start building early and provide feedback on the schema and behavior before the APIs become stable.</p>\n<h3>What's included</h3>\n<ul>\n<li><strong>Bins.</strong> Named storage locations within a location, such as a shelf or rack. Create and update bins, and read the on-hand quantities held in each one.</li>\n<li><strong>Counts.</strong> Set the on-hand quantity of an inventory item in a specific bin with the <code>inventoryCountCreate</code> mutation.</li>\n<li><strong>Purchase orders.</strong> Read purchase order data through the GraphQL Admin API, including the purchase order, its line items, and its supplier.</li>\n</ul>\n<h3>How to enable it</h3>\n<ol>\n<li><a href=\"https://shopify.dev/docs/apps/build/dev-dashboard/stores/development-stores\" target=\"_blank\" class=\"body-link\">Create a development store</a> or use an existing one.</li>\n<li><a href=\"https://shopify.dev/docs/apps/build/orders-fulfillment/inventory-management-apps/physical-inventory-feature-preview\" target=\"_blank\" class=\"body-link\">Enable the <strong>Physical inventory</strong> feature preview</a> on that store.</li>\n<li>Configure your app to use the <code>unstable</code> version of the GraphQL Admin API for all physical inventory queries and mutations.</li>\n</ol>\n<p>Only stores with the feature preview enabled can call these APIs; calls from stores that haven't enabled the preview return an access error.</p>\n<p>For examples and details on how bins integrate with your existing location inventory, see the <a href=\"https://shopify.dev/docs/apps/build/orders-fulfillment/inventory-management-apps/physical-inventory-feature-preview\" target=\"_blank\" class=\"body-link\">Physical inventory feature preview guide</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "物理在庫機能プレビュー",
+          "summarizedJa": "GraphQL Admin APIの「unstable」バージョンで、新しい在庫管理API（ビン、カウント、発注書）が機能プレビューとして利用可能になりました。開発ストアで有効化することで、倉庫内の保管場所を詳細に管理するための新機能を先行テスト・開発できます。これらのAPIは開発中のため、正式版リリース前にフィードバックを提供することができます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-07-19T01:14:44.946Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1450,
+            "output": 228
+          },
+          "estimatedCost": 0.00777
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "実在庫機能の先行公開",
+          "summarizedJa": "Shopifyは、GraphQL Admin APIの`unstable`バージョンで「実在庫機能」の先行プレビューを開始しました。これにより、開発ストアで棚（Bins）、在庫数（Counts）、発注書（Purchase orders）といった在庫管理の基本要素を操作する新しいAPIに早期アクセスし、開発・テストが可能です。パートナーは、この新機能を利用して、より高度な在庫管理アプリを構築し、マーチャントは倉庫内の在庫をより詳細に管理できるようになります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 17,
+          "analyzedAt": "2026-07-19T01:14:50.069Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1103,
+            "output": 173
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-shopify-managed-markets-now-supports-eu-buyer-cancellation-and-return-requests",
       "source": "shopify-changelog",
@@ -63,6 +115,56 @@
             "output": 256
           },
           "estimatedCost": 0.009855
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-collections-now-support-multi-source-and-variants",
+      "source": "shopify-changelog",
+      "title": "Collections now support multi-source and variants",
+      "link": "https://changelog.shopify.com/posts/collections-now-support-multi-source-and-variants",
+      "publishedAt": "2026-07-16T14:00:00.000Z",
+      "collectedAt": "2026-07-19T01:14:37.746Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>This release expands collection capabilities to help merchants run complex merchandising strategies without workarounds such as duplicate lists or third-party apps. Previously, collections were created only by automated conditions or hand-picked products.</p>\n\n<p>You can now build a collection from multiple sources, target specific variants, reuse other collections, and more. Highlights include: </p>\n\n<ul>\n<li><p><strong>Multiple sources in one collection.</strong> Combine automated conditions, hand-picked products, exclusions, other collections, and sources from apps in a single collection.</p></li>\n<li><p><strong>Variant-level collections.</strong> Build collections around specific variants, such as a size or color. Those variants appear on collection pages, in filters, and in supported sales channels, including Online Store and POS.</p></li>\n<li><p>*<em>Collections as building blocks. *</em>Add a collection as a source inside another, so parent collections stay in sync when source collections change.</p></li>\n<li><p>** Reuse across your business. **Apply the same collection in supported workflows such as discounts and taxes, including variant-level collections. </p></li>\n<li><p>** Redesigned collections admin UI:** Use a visual grid for drag-to-reorder and bulk moves, list view for detail, and control over the sort order customers see on the collection page.</p></li>\n<li><p><strong>Sidekick support</strong>. Build and update collections with Sidekick on admin and mobile. </p></li>\n</ul>\n\n<p>There are no breaking changes for existing collections.</p>\n\n<ul>\n<li><p>Existing collections continue to work and are updated in the new admin experience automatically. You do not need to delete or recreate them.</p></li>\n<li><p>If your store uses third-party or custom apps that interact with collections, ask your developers to update to API version 2026-07 to support these new capabilities. See developer instructions. </p></li>\n</ul>\n\n<p>Read <a href=\"https://help.shopify.com/en/manual/products/collections\">help docs</a> for more information. </p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "コレクション機能が複数ソースとバリアント対応に強化",
+          "summarizedJa": "コレクション作成機能が大幅に拡張され、複数のソース（自動条件、手動選択、他のコレクション、アプリからのソース）を組み合わせた作成が可能になりました。また、バリアント単位でのコレクション作成にも対応し、サイズや色ごとのコレクションページ表示が可能になります。既存のコレクションに破壊的変更はありませんが、サードパーティアプリを使用している場合はAPI version 2026-07への対応が推奨されます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-07-19T01:14:57.214Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1411,
+            "output": 269
+          },
+          "estimatedCost": 0.008268
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "コレクションが複数ソースとバリアントに対応",
+          "summarizedJa": "Shopifyのコレクション機能が大幅に強化され、マーチャントは自動条件、手動選択、他のコレクション、アプリからのソースを組み合わせた複雑なコレクションを構築できるようになりました。特に、特定のバリアント（サイズや色など）に基づいたコレクション作成が可能になり、より詳細な商品陳列戦略が実現します。既存のコレクションは引き続き機能し、管理画面も刷新されますが、カスタムアプリを利用するパートナーはAPIの更新を検討する必要があります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-07-19T01:15:04.056Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1079,
+            "output": 170
+          },
+          "estimatedCost": 0
         }
       }
     },
@@ -218,6 +320,56 @@
           "tokenUsage": {
             "input": 1104,
             "output": 178
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-multiple-product-discounts-on-the-same-item",
+      "source": "shopify-changelog",
+      "title": "Multiple product discounts on the same item",
+      "link": "https://changelog.shopify.com/posts/multiple-product-discounts-on-the-same-item",
+      "publishedAt": "2026-07-15T16:00:00.000Z",
+      "collectedAt": "2026-07-19T01:14:37.746Z",
+      "category": [
+        "Discounts"
+      ],
+      "description": "\n        <p>You can now combine multiple product discounts on the same item, so overlapping<br>\npromotions apply together without cart conflicts or workarounds. Previously, only<br>\none product discount could apply to an item.</p>\n\n<p>For example, run a sitewide <em>20% off the winter collection</em> sale alongside <em>$10<br>\noff boots</em> from an affiliate partnership. When a customer adds winter boots to<br>\ntheir cart, both discounts apply automatically.</p>\n\n<p><strong>What you can do</strong></p>\n\n<ul>\n<li>Combine multiple product discounts on the same item.</li>\n<li>Combine discount codes with automatic product discounts on the same item.</li>\n</ul>\n\n<p><strong>How it works</strong></p>\n\n<ol>\n<li>Tag your discounts to group them (for example: loyalty, seasonal, affiliate).</li>\n<li>Set which tagged discounts can combine.</li>\n<li>Discounts apply automatically at checkout, following your rules.</li>\n</ol>\n\n<p><a href=\"https://help.shopify.com/en/manual/discounts/discount-combinations#product-discounts-same-line-item\">Learn more</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "同一商品への複数の商品ディスカウント適用が可能に",
+          "summarizedJa": "同一商品に対して複数の商品ディスカウントを組み合わせて適用できるようになりました。例えば、サイト全体の「冬物コレクション20%オフ」と「ブーツ$10オフ」を同時に実施している場合、冬物ブーツには両方のディスカウントが自動適用されます。ディスカウントにタグを付けて組み合わせルールを設定することで、複雑なプロモーション戦略を実現できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-07-19T01:15:08.709Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1209,
+            "output": 256
+          },
+          "estimatedCost": 0.007467
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "同一商品への複数商品割引の併用",
+          "summarizedJa": "Shopifyでは、これまで1つの商品に1つの商品割引しか適用できませんでしたが、今回の更新により、同一商品に対して複数の商品割引を併用できるようになりました。これにより、サイト全体のセールとアフィリエイト割引など、異なる種類の割引が競合することなく自動的に適用され、マーチャントはより柔軟なプロモーション戦略を展開できます。割引のタグ付けと組み合わせルールを設定することで、顧客は自動的に複数の割引を享受できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-07-19T01:15:15.691Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 890,
+            "output": 166
           },
           "estimatedCost": 0
         }
@@ -919,6 +1071,57 @@
           "tokenUsage": {
             "input": 969,
             "output": 160
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-prepare-your-app-for-migration-to-shopify-app-pricing",
+      "source": "developer-changelog",
+      "title": "Prepare your app for migration to Shopify App Pricing ",
+      "link": "https://shopify.dev/changelog/prepare-your-app-for-migration-to-shopify-app-pricing",
+      "publishedAt": "2026-07-07T16:00:00.000Z",
+      "collectedAt": "2026-07-19T01:14:36.719Z",
+      "category": [
+        "Platform",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>Developers using the Billing API can now begin preparing their apps to move to Shopify App Pricing. The first part of our migration tool lets you generate, review, edit, and test Shopify App Pricing plans before moving any existing merchant subscriptions. This gives you time to confirm that your pricing configuration is ready while your app continues using its current billing setup.       </p>\n<p>Shopify App Pricing provides a standardized pricing experience across the Shopify App Store, plan selection, subscription management, and merchant billing.    </p>\n<p><img src=\"https://shopify.dev/assets/assets/images/changelog/app-pricing/get-started-UIlaOcRT.png\" alt=\"Get Started.png\">        </p>\n<h2>Generate your App Pricing plans</h2>\n<p>In the <strong>Pricing Details</strong> of your app's listing in <a href=\"https://partners.shopify.com/organizations\" target=\"_blank\" class=\"body-link\">Partner Dashboard</a> click <strong>manage</strong>. You'll see the migration tool above your list of plans. The tool automatically creates App Pricing draft plans from your eligible manual plans. Plans that are missing App Pricing required fields, like usage charges, are marked with an <strong>Action needed</strong> badge. </p>\n<p><img src=\"https://shopify.dev/assets/assets/images/changelog/app-pricing/checklist-16p6UBlc.png\" alt=\"Draft plans.png\">                                                          </p>\n<h2>Review and test your configuration</h2>\n<p>After your public and private plans are drafted, you can:</p>\n<ol>\n<li>Review the generated plan names prices, features, and billing intervals.                                                                           </li>\n<li>Edit plans or create additional plans as needed.                                                                                                    </li>\n<li>Configure usage charges and app events for usage-based pricing.                                                                                     </li>\n<li>Test the plans on a development store owned by the same Partner organization as your app.</li>\n<li>Review your plans using the readiness checklist</li>\n</ol>\n<p>Preparing plans in the tool doesn't migrate your existing shops or subscriptions. Merchants don't need to take action during this stage. For detailed instructions, plan-generation behavior, limitations, and testing requirements, read the <a href=\"https://shopify.dev/docs/apps/launch/billing/shopify-app-pricing/migrating-to-shopify-app-pricing\" target=\"_blank\" class=\"body-link\">Shopify App Pricing migration guide</a>.                                                   </p>\n<h2>Coming next: move existing subscriptions</h2>\n<p>This release is the first part of the manual billing migration tool. In the coming days, we'll be inviting partners to preview the next part of the tool for moving existing shops and subscriptions to your Shopify App Pricing plans. If you'd like to join this Early Access preview, <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSfu5wET7HaYLwdlkX2SNhGeRLvhccohTLlXb7hcH1fvyQdo_g/viewform?usp=dialog\" target=\"_blank\" class=\"body-link\">enter your information on this form</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify App Pricingへの移行に向けたアプリの準備",
+          "summarizedJa": "Billing APIを使用している開発者は、Shopify App Pricingへの移行準備を開始できるようになりました。移行ツールの第一段階として、既存のマーチャントサブスクリプションを移動する前に、料金プランの生成、確認、編集、テストが可能です。現在の課金設定を維持したまま、新しい料金設定の準備と検証を行うことができます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-07-19T01:15:20.889Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1719,
+            "output": 232
+          },
+          "estimatedCost": 0.008637
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopifyアプリ料金体系への移行準備",
+          "summarizedJa": "Shopifyは、アプリ開発者向けに「Shopifyアプリ料金体系」への移行準備ツールをリリースしました。このツールにより、既存のマーチャントサブスクリプションを移行する前に、新しい料金プランの作成、確認、編集、テストが可能になります。これにより、アプリストア全体で標準化された料金体験が提供され、今後の既存サブスクリプション移行に備えることができます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-07-19T01:15:27.172Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1331,
+            "output": 155
           },
           "estimatedCost": 0
         }
