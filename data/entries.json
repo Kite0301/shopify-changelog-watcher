@@ -1,6 +1,111 @@
 {
-  "lastUpdated": "2026-07-22T01:13:19.693Z",
+  "lastUpdated": "2026-07-25T01:18:02.797Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-new-app-added-annotations-on-your-analytics-charts",
+      "source": "shopify-changelog",
+      "title": "New app-added annotations on your analytics charts",
+      "link": "https://changelog.shopify.com/posts/new-app-added-annotations-on-your-analytics-charts",
+      "publishedAt": "2026-07-24T16:00:00.000Z",
+      "collectedAt": "2026-07-25T01:17:57.839Z",
+      "category": [
+        "Analytics"
+      ],
+      "description": "\n        <p>Apps can now add business context directly to your analytics charts with <strong>annotations</strong>.</p>\n\n<p>Annotations mark important events on a specific date or date range, such as a product launch, collection launch, marketing campaign, discount, checkout offer, supplier change, landing page launch, payment method change, popup store, market launch, program change, or business milestone.</p>\n\n<p>When an app adds an annotation, we will display their name and icon alongside it. This helps you understand where the context came from while reviewing your reports.</p>\n\n<p>Use annotations to compare what happened in your business with changes in your analytics data, including some of your favorite metrics such as sales, sessions, conversion rate, average order value, units sold, or fulfillment performance. </p>\n\n<p>For example, you can review whether sales changed during a campaign, conversion values changed after a landing page launch, average order value changed during a discount, or fulfillment metrics changed after a supplier or warehouse update.</p>\n\n<p>Annotations don't change your report data. They add context to help you understand what might have influenced trends or changes.</p>\n\n<p>Learn more about Annotations <a href=\"https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/custom-reports/annotations\">here</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "アナリティクスチャートにアプリが追加した注釈が表示可能に",
+          "summarizedJa": "アプリがアナリティクスチャートに注釈を追加できるようになりました。注釈により、商品ローンチやキャンペーン、割引などの重要なビジネスイベントをチャート上に表示し、売上やコンバージョン率などの指標変化との関連性を分析できます。注釈はレポートデータ自体を変更せず、トレンドや変化の背景を理解するための文脈を提供します。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-07-25T01:18:11.574Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1211,
+            "output": 248
+          },
+          "estimatedCost": 0.007353
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "分析チャートへのアプリによる注釈追加機能",
+          "summarizedJa": "Shopifyの分析チャートに、アプリがビジネスイベントの注釈を直接追加できるようになりました。これにより、商品ローンチやキャンペーン、割引などの重要なイベントが売上やコンバージョン率といった分析データにどのように影響したかを視覚的に把握しやすくなります。アプリ名とアイコンも表示されるため、データ変動の背景をより深く理解し、効果的なビジネス戦略の立案に役立ちます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-07-25T01:18:17.915Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 925,
+            "output": 159
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-invalid-metafield-queries-now-return-errors-in-the-graphql-admin-api",
+      "source": "developer-changelog",
+      "title": "Invalid metafield queries now return errors in the GraphQL Admin API",
+      "link": "https://shopify.dev/changelog/invalid-metafield-queries-now-return-errors-in-the-graphql-admin-api",
+      "publishedAt": "2026-07-24T16:00:00.000Z",
+      "collectedAt": "2026-07-25T01:18:02.789Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Breaking API Change",
+        "Admin GraphQL API",
+        "Metafields and metaobjects",
+        "2026-10"
+      ],
+      "description": " <div class=\"\"><p>Starting in API version 2026-10, the GraphQL Admin API returns an error when a query filters by a metafield that isn't set up for filtering, instead of silently returning incorrect results. This is a breaking change. It affects apps that filter resources by metafield on version 2026-10 or later, and you'll need to update affected queries before you upgrade.</p>\n<h2>What changed</h2>\n<p>In API version 2026-10 and later, the GraphQL Admin API checks metafield filters before it runs a query. If a query filters by a metafield that can't be used for filtering, the query returns an error explaining the problem instead of ignoring the invalid predicate and returning an incorrect result.</p>\n<p>A metafield filter commonly fails when:</p>\n<ul>\n<li>The metafield doesn't have a definition.</li>\n<li>The metafield's definition isn't configured to allow filtering.</li>\n<li>The metafield's type doesn't support the filter or comparison you used.</li>\n</ul>\n<p>Previously, invalid predicates in metafield filters were silently ignored, so a query with an invalid filter could return misleading results. Now the response tells you the filter is the problem, so you can correct it.</p>\n<h2>Who's affected</h2>\n<p>This change affects apps and integrations that filter by metafields in the GraphQL Admin API (for example, filtering products, orders, or customers by a metafield) on API version 2026-10 or later. Queries on version 2026-07 and earlier keep the previous behavior and aren't affected until you upgrade.</p>\n<p>You're affected only when a query filters by a metafield that isn't valid for filtering. Queries that filter by metafields set up for filtering, using a supported comparison, behave exactly as before and return the same results.</p>\n<h2>Why this matters</h2>\n<p>Silently returning incorrect results made invalid metafield filters hard to catch: a mistyped or unsupported filter looked identical to a query that simply had different matches. Returning an error instead lets you find and fix these problems during development, rather than shipping a filter that quietly returns nothing in production.</p>\n<h2>Breaking changes and migrations</h2>\n<p>API version 2026-10 is scheduled for release on October 1, 2026. Once you make requests on 2026-10 or later, a query that filters by a metafield that isn't set up for filtering returns an error instead of an empty result.</p>\n<p>To migrate:</p>\n<ol>\n<li>Find the queries in your app that filter by metafields in the GraphQL Admin API.</li>\n<li>For each one, confirm the metafield has a definition, the definition <a href=\"https://shopify.dev/docs/apps/build/metafields/use-metafield-capabilities#admin-filterable\" target=\"_blank\" class=\"body-link\">allows filtering</a>, and the <a href=\"https://shopify.dev/docs/apps/build/metafields/query-using-metafields\" target=\"_blank\" class=\"body-link\">comparison you use</a> is supported for that metafield's type.</li>\n<li>Update any filter that references a metafield that isn't set up for filtering.</li>\n<li>Test your queries against version 2026-10 and confirm they return results without an error.</li>\n</ol>\n<p>If a metafield you rely on can't be filtered yet, keep those queries on version 2026-07 or earlier until you've updated your app, and set up the metafield definition for filtering before you upgrade.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "GraphQL Admin APIで無効なメタフィールドクエリがエラーを返すように変更",
+          "summarizedJa": "2026年10月リリース予定のAPIバージョン2026-10から、フィルタリング設定されていないメタフィールドでのクエリ実行時に、従来の無視動作から明示的なエラー返却に変更されます。この破壊的変更により、メタフィールドでフィルタリングを行うアプリは、バージョンアップ前にクエリの修正とメタフィールド定義の確認が必要です。影響を受けるのは、メタフィールドによるリソースフィルタリング（商品・注文・顧客など）を実装しているアプリやインテグレーションです。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-07-25T01:18:24.110Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1831,
+            "output": 302
+          },
+          "estimatedCost": 0.010023
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "GraphQL Admin APIで無効なメタフィールドクエリがエラーを返すように",
+          "summarizedJa": "ShopifyのGraphQL Admin APIにおいて、APIバージョン2026-10以降、無効なメタフィールドフィルターを含むクエリは、これまでのように誤った結果を黙って返すのではなく、エラーを返すようになります。これは破壊的変更であり、メタフィールドでリソースをフィルタリングするアプリや連携機能に影響します。パートナーは、2026-10にアップグレードする前に、関連するクエリを見直し、メタフィールドが正しく設定されていることを確認する必要があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-07-25T01:18:32.075Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1489,
+            "output": 184
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-metafield-triggers-and-additional-topics-are-now-available-for-events",
       "source": "developer-changelog",
