@@ -1,6 +1,159 @@
 {
-  "lastUpdated": "2026-07-25T01:18:02.797Z",
+  "lastUpdated": "2026-07-28T01:12:33.541Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-add-a-bank-account-for-every-payout-currency",
+      "source": "shopify-changelog",
+      "title": "Add a bank account for every payout currency in Shopify Payments",
+      "link": "https://changelog.shopify.com/posts/add-a-bank-account-for-every-payout-currency",
+      "publishedAt": "2026-07-27T16:30:00.000Z",
+      "collectedAt": "2026-07-28T01:12:33.523Z",
+      "category": [
+        "Payments"
+      ],
+      "description": "\n        <p>We've removed the 8-currency limit on bank accounts for multi-currency payouts in Shopify Payments. Now the rule is simply one bank account per supported payout currency, so you can be paid out in every currency your region and plan allow.</p>\n\n<p>If you have an international customer base, multi-currency payouts let you receive money in the currency your customers paid in, rather than converting it back to your domestic currency first. That means fewer currency conversions, less exposure to exchange rates, and balances that sit in the same currencies you already use to pay suppliers, staff, and taxes abroad. Multi-currency payouts are available on eligible plans and regions, and fees apply to payouts you receive in non-domestic currencies.</p>\n\n<p>Ready to set this up? Add a bank account for each currency you want to be paid in from your Shopify Payments payout settings, and read <a href=\"https://help.shopify.com/manual/payments/shopify-payments/store-currency/payouts-in-multiple-currencies\">Managing multi-currency payouts with Shopify Payments</a> in the Shopify Help Center for plan requirements, supported currencies, and fees.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify Paymentsで各支払い通貨ごとに銀行口座を追加可能に",
+          "summarizedJa": "Shopify Paymentsのマルチ通貨ペイアウト機能において、銀行口座数の8通貨制限が撤廃されました。これにより、サポートされている各ペイアウト通貨ごとに1つずつ銀行口座を登録できるようになり、顧客が支払った通貨でそのまま入金を受け取ることが可能です。為替手数料の削減や為替リスクの軽減につながり、海外の仕入先や従業員への支払いにも便利です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 2,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-07-28T01:12:40.681Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1182,
+            "output": 274
+          },
+          "estimatedCost": 0.0076560000000000005
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify ペイメントで、すべての受取通貨ごとに銀行口座を追加可能に",
+          "summarizedJa": "Shopify ペイメントの多通貨での支払い受取において、これまで8通貨に制限されていた銀行口座の登録制限が撤廃されました。これにより、サポートされているすべての受取通貨ごとに銀行口座を設定できるようになります。国際的な顧客を持つマーチャントは、通貨換算回数の削減や為替レート変動リスクの軽減といったメリットを享受でき、海外での支払いや税金管理がより効率的になります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-07-28T01:12:47.367Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 880,
+            "output": 168
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-cart-sharing-on-shopify-pos",
+      "source": "shopify-changelog",
+      "title": "Cart sharing on Shopify POS ",
+      "link": "https://changelog.shopify.com/posts/cart-sharing-on-shopify-pos",
+      "publishedAt": "2026-07-27T16:00:00.000Z",
+      "collectedAt": "2026-07-28T01:12:33.523Z",
+      "category": [
+        "Pos"
+      ],
+      "description": "\n        <p>We’ve released Cart sharing for Shopify POS. Staff can build carts and quickly switch between different customer carts across devices. Carts save automatically as staff build them, and any team member can pick up, continue, and close any cart from any device. This enables true floor-to-register selling: a sales associate builds a cart with a customer on a mobile device, passes it off, and another staff member closes the sale at the register. A dedicated cart view keeps your team’s open carts organized, filtered by default to the signed-in staff member. Any cart converts to a draft order in one swipe. </p>\n\n<p>Cart sharing is available now for all POS Pro merchants in version 11.11. Learn more about enabling <a href=\"https://help.shopify.com/en/manual/sell-in-person/shopify-pos/order-management/save-retrieve-order\">Cart sharing </a>in the Help Center. </p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify POSでカート共有機能がリリース",
+          "summarizedJa": "Shopify POSにカート共有機能が追加され、スタッフが複数の顧客カートを作成し、デバイス間で素早く切り替えられるようになりました。カートは自動保存され、チームメンバー全員が任意のデバイスから任意のカートを引き継いで販売を完了できます。この機能はPOS Proプラン加入者向けにバージョン11.11で提供開始され、フロア接客からレジ決済までのシームレスな販売体験を実現します。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-07-28T01:12:52.685Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1116,
+            "output": 259
+          },
+          "estimatedCost": 0.007233
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify POSでのカート共有",
+          "summarizedJa": "Shopify POSにカート共有機能がリリースされました。これにより、店舗スタッフは複数のデバイス間で顧客のカートを構築・共有し、フロアでの接客からレジでの会計までをスムーズに連携できるようになります。POS Proマーチャントはバージョン11.11でこの機能を利用でき、顧客体験と店舗運営の効率化に貢献します。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-07-28T01:12:57.500Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 828,
+            "output": 146
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-pos-ui-extensions-can-now-print-directly-to-hardware-receipt-printers",
+      "source": "developer-changelog",
+      "title": "POS UI extensions can now print directly to hardware receipt printers",
+      "link": "https://shopify.dev/changelog/pos-ui-extensions-can-now-print-directly-to-hardware-receipt-printers",
+      "publishedAt": "2026-07-27T16:00:00.000Z",
+      "collectedAt": "2026-07-28T01:12:32.285Z",
+      "category": [
+        "API",
+        "New",
+        "POS Extensions",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>POS UI Extensions <code>2026-07</code> introduces the <a href=\"https://shopify.dev/docs/api/pos-ui-extensions/2026-07/target-apis/platform-apis/printing-api\" target=\"_blank\" class=\"body-link\">Printing API</a> (<code>shopify.printing</code>), which enables extensions to discover hardware printers with <code>getPrinters()</code> and send documents directly to a connected receipt printer with <code>print()</code>.</p>\n<p>The Printing API supersedes <code>shopify.print</code>, which is now deprecated. No immediate action is required; plan to migrate when you adopt <code>2026-07</code>.</p>\n<h2>What changed</h2>\n<ul>\n<li><code>shopify.printing.getPrinters()</code> returns the hardware printers available to the device. Each printer includes an <code>id</code>, <code>name</code>, and <code>connected</code> status.</li>\n<li><code>shopify.printing.print(src, options?)</code> prints the document at <code>src</code>. If you omit <code>options.printer</code>, the system print dialog opens. If you pass a printer returned by <code>getPrinters()</code>, the document prints directly to that printer with no dialog.</li>\n</ul>\n<p>The <code>src</code> must be either a relative path appended to your app’s <code>application_url</code>, or a full URL on the same origin. The document is fetched using the extension’s session token.</p>\n<p>Receipt printers can render HTML and images directly. PDFs require the system print dialog: if you pass a <code>printer</code> when <code>src</code> points to a PDF, <code>shopify.printing.print</code> throws an error. For PDFs, always omit <code>options.printer</code> and rely on the system print dialog.</p>\n<p>Previously, <code>shopify.print</code> could only open the system print dialog, which cannot target dedicated receipt printers. Earlier POS UI Extensions API versions are unchanged.</p>\n<blockquote>\n<p>Note:\nHardware printer discovery requires Shopify POS version 11.11.0 or later. On earlier versions, <code>getPrinters()</code> returns an empty array, even when a receipt printer is paired. This does not affect the system print dialog, which remains available.</p>\n</blockquote>\n<p>Always handle the empty-array case by falling back to the system print dialog. This also covers merchants without a receipt printer:</p>\n<pre><code class=\"language-jsx\">const printers = await shopify.printing.getPrinters();\nconst receiptPrinter = printers.find((printer) =&gt; printer.connected);\n\nif (receiptPrinter) {\n  await shopify.printing.print('/print/receipt', {printer: receiptPrinter});\n} else {\n  await shopify.printing.print('/print/receipt');\n}\n</code></pre>\n<p>The Printing API is available on all POS UI extension targets. To verify direct printing, test on a development store with POS 11.11.0 or later and a paired receipt printer. Call <code>shopify.printing.print</code> with a printer from <code>getPrinters()</code>; if the job prints without a dialog, direct printing is working.</p>\n<h2>Related docs</h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/pos-ui-extensions/2026-07/target-apis/platform-apis/printing-api\" target=\"_blank\" class=\"body-link\">Printing API reference</a></li>\n<li><a href=\"https://shopify.dev/docs/api/pos-ui-extensions/2026-07/target-apis/platform-apis/print-api\" target=\"_blank\" class=\"body-link\">Print API reference (deprecated)</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "POS UI拡張機能がハードウェアレシートプリンターへの直接印刷に対応",
+          "summarizedJa": "POS UI Extensions 2026-07で新しいPrinting APIが導入され、拡張機能から接続されたレシートプリンターを検出して直接印刷できるようになりました。従来の`shopify.print`は非推奨となり、新しい`shopify.printing.getPrinters()`と`shopify.printing.print()`メソッドを使用することで、システム印刷ダイアログを経由せずにハードウェアプリンターへ直接出力が可能になります。この機能を利用するにはShopify POS 11.11.0以降が必要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-07-28T01:13:03.122Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1901,
+            "output": 286
+          },
+          "estimatedCost": 0.009993
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "POS UI拡張機能がハードウェアレシートプリンターへ直接印刷可能に",
+          "summarizedJa": "Shopify POS UI拡張機能に新しいPrinting APIが導入され、ハードウェアレシートプリンターへの直接印刷が可能になりました。これにより、拡張機能から接続されたプリンターを検出し、システムダイアログなしでHTMLや画像を直接印刷できるようになり、POSでの顧客体験と業務効率が向上します。既存の`shopify.print`は非推奨となるため、パートナーは将来的な移行計画が必要です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 17,
+          "analyzedAt": "2026-07-28T01:13:11.267Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1488,
+            "output": 165
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-new-app-added-annotations-on-your-analytics-charts",
       "source": "shopify-changelog",
@@ -1492,6 +1645,57 @@
           "tokenUsage": {
             "input": 1117,
             "output": 219
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-strengthening-trust-in-app-store-reviews",
+      "source": "developer-changelog",
+      "title": "Strengthening trust in App Store reviews",
+      "link": "https://shopify.dev/changelog/strengthening-trust-in-app-store-reviews",
+      "publishedAt": "2026-07-06T16:00:00.000Z",
+      "collectedAt": "2026-07-28T01:12:32.286Z",
+      "category": [
+        "App store",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>Reviews on the Shopify App Store are foundational to a fair marketplace. They're how merchants find the right apps, and how developers earn trust for the products they build. Reviews are one of the most important ways merchants decide which apps to trust. To keep that signal honest, we're making two changes to how we handle review incentivization and untrusted reviews. We're announcing both together. Here's what Partners need to know.</p>\n<h2>1. A dedicated policy on review incentivization</h2>\n<p><strong>What it is:</strong> Offering, unlocking, or withholding app features in exchange for a merchant leaving a review.</p>\n<p><strong>What's changing:</strong> Rules on this practice previously lived within the Partner Program Agreement, which made them easy to overlook. We're introducing a dedicated App Store requirement on review incentivization with clear consequences.</p>\n<p><strong>The consequence:</strong> When an app is found to be incentivizing reviews, we'll remove a significant portion of its reviews. We've already identified apps engaged in this practice, and we'll be enforcing this policy as soon as the change goes live.</p>\n<h2>2. Stronger untrusted review detection</h2>\n<p><strong>What it is:</strong> Reviews that don't come from genuine users of an app. These are posted to inflate an app's ranking or to harm a competitor's.</p>\n<p><strong>What's changing:</strong> We're expanding the set of signals we use to determine whether a review is authentic. Because we're applying these signals to existing reviews as well as new ones, a meaningful number of reviews that don't meet our authenticity bar will be unpublished over the coming weeks.</p>\n<p><strong>What to expect:</strong> Because untrusted reviewers often leave reviews across many listings to appear more legitimate, some genuine apps might see reviews unpublished too. This isn't a reflection of wrongdoing on your part, but it's a result of removing the untrustworthy activity connected to those reviews. Our goal is to ensure that the reviews that remain carry more weight. Unpublishing will roll out gradually as the backfill completes.</p>\n<h2>Why now</h2>\n<p>As the Shopify App Store grows, so does our responsibility to protect it. Untrusted and incentivized reviews undermine the trust merchants place in the review systems, and they create an uneven playing field for developers who play by the rules. A trustworthy App Store benefits everyone who builds honestly. These changes make our standards clearer, our enforcement more consistent, and the reviews merchants rely on more genuine.</p>\n<h2>What you should do</h2>\n<p>As you collect reviews, make sure you're doing so honestly and fairly. These are some best practices we recommend:</p>\n<ul>\n<li><strong>Use the <a href=\"https://shopify.dev/docs/api/app-home/apis/user-interface-and-interactions/reviews-api\" target=\"_blank\" class=\"body-link\">Reviews API</a></strong> to request reviews from merchants who actually use your app.  </li>\n<li><strong>Ask in neutral language at the right moment.</strong> A simple &quot;How's your experience? Leave a review&quot; after the merchant has used your app is fine. Offering anything in return is not.  </li>\n<li><strong>Reply to negative reviews</strong> instead of trying to bury them. Merchants value developers who engage with feedback.</li>\n</ul>\n<p>Reach <a href=\"https://help.shopify.com/en/partners/help-support/getting-support\" target=\"_blank\" class=\"body-link\">out to Support</a> with any concerns or if you feel that trusted reviews have been removed. </p>\n<h2>What's next</h2>\n<p>This is the start of a broader investment in App Store quality. We're continuing to improve  automated detection, strengthen policy enforcement, and strengthen the overall health of a trustworthy ecosystem.</p>\n<p>The Shopify App Store should be a place where the best apps win. That's what we're building toward.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "App Storeレビューの信頼性強化",
+          "summarizedJa": "Shopify App Storeにおけるレビューの信頼性を向上させるため、2つの重要な変更が実施されます。レビューと引き換えにアプリ機能を提供・制限する行為に対する専用ポリシーが導入され、違反アプリのレビューは大幅に削除されます。また、信頼できないレビューの検出システムが強化され、既存レビューを含めて非公開化が段階的に実施されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-07-28T01:13:16.939Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1867,
+            "output": 240
+          },
+          "estimatedCost": 0.009201
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "アプリストアレビューの信頼性強化",
+          "summarizedJa": "Shopifyは、アプリストアのレビューの信頼性を高めるため、2つの重要な変更を発表しました。具体的には、レビューの見返りに機能を提供する行為を禁止する明確なポリシーを導入し、違反したアプリのレビューを大幅に削除します。また、不正なレビューの検出を強化し、既存および新規の信頼できないレビューを非公開にすることで、マーチャントがより信頼できるアプリを見つけられるよう、公正なマーケットプレイスを構築します。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-07-28T01:13:24.757Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1492,
+            "output": 170
           },
           "estimatedCost": 0
         }
