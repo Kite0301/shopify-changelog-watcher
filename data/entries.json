@@ -1,6 +1,156 @@
 {
-  "lastUpdated": "2026-07-29T01:15:41.117Z",
+  "lastUpdated": "2026-07-30T01:08:27.280Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-view-app-added-annotations-on-your-analytics-charts",
+      "source": "shopify-changelog",
+      "title": "View app-added annotations on your analytics charts",
+      "link": "https://changelog.shopify.com/posts/view-app-added-annotations-on-your-analytics-charts",
+      "publishedAt": "2026-07-29T16:00:00.000Z",
+      "collectedAt": "2026-07-30T01:08:27.263Z",
+      "category": [
+        "Analytics"
+      ],
+      "description": "\n        <p>You can now see more business context directly on your analytics charts with annotations. Annotations mark important events on a specific date or date range, such as a product launch, marketing campaign, sale event, supplier change, landing page launch, popup store, or business milestone.</p>\n\n<p>When an app adds an annotation, Shopify admin will show which app added it, such as with the app's name or logo. This helps you understand where the context came from while reviewing your reports.</p>\n\n<p>Use annotations to compare what happened in your business with changes in your analytics data, including sales, sessions, conversion rate, average order value, units sold, returns, or fulfillment performance. </p>\n\n<p>For example, you can review whether sales changed during a campaign, whether conversion changed after a landing page launch, or whether fulfillment metrics changed after a supplier or warehouse update.</p>\n\n<p>Annotations don't change your report data. They add context to help you understand what might have influenced your metrics.</p>\n\n<p>For more information, refer to <a href=\"https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/custom-reports/annotations\">Annotations in Shopify reports</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "アナリティクスチャートでアプリが追加した注釈を表示可能に",
+          "summarizedJa": "アナリティクスチャート上でアプリが追加した注釈を確認できるようになりました。注釈により、商品発売やキャンペーン、セールイベントなどの重要なビジネスイベントを特定の日付や期間にマークでき、どのアプリが注釈を追加したかも表示されます。売上やコンバージョン率などの指標変化とビジネスイベントを関連付けて分析することで、データの背景をより深く理解できます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-07-30T01:08:33.354Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1191,
+            "output": 260
+          },
+          "estimatedCost": 0.007473
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "アプリが追加した注釈を分析チャートで表示",
+          "summarizedJa": "Shopifyの分析チャートで、アプリが追加した注釈（アノテーション）を直接確認できるようになりました。これにより、商品発売やマーケティングキャンペーンなどの重要なビジネスイベントがデータに与えた影響を、より詳細な文脈で理解できます。どのアプリが注釈を追加したかも表示されるため、データ分析の精度向上とビジネス判断に役立ちます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-07-30T01:08:38.747Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 904,
+            "output": 153
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-shopify-messaging-now-supports-whatsapp-marketing",
+      "source": "shopify-changelog",
+      "title": "Shopify Messaging now supports WhatsApp marketing",
+      "link": "https://changelog.shopify.com/posts/shopify-messaging-now-supports-whatsapp-marketing",
+      "publishedAt": "2026-07-29T15:35:00.000Z",
+      "collectedAt": "2026-07-30T01:08:27.263Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>WhatsApp marketing is now part of <a href=\"https://apps.shopify.com/shopify-email\">Shopify Messaging</a>, helping you serve customers globally and drive sales with another channel to market and promote your business. </p>\n\n<p>Create your WhatsApp campaigns using pre-built templates or your own branded content. Add media from your product catalog, and set up interactive buttons and keyword replies that engage your customers when they click or reply with a keyword. With flexible pricing, you can scale up WhatsApp marketing campaigns during busy seasons and scale down when you need to—only paying for the messages you send.</p>\n\n<p>To learn how to create and send WhatsApp marketing campaigns, visit the <a href=\"https://help.shopify.com/en/manual/promoting-marketing/create-marketing/shopify-messaging/whatsapp\">Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify MessagingがWhatsAppマーケティングに対応",
+          "summarizedJa": "Shopify MessagingアプリにWhatsAppマーケティング機能が追加され、グローバルな顧客へのアプローチと売上促進が可能になりました。事前構築されたテンプレートやブランドコンテンツを使用してキャンペーンを作成でき、商品カタログからのメディア追加、インタラクティブボタンやキーワード返信などの機能が利用できます。従量課金制のため、繁忙期には規模を拡大し、閑散期には縮小するなど柔軟な運用が可能です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-07-30T01:08:43.675Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1112,
+            "output": 274
+          },
+          "estimatedCost": 0.0074459999999999995
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "ShopifyメッセージングがWhatsAppマーケティングに対応",
+          "summarizedJa": "ShopifyメッセージングにWhatsAppマーケティング機能が統合され、マーチャントは世界中の顧客にリーチし、売上向上を図れるようになりました。商品カタログのメディアを活用し、テンプレートや独自のコンテンツでキャンペーンを作成できるほか、インタラクティブなボタンやキーワード返信で顧客エンゲージメントを高めることが可能です。送信メッセージ数に応じた柔軟な料金体系も特徴です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-07-30T01:08:52.543Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 809,
+            "output": 153
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-ups-return-labels-now-available",
+      "source": "shopify-changelog",
+      "title": "UPS return labels are now available",
+      "link": "https://changelog.shopify.com/posts/ups-return-labels-now-available",
+      "publishedAt": "2026-07-29T13:00:00.000Z",
+      "collectedAt": "2026-07-30T01:08:27.263Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>You can now create UPS return labels from any fulfilled order in your Shopify admin. Select an order, create a return, and choose UPS as the carrier. The label is sent to your customer by email or a shareable link.</p>\n\n<p>You can purchase return labels through Shopify's discounted UPS rates, or you can connect your UPS account to Shopify and create UPS return labels using your own account rates.</p>\n\n<p>You're only charged when the carrier scans the label—unused labels expire after six months at no charge. Available for US domestic orders.</p>\n\n<p>To learn more, <a href=\"https://help.shopify.com/en/manual/fulfillment/fulfilling-orders/shipping-labels/buying-labels/return-labels\">visit our Help Center</a>. </p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "UPS返品ラベルが利用可能に",
+          "summarizedJa": "Shopify管理画面から直接UPSの返品ラベルを作成できるようになりました。Shopifyの割引料金または自社のUPSアカウント料金で購入でき、ラベルがスキャンされた時点でのみ課金されます。現在は米国内配送のみが対象となっています。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 6,
+          "analyzedAt": "2026-07-30T01:08:56.655Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1090,
+            "output": 207
+          },
+          "estimatedCost": 0.0063750000000000005
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "UPS返品ラベルの提供開始",
+          "summarizedJa": "Shopify管理画面から、完了済みの注文に対してUPSの返品ラベルを直接作成できるようになりました。Shopifyの割引料金またはご自身のUPSアカウント料金を利用でき、ラベルはスキャン時にのみ課金されます。ただし、この機能は現在のところ米国内の注文にのみ対応しています。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 3
+          },
+          "totalScore": 7,
+          "analyzedAt": "2026-07-30T01:09:06.191Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 798,
+            "output": 131
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-add-a-bank-account-for-every-payout-currency",
       "source": "shopify-changelog",
