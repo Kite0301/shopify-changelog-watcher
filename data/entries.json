@@ -1,6 +1,111 @@
 {
-  "lastUpdated": "2026-07-31T01:21:00.730Z",
+  "lastUpdated": "2026-08-01T01:22:11.509Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-hydrogen-developer-preview-update-july-30",
+      "source": "developer-changelog",
+      "title": "Hydrogen developer preview update: July 30, 2026",
+      "link": "https://shopify.dev/changelog/hydrogen-developer-preview-update-july-30",
+      "publishedAt": "2026-07-31T16:00:00.000Z",
+      "collectedAt": "2026-08-01T01:22:10.200Z",
+      "category": [
+        "API",
+        "Update",
+        "Hydrogen"
+      ],
+      "description": " <div class=\"\"><p>The Hydrogen developer preview adds new capabilities to the toolkit and extends the ways developers can build Shopify storefronts:</p>\n<ul>\n<li><strong>Vue bindings:</strong> Build your storefront in Vue with the same Hydrogen APIs you know from React, through the new <code>@shopify/hydrogen/vue</code> entrypoint.</li>\n<li><strong>GraphQL TypeScript tooling:</strong> Query autocomplete and type checking for both Shopify APIs now ship with the package.</li>\n<li><strong>Analytics and consent through ShopifyScripts:</strong> Storefront analytics and consent management now set up with the rest of your Shopify scripts, including support for Shopify's privacy banner.</li>\n<li><strong>Shopify Inbox support:</strong> Shoppers can chat with your store's AI agent and get handed off to your staff, right from your Hydrogen storefront.</li>\n<li><strong>Suspense cart reads in React:</strong> The cart can stream in after the page renders, so your app shell stays fast and cacheable.</li>\n</ul>\n<p>To get started, visit the <a href=\"https://shopify.dev/docs/storefronts/headless/developer-preview\" target=\"_blank\" class=\"body-link\">Hydrogen developer preview documentation</a>. For a detailed breakdown of this release, read the <a href=\"https://hydrogen.shopify.dev/update/developer-preview-release-notes-july-30-2026\" target=\"_blank\" class=\"body-link\">full release notes</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Hydrogen開発者プレビュー更新:2026年7月30日",
+          "summarizedJa": "Hydrogenの開発者プレビューに5つの新機能が追加されました。Vue対応、GraphQL TypeScriptツール、分析・同意管理、Shopify Inboxサポート、React Suspenseによるカート読み込みなど、ヘッドレスストアフロント開発の選択肢が大幅に拡張されています。開発者プレビュー段階のため、本番環境での利用には注意が必要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-08-01T01:22:17.097Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1285,
+            "output": 232
+          },
+          "estimatedCost": 0.0073349999999999995
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Hydrogen開発者プレビューのアップデート：2026年7月30日",
+          "summarizedJa": "ShopifyのヘッドレスコマースフレームワークHydrogenの開発者プレビューが更新され、Vue.jsでのストアフロント構築、GraphQLのTypeScriptツール、Shopify Inbox連携、およびカート読み込みの高速化など、多くの新機能が追加されました。これにより、日本のマーチャントはより柔軟で高性能なストアを構築でき、パートナーはVue開発者もHydrogenプロジェクトに参加できるようになり、開発の選択肢と効率が大幅に向上します。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 17,
+          "analyzedAt": "2026-08-01T01:22:24.423Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 944,
+            "output": 175
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-new-fields-for-cash-management-activities-and-drawers",
+      "source": "developer-changelog",
+      "title": "New fields for cash management activities and drawers in POS",
+      "link": "https://shopify.dev/changelog/new-fields-for-cash-management-activities-and-drawers",
+      "publishedAt": "2026-07-31T16:00:00.000Z",
+      "collectedAt": "2026-08-01T01:22:10.200Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-07"
+      ],
+      "description": " <div class=\"\"><p>New fields are now available on cash management resources in the GraphQL Admin API, providing more detail about cash drawer balances and cash count activities.</p>\n<h2>What's new</h2>\n<h3>Cash Drawer balance</h3>\n<p>The <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-07/objects/CashDrawer\" target=\"_blank\" class=\"body-link\"><code>CashDrawer</code></a> object now exposes the current drawer balance directly:</p>\n<p>| Field | Description |\n| </p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "POS向け現金管理アクティビティとドロワーの新しいフィールド",
+          "summarizedJa": "GraphQL Admin APIの現金管理リソースに新しいフィールドが追加され、キャッシュドロワーの残高や現金カウントアクティビティに関するより詳細な情報が取得できるようになりました。CashDrawerオブジェクトで現在のドロワー残高を直接参照できるようになります。POSで現金管理機能を実装している開発者やマーチャントにとって有用な機能拡張です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-08-01T01:22:28.647Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1070,
+            "output": 245
+          },
+          "estimatedCost": 0.0068850000000000005
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "POSの現金管理アクティビティとドロワーに関する新しいフィールド",
+          "summarizedJa": "Shopify POSの現金管理機能が強化され、GraphQL Admin APIに新しいフィールドが追加されました。これにより、現金ドロワーの現在の残高や現金カウントアクティビティに関する詳細情報が直接取得できるようになります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-08-01T01:22:35.647Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 769,
+            "output": 126
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-partner-details-on-collaborator-requests",
       "source": "developer-changelog",
@@ -874,6 +979,56 @@
           "tokenUsage": {
             "input": 1103,
             "output": 173
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-localized-address-fields-are-rolling-out-to-checkout-and-shopify-admin",
+      "source": "shopify-changelog",
+      "title": "Localized address fields are rolling out to checkout and Shopify admin for Brazil, the Philippines, Kuwait, Peru and Panama",
+      "link": "https://changelog.shopify.com/posts/localized-address-fields-are-rolling-out-to-checkout-and-shopify-admin",
+      "publishedAt": "2026-07-17T16:00:00.000Z",
+      "collectedAt": "2026-08-01T01:22:11.497Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>Localized address fields are now rolling out for addresses in Brazil, the Philippines, Kuwait, Peru, and Panama. No action is required. These fields are available: </p>\n\n<ul>\n<li>when buyers check out, or save an address in their account profile page</li>\n<li>in the admin when you save a customer address to their profile page, or edit an order's shipping address </li>\n</ul>\n\n<p>This update helps you collect addresses in formats that comply with local address requirements in these five countries, and gives your buyers a better checkout experience. </p>\n\n<p>Learn more in our <a href=\"https://help.shopify.com/en/manual/international/shipping/international-considerations#additional-address\">Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "ブラジル、フィリピン、クウェート、ペルー、パナマ向けにローカライズされた住所フィールドがチェックアウトと管理画面に展開",
+          "summarizedJa": "ブラジル、フィリピン、クウェート、ペルー、パナマの5カ国向けに、各国の住所形式に対応したローカライズされた住所フィールドが展開されます。チェックアウト時や管理画面での顧客住所登録・編集時に自動的に適用され、マーチャント側のアクションは不要です。これにより、これらの国への配送を行うストアでは、現地の住所要件に準拠した正確な住所収集が可能になります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 2,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 7,
+          "analyzedAt": "2026-08-01T01:22:41.852Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1108,
+            "output": 296
+          },
+          "estimatedCost": 0.007764
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "ブラジル、フィリピン、クウェート、ペルー、パナマ向けに、チェックアウトとShopify管理画面でローカライズされた住所フィールドが展開",
+          "summarizedJa": "ブラジル、フィリピン、クウェート、ペルー、パナマの購入者向けに、チェックアウト時およびShopify管理画面での住所入力フィールドが、各国の要件に合わせたローカライズされた形式で提供されます。これにより、これらの国々での正確な住所収集と購入体験の向上が期待されますが、日本のマーチャントやパートナーが直接的な対応を行う必要はありません。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 2,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 7,
+          "analyzedAt": "2026-08-01T01:22:47.193Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 814,
+            "output": 186
           },
           "estimatedCost": 0
         }
