@@ -1,6 +1,57 @@
 {
-  "lastUpdated": "2026-08-01T01:22:11.509Z",
+  "lastUpdated": "2026-08-02T01:19:54.191Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-updated-built-for-shopify-requirements-for-fulfillment-services-apps",
+      "source": "developer-changelog",
+      "title": "Updated Built for Shopify requirements for Fulfillment services apps",
+      "link": "https://shopify.dev/changelog/updated-built-for-shopify-requirements-for-fulfillment-services-apps",
+      "publishedAt": "2026-08-01T16:00:00.000Z",
+      "collectedAt": "2026-08-02T01:19:53.205Z",
+      "category": [
+        "Built for Shopify",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>We've updated three <a href=\"https://shopify.dev/docs/apps/launch/built-for-shopify/requirements#fulfillment-services-apps\" target=\"_blank\" class=\"body-link\">Built for Shopify requirements for Fulfillment services apps</a>. The updated thresholds better reflect how fulfillment operations run in practice, making Built for Shopify achievable for more high-quality fulfillment apps. No action is required.</p>\n<h2>What changed</h2>\n<ul>\n<li><strong>5.8.2 Complete fulfillment orders</strong>: adjusted the required completion rate for assigned fulfillment orders.</li>\n<li><strong>5.8.6 Respond to fulfillment requests</strong>: extended the response window and adjusted the required response rate.</li>\n<li><strong>5.8.7 Respond to cancellation requests</strong>: extended the response window.</li>\n</ul>\n<p>How these criteria are measured is otherwise unchanged. The requirements page linked above lists the current thresholds.</p>\n<h2>Who's affected</h2>\n<p>Apps in the Fulfillment services category, such as third-party logistics and warehousing apps, that hold or are working toward Built for Shopify status. Apps in other categories aren't affected, and no other Built for Shopify requirements have changed.</p>\n<h2>What to do</h2>\n<p>No action is required. Built for Shopify status is evaluated automatically against these criteria. If your fulfillment app previously fell short of these requirements, you may now qualify.</p>\n<h2>Related docs</h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/apps/build/orders-fulfillment/fulfillment-service-apps\" target=\"_blank\" class=\"body-link\">Build for fulfillment services</a></li>\n<li><a href=\"https://shopify.dev/docs/apps/launch/built-for-shopify\" target=\"_blank\" class=\"body-link\">Built for Shopify overview</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "フルフィルメントサービスアプリ向けBuilt for Shopify要件の更新",
+          "summarizedJa": "フルフィルメントサービスアプリ向けのBuilt for Shopify認定要件が3項目更新されました。フルフィルメント注文の完了率基準の調整、フルフィルメントリクエストへの応答期間の延長と応答率の調整、キャンセルリクエストへの応答期間の延長が行われ、実際のフルフィルメント業務により適した基準となりました。アプリ開発者側の対応は不要で、これまで要件を満たせなかったアプリも自動的に再評価され認定される可能性があります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-08-02T01:20:00.975Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1430,
+            "output": 288
+          },
+          "estimatedCost": 0.00861
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "フルフィルメントサービスアプリ向けBuilt for Shopify要件の更新",
+          "summarizedJa": "Shopifyは、フルフィルメントサービスアプリ向けの「Built for Shopify」認定要件を更新しました。これにより、フルフィルメント注文の完了率やリクエストへの応答時間に関する基準が緩和され、より多くの高品質なフルフィルメントアプリが認定を受けやすくなります。アプリ開発者側での特別な対応は不要で、自動的に評価されます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 1
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-08-02T01:20:07.348Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1028,
+            "output": 150
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-hydrogen-developer-preview-update-july-30",
       "source": "developer-changelog",
