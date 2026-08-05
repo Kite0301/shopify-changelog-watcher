@@ -1,6 +1,56 @@
 {
-  "lastUpdated": "2026-08-04T01:12:43.235Z",
+  "lastUpdated": "2026-08-05T01:13:40.364Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-microsoft-advertising-now-available-in-campaign-autopilot",
+      "source": "shopify-changelog",
+      "title": " Microsoft Advertising now available in Campaign Autopilot",
+      "link": "https://changelog.shopify.com/posts/microsoft-advertising-now-available-in-campaign-autopilot",
+      "publishedAt": "2026-08-04T17:00:00.000Z",
+      "collectedAt": "2026-08-05T01:13:40.351Z",
+      "category": [
+        "Marketing"
+      ],
+      "description": "\n        <p>Get more reach with Microsoft Advertising </p>\n\n<p>Microsoft Advertising is now available as a channel in <a href=\"https://www.shopify.com/blog/introducing-campaign-autopilot\">Campaign Autopilot</a>. Autopilot can help create a Microsoft Advertising account for you or connect to an existing one, then run Performance Max campaigns alongside your other channels. Budget is allocated automatically based on performance across all your connected channels.</p>\n\n<p>Campaign Autopilot is available in early access. Head to the <a href=\"https://admin.shopify.com/growth/autopilot?utm_source=web&amp;utm_medium=changelog&amp;utm_campaign=autopilot_EA&amp;utm_content=microsoft_invited\">growth tab</a> to sign up or get started. </p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Campaign AutopilotでMicrosoft Advertisingが利用可能に",
+          "summarizedJa": "Campaign AutopilotでMicrosoft Advertisingチャネルが利用可能になりました。既存アカウントとの連携または新規作成が可能で、Performance Maxキャンペーンを他のチャネルと並行して実行できます。予算は接続された全チャネルのパフォーマンスに基づいて自動配分されます。現在アーリーアクセスで提供中です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 2,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-08-05T01:13:45.030Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1102,
+            "output": 220
+          },
+          "estimatedCost": 0.006606
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Microsoft AdvertisingがCampaign Autopilotで利用可能に",
+          "summarizedJa": "Shopifyの「Campaign Autopilot」にMicrosoft Advertisingが新たな広告チャネルとして追加されました。これにより、マーチャントは既存のMicrosoft Advertisingアカウントを接続するか、新規作成して、他のチャネルと連携したパフォーマンス最大化キャンペーンを自動で運用できるようになります。予算配分も自動で行われるため、広告運用の効率化とリーチ拡大が期待できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-08-05T01:13:51.734Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 806,
+            "output": 151
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-oxygen-is-now-available-on-development-stores",
       "source": "developer-changelog",
