@@ -1,6 +1,107 @@
 {
-  "lastUpdated": "2026-08-06T00:15:34.027Z",
+  "lastUpdated": "2026-08-07T01:04:49.196Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-events-and-actions-cart-attributes-support",
+      "source": "developer-changelog",
+      "title": "Standard storefront events and actions now support cart attributes",
+      "link": "https://shopify.dev/changelog/events-and-actions-cart-attributes-support",
+      "publishedAt": "2026-08-06T22:00:00.000Z",
+      "collectedAt": "2026-08-07T01:04:48.234Z",
+      "category": [
+        "Platform",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>The <a href=\"https://shopify.dev/docs/api/storefront-events-and-actions/actions/update-cart\" target=\"_blank\" class=\"body-link\"><code>updateCart</code></a> standard action now updates cart attributes, and a new <a href=\"https://shopify.dev/docs/api/storefront-events-and-actions/events/cart-attributes-update\" target=\"_blank\" class=\"body-link\"><code>shopify:cart:attributes-update</code></a> event fires whenever an attributes update is initiated.</p>\n<p>Before this, changing an attribute meant calling the Storefront API yourself, and nothing told your app when one changed. The action now handles attributes like any other cart update, and the event fires whether your app, the theme, or another app made the change. It carries the full new set of attributes and a promise for the result, so you can update your UI right away and roll it back if the cart declines the change.</p>\n<p>Learn more in the <a href=\"https://shopify.dev/docs/api/storefront-events-and-actions/events/cart-attributes-update\" target=\"_blank\" class=\"body-link\">event reference</a> and the updated <a href=\"https://shopify.dev/docs/api/storefront-events-and-actions/actions/update-cart\" target=\"_blank\" class=\"body-link\"><code>updateCart</code> reference</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "標準ストアフロントイベントとアクションがカート属性に対応",
+          "summarizedJa": "updateCart標準アクションがカート属性の更新に対応し、新たにshopify:cart:attributes-updateイベントが追加されました。これまではStorefront APIを直接呼び出す必要がありましたが、カート属性の変更が標準的なカート更新として扱われるようになり、アプリ・テーマ・他のアプリによる変更を検知できるようになります。UIの即座の更新とロールバック処理にも対応しています。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-08-07T01:04:55.016Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1246,
+            "output": 245
+          },
+          "estimatedCost": 0.0074129999999999995
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "標準のストアフロントイベントとアクションがカート属性に対応",
+          "summarizedJa": "これまで、カート属性の変更にはStorefront APIの直接呼び出しが必要で、変更をアプリに通知する仕組みもありませんでした。今回の更新により、`updateCart`アクションでカート属性を直接更新できるようになり、属性が変更されるたびに新しい`shopify:cart:attributes-update`イベントが発火するようになります。これにより、開発者はカート属性の管理を簡素化し、UIを即座に更新できるようになります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 17,
+          "analyzedAt": "2026-08-07T01:05:02.124Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 944,
+            "output": 168
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-collect-whatsapp-marketing-consent-on-shopify-forms",
+      "source": "shopify-changelog",
+      "title": "Collect WhatsApp marketing consent on Shopify Forms",
+      "link": "https://changelog.shopify.com/posts/collect-whatsapp-marketing-consent-on-shopify-forms",
+      "publishedAt": "2026-08-06T20:00:00.000Z",
+      "collectedAt": "2026-08-07T01:04:49.185Z",
+      "category": [
+        "Apps"
+      ],
+      "description": "\n        <p>Now you can collect WhatsApp marketing consent on Shopify Forms. Capture opt-ins when customers fill out a form on your store, expanding your subscriber list and helping you convert new leads through WhatsApp marketing campaigns. </p>\n\n<p>To learn more about enabling WhatsApp marketing consent on Shopify Forms, visit the <a href=\"https://help.shopify.com/en/manual/promoting-marketing/create-marketing/forms-app\">Shopify Help Center</a>. </p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify FormsでWhatsAppマーケティング同意を収集可能に",
+          "summarizedJa": "Shopify Formsで、顧客からWhatsAppマーケティングの同意を収集できるようになりました。ストア上のフォーム入力時にオプトインを取得することで、購読者リストを拡大し、WhatsAppマーケティングキャンペーンを通じて新規リードの転換を促進できます。詳細はShopifyヘルプセンターで確認できます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 2,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 7,
+          "analyzedAt": "2026-08-07T01:05:06.267Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1026,
+            "output": 225
+          },
+          "estimatedCost": 0.006453
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "ShopifyフォームでWhatsAppマーケティングの同意を収集",
+          "summarizedJa": "ShopifyフォームでWhatsAppマーケティングの同意を収集できるようになりました。これにより、顧客がストアのフォームに入力する際にオプトインを取得し、購読者リストを拡大してWhatsAppマーケティングキャンペーンを通じて新規リードを顧客に転換することが可能になります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 2,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-08-07T01:05:12.449Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 728,
+            "output": 129
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-webmcp-liquid-hydrogen",
       "source": "developer-changelog",
