@@ -1,6 +1,108 @@
 {
-  "lastUpdated": "2026-08-07T01:04:49.196Z",
+  "lastUpdated": "2026-08-11T00:06:30.632Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-see-shop-campaigns-performance-in-your-analytics-tools",
+      "source": "shopify-changelog",
+      "title": "See Shop Campaigns performance in your analytics tools",
+      "link": "https://changelog.shopify.com/posts/see-shop-campaigns-performance-in-your-analytics-tools",
+      "publishedAt": "2026-08-10T20:30:00.000Z",
+      "collectedAt": "2026-08-11T00:06:30.620Z",
+      "category": [
+        "Analytics"
+      ],
+      "description": "\n        <p>Shop Campaigns performance data, including ad spend, sales, ROAS, and customer acquisition cost, is now available through <a href=\"https://shopify.dev/docs/api/shopifyql/2026-07/schemas/marketing/shop_campaign_insights\">ShopifyQL</a>. This means your analytics and reporting apps can pull Shop Campaigns data directly, so you can see campaign performance alongside your other marketing channels.</p>\n\n<h3>What this means for you</h3>\n\n<p>If you use an analytics app like Triple Whale, Northbeam, or Elevar, your provider can now integrate Shop Campaigns data into their dashboards. Check with your provider on their timeline. </p>\n\n<p>If your team builds custom reports in tools like Power BI, Tableau, or Looker Studio, you can connect to this data through ShopifyQL. You can also view Shop Campaigns directly in the Analytics or Advertising tab in your admin.</p>\n\n<h3>What's available</h3>\n\n<p>Campaign-level performance by customer segment and time period: ad spend, sales, orders, return on ad spend, average order value, and average customer acquisition cost. </p>\n\n<p><a href=\"https://help.shopify.com/en/manual/online-sales-channels/shop/shop-campaigns\">Learn more about Shop Campaigns reporting</a>   </p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "分析ツールでShopキャンペーンのパフォーマンスを確認可能に",
+          "summarizedJa": "ShopキャンペーンのパフォーマンスデータがShopifyQLを通じて取得可能になりました。広告費用、売上、ROAS、顧客獲得コストなどのデータを、Triple WhaleやNorthbeamなどの分析アプリや、Power BI、Tableauなどのカスタムレポートツールで他のマーケティングチャネルと並べて確認できるようになります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-08-11T00:06:35.710Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1226,
+            "output": 236
+          },
+          "estimatedCost": 0.0072180000000000005
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "分析ツールでShopキャンペーンのパフォーマンスを確認可能に",
+          "summarizedJa": "ShopifyのShopキャンペーンのパフォーマンスデータ（広告費用、売上、ROASなど）がShopifyQLを通じて利用可能になりました。これにより、Triple Whaleなどの外部分析ツールや、Power BIなどで作成するカスタムレポートにShopキャンペーンのデータを統合し、他のマーケティングチャネルと並行して成果を分析できるようになります。日本のマーチャントはより詳細なキャンペーン分析が可能になり、パートナーは顧客へのより包括的なレポート提供やツール連携が可能になります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-08-11T00:06:42.402Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 919,
+            "output": 171
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-shop-campaigns-shopifyql",
+      "source": "developer-changelog",
+      "title": "Shop Campaigns performance data now available via ShopifyQL",
+      "link": "https://shopify.dev/changelog/shop-campaigns-shopifyql",
+      "publishedAt": "2026-08-10T20:10:00.000Z",
+      "collectedAt": "2026-08-11T00:06:29.619Z",
+      "category": [
+        "API",
+        "Update",
+        "Admin GraphQL API"
+      ],
+      "description": " <div class=\"\"><p>The <code>shop_campaign_insights</code> schema is now available in the <a href=\"https://shopify.dev/docs/api/shopifyql/latest/schemas/marketing/shop_campaign_insights\" target=\"_blank\" class=\"body-link\">ShopifyQL</a>. Analytics and reporting apps can query Shop Campaigns performance data on behalf of authorized merchants using the existing <code>shopifyqlQuery</code> field with <code>read_reports</code> scope.</p>\n<h2>Available data</h2>\n<p>Campaign-level and segment-level metrics including ad spend, sales, orders, ROAS, average order value, and average customer acquisition cost. Data is available by campaign name, customer segment, and time dimensions from hourly to yearly in the merchant's shop timezone.                                                                                                        </p>\n<h2>How to get started</h2>\n<p>Query <code>shop_campaign_insights</code> using the same <code>shopifyqlQuery</code> field you use for other ShopifyQL schemas. No new scopes or integration work required if you already query ShopifyQL.</p>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/shopifyql/2026-07/schemas/marketing/shop_campaign_insights\" target=\"_blank\" class=\"body-link\">Schema reference: shop_campaign_insights</a></li>\n<li><a href=\"https://shopify.dev/docs/apps/build/shopifyql\" target=\"_blank\" class=\"body-link\">Building with ShopifyQL</a></li>\n<li><a href=\"https://shopify.dev/docs/api/shopifyql\" target=\"_blank\" class=\"body-link\">ShopifyQL API reference</a></li>\n</ul>\n<p><strong>Also new:</strong> Analytics Web Components let you embed Shop Campaigns metrics directly in your app UI using <s-shopifyql-metric-card> with no data storage required. The Analytics Annotations API lets you create annotations on merchant analytics charts (e.g., &quot;campaign started,&quot; &quot;budget changed&quot;).</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shop CampaignsのパフォーマンスデータがShopifyQL経由で取得可能に",
+          "summarizedJa": "ShopifyQLに新しく`shop_campaign_insights`スキーマが追加され、アナリティクスアプリやレポートアプリが既存の`shopifyqlQuery`フィールドを使ってShop Campaignsのパフォーマンスデータ（広告費、売上、ROAS、平均注文額など）を取得できるようになりました。既存のShopifyQL利用者は新しいスコープやインテグレーション作業なしで利用開始でき、Analytics Web ComponentsやAnnotations APIも同時に導入されています。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-08-11T00:06:48.950Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1417,
+            "output": 271
+          },
+          "estimatedCost": 0.008316
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shop CampaignsのパフォーマンスデータがShopifyQLで利用可能に",
+          "summarizedJa": "ShopifyQLを通じて、Shop Campaignsの広告費用、売上、ROASなどの詳細なパフォーマンスデータが取得できるようになりました。これにより、日本のマーチャントは、Shop Campaignsの効果をより詳細に分析し、マーケティング戦略の最適化に役立てることができます。パートナーは、このデータを利用して、マーチャント向けの高度な分析・レポート機能を持つアプリを開発・強化することが可能になります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-08-11T00:06:56.265Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1062,
+            "output": 160
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-events-and-actions-cart-attributes-support",
       "source": "developer-changelog",
@@ -97,6 +199,58 @@
           "tokenUsage": {
             "input": 728,
             "output": 129
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-draft-order-and-transfer-shipment-inventory-is-moving-from-reserved-to-committed",
+      "source": "developer-changelog",
+      "title": "Draft order and transfer/shipment inventory is moving from reserved to committed",
+      "link": "https://shopify.dev/changelog/draft-order-and-transfer-shipment-inventory-is-moving-from-reserved-to-committed",
+      "publishedAt": "2026-08-05T16:00:00.000Z",
+      "collectedAt": "2026-08-11T00:06:29.619Z",
+      "category": [
+        "API",
+        "Update",
+        "Admin GraphQL API"
+      ],
+      "description": " <div class=\"\"><p>We're consolidating how in-progress inventory holds are represented. Inventory that was previously tracked under the <code>reserved</code> quantity state for draft orders, transfers, and shipments is being moved to the <code>committed</code> quantity state.</p>\n<p>This change aligns these holds with how order inventory is already represented, so that <code>committed</code> reflects all inventory that is spoken for but not yet fulfilled.</p>\n<h2>What's changing</h2>\n<ul>\n<li>For draft orders, transfers, and shipments, quantities that previously appeared under <code>reserved</code> will now appear under <code>committed</code>.</li>\n<li>This is a one-time data migration that applies only to active draft orders and open transfers/shipments that are still holding inventory when the change runs.</li>\n<li>Completed, cancelled, or already-released holds are not modified, because they no longer hold reserved inventory.</li>\n</ul>\n<h2>What's not changing</h2>\n<ul>\n<li><code>available</code> and <code>on_hand</code> quantities are unaffected. Total inventory is unchanged, and quantities are only moving between two “unavailable” buckets.</li>\n<li>Both <code>reserved</code> and <code>committed</code> remain valid, queryable quantity names. No fields are removed or renamed.</li>\n<li>Sellable inventory (<code>available</code>) is not affected, so this does not change what buyers can purchase.</li>\n</ul>\n<h2>What you may need to do</h2>\n<ul>\n<li>If your app reads <code>InventoryLevel.quantities(names: [&quot;reserved&quot;])</code>, expect <code>reserved</code> values to decrease for affected shops, with a corresponding increase in <code>committed</code>.</li>\n<li>If you currently rely on <code>reserved</code> to detect draft-order or transfer/shipment holds specifically, you should read <code>committed</code> instead going forward.</li>\n<li>No code changes are required to keep existing queries working; only the values shift between the two states.</li>\n</ul>\n<h3>Reporting note</h3>\n<p>Merchants using inventory adjustment reports (for example, reports that break out adjustments by inventory state) will see <code>reserved</code> values migrate to <code>committed</code>, plus a one-time correction entry when the migration runs. This correction only covers active draft orders and open transfers/shipments at the time of migration. <code>on_hand</code> and <code>available</code> totals are unchanged, and historical data before the migration remains as-is.</p>\n<h2>Related docs</h2>\n<ul>\n<li>InventoryLevel — the <code>quantities(names: [...])</code> field: <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/InventoryLevel\" target=\"_blank\" class=\"body-link\">https://shopify.dev/docs/api/admin-graphql/latest/objects/InventoryLevel</a>  </li>\n<li>InventoryQuantity — the object returned per name: <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/InventoryQuantity\" target=\"_blank\" class=\"body-link\">https://shopify.dev/docs/api/admin-graphql/latest/objects/InventoryQuantity</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "下書き注文と転送/出荷の在庫が予約済みからコミット済みへ移行",
+          "summarizedJa": "下書き注文、転送、出荷に関する在庫の保留状態が「予約済み(reserved)」から「コミット済み(committed)」へ統一されます。これは通常注文の在庫表現と整合性を取るための一度限りのデータ移行で、販売可能数量や総在庫数には影響しません。アプリで「reserved」を読み取っている場合は、今後「committed」を参照する必要があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-08-11T00:07:02.445Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1768,
+            "output": 248
+          },
+          "estimatedCost": 0.009024
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "下書き注文と在庫移動/出荷の在庫状態が「予約済み」から「コミット済み」へ移行",
+          "summarizedJa": "Shopifyは、下書き注文、在庫移動、出荷に関連する在庫の保留状態を「予約済み (reserved)」から「コミット済み (committed)」に統合します。この変更により、未フルフィルメントのすべての在庫保留が「コミット済み」として一元的に管理されるようになります。マーチャントの販売可能在庫や物理的な在庫量には影響がなく、主に在庫レポートや、特定の在庫状態を読み取るアプリのデータ表示に影響します。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-08-11T00:07:11.635Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1312,
+            "output": 187
           },
           "estimatedCost": 0
         }
@@ -1027,6 +1181,59 @@
       }
     },
     {
+      "id": "developer-changelog-changelog-subscription-contract-calculation-api-now-available-in-early-access",
+      "source": "developer-changelog",
+      "title": "SubscriptionContractCalculation API now available in early access",
+      "link": "https://shopify.dev/changelog/subscription-contract-calculation-api-now-available-in-early-access",
+      "publishedAt": "2026-07-27T16:00:00.000Z",
+      "collectedAt": "2026-08-11T00:06:29.620Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-10"
+      ],
+      "description": " <div class=\"\"><p>The new <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/unions/SubscriptionContractCalculation\" target=\"_blank\" class=\"body-link\"><code>SubscriptionContractCalculation</code></a> object on the GraphQL Admin API is now available in early access on the <code>2026-10</code> release candidate API version. It's the successor to the GraphQL Admin API's <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/SubscriptionDraft\" target=\"_blank\" class=\"body-link\"><code>SubscriptionDraft</code></a> object for creating, updating, and editing subscription contracts, replacing the multi-step draft workflow with a stateless calculate → poll → commit lifecycle that runs through Shopify's unified checkout engine.</p>\n<p>Moving contract edits onto the unified checkout engine keeps calculations consistent with checkout, one <code>calculate</code> mutation replaces 12+ draft mutations, and new checkout capabilities work with contract edits without waiting on subscriptions-specific support. This affects any app that manages subscription contracts. If you build on subscriptions, you'll need to migrate to the new API to gain its new capabilities, but you can migrate incrementally, since both APIs will coexist.</p>\n<h2>Who's affected</h2>\n<p>This applies to any app that creates, updates, or edits subscription contracts using the <code>SubscriptionDraft</code> object. Apps that only read contracts or manage contract status (through <code>subscriptionContractActivate</code>, <code>subscriptionContractPause</code>, and similar mutations) are unaffected. Status is still set through those dedicated mutations, not the calculation input.</p>\n<p>The API is now available on the <code>2026-10</code> release candidate API version for early access and becomes stable on <code>2026-10</code>.</p>\n<h2>What changed</h2>\n<p>Contract edits now run through the same C1 checkout engine that powers Checkout, Draft Orders, and subscription billing attempts, instead of the bespoke <code>SubscriptionDraft</code> engine that ran in parallel to checkout.</p>\n<p>The previous workflow required a dozen-plus stateful mutations across the draft lifecycle to edit a single contract (create draft → add line → update line → remove line → add discount → apply code → update delivery → commit). The new API consolidates this into three <code>calculate</code> operations plus a shared commit:</p>\n<ol>\n<li><strong>Calculate</strong>: submit the desired contract state in a single mutation: <code>subscriptionContractCreateCalculate</code>, <code>subscriptionContractUpdateCalculate</code>, or <code>subscriptionBillingCycleContractEditCalculate</code>.</li>\n<li><strong>Poll</strong>: the calculate mutation returns a <code>SubscriptionContractCalculationPending</code> response. Poll the <code>subscriptionContractCalculation</code> query, or subscribe to the <code>subscription_contract_calculations/succeed</code> and <code>subscription_contract_calculations/fail</code> webhooks, until you receive a <code>SubscriptionContractCalculationSuccess</code> or <code>SubscriptionContractCalculationFailure</code>.</li>\n<li><strong>Commit</strong>: call <code>subscriptionContractCalculationCommit</code> to persist the calculated snapshot.</li>\n</ol>\n<p>Shopify calculates pricing, taxes, discounts, and Shopify Functions server-side and returns an immutable preview — including line, delivery, tax, duty, and discount totals — before you persist anything. Because the state is client-provided, any field you omit on update is preserved, so you only send what changed. For full details, see the <a href=\"https://shopify.dev/docs/apps/build/purchase-options/subscriptions/contracts/migrate-to-subscription-calculation-api\" target=\"_blank\" class=\"body-link\">migration guide</a>.</p>\n<p>Running through C1 also unlocks capabilities that were impossible with the drafts API: bundle products in contracts, cart transforms and delivery customization Functions, and pricing and tax that align with what the subscriber sees on recurring orders.</p>\n<h2>What to do</h2>\n<p>Action is required to adopt the new capabilities. The <code>SubscriptionDraft</code> object will be deprecated once the new API reaches general availability on <code>2026-10</code>; it will remain available but won't support the new capabilities. Don't build production integrations until <code>2026-10</code> is stable.</p>\n<p>We've written a full <a href=\"https://shopify.dev/docs/apps/build/purchase-options/subscriptions/contracts/migrate-to-subscription-calculation-api\" target=\"_blank\" class=\"body-link\">migration guide</a> to support your move to the new API.</p>\n<h2>Related docs</h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/apps/build/purchase-options/subscriptions/contracts/migrate-to-subscription-calculation-api\" target=\"_blank\" class=\"body-link\">Migrate to the SubscriptionContractCalculation object</a></li>\n<li><a href=\"https://shopify.dev/docs/apps/build/purchase-options/subscriptions/contracts\" target=\"_blank\" class=\"body-link\">Build subscription contracts</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "SubscriptionContractCalculation API がアーリーアクセスで利用可能に",
+          "summarizedJa": "サブスクリプション契約の作成・更新のための新しいAPI「SubscriptionContractCalculation」が2026-10バージョンでアーリーアクセス開始。従来の12以上のステップが必要だったSubscriptionDraftワークフローを、計算→ポーリング→コミットの3ステップに簡素化し、Shopifyの統合チェックアウトエンジンを使用することで、バンドル商品対応やFunctions機能との連携が可能になります。既存のSubscriptionDraftオブジェクトは非推奨となるため、サブスクリプション管理アプリを開発しているパートナーは移行が必要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 5
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-08-11T00:07:18.121Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2233,
+            "output": 302
+          },
+          "estimatedCost": 0.011229
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "SubscriptionContractCalculation APIが早期アクセスで利用可能に",
+          "summarizedJa": "Shopifyは、サブスクリプション契約の作成・更新プロセスを刷新する新しい`SubscriptionContractCalculation` APIを早期アクセスで提供開始しました。このAPIは、既存の`SubscriptionDraft`に代わり、Shopifyの統合チェックアウトエンジンを活用することで、契約編集のワークフローを簡素化し、バンドル商品やカート変換などの新機能に対応します。サブスクリプションアプリを開発しているパートナーは、将来的な機能拡張のためにこの新しいAPIへの移行を検討する必要があります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 5
+          },
+          "totalScore": 17,
+          "analyzedAt": "2026-08-11T00:07:24.512Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1736,
+            "output": 179
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
       "id": "shopify-changelog-posts-new-app-added-annotations-on-your-analytics-charts",
       "source": "shopify-changelog",
       "title": "New app-added annotations on your analytics charts",
@@ -1710,6 +1917,56 @@
           "tokenUsage": {
             "input": 890,
             "output": 166
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-shopify-managed-markets-now-available-in-canada-and-the-uk",
+      "source": "shopify-changelog",
+      "title": "Shopify Managed Markets now available in Canada and the UK",
+      "link": "https://changelog.shopify.com/posts/shopify-managed-markets-now-available-in-canada-and-the-uk",
+      "publishedAt": "2026-07-15T16:00:00.000Z",
+      "collectedAt": "2026-08-11T00:06:30.620Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>Selling internationally is one of the biggest growth levers for Canadian and UK merchants and one of the most complex. Managed Markets removes that complexity by making Global-e your merchant of record for international orders. Your customers experience a localized checkout optimized for clarity and conversion, and you fulfill orders the same way you handle them at home. No surprise fees or delays</p>\n\n<p><strong>What you get</strong></p>\n\n<ul>\n<li>Transparent product pricing without surprise fees at checkout or delivery: International buyers see duties-inclusive prices, pay in their local currency, and have no surprise fees at delivery (DDP).<br></li>\n<li>Built-in international tax compliance. Global-e registers, collects, and remits tax in the destination country on your behalf.<br></li>\n<li>Discounted DHL Express and FedEx labels. Buy and print directly from your Shopify admin alongside your domestic orders.<br></li>\n<li>Automatic tariff management. Managed Markets classifies your products and assigns Harmonized System codes for your products for smooth customs clearance &amp; accurate duties calculations. Import tax and duty collection is guaranteed - you’ll never receive an adjustment.<br></li>\n<li>Daily payouts in your local currency. CAD for Canadian stores, GBP for UK stores, processed daily by Shopify Payments alongside domestic sales.<br></li>\n<li>Local payment methods with Shopify Payments</li>\n</ul>\n\n<p>Learn more about Managed Markets – including eligibility, pricing, and set-up – in the <a href=\"https://help.shopify.com/manual/international/managed-markets\">Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify Managed Marketsがカナダとイギリスで利用可能に",
+          "summarizedJa": "国際販売の複雑さを解消するShopify Managed Marketsがカナダとイギリスで利用開始されました。Global-eが国際注文のマーチャントオブレコードとなり、関税込み価格表示、現地通貨決済、自動税務コンプライアンス、割引配送ラベル、毎日の現地通貨払い出しなどが提供されます。現時点では日本のマーチャントは対象外ですが、国際展開を支援する重要な機能として今後の展開が期待されます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 2,
+            "japanRelevance": 1,
+            "technicalImportance": 3
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-08-11T00:07:30.642Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1301,
+            "output": 273
+          },
+          "estimatedCost": 0.007998000000000002
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify Managed Marketsがカナダと英国で利用可能に",
+          "summarizedJa": "Shopify Managed Marketsがカナダと英国のマーチャント向けに提供開始されました。これにより、Global-eが国際注文の記録マーチャントとなり、海外販売の複雑さを解消します。関税込みの透明な価格表示、国際税務コンプライアンスの自動化、割引運送ラベルなどが含まれ、カナダと英国のマーチャントが海外販売を容易に行えるようになります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 2,
+            "japanRelevance": 1,
+            "technicalImportance": 4
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-08-11T00:07:41.245Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 964,
+            "output": 165
           },
           "estimatedCost": 0
         }
