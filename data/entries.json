@@ -1,6 +1,106 @@
 {
-  "lastUpdated": "2026-08-11T00:06:30.632Z",
+  "lastUpdated": "2026-08-12T00:10:10.511Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-managed-markets-is-ending-delivered-duty-unpaid-ddu-support",
+      "source": "shopify-changelog",
+      "title": "Managed Markets is ending Delivered Duty Unpaid (DDU) support",
+      "link": "https://changelog.shopify.com/posts/managed-markets-is-ending-delivered-duty-unpaid-ddu-support",
+      "publishedAt": "2026-08-11T16:00:00.000Z",
+      "collectedAt": "2026-08-12T00:10:10.495Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>On August 24, 2026, Shopify Managed Markets will stop supporting delivered duty unpaid (DDU) in every country and region where it supports delivered duty paid (DDP).</p>\n\n<p><strong>What's changing</strong></p>\n\n<ul>\n<li>Markets that use or inherit DDU automatically move to DDP wherever Managed Markets supports it.<br></li>\n<li>Customers in those markets will now pay duties and taxes at checkout, not to the carrier or customs on delivery.</li>\n</ul>\n\n<p>Collecting duties and taxes at checkout helps avoid surprise costs on delivery and makes international shopping more predictable.</p>\n\n<p><strong>What you need to do</strong></p>\n\n<p>If you want your customers to keep paying on delivery, <a href=\"https://help.shopify.com/manual/international/managed-markets/deactivation\">turn off Shopify Managed Markets</a> before August 24, 2026. Otherwise, <strong>no action is needed</strong>.</p>\n\n<p>Learn more about Managed Markets in the <a href=\"https://help.shopify.com/manual/international/managed-markets\">Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Managed MarketsがDDU（関税元払い）のサポートを終了",
+          "summarizedJa": "2026年8月24日より、Shopify Managed MarketsはDDP（関税込み配送）をサポートする全ての国・地域でDDU（関税受取人払い）のサポートを終了します。DDUを使用している市場は自動的にDDPに移行され、顧客は配送時ではなくチェックアウト時に関税と税金を支払うようになります。配送時の支払いを継続したい場合は、8月24日までにManaged Marketsをオフにする必要があります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-08-12T00:10:16.893Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1205,
+            "output": 272
+          },
+          "estimatedCost": 0.0076950000000000005
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Managed MarketsにおけるDDU（関税抜き価格）サポートの終了",
+          "summarizedJa": "2026年8月24日より、Shopify Managed Marketsは、DDP（関税込み価格）をサポートする全ての国・地域でDDU（関税抜き価格）のサポートを終了します。これにより、DDUを利用していたマーケットは自動的にDDPへ移行し、顧客はチェックアウト時に輸入関税と税金を支払うことになります。顧客が引き続き配送時に支払うことを希望する場合、マーチャントは期日までにManaged Marketsを無効にする必要がありますが、それ以外は特別な対応は不要です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-08-12T00:10:26.135Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 895,
+            "output": 194
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-enhanced-printed-receipt-editor",
+      "source": "shopify-changelog",
+      "title": "Enhanced printed receipt editor",
+      "link": "https://changelog.shopify.com/posts/enhanced-printed-receipt-editor",
+      "publishedAt": "2026-08-11T13:30:00.000Z",
+      "collectedAt": "2026-08-12T00:10:10.495Z",
+      "category": [
+        "Pos"
+      ],
+      "description": "\n        <p>We've updated printed receipts in Shopify POS so you can manage sale, return, exchange, gift, and gift card receipts in one place. Return and exchange receipts now print as a single section with one amount summary at the bottom, instead of two separate sections with two subtotals.</p>\n\n<p><strong>What’s new?</strong><br>\nThe new content editor in the POS channel applies your branding, header, and footer across every receipt type, lets you override by location only when you need to, and includes built-in fields for return policy, signature line, and regional tax IDs (VAT, GST/QST, ABN). <br>\nGift receipts no longer show line items so you can print multiple at once, and you can choose whether gift card receipts print automatically. <br>\nFor everyday changes that used to require the Liquid editor, you can now do it directly in the editor with a real-time preview.</p>\n\n<p><strong>Migrating from Liquid customizations</strong><br>\nIf your shop uses a customized Liquid receipt template, you have until January 1, 2027 to move to the new editor. Preview and configure your new template in the content editor while your existing Liquid template keeps printing. When you're ready, flip the shop-level switch to make the new format live. Note that switching is irreversible. Any shops still on Liquid on January 1, 2027 will be migrated to the new format automatically.</p>\n\n<p><a href=\"https://help.shopify.com/en/manual/sell-in-person/shopify-pos/customize-pos/printed-receipts\">Help Center</a> | <a href=\"https://youtu.be/-EKNIxP7Et4\">Watch this overview video for more information.</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "印刷レシートエディターの機能強化",
+          "summarizedJa": "Shopify POSの印刷レシート機能が刷新され、販売・返品・交換・ギフト・ギフトカードのすべてのレシートを1つのエディターで管理できるようになりました。新しいコンテンツエディターでは、ブランディング、返品ポリシー、税番号（VAT、GST/QST、ABN）などの組み込みフィールドが利用でき、リアルタイムプレビュー機能も搭載されています。現在Liquidテンプレートをカスタマイズしているストアは2027年1月1日までに新エディターへの移行が必要で、この切り替えは不可逆的となります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-08-12T00:10:32.903Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1311,
+            "output": 302
+          },
+          "estimatedCost": 0.008463000000000002
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify POSのレシート編集機能強化",
+          "summarizedJa": "Shopify POSのレシート編集機能が刷新され、販売、返品、交換、ギフト、ギフトカードのレシートを一元管理できるようになりました。新しいコンテンツエディタでは、ブランド設定やヘッダー・フッターを全レシートタイプに適用でき、リアルタイムプレビューで簡単にカスタマイズ可能です。既存のLiquidテンプレートを使用しているマーチャントは、2027年1月1日までに新しいエディタへの移行が必要となります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-08-12T00:10:38.691Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1004,
+            "output": 170
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-see-shop-campaigns-performance-in-your-analytics-tools",
       "source": "shopify-changelog",
@@ -2170,6 +2270,56 @@
           "tokenUsage": {
             "input": 774,
             "output": 165
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-cpsc-efiling-fields-now-available",
+      "source": "shopify-changelog",
+      "title": "CPSC eFiling fields now available to Managed Markets merchants",
+      "link": "https://changelog.shopify.com/posts/cpsc-efiling-fields-now-available",
+      "publishedAt": "2026-07-10T16:00:00.000Z",
+      "collectedAt": "2026-08-12T00:10:10.495Z",
+      "category": [
+        "Markets"
+      ],
+      "description": "\n        <p>Effective July 8, 2026, U.S. importers of certain products are required by the Consumer Product Safety Commission (CPSC) to perform electronic filing (eFiling) via the Automated Commercial Environment (ACE) during the entry process. <strong>Previously, records only needed to be available for goods upon request; now, certificate data must be transmitted for every regulated transaction at the border.</strong></p>\n\n<p>Merchants and their suppliers are responsible for completing the electronic filing with government agencies.</p>\n\n<p><strong>New feature:</strong><br><br>\nCPSC eFiling fields that are now available in product disclosures, giving you a structured way to store product-level data needed to maintain compliance on certain U.S. imports. The new disclosure fields support the reference CPSC eFiling path. The inputs are shared with integrated fulfillment providers; they are not shown to buyers:</p>\n\n<ul>\n<li><strong>Reference PGA Message Set</strong> fields for products with certificate data pre-loaded in the CPSC Product Registry, using Certifier ID, Product ID, and Version ID.</li>\n</ul>\n\n<p>For merchants leveraging Managed Markets to sell into the US, Global-e will use these inputs for smoother, faster US Customs crossings. Merchants not using Managed Markets should consult <a href=\"https://www.cpsc.gov/eFiling\">CPSC resources</a> and your broker, carrier, manufacturer, testing lab, or compliance advisor for best practices. </p>\n\n<p>Learn more about CPSC eFiling requirements and product disclosure setup in the <a href=\"https://help.shopify.com/manual/international/cpsc\">Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Managed Markets加盟店向けにCPSC eFiling項目が利用可能に",
+          "summarizedJa": "2026年7月8日より、米国への特定製品の輸入に際して消費者製品安全委員会(CPSC)への電子申告が義務化されました。Managed Marketsを利用して米国に販売するマーチャント向けに、商品情報に適合証明データを構造化して保存できるCPSC eFiling項目が追加され、Global-eを通じてよりスムーズな通関処理が可能になります。日本から米国へ輸出するマーチャントは対象製品の確認と対応が必要です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-08-12T00:10:45.407Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1309,
+            "output": 273
+          },
+          "estimatedCost": 0.008022000000000001
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "CPSC電子申告フィールドがManaged Marketsマーチャントで利用可能に",
+          "summarizedJa": "2026年7月8日より、米国への特定製品輸入にはCPSC（米国消費者製品安全委員会）への電子申告が義務付けられます。Shopifyはこれに対応し、製品開示設定にCPSC電子申告用の新しいフィールドを追加しました。これにより、Managed Marketsを利用して米国へ販売するマーチャントは、必要な製品データを効率的に管理し、税関手続きをスムーズに行うことができます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-08-12T00:11:14.358Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 992,
+            "output": 170
           },
           "estimatedCost": 0
         }
