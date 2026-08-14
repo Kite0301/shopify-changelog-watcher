@@ -1,6 +1,106 @@
 {
-  "lastUpdated": "2026-08-12T00:10:10.511Z",
+  "lastUpdated": "2026-08-14T00:11:07.879Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-recommended-changes-to-checkout-field-settings-are-now-available",
+      "source": "shopify-changelog",
+      "title": "Recommended changes to checkout field settings are now available",
+      "link": "https://changelog.shopify.com/posts/recommended-changes-to-checkout-field-settings-are-now-available",
+      "publishedAt": "2026-08-13T20:30:00.000Z",
+      "collectedAt": "2026-08-14T00:11:07.869Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>Eligible stores can now get personalized recommendations for customer information settings from the Checkout settings page in Shopify admin. </p>\n\n<p>These recommendations help you collect more complete customer details at checkout so you can reconnect with past shoppers more effectively and personalize your marketing. New stores already use these recommended settings by default.</p>\n\n<p>Recommendations may include setting customer contact method to email-only, requiring first and last name, or optionally collecting shipping address phone number. </p>\n\n<p>You can review recommendations and apply any changes directly from Checkout settings. Existing store settings won’t change unless you apply the recommendations. </p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "チェックアウトフィールド設定の推奨変更が利用可能に",
+          "summarizedJa": "Shopify管理画面のチェックアウト設定ページから、顧客情報設定のパーソナライズされた推奨事項を確認できるようになりました。この推奨事項には、連絡方法をメールのみにする、氏名の必須化、配送先住所の電話番号をオプション収集にするなどが含まれ、より完全な顧客情報を収集してマーケティングの効果を高めることができます。既存ストアの設定は、推奨事項を適用しない限り自動的には変更されません。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-08-14T00:11:13.965Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1053,
+            "output": 274
+          },
+          "estimatedCost": 0.007268999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "チェックアウトフィールド設定の推奨変更が利用可能に",
+          "summarizedJa": "Shopify管理画面のチェックアウト設定ページで、顧客情報設定に関するパーソナライズされた推奨事項が利用可能になりました。これにより、マーチャントはより完全な顧客情報を収集し、過去の購入者との再エンゲージメントやマーケティングのパーソナライズを強化できます。既存ストアの設定は自動で変更されず、推奨事項を確認し適用することで改善が可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-08-14T00:11:26.415Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 767,
+            "output": 157
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-dhl-express-is-now-available-in-the-uk-germany-france-italy-and-spain",
+      "source": "shopify-changelog",
+      "title": "DHL Express is now available in the UK, Germany, France, Italy, and Spain",
+      "link": "https://changelog.shopify.com/posts/dhl-express-is-now-available-in-the-uk-germany-france-italy-and-spain",
+      "publishedAt": "2026-08-13T14:00:00.000Z",
+      "collectedAt": "2026-08-14T00:11:07.869Z",
+      "category": [
+        "Shipping"
+      ],
+      "description": "\n        <p>DHL Express is now available in the UK, Germany, France, Italy, and Spain. Merchants in these markets can buy domestic and international shipping labels from their Shopify admin, with no third-party app or separate DHL account required.</p>\n\n<p>What's included:<br>\n* Competitive DHL Express rates<br>\n* Domestic and international label buying, right from your admin<br>\n* Customs documentation generated automatically for international orders<br>\n* DHL On Demand Delivery, so customers can reschedule a delivery, redirect their shipment to another address, leave it with a neighbor, or collect from a DHL service point<br>\n* Available on any Shopify plan, with no app, no monthly fee, and pay per label</p>\n\n<p>To buy a label, go to any order in your admin and select Create shipping label. <a href=\"https://help.shopify.com/en/manual/fulfillment/fulfilling-orders/shipping-labels/shipping-carriers/dhl/dhl-eu\">Learn more about buying shipping labels on Shopify</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "DHL Expressが英国、ドイツ、フランス、イタリア、スペインで利用可能に",
+          "summarizedJa": "DHL Expressが欧州5カ国（英国、ドイツ、フランス、イタリア、スペイン）で利用可能になり、Shopify管理画面から直接配送ラベルを購入できるようになりました。サードパーティアプリやDHLアカウント不要で、国内・国際配送ラベルの購入、自動税関書類生成、DHL On Demand Deliveryなどの機能が利用できます。日本のマーチャントには直接的な影響はありませんが、欧州向け越境ECを展開している場合は関連性があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 2,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 7,
+          "analyzedAt": "2026-08-14T00:11:32.035Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1182,
+            "output": 292
+          },
+          "estimatedCost": 0.007926
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "DHL Expressが英国、ドイツ、フランス、イタリア、スペインで利用可能に",
+          "summarizedJa": "この更新により、英国、ドイツ、フランス、イタリア、スペインのShopifyマーチャントは、Shopify管理画面から直接DHL Expressの配送ラベルを購入できるようになりました。これにより、サードパーティアプリや別途DHLアカウントなしで、競争力のある料金、自動税関書類作成、DHL On Demand Deliveryなどのサービスを利用できます。日本のマーチャントがこれらの国へ越境販売を行う場合、現地の顧客体験向上に間接的に貢献する可能性があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 3
+          },
+          "totalScore": 7,
+          "analyzedAt": "2026-08-14T00:11:39.243Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 884,
+            "output": 176
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-managed-markets-is-ending-delivered-duty-unpaid-ddu-support",
       "source": "shopify-changelog",
