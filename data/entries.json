@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-14T00:11:07.879Z",
+  "lastUpdated": "2026-08-18T00:02:32.999Z",
   "entries": [
     {
       "id": "shopify-changelog-posts-recommended-changes-to-checkout-field-settings-are-now-available",
@@ -46,6 +46,56 @@
           "tokenUsage": {
             "input": 767,
             "output": 157
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-taxes-now-recalculate-automatically-when-you-change-an-order-s-shipping-address",
+      "source": "shopify-changelog",
+      "title": "Taxes now recalculate when you change an order's shipping address",
+      "link": "https://changelog.shopify.com/posts/taxes-now-recalculate-automatically-when-you-change-an-order-s-shipping-address",
+      "publishedAt": "2026-08-13T16:00:00.000Z",
+      "collectedAt": "2026-08-18T00:02:32.981Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p><strong>Update</strong>: Tax rates vary by destination. Previously, the original destination tax stayed on the order even after you updated the shipping address, so your financials and tax reporting could drift out of sync. Now the order reflects the taxes for where it's actually shipping, which keeps your records accurate.</p>\n\n<ul>\n<li>Taxes are recalculated for the new shipping address, and you’ll see a preview of the updated amounts before saving. </li>\n<li>If the change creates a payment difference, you'll see it before you save, so you can choose to send an invoice to the customer.</li>\n</ul>\n\n<p>Learn more about editing a shipping address in the <a href=\"https://help.shopify.com/manual/fulfillment/managing-orders/editing-orders/customer-details#edit_order_customer\">Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "注文の配送先住所を変更すると税金が自動的に再計算されるようになりました",
+          "summarizedJa": "配送先住所の変更時に、新しい住所に応じた税率で自動的に税金が再計算されるようになりました。以前は元の住所の税率が保持されていたため、財務や税務レポートに不整合が生じる可能性がありましたが、この改善により正確な記録が維持できます。保存前に更新された税額のプレビューが表示され、支払額に差異がある場合は顧客への請求書送付を選択できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-08-18T00:02:38.647Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1127,
+            "output": 257
+          },
+          "estimatedCost": 0.007236
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "注文の配送先住所変更時に税金が自動再計算されるように",
+          "summarizedJa": "これまでShopifyの注文で配送先住所を変更しても税金が再計算されず、財務記録に不一致が生じる可能性がありました。今回の更新により、配送先住所の変更時に税金が自動的に再計算され、新しい住所に基づく正確な税額が反映されるようになります。これにより、財務記録の正確性が保たれ、支払い差額が生じる場合は保存前に確認し、顧客への請求書送付も選択できるようになります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-08-18T00:02:44.274Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 828,
+            "output": 173
           },
           "estimatedCost": 0
         }
