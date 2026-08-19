@@ -1,6 +1,56 @@
 {
-  "lastUpdated": "2026-08-18T00:02:32.999Z",
+  "lastUpdated": "2026-08-19T00:02:27.244Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-a-redesigned-point-of-sale-channel-page-with-an-easy-entry-point-to-the-pos-editor",
+      "source": "shopify-changelog",
+      "title": "A redesigned Point of Sale channel page with an easy entry point to the POS editor",
+      "link": "https://changelog.shopify.com/posts/a-redesigned-point-of-sale-channel-page-with-an-easy-entry-point-to-the-pos-editor",
+      "publishedAt": "2026-08-17T16:00:00.000Z",
+      "collectedAt": "2026-08-19T00:02:27.223Z",
+      "category": [
+        "Pos"
+      ],
+      "description": "\n        <p>We've redesigned the Point of Sale channel page in your Shopify admin so your in-store setup and performance are right where you start. The page now opens with a <strong>Customize the in-store experience</strong> section that previews your store's actual lock screen, customer display, and receipts, so you can see what your staff and customers see and open the POS editor for any of them in one click. You can still open the editor from <strong>Point of Sale</strong> &gt; <strong>Settings</strong> &gt; <strong>Customization</strong> as well. 🛍️</p>\n\n<p>You can also read your in-store performance from the same page. A new <strong>Analytics</strong> section shows gross sales, orders, discounts, and returns for today, the last 7 days, or the last 30 days, and you can filter by location if you sell from more than one store. Each metric links through to the full report. Managing your retail setup is quicker too, with direct links to manage your staff and locations. If you haven't set up a POS device yet, you'll see a QR code to download the Shopify POS app and start selling in person. The new page is available to everyone using the Point of Sale channel, and staff need analytics permissions to see the analytics section.</p>\n\n<p>Learn more on https://help.shopify.com/en/manual/sell-in-person/getting-started/shopify-pos-from-admin/overview</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "POSエディターへの簡単なアクセスを備えた、再設計されたPOSチャネルページ",
+          "summarizedJa": "Shopify管理画面のPOSチャネルページが再設計され、実店舗のセットアップとパフォーマンスが一目で確認できるようになりました。ロック画面、顧客ディスプレイ、レシートのプレビューが表示され、ワンクリックでPOSエディターを開けるほか、売上、注文数、割引、返品などの分析データも同じページで確認可能です。スタッフや店舗の管理へのリンクも追加され、実店舗運営の効率が向上します。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-08-19T00:02:34.532Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1280,
+            "output": 284
+          },
+          "estimatedCost": 0.0081
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "POSエディターへの簡単なアクセスポイントを備えた、再設計されたPOSチャネルページ",
+          "summarizedJa": "Shopify管理画面のPOSチャネルページが刷新され、店舗設定とパフォーマンスの確認がより簡単になりました。「店舗体験のカスタマイズ」セクションでは、ロック画面やレシートのプレビューからPOSエディターに直接アクセスでき、店舗の見た目を素早く調整できます。また、新しい「アナリティクス」セクションでは、売上や注文などの店舗パフォーマンスをリアルタイムで確認でき、店舗運営の効率化に貢献します。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-08-19T00:02:44.627Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 972,
+            "output": 179
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-recommended-changes-to-checkout-field-settings-are-now-available",
       "source": "shopify-changelog",
