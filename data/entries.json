@@ -1,6 +1,91 @@
 {
-  "lastUpdated": "2026-08-19T00:02:27.244Z",
+  "lastUpdated": "2026-08-20T00:02:45.283Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-app-intents-on-admin-app-intent-link-now-open-as-a-full-page-navigation",
+      "source": "developer-changelog",
+      "title": "App intents on `admin.app.intent.link` now open as a full-page navigation",
+      "link": "https://shopify.dev/changelog/app-intents-on-admin-app-intent-link-now-open-as-a-full-page-navigation",
+      "publishedAt": "2026-08-19T16:00:00.000Z",
+      "collectedAt": "2026-08-20T00:02:43.757Z",
+      "category": [
+        "Platform",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>When Sidekick invokes an app intent declared on the <code>admin.app.intent.link</code> extension target, the Shopify admin now navigates the merchant to your extension's <code>url</code> as a full page, matching how Shopify's own admin intents behave. Previously, the same intent always opened in an overlay on top of the page the merchant was already on. This is live for all shops, isn't gated by API version, and doesn't require any changes to your extension's configuration, intent schema, or tools. Extensions that use the <code>admin.app.intent.render</code> target aren't affected.</p>\n<h2>What changed</h2>\n<p>App intents support different presentations. Until now, every app intent appeared as an intent modal, an overlay on top of the merchant's current page that kept them in the Sidekick flow. <code>admin.app.intent.link</code> intents now use a full-page navigation instead, which brings app intents in line with how admin intents, the intents that launch Shopify-native editors, are already presented. It also matches the documented behavior of the target, which navigates the merchant to a URL in your app for actions that work best on a page you already render. For implementation details, see <a href=\"https://shopify.dev/docs/apps/build/sidekick/build-app-actions\" target=\"_blank\" class=\"body-link\">Use extensions to surface app actions</a>.</p>\n<p>There's one case where the overlay is still used: if the merchant has unsaved changes on their current page, the intent opens in a modal instead of navigating away, so their in-progress work isn't lost. Your extension doesn't need to handle these cases differently — the same route, payload, and tools are used in both presentations.</p>\n<p>The contract between Sidekick and your app is unchanged. Your route still reads the invocation payload from <code>shopify.intents.request.value</code>, a live signal that's <code>null</code> when your app isn't running inside an intent workflow and updates whenever an intent is invoked. You still register tool handlers with <code>shopify.tools.register</code> from the route the <code>url</code> opens, and you still resolve the intent with <code>shopify.intents.response.ok()</code>, <code>shopify.intents.response.error()</code>, or <code>shopify.intents.response.closed()</code>.</p>\n<blockquote>\n<p>Note:\nExtensions that target <code>admin.app.intent.render</code> currently render inline as an overlay, so a UI extension app action behaves the same as before.</p>\n</blockquote>\n<p>If you noticed this change before this post and reported it as a regression, the new behavior is expected. The <code>type</code>, <code>target</code>, and <code>url</code> on your extension continue to work as declared.</p>\n<h2>Who's affected</h2>\n<p>This applies to apps with an <code>admin_link</code> extension whose targeting includes <code>admin.app.intent.link</code>. It applies on every API version and every store, and there's no feature flag, scope, or setting to opt in or out.</p>\n<p>These aren't affected:</p>\n<ul>\n<li>Extensions targeting <code>admin.app.intent.render</code>.</li>\n<li>Admin intents your app invokes with <code>intents.invoke()</code> to launch Shopify-native editors. Those are a separate system and their presentation hasn't changed.</li>\n<li>Apps that don't declare app intents.</li>\n</ul>\n<p>If your app declares both targets, only the <code>admin.app.intent.link</code> intents change.</p>\n<h2>Why this matters</h2>\n<p>Merchants now land on the real page in your app, at the URL you declared, with your own layout and navigation instead of a constrained overlay. For the actions <code>admin.app.intent.link</code> is designed for, the merchant now works directly on the page your app already renders.</p>\n<h2>What to do</h2>\n<p>No action is required to keep your extension working. The declaration this change affects is the <code>admin.app.intent.link</code> target in your <code>shopify.extension.toml</code>:</p>\n<pre><code class=\"language-toml\">[[extensions.targeting]]\ntarget = &quot;admin.app.intent.link&quot;\nurl = &quot;/app/campaigns/{id}/edit&quot;\ntools = &quot;./tools.json&quot;\ninstructions = &quot;./instructions.md&quot;\n</code></pre>\n<p>This example shows a typical <code>admin.app.intent.link</code> configuration: the target, the route the admin opens, and the files that define tools and instructions. You don't need to change this structure for the new behavior.</p>\n<p>If your app has no extension with that target, nothing changes for you. If it does, verify that the route behind <code>url</code> works as a standalone page:</p>\n<ol>\n<li>Confirm the route renders correctly at full width. Layout that assumed a narrow overlay may need adjusting. The route should also still render correctly in a modal, since that's the presentation merchants with unsaved changes will see.</li>\n<li>Confirm the route reads the invocation payload from <code>shopify.intents.request.value</code>. Because it's a live signal, you can also subscribe to it to react when the request changes.</li>\n<li>Confirm the route calls <code>shopify.tools.register</code> when it mounts, so Sidekick can invoke your tools while the merchant is on the page.</li>\n<li>Confirm you resolve the intent when the merchant finishes, fails, or cancels.</li>\n<li>Test in a development store with <code>shopify app dev</code>, then ask Sidekick to perform the action.</li>\n</ol>\n<p>You'll know the update worked when the admin navigates to your declared <code>url</code> with your schema's values substituted into the path rather than a literal <code>{id}</code>, your tools respond while the page is open, and Sidekick reports the result after you resolve the intent. To see the modal fallback, start editing a form in the admin and invoke the action before saving.</p>\n<h2>Related docs</h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/apps/build/sidekick\" target=\"_blank\" class=\"body-link\">Build Sidekick app extensions</a></li>\n<li><a href=\"https://shopify.dev/docs/api/app-home/apis/user-interface-and-interactions/intents-api\" target=\"_blank\" class=\"body-link\">Intents API reference</a></li>\n<li><a href=\"https://shopify.dev/docs/api/app-home/apis/user-interface-and-interactions/tools-api\" target=\"_blank\" class=\"body-link\">Tools API reference</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "`admin.app.intent.link`のアプリインテントがフルページナビゲーションで開くように変更",
+          "summarizedJa": "Sidekickが`admin.app.intent.link`拡張ターゲットで宣言されたアプリインテントを呼び出す際、オーバーレイ表示からフルページナビゲーションに変更されました。これによりマーチャントはアプリの実際のページに遷移するようになり、Shopifyネイティブのインテントと同じ動作になります。`admin.app.intent.render`ターゲットを使用する拡張機能は影響を受けず、既存の拡張機能の設定変更は不要ですが、フルページ幅でのレイアウト表示を確認する必要があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-08-20T00:02:53.186Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2657,
+            "output": 305
+          },
+          "estimatedCost": 0.012546000000000002
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "`admin.app.intent.link`のアプリインテントがフルページ表示で開くように変更",
+          "summarizedJa": "Sidekickから呼び出される`admin.app.intent.link`を使用するアプリインテントが、これまでのオーバーレイ表示からフルページ表示に変わりました。これにより、マーチャントはアプリの指定されたURLに直接遷移し、より広々とした画面で作業できるようになります。既存のアプリの変更は不要ですが、パートナーはアプリのレイアウトがフルページ表示で適切に機能するか確認することが推奨されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-08-20T00:03:02.813Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 2164,
+            "output": 175
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-hydrogen-developer-preview-update-august-18-2026",
+      "source": "developer-changelog",
+      "title": "Hydrogen developer preview update: August 18, 2026",
+      "link": "https://shopify.dev/changelog/hydrogen-developer-preview-update-august-18-2026",
+      "publishedAt": "2026-08-18T16:00:00.000Z",
+      "collectedAt": "2026-08-20T00:02:43.757Z",
+      "category": [
+        "API",
+        "Update",
+        "Hydrogen"
+      ],
+      "description": " <div class=\"\"><p>The Hydrogen developer preview adds new capabilities to the toolkit and extends the ways developers can build Shopify storefronts:</p>\n<ul>\n<li><strong>Cart session attribution:</strong> Carts and Customer Account sessions stay in step, so signed-in shoppers reach checkout with their saved details instead of a guest flow.</li>\n<li><strong>Cart attributes:</strong> Attach order-wide data like gift messages to the cart, and per-line data like engraving text to the lines it belongs to.</li>\n<li><strong>Standard page view events:</strong> Hydrogen storefronts used to report only the first page load, leaving client-side navigations invisible to analytics and performance tooling. Every navigation now emits a page view, matching how liquid themes report events.</li>\n<li><strong>Shop Pay button without shop-js:</strong> The button used to render blank until Shopify's hosted script loaded. Hydrogen now renders it directly, so it shows up styled and clickable right away, before any JavaScript runs.</li>\n<li><strong>Local HTTPS for Customer Account development:</strong> Test login flows on a trusted local hostname, without a tunnel or hand-rolled certificates.</li>\n<li><strong>Pluggable logging:</strong> Set how much Hydrogen logs and forward warnings and errors to your own observability tooling.</li>\n</ul>\n<p>To get started, visit the <a href=\"https://shopify.dev/docs/storefronts/headless/developer-preview\" target=\"_blank\" class=\"body-link\">Hydrogen developer preview documentation</a>. For a detailed breakdown of this release, read the <a href=\"https://hydrogen.shopify.dev/update/developer-preview-release-notes-august-18-2026\" target=\"_blank\" class=\"body-link\">full release notes</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Hydrogen開発者プレビュー更新:2026年8月18日",
+          "summarizedJa": "Hydrogenの開発者プレビューに6つの新機能が追加されました。カートとカスタマーアカウントのセッション連携、カート属性の追加、標準的なページビューイベント、Shop Payボタンの即時レンダリング、ローカルHTTPS開発環境、カスタマイズ可能なログ機能が含まれます。これらの機能により、ヘッドレスストアフロントの開発体験が大幅に向上します。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-08-20T00:03:08.231Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1343,
+            "output": 247
+          },
+          "estimatedCost": 0.0077339999999999996
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-a-redesigned-point-of-sale-channel-page-with-an-easy-entry-point-to-the-pos-editor",
       "source": "shopify-changelog",
