@@ -1,6 +1,56 @@
 {
-  "lastUpdated": "2026-08-20T00:02:45.283Z",
+  "lastUpdated": "2026-08-22T00:02:51.172Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-bulk-staff-setup-with-csv-import",
+      "source": "shopify-changelog",
+      "title": "Bulk staff setup with CSV import",
+      "link": "https://changelog.shopify.com/posts/bulk-staff-setup-with-csv-import",
+      "publishedAt": "2026-08-21T14:30:00.000Z",
+      "collectedAt": "2026-08-22T00:02:51.159Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>You can now create, suspend, and reactivate staff accounts in bulk by uploading a CSV file in Shopify admin.  </p>\n\n<p>This update helps reduce manual setup for larger teams by letting you bulk create admin or POS staff accounts with assigned PINs and suspend or reactivate existing users in one upload.</p>\n\n<p>It’s especially useful for seasonal hiring, store expansion, and fast offboarding, when teams need to make staff changes quickly and accurately.</p>\n\n<p>To use this feature, go to Settings &gt; Users &gt; Import in Shopify Admin. Download the sample CSV template there to get started. </p>\n\n<p>Learn more about <a href=\"https://help.shopify.com/en/manual/your-account/users/import-users\">importing users in bulk using a CSV file</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "CSVインポートによるスタッフの一括設定",
+          "summarizedJa": "ShopifyでCSVファイルをアップロードすることで、スタッフアカウントの作成、停止、再有効化を一括で行えるようになりました。管理画面やPOSスタッフアカウントにPINを割り当てたり、既存ユーザーの管理を1回のアップロードで実行できます。季節雇用、店舗拡大、迅速なオフボーディングなど、大規模チームの設定作業を効率化します。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-08-22T00:02:56.421Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1098,
+            "output": 243
+          },
+          "estimatedCost": 0.006939
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "CSVインポートによるスタッフの一括設定",
+          "summarizedJa": "Shopify管理画面でCSVファイルをアップロードすることで、スタッフアカウントの一括作成、停止、再有効化が可能になりました。この機能は、大規模なチームや季節的な採用、店舗拡大、迅速な退職処理などにおいて、手動でのスタッフ設定作業を大幅に削減し、管理業務の効率化に貢献します。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-08-22T00:03:01.417Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 811,
+            "output": 141
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-app-intents-on-admin-app-intent-link-now-open-as-a-full-page-navigation",
       "source": "developer-changelog",
