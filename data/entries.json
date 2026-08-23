@@ -1,6 +1,56 @@
 {
-  "lastUpdated": "2026-08-22T00:02:51.172Z",
+  "lastUpdated": "2026-08-23T00:02:08.394Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-review-shopify-payments-balance-activity-with-the-new-activity-report",
+      "source": "shopify-changelog",
+      "title": "Review Shopify Payments balance activity with the new activity report",
+      "link": "https://changelog.shopify.com/posts/review-shopify-payments-balance-activity-with-the-new-activity-report",
+      "publishedAt": "2026-08-22T16:00:00.000Z",
+      "collectedAt": "2026-08-23T00:02:08.376Z",
+      "category": [
+        "Payments"
+      ],
+      "description": "\n        <p>The Shopify Payments activity report gives you a clearer way to understand how money moved through your Shopify Payments balance over a selected date range.</p>\n\n<p>You can open it from Finance &gt; Documents &gt; Shopify Payments activity report or from the Payouts page, then generate a report that brings together your starting balance, gross activity, fees, payouts, and ending balance in one place.</p>\n\n<p>Use the report when you're closing a month, checking why your Shopify Payments balance changed, or reviewing activity before payouts reach your bank account. The report is organized around balance activity and transaction dates, so it gives a different view than payout-by-payout exports from the Payouts page. You can also export the report as a PDF for your records or finance workflows.</p>\n\n<p>The activity report helps you review balance movement across a period, while the Payouts page remains the place to review individual payout deposits.</p>\n\n<p><a href=\"https://help.shopify.com/en/manual/payments/shopify-payments/payouts/payouts-activity-report\">Learn more</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "新しいアクティビティレポートでShopify Paymentsの残高履歴を確認可能に",
+          "summarizedJa": "Shopify Paymentsの新しいアクティビティレポートにより、指定期間内の残高の動きを一元的に確認できるようになりました。開始残高、総取引額、手数料、入金額、終了残高が1つのレポートにまとめられ、月次決算時や残高変動の確認に活用できます。Finance > Documents または Payoutsページから生成でき、PDF出力も可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 2,
+            "technicalImportance": 2
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-08-23T00:02:13.673Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1179,
+            "output": 241
+          },
+          "estimatedCost": 0.007152
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "新しいアクティビティレポートでShopifyペイメント残高の動きを確認",
+          "summarizedJa": "Shopifyペイメントの新しいアクティビティレポートが導入されました。これにより、指定期間内のShopifyペイメント残高の入出金状況（開始残高、総活動、手数料、支払い、終了残高など）をより明確に把握できるようになります。月次締め作業や残高変動の確認、銀行口座への入金前のレビューなどに活用でき、PDFでのエクスポートも可能です。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-08-23T00:02:19.441Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 882,
+            "output": 166
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-bulk-staff-setup-with-csv-import",
       "source": "shopify-changelog",
