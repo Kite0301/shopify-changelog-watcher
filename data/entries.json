@@ -1,6 +1,92 @@
 {
-  "lastUpdated": "2026-08-23T00:02:08.394Z",
+  "lastUpdated": "2026-08-25T00:03:07.381Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-shopify-tax-is-now-compatible-with-order-routing",
+      "source": "shopify-changelog",
+      "title": "US tax calculation accuracy improvements based on fulfillment location",
+      "link": "https://changelog.shopify.com/posts/shopify-tax-is-now-compatible-with-order-routing",
+      "publishedAt": "2026-08-24T16:00:00.000Z",
+      "collectedAt": "2026-08-25T00:03:03.766Z",
+      "category": [
+        "Orders"
+      ],
+      "description": "\n        <p>Tax accuracy has improved for orders shipping to customers in the United States. Tax is now calculated using the fulfillment location that your order routing settings select for each order. For local pickup orders, tax is calculated from the pickup location. Now, if you fulfill orders from multiple locations, tax reflects where each order actually ships from, and your order records show the ship-from location used in the calculation. This is beneficial because tax rates can depend on where an order ships from, and your records are more accurate for reporting and filing. </p>\n\n<p>Learn more about <a href=\"https://help.shopify.com/en/manual/fulfillment/setup/order-routing\">order routing</a> in the <a href=\"https://help.shopify.com/en/manual/taxes\">Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "米国の税計算精度が配送拠点に基づいて向上",
+          "summarizedJa": "米国向け配送注文の税計算が改善され、オーダールーティング設定で選択された配送元拠点に基づいて税額が計算されるようになりました。複数拠点から出荷するマーチャントは、実際の出荷場所を反映したより正確な税計算と記録が可能になります。店舗受取注文では受取場所に基づいて税が計算されます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 2,
+            "japanRelevance": 1,
+            "technicalImportance": 3
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-08-25T00:03:20.851Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1093,
+            "output": 228
+          },
+          "estimatedCost": 0.006699
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "フルフィルメント拠点に基づく米国税計算精度の向上",
+          "summarizedJa": "米国への配送注文における税計算の精度が向上しました。注文ルーティング設定で選択されたフルフィルメント拠点に基づいて税金が計算されるようになり、ローカルピックアップの場合はピックアップ拠点から計算されます。これにより、複数の拠点から出荷するマーチャントは、実際の出荷元に基づいた正確な税率が適用され、記録の正確性が向上します。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 2,
+            "japanRelevance": 1,
+            "technicalImportance": 3
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-08-25T00:03:31.542Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 804,
+            "output": 152
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-online-store-script-tags-deprecation",
+      "source": "developer-changelog",
+      "title": "Script tags are deprecated and will stop running on March 1, 2027",
+      "link": "https://shopify.dev/changelog/online-store-script-tags-deprecation",
+      "publishedAt": "2026-08-24T16:00:00.000Z",
+      "collectedAt": "2026-08-25T00:03:07.376Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Deprecation announcement",
+        "Admin GraphQL API",
+        "Admin REST API"
+      ],
+      "description": " <div class=\"\"><p>Starting October 1, 2026, the <code>scriptTagCreate</code> and <code>scriptTagUpdate</code> mutations will return an user error, and the <code>ScriptTag</code> REST Admin API resource will reject <code>POST</code> and <code>PUT</code>. The deprecation applies to all API versions, including older ones, so pinning won't defer it.</p>\n<p>On March 1, 2027, Shopify will stop injecting script tags into storefronts. Storefronts are the last place script tags still run, since they already stopped working on the <a href=\"https://shopify.dev/docs/apps/build/online-store/script-tag-deprecation/order-status\" target=\"_blank\" class=\"body-link\">Order status page</a>. If your app uses a script tag to load JavaScript onto a store, then you need to replace it before then.</p>\n<h3>What's changing</h3>\n<p>A script tag loads JavaScript on a storefront without any changes to theme code. After March 1, 2027, Shopify won't inject those scripts, so script tags will stop loading JavaScript on storefronts.</p>\n<p>The <code>scriptTags</code> query and the <code>scriptTagDelete</code> mutation keep working, so you can audit and clean up your existing script tags.</p>\n<h3>What you need to do</h3>\n<p>Replace each script tag with an <a href=\"https://shopify.dev/docs/apps/build/online-store/theme-app-extensions/configuration#app-embed-blocks\" target=\"_blank\" class=\"body-link\">app embed block</a>, which you ship in a theme app extension. App users activate app embed blocks in the theme editor.</p>\n<p>If a script only collects analytics or conversion data, then use a <a href=\"https://shopify.dev/docs/apps/build/marketing/pixels\" target=\"_blank\" class=\"body-link\">web pixel</a> instead, which needs no action from the app user.</p>\n<h3>Who's affected</h3>\n<p>Apps that create script tags with a <code>display_scope</code> of <code>online_store</code>.</p>\n<p>Script tags with a <code>display_scope</code> of <code>order_status</code> are covered by an earlier deprecation. Refer to <a href=\"https://shopify.dev/docs/apps/build/online-store/script-tag-deprecation/order-status\" target=\"_blank\" class=\"body-link\">Order status script tags</a>.</p>\n<h3>Deprecation timeline</h3>\n<ul>\n<li><strong>October 1, 2026</strong>: <code>scriptTagCreate</code> and <code>scriptTagUpdate</code> will return an user error. Existing script tags will keep running.</li>\n<li><strong>March 1, 2027</strong>: Shopify will stop injecting script tags into storefronts.</li>\n</ul>\n<h3>Migration path</h3>\n<p>App embed blocks replace script tags, and you ship them in a theme app extension. Refer to <a href=\"https://shopify.dev/docs/apps/build/online-store/script-tag-deprecation/storefront\" target=\"_blank\" class=\"body-link\">Storefront script tags</a> to learn more.</p>\n<h3>Related docs</h3>\n<ul>\n<li><a href=\"https://shopify.dev/docs/apps/build/online-store/script-tag-deprecation/storefront\" target=\"_blank\" class=\"body-link\">Storefront script tags</a></li>\n<li><a href=\"https://shopify.dev/docs/apps/build/online-store/theme-app-extensions/migrate\" target=\"_blank\" class=\"body-link\">Migrate to theme app extensions</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "スクリプトタグが非推奨となり、2027年3月1日に動作停止",
+          "summarizedJa": "2026年10月1日からスクリプトタグの新規作成・更新が不可となり、2027年3月1日にはストアフロントでのスクリプトタグの動作が完全に停止します。アプリ開発者は、スクリプトタグをテーマアプリエクステンションのアプリ埋め込みブロックまたはWebピクセルに移行する必要があります。全てのAPIバージョンに適用される非推奨化のため、バージョン固定による延期はできません。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 5
+          },
+          "totalScore": 17,
+          "analyzedAt": "2026-08-25T00:03:36.662Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1878,
+            "output": 266
+          },
+          "estimatedCost": 0.009624
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-review-shopify-payments-balance-activity-with-the-new-activity-report",
       "source": "shopify-changelog",
@@ -48,6 +134,38 @@
             "output": 166
           },
           "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-checkout-now-defaults-to-last-used-payment-method-for-signed-in-customers",
+      "source": "shopify-changelog",
+      "title": "Checkout now defaults to last used payment method for signed-in customers",
+      "link": "https://changelog.shopify.com/posts/checkout-now-defaults-to-last-used-payment-method-for-signed-in-customers",
+      "publishedAt": "2026-08-21T16:00:00.000Z",
+      "collectedAt": "2026-08-25T00:03:03.766Z",
+      "category": [
+        "Checkout"
+      ],
+      "description": "\n        <p>Checkout now remembers a signed-in customer's last-used payment method and pre-selects it on future purchases.</p>\n\n<p>This feature is only enabled for checkout flows where saved payment methods are enabled on <a href=\"https://help.shopify.com/en/manual/customers/customer-accounts/manage#saved-payment-methods\">D2C</a> and<a href=\"https://help.shopify.com/en/manual/b2b/checkout-and-orders/vaulted-cards\"> B2B</a>. </p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "チェックアウトでログイン顧客の最後に使用した決済方法がデフォルト選択されるように",
+          "summarizedJa": "ログイン中の顧客が以前使用した決済方法をチェックアウト時に自動的に選択する機能が追加されました。この機能はD2CおよびB2Bチェックアウトで保存済み決済方法が有効化されている場合にのみ動作します。リピート購入時の決済手続きがよりスムーズになり、コンバージョン率の向上が期待できます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-08-25T00:03:43.302Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1051,
+            "output": 246
+          },
+          "estimatedCost": 0.006843
         }
       }
     },
