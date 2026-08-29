@@ -1,6 +1,59 @@
 {
-  "lastUpdated": "2026-08-28T02:27:56.815Z",
+  "lastUpdated": "2026-08-29T00:01:10.397Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-more-resilient-refreshes-for-expiring-offline-access-tokens",
+      "source": "developer-changelog",
+      "title": "More resilient refreshes for expiring offline access tokens",
+      "link": "https://shopify.dev/changelog/more-resilient-refreshes-for-expiring-offline-access-tokens",
+      "publishedAt": "2026-08-28T14:00:00.000Z",
+      "collectedAt": "2026-08-29T00:01:08.542Z",
+      "category": [
+        "API",
+        "Update",
+        "Admin GraphQL API",
+        "Admin REST API"
+      ],
+      "description": " <div class=\"\"><p>Expiring offline access token refreshes now retain the previously used refresh token until an app begins using its replacement. This rollout helps apps recover when a refresh response is lost or isn’t persisted. No migration is required, but apps should continue to store every refreshed token pair atomically.</p>\n<h2>What changed</h2>\n<p>Previously, after an app used a refresh token, it could retry that token for up to 60 minutes. If the app didn’t receive or save the newly returned access token and refresh token, the previously stored refresh token could no longer be used after that window.</p>\n<p>Now, an app can retry its previously stored refresh token until it starts using the replacement refresh token. This gives the app a recovery path after a lost response or storage failure.</p>\n<p>The recovery period is limited to 30 days from the original refresh token’s first use and doesn’t extend the token beyond its normal 90-day lifetime. When an app uses the replacement refresh token, the preceding refresh token is retired.</p>\n<h2>Who's affected</h2>\n<p>Apps that use expiring offline access tokens. It doesn’t require a new API version, configuration change, or opt-in.</p>\n<p>Apps that don’t use expiring offline access tokens aren’t affected.</p>\n<h2>Why this matters</h2>\n<p>A transient network interruption, worker failure, or database write failure can occur after Shopify processes a refresh request but before an app saves the returned token pair. This change lets affected apps recover without requiring a merchant to open the app again.</p>\n<h2>What to do</h2>\n<p>No migration is required if your app is already using expiring offline access tokens.</p>\n<p>Continue to:</p>\n<ol>\n<li>Serialize refresh operations for each shop.</li>\n<li>Persist each returned access-token and refresh-token pair atomically.</li>\n<li>Use the newest refresh token for future refreshes.</li>\n<li>Treat this behavior as a recovery path for lost responses, not as a reason to keep using an older refresh token after its replacement has been stored.</li>\n</ol>\n<h2>Related docs</h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/apps/build/authentication-authorization/access-tokens/offline-access-tokens\" target=\"_blank\" class=\"body-link\">Offline access tokens</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "有効期限付きオフラインアクセストークンのリフレッシュ処理の信頼性向上",
+          "summarizedJa": "有効期限付きオフラインアクセストークンのリフレッシュ時に、新しいトークンの使用が開始されるまで古いリフレッシュトークンが有効なまま保持されるようになりました。これによりネットワーク障害やデータベース書き込みエラーなどでトークンの保存に失敗した場合でも、マーチャントに再度アプリを開いてもらうことなく復旧できます。既存のアプリは移行作業不要で、自動的にこの改善の恩恵を受けられます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-08-29T00:01:16.521Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1500,
+            "output": 289
+          },
+          "estimatedCost": 0.008834999999999999
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "期限切れオフラインアクセストークンの更新処理の回復力向上",
+          "summarizedJa": "この更新により、Shopifyアプリの期限切れオフラインアクセストークン更新処理の堅牢性が向上しました。アプリが新しいトークンペアの取得や保存に失敗した場合でも、以前の更新トークンが新しいトークンが使用されるまで有効に保持されるため、ネットワーク障害や保存エラーからの回復が可能になります。これにより、マーチャントがアプリを再認証する必要が減り、パートナーは既存のトークン管理のベストプラクティスを継続するだけで対応不要です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-08-29T00:01:25.212Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1161,
+            "output": 183
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-password-protected-shop-dev-flows-on-shopify-theme-cli-v3-83-x-and-older-to-be-deprecated",
       "source": "developer-changelog",
