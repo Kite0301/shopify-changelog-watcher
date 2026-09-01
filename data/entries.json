@@ -1,6 +1,108 @@
 {
-  "lastUpdated": "2026-08-29T00:01:10.397Z",
+  "lastUpdated": "2026-09-01T00:01:50.950Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-polaris-cdn-1-1-release-candidate",
+      "source": "developer-changelog",
+      "title": "Polaris CDN 1.1 release candidate",
+      "link": "https://shopify.dev/changelog/polaris-cdn-1-1-release-candidate",
+      "publishedAt": "2026-08-31T16:16:00.000Z",
+      "collectedAt": "2026-09-01T00:01:49.714Z",
+      "category": [
+        "Polaris",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>Polaris Web Components loaded from the Shopify CDN are moving to semantic versioning, read more about that change <a href=\"https://shopify.dev/changelog/the-polaris-cdn-is-adopting-semantic-versioning\" target=\"_blank\" class=\"body-link\">here</a>. </p>\n<p>You can test out the Polaris CDN 1.1 release candidate by updating the URL you load polaris from to this:</p>\n<pre><code>&lt;script src=&quot;https://cdn.shopify.com/shopifycloud/polaris-1.1-rc.js&quot;&gt;&lt;/script&gt;\n</code></pre>\n<h3>New components</h3>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/app-home/v1.1-rc/web-components/feedback-and-status-indicators/empty-state\" target=\"_blank\" class=\"body-link\"><code>EmptyState</code></a>. For empty lists, tables, and pages. Inside a <code>TableBody</code> it renders as a full-width message beneath the table headers.  </li>\n<li><a href=\"https://shopify.dev/docs/api/app-home/v1.1-rc/web-components/typography-and-content/number\" target=\"_blank\" class=\"body-link\"><code>Number</code></a>. Inline numeric text with tabular figures, so columns of numbers line up.</li>\n</ul>\n<h3>New properties</h3>\n<ul>\n<li><strong><code>fontSize</code> on <a href=\"https://shopify.dev/docs/api/app-home/v1.1-rc/web-components/typography-and-content/heading\" target=\"_blank\" class=\"body-link\"><code>Heading</code></a>, <a href=\"https://shopify.dev/docs/api/app-home/v1.1-rc/web-components/typography-and-content/paragraph\" target=\"_blank\" class=\"body-link\"><code>Paragraph</code></a>, and <a href=\"https://shopify.dev/docs/api/app-home/v1.1-rc/web-components/typography-and-content/text\" target=\"_blank\" class=\"body-link\"><code>Text</code></a>.</strong> Sets the text size directly.  </li>\n<li><strong><code>visibleMonths</code> on <a href=\"https://shopify.dev/docs/api/app-home/v1.1-rc/web-components/forms/date-picker\" target=\"_blank\" class=\"body-link\"><code>DatePicker</code></a>.</strong> Show one month, two months, or let the picker decide. Accepts <code>auto</code>, <code>1</code>, or <code>2</code>.  </li>\n<li><strong><code>supplementalStart</code> on <a href=\"https://shopify.dev/docs/api/app-home/v1.1-rc/web-components/layout-and-structure/page\" target=\"_blank\" class=\"body-link\"><code>Page</code></a>.</strong> Content placed before the main page content.</li>\n</ul>\n<h3>Bug fixes</h3>\n<ul>\n<li><strong>Overlays.</strong> The <code>show</code>, <code>hide</code>, <code>aftershow</code>, <code>afterhide</code>, and <code>aftertoggle</code> events no longer bubble, matching <code>toggle</code>. Listen on the overlay itself, or use the matching <code>on*</code> properties. Also fixed overlays closing when a drag ends outside them.  </li>\n<li><a href=\"https://shopify.dev/docs/api/app-home/v1.1-rc/web-components/layout-and-structure/page\" target=\"_blank\" class=\"body-link\"><strong><code>Page</code></strong></a>. Fixed header alignment and spacing, long heading truncation, print layout, and horizontal overflow on narrow screens.  </li>\n<li><a href=\"https://shopify.dev/docs/api/app-home/v1.1-rc/web-components/overlays/modal\" target=\"_blank\" class=\"body-link\"><strong><code>Modal</code></strong></a>. Fixed unintended dismissal when a click or drag crosses the modal edge, focus return, heading overflow, and behavior after a modal is moved in the page. Buttons now take their <code>variant</code> from the slot they sit in, and any <code>variant</code> you set yourself still wins.  </li>\n<li><a href=\"https://shopify.dev/docs/api/app-home/v1.1-rc/web-components/overlays/popover\" target=\"_blank\" class=\"body-link\"><strong><code>Popover</code></strong></a> and <a href=\"https://shopify.dev/docs/api/app-home/v1.1-rc/web-components/actions/menu\" target=\"_blank\" class=\"body-link\"><code>Menu</code></a>. Fixed overflow scrolling, positioning, resizing after open, delayed hiding in Safari, and Escape closing an enclosing modal.  </li>\n<li><a href=\"https://shopify.dev/docs/api/app-home/v1.1-rc/web-components/typography-and-content/tooltip\" target=\"_blank\" class=\"body-link\"><strong><code>Tooltip</code></strong></a>. Fixed positioning, off-center first render, inherited text color, and an error in browsers with partial Popover API support.  </li>\n<li><a href=\"https://shopify.dev/docs/api/app-home/v1.1-rc/web-components/forms/date-picker\" target=\"_blank\" class=\"body-link\"><strong><code>DatePicker</code></strong></a>. Fixed weekday headings and screen reader announcements across locales. Setting the same <code>value</code> back onto the picker, which controlled React components do after a selection, no longer fires a second <code>input</code> and <code>change</code> event, so <code>onChange</code> runs once instead of twice. The picker expands to fill the available width by default.  </li>\n<li><a href=\"https://shopify.dev/docs/api/app-home/v1.1-rc/web-components/forms/select\" target=\"_blank\" class=\"body-link\"><strong><code>Select</code></strong></a>. Fixed an empty value showing before the options parse.  </li>\n<li><a href=\"https://shopify.dev/docs/api/app-home/v1.1-rc/web-components/forms/number-field\" target=\"_blank\" class=\"body-link\"><strong><code>NumberField</code></strong></a>. Fixed the default <code>max</code>. Now accepts scientific notation.  </li>\n<li><a href=\"https://shopify.dev/docs/api/app-home/v1.1-rc/web-components/forms/text-area\" target=\"_blank\" class=\"body-link\"><strong><code>TextArea</code></strong></a>. Fixed label alignment and keyboard shortcuts.  </li>\n<li><a href=\"https://shopify.dev/docs/api/app-home/v1.1-rc/web-components/forms/date-field\" target=\"_blank\" class=\"body-link\"><strong><code>DateField</code></strong></a>. Fixed calendar dismissal in Safari. Now sizes like every other field.  </li>\n<li><a href=\"https://shopify.dev/docs/api/app-home/v1.1-rc/web-components/forms/color-picker\" target=\"_blank\" class=\"body-link\"><strong><code>ColorPicker</code></strong></a>. Fixed single-click selection.  </li>\n<li><strong>All fields.</strong> Fields with <code>autocomplete=&quot;off&quot;</code> now also tell password managers to skip them.</li>\n</ul>\n<h3>Deprecated</h3>\n<ul>\n<li><strong><code>fontVariantNumeric</code> on <a href=\"https://shopify.dev/docs/api/app-home/v1.1-rc/web-components/typography-and-content/text\" target=\"_blank\" class=\"body-link\"><code>Text</code></a> and <a href=\"https://shopify.dev/docs/api/app-home/v1.1-rc/web-components/typography-and-content/paragraph\" target=\"_blank\" class=\"body-link\"><code>Paragraph</code></a></strong> still works, however we recommend using the new <a href=\"https://shopify.dev/docs/api/app-home/v1.1-rc/web-components/typography-and-content/number\" target=\"_blank\" class=\"body-link\"><code>Number</code></a> component instead.</li>\n</ul>\n<h2><strong>Related docs</strong></h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/app-home\" target=\"_blank\" class=\"body-link\">App Home documentation</a>  </li>\n<li><a href=\"https://shopify.dev/changelog/the-polaris-cdn-is-adopting-semantic-versioning\" target=\"_blank\" class=\"body-link\">Polaris CDN is adopting semantic versioning</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Polaris CDN 1.1 リリース候補版",
+          "summarizedJa": "Shopify CDNから提供されるPolaris Web Componentsがバージョン1.1のリリース候補版を公開しました。新しいEmptyStateとNumberコンポーネントの追加、Heading・Paragraph・TextへのfontSizeプロパティ追加、各種オーバーレイやモーダル、フォームフィールドの多数のバグ修正が含まれます。セマンティックバージョニングへの移行に伴い、テストURLが提供されています。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-01T00:01:57.412Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 3208,
+            "output": 241
+          },
+          "estimatedCost": 0.013239
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Polaris CDN 1.1 リリース候補版",
+          "summarizedJa": "Polaris CDN 1.1のリリース候補版が公開され、Shopifyアプリ開発者向けに新しいUIコンポーネント（EmptyState、Numberなど）や既存コンポーネントのプロパティが追加されました。これにより、アプリの機能性とユーザーエクスペリエンスが向上し、多数のバグ修正も含まれています。Polaris Web Componentsはセマンティックバージョニングに移行するため、開発者は新しいCDN URLでテストを開始できます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-09-01T00:02:05.786Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 2545,
+            "output": 173
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-the-polaris-cdn-is-adopting-semantic-versioning",
+      "source": "developer-changelog",
+      "title": "The Polaris CDN is adopting semantic versioning",
+      "link": "https://shopify.dev/changelog/the-polaris-cdn-is-adopting-semantic-versioning",
+      "publishedAt": "2026-08-31T16:15:00.000Z",
+      "collectedAt": "2026-09-01T00:01:49.714Z",
+      "category": [
+        "Polaris",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>Polaris Web Components loaded from the Shopify CDN are moving to semantic versioning. Most apps will continue receiving compatible improvements automatically, while developers can choose when to adopt breaking changes. Existing apps don’t need to take immediate action.</p>\n<h2><strong>What changed</strong></h2>\n<p>Polaris CDN releases now follow familiar semantic versioning rules:</p>\n<ul>\n<li><strong>Major releases</strong> may contain breaking API or behavioral changes that require app updates.  </li>\n<li><strong>Minor releases</strong> contain compatible components, APIs, bug fixes, accessibility and performance improvements, and visual refinements.  </li>\n<li><strong>Security fixes</strong> can be applied to affected stable releases, including older majors.</li>\n</ul>\n<p>The <code>@shopify/polaris-types</code> package uses the same major version as the CDN release.</p>\n<h2><strong>Releases</strong></h2>\n<h3><strong>Automatic compatible updates</strong></h3>\n<p>Apps should by default use the stable release channels, you will receive updates to this channel after updates have gone through a release candidate phase. This URL will not automatically get updated if there is a major change. Adopting a new major is always explicit.</p>\n<pre><code>&lt;script src=&quot;https://cdn.shopify.com/shopifycloud/polaris-1.js&quot;&gt;&lt;/script&gt;\n</code></pre>\n<h3><strong>Pinned releases</strong></h3>\n<p>A pinned release doesn’t receive normal features, fixes, or visual changes.</p>\n<p>Pinning is useful when you need to:</p>\n<ul>\n<li>Control when normal changes reach production.  </li>\n<li>Reproduce the release used during testing.  </li>\n<li>Recover from an update affecting your app.  </li>\n<li>Coordinate Polaris updates with your release process.</li>\n</ul>\n<pre><code>&lt;script src=&quot;https://cdn.shopify.com/shopifycloud/polaris-1.1.js&quot;&gt;&lt;/script&gt;\n</code></pre>\n<blockquote>\n<p>Caution:  <code>polaris-1.1.js</code> is published only when Polaris 1.1 becomes stable.</p>\n</blockquote>\n<h3><strong>Testing upcoming changes</strong></h3>\n<p>All upcoming changes will be available to test in release candidate builds prior to being released in stable channels.</p>\n<p>This release candidate version will accumulate improvements during the release candidate window and update in-place at the same URL. It’s intended for development and testing.</p>\n<pre><code>&lt;script src=&quot;https://cdn.shopify.com/shopifycloud/polaris-1.1-rc.js&quot;&gt;&lt;/script&gt;\n</code></pre>\n<h3><strong>Existing <code>polaris.js</code> URL</strong></h3>\n<p>The existing <code>polaris.js</code> will be updated at the same time as <code>polaris-1.js</code> and will not automatically update when there is a major release.</p>\n<h2><strong>Who’s affected</strong></h2>\n<p>This applies to third-party apps that load Polaris Web Components from the Shopify CDN and developers using <code>@shopify/polaris-types</code>.</p>\n<p>It doesn’t change versioning for App Home UI extensions, Admin UI extensions or App Bridge.</p>\n<h2><strong>Related docs</strong></h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/app-home\" target=\"_blank\" class=\"body-link\">App Home documentation</a></li>\n<li><a href=\"https://shopify.dev/changelog/polaris-cdn-1-1-release-candidate\" target=\"_blank\" class=\"body-link\">Polaris 1.1 release candidate</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Polaris CDNがセマンティックバージョニングを採用",
+          "summarizedJa": "Shopify CDNから読み込まれるPolaris Web Componentsが、セマンティックバージョニングに移行します。既存のアプリは自動的に互換性のある改善を受け取り、開発者は破壊的変更を採用するタイミングを選択できます。メジャーバージョンには破壊的変更が含まれる可能性があり、マイナーバージョンには互換性のある機能追加やバグ修正が含まれます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-01T00:02:10.639Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1922,
+            "output": 243
+          },
+          "estimatedCost": 0.009411
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Polaris CDNがセマンティックバージョニングを採用",
+          "summarizedJa": "Shopify CDNから提供されるPolaris Web Componentsがセマンティックバージョニングに移行します。これにより、アプリ開発者は破壊的変更の適用タイミングをより細かく制御できるようになり、既存アプリは互換性のある改善を自動で受け取ります。日本のパートナーは、今後のPolarisコンポーネントの更新管理方法を理解し、開発プロセスに組み込むことが重要です。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-01T00:02:18.944Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1444,
+            "output": 158
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-more-resilient-refreshes-for-expiring-offline-access-tokens",
       "source": "developer-changelog",
@@ -642,6 +744,56 @@
           "tokenUsage": {
             "input": 972,
             "output": 179
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-inventory-reports-now-show-on-hand-quantity",
+      "source": "shopify-changelog",
+      "title": "Inventory reports now show on-hand quantity",
+      "link": "https://changelog.shopify.com/posts/inventory-reports-now-show-on-hand-quantity",
+      "publishedAt": "2026-08-14T16:00:00.000Z",
+      "collectedAt": "2026-09-01T00:01:50.938Z",
+      "category": [
+        "Analytics"
+      ],
+      "description": "\n        <p><strong>Starting September 1, 2026</strong><br>\nInventory analytics models now measure stock by on-hand quantity instead of available quantity. This better reflects real world information of your physical inventory. </p>\n\n<ul>\n<li>On-hand quantity includes all units physically at a location, including units committed to open orders and units currently unavailable.</li>\n<li>Available quantity includes only units that are available to sell.</li>\n</ul>\n\n<p><strong>What to expect</strong><br>\nFrom September 1 onward, these reports reflect everything you actually hold, not just what's sellable, so reported inventory may be higher than before by the number of committed and unavailable units. When writing ShopifyQL, this change can be seen when you query \"FROM inventory\" or \"FROM inventory<em>by</em>location\".  Any reports powered by these models will reflect this change including:</p>\n\n<ul>\n<li>Products by sell-through rate</li>\n<li>Products by days of inventory remaining</li>\n<li>Inventory adjustment changes</li>\n<li>Inventory sold daily by product</li>\n<li>ABC product analysis</li>\n<li>Month-end inventory value</li>\n<li>Inventory transfer orders and shipments</li>\n<li>Month-end inventory snapshot</li>\n</ul>\n\n<p>Your past data won't change. Reporting before September 1, 2026 still shows available quantity, so historical numbers and trends stay exactly as they were. Only September 1 and later use on-hand.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "在庫レポートで現物在庫数量が表示されるように変更",
+          "summarizedJa": "2026年9月1日より、在庫分析モデルが「利用可能数量」から「現物在庫数量」での測定に変更されます。現物在庫数量には予約済み注文分や利用不可の在庫も含まれるため、実際の物理的な在庫をより正確に反映します。この変更により、複数の在庫関連レポートの数値が従来より高く表示される可能性があります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-09-01T00:02:23.596Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1270,
+            "output": 236
+          },
+          "estimatedCost": 0.00735
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "在庫レポートで実在庫数が表示されるように",
+          "summarizedJa": "2026年9月1日より、Shopifyの在庫分析モデルが「販売可能数」ではなく「実在庫数」を基準とするよう変更されます。これにより、コミット済みや利用不可の在庫を含む物理的な全在庫がレポートに反映され、表示される在庫数が以前より多くなる可能性があります。この変更は、ShopifyQLクエリや複数の在庫関連レポートに影響を与えますが、過去のデータは変更されません。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-09-01T00:02:51.377Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 932,
+            "output": 168
           },
           "estimatedCost": 0
         }
