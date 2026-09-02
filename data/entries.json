@@ -1,6 +1,70 @@
 {
-  "lastUpdated": "2026-09-01T00:01:50.950Z",
+  "lastUpdated": "2026-09-02T00:01:29.303Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-scan-and-search-variants-with-multiple-barcodes",
+      "source": "shopify-changelog",
+      "title": "Scan and search variants with multiple barcodes",
+      "link": "https://changelog.shopify.com/posts/scan-and-search-variants-with-multiple-barcodes",
+      "publishedAt": "2026-09-01T16:00:00.000Z",
+      "collectedAt": "2026-09-02T00:01:29.289Z",
+      "category": [
+        "Pos"
+      ],
+      "description": "\n        <p>Shopify POS can now identify a product variant using any barcode associated with it, making it easier for staff to find the right product when items have different barcodes across suppliers, channels, or packaging.</p>\n\n<p><strong>What’s new?</strong><br>\nStaff can now scan or search for a product variant using any of its associated barcodes, including identifiers such as GTIN, EAN, ASIN, or SKU-based codes. Regardless of which associated barcode is used, Shopify POS will pull up the correct variant.</p>\n\n<p>This reduces the need to manually look up products when the barcode on an item differs from the primary barcode your store typically uses, helping staff find the right item faster during checkout, receiving, and inventory tasks.</p>\n\n<p>This update is automatically available in Shopify POS v11.14. Additional barcodes must first be associated with the product variant in Shopify Admin.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "複数のバーコードでのバリアント検索とスキャンに対応",
+          "summarizedJa": "Shopify POSで、1つの商品バリアントに紐づく複数のバーコード（GTIN、EAN、ASIN、SKUベースのコードなど）すべてを使用して、商品の検索やスキャンができるようになりました。サプライヤーや販売チャネル、パッケージごとに異なるバーコードが存在する場合でも、どのバーコードを使用しても正しいバリアントが表示されるため、レジ業務や在庫管理の効率が向上します。この機能はShopify POS v11.14で自動的に利用可能で、事前にShopify管理画面でバリアントに複数のバーコードを登録する必要があります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-09-02T00:01:36.779Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1128,
+            "output": 320
+          },
+          "estimatedCost": 0.008184
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-check-connectivity-status-from-pos-home",
+      "source": "shopify-changelog",
+      "title": "Check connectivity status from POS Home",
+      "link": "https://changelog.shopify.com/posts/check-connectivity-status-from-pos-home",
+      "publishedAt": "2026-09-01T16:00:00.000Z",
+      "collectedAt": "2026-09-02T00:01:29.289Z",
+      "category": [
+        "Pos"
+      ],
+      "description": "\n        <p>You can now check your device’s connectivity status directly from POS Home. A new status icon makes it easier for staff to confirm that their device is connected and ready to sell before starting checkout.</p>\n\n<p><strong>What’s new?</strong><br>\nConnectivity status has moved from the POS side navigation to POS Home, where it’s visible at a glance. Staff can select the status icon to open a popover with more details about their connection.</p>\n\n<p>By making connectivity easier to find, staff can identify and troubleshoot issues sooner instead of discovering a connection problem in the middle of a sale.</p>\n\n<p>This update is automatically available to all staff on Shopify POS v11.14. No setup or action is required.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "POSホーム画面から接続状態を確認可能に",
+          "summarizedJa": "Shopify POSのホーム画面から、デバイスの接続状態を直接確認できるようになりました。新しいステータスアイコンにより、スタッフは販売開始前にデバイスが接続されているかを一目で確認でき、販売中に接続の問題が発生することを未然に防ぐことができます。本アップデートはShopify POS v11.14で自動的に利用可能となり、特別な設定は不要です。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 1,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-09-02T00:02:03.248Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1074,
+            "output": 242
+          },
+          "estimatedCost": 0.0068520000000000005
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-polaris-cdn-1-1-release-candidate",
       "source": "developer-changelog",
