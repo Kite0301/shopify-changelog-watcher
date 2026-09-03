@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-02T00:01:29.303Z",
+  "lastUpdated": "2026-09-03T00:01:22.389Z",
   "entries": [
     {
       "id": "shopify-changelog-posts-scan-and-search-variants-with-multiple-barcodes",
@@ -405,6 +405,38 @@
             "output": 281
           },
           "estimatedCost": 0.011163
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-shopify-payments-in-the-united-arab-emirates-available-on-shopify-advanced-plan",
+      "source": "shopify-changelog",
+      "title": "Shopify Payments in the United Arab Emirates now available on the Advanced plan",
+      "link": "https://changelog.shopify.com/posts/shopify-payments-in-the-united-arab-emirates-available-on-shopify-advanced-plan",
+      "publishedAt": "2026-08-26T16:00:00.000Z",
+      "collectedAt": "2026-09-03T00:01:22.370Z",
+      "category": [
+        "Payments"
+      ],
+      "description": "\n        <p>Merchants on the Advanced plan in the United Arab Emirates can now accept payments through Shopify Payments, with no third-party gateway required. Shopify Payments was previously available only to merchants on the Plus plan.</p>\n\n<p><a href=\"https://admin.shopify.com/settings/payments\">Set up Shopify Payments</a> in your Shopify admin.</p>\n\n<p><a href=\"https://help.shopify.com/manual/payments/shopify-payments/supported-countries/united-arab-emirates\">Review eligibility and onboarding requirements</a> for Shopify Payments in the United Arab Emirates.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "アラブ首長国連邦でShopify PaymentsがAdvancedプランでも利用可能に",
+          "summarizedJa": "アラブ首長国連邦において、Shopify PaymentsがPlusプランに加えてAdvancedプランでも利用可能になりました。これによりAdvancedプランの加盟店もサードパーティの決済ゲートウェイなしで決済を受け付けることができます。詳細な利用条件とオンボーディング要件は公式ヘルプページで確認できます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 5,
+          "analyzedAt": "2026-09-03T00:01:27.757Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1074,
+            "output": 232
+          },
+          "estimatedCost": 0.006702
         }
       }
     },
