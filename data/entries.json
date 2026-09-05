@@ -1,6 +1,57 @@
 {
-  "lastUpdated": "2026-09-04T00:04:21.599Z",
+  "lastUpdated": "2026-09-05T00:01:20.213Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-08-25-is-now-supported",
+      "source": "developer-changelog",
+      "title": "Shopify storefronts now support UCP 2026-08-25",
+      "link": "https://shopify.dev/changelog/08-25-is-now-supported",
+      "publishedAt": "2026-09-04T16:00:00.000Z",
+      "collectedAt": "2026-09-05T00:01:19.190Z",
+      "category": [
+        "UCP",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>Shopify storefronts now advertise support for Universal Commerce Protocol (UCP) version <code>2026-08-25</code> in their discovery profiles at <code>/.well-known/ucp</code>. This update adds compatibility with the <code>2026-08-25</code> protocol release and doesn’t require any changes to your existing integrations.</p>\n<h2>What changed</h2>\n<p>Storefront discovery profiles now declare UCP version <code>2026-08-25</code> as a supported protocol version in <code>/.well-known/ucp</code>. Platforms and agents that speak UCP can use a compatible <code>2026-08-25</code> profile to negotiate supported capabilities with Shopify storefronts.</p>\n<p>The set of capabilities that Shopify supports is unchanged. Only the advertised protocol version and associated compatibility have been updated.</p>\n<h2>Who’s affected</h2>\n<p>This change affects:</p>\n<ul>\n<li>Shopify storefronts that expose a UCP discovery profile at <code>/.well-known/ucp</code></li>\n<li>Platforms and agents that use UCP discovery profiles to negotiate capabilities with Shopify storefronts</li>\n</ul>\n<p>If your platform or agent already uses UCP discovery profiles for negotiation, it can now treat Shopify storefronts as compatible with the <code>2026-08-25</code> protocol version.</p>\n<h2>What to do</h2>\n<p>You don’t need to change your storefront configuration or existing UCP integrations. If your platform or agent already supports the <code>2026-08-25</code> UCP profile, it can now negotiate capabilities with Shopify storefronts using that version.</p>\n<p>If you’re implementing or updating a UCP-compatible platform or agent, follow the profile format and negotiation flow described in the UCP docs.</p>\n<p>Learn more about <a href=\"https://shopify.dev/docs/agents/profiles\" target=\"_blank\" class=\"body-link\">agent profiles and UCP negotiation in Shopify</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "ShopifyストアフロントがUCP 2026-08-25に対応",
+          "summarizedJa": "Shopifyストアフロントが、Universal Commerce Protocol (UCP) バージョン2026-08-25のサポートを開始しました。この更新は、/.well-known/ucpでの検出プロファイルに新しいプロトコルバージョンの互換性を追加するもので、既存の統合への変更は不要です。UCPを使用するプラットフォームやエージェントは、このバージョンを使ってShopifyストアフロントと機能のネゴシエーションが可能になります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-09-05T00:01:26.143Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1438,
+            "output": 254
+          },
+          "estimatedCost": 0.008124
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "ShopifyストアフロントがUCP 2026-08-25をサポート",
+          "summarizedJa": "Shopifyストアフロントは、Universal Commerce Protocol (UCP) のバージョン「2026-08-25」のサポートを、ディスカバリープロファイル（/.well-known/ucp）で公開しました。この更新は、既存の連携やストア設定に変更を必要とせず、ストアの機能自体にも変更はありません。UCPを利用するプラットフォームやエージェントは、Shopifyストアフロントがこの新しいプロトコルバージョンと互換性があると認識できるようになります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-09-05T00:01:33.272Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1093,
+            "output": 189
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-permitted-store-staff-can-now-see-an-identified-customer-s-online-cart-in-pos",
       "source": "shopify-changelog",
