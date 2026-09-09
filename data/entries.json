@@ -1,6 +1,143 @@
 {
-  "lastUpdated": "2026-09-05T00:01:20.213Z",
+  "lastUpdated": "2026-09-09T00:01:16.211Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-product-variant-barcode-is-being-replaced-by-barcodes",
+      "source": "developer-changelog",
+      "title": "Variants now support multiple barcodes",
+      "link": "https://shopify.dev/changelog/product-variant-barcode-is-being-replaced-by-barcodes",
+      "publishedAt": "2026-09-08T17:35:00.000Z",
+      "collectedAt": "2026-09-09T00:01:14.545Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Deprecation announcement",
+        "Admin GraphQL API",
+        "2026-10"
+      ],
+      "description": " <div class=\"\"><p>Merchants often sell the same variant under more than one identifier: a manufacturer UPC alongside a private-label EAN, a GTIN, a reissued ISBN, or an ASIN for a marketplace listing. Until now a variant held a single barcode value, so the extras ended up in metafields, tags, or outside Shopify entirely.</p>\n<h2>What's new</h2>\n<p>You can now read a variant's full set from the new barcodes connection on ProductVariant, and write it with the barcodes input on the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/productSet\" target=\"_blank\" class=\"body-link\">productSet mutation</a>, <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/productVariantsBulkCreate\" target=\"_blank\" class=\"body-link\">productVariantsBulkCreate mutation</a>, and <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/productVariantsBulkUpdate\" target=\"_blank\" class=\"body-link\">productVariantsBulkUpdate mutation</a>.</p>\n<p>Each barcode can declare a type: UPC, EAN, ISBN, GTIN, or ASIN. We validate the value against that standard's character, length, prefix, and check-digit rules. If you don't declare a type, we store the value exactly as you sent it, so untyped data keeps working as before.</p>\n<h2>Usage guidance</h2>\n<ul>\n<li>A variant accepts up to 20 barcodes, each up to 255 characters.</li>\n<li>The first barcode you send is what the existing <code>barcode</code> field returns, and it sorts first in the <code>barcodes</code> connection.</li>\n<li>A single variant input can't set both <code>barcode</code> and <code>barcodes</code>.</li>\n<li>Sending <code>barcodes</code> replaces the variant's entire set, so include the barcodes you want to keep.</li>\n<li>The <code>barcode</code> filter on the products and productVariants queries now matches any barcode on a variant.</li>\n<li>Sending a barcode with a <code>type</code> will be validated against that standard's rules. If you don't declare a type, we store the value exactly as you sent it.</li>\n</ul>\n<h2>Compatibility with <code>ProductVariant.barcode</code></h2>\n<p><code>ProductVariant.barcode</code> is now deprecated, but nothing breaks today and <code>barcode</code> keeps working:</p>\n<ul>\n<li>Reading <code>barcode</code> returns the first entry in the <code>barcodes</code> connection.</li>\n<li>Writing <code>barcode</code> updates the first barcode in the <code>barcodes</code> connection and leaves the variant's other barcodes untouched. Sending a blank value clears the first barcode and replaces it with the next barcode in the set until there are no barcodes remaining.</li>\n<li>A single variant input can't set both <code>barcode</code> and <code>barcodes</code>.</li>\n</ul>\n<p>Adding or changing a barcode in the first position of the connection lets you keep control over surfaces you haven't migrated yet while still getting the full multiple barcode experience.</p>\n<h3>Be aware of potential silent truncation</h3>\n<p>Once a second barcode is added to a variant, an integration reading only barcode sees one of them with no signal that others exist. If your app syncs product identifiers to an ERP, a marketplace, a POS, or a supplier feed, move those reads to the barcodes connection.</p>\n<p>We'll announce a removal date in a future post, with a full API version of notice before the field goes away.</p>\n<p>To get started, refer to <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/ProductVariant\" target=\"_blank\" class=\"body-link\">ProductVariant</a>, <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/ProductVariantBarcode\" target=\"_blank\" class=\"body-link\">ProductVariantBarcode</a>, <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/input-objects/BarcodeInput\" target=\"_blank\" class=\"body-link\">BarcodeInput</a>, and <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/enums/BarcodeType\" target=\"_blank\" class=\"body-link\">BarcodeType</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "商品バリエーションで複数のバーコードがサポート可能に",
+          "summarizedJa": "商品バリエーションに複数のバーコード（UPC、EAN、ISBN、GTIN、ASINなど）を登録できる新機能が追加されました。従来の単一barcode フィールドは非推奨となり、新しいbarcodes コネクションを使用することで最大20個のバーコードを管理可能になります。既存のbarcode フィールドは互換性のため引き続き動作しますが、ERP連携やマーケットプレイス同期を行うアプリは新しいAPIへの移行が推奨されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-09-09T00:01:22.066Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2097,
+            "output": 267
+          },
+          "estimatedCost": 0.010296
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-multiple-barcodes-in-variants",
+      "source": "shopify-changelog",
+      "title": "Product variants now support multiple barcodes",
+      "link": "https://changelog.shopify.com/posts/multiple-barcodes-in-variants",
+      "publishedAt": "2026-09-08T17:30:00.000Z",
+      "collectedAt": "2026-09-09T00:01:16.199Z",
+      "category": [
+        "Products"
+      ],
+      "description": "\n        <p>Until now, a product variant could hold one barcode. That's a problem when the same item arrives with a manufacturer's UPC on the box, your own private-label EAN on the shelf tag, and an ASIN on a marketplace listing. You had to pick one and keep the rest in a spreadsheet.</p>\n\n<p>Now you can add up to 20 barcodes to a variant, and any of them identifies the product.</p>\n\n<h2>What you can do</h2>\n\n<ul>\n<li>Add, scan, and remove barcodes right on the variant details page, or from the Shopify app on your phone.</li>\n<li>Give each barcode a type: UPC, EAN, ISBN, GTIN, or ASIN, and we'll check the value against that standard's format, so a mistyped digit gets caught as you enter it. You can also select <code>Custom</code> for internal codes that don't follow a standard.</li>\n<li>Update barcodes across many variants at once in the bulk editor.</li>\n<li>Import and export the full set using the Variant Barcodes column in your product CSV.</li>\n<li>Find products by any barcode on a variant, not just the first one.</li>\n<li>Channels continue to read the first barcode provided.</li>\n</ul>\n\n<h2>What stays the same</h2>\n\n<p>Your existing barcodes are already in place, so there's nothing to migrate. The first barcode on a variant is still the one used wherever a single barcode is expected, which means your labels, sales channel feeds, and apps keep working exactly as they do today.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "商品バリエーションで複数バーコードのサポートを開始",
+          "summarizedJa": "商品バリエーションに最大20個のバーコードを登録できるようになりました。メーカーのUPC、自社のEAN、マーケットプレイスのASINなど、異なる種類のバーコードを1つのバリエーションで管理でき、いずれのバーコードでも商品検索が可能です。UPC、EAN、ISBN、GTIN、ASINなどの形式に対応し、入力時に形式の検証が行われます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-09-09T00:01:36.853Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1291,
+            "output": 243
+          },
+          "estimatedCost": 0.007518
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-meta-is-now-an-ai-channel-in-your-admin",
+      "source": "shopify-changelog",
+      "title": "Meta is now an AI channel in your admin",
+      "link": "https://changelog.shopify.com/posts/meta-is-now-an-ai-channel-in-your-admin",
+      "publishedAt": "2026-09-08T16:00:00.000Z",
+      "collectedAt": "2026-09-09T00:01:16.199Z",
+      "category": [
+        "Channels"
+      ],
+      "description": "\n        <p>Meta now appears alongside your other AI channels in Agentic Storefronts in your admin. Your products are shared with Meta by default through Shopify Catalog. You can manage acess for Catalog and direct checkout, and view performance for Meta in your agentic settings.</p>\n\n<p><a href=\"https://help.shopify.com/manual/online-sales-channels/agentic-storefronts/meta\">Learn more about selling on Meta.</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "MetaがAdmin内のAIチャネルとして追加されました",
+          "summarizedJa": "MetaがAdmin内の「Agentic Storefronts」にAIチャネルとして統合されました。商品はShopify Catalogを通じてデフォルトでMetaと共有され、カタログアクセスやダイレクトチェックアウトの管理、パフォーマンスの確認がAgentic設定から行えるようになります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-09-09T00:01:41.293Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1021,
+            "output": 206
+          },
+          "estimatedCost": 0.006153
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-customer-address-apis-now-support-countrycode",
+      "source": "developer-changelog",
+      "title": "Customer Address APIs now support countryCode",
+      "link": "https://shopify.dev/changelog/customer-address-apis-now-support-countrycode",
+      "publishedAt": "2026-09-08T16:00:00.000Z",
+      "collectedAt": "2026-09-09T00:01:14.545Z",
+      "category": [
+        "API",
+        "Deprecation announcement",
+        "Checkout UI",
+        "Customer Account API",
+        "Customer Accounts",
+        "2026-10"
+      ],
+      "description": " <div class=\"\"><p>Starting with <a href=\"https://shopify.dev/docs/api/customer\" target=\"_blank\" class=\"body-link\">Customer Account API</a> version 2026-10, customer address inputs and objects support <code>countryCode</code>. The existing <code>territoryCode</code> field is deprecated but remains fully supported, so current integrations continue working without interruption. Developers should migrate to <code>countryCode</code> when adopting API version 2026-10.</p>\n<h2>What changed</h2>\n<p>The <a href=\"https://shopify.dev/docs/api/customer/2026-10/input-objects/CustomerAddressInput#fields-countryCode\" target=\"_blank\" class=\"body-link\"><code>CustomerAddressInput</code></a> input object and <a href=\"https://shopify.dev/docs/api/customer/2026-10/objects/CustomerAddress#field-CustomerAddress.fields.countryCode\" target=\"_blank\" class=\"body-link\"><code>CustomerAddress</code></a> object now include <code>countryCode</code>.</p>\n<p>Use <code>countryCode</code> when creating, updating, or reading a customer address. It uses the <a href=\"https://shopify.dev/docs/api/customer/2026-10/enums/CountryCode\" target=\"_blank\" class=\"body-link\"><code>CountryCode</code></a> enum and accepts ISO 3166-1 alpha-2 country codes such as <code>US</code> or <code>CA</code>.</p>\n<p>The existing <a href=\"https://shopify.dev/docs/api/customer/2026-10/input-objects/CustomerAddressInput#fields-territoryCode\" target=\"_blank\" class=\"body-link\"><code>territoryCode</code></a> field is marked as deprecated in API version 2026-10.</p>\n<blockquote>\n<p>Note:\n<code>territoryCode</code> has not been removed. Existing queries and mutations that use it continue to work as before, including integrations using older API versions.</p>\n</blockquote>\n<p>If both fields are supplied in an address input, <code>countryCode</code> takes precedence.</p>\n<h2>Who’s affected</h2>\n<p>This change affects apps using the Customer Account API to create, update, or read customer addresses.</p>\n<p>Apps using API version 2026-10 or later can use <code>countryCode</code> and will see <code>territoryCode</code> marked as deprecated. Apps using API version 2026-07 or earlier are unchanged and can continue using <code>territoryCode</code>.</p>\n<p>There is no immediate disruption for existing clients, and no removal version has been announced.</p>\n<h2>Why this matters</h2>\n<p><code>countryCode</code> aligns customer addresses with the country-code terminology and strongly typed <code>CountryCode</code> enum used elsewhere in Shopify APIs. This provides clearer input requirements and avoids ambiguity between country and territory terminology.</p>\n<h2>What to do</h2>\n<p>When adopting Customer Account API version 2026-10:</p>\n<ul>\n<li>Check customer address queries and mutations for uses of <code>territoryCode</code>.</li>\n<li>Replace those uses with <code>countryCode</code>.</li>\n<li>Supply ISO 3166-1 alpha-2 values, such as <code>US</code>, instead of alpha-3 or numeric values such as <code>USA</code> or <code>840</code>.</li>\n<li>Test customer address creation, updates, and reads against API version 2026-10.</li>\n</ul>\n<p>No immediate change is required for apps that remain on an earlier API version. <code>territoryCode</code> continues to work in version 2026-10, but migrating prepares integrations for its possible removal in a future API version.</p>\n<h2>Related docs</h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/customer/2026-10/objects/CustomerAddress\" target=\"_blank\" class=\"body-link\"><code>CustomerAddress</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/customer/2026-10/input-objects/CustomerAddressInput\" target=\"_blank\" class=\"body-link\"><code>CustomerAddressInput</code></a></li>\n<li><a href=\"https://shopify.dev/docs/api/customer/2026-10/enums/CountryCode\" target=\"_blank\" class=\"body-link\"><code>CountryCode</code></a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "顧客住所APIが新たにcountryCodeをサポート",
+          "summarizedJa": "Customer Account API バージョン 2026-10 から、顧客住所の入力とオブジェクトに `countryCode` フィールドが追加されました。既存の `territoryCode` は非推奨となりますが引き続き動作するため、既存の統合への影響はありません。開発者は新バージョン採用時に ISO 3166-1 alpha-2形式（US、JPなど）の `countryCode` への移行が推奨されます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-09T00:01:48.007Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2086,
+            "output": 235
+          },
+          "estimatedCost": 0.009783
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-08-25-is-now-supported",
       "source": "developer-changelog",
