@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-09-09T00:01:16.211Z",
+  "lastUpdated": "2026-09-10T00:00:59.204Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-create-and-delete-dev-stores-in-shopify-cli",
+      "source": "developer-changelog",
+      "title": "Create and delete dev stores in Shopify CLI",
+      "link": "https://shopify.dev/changelog/create-and-delete-dev-stores-in-shopify-cli",
+      "publishedAt": "2026-09-09T13:00:00.000Z",
+      "collectedAt": "2026-09-10T00:00:57.826Z",
+      "category": [
+        "Shopify CLI",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>Shopify CLI 4.8 adds <code>shopify store</code> commands that let you create and manage dev stores from your terminal or coding agent. These commands are available after you update to Shopify CLI 4.8.</p>\n<h2>What changed</h2>\n<p>You can now use the following commands to manage dev stores in your Dev Dashboard organization:</p>\n<ul>\n<li><code>shopify store create dev</code> creates dev stores in your organization for building and testing apps, themes, and Shopify features.  </li>\n<li><code>shopify store delete</code> deletes dev stores when run by a store owner, organization owner, or organization administrator.  </li>\n<li><code>shopify store list</code> lists the stores in an organization.  </li>\n<li><code>shopify store info</code> returns information about an individual store.</li>\n</ul>\n<p>Combined with the Admin API and bulk operation support that’s already available in Shopify CLI, you can script workflows that create, populate, and reset development and testing environments for your app or theme.</p>\n<p>Shopify is also introducing a new limit of <code>250</code> dev stores per organization. You can use <code>shopify store delete</code> to remove old stores, and script against <code>shopify store list</code> to clean up at scale. This limit doesn’t apply to client transfer stores or collaborator stores. </p>\n<h2>Who’s affected</h2>\n<p>The 250-store limit applies only to dev stores in a Dev Dashboard organization. Client transfer stores and collaborator stores aren’t counted toward this limit. At this time organizations that currently have more than 250 dev stores have been granted an extended limit.</p>\n<h2>What to do</h2>\n<ol>\n<li>Update to <a href=\"https://shopify.dev/docs/api/shopify-cli#installation\" target=\"_blank\" class=\"body-link\">Shopify CLI 4.8 or later</a>.</li>\n<li>Install or update to the latest <a href=\"https://shopify.dev/docs/apps/build/ai-toolkit\" target=\"_blank\" class=\"body-link\">AI Toolkit</a> in your coding agent.</li>\n<li>Use <code>shopify store create dev</code>, <code>shopify store list</code>, <code>shopify store info</code>, and <code>shopify store delete</code> to manage dev stores directly from your terminal or coding agent.  </li>\n<li>If your organization is approaching the 250 dev store limit, script a cleanup workflow that uses <code>shopify store list</code> to find old stores and <code>shopify store delete</code> to remove them.</li>\n</ol>\n<h2>Related docs</h2>\n<ul>\n<li>Learn how to <a href=\"https://shopify.dev/docs/apps/build/stores/development-stores\" target=\"_blank\" class=\"body-link\">create and manage development stores</a> in your Dev Dashboard organization  </li>\n<li>Read the <a href=\"https://shopify.dev/changelog/use-the-admin-api-and-bulk-operations-in-shopify-cli\" target=\"_blank\" class=\"body-link\">Admin API and bulk operations in Shopify CLI changelog entry</a> for details on populating dev stores with data  </li>\n<li>Review <a href=\"https://shopify.dev/docs/apps/build/stores\" target=\"_blank\" class=\"body-link\">stores documentation</a> for more about development, test, and client stores</li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify CLIで開発ストアの作成と削除が可能に",
+          "summarizedJa": "Shopify CLI 4.8で、ターミナルから開発ストアの作成・削除・一覧表示・情報取得ができる新しいコマンド群が追加されました。これにより開発・テスト環境の構築や管理をスクリプト化できるようになります。なお、組織ごとの開発ストア数の上限が250に設定され、既存の開発ストアの整理が必要になる場合があります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-10T00:01:05.136Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1783,
+            "output": 237
+          },
+          "estimatedCost": 0.008904
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-product-variant-barcode-is-being-replaced-by-barcodes",
       "source": "developer-changelog",
