@@ -1,6 +1,38 @@
 {
-  "lastUpdated": "2026-09-11T00:01:12.179Z",
+  "lastUpdated": "2026-09-12T00:01:09.290Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-multi-currency-payouts-now-available-in-australia-and-france",
+      "source": "shopify-changelog",
+      "title": "Multi-currency payouts now available in Australia and France",
+      "link": "https://changelog.shopify.com/posts/multi-currency-payouts-now-available-in-australia-and-france",
+      "publishedAt": "2026-09-11T16:00:00.000Z",
+      "collectedAt": "2026-09-12T00:01:09.276Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>We've expanded Multi-Currency Payouts for eligible Shopify Payments merchants to Australia and France.</p>\n\n<p>Merchants in Australia can now receive payouts in 13 currencies: AUD, NZD, USD, EUR, GBP, CAD, NOK, SEK, DKK, CHF, JPY, SGD and HKD. All 13 can be paid into an Australian bank account, or you can add an account in the US, New Zealand, the UK, Canada or the eurozone for those currencies.</p>\n\n<p>Merchants in France can now receive payouts in 18 currencies: EUR, AUD, CAD, CHF, CZK, DKK, GBP, HKD, HUF, JPY, NOK, NZD, PLN, RON, SEK, SGD, USD and ZAR. EUR remains your default payout currency, and other currencies are paid into additional bank accounts you add.</p>\n\n<p>Multi-currency payouts are available to stores on the Advanced and Shopify Plus plans. More info <a href=\"https://help.shopify.com/en/manual/payments/shopify-payments/store-currency/payouts-in-multiple-currencies\">in help docs</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "オーストラリアとフランスで複数通貨での支払い受取が利用可能に",
+          "summarizedJa": "Shopify Paymentsの対象マーチャント向けに、オーストラリアとフランスで複数通貨での支払い受取機能が拡大されました。オーストラリアでは13通貨、フランスでは18通貨での受取が可能になり、それぞれ対応する銀行口座を追加することで利用できます。この機能はAdvancedプランおよびShopify Plusプランのストアで利用可能です。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 5,
+          "analyzedAt": "2026-09-12T00:01:15.119Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1208,
+            "output": 246
+          },
+          "estimatedCost": 0.007314000000000001
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-collect-whatsapp-marketing-consent-at-checkout",
       "source": "shopify-changelog",
