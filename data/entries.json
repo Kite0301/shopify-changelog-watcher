@@ -1,6 +1,38 @@
 {
-  "lastUpdated": "2026-09-12T00:01:09.290Z",
+  "lastUpdated": "2026-09-15T00:01:12.614Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-keep-the-cart-in-view-on-mobile-pos",
+      "source": "shopify-changelog",
+      "title": "Keep the cart in view on mobile POS",
+      "link": "https://changelog.shopify.com/posts/keep-the-cart-in-view-on-mobile-pos",
+      "publishedAt": "2026-09-14T16:00:00.000Z",
+      "collectedAt": "2026-09-15T00:01:12.594Z",
+      "category": [
+        "Pos"
+      ],
+      "description": "\n        <p>Shopify POS v11.15 introduces a persistent cart button on phones that keeps key details about the active cart visible as staff move through POS.</p>\n\n<p>The cart button shows recently added items, item count, and running total, so staff can confirm what’s in the cart without leaving the screen they’re working from. It also provides confirmation when changes such as discounts, customers, staff, custom sales, or fees are added.</p>\n\n<p>Staff can tap the cart button to open the full cart from Home, Products, Orders, or Search. When they close it, they return to where they left off, making it easier to move between selling tasks without losing context.</p>\n\n<p><strong>What’s new</strong><br>\n* <strong>Keep the cart in view:</strong> Recently added items, item count, and total remain visible as staff move through mobile POS.<br>\n* <strong>Open the cart in one tap:</strong> Tap the persistent cart button from Home, Products, Orders, or Search to access the full cart.<br>\n* <strong>See cart updates as they happen:</strong> Staff get confirmation when items and other changes are added to the cart.<br>\n* <strong>Updated mobile navigation:</strong> The persistent cart button replaces the Cart tab in the bottom navigation and the previous “Go to cart” bar.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "モバイルPOSでカートを常時表示",
+          "summarizedJa": "Shopify POS v11.15では、スマートフォン向けに常時表示されるカートボタンが導入されました。スタッフがPOS内を移動する際も、最近追加された商品、商品数、合計金額などのカート情報が常に表示され、ワンタップでフルカートにアクセスできます。従来の下部ナビゲーションのカートタブと「カートへ移動」バーがこの新しい常駐カートボタンに置き換えられ、販売作業の流れがよりスムーズになります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-09-15T00:01:18.724Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1210,
+            "output": 266
+          },
+          "estimatedCost": 0.00762
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-multi-currency-payouts-now-available-in-australia-and-france",
       "source": "shopify-changelog",
@@ -403,6 +435,41 @@
             "output": 207
           },
           "estimatedCost": 0.006654
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-new-paymentinstrumentsendaddemail-mutation",
+      "source": "developer-changelog",
+      "title": "New paymentInstrumentSendAddEmail mutation emails customers a link to add a payment method for a subscription, order, or draft order",
+      "link": "https://shopify.dev/changelog/new-paymentinstrumentsendaddemail-mutation",
+      "publishedAt": "2026-09-03T16:00:00.000Z",
+      "collectedAt": "2026-09-15T00:01:11.185Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-10"
+      ],
+      "description": " <div class=\"\"><p>You can now use the <code>paymentInstrumentSendAddEmail</code> mutation in the GraphQL Admin API to email a customer a link for adding a payment method to a specific resource (for example, a subscription contract). This lets you collect payment details directly from the customer rather than needing them up front, and the link scopes the customer to that specific resource, so they don't need to sign in to their account. The mutation is available as of API version 2026-10. This is an additive change, so existing integrations are unaffected and no action is required.</p>\n<h2>What changed</h2>\n<p>Before this change, the GraphQL Admin API could only ask a customer to update an existing payment method: <code>customerPaymentMethodSendUpdateEmail</code> requires a <code>customerPaymentMethodId</code>, so there was no way to request payment details for a subscription contract, order, or draft order that has no payment method on file. Merchants and apps had to collect the payment method themselves before setting up the resource.</p>\n<p>The <code>paymentInstrumentSendAddEmail</code> mutation closes that gap. It is available in the GraphQL Admin API as of version <code>2026-10</code>. It emails the customer associated with a resource a link to add a payment method, and returns the <code>Customer</code> the email was sent to. For the full argument and return shape, see the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/paymentInstrumentSendAddEmail\" target=\"_blank\" class=\"body-link\"><code>paymentInstrumentSendAddEmail</code> mutation reference</a>.</p>\n<p>You identify the resource with the required <code>mandate</code> argument, a <code>PaymentInstrumentMandateInput</code> with two fields. <code>resourceType</code> takes <code>SUBSCRIPTIONS</code>, <code>ORDERS</code>, or <code>DRAFT_ORDERS</code>. <code>resourceId</code> takes the numeric ID of that subscription contract, order, or draft order, not the GID. A GID comes back as a not found userError. The payment method the customer adds is bound to the resource you name, so a link sent for one contract can't be used against another.</p>\n<p>The optional <code>email</code> argument controls delivery. <code>from</code> sets the sender address and defaults to your store's customer contact email. <code>bcc</code> takes a list of addresses to copy on the message.</p>\n<blockquote>\n<p>Note:\n<code>email</code> takes an <code>EmailInput</code>, but the mutation reads only <code>from</code> and <code>bcc</code>. Other fields on <code>EmailInput</code> have no effect here.</p>\n</blockquote>\n<p>Validation failures come back in <code>userErrors</code> rather than as top-level errors, scoped to the input that failed, so you can tell a <code>resourceId</code> that doesn't reference an existing resource apart from a malformed <code>bcc</code> address. An invalid resourceType is the exception: it's an enum, so an unrecognized value fails GraphQL validation before the mutation runs. The mutation adds a capability rather than changing one, so it doesn't deprecate or replace any existing field or mutation.</p>\n<h2>Who's affected</h2>\n<p>This change applies to apps calling the GraphQL Admin API on version <code>2026-10</code> or later. The mutation doesn't exist in <code>2026-07</code> or earlier, so apps pinned to those versions are unaffected and see no change in behavior.</p>\n<p>To call <code>paymentInstrumentSendAddEmail</code>, your app needs the <code>write_customers</code> access scope. Requests made in a staff context additionally require the staff member to have the create and edit customers permission, and requests without it are denied rather than sending an email.</p>\n<p>The mutation is most relevant if you build subscription apps, because it lets you ask a customer for payment details for a contract you're setting up rather than supplying them yourself. It applies equally to orders and draft orders. If your app doesn't request payment methods from customers, nothing changes: this release adds a mutation and doesn't alter the behavior of any existing one.</p>\n<p>No buyer-side integration work is required. The customer receives the email, follows the link, and adds a payment method from their customer account.</p>\n<h2>What to do</h2>\n<p>No action is required. This release adds a mutation and doesn't change, deprecate, or remove any existing field, mutation, or behavior, so apps on <code>2026-07</code> and earlier continue to work unchanged.</p>\n<p>To start using the mutation:</p>\n<ol>\n<li>Check whether your app already requests the <code>write_customers</code> access scope. If it doesn't, adding it requires merchants to approve the updated scope before your app can call the mutation.</li>\n<li>Update your app's API version to <code>2026-10</code> or later.</li>\n<li>Call <code>paymentInstrumentSendAddEmail</code> with the resource you want the payment method bound to.</li>\n<li>Test on a development store by sending the email to a test customer, then following the link and adding a card.</li>\n</ol>\n<pre><code class=\"language-graphql\">mutation {\n  paymentInstrumentSendAddEmail(\n    mandate: { resourceType: SUBSCRIPTIONS, resourceId: &quot;1234567890&quot; }\n  ) {\n    customer {\n      id\n    }\n    userErrors {\n      field\n      message\n    }\n  }\n}\n</code></pre>\n<p>The sample sends the default email to the customer on a subscription contract. Replace <code>resourceId</code> with your own contract, order, or draft order ID, set <code>resourceType</code> to match, and add the optional <code>email</code> argument if you want to override the sender address or copy other recipients.</p>\n<p>A successful call returns the <code>customer</code> the email was sent to and an empty <code>userErrors</code> array. The email itself is queued and delivered asynchronously. If <code>userErrors</code> is populated, no email is sent.</p>\n<h2>Related docs</h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/paymentInstrumentSendAddEmail\" target=\"_blank\" class=\"body-link\">paymentInstrumentSendAddEmail mutation reference</a></li>\n<li><a href=\"https://shopify.dev/docs/api/usage/access-scopes\" target=\"_blank\" class=\"body-link\">Access scopes for Shopify apps</a></li>\n<li><a href=\"https://shopify.dev/docs/apps/launch/protected-customer-data\" target=\"_blank\" class=\"body-link\">Protected customer data requirements</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "新しいpaymentInstrumentSendAddEmailミューテーションで顧客に支払い方法追加リンクをメール送信可能に",
+          "summarizedJa": "GraphQL Admin API version 2026-10で、サブスクリプション、注文、下書き注文に対して顧客へ支払い方法追加リンクをメール送信できる新しいpaymentInstrumentSendAddEmailミューテーションが追加されました。これにより、事前に支払い情報を収集する必要がなく、顧客が直接支払い方法を登録できるようになります。アプリはwrite_customersスコープが必要で、既存の統合には影響しない追加的な変更です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-15T00:04:06.702Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2646,
+            "output": 279
+          },
+          "estimatedCost": 0.012123000000000002
         }
       }
     },
