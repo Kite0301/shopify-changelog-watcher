@@ -1,6 +1,225 @@
 {
-  "lastUpdated": "2026-09-15T00:01:12.614Z",
+  "lastUpdated": "2026-09-16T00:01:14.271Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-filter-catalog-search-results-by-media-type",
+      "source": "developer-changelog",
+      "title": "Filter Catalog search results by media type",
+      "link": "https://shopify.dev/changelog/filter-catalog-search-results-by-media-type",
+      "publishedAt": "2026-09-15T23:50:00.000Z",
+      "collectedAt": "2026-09-16T00:01:12.843Z",
+      "category": [
+        "Catalog",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>The Catalog API now returns video and 3D model media on products that have it, and supports filtering search results by media type. You can request only products that have video or 3D model media attached, and matching products return links to those assets in the same response. The new filter is optional, and existing queries keep returning the same products.</p>\n<h3>What changed</h3>\n<p><code>search_catalog</code>, <code>get_product</code>, and <code>lookup_catalog</code> now return video and 3D model assets on a product's media array. Previously it carried images only.</p>\n<p>Catalog API search accepts a new filter, <code>catalog.filters.media</code>. Each entry names a media type: <code>image</code>, <code>video</code>, or <code>model_3d</code>. Entries combine with AND, so asking for <code>video</code> and <code>model_3d</code> returns only products that have both.</p>\n<p>An unrecognized type doesn't fail the request. The API ignores it and reports it in <code>result.messages[]</code> with the code <code>not_found</code>.</p>\n<p>Products that match come back with media asset URLs, so a client can render a product without a second request to fetch its media.                                                                                      </p>\n<p>Previously you had to request products, inspect each one for usable media, and discard products that didn't have any. The new filter replaces that pattern. There's no change to existing filters, no new endpoint, and no migration.</p>\n<p>The new media types require the draft version of the Shopify global Catalog extension(<code>dev.shopify.catalog.global</code>). Declaring draft is a one line change in your agent profile. Without it, the media field returns images only. The draft schema moves to stable in the next UCP release.</p>\n<blockquote>\n<p><strong>Note:</strong> Filtering by media type applies to <code>search_catalog</code>. The asset URLs also return on <code>get_product</code> and <code>lookup_catalog</code>, even if you don't filter. Filter on the stableextension version and the filter is honored, but the response carries images only.</p>\n</blockquote>\n<h3>Who's affected</h3>\n<p>This change affects apps and tools that call the Catalog API and:</p>\n<ul>\n<li>Use <code>search_catalog</code> and want to filter products by <code>image</code>, <code>video</code>, or <code>model_3d</code> media</li>\n<li>Rely on product media asset URLs in <code>search_catalog</code>, <code>get_product</code>, or <code>lookup_catalog</code>responses</li>\n</ul>\n<p>To receive video and 3D model assets, your client must declare the draft version of the Shopify global Catalog extension (<code>dev.shopify.catalog.global</code>) in its agent profile. Without it, the media field continues to return images only.</p>\n<h3>Why this matters</h3>\n<p>If you're building augmented reality try-on, 3D product viewers, or camera-first shopping, you can't use a product without a renderable asset. Filtering for products with specificmedia at query time removes the fetch, inspect, and discard loop, and returning asset URLs in the same response removes an extra round trip per product.</p>\n<h3>What to do</h3>\n<p>No action is required if you don't need video or 3D media in catalog results. Existingqueries keep working and return the same products.</p>\n<ol>\n<li>Declare the draft version of <code>dev.shopify.catalog.global</code> in your agent profile, or point at the <a href=\"https://shopify.dev/docs/agents/profiles\" target=\"_blank\" class=\"body-link\">draft profile</a> Shopify publishes.</li>\n<li>Add <code>catalog.filters.media</code> to your <code>search_catalog</code> request with the media types you need.</li>\n<li>Read the asset URLs off the media array in the response. Video and 3D entries carry a <code>sources</code> array with one entry per file format.</li>\n<li>Handle products where the media you asked for is present but the format you need isn't.</li>\n<li>Confirm it worked by checking that every returned product includes at least one asset URLof the requested type. Images only means your profile is still on the stable version.</li>\n</ol>\n<h3>Related docs</h3>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/catalog\" target=\"_blank\" class=\"body-link\">Catalog API reference</a></li>\n<li><a href=\"https://shopify.dev/docs/agents/profiles\" target=\"_blank\" class=\"body-link\">Agent profiles</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "カタログ検索結果をメディアタイプでフィルタリング可能に",
+          "summarizedJa": "Catalog APIで商品の動画や3Dモデルメディアが取得可能になり、メディアタイプでの検索フィルタリングに対応しました。search_catalog、get_product、lookup_catalogの各APIで動画・3DモデルのアセットURLが返却されるようになり、特定のメディアタイプを持つ商品のみを検索できるようになりました。ARやカメラファースト型のショッピング体験を構築する開発者は、複数回のリクエストを行わずに必要なメディアを持つ商品を効率的に取得できます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-16T00:01:20.914Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2113,
+            "output": 284
+          },
+          "estimatedCost": 0.010598999999999999
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-see-the-shopify-admin-s-new-look",
+      "source": "shopify-changelog",
+      "title": "A new look for the Shopify admin",
+      "link": "https://changelog.shopify.com/posts/see-the-shopify-admin-s-new-look",
+      "publishedAt": "2026-09-15T16:30:00.000Z",
+      "collectedAt": "2026-09-16T00:01:14.260Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>On September 15th, we began rolling out a new look for the Shopify admin: new color, type, spacing, and icons across every page, inside a new frame.</p>\n\n<p>Search, notifications, and the store picker have moved into the side navigation, which collapses for more room on the page. Sidekick has moved from a side panel to a floating chat at the bottom of every page, so it’s in reach from wherever merchants are working.</p>\n\n<p>The new look rolls out gradually and will arrive to your admin on its own with no setup needed.</p>\n\n<p>Learn more about the admins new look in <a href=\"https://help.shopify.com/en/manual/shopify-admin/shopify-admin-overview\">Shopify Help Center</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify管理画面の新しいデザイン",
+          "summarizedJa": "9月15日より、Shopify管理画面のデザインが段階的に刷新されます。新しい配色、タイポグラフィ、アイコン、レイアウトが適用され、検索・通知・ストア選択機能がサイドナビゲーションに移動し、Sidekickは画面下部のフローティングチャットになります。設定不要で自動的に適用されます。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 5,
+            "technicalImportance": 3
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-09-16T00:02:18.441Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1091,
+            "output": 220
+          },
+          "estimatedCost": 0.006573
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-dynamic-complexity-cost-for-metafieldsset-mutation",
+      "source": "developer-changelog",
+      "title": "Dynamic complexity cost for `metafieldsSet` mutation",
+      "link": "https://shopify.dev/changelog/dynamic-complexity-cost-for-metafieldsset-mutation",
+      "publishedAt": "2026-09-15T16:00:00.000Z",
+      "collectedAt": "2026-09-16T00:01:12.843Z",
+      "category": [
+        "API",
+        "Update",
+        "Admin GraphQL API"
+      ],
+      "description": " <div class=\"\"><p>The <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/metafieldsSet\" target=\"_blank\" class=\"body-link\"><code>metafieldsSet</code></a> mutation now uses dynamic complexity costing. Instead of a flat cost for every call, a request's cost reflects how many distinct resources metafields were changed. Most apps need no changes, as updating a single resource remains cheap. Apps setting many metafields across many different owners may hit their rate limit faster. Apps are encouraged to batch metafield writes by distinct resource. </p>\n<h2>What changed</h2>\n<p>Previously, every <code>metafieldsSet</code> call cost a flat <strong>10 points</strong>, regardless of how many metafields or resources it touched.</p>\n<p>Now the cost is:</p>\n<pre><code>cost = 10 + Σ (number of distinct owners of a type × that type's weight)\n</code></pre>\n<ul>\n<li><strong>Base cost</strong>: 10 points (unchanged)</li>\n<li><strong>Per distinct owner</strong>: the weight of that owner's type</li>\n</ul>\n<p>| Owner type | Weight |\n|</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "metafieldsSetミューテーションの動的コスト計算の導入",
+          "summarizedJa": "GraphQL Admin APIの`metafieldsSet`ミューテーションのコスト計算方法が変更され、従来の一律10ポイントから、更新対象リソースの数に応じた動的コスト計算に変更されました。単一リソースの更新コストは変わりませんが、複数の異なるリソースに対してメタフィールドを設定するアプリは、レート制限に達しやすくなる可能性があるため、リソースごとにバッチ処理することが推奨されます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-16T00:02:32.675Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1224,
+            "output": 259
+          },
+          "estimatedCost": 0.0075569999999999995
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-prepare-your-app-for-the-shopify-admins-new-look",
+      "source": "developer-changelog",
+      "title": "Prepare your app for the Shopify admin's new look",
+      "link": "https://shopify.dev/changelog/prepare-your-app-for-the-shopify-admins-new-look",
+      "publishedAt": "2026-09-15T16:00:00.000Z",
+      "collectedAt": "2026-09-16T00:01:12.843Z",
+      "category": [
+        "Polaris",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>Starting September 15, 2026, the Shopify admin has a new look, rolling out progressively to merchants. Apps that use Admin UI extensions and App Home UI extensions pick up the new styles automatically. Apps that render their own interface in App Home keep their current styles until you choose to move to Polaris 2.0.</p>\n<h2>What merchants will see</h2>\n<ul>\n<li>A new look across every page: new color, type, spacing, and icons, inside a new frame</li>\n<li>Search, notifications, and the store picker now in the side navigation, which collapses for more room on the page</li>\n<li>Sidekick moved from a side panel to a floating chat at the bottom of the page</li>\n</ul>\n<h2>What this means for your app</h2>\n<p>Admin UI extensions and App Home UI extensions automatically receive the new styles during the rollout. Functionality doesn't change, and you don't need to update extension code to adopt the new appearance.</p>\n<p>Apps that render their own interface in App Home keep their existing styles until you choose to adopt Polaris 2.0.</p>\n<p>The current Polaris Web Components release candidate is 1.1. A Polaris 2.0 release candidate will be available soon with styles that align App Home interfaces with the refreshed admin. Under the <a href=\"https://shopify.dev/changelog/the-polaris-cdn-is-adopting-semantic-versioning\" target=\"_blank\" class=\"body-link\">Polaris CDN semantic-versioning model</a>, adopting the new major version is explicit, so merchants never see your app partially updated.</p>\n<h2>Who's affected</h2>\n<p>This change affects developers who build experiences in the Shopify admin:</p>\n<ul>\n<li><strong>Admin UI extensions and App Home UI extensions:</strong> The new styles apply automatically when the refreshed admin reaches a merchant's shop. No action is required.</li>\n<li><strong>Embedded App Home apps using Polaris Web Components 1.0:</strong> Your interface stays as is. You decide if and when to adopt the new styles by moving to Polaris 2.0. </li>\n<li><strong>Embedded App Home apps that don't use Polaris Web Components:</strong> Your app keeps its current styles and won’t pick up the new design. Migrating to Polaris Web Components is what positions you to adopt Polaris 2.0</li>\n</ul>\n<p>The rollout begins September 15, 2026 and reaches merchants progressively. During the rollout, an app can appear in either the previous or new admin depending on the merchant's shop.</p>\n<h2>What to do</h2>\n<p>If you only use Admin UI extensions or App Home UI extensions, no action is required.</p>\n<p>If your app renders an embedded App Home interface, there are two paths:</p>\n<ul>\n<li><strong>Prepare for Polaris 2.0:</strong> Migrate to Polaris Web Components, and you’ll be able to test the new styles with fewer changes when the 2.0 release candidate lands.</li>\n<li><strong>Keep your current styles:</strong> Stay where you are. Your app won’t move to Polaris 2.0 on its own.</li>\n</ul>\n<p>No action is required before the Polaris 2.0 release candidate becomes available.</p>\n<h2>Related docs</h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/app-home\" target=\"_blank\" class=\"body-link\">App Home documentation</a></li>\n<li><a href=\"https://shopify.dev/changelog/polaris-cdn-1-1-release-candidate\" target=\"_blank\" class=\"body-link\">Polaris 1.1 release candidate</a></li>\n<li><a href=\"https://help.shopify.com/en/manual/shopify-admin/shopify-admin-overview\" target=\"_blank\" class=\"body-link\">Shopify admin overview</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify管理画面の新デザインに向けたアプリの準備",
+          "summarizedJa": "2026年9月15日より、Shopify管理画面が新デザインに段階的に移行します。Admin UI extensionとApp Home UI extensionを使用するアプリは自動的に新スタイルが適用されますが、App Homeで独自インターフェースを実装しているアプリは、開発者がPolaris 2.0を明示的に採用するまで現在のスタイルを維持します。対応は必須ではなく、開発者が移行のタイミングを選択できます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-09-16T00:03:58.351Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1909,
+            "output": 251
+          },
+          "estimatedCost": 0.009492
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-family_name-is-optional-for-b2b-orders-in-payments-apps-api-requests",
+      "source": "developer-changelog",
+      "title": "family_name is optional for B2B orders in Payments Apps API requests",
+      "link": "https://shopify.dev/changelog/family_name-is-optional-for-b2b-orders-in-payments-apps-api-requests",
+      "publishedAt": "2026-09-15T16:00:00.000Z",
+      "collectedAt": "2026-09-16T00:01:12.843Z",
+      "category": [
+        "API",
+        "Update",
+        "Payments Apps API"
+      ],
+      "description": " <div class=\"\"><p>B2B checkout treats the buyer’s surname as optional, so payment session requests for B2B orders can omit <code>family_name</code> in <code>shipping_address</code> and <code>billing_address</code>. This affects payments apps that handle B2B orders through the Payments Apps API and currently require <code>family_name</code> in these addresses.</p>\n<h2>What changed</h2>\n<p>B2B checkout doesn’t require a buyer surname, and the Payments Apps API already accepts payment session requests for B2B orders without <code>family_name</code> in the <code>shipping_address</code> or <code>billing_address</code>. The <a href=\"https://shopify.dev/docs/apps/build/payments/request-reference#shipping-billing_address-hash\" target=\"_blank\" class=\"body-link\">Payments app request reference</a> now documents <code>family_name</code> as optional for B2B orders to match this behavior.</p>\n<h2>Who's affected</h2>\n<p>Payments apps that use the Payments Apps API to process B2B checkouts and validate that <code>shipping_address.family_name</code> or <code>billing_address.family_name</code> is always present are affected. Payments apps that already accept requests without <code>family_name</code> for B2B orders don’t need to change anything.</p>\n<h2>What to do</h2>\n<p>If your app currently requires <code>family_name</code> in the <code>shipping_address</code> or <code>billing_address</code> for B2B orders, update your validation so it accepts payment session requests where that field is absent for B2B checkouts. Confirm that your app still behaves as expected when <code>family_name</code> is present or missing in these addresses.</p>\n<h2>Related docs</h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/apps/build/payments/request-reference\" target=\"_blank\" class=\"body-link\">Payments app request reference</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Payments Apps APIのB2B注文でfamily_name(姓)が任意項目に",
+          "summarizedJa": "B2Bチェックアウトでは購入者の姓が任意項目として扱われるため、Payments Apps APIを通じたB2B注文のペイメントセッションリクエストでは、shipping_addressおよびbilling_addressのfamily_nameフィールドを省略できるようになりました。Payments Appsを開発しており、B2B注文を処理する際にfamily_nameを必須としている場合は、バリデーションロジックの更新が必要です。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 2,
+            "technicalImportance": 2
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-09-16T00:04:59.379Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1447,
+            "output": 248
+          },
+          "estimatedCost": 0.008060999999999999
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-delivery-options-in-shopify-functions-input-now-expose-their-metafields",
+      "source": "developer-changelog",
+      "title": "Delivery options in Shopify Functions input now expose their metafields",
+      "link": "https://shopify.dev/changelog/delivery-options-in-shopify-functions-input-now-expose-their-metafields",
+      "publishedAt": "2026-09-15T14:00:00.000Z",
+      "collectedAt": "2026-09-16T00:01:12.843Z",
+      "category": [
+        "API",
+        "Update",
+        "Functions",
+        "2026-10"
+      ],
+      "description": " <div class=\"\"><p>Shopify Functions can now read metafields attached to delivery options in the cart. On API version <code>2026-10</code>, you can call <code>metafield(namespace:, key:)</code> on any option in <code>cart.deliveryGroups.deliveryOptions</code>. This affects apps that build Delivery Customization Functions and any other function whose input includes delivery options. No action is required.</p>\n<h2>What changed</h2>\n<p>In the Functions cart graph, <code>CartDeliveryOption</code> now includes a <code>metafield</code> field:</p>\n<pre><code class=\"language-graphql\">metafield(namespace: String, key: String!): Metafield\n</code></pre>\n<p>The returned <code>Metafield</code> exposes <code>value</code>, <code>type</code>, and <code>jsonValue</code>.</p>\n<p>Metafields on a delivery option are not persisted after checkout. A delivery option generator function or shipping carrier service response attaches them when it generates the option, and they exist only for that checkout.</p>\n<p>Access follows the existing <a href=\"https://shopify.dev/docs/apps/build/custom-data/ownership\" target=\"_blank\" class=\"body-link\">metafield ownership rules</a>. A function can read metafields in its own app‑reserved namespace and in any unprefixed shared namespace. A namespace reserved by a different app resolves to <code>null</code>.</p>\n<p>A Delivery Customization input query can now read both app-reserved and shared metafields on delivery options. For example:</p>\n<pre><code class=\"language-graphql\">{\n  cart {\n    deliveryGroups {\n      deliveryOptions {\n        handle\n        ownNamespace: metafield(namespace: &quot;$app:carrier&quot;, key: &quot;priority&quot;) { value }\n        shared: metafield(namespace: &quot;carrier&quot;, key: &quot;priority&quot;) { value }\n      }\n    }\n  }\n}\n</code></pre>\n<h2>Who's affected</h2>\n<p><code>CartDeliveryOption</code> is shared across the Functions cart graph, so this field is available to every Functions API whose input includes <code>cart.deliveryGroups.deliveryOptions</code>.</p>\n<p>Apps that don’t query this field see no change in behavior. In the legacy Order Discounts and Product Discounts APIs, <code>cart.deliveryGroups</code> is always empty, so the field is present in the schema but never returns a value.</p>\n<h2>Why this matters</h2>\n<p>Delivery option generator functions can already attach structured data to the options they create, but a downstream Delivery Customization Function couldn’t read that data. A common workaround was to pack data into the option <code>title</code> or <code>handle</code> and parse it back out, which is brittle when a merchant renames an option, when titles are translated, or when multiple options match the same pattern.</p>\n<p>By reading a metafield, you can define an explicit contract between functions: the generating function writes a typed value to a namespace it owns, and the customizing function reads it by name.</p>\n<h2>What to do</h2>\n<p>You don’t need to take any action. Existing functions keep working unchanged on every released API version.</p>\n<p>If you want to use this field, update your function input queries on API version <code>2026-10</code> to request <code>metafield</code> on <code>CartDeliveryOption</code> and handle the returned <code>Metafield</code> values.</p>\n<h2>Related docs</h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/functions/2026-10/delivery-customization#Input.fields.cart.deliveryGroups.deliveryOptions\" target=\"_blank\" class=\"body-link\">Delivery Customization Function API reference for <code>deliveryOptions</code></a>  </li>\n<li><a href=\"https://shopify.dev/docs/apps/build/functions/input-output/metafields-for-input-queries\" target=\"_blank\" class=\"body-link\">Metafields for Function input queries</a>  </li>\n<li><a href=\"https://shopify.dev/docs/apps/build/custom-data/ownership\" target=\"_blank\" class=\"body-link\">Metafield ownership and app-reserved namespaces</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify Functionsの入力で配送オプションのメタフィールドが利用可能に",
+          "summarizedJa": "APIバージョン2026-10から、Shopify Functionsで配送オプションに付加されたメタフィールドを読み取れるようになりました。配送オプション生成関数とカスタマイズ関数間で構造化データを明示的に受け渡しできるため、タイトルやハンドルにデータを埋め込む脆弱な方法を避けられます。既存の関数は変更不要で動作し続けます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-16T00:05:49.327Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2057,
+            "output": 246
+          },
+          "estimatedCost": 0.009861
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "Shopify Functionsの入力で配送オプションのメタフィールドが利用可能に",
+          "summarizedJa": "Shopify Functionsにおいて、カート内の配送オプションに紐付けられたメタフィールドを読み取れるようになりました。これにより、配送オプションを生成するFunctionとカスタマイズするFunction間で、より柔軟かつ堅牢なデータ連携が可能になります。既存のFunctionは影響を受けませんが、APIバージョン2026-10以降でこの新機能を利用することで、配送ロジックの高度なカスタマイズが実現できます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-09-16T00:05:57.583Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 1597,
+            "output": 166
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-keep-the-cart-in-view-on-mobile-pos",
       "source": "shopify-changelog",
