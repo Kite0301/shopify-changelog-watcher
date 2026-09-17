@@ -1,6 +1,91 @@
 {
-  "lastUpdated": "2026-09-16T00:01:14.271Z",
+  "lastUpdated": "2026-09-17T00:01:08.730Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-updates-to-events-payloads-and-subscription-configuration",
+      "source": "developer-changelog",
+      "title": "Updates to Events payloads and subscription configuration",
+      "link": "https://shopify.dev/changelog/updates-to-events-payloads-and-subscription-configuration",
+      "publishedAt": "2026-09-16T18:00:00.000Z",
+      "collectedAt": "2026-09-17T00:01:07.418Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Update",
+        "Events & webhooks"
+      ],
+      "description": " <div class=\"\"><p>Starting today, we're updating <a href=\"https://shopify.dev/docs/apps/build/events\" target=\"_blank\" class=\"body-link\">Events</a> payloads, trigger syntax, and delivery headers. Classic Webhook subscriptions are unaffected.</p>\n<h2>What's changed</h2>\n<h3><code>fields_changed</code> now describes how each path changed</h3>\n<p>The flat array becomes an object containing three arrays: <code>added</code>, <code>updated</code>, and <code>removed</code>.</p>\n<p>Developers can distinguish a resource or relationship being added, a value being updated, or a resource or relationship being removed without querying just to infer what happened. </p>\n<p>Update payload handling to read <code>fields_changed.added</code>, <code>fields_changed.updated</code>, and <code>fields_changed.removed</code>. Adding a variant to a Product, for example, keeps the Product's <code>action</code> as <code>update</code> and places the variant path in <code>fields_changed.added</code>.</p>\n<p>Before:</p>\n<pre><code class=\"language-json\">{\n   &quot;topic&quot;: &quot;Product&quot;,\n   &quot;action&quot;: &quot;update&quot;,\n   &quot;fields_changed&quot;: [\n     &quot;product[id: 'gid://shopify/Product/123'].variants[id: 'gid://shopify/ProductVariant/456']&quot;\n   ]\n}\n</code></pre>\n<p>After:</p>\n<pre><code class=\"language-json\">{\n   &quot;topic&quot;: &quot;Product&quot;,\n   &quot;action&quot;: &quot;update&quot;,\n   &quot;fields_changed&quot;: {\n      &quot;added&quot;: [\n        &quot;product[id: 'gid://shopify/Product/123'].variants[id: 'gid://shopify/ProductVariant/456']&quot;\n      ],\n      &quot;updated&quot;: [],\n      &quot;removed&quot;: []\n   }\n}\n</code></pre>\n<h3>Parent triggers use an explicit wildcard</h3>\n<p>To subscribe to all supported fields below a parent path, use a terminal <code>.*</code>, such as <code>triggers = [&quot;product.variants.*&quot;]</code>. </p>\n<p>Leaf triggers such as <code>product.variants.price</code> remain unchanged. Existing subscriptions continue to work, but you must update parent triggers to the new syntax the next time you deploy <code>shopify.app.toml</code>. The syntax change preserves matching behavior and event volume for equivalent subscriptions.</p>\n<p>Before:</p>\n<pre><code class=\"language-toml\">triggers = [\n    &quot;product.variants&quot;,\n    &quot;product.options.optionValues.swatch&quot;\n ]\n</code></pre>\n<p>After:</p>\n<pre><code class=\"language-toml\">triggers = [\n    &quot;product.variants.*&quot;,\n    &quot;product.options.optionValues.swatch.*&quot;\n]\n</code></pre>\n<h3>Two redundant delivery headers are removed</h3>\n<p>Events deliveries no longer include <code>shopify-event-id</code> or <code>shopify-resource-id</code>. </p>\n<p>Update your Shopify API packages to their latest versions, which handle this change. If your own code reads these headers or requires them for validation, remove that dependency.</p>\n<h3><code>triggers</code> are now required</h3>\n<p>Event subscriptions with the <code>update</code> action require at least one trigger to be present. Existing subscriptions will continue to work as expected.</p>\n<h2>What to do</h2>\n<p>Review the <a href=\"https://community.shopify.dev/t/upcoming-changes-to-events/37537\" target=\"_blank\" class=\"body-link\">migration steps and examples in the community post</a>, and share any questions or feedback in the thread.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Eventsのペイロードとサブスクリプション設定の更新",
+          "summarizedJa": "Shopify EventsのペイロードとトリガーのシンタックスがWIP更新されます。`fields_changed`が変更タイプ（追加・更新・削除）を区別できるオブジェクト形式になり、親トリガーには明示的なワイルドカード（`.*`）が必要になります。また、`update`アクションには少なくとも1つのトリガーが必須となり、一部の配信ヘッダーが削除されます。Classic Webhookは影響を受けません。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-09-17T00:01:14.756Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1970,
+            "output": 256
+          },
+          "estimatedCost": 0.00975
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-payouts-page-redesign-see-all-your-payouts-in-one-view",
+      "source": "shopify-changelog",
+      "title": "Payouts page redesign: see all your payouts in one view",
+      "link": "https://changelog.shopify.com/posts/payouts-page-redesign-see-all-your-payouts-in-one-view",
+      "publishedAt": "2026-09-16T16:00:00.000Z",
+      "collectedAt": "2026-09-17T00:01:08.718Z",
+      "category": [
+        "Payments"
+      ],
+      "description": "\n        <p>Your payouts now appear in a list on the left with the selected payout's details beside it, so you can move between payouts without leaving the page or losing your place.</p>\n\n<p>What's new:<br>\n* A date-led view of paid and pending payouts, so you can see at a glance what you've been paid and what's on the way.<br>\n* Expandable breakdowns for the selected payout, so you can see what makes up the amount without navigating away.<br>\n* Simpler traceability for payout failure</p>\n\n<p>Availability: The new look rolls out gradually to all merchants in the Shopify admin on web and mobile. </p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "入金ページのリニューアル：すべての入金情報を一画面で確認可能に",
+          "summarizedJa": "Shopify管理画面の入金ページがリニューアルされ、左側のリストで入金を選択すると右側に詳細が表示される新しいレイアウトになりました。支払済・保留中の入金を日付順に一覧でき、内訳の展開表示や入金失敗の追跡も容易になり、ページ遷移なしで効率的に入金情報を管理できます。Web版とモバイル版の両方で段階的に展開されます。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 4,
+            "technicalImportance": 2
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-17T00:01:52.246Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1082,
+            "output": 258
+          },
+          "estimatedCost": 0.007116
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "支払ページのデザイン刷新：すべての支払い情報を一目で確認",
+          "summarizedJa": "Shopify管理画面の支払いページが刷新され、すべての支払いを一画面で確認できるようになります。左側に支払いリスト、右側に詳細が表示され、支払い済みおよび保留中の支払いを日付順で一目で把握できるようになります。これにより、マーチャントは支払いの内訳を簡単に確認でき、支払い失敗時の追跡もより容易になります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 1,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-17T00:02:21.163Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 794,
+            "output": 148
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-filter-catalog-search-results-by-media-type",
       "source": "developer-changelog",
