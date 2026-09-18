@@ -1,6 +1,202 @@
 {
-  "lastUpdated": "2026-09-17T00:01:08.730Z",
+  "lastUpdated": "2026-09-18T00:01:12.054Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-request-a-bundle-size-exception-for-existing-ui-extensions",
+      "source": "developer-changelog",
+      "title": "Request a bundle size exception for existing UI extensions",
+      "link": "https://shopify.dev/changelog/request-a-bundle-size-exception-for-existing-ui-extensions",
+      "publishedAt": "2026-09-17T19:30:00.000Z",
+      "collectedAt": "2026-09-18T00:01:10.332Z",
+      "category": [
+        "API",
+        "Update",
+        "Admin Extensions",
+        "Checkout UI",
+        "Customer Accounts",
+        "POS Extensions"
+      ],
+      "description": " <div class=\"\"><p>UI extensions using API version <code>2025-10</code> or later are limited to a 64 KB compressed JavaScript bundle per extension. Full page customer account extensions may use up to 128 KB. If your extension remains over the limit after optimization, run <code>shopify app build</code> and submit the minified bundle and its esbuild metafile through the bundle size exception <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSeb3yjIfdAardxHZo9DrZW_Qzx88javl_4Zm8Q29N6xCk_rMw/viewform\" target=\"_blank\" class=\"body-link\">form</a>.</p>\n<p>Shopify will review the contents of your bundle and may grant a limit increase if the remaining bundle weight is unavoidable.</p>\n<p>Requests will be denied for avoidable bundle weight, including heavy libraries, duplicate dependencies, and translations bundled with the extension instead of provided through the native localization APIs.</p>\n<p>To remain deployable after October 1, 2026, an app must ensure that every existing UI extension uses API version 2026-01 or later.</p>\n<p><strong>Learn more</strong></p>\n<ul>\n<li><a href=\"https://shopify.dev/docs/apps/build/app-extensions/optimize-bundle-size\" target=\"_blank\" class=\"body-link\">Optimize bundle size for UI extensions</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "既存UIエクステンションのバンドルサイズ例外申請が可能に",
+          "summarizedJa": "APIバージョン2025-10以降のUIエクステンションは、圧縮後のJavaScriptバンドルサイズが64KB（フルページカスタマーアカウントエクステンションは128KB）に制限されます。最適化後もサイズ制限を超える場合は、専用フォームから例外申請が可能です。2026年10月1日以降もデプロイ可能な状態を維持するには、全ての既存UIエクステンションでAPIバージョン2026-01以降を使用する必要があります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 5
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-09-18T00:01:18.667Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1289,
+            "output": 269
+          },
+          "estimatedCost": 0.007902
+        },
+        "gemini-2.5-flash": {
+          "titleJa": "既存のUI拡張機能におけるバンドルサイズ例外申請",
+          "summarizedJa": "ShopifyのUI拡張機能には、APIバージョン2025-10以降で64KB（顧客アカウント拡張は128KB）のJavaScriptバンドルサイズ制限が導入されます。最適化後も制限を超える場合、開発者は専用フォームから例外申請が可能です。特に、2026年10月1日以降もアプリをデプロイし続けるためには、既存のUI拡張機能がAPIバージョン2026-01以降を使用するよう更新する必要があり、パートナー（開発者）にとって重要な対応となります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-09-18T00:01:26.214Z",
+          "model": "gemini-2.5-flash",
+          "tokenUsage": {
+            "input": 975,
+            "output": 191
+          },
+          "estimatedCost": 0
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-adding-a-canceled-receive-action-to-the-inventory-shipments-api",
+      "source": "developer-changelog",
+      "title": "Adding a canceled receive action to the inventory shipments API",
+      "link": "https://shopify.dev/changelog/adding-a-canceled-receive-action-to-the-inventory-shipments-api",
+      "publishedAt": "2026-09-17T16:00:00.000Z",
+      "collectedAt": "2026-09-18T00:01:10.332Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-10"
+      ],
+      "description": " <div class=\"\"><p>The GraphQL Admin API now supports a <code>CANCELED</code> receive action for inventory shipments in version <code>2026-10</code>. You can mark inventory shipment line item units as canceled when they’ll never arrive, and you can read canceled quantities on shipments and their line items. This is an additive change to the <code>2026-10</code> release candidate. No action is required, and apps on earlier API versions aren’t affected.</p>\n<h2>What changed</h2>\n<p>Canceled receiving joins the existing accepted and rejected receive actions across the inventory shipments API in version <code>2026-10</code>.</p>\n<p><strong>New fields</strong></p>\n<ul>\n<li><code>totalCanceledQuantity</code> on <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/InventoryShipment\" target=\"_blank\" class=\"body-link\"><code>InventoryShipment</code></a>: the total quantity of items marked as canceled across all line items in the shipment, alongside the existing <code>totalAcceptedQuantity</code> and <code>totalRejectedQuantity</code> fields.</li>\n<li><code>canceledQuantity</code> on <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/InventoryShipmentLineItem\" target=\"_blank\" class=\"body-link\"><code>InventoryShipmentLineItem</code></a>: the quantity of items marked as canceled on a line item, alongside the existing <code>acceptedQuantity</code> and <code>rejectedQuantity</code> fields.</li>\n</ul>\n<p>Canceled units count toward <code>InventoryShipment.totalReceivedQuantity</code>, so on <code>2026-10</code> the received total breaks down fully into accepted, rejected, and canceled.</p>\n<p><strong>New enum value</strong></p>\n<ul>\n<li><code>CANCELED</code> on <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/enums/InventoryShipmentReceiveLineItemReason\" target=\"_blank\" class=\"body-link\"><code>InventoryShipmentReceiveLineItemReason</code></a>. Pass it as the <code>reason</code> on a line item in the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/inventoryShipmentReceive\" target=\"_blank\" class=\"body-link\"><code>inventoryShipmentReceive</code> mutation</a> to mark units as canceled, or as <code>bulkReceiveAction</code> to mark all remaining units on the shipment as canceled.</li>\n</ul>\n<p><strong>Webhook payload updates</strong></p>\n<p>Subscriptions to the <code>inventory_shipments/receive_items</code> <a href=\"https://shopify.dev/docs/api/webhooks\" target=\"_blank\" class=\"body-link\">webhook topic</a> on version <code>2026-10</code> or later now receive <code>old_canceled_quantity</code> and <code>new_canceled_quantity</code> on each entry in <code>items_received</code>, and receives that only change canceled quantities now trigger a delivery. Subscriptions on earlier versions are unchanged. The canceled fields are omitted from payloads, and canceled-only receives don’t trigger a delivery for those versions.</p>\n<h2>Who’s affected</h2>\n<p>Apps that use the GraphQL Admin API version <code>2026-10</code> or later (or <code>unstable</code>) to read inventory shipments, receive shipment line items, or subscribe to the <code>inventory_shipments/receive_items</code> webhook can use the canceled receive action.</p>\n<p>Apps on versions before <code>2026-10</code> aren’t affected. The new fields and enum value aren’t available, webhook payloads keep their current shape, and canceled-only receives stay suppressed for those subscriptions.</p>\n<h2>Why this matters</h2>\n<p>Merchants receiving an inventory transfer sometimes learn that units will never arrive. Until now, the API only supported accepting or rejecting units, so apps had no way to record or observe that outcome. The units either sat unreceived forever or had to be misrecorded as rejected. The canceled receive action closes out those units accurately, and apps that sync receiving state with purchase orders, warehouse management systems, or 3PLs can now record and mirror the full picture.</p>\n<h2>What to do</h2>\n<p>No action is required. To use the canceled receive action:</p>\n<ol>\n<li>Update your app to API version <code>2026-10</code>.</li>\n<li>Query <code>totalCanceledQuantity</code> on <code>InventoryShipment</code> and <code>canceledQuantity</code> on <code>InventoryShipmentLineItem</code> where your app displays or syncs receiving progress.</li>\n<li>Pass <code>reason: CANCELED</code> to <code>inventoryShipmentReceive</code> when you mark units that won’t arrive.</li>\n<li>Test against a development store, and confirm your <code>inventory_shipments/receive_items</code> webhook handler processes the <code>old_canceled_quantity</code> and <code>new_canceled_quantity</code> fields.</li>\n</ol>\n<pre><code class=\"language-graphql\">mutation ReceiveShipment {\n  inventoryShipmentReceive(\n    id: &quot;gid://shopify/InventoryShipment/123&quot;\n    lineItems: [\n      {\n        shipmentLineItemId: &quot;gid://shopify/InventoryShipmentLineItem/456&quot;\n        quantity: 5\n        reason: CANCELED\n      }\n    ]\n  ) @idempotent(key: &quot;b105ab7c-4680-4bfc-b350-c766e01a431f&quot;) {\n    inventoryShipment {\n      totalCanceledQuantity\n      lineItems(first: 10) {\n        nodes {\n          id\n          canceledQuantity\n        }\n      }\n    }\n    userErrors {\n      code\n      field\n      message\n    }\n  }\n}\n</code></pre>\n<p>This example marks 5 units on a shipment line item as canceled and reads back the updated canceled quantities. Replace the IDs with your own shipment and line item IDs, and generate a unique idempotency key for each receive. The key is required on this mutation as of version <code>2026-04</code>. For details, see the <a href=\"https://shopify.dev/docs/api/usage/idempotent-requests\" target=\"_blank\" class=\"body-link\">idempotent requests guide</a>.</p>\n<h2>Related docs</h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/inventoryShipmentReceive\" target=\"_blank\" class=\"body-link\"><code>inventoryShipmentReceive</code> mutation</a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/InventoryShipment\" target=\"_blank\" class=\"body-link\"><code>InventoryShipment</code> object</a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/InventoryShipmentLineItem\" target=\"_blank\" class=\"body-link\"><code>InventoryShipmentLineItem</code> object</a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/latest/enums/InventoryShipmentReceiveLineItemReason\" target=\"_blank\" class=\"body-link\"><code>InventoryShipmentReceiveLineItemReason</code> enum</a></li>\n<li><a href=\"https://shopify.dev/docs/api/webhooks\" target=\"_blank\" class=\"body-link\">Webhooks reference</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "在庫出荷APIにキャンセル済み受領アクションを追加",
+          "summarizedJa": "GraphQL Admin API バージョン2026-10で、在庫出荷時に到着しない商品をキャンセル済みとしてマークできる新機能が追加されました。InventoryShipmentとInventoryShipmentLineItemに新しいフィールド（totalCanceledQuantity、canceledQuantity）が追加され、受領理由として「CANCELED」が指定可能になります。在庫転送の受領状況を正確に記録でき、WMSや3PLとの連携を行うアプリは受領状態の全体像を把握できるようになります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-18T00:01:31.892Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2938,
+            "output": 270
+          },
+          "estimatedCost": 0.012864
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-removed-session-currentsession-staffmemberid-from-pos-ui-extensions-2026-10",
+      "source": "developer-changelog",
+      "title": "Removed session.currentSession.staffMemberId from POS UI Extensions (2026-10)",
+      "link": "https://shopify.dev/changelog/removed-session-currentsession-staffmemberid-from-pos-ui-extensions-2026-10",
+      "publishedAt": "2026-09-17T16:00:00.000Z",
+      "collectedAt": "2026-09-18T00:01:10.332Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Breaking API Change",
+        "POS Extensions",
+        "2026-10"
+      ],
+      "description": " <div class=\"\"><p>As of API version 2026-10, the static session.currentSession.staffMemberId field has been removed from the POS UI Extensions Session API. It was deprecated in 2026-07 in favour of session.staffMember, a reactive signal that updates when a different staff member pins into POS. </p>\n<p>Before targeting API version 2026-10, replace reads of session.currentSession.staffMemberId with session.staffMember.value?.id. To react to staff changes while your extension is running, subscribe to the signal with session.staffMember.subscribe((staffMember) =&gt; { ... }), or read .value during render in a Preact component with @shopify/ui-extensions/preact imported to re-render automatically. </p>\n<p>Extensions on 2026-07 and earlier are unaffected. The BaseData session.staffMemberId available to receipt targets is a separate API and is unchanged.</p>\n<p><a href=\"https://shopify.dev/docs/api/pos-ui-extensions/2026-10/apis/session-api\" target=\"_blank\" class=\"body-link\">https://shopify.dev/docs/api/pos-ui-extensions/2026-10/apis/session-api</a></p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "POS UI Extensionsからsession.currentSession.staffMemberIdを削除（2026-10）",
+          "summarizedJa": "APIバージョン2026-10より、POS UI ExtensionsのSession APIから静的フィールド「session.currentSession.staffMemberId」が削除されます。2026-07で非推奨となったこのフィールドは、スタッフメンバーの変更に反応するリアクティブシグナル「session.staffMember」に置き換えられました。2026-10をターゲットにする前に、コードを「session.staffMember.value?.id」に変更する必要があります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-18T00:01:36.802Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1249,
+            "output": 250
+          },
+          "estimatedCost": 0.007496999999999999
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-market-relationships",
+      "source": "developer-changelog",
+      "title": "Query market hierarchies with the GraphQL Admin API",
+      "link": "https://shopify.dev/changelog/market-relationships",
+      "publishedAt": "2026-09-17T16:00:00.000Z",
+      "collectedAt": "2026-09-18T00:01:10.332Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-10"
+      ],
+      "description": " <div class=\"\"><p>The GraphQL Admin API now includes fields for querying and traversing a store’s market hierarchy in API version <code>2026-10</code>. Apps that use the <code>read_markets</code> access scope can retrieve parent-child relationships, navigate between related markets, and check if the asynchronously rebuilt relationship data has changed. No action is required for existing apps.</p>\n<h2>What changed</h2>\n<p>The new <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/queries/marketRelationships\" target=\"_blank\" class=\"body-link\"><code>marketRelationships</code></a> query returns a connection of <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/objects/MarketRelationship\" target=\"_blank\" class=\"body-link\"><code>MarketRelationship</code></a> objects. Each relationship includes a <code>childMarket</code> and a nullable <code>parentMarket</code>. The <code>parentMarket</code> field is <code>null</code> if the <code>childMarket</code> is a root market.</p>\n<p>The <code>Market</code> object now includes:</p>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/objects/Market#field-Market.fields.parentMarkets\" target=\"_blank\" class=\"body-link\"><code>parentMarkets</code></a>: The market’s direct parent markets.</li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/objects/Market#field-Market.fields.parentMarketsCount\" target=\"_blank\" class=\"body-link\"><code>parentMarketsCount</code></a>: The number of direct parent markets.</li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/objects/Market#field-Market.fields.childMarkets\" target=\"_blank\" class=\"body-link\"><code>childMarkets</code></a>: The market’s direct child markets.</li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/objects/Market#field-Market.fields.childMarketsCount\" target=\"_blank\" class=\"body-link\"><code>childMarketsCount</code></a>: The number of direct child markets.</li>\n</ul>\n<p><code>MarketRelationship</code> IDs stay stable when Shopify rebuilds the relationship data as long as the direct relationship still exists after the rebuild. Connection cursors can change during a rebuild, so you should restart pagination after you detect a change.</p>\n<p>Market relationships are rebuilt asynchronously after the market hierarchy changes. The <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/queries/marketRelationshipsStatus\" target=\"_blank\" class=\"body-link\"><code>marketRelationshipsStatus</code></a> query returns an opaque <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/objects/MarketRelationshipsStatus#field-MarketRelationshipsStatus.fields.version\" target=\"_blank\" class=\"body-link\"><code>version</code></a> value that you can compare with a previously retrieved value. A changed <code>version</code> value indicates that the materialized market relationships have advanced.</p>\n<p>You should retrieve <code>version</code> before making a hierarchy-affecting change, poll it in separate requests, and refetch the relationships after the value changes. Don’t treat a <code>version</code> that you retrieve in the same request as <code>marketRelationships</code> as a snapshot identifier.</p>\n<h2>Who’s affected</h2>\n<p>This change applies to apps that use GraphQL Admin API version <code>2026-10</code> or later and need to inspect or traverse market relationships.</p>\n<p>Apps that use API versions before <code>2026-10</code> can’t query the new fields. Apps that don’t query markets are unaffected.</p>\n<h2>Why this matters</h2>\n<p>You can reconstruct a store’s market hierarchy directly from market relationships, instead of inferring it from market conditions, customization state, or other indirect signals.</p>\n<h2>What to do</h2>\n<p>No action is required for existing apps. Your existing integrations keep working on older API versions without changes.</p>\n<p>To use the market hierarchy fields:</p>\n<ol>\n<li>Use GraphQL Admin API version <code>2026-10</code> or later.</li>\n<li>Confirm that your app has the <code>read_markets</code> access scope.</li>\n<li>Query <code>marketRelationships</code>, or add the parent and child fields to a <code>Market</code> query.</li>\n<li>If your app changes the market hierarchy, retrieve <code>marketRelationshipsStatus.version</code> before the change and poll it afterward in separate requests.</li>\n<li>After <code>version</code> changes, restart pagination and refetch the relationship data. This ensures that your app uses the latest materialized relationships.</li>\n</ol>\n<h2>Related docs</h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/apps/build/markets/new-markets/market-inheritance\" target=\"_blank\" class=\"body-link\">Market inheritance</a>  </li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10\" target=\"_blank\" class=\"body-link\">GraphQL Admin API reference for 2026-10</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "GraphQL Admin APIでマーケット階層のクエリが可能に",
+          "summarizedJa": "GraphQL Admin API バージョン2026-10で、ストアのマーケット階層を照会できる新機能が追加されました。新しいmarketRelationshipsクエリとMarketオブジェクトの親子関係フィールドにより、マーケット間の階層関係を直接取得・操作できるようになります。既存アプリへの対応は不要で、read_marketsスコープを持つアプリが利用可能です。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-18T00:02:18.563Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2311,
+            "output": 233
+          },
+          "estimatedCost": 0.010428
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-pricing-audit-trail-for-contextual-product-variant-prices",
+      "source": "developer-changelog",
+      "title": "New Pricing audit trail for contextual product variant prices",
+      "link": "https://shopify.dev/changelog/pricing-audit-trail-for-contextual-product-variant-prices",
+      "publishedAt": "2026-09-17T16:00:00.000Z",
+      "collectedAt": "2026-09-18T00:01:10.332Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-10"
+      ],
+      "description": " <div class=\"\"><p>The GraphQL Admin API now includes the <code>auditTrail</code> field on <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/objects/ProductVariantContextualPricing#field-ProductVariantContextualPricing.fields.auditTrail\" target=\"_blank\" class=\"body-link\"><code>ProductVariantContextualPricing</code></a> in API version <code>2026-10</code>. </p>\n<p>Apps with the <a href=\"https://shopify.dev/docs/api/usage/access-scopes#authenticated-access-scopes\" target=\"_blank\" class=\"body-link\"><code>read_products</code> access scope</a> can use this field to inspect the ordered adjustments that Shopify applied to a contextual product variant price.</p>\n<p>Existing apps do not need to take action.</p>\n<h2>What changed</h2>\n<p>The new <code>ProductVariantContextualPricing.auditTrail</code> field returns a <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/objects/PricingAuditTrail\" target=\"_blank\" class=\"body-link\"><code>PricingAuditTrail</code></a> object. Its <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/objects/PricingAuditTrail#field-PricingAuditTrail.fields.priceAdjustments\" target=\"_blank\" class=\"body-link\"><code>priceAdjustments</code></a> field contains the adjustments in the order that Shopify applied them.</p>\n<p>Each <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/objects/AuditTrailAdjustment\" target=\"_blank\" class=\"body-link\"><code>AuditTrailAdjustment</code></a> includes:</p>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/objects/AuditTrailAdjustment#field-AuditTrailAdjustment.fields.type\" target=\"_blank\" class=\"body-link\"><code>type</code></a>: The operation Shopify applied. \n   The field returns an <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/enums/AuditTrailAdjustmentType\" target=\"_blank\" class=\"body-link\"><code>AuditTrailAdjustmentType</code></a> value of <code>ADDITION</code>,\n <code>MULTIPLICATION</code>, or <code>REPLACEMENT</code>.</li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/objects/AuditTrailAdjustment#field-AuditTrailAdjustment.fields.value\" target=\"_blank\" class=\"body-link\"><code>value</code></a>: The value used by the   operation.</li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/objects/AuditTrailAdjustment#field-AuditTrailAdjustment.fields.price\" target=\"_blank\" class=\"body-link\"><code>price</code></a>: The price after Shopify applied the adjustment.</li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/objects/AuditTrailAdjustment#field-AuditTrailAdjustment.fields.label\" target=\"_blank\" class=\"body-link\"><code>label</code></a>: A localized, human-readable description of the adjustment.</li>\n</ul>\n<p>Apps should treat <code>label</code> as display text. Its value can be localized or changed, so apps should not parse it or use it as a stable identifier.</p>\n<p>This first release of the pricing audit trail supports product variant contextual pricing. It does not include audit trails for order line items or draft order line items.</p>\n<p>If Shopify cannot return a complete and correct audit trail, <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/objects/PricingAuditTrail#field-PricingAuditTrail.fields.priceAdjustments\" target=\"_blank\" class=\"body-link\"><code>priceAdjustments</code></a> returns an empty list instead of a partial result.</p>\n<h2>Who's affected</h2>\n<p>This change applies to apps that use GraphQL Admin API version <code>2026-10</code> or later and need to explain how Shopify calculated a contextual product variant price.</p>\n<p>The <code>read_products</code> access scope allows apps to query <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/objects/ProductVariantContextualPricing#field-ProductVariantContextualPricing.fields.auditTrail\" target=\"_blank\" class=\"body-link\"><code>ProductVariantContextualPricing.auditTrail</code></a>. Apps using API versions before <code>2026-10</code> cannot query the field.</p>\n<p>Existing apps are not affected unless they choose to query the new field. The change does not modify the existing <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/objects/ProductVariantContextualPricing#field-ProductVariantContextualPricing.fields.price\" target=\"_blank\" class=\"body-link\"><code>ProductVariantContextualPricing.price</code></a> or  <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/objects/ProductVariantContextualPricing#field-ProductVariantContextualPricing.fields.compareAtPrice\" target=\"_blank\" class=\"body-link\"><code>ProductVariantContextualPricing.compareAtPrice</code></a> fields.</p>\n<h2>Why this matters</h2>\n<p>Apps can inspect the calculation that produced a contextual price. ERP and B2B integrations can use this information to explain adjustments from price lists, currency conversion, taxes, fees, and rounding.</p>\n<p>The audit trail explains the price calculation. It does not identify the market, catalog, or price list that Shopify selected.</p>\n<h2>What to do</h2>\n<p>No action is required for existing apps.</p>\n<p>To use the pricing audit trail:</p>\n<ol>\n<li>Use GraphQL Admin API version <code>2026-10</code> or later.</li>\n<li>Confirm that the app has the <code>read_products</code> access scope.</li>\n<li>Add <code>auditTrail</code> and <code>priceAdjustments</code> to a contextual pricing query.</li>\n<li>Test the query with a product variant that has contextual price adjustments.</li>\n</ol>\n<p>A successful response returns the applicable adjustments in calculation order. An empty <code>priceAdjustments</code> list means that Shopify does not return a complete public audit trail for that price.</p>\n<h2>Related docs</h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/objects/ProductVariantContextualPricing\" target=\"_blank\" class=\"body-link\"><code>ProductVariantContextualPricing</code> GraphQL Admin API reference</a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/objects/ProductVariant#field-ProductVariant.fields.contextualPricing\" target=\"_blank\" class=\"body-link\"><code>ProductVariant.contextualPricing</code> GraphQL Admin API reference</a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/input-objects/ContextualPricingContext\" target=\"_blank\" class=\"body-link\"><code>ContextualPricingContext</code> GraphQL Admin API reference</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "コンテキスト価格の計算過程を追跡する新しいPricing audit trail機能",
+          "summarizedJa": "GraphQL Admin API 2026-10バージョンにて、商品バリアントのコンテキスト価格（市場や顧客グループごとの価格）がどのように計算されたかを追跡できる新機能が追加されました。価格調整の種類（加算、乗算、置換）、適用値、調整後の価格などを順序立てて確認できるため、ERPやB2B統合アプリが価格リストや通貨換算、税金などによる価格変動を説明しやすくなります。既存アプリは対応不要で、read_productsスコープを持つアプリが任意で利用できます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-18T00:02:27.457Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2980,
+            "output": 301
+          },
+          "estimatedCost": 0.013455
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-updates-to-events-payloads-and-subscription-configuration",
       "source": "developer-changelog",
