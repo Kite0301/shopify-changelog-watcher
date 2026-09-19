@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-09-18T00:01:12.054Z",
+  "lastUpdated": "2026-09-19T00:01:05.899Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-automaticdiscounts-query-is-removed-in-api-version-2027-01",
+      "source": "developer-changelog",
+      "title": "The `automaticDiscounts` query is removed in API version 2027-01",
+      "link": "https://shopify.dev/changelog/automaticdiscounts-query-is-removed-in-api-version-2027-01",
+      "publishedAt": "2026-09-18T16:00:00.000Z",
+      "collectedAt": "2026-09-19T00:01:04.489Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Breaking API Change",
+        "Admin GraphQL API",
+        "2027-01"
+      ],
+      "description": " <div class=\"\"><p>The deprecated <code>automaticDiscounts</code> query is removed from the GraphQL Admin API in version <code>2027-01</code>. If your app reads a shop’s automatic discounts through <code>automaticDiscounts</code>, you need to move to the <code>discountNodes</code> query with a <code>method:automatic</code> filter before you upgrade to <code>2027-01</code>. Apps on <code>2026-10</code> and earlier keep working unchanged while those versions are supported.</p>\n<h2>What changed</h2>\n<p>As of API version <code>2027-01</code>, <code>automaticDiscounts</code> no longer exists on <code>QueryRoot</code>. Requests that include <code>automaticDiscounts</code> on <code>2027-01</code> return a validation error instead of data. The <code>DiscountAutomaticConnection</code> and <code>DiscountAutomaticEdge</code> types are also removed, because no other fields in the schema return them.</p>\n<p>Use <code>discountNodes</code> instead, with <code>query: &quot;method:automatic&quot;</code>. It returns a connection of <code>DiscountNode</code> objects, each exposing the discount itself on the <code>discount</code> field. <code>discountNodes</code> accepts filters similar to the removed query, including <code>status</code>, <code>discount_type</code>, <code>discount_class</code>, <code>created_at</code>, and <code>starts_at</code>. For details on how to combine filters, see the <a href=\"https://shopify.dev/docs/api/usage/search-syntax\" target=\"_blank\" class=\"body-link\">Shopify API search syntax</a>.</p>\n<blockquote>\n<p>Note:\nThe <code>automaticDiscountNodes</code> query is also deprecated in favor of <code>discountNodes</code>. If you migrate to <code>automaticDiscountNodes</code>, you’ll need to migrate again later when that query is removed.</p>\n</blockquote>\n<p>You can call <code>discountNodes</code> to read both code-based and automatic discounts through one query, with a single filter vocabulary.</p>\n<h2>Who's affected</h2>\n<p>This removal affects any app that calls <code>automaticDiscounts</code> and requests API version <code>2027-01</code> or later, including apps pinned to <code>unstable</code> once <code>2027-01</code> is the latest version. It also affects tooling and generated types that reference <code>DiscountAutomaticConnection</code> or <code>DiscountAutomaticEdge</code>.</p>\n<p>Apps that request <code>2026-10</code> or earlier continue to work as long as those versions are supported. Apps that already read automatic discounts through <code>discountNodes</code> don’t need to change anything. Apps that use <code>automaticDiscountNodes</code> aren’t affected by this specific removal, but should plan to move to <code>discountNodes</code>.</p>\n<p>If your app doesn’t call <code>automaticDiscounts</code>, you don’t need to take action for this change.</p>\n<h2>Why this matters</h2>\n<p><code>discountNodes</code> is one query surface for all discounts, automatic and code-based. You use the same search syntax and pagination pattern across discount types. If your app needs both methods, you read a single paginated list instead of merging separate query results, and new automatic discount types don’t require new query fields.</p>\n<h2>Breaking changes and migrations</h2>\n<p>When you request API version <code>2027-01</code> or later, any query that includes <code>automaticDiscounts</code> fails validation. Types that depend on <code>DiscountAutomaticConnection</code> or <code>DiscountAutomaticEdge</code> also break when you regenerate code against <code>2027-01</code>.</p>\n<p>To migrate:</p>\n<ol>\n<li>Search your app for <code>automaticDiscounts</code>, including generated GraphQL types and any references to <code>DiscountAutomaticConnection</code> or <code>DiscountAutomaticEdge</code>.</li>\n<li>Replace the query with <code>discountNodes</code> and pass <code>query: &quot;method:automatic&quot;</code>. Move your existing inline fragments one level deeper, onto the <code>discount</code> field of <code>DiscountNode</code>.</li>\n<li>Regenerate your GraphQL types or schema snapshot against <code>2027-01</code> so your types match the new shape.</li>\n<li>Test against <code>2027-01</code> in a development store and confirm that the results match what your app returned on <code>2026-10</code>.</li>\n</ol>\n<p>Here’s the same request, before and after:</p>\n<pre><code class=\"language-graphql\"># Before, on 2026-10 and earlier\nquery {\n  automaticDiscounts(first: 10) {\n    nodes {\n      ... on DiscountAutomaticBxgy {\n        title\n        status\n      }\n    }\n  }\n}\n\n# After, on 2027-01\nquery {\n  discountNodes(first: 10, query: &quot;method:automatic&quot;) {\n    nodes {\n      id\n      discount {\n        ... on DiscountAutomaticBxgy {\n          title\n          status\n        }\n      }\n    }\n  }\n}\n</code></pre>\n<p>The inline fragments carry over unchanged. You move them from the <code>nodes</code> under <code>automaticDiscounts</code> to the <code>discount</code> field of each <code>DiscountNode</code>. If your app reads more than one automatic discount type, add one inline fragment per type on <code>discount</code>, or select shared fields through the interfaces those types implement.</p>\n<p>If you can’t migrate before <code>2027-01</code>, keep your app on <code>2026-10</code> or an earlier supported version that still includes <code>automaticDiscounts</code> until you complete the change.</p>\n<h2>Action required</h2>\n<p>Before you upgrade your app to API version <code>2027-01</code>, update any queries that call <code>automaticDiscounts</code> to use <code>discountNodes</code> with <code>query: &quot;method:automatic&quot;</code>, and regenerate your types against <code>2027-01</code>. If you upgrade without migrating, those queries return validation errors and your app no longer reads automatic discounts.</p>\n<p>You can confirm the migration worked by running your updated queries against a development store on <code>2027-01</code> and checking that the automatic discount data matches what you saw on <code>2026-10</code>.</p>\n<p>If your app doesn’t call <code>automaticDiscounts</code>, you can upgrade to <code>2027-01</code> without changes.</p>\n<h2>Related docs</h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/latest/queries/discountNodes\" target=\"_blank\" class=\"body-link\">Discount nodes query in the GraphQL Admin API</a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/DiscountNode\" target=\"_blank\" class=\"body-link\">DiscountNode object reference</a></li>\n<li><a href=\"https://shopify.dev/docs/apps/build/discounts\" target=\"_blank\" class=\"body-link\">Build discounts in Shopify apps</a></li>\n<li><a href=\"https://shopify.dev/docs/api/usage/versioning\" target=\"_blank\" class=\"body-link\">API versioning in Shopify</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "APIバージョン2027-01で`automaticDiscounts`クエリが削除されます",
+          "summarizedJa": "GraphQL Admin APIのバージョン2027-01から、非推奨だった`automaticDiscounts`クエリが削除されます。自動ディスカウントを取得しているアプリは、2027-01にアップグレードする前に`discountNodes`クエリに`method:automatic`フィルターを指定する形式に移行する必要があります。移行しない場合、クエリはバリデーションエラーを返し、自動ディスカウントが取得できなくなります。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-09-19T00:01:11.335Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2928,
+            "output": 249
+          },
+          "estimatedCost": 0.012518999999999999
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-request-a-bundle-size-exception-for-existing-ui-extensions",
       "source": "developer-changelog",
