@@ -1,6 +1,106 @@
 {
-  "lastUpdated": "2026-09-19T00:01:05.899Z",
+  "lastUpdated": "2026-09-22T00:01:36.960Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-unlimited-private-plans-and-target-stores-in-shopify-app-pricing",
+      "source": "developer-changelog",
+      "title": "Unlimited private plans and target stores in Shopify App Pricing",
+      "link": "https://shopify.dev/changelog/unlimited-private-plans-and-target-stores-in-shopify-app-pricing",
+      "publishedAt": "2026-09-21T21:00:00.000Z",
+      "collectedAt": "2026-09-22T00:01:35.815Z",
+      "category": [
+        "App store",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>Developers using <a href=\"https://shopify.dev/docs/apps/launch/billing/shopify-app-pricing\" target=\"_blank\" class=\"body-link\">Shopify App Pricing</a> can now create unlimited private plans per app and add unlimited target stores to each plan, replacing the previous limits of 15 private plans and 20 stores per plan. No action is required to continue using existing plans.</p>\n<h2>What changed</h2>\n<p>A <a href=\"https://shopify.dev/docs/apps/launch/billing/shopify-app-pricing/plans#private-plans\" target=\"_blank\" class=\"body-link\">private plan</a> is an app pricing plan available only to stores you select. These selected stores are the plan’s targets. Private plans let you offer custom pricing and features to specific merchants without making that offer available to everyone. </p>\n<p>You can now create as many private plans as you need and make each one available to any number of selected stores.</p>\n<h2>Migrating to Shopify App Pricing?</h2>\n<p>If your app is still using legacy <a href=\"https://shopify.dev/docs/apps/launch/billing/manual-pricing\" target=\"_blank\" class=\"body-link\">manual pricing</a>, unlimited private plans and targets are also available in the app migration CLI, a tool that helps you move legacy app subscriptions to Shopify App Pricing plans. The CLI is still in Early Access; <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSfu5wET7HaYLwdlkX2SNhGeRLvhccohTLlXb7hcH1fvyQdo_g/viewform?usp=dialog\" target=\"_blank\" class=\"body-link\">Sign up for Early Access to the app migration CLI</a>, or review the <a href=\"https://shopify.dev/docs/apps/launch/billing/shopify-app-pricing/migrating-to-shopify-app-pricing\" target=\"_blank\" class=\"body-link\">Shopify App Pricing migration guide</a>. </p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify App Pricingでプライベートプランとターゲットストアが無制限に",
+          "summarizedJa": "Shopify App Pricingを使用するアプリ開発者は、プライベートプラン数とターゲットストア数の制限が撤廃され、無制限に作成・設定できるようになりました。従来は1アプリあたり15プラン、1プランあたり20ストアまでの制限がありましたが、これにより特定のマーチャント向けに柔軟なカスタム価格設定が可能になります。既存プランの利用に際して特別な対応は不要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-22T00:01:43.054Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1430,
+            "output": 264
+          },
+          "estimatedCost": 0.00825
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-is-translatable-metafield-field",
+      "source": "developer-changelog",
+      "title": "New translatable boolean field for Metafield GraphQL Object",
+      "link": "https://shopify.dev/changelog/is-translatable-metafield-field",
+      "publishedAt": "2026-09-21T16:00:00.000Z",
+      "collectedAt": "2026-09-22T00:01:35.815Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-10"
+      ],
+      "description": " <div class=\"\"><p>API version <code>2026-10</code> adds a non-null <code>translatable</code> field to the <code>Metafield</code> object in the GraphQL Admin API. Apps that fetch translatable metafields and migrate to <code>2026-10</code> can now see whether a metafield’s value is translatable directly on the metafield itself. If your app doesn’t query for translatable metafields by shop, you don’t need to change anything.</p>\n<h2>What changed</h2>\n<p>The <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/objects/Metafield\" target=\"_blank\" class=\"body-link\"><code>Metafield</code> object in the GraphQL Admin API</a> exposes a new non-null field, <code>translatable: Boolean!</code>, in API version <code>2026-10</code>:</p>\n<pre><code class=\"language-graphql\">{\n   product(id: &quot;gid://shopify/Product/1&quot;) {\n\t\tmetafield(namespace: &quot;custom&quot;, key: &quot;care_guide&quot;) {\n\t\t\ttype          # &quot;single_line_text_field&quot;\n\t\t\ttranslatable  # true\n\t\t}\n\t}\n}\n</code></pre>\n<p><code>translatable</code> returns the result that the platform already enforces when it decides whether a metafield’s value can be translated.</p>\n<p>Before this change, apps had to use the deprecated <code>TranslatableResourceType.METAFIELD</code> enum on <code>translatableResources</code> to query for translatable metafields. On API version <code>2026-10</code> and later, you should read <code>translatable</code> on the <code>Metafield</code> object instead of querying metafields through <code>translatableResources</code>.</p>\n<h2>Who's affected</h2>\n<p>This applies to apps that:</p>\n<ul>\n<li>Call the GraphQL Admin API on version <code>2026-10</code> or later, and</li>\n<li>Fetch translatable metafields</li>\n</ul>\n<p>Apps on version <code>2026-07</code> and earlier are unaffected. <code>translatable</code> isn’t available on those versions, and <code>TranslatableResourceType.METAFIELD</code> continues to exist there as deprecated.</p>\n<p>Apps that read metafield values without regard to translatability are unaffected on every version.</p>\n<p>This change introduces no feature preview and no new access scope. Availability depends only on the API version, so the field appears as soon as you move a request to <code>2026-10</code>.</p>\n<h2>Why this matters</h2>\n<p>Apps need to move away from using the <code>TranslatableResourceType.METAFIELD</code> enum on <code>translatableResources</code> to fetch translatable metafields.</p>\n<p>Before this change, deciding whether a metafield can be translated required a list of which metafield types are translatable. Apps also had to keep that logic in sync with the platform.</p>\n<p><code>translatable</code> collapses those rules into one boolean. Because the field resolves from the platform’s own predicate rather than a copy of the rules in your app, it stays correct when translatability rules change.</p>\n<h2>What to do</h2>\n<p>If your app doesn’t look up translatable metafields by shop, you don’t need to change anything when you migrate to <code>2026-10</code>.</p>\n<p>If it does, then when you migrate to <code>2026-10</code>:</p>\n<ol>\n<li>Check whether you call <code>translatableResources</code> with <code>TranslatableResourceType.METAFIELD</code> in the top-level <code>resourceType</code> argument.</li>\n<li>Update those queries to read the <code>translatable</code> field directly on <code>Metafield</code> objects instead of classifying metafields through <code>translatableResources</code>.</li>\n<li>Test your changes on a development store using API version <code>2026-10</code> and confirm that:<ul>\n<li>Queries that previously passed <code>TranslatableResourceType.METAFIELD</code> no longer runs in your app, and</li>\n<li>Your UI uses the <code>metafield.translatable</code> value to decide when to offer translation.</li>\n</ul>\n</li>\n</ol>\n<p>For a worked migration example, see the guide on <a href=\"https://shopify.dev/docs/apps/build/markets/migrate-translatable-metafields\" target=\"_blank\" class=\"body-link\">migrating metafield translation logic from <code>TranslatableResourceType.METAFIELD</code> to <code>Metafield.translatable</code></a>.</p>\n<h2>Related docs</h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/queries/translatableResources\" target=\"_blank\" class=\"body-link\"><code>translatableResources</code> query</a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/enums/TranslatableResourceType\" target=\"_blank\" class=\"body-link\"><code>TranslatableResourceType</code> enum</a></li>\n<li><a href=\"https://shopify.dev/docs/api/usage/versioning\" target=\"_blank\" class=\"body-link\">API versioning for Shopify APIs</a></li>\n<li><a href=\"https://shopify.dev/docs/apps/build/custom-data\" target=\"_blank\" class=\"body-link\">Custom data in Shopify apps</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Metafield GraphQLオブジェクトに新しい翻訳可能フラグフィールドを追加",
+          "summarizedJa": "APIバージョン2026-10から、GraphQL Admin APIの`Metafield`オブジェクトに`translatable`フィールドが追加されました。これにより、メタフィールドが翻訳可能かどうかを直接確認できるようになり、従来の`TranslatableResourceType.METAFIELD`を使った方法は非推奨となります。多言語対応アプリを開発しているパートナーは、2026-10への移行時にクエリの更新が必要です。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-22T00:02:23.707Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2415,
+            "output": 259
+          },
+          "estimatedCost": 0.01113
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-shopify-analytics-session-measurement-improvements",
+      "source": "shopify-changelog",
+      "title": "Shopify Analytics session measurement improvements",
+      "link": "https://changelog.shopify.com/posts/shopify-analytics-session-measurement-improvements",
+      "publishedAt": "2026-09-21T14:00:00.000Z",
+      "collectedAt": "2026-09-22T00:01:36.911Z",
+      "category": [
+        "Analytics"
+      ],
+      "description": "\n        <p><strong>Starting September 21, 2026, Shopify is improving the sessions experience in Analytics to give merchants a cleaner view of real shopper activity.</strong> As a result, sessions, conversion rate, and other session-based metrics might look different after this update.</p>\n\n<p>This doesn't necessarily mean that your traffic, orders, or customer behavior changed. This update gives you a cleaner session baseline by focusing the default sessions experience on human visitors where the <strong>Human or bot</strong> filter is available, classifying bot/system traffic more consistently, and keeping valid shopper journeys visible even when they don't include a standard pageview.</p>\n\n<p><strong>Session-based metrics that might look different include:</strong><br>\n* Sessions<br>\n* Conversion rate<br>\n* Add-to-cart rate<br>\n* Reached checkout rate<br>\n* Checkout conversion rate<br>\n* Bounce rate<br>\n* Pageviews per session<br>\n* Online store visitors<br>\n* Searches </p>\n\n<p><strong>Orders, sales, and customer counts aren't changed</strong> by this session measurement update.</p>\n\n<p>When you compare reports before and after September 21, 2026, treat this as a new baseline for session-based metrics.</p>\n\n<p>Learn more about <a href=\"https://help.shopify.com/en/manual/reports-and-analytics/discrepancies/session-measurement-update\">Shopify Analytics session measurement improvements</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify Analyticsのセッション測定方法の改善",
+          "summarizedJa": "2026年9月21日より、Shopify Analyticsのセッション測定方法が改善され、ボットトラフィックの分類が強化されます。これにより、セッション数やコンバージョン率などのセッションベースの指標が変動する可能性がありますが、実際の注文数や売上には影響しません。この日付以降は新しいベースラインとして扱う必要があります。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-09-22T00:03:47.759Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1255,
+            "output": 223
+          },
+          "estimatedCost": 0.00711
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-automaticdiscounts-query-is-removed-in-api-version-2027-01",
       "source": "developer-changelog",
