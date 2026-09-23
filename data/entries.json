@@ -1,6 +1,174 @@
 {
-  "lastUpdated": "2026-09-22T00:01:36.960Z",
+  "lastUpdated": "2026-09-23T00:01:36.334Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-events-subscription-query-complexity-limit-is-changing-to-100-points",
+      "source": "developer-changelog",
+      "title": "Events subscription query complexity limit is changing to 100 points",
+      "link": "https://shopify.dev/changelog/events-subscription-query-complexity-limit-is-changing-to-100-points",
+      "publishedAt": "2026-09-22T18:00:00.000Z",
+      "collectedAt": "2026-09-23T00:01:36.328Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Breaking API Change",
+        "Events & webhooks"
+      ],
+      "description": " <div class=\"\"><p>We’re reducing the query complexity limit for Events subscriptions from 250 to 100 points. This change does not affect Classic Webhooks.</p>\n<p>Shopify assigns each Events query a complexity score based on the fields it selects, the types of data those fields return, and the number of items requested in connections using first or last, following the <a href=\"https://shopify.dev/docs/apps/build/apis/graphql-admin/rate-limits#cost-calculation\" target=\"_blank\" class=\"body-link\">GraphQL query cost calculation</a>. The limit applies to each subscription query, and queries executed by Events subscriptions don’t count toward your app’s <a href=\"https://shopify.dev/docs/api/usage/limits\" target=\"_blank\" class=\"body-link\">API rate limits</a>.</p>\n<h3>What to do</h3>\n<p>Review subscription queries that exceed 100 points and shape each subscription around the changes your app handles:</p>\n<ul>\n<li><strong>Split subscriptions by the work they do</strong>: You can configure multiple subscriptions for the same topic, each with its own triggers and query.  </li>\n<li><strong>Query the changed resource directly</strong>: For example, for a variant price change, query the affected variant’s price, SKU, and parent Product ID instead of fetching the Product’s first 250 variants. This avoids repeatedly fetching unchanged variants and covers changed variants beyond the first page.  </li>\n<li><strong>Match queries to available variables</strong>: A variant price trigger provides <code>$variantsId</code>, but a product title trigger doesn’t. Use separate subscriptions when changes require different query variables.</li>\n</ul>\n<p>Preserve the fields and related data your handler needs when splitting queries. See the <a href=\"https://shopify.dev/docs/apps/build/events/optimizing-your-subscriptions\" target=\"_blank\" class=\"body-link\">guide to optimizing your subscriptions</a> for examples and data coverage checks. If your use case needs more than 100 points, let us know in the <a href=\"https://community.shopify.dev/t/events-query-complexity-limit-is-changing-to-100-points/37888\" target=\"_blank\" class=\"body-link\">community forums</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Eventsサブスクリプションのクエリ複雑度制限が100ポイントに変更",
+          "summarizedJa": "Eventsサブスクリプションのクエリ複雑度制限が250ポイントから100ポイントに削減されます。この変更はClassic Webhooksには影響しません。100ポイントを超えるサブスクリプションクエリを使用している場合は、複数のサブスクリプションに分割する、変更されたリソースを直接クエリする、クエリを利用可能な変数に一致させるなどの対応が必要です。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-23T00:01:48.834Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1477,
+            "output": 252
+          },
+          "estimatedCost": 0.008211
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-polaris-cdn-1-1-is-now-stable",
+      "source": "developer-changelog",
+      "title": "Polaris CDN 1.1 is now stable",
+      "link": "https://shopify.dev/changelog/polaris-cdn-1-1-is-now-stable",
+      "publishedAt": "2026-09-22T17:30:00.000Z",
+      "collectedAt": "2026-09-23T00:01:36.328Z",
+      "category": [
+        "Polaris",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>Polaris Web Components 1.1  is now available on the stable Polaris CDN channels. This is the first minor release under the CDN's new <a href=\"https://shopify.dev/changelog/the-polaris-cdn-is-adopting-semantic-versioning\" target=\"_blank\" class=\"body-link\">semantic versioning model</a>. </p>\n<p>The following URLs now serve Polaris 1.1</p>\n<pre><code>&lt;script src=&quot;https://cdn.shopify.com/shopifycloud/polaris.js&quot;&gt;&lt;/script&gt;\n&lt;script src=&quot;https://cdn.shopify.com/shopifycloud/polaris-1.js&quot;&gt;&lt;/script&gt;\n</code></pre>\n<p>Apps using <code>polaris.js</code> or <code>polaris-1.js</code> receive the update automatically. No action is required.</p>\n<p>If you need to remain on this version, you can pin your app to Polaris 1.1:</p>\n<pre><code>&lt;script src=&quot;https://cdn.shopify.com/shopifycloud/polaris-1.1.js&quot;&gt;&lt;/script&gt;\n</code></pre>\n<h2>What's new in Polaris 1.1</h2>\n<h3>New components</h3>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/app-home/v1.1/web-components/feedback-and-status-indicators/empty-state\" target=\"_blank\" class=\"body-link\"><code>EmptyState</code></a>. For empty lists, tables, and pages. Inside a <code>TableBody</code> it renders as a full-width message beneath the table headers.  </li>\n<li><a href=\"https://shopify.dev/docs/api/app-home/v1.1/web-components/typography-and-content/number\" target=\"_blank\" class=\"body-link\"><code>Number</code></a>. Inline numeric text with tabular figures, so columns of numbers line up.</li>\n<li><a href=\"https://shopify.dev/docs/api/app-home/v1.1/web-components/feedback-and-status-indicators/progress\" target=\"_blank\" class=\"body-link\"><code>Progress</code></a>.  Show how far a measurable task or goal has advanced.</li>\n</ul>\n<h3>New properties</h3>\n<ul>\n<li><strong><code>fontSize</code> on <a href=\"https://shopify.dev/docs/api/app-home/v1.1/web-components/typography-and-content/heading\" target=\"_blank\" class=\"body-link\"><code>Heading</code></a>, <a href=\"https://shopify.dev/docs/api/app-home/v1.1/web-components/typography-and-content/paragraph\" target=\"_blank\" class=\"body-link\"><code>Paragraph</code></a>, and <a href=\"https://shopify.dev/docs/api/app-home/v1.1/web-components/typography-and-content/text\" target=\"_blank\" class=\"body-link\"><code>Text</code></a></strong>: Sets the text size directly.  </li>\n<li><strong><code>visibleMonths</code> on <a href=\"https://shopify.dev/docs/api/app-home/v1.1/web-components/forms/date-picker\" target=\"_blank\" class=\"body-link\"><code>DatePicker</code></a></strong>: Show one month, two months, or let the picker decide. Accepts <code>auto</code>, <code>1</code>, or <code>2</code>.  </li>\n<li><strong><code>supplementalStart</code> on <a href=\"https://shopify.dev/docs/api/app-home/v1.1/web-components/layout-and-structure/page\" target=\"_blank\" class=\"body-link\"><code>Page</code></a></strong>: Content placed before the main page content.</li>\n</ul>\n<h3>Bug fixes</h3>\n<ul>\n<li><strong>Overlays.</strong> The <code>show</code>, <code>hide</code>, <code>aftershow</code>, <code>afterhide</code>, and <code>aftertoggle</code> events no longer bubble, matching <code>toggle</code>. Listen on the overlay itself, or use the matching <code>on*</code> properties. Also fixed overlays closing when a drag ends outside them.  </li>\n<li><a href=\"https://shopify.dev/docs/api/app-home/v1.1/web-components/layout-and-structure/page\" target=\"_blank\" class=\"body-link\"><strong><code>Page</code></strong></a>. Fixed header alignment and spacing, long heading truncation, print layout, and horizontal overflow on narrow screens.  </li>\n<li><a href=\"https://shopify.dev/docs/api/app-home/v1.1/web-components/overlays/modal\" target=\"_blank\" class=\"body-link\"><strong><code>Modal</code></strong></a>. Fixed unintended dismissal when a click or drag crosses the modal edge, focus return, heading overflow, and behavior after a modal is moved in the page. Buttons now take their <code>variant</code> from the slot they sit in, and any <code>variant</code> you set yourself still wins.  </li>\n<li><a href=\"https://shopify.dev/docs/api/app-home/v1.1/web-components/overlays/popover\" target=\"_blank\" class=\"body-link\"><strong><code>Popover</code></strong></a> and <a href=\"https://shopify.dev/docs/api/app-home/v1.1/web-components/actions/menu\" target=\"_blank\" class=\"body-link\"><code>Menu</code></a>. Fixed overflow scrolling, positioning, resizing after open, delayed hiding in Safari, and Escape closing an enclosing modal.  </li>\n<li><a href=\"https://shopify.dev/docs/api/app-home/v1.1/web-components/typography-and-content/tooltip\" target=\"_blank\" class=\"body-link\"><strong><code>Tooltip</code></strong></a>. Fixed positioning, off-center first render, inherited text color, and an error in browsers with partial Popover API support.  </li>\n<li><a href=\"https://shopify.dev/docs/api/app-home/v1.1/web-components/forms/date-picker\" target=\"_blank\" class=\"body-link\"><strong><code>DatePicker</code></strong></a>. Fixed weekday headings and screen reader announcements across locales. Setting the same <code>value</code> back onto the picker, which controlled React components do after a selection, no longer fires a second <code>input</code> and <code>change</code> event, so <code>onChange</code> runs once instead of twice. The picker expands to fill the available width by default.  </li>\n<li><a href=\"https://shopify.dev/docs/api/app-home/v1.1/web-components/forms/select\" target=\"_blank\" class=\"body-link\"><strong><code>Select</code></strong></a>. Fixed an empty value showing before the options parse.  </li>\n<li><a href=\"https://shopify.dev/docs/api/app-home/v1.1/web-components/forms/number-field\" target=\"_blank\" class=\"body-link\"><strong><code>NumberField</code></strong></a>. Fixed the default <code>max</code>. Now accepts scientific notation.  </li>\n<li><a href=\"https://shopify.dev/docs/api/app-home/v1.1/web-components/forms/text-area\" target=\"_blank\" class=\"body-link\"><strong><code>TextArea</code></strong></a>. Fixed label alignment and keyboard shortcuts.  </li>\n<li><a href=\"https://shopify.dev/docs/api/app-home/v1.1/web-components/forms/date-field\" target=\"_blank\" class=\"body-link\"><strong><code>DateField</code></strong></a>. Fixed calendar dismissal in Safari. Now sizes like every other field.  </li>\n<li><a href=\"https://shopify.dev/docs/api/app-home/v1.1/web-components/forms/color-picker\" target=\"_blank\" class=\"body-link\"><strong><code>ColorPicker</code></strong></a>. Fixed single-click selection.  </li>\n<li><strong>All fields.</strong> Fields with <code>autocomplete=&quot;off&quot;</code> now also tell password managers to skip them.</li>\n</ul>\n<h3>Deprecated</h3>\n<ul>\n<li><strong><code>fontVariantNumeric</code> on <a href=\"https://shopify.dev/docs/api/app-home/v1.1/web-components/typography-and-content/text\" target=\"_blank\" class=\"body-link\"><code>Text</code></a> and <a href=\"https://shopify.dev/docs/api/app-home/v1.1/web-components/typography-and-content/paragraph\" target=\"_blank\" class=\"body-link\"><code>Paragraph</code></a></strong> still works, however we recommend using the new <a href=\"https://shopify.dev/docs/api/app-home/v1.1/web-components/typography-and-content/number\" target=\"_blank\" class=\"body-link\"><code>Number</code></a> component instead.</li>\n</ul>\n<h2>Related docs</h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/app-home\" target=\"_blank\" class=\"body-link\">App Home documentation</a></li>\n<li><a href=\"https://shopify.dev/changelog/the-polaris-cdn-is-adopting-semantic-versioning\" target=\"_blank\" class=\"body-link\">Polaris CDN is adopting semantic versioning</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Polaris CDN 1.1が安定版として公開",
+          "summarizedJa": "Polaris Web Components 1.1が安定版としてCDNで利用可能になりました。新しいセマンティックバージョニングモデルの下で最初のマイナーリリースとなり、EmptyState、Number、Progressなどの新しいコンポーネントが追加されました。polaris.jsまたはpolaris-1.jsを使用しているアプリは自動的に更新され、特別な対応は不要ですが、特定のバージョンに固定することも可能です。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-23T00:02:27.984Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 3412,
+            "output": 245
+          },
+          "estimatedCost": 0.013911
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-plan-launches-events-and-tests-with-clearer-and-more-granular-controls-in-rollouts",
+      "source": "shopify-changelog",
+      "title": "Plan launches, events, and tests with clearer and more granular controls in Rollouts",
+      "link": "https://changelog.shopify.com/posts/plan-launches-events-and-tests-with-clearer-and-more-granular-controls-in-rollouts",
+      "publishedAt": "2026-09-22T16:41:00.000Z",
+      "collectedAt": "2026-09-23T00:01:31.499Z",
+      "category": [
+        "Admin"
+      ],
+      "description": "\n        <p>Rollouts has a redesigned setup experience that makes it easier to plan a launch, run a temporary event, or test changes to your store.</p>\n\n<ul>\n<li><strong>Reflect your intent</strong>: Choose the timing and traffic percentage for your rollout. Rollout settings will adjust to reflect your intent as a launch, temporary event, or an experiment.</li>\n<li><strong>Combine multiple changes</strong>: Make changes to your theme, checkout and customer account pages in a single rollout. </li>\n<li><strong>Understand your audience</strong>: See what percentage of traffic your rollout reaches and how it’s split between test versions.</li>\n<li><strong>Review conflicts</strong>: See conflicting settings directly in the setup flow so you can address them earlier.</li>\n</ul>\n\n<p>Learn more about the new Rollouts configuration in our <a href=\"https://help.shopify.com/en/manual/markets/rollouts/rollout-types\">help documentation</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Rolloutsで、より明確で詳細なコントロールにより、ローンチ、イベント、テストを計画可能に",
+          "summarizedJa": "Rollouts機能が再設計され、ストアのローンチ、期間限定イベント、テスト実施がより簡単になりました。意図に応じた設定の自動調整、テーマ・チェックアウト・顧客アカウントページの一括変更、トラフィック配分の可視化、設定競合の事前確認など、より細かい制御が可能になっています。",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-09-23T00:02:49.711Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1168,
+            "output": 242
+          },
+          "estimatedCost": 0.007134
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-shop-pay-installments-can-now-be-enabled-on-multiple-business-entities",
+      "source": "shopify-changelog",
+      "title": "Shop Pay Installments can now be enabled on multiple business entities",
+      "link": "https://changelog.shopify.com/posts/shop-pay-installments-can-now-be-enabled-on-multiple-business-entities",
+      "publishedAt": "2026-09-22T16:00:00.000Z",
+      "collectedAt": "2026-09-23T00:01:31.499Z",
+      "category": [
+        "Payments"
+      ],
+      "description": "\n        <p>Shop Pay Installments, Shop Pay’s built-in buy now, pay later solution, is available for merchants and buyers located in the United States, Canada, and the United Kingdom.</p>\n\n<p>Merchants who operate multiple business entities in these supported countries can now enable Shop Pay Installments on all entities, not just the primary entity. </p>\n\n<p>Enable Shop Pay Installments for <a href=\"https://help.shopify.com/en/manual/payments/shop-pay-installments/eligibility\">eligible</a> entities from your Shopify Payments <a href=\"https://admin.shopify.com/settings/payments/shopify-payments/advanced-settings\">payment method settings</a>.</p>\n\n<p>Learn more about <a href=\"https://help.shopify.com/en/manual/payments/shop-pay-installments\">Shop Pay Installments</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shop Pay Installmentsが複数のビジネスエンティティで有効化可能に",
+          "summarizedJa": "Shop Pay Installments（後払い決済機能）が、米国、カナダ、英国で複数のビジネスエンティティを運営するマーチャントにおいて、プライマリーエンティティだけでなく全てのエンティティで有効化できるようになりました。対象国の適格なエンティティは、Shopify Paymentsの設定から有効化が可能です。現在、日本ではShop Pay Installmentsは提供されていません。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 5,
+          "analyzedAt": "2026-09-23T00:02:55.895Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1128,
+            "output": 247
+          },
+          "estimatedCost": 0.007089
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-removing-marketcurrencysettingsupdate-mutation",
+      "source": "developer-changelog",
+      "title": "Removing marketCurrencySettingsUpdate mutation",
+      "link": "https://shopify.dev/changelog/removing-marketcurrencysettingsupdate-mutation",
+      "publishedAt": "2026-09-22T16:00:00.000Z",
+      "collectedAt": "2026-09-23T00:01:36.328Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Breaking API Change",
+        "Admin GraphQL API",
+        "2027-01"
+      ],
+      "description": " <div class=\"\"><pre><code class=\"language-markdown\">As of Admin GraphQL API version `2027-01`, the `marketCurrencySettingsUpdate` mutation is removed, along with the `MarketCurrencySettingsUpdatePayload`, `MarketCurrencySettingsUserError`, and  `MarketCurrencySettingsUserErrorCode` types. The mutation already returns an error for every request, so this removes an endpoint that can no longer be used.                                                         \n                                                                                                             \n  ## What changed                                                                                            \n                                                                                                             \n  In API version `2027-01`, the Admin GraphQL API removes:                                                   \n                                                                                                             \n  - `marketCurrencySettingsUpdate`                                                                           \n  - `MarketCurrencySettingsUpdatePayload`                                                                    \n  - `MarketCurrencySettingsUserError`                                                                        \n  - `MarketCurrencySettingsUserErrorCode`                                                                    \n                                                                                                             \n  The mutation was deprecated when Markets Home launched in version `2025-04`. Since `2025-04` became inaccessible, every call has returned the `UNIFIED_MARKETS_ENABLED` user error instead of updating anything. \n                                                                                                             \n  To create or update market currency settings, use                                                          \n[`marketCreate`](https://shopify.dev/docs/api/admin-graphql/latest/mutations/marketCreate) and               \n[`marketUpdate`](https://shopify.dev/docs/api/admin-graphql/latest/mutations/marketUpdate). Both accept currency settings directly, so you don't need a separate call.                                               \n                                                                                                             \n  Versions `2026-10` and earlier are unaffected and keep the mutation for the remainder of their supported  lifetime.                                                                                                    \n                                                                                                             \n  ## Who's affected                                                                                          \n                                                                                                             \n  You're affected if your app still calls `marketCurrencySettingsUpdate`. Those calls aren't updating        \ncurrency settings today, and in `2027-01` they'll fail differently: the field no longer exists, so the       \nrequest is rejected at validation.                                                                           \n                                                                                                             \n  You're not affected if you already use `marketCreate` and `marketUpdate` to manage market currency settings.                                                                                                    \n                                                                                                             \n  ## Action required                                                                                         \n                                                                                                             \n  Replace any remaining calls to `marketCurrencySettingsUpdate`:                                             \n                                                                                                             \n  1. Use `marketCreate` when you create a market and its currency settings.                                  \n  2. Use `marketUpdate` when you change the currency settings of an existing market.                         \n  3. Pass the same currency settings directly in the `marketCreate` or `marketUpdate` input.                 \n                                                                                                             \n  Because a request that references a removed field fails validation, an unmigrated call in `2027-01` fails the entire request rather than returning a user error for one mutation.                                      \n                                                                                                             \n  ## Related docs                                                                                            \n                                                                                                             \n  - [`marketCreate` mutation](https://shopify.dev/docs/api/admin-graphql/latest/mutations/marketCreate)      \n  - [`marketUpdate` mutation](https://shopify.dev/docs/api/admin-graphql/latest/mutations/marketUpdate)      \n  - [`Market` object](https://shopify.dev/docs/api/admin-graphql/latest/objects/Market)                      \n</code></pre>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "marketCurrencySettingsUpdate ミューテーションの削除",
+          "summarizedJa": "Admin GraphQL API バージョン 2027-01 から、marketCurrencySettingsUpdate ミューテーションと関連する型が削除されます。このミューテーションは既に全てのリクエストでエラーを返すようになっており、実質的に使用不可能な状態でした。今後は marketCreate および marketUpdate ミューテーションを使用して、マーケット通貨設定を直接管理する必要があります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-23T00:03:00.175Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1810,
+            "output": 223
+          },
+          "estimatedCost": 0.008775
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-unlimited-private-plans-and-target-stores-in-shopify-app-pricing",
       "source": "developer-changelog",
