@@ -1,6 +1,74 @@
 {
-  "lastUpdated": "2026-09-23T00:01:36.334Z",
+  "lastUpdated": "2026-09-24T00:01:11.501Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-improved-shipping-and-duty-data-in-analytics",
+      "source": "shopify-changelog",
+      "title": "Improved shipping and duty data in Analytics",
+      "link": "https://changelog.shopify.com/posts/improved-shipping-and-duty-data-in-analytics",
+      "publishedAt": "2026-09-23T19:45:00.000Z",
+      "collectedAt": "2026-09-24T00:01:03.385Z",
+      "category": [
+        "Analytics"
+      ],
+      "description": "\n        <p>We now provides a more complete and timely view of shipping costs and duties. </p>\n\n<p><strong>What's changed:</strong><br>\nProfitability data includes both duties and other shipping costs when they apply to the same order &amp; better supports orders in different currencies.</p>\n\n<p><strong>What to expect:</strong><br>\nYou might notice changes to shipping costs, duties, or profit values in custom or Shopify-created reports that use this data such as the \"Average profit margin by market\" &amp; \"Profit margin by order\" reports. </p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Analytics における配送料と関税データの改善",
+          "summarizedJa": "Shopify Analytics の収益性データにおいて、配送料と関税の表示がより完全かつタイムリーになりました。同一注文に適用される関税とその他の配送コストの両方が含まれるようになり、異なる通貨での注文にも対応しています。「市場別の平均利益率」や「注文別の利益率」などのレポートで、配送料、関税、利益の値に変化が見られる可能性があります。",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-24T00:01:16.906Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1037,
+            "output": 233
+          },
+          "estimatedCost": 0.006606
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-setting-includerestofworld-to-true-returns-an-error-in-api-version-2027-01",
+      "source": "developer-changelog",
+      "title": "Setting includeRestOfWorld to true returns an error in API version 2027-01",
+      "link": "https://shopify.dev/changelog/setting-includerestofworld-to-true-returns-an-error-in-api-version-2027-01",
+      "publishedAt": "2026-09-23T16:00:00.000Z",
+      "collectedAt": "2026-09-24T00:01:11.496Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Breaking API Change",
+        "Admin GraphQL API",
+        "2027-01"
+      ],
+      "description": " <div class=\"\"><p>Starting with GraphQL Admin API version <code>2027-01</code>, setting the deprecated <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/input-objects/DiscountCountriesInput#fields-includeRestOfWorld\" target=\"_blank\" class=\"body-link\"><code>DiscountCountriesInput.includeRestOfWorld</code></a> field to <code>true</code> returns a <code>BAD_REQUEST</code> error. Apps that use this value must specify every applicable country through <code>add</code> before upgrading. Apps on <code>2026-10</code> and earlier keep their existing behavior while those versions are supported.</p>\n<h2>What changed</h2>\n<p>As of API version <code>2027-01</code>, <code>includeRestOfWorld</code> remains in <code>DiscountCountriesInput</code>, but passing <code>true</code> returns this error:</p>\n<pre><code class=\"language-text\">includeRestOfWorld is no longer supported. Specify the applicable country codes explicitly.\n</code></pre>\n<p>Passing <code>false</code> retains its existing behavior, and passing <code>null</code> remains a no-op.</p>\n<p>Replace <code>includeRestOfWorld: true</code> with an explicit list of every country where the shipping discount should apply. For example:</p>\n<p>Before, on <code>2026-10</code> and earlier:</p>\n<pre><code class=\"language-json\">{\n  &quot;countries&quot;: {\n    &quot;add&quot;: [&quot;CA&quot;, &quot;US&quot;],\n    &quot;includeRestOfWorld&quot;: true\n  }\n}\n</code></pre>\n<p>After, on <code>2027-01</code>:</p>\n<pre><code class=\"language-json\">{\n  &quot;countries&quot;: {\n    &quot;add&quot;: [&quot;CA&quot;, &quot;US&quot;, &quot;AU&quot;, &quot;BR&quot;, &quot;JP&quot;]\n  }\n}\n</code></pre>\n<p>Use the country codes that match the discount's intended eligibility. The codes above are only an example.</p>\n<h2>Who's affected</h2>\n<p>This change affects apps that send <code>includeRestOfWorld: true</code> through <code>DiscountCountriesInput</code> while using Admin GraphQL API version <code>2027-01</code> or later. Public apps that explicitly request unstable receive the new behavior as soon as it is deployed.</p>\n<p>Apps that send <code>false</code> or <code>null</code> aren't affected by this behavior change. Apps on <code>2026-10</code> and earlier continue to use the existing behavior while those versions are supported.</p>\n<h2>Why this matters</h2>\n<p>Rest of World is a legacy shipping-zone concept that is being retired as shops move to <a href=\"https://shopify.dev/docs/apps/build/orders-fulfillment/market-driven-shipping/feature-preview\" target=\"_blank\" class=\"body-link\">market-driven shipping</a>. In that model, shipping-discount eligibility is represented by explicit countries rather than a dynamic Rest of World bucket. Requiring apps that send <code>includeRestOfWorld: true</code> to provide country codes prevents them from depending on a concept that will no longer exist.</p>\n<h2>What to do</h2>\n<p>Before upgrading to <code>2027-01</code>:</p>\n<ol>\n<li>Search your discount create and update mutations for <code>includeRestOfWorld: true</code>.</li>\n<li>Replace it with the complete applicable country list in <code>add</code>.</li>\n<li>Stop sending <code>includeRestOfWorld</code> so your app is prepared for its eventual removal from the schema.</li>\n<li>Test the updated mutations against <code>2027-01</code> in a development store and confirm the discount contains the expected countries.</li>\n</ol>\n<p>If you can't migrate immediately, continue using <code>2026-10</code> or another earlier supported API version until the migration is complete.</p>\n<h2>Related docs</h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/latest/input-objects/DiscountCountriesInput\" target=\"_blank\" class=\"body-link\">DiscountCountriesInput</a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/discountCodeFreeShippingCreate\" target=\"_blank\" class=\"body-link\">Create a code-based free shipping discount</a></li>\n<li><a href=\"https://shopify.dev/docs/apps/build/discounts\" target=\"_blank\" class=\"body-link\">Build discounts in Shopify apps</a></li>\n<li><a href=\"https://shopify.dev/docs/api/usage/versioning\" target=\"_blank\" class=\"body-link\">API versioning</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "APIバージョン2027-01でincludeRestOfWorldをtrueに設定するとエラーが返される",
+          "summarizedJa": "GraphQL Admin APIバージョン2027-01から、ディスカウント設定で非推奨の`includeRestOfWorld`フィールドを`true`に設定すると`BAD_REQUEST`エラーが返されるようになります。この変更により、アプリは「その他の世界」という概念ではなく、適用可能なすべての国コードを明示的に指定する必要があります。マーケット駆動型の配送モデルへの移行に伴う重要な破壊的変更です。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-24T00:01:28.157Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2237,
+            "output": 261
+          },
+          "estimatedCost": 0.010626
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-events-subscription-query-complexity-limit-is-changing-to-100-points",
       "source": "developer-changelog",
