@@ -1,6 +1,39 @@
 {
-  "lastUpdated": "2026-09-24T00:01:11.501Z",
+  "lastUpdated": "2026-09-25T00:01:08.064Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-polaris-2-0-release-candidate",
+      "source": "developer-changelog",
+      "title": "Polaris 2.0 release candidate",
+      "link": "https://shopify.dev/changelog/polaris-2-0-release-candidate",
+      "publishedAt": "2026-09-24T16:30:00.000Z",
+      "collectedAt": "2026-09-25T00:01:06.828Z",
+      "category": [
+        "Polaris",
+        "New"
+      ],
+      "description": " <div class=\"\"><p>The Polaris 2.0 release candidate is now available for embedded App Home interfaces. It includes the Shopify admin’s new visual styles, allowing your app to adopt the new look.</p>\n<p>The new Shopify admin design began rolling out progressively to merchants on September 15, 2026. You can adopt the release candidate now and test your app across both the previous and new Shopify admin designs.</p>\n<h2>What changes when you adopt Polaris 2.0</h2>\n<p>When your app uses polaris-2.0-rc.js inside the Shopify admin, its Polaris Web Components match the current visual design of that store:</p>\n<ul>\n<li>In a store with the new Shopify admin design, components use the new color, typography, spacing, and icons.  </li>\n<li>In a store with the previous Shopify admin design, components keep the same visual style as polaris-1.js.</li>\n</ul>\n<p>If you render the components outside the Shopify admin, they default to the new visual style. This lets you test the new appearance before you have access to a shop with the new Shopify admin design.</p>\n<p>Adopting Polaris 2.0 is explicit. Apps using polaris-1.js or the legacy polaris.js URL don't move to Polaris 2.0 automatically.</p>\n<h2>What this means for Built for Shopify</h2>\n<p>If your app is part of Built for Shopify, you have until <strong>May 1, 2027</strong> to update your embedded App Home interface to match the Shopify admin's visual style.</p>\n<p>Using the Polaris 2.0 release candidate lets you prepare during the progressive rollout of the Shopify admin. The components match the visual design available to each store, so the same app can support merchants on either Shopify admin design.</p>\n<h2>How to test the release candidate</h2>\n<p>Load the release candidate from the Shopify CDN:</p>\n<pre><code class=\"language-html\">&lt;script src=&quot;https://cdn.shopify.com/shopifycloud/polaris-2.0-rc.js&quot;&gt;&lt;/script&gt;\n</code></pre>\n<p>Then test your app in the following contexts:</p>\n<ul>\n<li>A store with the new Shopify admin design, if you have access to one.  </li>\n<li>A store with the previous Shopify admin design.  </li>\n<li>Outside the Shopify admin, where components default to the new visual style.</li>\n</ul>\n<p>If your app has fixed or sticky content near the bottom of the viewport, use the environment API's <a href=\"https://shopify.dev/docs/api/app-home/latest/apis/authentication-and-data/environment-api\" target=\"_blank\" class=\"body-link\">--shopify-safe-area-inset-bottom CSS variable</a> so the floating Sidekick bar doesn't cover your interface.</p>\n<h2>Migrate from Polaris React</h2>\n<p>If your embedded App Home interface uses Polaris React, follow the <a href=\"https://shopify.dev/docs/apps/build/app-home/migrate-from-polaris-react\" target=\"_blank\" class=\"body-link\">migration guide for moving to Polaris Web Components</a>.</p>\n<p>Start with the Page, Section, and Button components. These components have the largest visual effect when aligning your app with the new Shopify admin design.</p>\n<p>If your app already uses Polaris Web Components, update the CDN URL to the release candidate and test your existing interface. If your app doesn't use Polaris Web Components, migrate first so you can adopt Polaris 2.0.</p>\n<h2>Extensions update automatically</h2>\n<p>Admin UI extensions and App Home UI extensions automatically match the Shopify admin design available to each merchant. Their functionality doesn't change, and you don't need to update extension code to receive the new styles.</p>\n<h2>Related docs</h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/apps/build/app-home/migrate-from-polaris-react\" target=\"_blank\" class=\"body-link\">Migrate from Polaris React to Polaris Web Components</a>  </li>\n<li><a href=\"https://shopify.dev/docs/api/app-home\" target=\"_blank\" class=\"body-link\">App Home documentation</a>  </li>\n<li><a href=\"https://shopify.dev/docs/api/app-home/latest/apis/authentication-and-data/environment-api\" target=\"_blank\" class=\"body-link\">Environment API</a>  </li>\n<li><a href=\"https://shopify.dev/changelog/the-polaris-cdn-is-adopting-semantic-versioning\" target=\"_blank\" class=\"body-link\">Polaris CDN semantic versioning</a>  </li>\n<li><a href=\"https://help.shopify.com/en/manual/shopify-admin/shopify-admin-overview\" target=\"_blank\" class=\"body-link\">Shopify admin overview</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Polaris 2.0リリース候補版の公開",
+          "summarizedJa": "埋め込みApp HomeインターフェースでPolaris 2.0リリース候補版が利用可能になりました。新しいShopify管理画面のビジュアルスタイルに対応し、ストアの管理画面デザインに応じて自動的に適切なスタイルが適用されます。Built for Shopifyアプリは2027年5月1日までに対応が必要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 5
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-09-25T00:01:12.992Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 2191,
+            "output": 231
+          },
+          "estimatedCost": 0.010037999999999998
+        }
+      }
+    },
     {
       "id": "shopify-changelog-posts-improved-shipping-and-duty-data-in-analytics",
       "source": "shopify-changelog",
