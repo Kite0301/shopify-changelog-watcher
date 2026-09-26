@@ -1,6 +1,172 @@
 {
-  "lastUpdated": "2026-09-25T00:01:08.064Z",
+  "lastUpdated": "2026-09-26T00:01:14.896Z",
   "entries": [
+    {
+      "id": "shopify-changelog-posts-tax-is-now-calculated-on-return-shipping-fees",
+      "source": "shopify-changelog",
+      "title": "Tax is now calculated on return shipping fees",
+      "link": "https://changelog.shopify.com/posts/tax-is-now-calculated-on-return-shipping-fees",
+      "publishedAt": "2026-09-25T16:00:00.000Z",
+      "collectedAt": "2026-09-26T00:01:14.882Z",
+      "category": [
+        "Orders"
+      ],
+      "description": "\n        <p>Starting October 23, 2026, for merchants using Shopify Tax or Tax Platform in the United States, return shipping fees will be taxed like any other shipping charge. Shopify calculates and applies the tax automatically, so you don’t need to fix under-collection on returns.</p>\n\n<p>When you create a return, you’ll see the estimated tax. When you process the return, we record the final amount. These taxes flow into your tax reports automatically.</p>\n\n<p>This update applies to orders shipped to US addresses. Your existing shipping tax settings still apply — if you’ve set shipping to be untaxed in a state, return shipping fees in that state remain untaxed.</p>\n\n<p>*<em>What you need to do: *</em><br>\n- If you use a manual workaround today to calculate, collect, import, or reconcile tax on return shipping fees, review it before October 23 to avoid double-counting tax. <br>\n- Otherwise, no action is required.</p>\n\n<p><a href=\"https://help.shopify.com/manual/fulfillment/managing-orders/returns/return-rules#tax-on-return-fees\">Learn more</a></p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "返品送料に対する税金計算が自動化されます",
+          "summarizedJa": "2026年10月23日から、米国でShopify TaxまたはTax Platformを使用しているマーチャントは、返品送料に対する税金が通常の送料と同様に自動計算されるようになります。手動で税金を計算している場合は、二重計上を避けるため10月23日までに見直しが必要です。この変更は米国向け配送のみが対象で、既存の送料税設定が引き続き適用されます。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 5,
+          "analyzedAt": "2026-09-26T00:01:20.803Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1182,
+            "output": 238
+          },
+          "estimatedCost": 0.007116000000000001
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-ai-toolkit-skills-have-been-consolidated",
+      "source": "developer-changelog",
+      "title": "AI Toolkit skills have been consolidated to `shopify`",
+      "link": "https://shopify.dev/changelog/ai-toolkit-skills-have-been-consolidated",
+      "publishedAt": "2026-09-25T16:00:00.000Z",
+      "collectedAt": "2026-09-26T00:01:13.115Z",
+      "category": [
+        "Action Required",
+        "AI Toolkit",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>With today's release of <a href=\"https://shopify.dev/docs/apps/build/ai-toolkit\" target=\"_blank\" class=\"body-link\">AI Toolkit</a>, all existing <code>shopify-</code> skills are consolidated into a single <code>shopify</code> skill. If you use AI Toolkit skills with agents or <code>npx skills</code>, you might need to update your environment.</p>\n<h2>What changed</h2>\n<p>Shopify skills content in AI Toolkit was previously distributed across many skills, such as <code>shopify-dev-onboarding</code>, <code>shopify-admin</code>, and <code>shopify-functions</code>. The agent plugins and the <a href=\"https://github.com/Shopify/shopify-ai-toolkit\" target=\"_blank\" class=\"body-link\">AI Toolkit skills repository</a> now expose a consolidated <code>shopify</code> skill that covers these use cases and supports development and merchant workflows.</p>\n<h2>Who's affected</h2>\n<p>You're affected if you install or run AI Toolkit skills through:</p>\n<ul>\n<li>Agent environments that support plugins</li>\n<li><code>npx skills</code></li>\n<li>Similar tools that install individual <code>shopify-</code> skills</li>\n</ul>\n<p>Users of the <code>ucp</code> skill and Dev MCP are unaffected.</p>\n<h2>Why this matters</h2>\n<p>The previous skill architecture sometimes led to agent confusion and caused truncation of skill descriptions when they took up too much of the context window. Consolidating content into a single <code>shopify</code> skill reduces this ambiguity and the number of skill descriptions in agent context.</p>\n<h2>What to do</h2>\n<p>Many agent environments that support plugins update skills automatically. If yours doesn't, or if you want to update immediately, use the agent's plugin management tools to update the plugin.</p>\n<p>If you use <code>npx skills</code>, run the following commands:</p>\n<pre><code class=\"language-bash\"># remove deprecated skills, add -g for global install\nnpx skills remove -y shopify-admin shopify-app-pricing shopify-app-store-review shopify-custom-data shopify-customer shopify-dev shopify-functions shopify-hydrogen shopify-liquid shopify-onboarding-dev shopify-onboarding-merchant shopify-partner shopify-payments-apps shopify-polaris-admin-extensions shopify-polaris-app-home shopify-polaris-checkout-extensions shopify-polaris-customer-account-extensions shopify-pos-ui shopify-shopifyql shopify-storefront-graphql shopify-use-shopify-cli\n\n# reinstall the new skill\nnpx skills add Shopify/shopify-ai-toolkit --skill shopify\n</code></pre>\n<p>These commands remove the deprecated <code>shopify-</code> skills from your environment and install the unified <code>shopify</code> skill from the AI Toolkit repository. Use <code>-g</code> if you installed skills globally, and run these commands in each environment where you previously installed the old skills.</p>\n<h2>Related docs</h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/apps/build/ai-toolkit\" target=\"_blank\" class=\"body-link\">Learn about Shopify AI Toolkit</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "AI Toolkitのスキルが単一の`shopify`スキルに統合されました",
+          "summarizedJa": "Shopify AI Toolkitにおいて、これまで分散していた複数の`shopify-`プレフィックス付きスキル（shopify-admin、shopify-functionsなど）が、単一の`shopify`スキルに統合されました。AIエージェントやnpx skillsを使用している開発者は、古いスキルを削除し、新しい統合スキルを再インストールする必要があります。この変更により、エージェントの混乱が軽減され、コンテキストウィンドウの効率が向上します。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-26T00:05:01.629Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1762,
+            "output": 267
+          },
+          "estimatedCost": 0.009291
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-filterable-logs-and-health-metrics-for-custom-apps-are-now-in-the-developer-dashboard",
+      "source": "shopify-changelog",
+      "title": "Filterable logs and health metrics for custom apps are now in the Developer Dashboard",
+      "link": "https://changelog.shopify.com/posts/filterable-logs-and-health-metrics-for-custom-apps-are-now-in-the-developer-dashboard",
+      "publishedAt": "2026-09-25T15:00:00.000Z",
+      "collectedAt": "2026-09-26T00:01:14.883Z",
+      "category": [
+        "Apps"
+      ],
+      "description": "\n        <p>The Developer Dashboard shows how your custom apps perform, not only how they are set up. </p>\n\n<p>Open any custom app to see its API request volume, error rates, webhook delivery health, and embedded admin page load speed. Each measurement has a clear threshold, so you can tell good from bad at a glance. A single filterable stream holds every API request, webhook delivery, and app event, so you can find the cause when an app stops working. </p>\n\n<p>A new home page shows what needs your attention across all of your apps. Agencies and developers who build your custom apps see the same data.</p>\n\n<p>Come see what's new:<br>\n1. Explore the new experience at <a href=\"https://dev.shopify.com/dashboard\">dev.shopify.com/dashboard</a>.<br>\n2. <a href=\"https://shopify.dev/docs/apps/build/dev-dashboard\">Read more in the docs</a>.</p>\n\n      ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "カスタムアプリのフィルタ可能なログと健全性メトリクスがデベロッパーダッシュボードに追加",
+          "summarizedJa": "デベロッパーダッシュボードで、カスタムアプリのAPIリクエスト量、エラー率、Webhook配信状態、管理画面の読み込み速度などのパフォーマンス指標が確認できるようになりました。フィルタ可能なログストリームにより、APIリクエスト、Webhook配信、アプリイベントを一元管理でき、問題発生時の原因特定が容易になります。新しいホームページでは、全アプリで対応が必要な項目を一目で確認でき、カスタムアプリを構築する開発者や代理店も同じデータにアクセスできます。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-09-26T00:05:09.200Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1150,
+            "output": 320
+          },
+          "estimatedCost": 0.00825
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-the-new-dev-dashboard",
+      "source": "developer-changelog",
+      "title": "The new Dev Dashboard: your command center for building",
+      "link": "https://shopify.dev/changelog/the-new-dev-dashboard",
+      "publishedAt": "2026-09-25T15:00:00.000Z",
+      "collectedAt": "2026-09-26T00:01:13.115Z",
+      "category": [
+        "Dev Dashboard",
+        "Update"
+      ],
+      "description": " <div class=\"\"><p>Today we're sharing the newest wave of improvements to the Dev Dashboard. You told us, in the community forums and in support conversations, that common work like managing collaborator access or understanding app health took too much juggling. </p>\n<p>This release brings that work into one home for your apps and the stores you work in: store management, collaborator access, and app health—one place to see how your business is doing and act on whatever needs attention, across all your apps and stores.</p>\n<p>Here's what's new, and where we're headed next.</p>\n<br/><h2>What's changed</h2>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "新しいDev Dashboard:アプリ開発のコマンドセンター",
+          "summarizedJa": "開発者向けのDev Dashboardが大幅に改善されました。コラボレーターアクセスの管理やアプリの健全性確認など、これまで煩雑だった作業が一箇所で完結できるようになります。すべてのアプリとストアの管理、コラボレーター権限、アプリの状態を統合的に確認し、必要な対応を行えるようになりました。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-26T00:05:14.263Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1049,
+            "output": 229
+          },
+          "estimatedCost": 0.006582
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-shopify-payments-balance-transaction-graphql-type-supports-currency-conversion-type",
+      "source": "developer-changelog",
+      "title": "Shopify Payments Balance Transaction GraphQL type supports currency conversion type",
+      "link": "https://shopify.dev/changelog/shopify-payments-balance-transaction-graphql-type-supports-currency-conversion-type",
+      "publishedAt": "2026-09-25T13:00:00.000Z",
+      "collectedAt": "2026-09-26T00:01:13.115Z",
+      "category": [
+        "API",
+        "Update",
+        "Admin GraphQL API",
+        "2026-10"
+      ],
+      "description": " <div class=\"\"><p>As of GraphQL Admin API version <strong>2026-10</strong>, ShopifyPaymentsTransactionType now includes <code>CURRENCY_CONVERSION</code>  type. </p>\n<p>Learn more about <code>ShopifyPaymentsTransactionType</code> on <a href=\"https://shopify.dev/docs/api/admin-graphql/2024-10/enums/ShopifyPaymentsTransactionType\" target=\"_blank\" class=\"body-link\">Shopify.dev</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "Shopify Payments残高トランザクションのGraphQL型で通貨変換タイプをサポート",
+          "summarizedJa": "GraphQL Admin API バージョン2026-10より、ShopifyPaymentsTransactionTypeに「CURRENCY_CONVERSION（通貨変換）」タイプが追加されました。これにより、Shopify Paymentsの残高トランザクションにおける通貨変換の情報をGraphQL経由で取得できるようになります。決済や通貨処理に関するアプリ開発を行っている開発者に影響があります。",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 2,
+            "technicalImportance": 2
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-09-26T00:05:19.794Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1064,
+            "output": 235
+          },
+          "estimatedCost": 0.006717000000000001
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-polaris-2-0-release-candidate",
       "source": "developer-changelog",
@@ -99,6 +265,41 @@
             "output": 261
           },
           "estimatedCost": 0.010626
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-query-sp-fee-details-with-the-graphql-admin-api",
+      "source": "developer-changelog",
+      "title": " Query SP Fee Details with the GraphQL Admin API",
+      "link": "https://shopify.dev/changelog/query-sp-fee-details-with-the-graphql-admin-api",
+      "publishedAt": "2026-09-23T16:00:00.000Z",
+      "collectedAt": "2026-09-26T00:01:13.115Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-10"
+      ],
+      "description": " <div class=\"\"><p>As of API version 2026-10, the GraphQL Admin API includes a <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/queries/feeDetails\" target=\"_blank\" class=\"body-link\"><code>feeDetails</code> query</a> for retrieving specialized fees charged to a shop.</p>\n<p>No action is required for existing apps.</p>\n<h2>What changed</h2>\n<p>The new <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/queries/feeDetails\" target=\"_blank\" class=\"body-link\"><code>feeDetails</code></a> query returns a connection of <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/objects/FeeDetails\" target=\"_blank\" class=\"body-link\"><code>FeeDetails</code></a> objects. Each <code>FeeDetails</code> object includes:</p>\n<ul>\n<li><code>feeName</code> and <code>amount</code>: The name of the fee and the amount charged.</li>\n<li><code>flatRate</code> and <code>variableRate</code>: The fixed amount and the rate that make up the fee.</li>\n<li><code>taxAmount</code>: The tax charged on the fee.</li>\n<li><code>settlementAmount</code> and <code>settlementCurrencyRate</code>: The fee in its settlement currency and the exchange rate used to convert it.</li>\n<li><code>orderTransaction</code>: The <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/objects/OrderTransaction\" target=\"_blank\" class=\"body-link\"><code>OrderTransaction</code></a> the fee was charged on, if any.</li>\n<li><code>createdAt</code> and <code>processedAt</code>: When the fee was recorded and when it was processed.</li>\n</ul>\n<p>This change is additive and doesn't alter any existing field in the Admin API.</p>\n<h2>Who's affected</h2>\n<p>This change applies to apps that use GraphQL Admin API version 2026-10 or later and need to retrieve specialized fees recorded on a store's transactions. App that use earlier version or that don't work with Shopify Payments fees are unaffected. A store with no recorded fee details returns an empty connection rather than an error.</p>\n<h2>Why this matters</h2>\n<p>You can retrieve the individual fees recorded on a store's transactions and match each one to its order transaction, instead of working from aggregated fee amounts.</p>\n<h2>What to do</h2>\n<p>To use the <code>feeDetails</code>:</p>\n<ol>\n<li>Use GraphQL Admin API version 2026-10 or later.</li>\n<li>Confirm that your app has the <code>read_billing</code> access scope.</li>\n<li>Query <code>feeDetails</code> and select the fields you need on each <code>FeeDetails</code> node</li>\n</ol>\n<h2>Related docs</h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/queries/feeDetails\" target=\"_blank\" class=\"body-link\">feeDetails query reference</a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/objects/FeeDetails\" target=\"_blank\" class=\"body-link\">FeeDetails object reference</a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10\" target=\"_blank\" class=\"body-link\">GraphQL Admin API reference for 2026-10</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-sonnet-4-5": {
+          "titleJa": "GraphQL Admin APIでShopify Paymentsの手数料詳細を取得可能に",
+          "summarizedJa": "APIバージョン2026-10から、GraphQL Admin APIに新しい`feeDetails`クエリが追加されました。このクエリにより、ストアに請求された専門的な手数料の詳細情報（手数料名、金額、税金、決済通貨での金額、関連する注文トランザクションなど）を個別に取得できるようになります。既存のアプリへの影響はなく、利用には`read_billing`スコープが必要です。",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-26T00:05:25.435Z",
+          "model": "claude-sonnet-4-5",
+          "tokenUsage": {
+            "input": 1878,
+            "output": 246
+          },
+          "estimatedCost": 0.009324
         }
       }
     },
