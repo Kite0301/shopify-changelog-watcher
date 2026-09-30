@@ -34,7 +34,9 @@ export function computePriority(
     if (!r) continue;
 
     const areaProbs = Object.values(r.areas);
-    const notExcluded = Object.values(r.excludes ?? {}).reduce((p, ex) => p * (1 - ex), 1);
+    const notExcluded = Object.keys(profile.excludes)
+      .map((ex) => r.excludes?.[ex] ?? 0)
+      .reduce((p, ex) => p * (1 - ex), 1);
     const relevance =
       Math.max(...areaProbs) * notExcluded * (profile.requireJapan ? jev.appliesInJapan : 1);
 

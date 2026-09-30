@@ -21,6 +21,14 @@ const score = z.number().int().min(1).max(5);
 const AnalysisResponseSchema = z.object({
   titleJa: z.string().describe('日本語タイトル'),
   summarizedJa: z.string().describe('日本語要約（2-3文）'),
+  audienceJa: z
+    .string()
+    .describe('対象者（例: 全マーチャント、Plus のマーチャント、Admin API を使うアプリ開発者）'),
+  actionJa: z.string().nullable().describe('対象者が行う必要のある対応。不要なら null'),
+  deadline: z
+    .string()
+    .nullable()
+    .describe('対応期限や変更の適用日（YYYY-MM-DD）。記事に日付がなければ null'),
   scores: z.object({
     merchantImpact: score,
     partnerImpact: score,
@@ -84,6 +92,9 @@ export class ClaudeAnalyzer {
     return {
       titleJa: parsed.titleJa,
       summarizedJa: parsed.summarizedJa,
+      audienceJa: parsed.audienceJa,
+      actionJa: parsed.actionJa,
+      deadline: parsed.deadline,
       scores,
       totalScore,
       analyzedAt: toISOString(new Date()),

@@ -114,7 +114,7 @@
         "developer": {
           "level": "info",
           "action": 0.06,
-          "relevance": 0.0776,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -237,7 +237,7 @@
         "developer": {
           "level": "check",
           "action": 0,
-          "relevance": 0.882,
+          "relevance": 0.9,
           "areas": [
             "認証・トークン"
           ],
@@ -366,7 +366,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.16490000000000002,
+          "relevance": 0.17,
           "areas": [],
           "outOfScope": true
         }
@@ -488,7 +488,7 @@
         "developer": {
           "level": "info",
           "action": 0.13,
-          "relevance": 0.0679,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -611,7 +611,7 @@
         "developer": {
           "level": "check",
           "action": 0,
-          "relevance": 0.9408,
+          "relevance": 0.96,
           "areas": [
             "課金（Billing API）"
           ],
@@ -735,7 +735,7 @@
         "developer": {
           "level": "info",
           "action": 0.73,
-          "relevance": 0.2139,
+          "relevance": 0.23,
           "areas": [],
           "outOfScope": true
         }
@@ -856,7 +856,7 @@
         "developer": {
           "level": "info",
           "action": 0.4,
-          "relevance": 0.093,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -977,7 +977,7 @@
         "developer": {
           "level": "info",
           "action": 0.41,
-          "relevance": 0.0117,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -1098,7 +1098,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.0384,
+          "relevance": 0.06,
           "areas": [],
           "outOfScope": true
         }
@@ -1221,7 +1221,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.097,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -1344,7 +1344,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.3468,
+          "relevance": 0.51,
           "areas": [
             "保護された顧客データ"
           ],
@@ -1467,7 +1467,7 @@
         "developer": {
           "level": "info",
           "action": 0.27,
-          "relevance": 0.1862,
+          "relevance": 0.19,
           "areas": [],
           "outOfScope": true
         }
@@ -1589,7 +1589,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.11399999999999999,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -1708,7 +1708,7 @@
         "developer": {
           "level": "info",
           "action": 0.06,
-          "relevance": 0.3686,
+          "relevance": 0.38,
           "areas": [],
           "outOfScope": false
         }
@@ -1829,7 +1829,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1425,
+          "relevance": 0.15,
           "areas": [],
           "outOfScope": true
         }
@@ -1954,7 +1954,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1067,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -2075,7 +2075,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.3528,
+          "relevance": 0.36,
           "areas": [],
           "outOfScope": false
         }
@@ -2196,7 +2196,7 @@
         "developer": {
           "level": "info",
           "action": 0.12,
-          "relevance": 0.10779999999999999,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -2321,7 +2321,7 @@
         "developer": {
           "level": "info",
           "action": 0.92,
-          "relevance": 0.0784,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -2443,7 +2443,7 @@
         "developer": {
           "level": "info",
           "action": 0.1,
-          "relevance": 0.10779999999999999,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -2566,7 +2566,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.1274,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -2687,7 +2687,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.2231,
+          "relevance": 0.23,
           "areas": [],
           "outOfScope": true
         }
@@ -2810,7 +2810,7 @@
         "developer": {
           "level": "info",
           "action": 0.22,
-          "relevance": 0.1581,
+          "relevance": 0.17,
           "areas": [],
           "outOfScope": true
         }
@@ -2931,7 +2931,7 @@
         "developer": {
           "level": "info",
           "action": 0.58,
-          "relevance": 0.06720000000000001,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -3055,7 +3055,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.06860000000000001,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -3178,7 +3178,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.5194,
+          "relevance": 0.53,
           "areas": [
             "課金（Billing API）"
           ],
@@ -3303,7 +3303,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.026399999999999996,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -3424,7 +3424,7 @@
         "developer": {
           "level": "info",
           "action": 0.09,
-          "relevance": 0.1176,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -3548,7 +3548,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.098,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -3675,7 +3675,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1925,
+          "relevance": 0.25,
           "areas": [],
           "outOfScope": true
         }
@@ -3798,7 +3798,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.0784,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -3922,7 +3922,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.007699999999999999,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -4045,7 +4045,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.098,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -4170,7 +4170,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.6272,
+          "relevance": 0.64,
           "areas": [
             "注文・商品・顧客API"
           ],
@@ -4295,7 +4295,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.13440000000000002,
+          "relevance": 0.14,
           "areas": [],
           "outOfScope": true
         }
@@ -4416,7 +4416,7 @@
         "developer": {
           "level": "info",
           "action": 0.05,
-          "relevance": 0.049,
+          "relevance": 0.05,
           "areas": [],
           "outOfScope": true
         }
@@ -4537,7 +4537,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.11639999999999999,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -4658,7 +4658,7 @@
         "developer": {
           "level": "info",
           "action": 0.05,
-          "relevance": 0.0882,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -4780,9 +4780,9 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.18920000000000003,
+          "relevance": 0.44,
           "areas": [],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -4903,7 +4903,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.245,
+          "relevance": 0.25,
           "areas": [],
           "outOfScope": true
         }
@@ -5027,7 +5027,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.06720000000000001,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -5150,7 +5150,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.0147,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -5269,7 +5269,7 @@
         "developer": {
           "level": "info",
           "action": 0.11,
-          "relevance": 0.0736,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -5390,7 +5390,7 @@
         "developer": {
           "level": "info",
           "action": 0.42,
-          "relevance": 0.0588,
+          "relevance": 0.06,
           "areas": [],
           "outOfScope": true
         }
@@ -5511,11 +5511,11 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "info",
+          "level": "check",
           "action": 0.5,
-          "relevance": 0.0936,
+          "relevance": 0.36,
           "areas": [],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -5637,7 +5637,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.0312,
+          "relevance": 0.06,
           "areas": [],
           "outOfScope": true
         }
@@ -5758,7 +5758,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.13720000000000002,
+          "relevance": 0.14,
           "areas": [],
           "outOfScope": true
         }
@@ -5884,7 +5884,7 @@
         "developer": {
           "level": "now",
           "action": 1,
-          "relevance": 0.6958,
+          "relevance": 0.71,
           "areas": [
             "注文・商品・顧客API"
           ],
@@ -6007,7 +6007,7 @@
         "developer": {
           "level": "info",
           "action": 0.09,
-          "relevance": 0.3626,
+          "relevance": 0.37,
           "areas": [],
           "outOfScope": false
         }
@@ -6128,7 +6128,7 @@
         "developer": {
           "level": "info",
           "action": 0.16,
-          "relevance": 0.1045,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -6255,7 +6255,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1602,
+          "relevance": 0.18,
           "areas": [],
           "outOfScope": true
         }
@@ -6376,7 +6376,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.055799999999999995,
+          "relevance": 0.06,
           "areas": [],
           "outOfScope": true
         }
@@ -6497,7 +6497,7 @@
         "developer": {
           "level": "check",
           "action": 0.8,
-          "relevance": 0.5192,
+          "relevance": 0.59,
           "areas": [
             "保護された顧客データ"
           ],
@@ -6623,7 +6623,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.008999999999999998,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -6750,7 +6750,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.3724,
+          "relevance": 0.38,
           "areas": [],
           "outOfScope": false
         }
@@ -6869,7 +6869,7 @@
         "developer": {
           "level": "info",
           "action": 0.45,
-          "relevance": 0.0475,
+          "relevance": 0.05,
           "areas": [],
           "outOfScope": true
         }
@@ -6988,7 +6988,7 @@
         "developer": {
           "level": "info",
           "action": 0.04,
-          "relevance": 0.047,
+          "relevance": 0.05,
           "areas": [],
           "outOfScope": true
         }
@@ -7109,7 +7109,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.2037,
+          "relevance": 0.21,
           "areas": [],
           "outOfScope": true
         }
@@ -7230,7 +7230,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.22540000000000002,
+          "relevance": 0.23,
           "areas": [],
           "outOfScope": true
         }
@@ -7353,7 +7353,7 @@
         "developer": {
           "level": "check",
           "action": 0,
-          "relevance": 0.9408,
+          "relevance": 0.96,
           "areas": [
             "認証・トークン"
           ],
@@ -7479,7 +7479,7 @@
         "developer": {
           "level": "now",
           "action": 1,
-          "relevance": 0.5781999999999999,
+          "relevance": 0.59,
           "areas": [
             "テーマアプリ拡張・App Proxy"
           ],
@@ -7603,7 +7603,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.0612,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -7726,7 +7726,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.0882,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -7847,7 +7847,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.5292,
+          "relevance": 0.54,
           "areas": [
             "認証・トークン"
           ],
@@ -7970,7 +7970,7 @@
         "developer": {
           "level": "info",
           "action": 0.52,
-          "relevance": 0.06860000000000001,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -8094,7 +8094,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.04160000000000001,
+          "relevance": 0.26,
           "areas": [],
           "outOfScope": true
         }
@@ -8216,7 +8216,7 @@
         "developer": {
           "level": "info",
           "action": 0.18,
-          "relevance": 0.4268,
+          "relevance": 0.44,
           "areas": [],
           "outOfScope": false
         }
@@ -8344,7 +8344,7 @@
         "developer": {
           "level": "now",
           "action": 1,
-          "relevance": 0.9602999999999999,
+          "relevance": 0.99,
           "areas": [
             "ScriptTag",
             "テーマアプリ拡張・App Proxy"
@@ -8469,7 +8469,7 @@
         "developer": {
           "level": "info",
           "action": 0.05,
-          "relevance": 0.049,
+          "relevance": 0.05,
           "areas": [],
           "outOfScope": true
         }
@@ -8593,7 +8593,7 @@
         "developer": {
           "level": "info",
           "action": 0.19,
-          "relevance": 0.020899999999999995,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -8714,7 +8714,7 @@
         "developer": {
           "level": "info",
           "action": 0.1,
-          "relevance": 0.1176,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -8837,7 +8837,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.0784,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -8963,11 +8963,11 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.055999999999999994,
+          "relevance": 0.56,
           "areas": [
             "Web Pixel・顧客イベント"
           ],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -9086,7 +9086,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.08700000000000001,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -9207,7 +9207,7 @@
         "developer": {
           "level": "info",
           "action": 0.25,
-          "relevance": 0.0776,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -9331,7 +9331,7 @@
         "developer": {
           "level": "info",
           "action": 0.12,
-          "relevance": 0.11970000000000001,
+          "relevance": 0.21,
           "areas": [],
           "outOfScope": true
         }
@@ -9455,7 +9455,7 @@
         "developer": {
           "level": "info",
           "action": 0.1,
-          "relevance": 0.34919999999999995,
+          "relevance": 0.36,
           "areas": [],
           "outOfScope": false
         }
@@ -9576,7 +9576,7 @@
         "developer": {
           "level": "info",
           "action": 0.11,
-          "relevance": 0.441,
+          "relevance": 0.45,
           "areas": [],
           "outOfScope": false
         }
@@ -9699,7 +9699,7 @@
         "developer": {
           "level": "info",
           "action": 0.4,
-          "relevance": 0.11399999999999999,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -9818,7 +9818,7 @@
         "developer": {
           "level": "info",
           "action": 0.51,
-          "relevance": 0.07919999999999999,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -9940,7 +9940,7 @@
         "developer": {
           "level": "info",
           "action": 0.48,
-          "relevance": 0.1274,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -10064,7 +10064,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.196,
+          "relevance": 0.2,
           "areas": [],
           "outOfScope": true
         }
@@ -10187,7 +10187,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.5148,
+          "relevance": 0.66,
           "areas": [
             "テーマアプリ拡張・App Proxy"
           ],
@@ -10312,7 +10312,7 @@
         "developer": {
           "level": "info",
           "action": 0.35,
-          "relevance": 0.41709999999999997,
+          "relevance": 0.43,
           "areas": [],
           "outOfScope": false
         }
@@ -10436,7 +10436,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.41159999999999997,
+          "relevance": 0.42,
           "areas": [],
           "outOfScope": false
         }
@@ -10559,7 +10559,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.204,
+          "relevance": 0.24,
           "areas": [],
           "outOfScope": true
         }
@@ -10680,7 +10680,7 @@
         "developer": {
           "level": "info",
           "action": 0.33,
-          "relevance": 0.10779999999999999,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -10804,7 +10804,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.028500000000000004,
+          "relevance": 0.19,
           "areas": [],
           "outOfScope": true
         }
@@ -10930,7 +10930,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.2352,
+          "relevance": 0.24,
           "areas": [],
           "outOfScope": true
         }
@@ -11051,7 +11051,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.147,
+          "relevance": 0.15,
           "areas": [],
           "outOfScope": true
         }
@@ -11177,12 +11177,12 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.09450000000000001,
+          "relevance": 0.63,
           "areas": [
             "ScriptTag",
             "Web Pixel・顧客イベント"
           ],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -11303,7 +11303,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1056,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -11424,7 +11424,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.147,
+          "relevance": 0.15,
           "areas": [],
           "outOfScope": true
         }
@@ -11548,7 +11548,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.2403,
+          "relevance": 0.27,
           "areas": [],
           "outOfScope": true
         }
@@ -11671,7 +11671,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.011399999999999997,
+          "relevance": 0.06,
           "areas": [],
           "outOfScope": true
         }
@@ -11794,7 +11794,7 @@
         "developer": {
           "level": "now",
           "action": 1,
-          "relevance": 0.5586,
+          "relevance": 0.57,
           "areas": [
             "Webhook"
           ],
@@ -11918,7 +11918,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.097,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -12040,7 +12040,7 @@
         "developer": {
           "level": "info",
           "action": 0.25,
-          "relevance": 0.3783,
+          "relevance": 0.39,
           "areas": [],
           "outOfScope": false
         }
@@ -12163,7 +12163,7 @@
         "developer": {
           "level": "info",
           "action": 0.12,
-          "relevance": 0.2646,
+          "relevance": 0.27,
           "areas": [],
           "outOfScope": true
         }
@@ -12284,7 +12284,7 @@
         "developer": {
           "level": "info",
           "action": 0.4,
-          "relevance": 0.0588,
+          "relevance": 0.06,
           "areas": [],
           "outOfScope": true
         }
@@ -12403,9 +12403,9 @@
         "developer": {
           "level": "info",
           "action": 0.4,
-          "relevance": 0.261,
+          "relevance": 0.3,
           "areas": [],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -12526,7 +12526,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.019999999999999997,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -12645,7 +12645,7 @@
         "developer": {
           "level": "info",
           "action": 0.32,
-          "relevance": 0.3348,
+          "relevance": 0.36,
           "areas": [],
           "outOfScope": false
         }
@@ -12771,7 +12771,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.384,
+          "relevance": 0.4,
           "areas": [],
           "outOfScope": false
         }
@@ -12893,7 +12893,7 @@
         "developer": {
           "level": "info",
           "action": 0.18,
-          "relevance": 0.1248,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -13018,7 +13018,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.078,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -13140,7 +13140,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1408,
+          "relevance": 0.16,
           "areas": [],
           "outOfScope": true
         }
@@ -13264,7 +13264,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.10779999999999999,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -13393,7 +13393,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.4717,
+          "relevance": 0.53,
           "areas": [
             "テーマアプリ拡張・App Proxy"
           ],
@@ -13517,7 +13517,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1067,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -13640,7 +13640,7 @@
         "developer": {
           "level": "info",
           "action": 0.05,
-          "relevance": 0.07800000000000001,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -13759,7 +13759,7 @@
         "developer": {
           "level": "info",
           "action": 0.1,
-          "relevance": 0.11639999999999999,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -13882,7 +13882,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1176,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -14006,7 +14006,7 @@
         "developer": {
           "level": "check",
           "action": 0.52,
-          "relevance": 0.6499,
+          "relevance": 0.67,
           "areas": [
             "注文・商品・顧客API"
           ],
@@ -14129,7 +14129,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.8918,
+          "relevance": 0.91,
           "areas": [
             "App Store・Partner要件"
           ],
@@ -14253,7 +14253,7 @@
         "developer": {
           "level": "info",
           "action": 0.11,
-          "relevance": 0.8265,
+          "relevance": 0.87,
           "areas": [
             "注文・商品・顧客API"
           ],
@@ -14378,7 +14378,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.010399999999999994,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -14500,7 +14500,7 @@
         "developer": {
           "level": "info",
           "action": 0.54,
-          "relevance": 0.138,
+          "relevance": 0.15,
           "areas": [],
           "outOfScope": true
         }
@@ -14624,7 +14624,7 @@
         "developer": {
           "level": "info",
           "action": 0.51,
-          "relevance": 0.17279999999999998,
+          "relevance": 0.18,
           "areas": [],
           "outOfScope": true
         }
@@ -14749,7 +14749,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.015399999999999999,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -14871,7 +14871,7 @@
         "developer": {
           "level": "info",
           "action": 0.56,
-          "relevance": 0.2784,
+          "relevance": 0.29,
           "areas": [],
           "outOfScope": true
         }
@@ -14992,7 +14992,7 @@
         "developer": {
           "level": "info",
           "action": 0.05,
-          "relevance": 0.005599999999999997,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -15113,7 +15113,7 @@
         "developer": {
           "level": "info",
           "action": 0.14,
-          "relevance": 0.0588,
+          "relevance": 0.06,
           "areas": [],
           "outOfScope": true
         }
@@ -15234,7 +15234,7 @@
         "developer": {
           "level": "info",
           "action": 0.71,
-          "relevance": 0.0752,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -15357,7 +15357,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.11399999999999999,
+          "relevance": 0.15,
           "areas": [],
           "outOfScope": true
         }
@@ -15479,7 +15479,7 @@
         "developer": {
           "level": "now",
           "action": 1,
-          "relevance": 0.7153999999999999,
+          "relevance": 0.73,
           "areas": [
             "App Store・Partner要件"
           ],
@@ -15605,7 +15605,7 @@
         "developer": {
           "level": "check",
           "action": 0,
-          "relevance": 0.9117999999999999,
+          "relevance": 0.94,
           "areas": [
             "課金（Billing API）"
           ],
@@ -15732,11 +15732,11 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.05199999999999998,
+          "relevance": 0.65,
           "areas": [
             "ScriptTag"
           ],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -15853,7 +15853,7 @@
         "developer": {
           "level": "info",
           "action": 0.81,
-          "relevance": 0.28419999999999995,
+          "relevance": 0.29,
           "areas": [],
           "outOfScope": true
         }
@@ -15979,7 +15979,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.025800000000000003,
+          "relevance": 0.06,
           "areas": [],
           "outOfScope": true
         }
@@ -16098,7 +16098,7 @@
         "developer": {
           "level": "info",
           "action": 0.12,
-          "relevance": 0.059500000000000004,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -16220,7 +16220,7 @@
         "developer": {
           "level": "info",
           "action": 0.22,
-          "relevance": 0.10779999999999999,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -16342,7 +16342,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.015000000000000003,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -16466,7 +16466,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.022100000000000005,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -16589,7 +16589,7 @@
         "developer": {
           "level": "check",
           "action": 0,
-          "relevance": 0.9408,
+          "relevance": 0.96,
           "areas": [
             "課金（Billing API）"
           ],
@@ -16712,7 +16712,7 @@
         "developer": {
           "level": "check",
           "action": 0,
-          "relevance": 0.9506,
+          "relevance": 0.97,
           "areas": [
             "App Store・Partner要件"
           ],
@@ -16840,7 +16840,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.16720000000000002,
+          "relevance": 0.22,
           "areas": [],
           "outOfScope": true
         }
@@ -16961,7 +16961,7 @@
         "developer": {
           "level": "check",
           "action": 0,
-          "relevance": 0.9211999999999999,
+          "relevance": 0.94,
           "areas": [
             "App Store・Partner要件"
           ],
@@ -17087,7 +17087,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1632,
+          "relevance": 0.17,
           "areas": [],
           "outOfScope": true
         }
@@ -17210,7 +17210,7 @@
         "developer": {
           "level": "now",
           "action": 1,
-          "relevance": 0.9117999999999999,
+          "relevance": 0.94,
           "areas": [
             "注文・商品・顧客API"
           ],
@@ -17338,7 +17338,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.020800000000000003,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -17460,9 +17460,9 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.288,
+          "relevance": 0.3,
           "areas": [],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -17588,7 +17588,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.1316,
+          "relevance": 0.14,
           "areas": [],
           "outOfScope": true
         }
@@ -17717,7 +17717,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.2716,
+          "relevance": 0.28,
           "areas": [],
           "outOfScope": true
         }
@@ -17843,7 +17843,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.11399999999999999,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -17965,7 +17965,7 @@
         "developer": {
           "level": "info",
           "action": 0.08,
-          "relevance": 0.2037,
+          "relevance": 0.21,
           "areas": [],
           "outOfScope": true
         }
@@ -18090,7 +18090,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.058100000000000006,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -18215,7 +18215,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.0702,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -18338,7 +18338,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.098,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -18465,7 +18465,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.1176,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -18587,7 +18587,7 @@
         "developer": {
           "level": "info",
           "action": 0.73,
-          "relevance": 0.1364,
+          "relevance": 0.22,
           "areas": [],
           "outOfScope": true
         }
@@ -18713,7 +18713,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1176,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -18835,7 +18835,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.008999999999999998,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -18958,7 +18958,7 @@
         "developer": {
           "level": "info",
           "action": 0.16,
-          "relevance": 0.014400000000000005,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -19079,7 +19079,7 @@
         "developer": {
           "level": "info",
           "action": 0.6,
-          "relevance": 0.0162,
+          "relevance": 0.06,
           "areas": [],
           "outOfScope": true
         }
@@ -19200,7 +19200,7 @@
         "developer": {
           "level": "info",
           "action": 0.28,
-          "relevance": 0.058199999999999995,
+          "relevance": 0.06,
           "areas": [],
           "outOfScope": true
         }
@@ -19327,9 +19327,9 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.285,
+          "relevance": 0.3,
           "areas": [],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -19449,7 +19449,7 @@
         "developer": {
           "level": "info",
           "action": 0.06,
-          "relevance": 0.6111,
+          "relevance": 0.63,
           "areas": [
             "Web Pixel・顧客イベント",
             "保護された顧客データ"
@@ -19574,7 +19574,7 @@
         "developer": {
           "level": "info",
           "action": 0.21,
-          "relevance": 0.6365,
+          "relevance": 0.67,
           "areas": [
             "保護された顧客データ"
           ],
@@ -19695,7 +19695,7 @@
         "developer": {
           "level": "info",
           "action": 0.21,
-          "relevance": 0.076,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -19821,7 +19821,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.4947,
+          "relevance": 0.51,
           "areas": [
             "課金（Billing API）"
           ],
@@ -19951,7 +19951,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.10779999999999999,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -20073,7 +20073,7 @@
         "developer": {
           "level": "info",
           "action": 0.08,
-          "relevance": 0.152,
+          "relevance": 0.16,
           "areas": [],
           "outOfScope": true
         }
@@ -20195,7 +20195,7 @@
         "developer": {
           "level": "info",
           "action": 0.11,
-          "relevance": 0.2592,
+          "relevance": 0.27,
           "areas": [],
           "outOfScope": true
         }
@@ -20317,7 +20317,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.1504,
+          "relevance": 0.16,
           "areas": [],
           "outOfScope": true
         }
@@ -20440,7 +20440,7 @@
         "developer": {
           "level": "info",
           "action": 0.19,
-          "relevance": 0.05639999999999999,
+          "relevance": 0.06,
           "areas": [],
           "outOfScope": true
         }
@@ -20564,7 +20564,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.10779999999999999,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -20686,7 +20686,7 @@
         "developer": {
           "level": "info",
           "action": 0.19,
-          "relevance": 0.1261,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -20807,7 +20807,7 @@
         "developer": {
           "level": "info",
           "action": 0.12,
-          "relevance": 0.0637,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -20929,7 +20929,7 @@
         "developer": {
           "level": "info",
           "action": 0.05,
-          "relevance": 0.048,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -21053,7 +21053,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.1358,
+          "relevance": 0.14,
           "areas": [],
           "outOfScope": true
         }
@@ -21174,7 +21174,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.013600000000000003,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -21295,7 +21295,7 @@
         "developer": {
           "level": "info",
           "action": 0.25,
-          "relevance": 0.11399999999999999,
+          "relevance": 0.19,
           "areas": [],
           "outOfScope": true
         }
@@ -21417,7 +21417,7 @@
         "developer": {
           "level": "info",
           "action": 0.25,
-          "relevance": 0.058499999999999996,
+          "relevance": 0.15,
           "areas": [],
           "outOfScope": true
         }
@@ -21544,7 +21544,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.0784,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -21666,7 +21666,7 @@
         "developer": {
           "level": "info",
           "action": 0.18,
-          "relevance": 0.35719999999999996,
+          "relevance": 0.38,
           "areas": [],
           "outOfScope": false
         }
@@ -21792,7 +21792,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.3105,
+          "relevance": 0.45,
           "areas": [],
           "outOfScope": false
         }
@@ -21918,7 +21918,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.08729999999999999,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -22043,7 +22043,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.4268,
+          "relevance": 0.44,
           "areas": [],
           "outOfScope": false
         }
@@ -22166,7 +22166,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.0477,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -22283,9 +22283,9 @@
         "developer": {
           "level": "info",
           "action": 0.36,
-          "relevance": 0.2706,
+          "relevance": 0.33,
           "areas": [],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -22405,7 +22405,7 @@
         "developer": {
           "level": "info",
           "action": 0.2,
-          "relevance": 0.022400000000000007,
+          "relevance": 0.14,
           "areas": [],
           "outOfScope": true
         }
@@ -22527,7 +22527,7 @@
         "developer": {
           "level": "info",
           "action": 0.08,
-          "relevance": 0.6076,
+          "relevance": 0.62,
           "areas": [
             "テーマアプリ拡張・App Proxy"
           ],
@@ -22652,9 +22652,9 @@
         "developer": {
           "level": "info",
           "action": 0.14,
-          "relevance": 0.123,
+          "relevance": 0.3,
           "areas": [],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -22774,7 +22774,7 @@
         "developer": {
           "level": "check",
           "action": 0.51,
-          "relevance": 0.3822,
+          "relevance": 0.78,
           "areas": [
             "テーマアプリ拡張・App Proxy"
           ],
@@ -22899,11 +22899,11 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "info",
+          "level": "check",
           "action": 0.78,
-          "relevance": 0.2,
+          "relevance": 0.4,
           "areas": [],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -23023,7 +23023,7 @@
         "developer": {
           "level": "info",
           "action": 0.05,
-          "relevance": 0.049,
+          "relevance": 0.05,
           "areas": [],
           "outOfScope": true
         }
@@ -23145,7 +23145,7 @@
         "developer": {
           "level": "info",
           "action": 0.14,
-          "relevance": 0.0784,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -23267,9 +23267,9 @@
         "developer": {
           "level": "info",
           "action": 0.33,
-          "relevance": 0.2394,
+          "relevance": 0.38,
           "areas": [],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -23388,7 +23388,7 @@
         "developer": {
           "level": "info",
           "action": 0.15,
-          "relevance": 0.1358,
+          "relevance": 0.14,
           "areas": [],
           "outOfScope": true
         }
@@ -23509,7 +23509,7 @@
         "developer": {
           "level": "info",
           "action": 0.06,
-          "relevance": 0.0485,
+          "relevance": 0.05,
           "areas": [],
           "outOfScope": true
         }
@@ -23631,7 +23631,7 @@
         "developer": {
           "level": "info",
           "action": 0.14,
-          "relevance": 0.1176,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -23754,7 +23754,7 @@
         "developer": {
           "level": "info",
           "action": 0.14,
-          "relevance": 0.196,
+          "relevance": 0.2,
           "areas": [],
           "outOfScope": true
         }
@@ -23876,7 +23876,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1176,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -23999,7 +23999,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1274,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -24122,7 +24122,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.08729999999999999,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -24246,7 +24246,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.014299999999999998,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -24369,7 +24369,7 @@
         "developer": {
           "level": "check",
           "action": 0,
-          "relevance": 0.7776000000000001,
+          "relevance": 0.81,
           "areas": [
             "App Store・Partner要件"
           ],
@@ -24500,7 +24500,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.2565,
+          "relevance": 0.27,
           "areas": [],
           "outOfScope": true
         }
@@ -24623,7 +24623,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.5376000000000001,
+          "relevance": 0.56,
           "areas": [
             "テーマアプリ拡張・App Proxy"
           ],
@@ -24749,7 +24749,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.2522,
+          "relevance": 0.26,
           "areas": [],
           "outOfScope": true
         }
@@ -24874,7 +24874,7 @@
         "developer": {
           "level": "now",
           "action": 1,
-          "relevance": 0.6745,
+          "relevance": 0.71,
           "areas": [
             "保護された顧客データ"
           ],
@@ -25001,7 +25001,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.22540000000000002,
+          "relevance": 0.23,
           "areas": [],
           "outOfScope": true
         }
@@ -25126,7 +25126,7 @@
         "developer": {
           "level": "now",
           "action": 1,
-          "relevance": 0.8050999999999999,
+          "relevance": 0.83,
           "areas": [
             "注文・商品・顧客API"
           ],
@@ -25250,7 +25250,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.08600000000000001,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -25374,7 +25374,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.0725,
+          "relevance": 0.29,
           "areas": [],
           "outOfScope": true
         }
@@ -25498,7 +25498,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.9215,
+          "relevance": 0.95,
           "areas": [
             "課金（Billing API）"
           ],
@@ -25621,7 +25621,7 @@
         "developer": {
           "level": "info",
           "action": 0.26,
-          "relevance": 0.0588,
+          "relevance": 0.06,
           "areas": [],
           "outOfScope": true
         }
@@ -25747,7 +25747,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.014299999999999998,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -25870,7 +25870,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.030600000000000006,
+          "relevance": 0.18,
           "areas": [],
           "outOfScope": true
         }
@@ -25994,7 +25994,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.040799999999999996,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -26117,7 +26117,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.03599999999999999,
+          "relevance": 0.18,
           "areas": [],
           "outOfScope": true
         }
@@ -26236,7 +26236,7 @@
         "developer": {
           "level": "info",
           "action": 0.56,
-          "relevance": 0.1862,
+          "relevance": 0.19,
           "areas": [],
           "outOfScope": true
         }
@@ -26358,7 +26358,7 @@
         "developer": {
           "level": "info",
           "action": 0.09,
-          "relevance": 0.0979,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -26481,7 +26481,7 @@
         "developer": {
           "level": "info",
           "action": 0.45,
-          "relevance": 0.1455,
+          "relevance": 0.15,
           "areas": [],
           "outOfScope": true
         }
@@ -26603,7 +26603,7 @@
         "developer": {
           "level": "info",
           "action": 0.16,
-          "relevance": 0.0588,
+          "relevance": 0.06,
           "areas": [],
           "outOfScope": true
         }
@@ -26724,7 +26724,7 @@
         "developer": {
           "level": "info",
           "action": 0.43,
-          "relevance": 0.129,
+          "relevance": 0.15,
           "areas": [],
           "outOfScope": true
         }
@@ -26846,7 +26846,7 @@
         "developer": {
           "level": "info",
           "action": 0.09,
-          "relevance": 0.0679,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -26970,7 +26970,7 @@
         "developer": {
           "level": "info",
           "action": 0.14,
-          "relevance": 0.1911,
+          "relevance": 0.21,
           "areas": [],
           "outOfScope": true
         }
@@ -27092,7 +27092,7 @@
         "developer": {
           "level": "info",
           "action": 0.06,
-          "relevance": 0.0392,
+          "relevance": 0.04,
           "areas": [],
           "outOfScope": true
         }
@@ -27213,7 +27213,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.32980000000000004,
+          "relevance": 0.34,
           "areas": [],
           "outOfScope": false
         }
@@ -27336,7 +27336,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.030399999999999993,
+          "relevance": 0.16,
           "areas": [],
           "outOfScope": true
         }
@@ -27461,7 +27461,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1056,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -27583,7 +27583,7 @@
         "developer": {
           "level": "info",
           "action": 0.83,
-          "relevance": 0.05039999999999999,
+          "relevance": 0.06,
           "areas": [],
           "outOfScope": true
         }
@@ -27706,7 +27706,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.0679,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -27829,7 +27829,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.2231,
+          "relevance": 0.23,
           "areas": [],
           "outOfScope": true
         }
@@ -27948,7 +27948,7 @@
         "developer": {
           "level": "info",
           "action": 0.04,
-          "relevance": 0.0294,
+          "relevance": 0.03,
           "areas": [],
           "outOfScope": true
         }
@@ -28072,7 +28072,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.011399999999999997,
+          "relevance": 0.06,
           "areas": [],
           "outOfScope": true
         }
@@ -28193,7 +28193,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.23279999999999998,
+          "relevance": 0.24,
           "areas": [],
           "outOfScope": true
         }
@@ -28316,7 +28316,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1358,
+          "relevance": 0.14,
           "areas": [],
           "outOfScope": true
         }
@@ -28439,7 +28439,7 @@
         "developer": {
           "level": "info",
           "action": 0.5,
-          "relevance": 0.032299999999999995,
+          "relevance": 0.17,
           "areas": [],
           "outOfScope": true
         }
@@ -28560,7 +28560,7 @@
         "developer": {
           "level": "info",
           "action": 0.16,
-          "relevance": 0.049,
+          "relevance": 0.05,
           "areas": [],
           "outOfScope": true
         }
@@ -28684,7 +28684,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.2716,
+          "relevance": 0.28,
           "areas": [],
           "outOfScope": true
         }
@@ -28806,7 +28806,7 @@
         "developer": {
           "level": "info",
           "action": 0.16,
-          "relevance": 0.34299999999999997,
+          "relevance": 0.35,
           "areas": [],
           "outOfScope": false
         }
@@ -28928,7 +28928,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1261,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -29050,7 +29050,7 @@
         "developer": {
           "level": "info",
           "action": 0.47,
-          "relevance": 0.1067,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -29174,7 +29174,7 @@
         "developer": {
           "level": "check",
           "action": 0.08,
-          "relevance": 0.873,
+          "relevance": 0.9,
           "areas": [
             "注文・商品・顧客API"
           ],
@@ -29299,7 +29299,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.7081,
+          "relevance": 0.73,
           "areas": [
             "注文・商品・顧客API"
           ],
@@ -29422,7 +29422,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.023399999999999994,
+          "relevance": 0.26,
           "areas": [],
           "outOfScope": true
         }
@@ -29541,7 +29541,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.076,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -29666,7 +29666,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.012800000000000002,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -29787,9 +29787,9 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "info",
+          "level": "check",
           "action": 0,
-          "relevance": 0.49280000000000007,
+          "relevance": 0.88,
           "areas": [
             "保護された顧客データ"
           ],
@@ -29912,7 +29912,7 @@
         "developer": {
           "level": "info",
           "action": 0.27,
-          "relevance": 0.16490000000000002,
+          "relevance": 0.17,
           "areas": [],
           "outOfScope": true
         }
@@ -30033,7 +30033,7 @@
         "developer": {
           "level": "info",
           "action": 0.25,
-          "relevance": 0.1014,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -30155,7 +30155,7 @@
         "developer": {
           "level": "info",
           "action": 0.17,
-          "relevance": 0.03780000000000001,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -30277,7 +30277,7 @@
         "developer": {
           "level": "info",
           "action": 0.19,
-          "relevance": 0.019799999999999998,
+          "relevance": 0.18,
           "areas": [],
           "outOfScope": true
         }
@@ -30400,7 +30400,7 @@
         "developer": {
           "level": "info",
           "action": 0.13,
-          "relevance": 0.098,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -30521,7 +30521,7 @@
         "developer": {
           "level": "info",
           "action": 0.22,
-          "relevance": 0.0465,
+          "relevance": 0.05,
           "areas": [],
           "outOfScope": true
         }
@@ -30643,7 +30643,7 @@
         "developer": {
           "level": "info",
           "action": 0.09,
-          "relevance": 0.06720000000000001,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -30764,7 +30764,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.6596000000000001,
+          "relevance": 0.68,
           "areas": [
             "課金（Billing API）"
           ],
@@ -30890,7 +30890,7 @@
         "developer": {
           "level": "check",
           "action": 0,
-          "relevance": 0.9506,
+          "relevance": 0.97,
           "areas": [
             "課金（Billing API）"
           ],
@@ -31015,7 +31015,7 @@
         "developer": {
           "level": "info",
           "action": 0.27,
-          "relevance": 0.1824,
+          "relevance": 0.19,
           "areas": [],
           "outOfScope": true
         }
@@ -31139,7 +31139,7 @@
         "developer": {
           "level": "info",
           "action": 0.33,
-          "relevance": 0.020699999999999993,
+          "relevance": 0.23,
           "areas": [],
           "outOfScope": true
         }
@@ -31263,7 +31263,7 @@
         "developer": {
           "level": "now",
           "action": 1,
-          "relevance": 0.9114,
+          "relevance": 0.93,
           "areas": [
             "認証・トークン"
           ],
@@ -31387,7 +31387,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.012099999999999998,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -31510,7 +31510,7 @@
         "developer": {
           "level": "info",
           "action": 0.51,
-          "relevance": 0.0575,
+          "relevance": 0.23,
           "areas": [],
           "outOfScope": true
         }
@@ -31631,7 +31631,7 @@
         "developer": {
           "level": "info",
           "action": 0.42,
-          "relevance": 0.049,
+          "relevance": 0.05,
           "areas": [],
           "outOfScope": true
         }
@@ -31755,7 +31755,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.1386,
+          "relevance": 0.18,
           "areas": [],
           "outOfScope": true
         }
@@ -31879,7 +31879,7 @@
         "developer": {
           "level": "info",
           "action": 0.13,
-          "relevance": 0.3201,
+          "relevance": 0.33,
           "areas": [],
           "outOfScope": false
         }
@@ -32002,7 +32002,7 @@
         "developer": {
           "level": "info",
           "action": 0.33,
-          "relevance": 0.08729999999999999,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -32124,7 +32124,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.0882,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -32251,7 +32251,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.34199999999999997,
+          "relevance": 0.36,
           "areas": [],
           "outOfScope": false
         }
@@ -32376,7 +32376,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1176,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -32498,7 +32498,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.2037,
+          "relevance": 0.21,
           "areas": [],
           "outOfScope": true
         }
@@ -32623,7 +32623,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.13440000000000002,
+          "relevance": 0.14,
           "areas": [],
           "outOfScope": true
         }
@@ -32744,7 +32744,7 @@
         "developer": {
           "level": "info",
           "action": 0.11,
-          "relevance": 0.0784,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -32865,7 +32865,7 @@
         "developer": {
           "level": "info",
           "action": 0.06,
-          "relevance": 0.007199999999999998,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -32988,7 +32988,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.0882,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -33110,7 +33110,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.06860000000000001,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -33233,7 +33233,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1261,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -33354,7 +33354,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.2592,
+          "relevance": 0.27,
           "areas": [],
           "outOfScope": true
         }
@@ -33477,7 +33477,7 @@
         "developer": {
           "level": "info",
           "action": 0.11,
-          "relevance": 0.196,
+          "relevance": 0.2,
           "areas": [],
           "outOfScope": true
         }
@@ -33598,7 +33598,7 @@
         "developer": {
           "level": "info",
           "action": 0.11,
-          "relevance": 0.3589,
+          "relevance": 0.37,
           "areas": [],
           "outOfScope": false
         }
@@ -33724,7 +33724,7 @@
         "developer": {
           "level": "check",
           "action": 0,
-          "relevance": 0.7275,
+          "relevance": 0.75,
           "areas": [
             "課金（Billing API）"
           ],
@@ -33847,7 +33847,7 @@
         "developer": {
           "level": "info",
           "action": 0.06,
-          "relevance": 0.004200000000000004,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -33969,7 +33969,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.5133,
+          "relevance": 0.59,
           "areas": [
             "テーマアプリ拡張・App Proxy"
           ],
@@ -34095,7 +34095,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1274,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -34216,7 +34216,7 @@
         "developer": {
           "level": "info",
           "action": 0.37,
-          "relevance": 0.049,
+          "relevance": 0.05,
           "areas": [],
           "outOfScope": true
         }
@@ -34338,7 +34338,7 @@
         "developer": {
           "level": "info",
           "action": 0.05,
-          "relevance": 0.06860000000000001,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -34459,7 +34459,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.049,
+          "relevance": 0.05,
           "areas": [],
           "outOfScope": true
         }
@@ -34578,7 +34578,7 @@
         "developer": {
           "level": "info",
           "action": 0.35,
-          "relevance": 0.1183,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -34697,7 +34697,7 @@
         "developer": {
           "level": "info",
           "action": 0.08,
-          "relevance": 0.044500000000000005,
+          "relevance": 0.05,
           "areas": [],
           "outOfScope": true
         }
@@ -34818,7 +34818,7 @@
         "developer": {
           "level": "info",
           "action": 0.11,
-          "relevance": 0.062400000000000004,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -34941,7 +34941,7 @@
         "developer": {
           "level": "info",
           "action": 0.16,
-          "relevance": 0.07469999999999999,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -35060,7 +35060,7 @@
         "developer": {
           "level": "info",
           "action": 0.23,
-          "relevance": 0.044000000000000004,
+          "relevance": 0.05,
           "areas": [],
           "outOfScope": true
         }
@@ -35182,7 +35182,7 @@
         "developer": {
           "level": "info",
           "action": 0.83,
-          "relevance": 0.083,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -35306,7 +35306,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.07800000000000001,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -35428,7 +35428,7 @@
         "developer": {
           "level": "info",
           "action": 0.7,
-          "relevance": 0.1455,
+          "relevance": 0.15,
           "areas": [],
           "outOfScope": true
         }
@@ -35552,7 +35552,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.0819,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -35673,7 +35673,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.1176,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -35799,7 +35799,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.6761999999999999,
+          "relevance": 0.69,
           "areas": [
             "注文・商品・顧客API"
           ],
@@ -35923,7 +35923,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.0392,
+          "relevance": 0.04,
           "areas": [],
           "outOfScope": true
         }
@@ -36055,9 +36055,9 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "check",
+          "level": "now",
           "action": 1,
-          "relevance": 0.40280000000000005,
+          "relevance": 0.53,
           "areas": [
             "テーマアプリ拡張・App Proxy",
             "Webhook"
@@ -36182,7 +36182,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.17800000000000002,
+          "relevance": 0.2,
           "areas": [],
           "outOfScope": true
         }
@@ -36303,7 +36303,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.0882,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -36425,11 +36425,11 @@
         "developer": {
           "level": "info",
           "action": 0.14,
-          "relevance": 0.14959999999999998,
+          "relevance": 0.68,
           "areas": [
             "テーマアプリ拡張・App Proxy"
           ],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -36548,7 +36548,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.6305,
+          "relevance": 0.65,
           "areas": [
             "App Store・Partner要件",
             "テーマアプリ拡張・App Proxy"
@@ -36672,7 +36672,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.0588,
+          "relevance": 0.06,
           "areas": [],
           "outOfScope": true
         }
@@ -36795,7 +36795,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.7056,
+          "relevance": 0.72,
           "areas": [
             "注文・商品・顧客API"
           ],
@@ -36921,11 +36921,11 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.19799999999999998,
+          "relevance": 0.6,
           "areas": [
             "テーマアプリ拡張・App Proxy"
           ],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -37044,7 +37044,7 @@
         "developer": {
           "level": "info",
           "action": 0.06,
-          "relevance": 0.1105,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -37166,7 +37166,7 @@
         "developer": {
           "level": "info",
           "action": 0.16,
-          "relevance": 0.1615,
+          "relevance": 0.19,
           "areas": [],
           "outOfScope": true
         }
@@ -37289,7 +37289,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.7857000000000001,
+          "relevance": 0.81,
           "areas": [
             "注文・商品・顧客API"
           ],
@@ -37414,7 +37414,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.026000000000000002,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -37533,7 +37533,7 @@
         "developer": {
           "level": "info",
           "action": 0.06,
-          "relevance": 0.388,
+          "relevance": 0.4,
           "areas": [],
           "outOfScope": false
         }
@@ -37655,11 +37655,11 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "info",
+          "level": "check",
           "action": 1,
-          "relevance": 0.294,
+          "relevance": 0.3,
           "areas": [],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -37779,7 +37779,7 @@
         "developer": {
           "level": "info",
           "action": 0.13,
-          "relevance": 0.039,
+          "relevance": 0.15,
           "areas": [],
           "outOfScope": true
         }
@@ -37902,7 +37902,7 @@
         "developer": {
           "level": "now",
           "action": 1,
-          "relevance": 0.6499,
+          "relevance": 0.67,
           "areas": [
             "テーマアプリ拡張・App Proxy"
           ],
@@ -38027,7 +38027,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.0768,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -38150,7 +38150,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.8918,
+          "relevance": 0.91,
           "areas": [
             "注文・商品・顧客API"
           ],
@@ -38274,7 +38274,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1261,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -38397,7 +38397,7 @@
         "developer": {
           "level": "check",
           "action": 0,
-          "relevance": 0.9016000000000001,
+          "relevance": 0.92,
           "areas": [
             "注文・商品・顧客API"
           ],
@@ -38521,9 +38521,9 @@
         "developer": {
           "level": "info",
           "action": 0.15,
-          "relevance": 0.1287,
+          "relevance": 0.33,
           "areas": [],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -38643,7 +38643,7 @@
         "developer": {
           "level": "now",
           "action": 1,
-          "relevance": 0.8428,
+          "relevance": 0.86,
           "areas": [
             "注文・商品・顧客API"
           ],
@@ -38768,7 +38768,7 @@
         "developer": {
           "level": "now",
           "action": 1,
-          "relevance": 0.6696,
+          "relevance": 0.72,
           "areas": [
             "テーマアプリ拡張・App Proxy"
           ],
@@ -38899,7 +38899,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1275,
+          "relevance": 0.15,
           "areas": [],
           "outOfScope": true
         }
@@ -39025,13 +39025,13 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.0728,
+          "relevance": 0.56,
           "areas": [
             "テーマアプリ拡張・App Proxy",
             "Web Pixel・顧客イベント",
             "保護された顧客データ"
           ],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -39155,7 +39155,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.33949999999999997,
+          "relevance": 0.35,
           "areas": [],
           "outOfScope": false
         }
@@ -39283,7 +39283,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.136,
+          "relevance": 0.17,
           "areas": [],
           "outOfScope": true
         }
@@ -39404,7 +39404,7 @@
         "developer": {
           "level": "info",
           "action": 0.51,
-          "relevance": 0.0784,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -39529,7 +39529,7 @@
         "developer": {
           "level": "check",
           "action": 1,
-          "relevance": 0.45589999999999997,
+          "relevance": 0.47,
           "areas": [],
           "outOfScope": false
         }
@@ -39652,7 +39652,7 @@
         "developer": {
           "level": "info",
           "action": 0.31,
-          "relevance": 0.1843,
+          "relevance": 0.19,
           "areas": [],
           "outOfScope": true
         }
@@ -39774,7 +39774,7 @@
         "developer": {
           "level": "info",
           "action": 0.38,
-          "relevance": 0.1462,
+          "relevance": 0.17,
           "areas": [],
           "outOfScope": true
         }
@@ -39895,7 +39895,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1843,
+          "relevance": 0.19,
           "areas": [],
           "outOfScope": true
         }
@@ -40017,7 +40017,7 @@
         "developer": {
           "level": "info",
           "action": 0.08,
-          "relevance": 0.049,
+          "relevance": 0.05,
           "areas": [],
           "outOfScope": true
         }
@@ -40141,7 +40141,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.5236000000000001,
+          "relevance": 0.68,
           "areas": [
             "テーマアプリ拡張・App Proxy",
             "Web Pixel・顧客イベント"
@@ -40270,7 +40270,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1065,
+          "relevance": 0.15,
           "areas": [],
           "outOfScope": true
         }
@@ -40398,7 +40398,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.0264,
+          "relevance": 0.22,
           "areas": [],
           "outOfScope": true
         }
@@ -40519,7 +40519,7 @@
         "developer": {
           "level": "info",
           "action": 0.14,
-          "relevance": 0.06860000000000001,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -40640,7 +40640,7 @@
         "developer": {
           "level": "info",
           "action": 0.13,
-          "relevance": 0.08200000000000002,
+          "relevance": 0.2,
           "areas": [],
           "outOfScope": true
         }
@@ -40765,7 +40765,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1176,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -40890,7 +40890,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.0385,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -41013,7 +41013,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.04619999999999999,
+          "relevance": 0.22,
           "areas": [],
           "outOfScope": true
         }
@@ -41139,7 +41139,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1411,
+          "relevance": 0.17,
           "areas": [],
           "outOfScope": true
         }
@@ -41262,7 +41262,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.014000000000000002,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -41384,7 +41384,7 @@
         "developer": {
           "level": "info",
           "action": 0.09,
-          "relevance": 0.097,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -41507,7 +41507,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.06440000000000001,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -41633,7 +41633,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.08729999999999999,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -41759,7 +41759,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.0168,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -41882,7 +41882,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.194,
+          "relevance": 0.2,
           "areas": [],
           "outOfScope": true
         }
@@ -42007,7 +42007,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.2813,
+          "relevance": 0.29,
           "areas": [],
           "outOfScope": true
         }
@@ -42134,7 +42134,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.5488000000000001,
+          "relevance": 0.56,
           "areas": [
             "注文・商品・顧客API"
           ],
@@ -42262,7 +42262,7 @@
         "developer": {
           "level": "check",
           "action": 0,
-          "relevance": 0.8341999999999999,
+          "relevance": 0.86,
           "areas": [
             "課金（Billing API）"
           ],
@@ -42390,7 +42390,7 @@
         "developer": {
           "level": "check",
           "action": 0,
-          "relevance": 0.8428,
+          "relevance": 0.86,
           "areas": [
             "課金（Billing API）"
           ],
@@ -42513,11 +42513,11 @@
         "developer": {
           "level": "info",
           "action": 0.06,
-          "relevance": 0.1768,
+          "relevance": 0.68,
           "areas": [
             "テーマアプリ拡張・App Proxy"
           ],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -42638,7 +42638,7 @@
         "developer": {
           "level": "info",
           "action": 0.13,
-          "relevance": 0.16490000000000002,
+          "relevance": 0.17,
           "areas": [],
           "outOfScope": true
         }
@@ -42759,7 +42759,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.588,
+          "relevance": 0.6,
           "areas": [
             "App Store・Partner要件"
           ],
@@ -42885,7 +42885,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.016800000000000002,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -43006,7 +43006,7 @@
         "developer": {
           "level": "info",
           "action": 0.51,
-          "relevance": 0.1235,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -43127,7 +43127,7 @@
         "developer": {
           "level": "info",
           "action": 0.11,
-          "relevance": 0.1045,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -43250,7 +43250,7 @@
         "developer": {
           "level": "info",
           "action": 0.28,
-          "relevance": 0.08729999999999999,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -43372,7 +43372,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.08729999999999999,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -43491,7 +43491,7 @@
         "developer": {
           "level": "info",
           "action": 0.21,
-          "relevance": 0.1261,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -43612,7 +43612,7 @@
         "developer": {
           "level": "info",
           "action": 0.06,
-          "relevance": 0.10779999999999999,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -43731,7 +43731,7 @@
         "developer": {
           "level": "info",
           "action": 0.12,
-          "relevance": 0.06860000000000001,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -43851,9 +43851,9 @@
           "outOfScope": true
         },
         "developer": {
-          "level": "check",
+          "level": "now",
           "action": 1,
-          "relevance": 0.4896,
+          "relevance": 0.51,
           "areas": [
             "テーマアプリ拡張・App Proxy"
           ],
@@ -43977,9 +43977,9 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.028799999999999985,
+          "relevance": 0.36,
           "areas": [],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -44098,11 +44098,11 @@
         "developer": {
           "level": "info",
           "action": 0.08,
-          "relevance": 0.057199999999999994,
+          "relevance": 0.52,
           "areas": [
             "注文・商品・顧客API"
           ],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -44221,7 +44221,7 @@
         "developer": {
           "level": "info",
           "action": 0.05,
-          "relevance": 0.049,
+          "relevance": 0.05,
           "areas": [],
           "outOfScope": true
         }
@@ -44344,7 +44344,7 @@
         "developer": {
           "level": "check",
           "action": 0,
-          "relevance": 0.7347,
+          "relevance": 0.79,
           "areas": [
             "保護された顧客データ"
           ],
@@ -44469,7 +44469,7 @@
         "developer": {
           "level": "info",
           "action": 0.41,
-          "relevance": 0.052000000000000005,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -44591,7 +44591,7 @@
         "developer": {
           "level": "info",
           "action": 0.14,
-          "relevance": 0.10010000000000001,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -44713,7 +44713,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.245,
+          "relevance": 0.25,
           "areas": [],
           "outOfScope": true
         }
@@ -44839,7 +44839,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.098,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -44960,7 +44960,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.007999999999999997,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -45081,7 +45081,7 @@
         "developer": {
           "level": "info",
           "action": 0.11,
-          "relevance": 0.0485,
+          "relevance": 0.05,
           "areas": [],
           "outOfScope": true
         }
@@ -45202,7 +45202,7 @@
         "developer": {
           "level": "info",
           "action": 0.77,
-          "relevance": 0.039599999999999996,
+          "relevance": 0.06,
           "areas": [],
           "outOfScope": true
         }
@@ -45325,7 +45325,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.49,
+          "relevance": 0.5,
           "areas": [
             "注文・商品・顧客API"
           ],
@@ -45450,7 +45450,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.3626,
+          "relevance": 0.37,
           "areas": [],
           "outOfScope": false
         }
@@ -45575,7 +45575,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1261,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -45695,9 +45695,9 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "info",
+          "level": "check",
           "action": 0.17,
-          "relevance": 0.6688000000000001,
+          "relevance": 0.76,
           "areas": [
             "保護された顧客データ"
           ],
@@ -45822,7 +45822,7 @@
         "developer": {
           "level": "info",
           "action": 0.15,
-          "relevance": 0.07,
+          "relevance": 0.25,
           "areas": [],
           "outOfScope": true
         }
@@ -45947,7 +45947,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.09000000000000001,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -46069,7 +46069,7 @@
         "developer": {
           "level": "info",
           "action": 0.28,
-          "relevance": 0.030100000000000005,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -46191,7 +46191,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.0182,
+          "relevance": 0.14,
           "areas": [],
           "outOfScope": true
         }
@@ -46313,7 +46313,7 @@
         "developer": {
           "level": "info",
           "action": 0.89,
-          "relevance": 0.1261,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -46439,7 +46439,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.204,
+          "relevance": 0.24,
           "areas": [],
           "outOfScope": true
         }
@@ -46562,7 +46562,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.023,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -46687,7 +46687,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.021,
+          "relevance": 0.15,
           "areas": [],
           "outOfScope": true
         }
@@ -46808,7 +46808,7 @@
         "developer": {
           "level": "info",
           "action": 0.12,
-          "relevance": 0.058199999999999995,
+          "relevance": 0.06,
           "areas": [],
           "outOfScope": true
         }
@@ -46929,7 +46929,7 @@
         "developer": {
           "level": "check",
           "action": 0.17,
-          "relevance": 0.8918,
+          "relevance": 0.91,
           "areas": [
             "テーマアプリ拡張・App Proxy"
           ],
@@ -47055,7 +47055,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.010999999999999998,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -47176,7 +47176,7 @@
         "developer": {
           "level": "info",
           "action": 0.08,
-          "relevance": 0.0588,
+          "relevance": 0.06,
           "areas": [],
           "outOfScope": true
         }
@@ -47299,7 +47299,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.037700000000000004,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -47422,7 +47422,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1152,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -47541,7 +47541,7 @@
         "developer": {
           "level": "info",
           "action": 0.09,
-          "relevance": 0.099,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -47665,7 +47665,7 @@
         "developer": {
           "level": "now",
           "action": 1,
-          "relevance": 0.9114,
+          "relevance": 0.93,
           "areas": [
             "認証・トークン"
           ],
@@ -47790,7 +47790,7 @@
         "developer": {
           "level": "info",
           "action": 0.78,
-          "relevance": 0.15300000000000002,
+          "relevance": 0.17,
           "areas": [],
           "outOfScope": true
         }
@@ -47912,7 +47912,7 @@
         "developer": {
           "level": "now",
           "action": 1,
-          "relevance": 0.9408,
+          "relevance": 0.96,
           "areas": [
             "App Store・Partner要件"
           ],
@@ -48036,7 +48036,7 @@
         "developer": {
           "level": "info",
           "action": 0.06,
-          "relevance": 0.392,
+          "relevance": 0.4,
           "areas": [],
           "outOfScope": false
         }
@@ -48159,7 +48159,7 @@
         "developer": {
           "level": "info",
           "action": 0.18,
-          "relevance": 0.40919999999999995,
+          "relevance": 0.44,
           "areas": [],
           "outOfScope": false
         }
@@ -48281,7 +48281,7 @@
         "developer": {
           "level": "info",
           "action": 0.19,
-          "relevance": 0.3432,
+          "relevance": 0.39,
           "areas": [],
           "outOfScope": false
         }
@@ -48406,7 +48406,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1805,
+          "relevance": 0.19,
           "areas": [],
           "outOfScope": true
         }
@@ -48529,7 +48529,7 @@
         "developer": {
           "level": "info",
           "action": 0.18,
-          "relevance": 0.1261,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -48652,7 +48652,7 @@
         "developer": {
           "level": "info",
           "action": 0.21,
-          "relevance": 0.2304,
+          "relevance": 0.24,
           "areas": [],
           "outOfScope": true
         }
@@ -48773,7 +48773,7 @@
         "developer": {
           "level": "info",
           "action": 0.05,
-          "relevance": 0.005399999999999998,
+          "relevance": 0.06,
           "areas": [],
           "outOfScope": true
         }
@@ -48896,7 +48896,7 @@
         "developer": {
           "level": "check",
           "action": 0.93,
-          "relevance": 0.39769999999999994,
+          "relevance": 0.41,
           "areas": [],
           "outOfScope": false
         }
@@ -49022,7 +49022,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.11639999999999999,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -49143,7 +49143,7 @@
         "developer": {
           "level": "info",
           "action": 0.06,
-          "relevance": 0.049,
+          "relevance": 0.05,
           "areas": [],
           "outOfScope": true
         }
@@ -49267,7 +49267,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.28419999999999995,
+          "relevance": 0.29,
           "areas": [],
           "outOfScope": true
         }
@@ -49392,7 +49392,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.015299999999999996,
+          "relevance": 0.17,
           "areas": [],
           "outOfScope": true
         }
@@ -49514,7 +49514,7 @@
         "developer": {
           "level": "info",
           "action": 0.06,
-          "relevance": 0.11570000000000001,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -49639,7 +49639,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.025,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -49765,7 +49765,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.1862,
+          "relevance": 0.19,
           "areas": [],
           "outOfScope": true
         }
@@ -49888,9 +49888,9 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.08320000000000001,
+          "relevance": 0.32,
           "areas": [],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -50011,7 +50011,7 @@
         "developer": {
           "level": "info",
           "action": 0.44,
-          "relevance": 0.23279999999999998,
+          "relevance": 0.24,
           "areas": [],
           "outOfScope": true
         }
@@ -50133,7 +50133,7 @@
         "developer": {
           "level": "info",
           "action": 0.2,
-          "relevance": 0.5415,
+          "relevance": 0.57,
           "areas": [
             "課金（Billing API）"
           ],
@@ -50259,7 +50259,7 @@
         "developer": {
           "level": "info",
           "action": 0.18,
-          "relevance": 0.2632,
+          "relevance": 0.28,
           "areas": [],
           "outOfScope": true
         }
@@ -50380,7 +50380,7 @@
         "developer": {
           "level": "info",
           "action": 0.15,
-          "relevance": 0.16490000000000002,
+          "relevance": 0.17,
           "areas": [],
           "outOfScope": true
         }
@@ -50501,7 +50501,7 @@
         "developer": {
           "level": "info",
           "action": 0.22,
-          "relevance": 0.0576,
+          "relevance": 0.06,
           "areas": [],
           "outOfScope": true
         }
@@ -50622,7 +50622,7 @@
         "developer": {
           "level": "info",
           "action": 0.06,
-          "relevance": 0.0882,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -50745,7 +50745,7 @@
         "developer": {
           "level": "now",
           "action": 1,
-          "relevance": 0.8075,
+          "relevance": 0.85,
           "areas": [
             "App Store・Partner要件"
           ],
@@ -50868,7 +50868,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.5663999999999999,
+          "relevance": 0.59,
           "areas": [
             "App Store・Partner要件"
           ],
@@ -50989,7 +50989,7 @@
         "developer": {
           "level": "info",
           "action": 0.1,
-          "relevance": 0.0656,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -51113,7 +51113,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.2522,
+          "relevance": 0.26,
           "areas": [],
           "outOfScope": true
         }
@@ -51232,7 +51232,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.20159999999999997,
+          "relevance": 0.21,
           "areas": [],
           "outOfScope": true
         }
@@ -51353,7 +51353,7 @@
         "developer": {
           "level": "info",
           "action": 0.19,
-          "relevance": 0.11639999999999999,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -51474,11 +51474,11 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "info",
+          "level": "check",
           "action": 0.76,
-          "relevance": 0.1748,
+          "relevance": 0.46,
           "areas": [],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -51599,7 +51599,7 @@
         "developer": {
           "level": "info",
           "action": 0.64,
-          "relevance": 0.05600000000000001,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -51720,7 +51720,7 @@
         "developer": {
           "level": "info",
           "action": 0.8,
-          "relevance": 0.1552,
+          "relevance": 0.16,
           "areas": [],
           "outOfScope": true
         }
@@ -51845,7 +51845,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.015300000000000003,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -51967,7 +51967,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.06799999999999999,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -52093,7 +52093,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.5432,
+          "relevance": 0.56,
           "areas": [
             "課金（Billing API）"
           ],
@@ -52220,7 +52220,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.0752,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -52345,7 +52345,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.08729999999999999,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -52469,7 +52469,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.40199999999999997,
+          "relevance": 0.6,
           "areas": [
             "保護された顧客データ"
           ],
@@ -52599,11 +52599,11 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "info",
+          "level": "check",
           "action": 1,
-          "relevance": 0.08639999999999999,
+          "relevance": 0.36,
           "areas": [],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -52722,7 +52722,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.0846,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -52843,7 +52843,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.0768,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -52964,7 +52964,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1274,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -53085,7 +53085,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.5357999999999999,
+          "relevance": 0.57,
           "areas": [
             "テーマアプリ拡張・App Proxy"
           ],
@@ -53209,7 +53209,7 @@
         "developer": {
           "level": "info",
           "action": 0.41,
-          "relevance": 0.084,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -53332,7 +53332,7 @@
         "developer": {
           "level": "info",
           "action": 0.26,
-          "relevance": 0.11340000000000001,
+          "relevance": 0.14,
           "areas": [],
           "outOfScope": true
         }
@@ -53457,7 +53457,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.72,
+          "relevance": 0.75,
           "areas": [
             "注文・商品・顧客API"
           ],
@@ -53580,7 +53580,7 @@
         "developer": {
           "level": "info",
           "action": 0.11,
-          "relevance": 0.13720000000000002,
+          "relevance": 0.14,
           "areas": [],
           "outOfScope": true
         }
@@ -53701,7 +53701,7 @@
         "developer": {
           "level": "info",
           "action": 0.72,
-          "relevance": 0.033600000000000005,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -53824,7 +53824,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1045,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -53948,7 +53948,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.6761999999999999,
+          "relevance": 0.69,
           "areas": [
             "Webhook"
           ],
@@ -54073,7 +54073,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.152,
+          "relevance": 0.16,
           "areas": [],
           "outOfScope": true
         }
@@ -54194,7 +54194,7 @@
         "developer": {
           "level": "info",
           "action": 0.57,
-          "relevance": 0.0776,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -54317,9 +54317,9 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.2176,
+          "relevance": 0.32,
           "areas": [],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -54439,7 +54439,7 @@
         "developer": {
           "level": "info",
           "action": 0.53,
-          "relevance": 0.21559999999999999,
+          "relevance": 0.22,
           "areas": [],
           "outOfScope": true
         }
@@ -54560,7 +54560,7 @@
         "developer": {
           "level": "info",
           "action": 0.09,
-          "relevance": 0.0392,
+          "relevance": 0.04,
           "areas": [],
           "outOfScope": true
         }
@@ -54685,7 +54685,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.049399999999999986,
+          "relevance": 0.26,
           "areas": [],
           "outOfScope": true
         }
@@ -54806,7 +54806,7 @@
         "developer": {
           "level": "info",
           "action": 0.13,
-          "relevance": 0.0679,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -54929,7 +54929,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.0784,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -55053,7 +55053,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.6324,
+          "relevance": 0.68,
           "areas": [
             "保護された顧客データ"
           ],
@@ -55180,9 +55180,9 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1353,
+          "relevance": 0.33,
           "areas": [],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -55304,7 +55304,7 @@
         "developer": {
           "level": "info",
           "action": 0.21,
-          "relevance": 0.3384,
+          "relevance": 0.36,
           "areas": [],
           "outOfScope": false
         }
@@ -55428,7 +55428,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.7448,
+          "relevance": 0.76,
           "areas": [
             "注文・商品・顧客API"
           ],
@@ -55555,7 +55555,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.5683999999999999,
+          "relevance": 0.58,
           "areas": [
             "課金（Billing API）"
           ],
@@ -55680,7 +55680,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.6272,
+          "relevance": 0.64,
           "areas": [
             "注文・商品・顧客API"
           ],
@@ -55805,7 +55805,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.9506,
+          "relevance": 0.97,
           "areas": [
             "テーマアプリ拡張・App Proxy"
           ],
@@ -55928,7 +55928,7 @@
         "developer": {
           "level": "info",
           "action": 0.23,
-          "relevance": 0.1104,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -56049,7 +56049,7 @@
         "developer": {
           "level": "info",
           "action": 0.69,
-          "relevance": 0.0078,
+          "relevance": 0.06,
           "areas": [],
           "outOfScope": true
         }
@@ -56173,7 +56173,7 @@
         "developer": {
           "level": "now",
           "action": 1,
-          "relevance": 0.768,
+          "relevance": 0.8,
           "areas": [
             "Webhook"
           ],
@@ -56302,7 +56302,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.010399999999999994,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -56423,7 +56423,7 @@
         "developer": {
           "level": "info",
           "action": 0.09,
-          "relevance": 0.0588,
+          "relevance": 0.06,
           "areas": [],
           "outOfScope": true
         }
@@ -56549,9 +56549,9 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1739,
+          "relevance": 0.47,
           "areas": [],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -56670,7 +56670,7 @@
         "developer": {
           "level": "info",
           "action": 0.24,
-          "relevance": 0.0736,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -56791,7 +56791,7 @@
         "developer": {
           "level": "info",
           "action": 0.11,
-          "relevance": 0.0425,
+          "relevance": 0.05,
           "areas": [],
           "outOfScope": true
         }
@@ -56914,7 +56914,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.04140000000000001,
+          "relevance": 0.23,
           "areas": [],
           "outOfScope": true
         }
@@ -57037,7 +57037,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.13720000000000002,
+          "relevance": 0.14,
           "areas": [],
           "outOfScope": true
         }
@@ -57162,7 +57162,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.2231,
+          "relevance": 0.23,
           "areas": [],
           "outOfScope": true
         }
@@ -57283,7 +57283,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.532,
+          "relevance": 0.56,
           "areas": [
             "テーマアプリ拡張・App Proxy"
           ],
@@ -57407,7 +57407,7 @@
         "developer": {
           "level": "info",
           "action": 0.51,
-          "relevance": 0.10779999999999999,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -57532,7 +57532,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.07840000000000001,
+          "relevance": 0.14,
           "areas": [],
           "outOfScope": true
         }
@@ -57656,11 +57656,11 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.28500000000000003,
+          "relevance": 0.5,
           "areas": [
             "保護された顧客データ"
           ],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -57780,7 +57780,7 @@
         "developer": {
           "level": "info",
           "action": 0.11,
-          "relevance": 0.0594,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -57903,7 +57903,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.02880000000000001,
+          "relevance": 0.16,
           "areas": [],
           "outOfScope": true
         }
@@ -58024,7 +58024,7 @@
         "developer": {
           "level": "info",
           "action": 0.08,
-          "relevance": 0.0651,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -58147,7 +58147,7 @@
         "developer": {
           "level": "now",
           "action": 1,
-          "relevance": 0.8133999999999999,
+          "relevance": 0.83,
           "areas": [
             "App Store・Partner要件"
           ],
@@ -58273,7 +58273,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.0975,
+          "relevance": 0.25,
           "areas": [],
           "outOfScope": true
         }
@@ -58400,7 +58400,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1862,
+          "relevance": 0.19,
           "areas": [],
           "outOfScope": true
         }
@@ -58523,7 +58523,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.0776,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -58645,11 +58645,11 @@
         "developer": {
           "level": "info",
           "action": 0.45,
-          "relevance": 0.16740000000000002,
+          "relevance": 0.62,
           "areas": [
             "保護された顧客データ"
           ],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -58771,7 +58771,7 @@
         "developer": {
           "level": "check",
           "action": 0,
-          "relevance": 0.8543999999999999,
+          "relevance": 0.89,
           "areas": [
             "テーマアプリ拡張・App Proxy"
           ],
@@ -58894,7 +58894,7 @@
         "developer": {
           "level": "info",
           "action": 0.05,
-          "relevance": 0.1261,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -59017,7 +59017,7 @@
         "developer": {
           "level": "check",
           "action": 0,
-          "relevance": 0.784,
+          "relevance": 0.8,
           "areas": [
             "テーマアプリ拡張・App Proxy",
             "App Store・Partner要件"
@@ -59142,7 +59142,7 @@
         "developer": {
           "level": "check",
           "action": 0.25,
-          "relevance": 0.7448,
+          "relevance": 0.76,
           "areas": [
             "Web Pixel・顧客イベント"
           ],
@@ -59268,7 +59268,7 @@
         "developer": {
           "level": "check",
           "action": 1,
-          "relevance": 0.32980000000000004,
+          "relevance": 0.34,
           "areas": [],
           "outOfScope": false
         }
@@ -59389,7 +59389,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.016200000000000003,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -59515,7 +59515,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.27259999999999995,
+          "relevance": 0.29,
           "areas": [],
           "outOfScope": true
         }
@@ -59636,7 +59636,7 @@
         "developer": {
           "level": "info",
           "action": 0.11,
-          "relevance": 0.049,
+          "relevance": 0.05,
           "areas": [],
           "outOfScope": true
         }
@@ -59761,7 +59761,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1261,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -59885,7 +59885,7 @@
         "developer": {
           "level": "check",
           "action": 0.7,
-          "relevance": 0.4278,
+          "relevance": 0.46,
           "areas": [],
           "outOfScope": false
         }
@@ -60008,7 +60008,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.11399999999999999,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -60130,7 +60130,7 @@
         "developer": {
           "level": "info",
           "action": 0.21,
-          "relevance": 0.098,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -60255,7 +60255,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.095,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -60379,7 +60379,7 @@
         "developer": {
           "level": "now",
           "action": 0.92,
-          "relevance": 0.8063999999999999,
+          "relevance": 0.84,
           "areas": [
             "課金（Billing API）"
           ],
@@ -60507,7 +60507,7 @@
         "developer": {
           "level": "check",
           "action": 0,
-          "relevance": 0.7953999999999999,
+          "relevance": 0.82,
           "areas": [
             "課金（Billing API）"
           ],
@@ -60633,7 +60633,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.5238,
+          "relevance": 0.54,
           "areas": [
             "保護された顧客データ"
           ],
@@ -60763,7 +60763,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.2208,
+          "relevance": 0.23,
           "areas": [],
           "outOfScope": true
         }
@@ -60886,7 +60886,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.08729999999999999,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -61009,7 +61009,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.019600000000000003,
+          "relevance": 0.14,
           "areas": [],
           "outOfScope": true
         }
@@ -61136,11 +61136,11 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.0767,
+          "relevance": 0.59,
           "areas": [
             "課金（Billing API）"
           ],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -61264,7 +61264,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.0679,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -61390,7 +61390,7 @@
         "developer": {
           "level": "now",
           "action": 1,
-          "relevance": 0.6204,
+          "relevance": 0.66,
           "areas": [
             "テーマアプリ拡張・App Proxy",
             "ScriptTag",
@@ -61518,7 +61518,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.10779999999999999,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -61642,7 +61642,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1067,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -61764,7 +61764,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1248,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -61885,7 +61885,7 @@
         "developer": {
           "level": "info",
           "action": 0.55,
-          "relevance": 0.2716,
+          "relevance": 0.28,
           "areas": [],
           "outOfScope": true
         }
@@ -62007,7 +62007,7 @@
         "developer": {
           "level": "info",
           "action": 0.06,
-          "relevance": 0.049,
+          "relevance": 0.05,
           "areas": [],
           "outOfScope": true
         }
@@ -62128,7 +62128,7 @@
         "developer": {
           "level": "info",
           "action": 0.12,
-          "relevance": 0.0776,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -62256,7 +62256,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.196,
+          "relevance": 0.2,
           "areas": [],
           "outOfScope": true
         }
@@ -62375,7 +62375,7 @@
         "developer": {
           "level": "info",
           "action": 0.1,
-          "relevance": 0.0679,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -62499,9 +62499,9 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "check",
+          "level": "now",
           "action": 1,
-          "relevance": 0.485,
+          "relevance": 0.5,
           "areas": [
             "注文・商品・顧客API"
           ],
@@ -62624,7 +62624,7 @@
         "developer": {
           "level": "info",
           "action": 0.12,
-          "relevance": 0.1274,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -62751,7 +62751,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.045000000000000005,
+          "relevance": 0.15,
           "areas": [],
           "outOfScope": true
         }
@@ -62876,7 +62876,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.097,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -62999,9 +62999,9 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.0372,
+          "relevance": 0.31,
           "areas": [],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -63120,7 +63120,7 @@
         "developer": {
           "level": "info",
           "action": 0.14,
-          "relevance": 0.105,
+          "relevance": 0.15,
           "areas": [],
           "outOfScope": true
         }
@@ -63241,7 +63241,7 @@
         "developer": {
           "level": "info",
           "action": 0.06,
-          "relevance": 0.0588,
+          "relevance": 0.06,
           "areas": [],
           "outOfScope": true
         }
@@ -63362,7 +63362,7 @@
         "developer": {
           "level": "info",
           "action": 0.06,
-          "relevance": 0.08900000000000001,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -63483,7 +63483,7 @@
         "developer": {
           "level": "info",
           "action": 0.19,
-          "relevance": 0.049,
+          "relevance": 0.05,
           "areas": [],
           "outOfScope": true
         }
@@ -63609,7 +63609,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.10779999999999999,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -63733,7 +63733,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.4365,
+          "relevance": 0.45,
           "areas": [],
           "outOfScope": false
         }
@@ -63859,7 +63859,7 @@
         "developer": {
           "level": "check",
           "action": 1,
-          "relevance": 0.30069999999999997,
+          "relevance": 0.31,
           "areas": [],
           "outOfScope": false
         }
@@ -63986,7 +63986,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.2134,
+          "relevance": 0.22,
           "areas": [],
           "outOfScope": true
         }
@@ -64110,7 +64110,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.196,
+          "relevance": 0.2,
           "areas": [],
           "outOfScope": true
         }
@@ -64233,7 +64233,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.0882,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -64355,7 +64355,7 @@
         "developer": {
           "level": "info",
           "action": 0.18,
-          "relevance": 0.021600000000000005,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -64476,7 +64476,7 @@
         "developer": {
           "level": "info",
           "action": 0.05,
-          "relevance": 0.011199999999999995,
+          "relevance": 0.14,
           "areas": [],
           "outOfScope": true
         }
@@ -64598,7 +64598,7 @@
         "developer": {
           "level": "info",
           "action": 0.06,
-          "relevance": 0.049,
+          "relevance": 0.05,
           "areas": [],
           "outOfScope": true
         }
@@ -64719,7 +64719,7 @@
         "developer": {
           "level": "info",
           "action": 0.06,
-          "relevance": 0.0776,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -64840,7 +64840,7 @@
         "developer": {
           "level": "info",
           "action": 0.05,
-          "relevance": 0.0776,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -64961,7 +64961,7 @@
         "developer": {
           "level": "info",
           "action": 0.06,
-          "relevance": 0.06720000000000001,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -65080,7 +65080,7 @@
         "developer": {
           "level": "info",
           "action": 0.11,
-          "relevance": 0.0078,
+          "relevance": 0.06,
           "areas": [],
           "outOfScope": true
         }
@@ -65205,7 +65205,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1053,
+          "relevance": 0.27,
           "areas": [],
           "outOfScope": true
         }
@@ -65329,7 +65329,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.30069999999999997,
+          "relevance": 0.31,
           "areas": [],
           "outOfScope": false
         }
@@ -65452,9 +65452,9 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.294,
+          "relevance": 0.3,
           "areas": [],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -65574,7 +65574,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.19949999999999998,
+          "relevance": 0.21,
           "areas": [],
           "outOfScope": true
         }
@@ -65698,7 +65698,7 @@
         "developer": {
           "level": "info",
           "action": 0.4,
-          "relevance": 0.361,
+          "relevance": 0.38,
           "areas": [],
           "outOfScope": false
         }
@@ -65821,7 +65821,7 @@
         "developer": {
           "level": "info",
           "action": 0.16,
-          "relevance": 0.3478,
+          "relevance": 0.37,
           "areas": [],
           "outOfScope": false
         }
@@ -65944,7 +65944,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.27549999999999997,
+          "relevance": 0.29,
           "areas": [],
           "outOfScope": true
         }
@@ -66066,7 +66066,7 @@
         "developer": {
           "level": "info",
           "action": 0.09,
-          "relevance": 0.0776,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -66188,7 +66188,7 @@
         "developer": {
           "level": "info",
           "action": 0.11,
-          "relevance": 0.0882,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -66310,7 +66310,7 @@
         "developer": {
           "level": "info",
           "action": 0.09,
-          "relevance": 0.196,
+          "relevance": 0.2,
           "areas": [],
           "outOfScope": true
         }
@@ -66432,7 +66432,7 @@
         "developer": {
           "level": "info",
           "action": 0.38,
-          "relevance": 0.144,
+          "relevance": 0.15,
           "areas": [],
           "outOfScope": true
         }
@@ -66555,7 +66555,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.1209,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -66677,7 +66677,7 @@
         "developer": {
           "level": "info",
           "action": 0.12,
-          "relevance": 0.085,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -66798,7 +66798,7 @@
         "developer": {
           "level": "info",
           "action": 0.53,
-          "relevance": 0.07919999999999999,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -66921,7 +66921,7 @@
         "developer": {
           "level": "info",
           "action": 0.18,
-          "relevance": 0.11279999999999998,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -67043,7 +67043,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.1358,
+          "relevance": 0.14,
           "areas": [],
           "outOfScope": true
         }
@@ -67164,7 +67164,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.2716,
+          "relevance": 0.28,
           "areas": [],
           "outOfScope": true
         }
@@ -67285,7 +67285,7 @@
         "developer": {
           "level": "info",
           "action": 0.09,
-          "relevance": 0.0679,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -67406,7 +67406,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.1536,
+          "relevance": 0.16,
           "areas": [],
           "outOfScope": true
         }
@@ -67527,7 +67527,7 @@
         "developer": {
           "level": "info",
           "action": 0.06,
-          "relevance": 0.0576,
+          "relevance": 0.06,
           "areas": [],
           "outOfScope": true
         }
@@ -67648,7 +67648,7 @@
         "developer": {
           "level": "info",
           "action": 0.06,
-          "relevance": 0.1692,
+          "relevance": 0.18,
           "areas": [],
           "outOfScope": true
         }
@@ -67771,7 +67771,7 @@
         "developer": {
           "level": "info",
           "action": 0.21,
-          "relevance": 0.5292,
+          "relevance": 0.54,
           "areas": [
             "課金（Billing API）"
           ],
@@ -67895,7 +67895,7 @@
         "developer": {
           "level": "info",
           "action": 0.08,
-          "relevance": 0.098,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -68018,7 +68018,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.3913,
+          "relevance": 0.43,
           "areas": [],
           "outOfScope": false
         }
@@ -68139,7 +68139,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.33599999999999997,
+          "relevance": 0.35,
           "areas": [],
           "outOfScope": false
         }
@@ -68261,7 +68261,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.007199999999999998,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -68384,7 +68384,7 @@
         "developer": {
           "level": "check",
           "action": 0,
-          "relevance": 0.9506,
+          "relevance": 0.97,
           "areas": [
             "認証・トークン"
           ],
@@ -68509,7 +68509,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1302,
+          "relevance": 0.14,
           "areas": [],
           "outOfScope": true
         }
@@ -68630,7 +68630,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.8265,
+          "relevance": 0.87,
           "areas": [
             "App Store・Partner要件"
           ],
@@ -68758,7 +68758,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.2813,
+          "relevance": 0.29,
           "areas": [],
           "outOfScope": true
         }
@@ -68881,7 +68881,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1862,
+          "relevance": 0.19,
           "areas": [],
           "outOfScope": true
         }
@@ -69007,7 +69007,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.12460000000000002,
+          "relevance": 0.14,
           "areas": [],
           "outOfScope": true
         }
@@ -69130,7 +69130,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1067,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -69257,7 +69257,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.135,
+          "relevance": 0.27,
           "areas": [],
           "outOfScope": true
         }
@@ -69378,7 +69378,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.0388,
+          "relevance": 0.04,
           "areas": [],
           "outOfScope": true
         }
@@ -69503,7 +69503,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.22540000000000002,
+          "relevance": 0.23,
           "areas": [],
           "outOfScope": true
         }
@@ -69625,7 +69625,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.025,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -69748,7 +69748,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.43119999999999997,
+          "relevance": 0.44,
           "areas": [],
           "outOfScope": false
         }
@@ -69872,7 +69872,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.1552,
+          "relevance": 0.16,
           "areas": [],
           "outOfScope": true
         }
@@ -69996,7 +69996,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.3724,
+          "relevance": 0.38,
           "areas": [],
           "outOfScope": false
         }
@@ -70121,7 +70121,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.0882,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -70247,7 +70247,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.27440000000000003,
+          "relevance": 0.28,
           "areas": [],
           "outOfScope": true
         }
@@ -70367,7 +70367,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.098,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -70481,7 +70481,7 @@
         "developer": {
           "level": "info",
           "action": 0.04,
-          "relevance": 0.06860000000000001,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -70600,7 +70600,7 @@
         "developer": {
           "level": "info",
           "action": 0.38,
-          "relevance": 0.0776,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -70718,7 +70718,7 @@
         "developer": {
           "level": "info",
           "action": 0.6,
-          "relevance": 0.095,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -70843,7 +70843,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.3626,
+          "relevance": 0.37,
           "areas": [],
           "outOfScope": false
         }
@@ -70969,7 +70969,7 @@
         "developer": {
           "level": "check",
           "action": 0,
-          "relevance": 0.8633,
+          "relevance": 0.89,
           "areas": [
             "課金（Billing API）"
           ],
@@ -71088,7 +71088,7 @@
         "developer": {
           "level": "info",
           "action": 0.1,
-          "relevance": 0.0288,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -71204,7 +71204,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.08639999999999999,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -71320,7 +71320,7 @@
         "developer": {
           "level": "info",
           "action": 0.11,
-          "relevance": 0.13720000000000002,
+          "relevance": 0.14,
           "areas": [],
           "outOfScope": true
         }
@@ -71436,7 +71436,7 @@
         "developer": {
           "level": "info",
           "action": 0.13,
-          "relevance": 0.097,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -71552,7 +71552,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.032999999999999995,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -71673,7 +71673,7 @@
         "developer": {
           "level": "info",
           "action": 0.82,
-          "relevance": 0.1568,
+          "relevance": 0.16,
           "areas": [],
           "outOfScope": true
         }
@@ -71789,7 +71789,7 @@
         "developer": {
           "level": "info",
           "action": 0.17,
-          "relevance": 0.196,
+          "relevance": 0.2,
           "areas": [],
           "outOfScope": true
         }
@@ -71903,7 +71903,7 @@
         "developer": {
           "level": "check",
           "action": 0.64,
-          "relevance": 0.6208,
+          "relevance": 0.64,
           "areas": [
             "Webhook"
           ],
@@ -72024,7 +72024,7 @@
         "developer": {
           "level": "now",
           "action": 1,
-          "relevance": 0.9506,
+          "relevance": 0.98,
           "areas": [
             "保護された顧客データ",
             "Web Pixel・顧客イベント"
@@ -72149,7 +72149,7 @@
         "developer": {
           "level": "info",
           "action": 0.97,
-          "relevance": 0.0882,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -72264,7 +72264,7 @@
         "developer": {
           "level": "info",
           "action": 0.06,
-          "relevance": 0.1261,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -72379,7 +72379,7 @@
         "developer": {
           "level": "info",
           "action": 0.13,
-          "relevance": 0.048,
+          "relevance": 0.05,
           "areas": [],
           "outOfScope": true
         }
@@ -72495,7 +72495,7 @@
         "developer": {
           "level": "info",
           "action": 0.23,
-          "relevance": 0.06860000000000001,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -72608,7 +72608,7 @@
         "developer": {
           "level": "info",
           "action": 0.13,
-          "relevance": 0.06860000000000001,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -72724,7 +72724,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.13720000000000002,
+          "relevance": 0.14,
           "areas": [],
           "outOfScope": true
         }
@@ -72839,7 +72839,7 @@
         "developer": {
           "level": "info",
           "action": 0.05,
-          "relevance": 0.2352,
+          "relevance": 0.24,
           "areas": [],
           "outOfScope": true
         }
@@ -72958,7 +72958,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1274,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -73076,7 +73076,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.20579999999999998,
+          "relevance": 0.21,
           "areas": [],
           "outOfScope": true
         }
@@ -73193,7 +73193,7 @@
         "developer": {
           "level": "info",
           "action": 0.36,
-          "relevance": 0.1176,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -73312,7 +73312,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.6499,
+          "relevance": 0.67,
           "areas": [
             "保護された顧客データ"
           ],
@@ -73428,7 +73428,7 @@
         "developer": {
           "level": "info",
           "action": 0.12,
-          "relevance": 0.0768,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -73551,7 +73551,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.011899999999999992,
+          "relevance": 0.17,
           "areas": [],
           "outOfScope": true
         }
@@ -73665,7 +73665,7 @@
         "developer": {
           "level": "info",
           "action": 0.56,
-          "relevance": 0.2352,
+          "relevance": 0.24,
           "areas": [],
           "outOfScope": true
         }
@@ -73781,7 +73781,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.098,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -73898,7 +73898,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.1552,
+          "relevance": 0.16,
           "areas": [],
           "outOfScope": true
         }
@@ -74013,7 +74013,7 @@
         "developer": {
           "level": "info",
           "action": 0.08,
-          "relevance": 0.1552,
+          "relevance": 0.16,
           "areas": [],
           "outOfScope": true
         }
@@ -74128,7 +74128,7 @@
         "developer": {
           "level": "info",
           "action": 0.77,
-          "relevance": 0.0504,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -74242,7 +74242,7 @@
         "developer": {
           "level": "info",
           "action": 0.2,
-          "relevance": 0.0679,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -74354,7 +74354,7 @@
         "developer": {
           "level": "info",
           "action": 0.28,
-          "relevance": 0.08639999999999999,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -74468,7 +74468,7 @@
         "developer": {
           "level": "info",
           "action": 0.06,
-          "relevance": 0.011999999999999997,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -74582,7 +74582,7 @@
         "developer": {
           "level": "info",
           "action": 0.09,
-          "relevance": 0.10779999999999999,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -74697,7 +74697,7 @@
         "developer": {
           "level": "info",
           "action": 0.08,
-          "relevance": 0.1455,
+          "relevance": 0.15,
           "areas": [],
           "outOfScope": true
         }
@@ -74812,7 +74812,7 @@
         "developer": {
           "level": "info",
           "action": 0.24,
-          "relevance": 0.1455,
+          "relevance": 0.15,
           "areas": [],
           "outOfScope": true
         }
@@ -74928,7 +74928,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.058199999999999995,
+          "relevance": 0.06,
           "areas": [],
           "outOfScope": true
         }
@@ -75042,7 +75042,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1067,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -75162,7 +75162,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.017099999999999994,
+          "relevance": 0.19,
           "areas": [],
           "outOfScope": true
         }
@@ -75281,7 +75281,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1261,
+          "relevance": 0.13,
           "areas": [],
           "outOfScope": true
         }
@@ -75396,7 +75396,7 @@
         "developer": {
           "level": "info",
           "action": 0.55,
-          "relevance": 0.05639999999999999,
+          "relevance": 0.06,
           "areas": [],
           "outOfScope": true
         }
@@ -75515,7 +75515,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.194,
+          "relevance": 0.2,
           "areas": [],
           "outOfScope": true
         }
@@ -75629,7 +75629,7 @@
         "developer": {
           "level": "info",
           "action": 0.17,
-          "relevance": 0.0476,
+          "relevance": 0.14,
           "areas": [],
           "outOfScope": true
         }
@@ -75746,7 +75746,7 @@
         "developer": {
           "level": "info",
           "action": 0.72,
-          "relevance": 0.12460000000000002,
+          "relevance": 0.14,
           "areas": [],
           "outOfScope": true
         }
@@ -75860,7 +75860,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.098,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -75976,7 +75976,7 @@
         "developer": {
           "level": "check",
           "action": 0,
-          "relevance": 0.873,
+          "relevance": 0.9,
           "areas": [
             "テーマアプリ拡張・App Proxy",
             "App Store・Partner要件"
@@ -76094,7 +76094,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.011,
+          "relevance": 0.1,
           "areas": [],
           "outOfScope": true
         }
@@ -76210,7 +76210,7 @@
         "developer": {
           "level": "info",
           "action": 0.08,
-          "relevance": 0.5141,
+          "relevance": 0.53,
           "areas": [
             "注文・商品・顧客API"
           ],
@@ -76341,7 +76341,7 @@
         "developer": {
           "level": "check",
           "action": 0,
-          "relevance": 0.7296,
+          "relevance": 0.76,
           "areas": [
             "注文・商品・顧客API"
           ],
@@ -76459,7 +76459,7 @@
         "developer": {
           "level": "info",
           "action": 0.94,
-          "relevance": 0.060200000000000004,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -76577,7 +76577,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.0126,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -76694,9 +76694,9 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.23249999999999998,
+          "relevance": 0.31,
           "areas": [],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -76808,7 +76808,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.04,
+          "relevance": 0.16,
           "areas": [],
           "outOfScope": true
         }
@@ -76920,7 +76920,7 @@
         "developer": {
           "level": "info",
           "action": 0.19,
-          "relevance": 0.0776,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -77032,7 +77032,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.10779999999999999,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -77152,7 +77152,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1598,
+          "relevance": 0.17,
           "areas": [],
           "outOfScope": true
         }
@@ -77266,7 +77266,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.10339999999999999,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -77382,7 +77382,7 @@
         "developer": {
           "level": "info",
           "action": 0.55,
-          "relevance": 0.18860000000000002,
+          "relevance": 0.23,
           "areas": [],
           "outOfScope": true
         }
@@ -77496,7 +77496,7 @@
         "developer": {
           "level": "info",
           "action": 0.13,
-          "relevance": 0.17159999999999997,
+          "relevance": 0.26,
           "areas": [],
           "outOfScope": true
         }
@@ -77615,7 +77615,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.021600000000000005,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -77729,7 +77729,7 @@
         "developer": {
           "level": "info",
           "action": 0.08,
-          "relevance": 0.1512,
+          "relevance": 0.18,
           "areas": [],
           "outOfScope": true
         }
@@ -77843,7 +77843,7 @@
         "developer": {
           "level": "info",
           "action": 0.17,
-          "relevance": 0.11639999999999999,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -77961,7 +77961,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.0784,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -78075,7 +78075,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.06860000000000001,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -78189,7 +78189,7 @@
         "developer": {
           "level": "info",
           "action": 0.08,
-          "relevance": 0.06860000000000001,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -78306,7 +78306,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.13720000000000002,
+          "relevance": 0.14,
           "areas": [],
           "outOfScope": true
         }
@@ -78424,9 +78424,9 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.22719999999999999,
+          "relevance": 0.32,
           "areas": [],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -78538,7 +78538,7 @@
         "developer": {
           "level": "info",
           "action": 0.39,
-          "relevance": 0.06440000000000001,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -78653,7 +78653,7 @@
         "developer": {
           "level": "info",
           "action": 0.61,
-          "relevance": 0.17429999999999998,
+          "relevance": 0.21,
           "areas": [],
           "outOfScope": true
         }
@@ -78767,7 +78767,7 @@
         "developer": {
           "level": "info",
           "action": 0.1,
-          "relevance": 0.0784,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -78882,7 +78882,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.06860000000000001,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -78997,13 +78997,13 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "info",
+          "level": "check",
           "action": 0.27,
-          "relevance": 0.17099999999999996,
+          "relevance": 0.9,
           "areas": [
             "注文・商品・顧客API"
           ],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -79119,7 +79119,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1067,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -79234,11 +79234,11 @@
         "developer": {
           "level": "info",
           "action": 0.21,
-          "relevance": 0.2368,
+          "relevance": 0.64,
           "areas": [
             "保護された顧客データ"
           ],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -79350,7 +79350,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.0882,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -79465,7 +79465,7 @@
         "developer": {
           "level": "info",
           "action": 0.05,
-          "relevance": 0.0882,
+          "relevance": 0.09,
           "areas": [],
           "outOfScope": true
         }
@@ -79579,7 +79579,7 @@
         "developer": {
           "level": "info",
           "action": 0.36,
-          "relevance": 0.1974,
+          "relevance": 0.21,
           "areas": [],
           "outOfScope": true
         }
@@ -79696,7 +79696,7 @@
         "developer": {
           "level": "info",
           "action": 0.07,
-          "relevance": 0.011199999999999995,
+          "relevance": 0.14,
           "areas": [],
           "outOfScope": true
         }
@@ -79810,7 +79810,7 @@
         "developer": {
           "level": "info",
           "action": 0.1,
-          "relevance": 0.0679,
+          "relevance": 0.07,
           "areas": [],
           "outOfScope": true
         }
@@ -79922,7 +79922,7 @@
         "developer": {
           "level": "info",
           "action": 0.04,
-          "relevance": 0.0396,
+          "relevance": 0.04,
           "areas": [],
           "outOfScope": true
         }
@@ -80038,7 +80038,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.0588,
+          "relevance": 0.06,
           "areas": [],
           "outOfScope": true
         }
@@ -80152,7 +80152,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.17859999999999998,
+          "relevance": 0.19,
           "areas": [],
           "outOfScope": true
         }
@@ -80271,7 +80271,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1176,
+          "relevance": 0.12,
           "areas": [],
           "outOfScope": true
         }
@@ -80389,7 +80389,7 @@
         "developer": {
           "level": "info",
           "action": 0.98,
-          "relevance": 0.10779999999999999,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }
@@ -80508,7 +80508,7 @@
         "developer": {
           "level": "check",
           "action": 0,
-          "relevance": 0.8526,
+          "relevance": 0.87,
           "areas": [
             "課金（Billing API）",
             "注文・商品・顧客API"
@@ -80628,7 +80628,7 @@
         "developer": {
           "level": "info",
           "action": 1,
-          "relevance": 0.147,
+          "relevance": 0.15,
           "areas": [],
           "outOfScope": true
         }
@@ -80744,7 +80744,7 @@
         "developer": {
           "level": "info",
           "action": 0.16,
-          "relevance": 0.188,
+          "relevance": 0.2,
           "areas": [],
           "outOfScope": true
         }
@@ -80869,7 +80869,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.34919999999999995,
+          "relevance": 0.36,
           "areas": [],
           "outOfScope": false
         }
@@ -80992,7 +80992,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.024800000000000006,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -81115,7 +81115,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.006399999999999997,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -81240,7 +81240,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.0784,
+          "relevance": 0.08,
           "areas": [],
           "outOfScope": true
         }
@@ -81361,7 +81361,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.17459999999999998,
+          "relevance": 0.18,
           "areas": [],
           "outOfScope": true
         }
@@ -81486,7 +81486,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.4704,
+          "relevance": 0.48,
           "areas": [],
           "outOfScope": false
         }
@@ -81603,7 +81603,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.5494000000000001,
+          "relevance": 0.67,
           "areas": [
             "テーマアプリ拡張・App Proxy"
           ],
@@ -81723,7 +81723,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.8341999999999999,
+          "relevance": 0.86,
           "areas": [
             "注文・商品・顧客API"
           ],
@@ -81842,7 +81842,7 @@
         "developer": {
           "level": "info",
           "action": 0.23,
-          "relevance": 0.022500000000000003,
+          "relevance": 0.15,
           "areas": [],
           "outOfScope": true
         }
@@ -81958,7 +81958,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.2425,
+          "relevance": 0.25,
           "areas": [],
           "outOfScope": true
         }
@@ -82076,7 +82076,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.21559999999999999,
+          "relevance": 0.22,
           "areas": [],
           "outOfScope": true
         }
@@ -82202,7 +82202,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.045,
+          "relevance": 0.18,
           "areas": [],
           "outOfScope": true
         }
@@ -82324,9 +82324,9 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.294,
+          "relevance": 0.3,
           "areas": [],
-          "outOfScope": true
+          "outOfScope": false
         }
       }
     },
@@ -82449,7 +82449,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1666,
+          "relevance": 0.17,
           "areas": [],
           "outOfScope": true
         }
@@ -82572,7 +82572,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1805,
+          "relevance": 0.19,
           "areas": [],
           "outOfScope": true
         }
@@ -82697,7 +82697,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.1568,
+          "relevance": 0.16,
           "areas": [],
           "outOfScope": true
         }
@@ -82815,7 +82815,7 @@
         "developer": {
           "level": "info",
           "action": 0,
-          "relevance": 0.10779999999999999,
+          "relevance": 0.11,
           "areas": [],
           "outOfScope": true
         }

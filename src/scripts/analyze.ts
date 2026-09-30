@@ -2,9 +2,13 @@ import { loadDataStore, saveDataStore } from '../utils/file.js';
 import { ClaudeAnalyzer } from '../analyzer/claude.js';
 import { getPrimaryAnalysis } from '../utils/analysis.js';
 
+// 既存エントリーに対象者・対応・期限を補う件数の上限（1回の実行あたり）
+const MAX_DETAIL_BACKFILL = 150;
+
 /**
  * 未分析のエントリーを分析して保存
  * ※分析に失敗したエントリーは analyses が付かないため、次回実行時に再分析される
+ * ※「今すぐ対応」「確認推奨」なのに対象者・対応・期限がない既存エントリーも分析し直す
  */
 async function main() {
   try {
@@ -17,7 +21,15 @@ async function main() {
     const dataStore = await loadDataStore();
     console.log(`✓ Loaded ${dataStore.entries.length} entries\n`);
 
-    const unanalyzedEntries = dataStore.entries.filter((entry) => !getPrimaryAnalysis(entry));
+    const needsDetails = (entry: (typeof dataStore.entries)[number]) =>
+      Object.values(entry.priority ?? {}).some((p) => p.level !== 'info') &&
+      getPrimaryAnalysis(entry)?.audienceJa === undefined;
+    const unanalyzedEntries = [
+      ...dataStore.entries.filter((entry) => !getPrimaryAnalysis(entry)),
+      ...dataStore.entries
+        .filter((entry) => getPrimaryAnalysis(entry) && needsDetails(entry))
+        .slice(0, MAX_DETAIL_BACKFILL),
+    ];
 
     if (unanalyzedEntries.length === 0) {
       console.log('✓ All entries are already analyzed');
@@ -46,6 +58,8 @@ async function main() {
         successCount++;
 
         console.log(`  ✓ Score ${result.totalScore}/20 - ${result.titleJa}`);
+        if (result.actionJa)
+          console.log(`    対応: ${result.actionJa}（期限: ${result.deadline ?? 'なし'}）`);
       } catch (error) {
         failedCount++;
         console.error(`  ✗ Failed: ${error instanceof Error ? error.message : String(error)}`);

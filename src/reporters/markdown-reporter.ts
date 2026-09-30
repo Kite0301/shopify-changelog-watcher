@@ -15,6 +15,10 @@ export function generateMarkdownReport(report: WeeklyReport): string {
   // サマリー
   sections.push(generateSummary(report));
 
+  // 立場別の要対応・確認推奨
+  const actionSection = generateActionItemsSection(report);
+  if (actionSection) sections.push(actionSection);
+
   // 超重要更新（スコア12以上）
   if (report.entries.high.length > 0) {
     sections.push(generateHighPrioritySection(report.entries.high));
@@ -69,6 +73,39 @@ function generateSummary(report: WeeklyReport): string {
 }
 
 /**
+ * 立場別の要対応・確認推奨セクション生成（該当がなければ null）
+ */
+function generateActionItemsSection(report: WeeklyReport): string | null {
+  const blocks = report.actionItems
+    .filter((p) => p.now.length + p.check.length > 0)
+    .map((p) => {
+      const lines = [
+        ...p.now.map((item) => formatActionItem(item, '🚨')),
+        ...p.check.map((item) => formatActionItem(item, '👀')),
+      ];
+      return `### ${p.label}\n\n${lines.join('\n')}`;
+    });
+  if (blocks.length === 0) return null;
+
+  return `## 🎯 立場別の要対応・確認推奨
+
+🚨 今すぐ対応 / 👀 確認推奨
+
+${blocks.join('\n\n')}`;
+}
+
+function formatActionItem(item: ScoredEntry, icon: string): string {
+  const { analysis, entry } = item;
+  const details = [
+    analysis.audienceJa && `対象: ${analysis.audienceJa}`,
+    analysis.actionJa && `対応: ${analysis.actionJa}`,
+    analysis.deadline && `期限: ${analysis.deadline}`,
+  ].filter(Boolean);
+  const title = `${icon} [${analysis.titleJa || entry.title}](${entry.link})`;
+  return details.length > 0 ? `- ${title}\n  - ${details.join('\n  - ')}` : `- ${title}`;
+}
+
+/**
  * 超重要更新セクション生成
  */
 function generateHighPrioritySection(entries: ScoredEntry[]): string {
@@ -94,8 +131,8 @@ ${items.join('\n\n---\n\n')}`;
  * その他の更新セクション生成
  */
 function generateLowPrioritySection(entries: ScoredEntry[]): string {
-  const items = entries.map(item =>
-    `- [${item.entry.title}](${item.entry.link}) - スコア: ${item.score}点`
+  const items = entries.map(
+    (item) => `- [${item.entry.title}](${item.entry.link}) - スコア: ${item.score}点`
   );
 
   return `## 📌 その他の更新（スコア8点未満）
@@ -112,9 +149,8 @@ function generateDetailedEntry(item: ScoredEntry, index: number): string {
   const collectedDate = entry.collectedAt ? formatDate(new Date(entry.collectedAt)) : 'N/A';
 
   // ソース名を日本語化
-  const sourceName = entry.source === 'shopify-changelog'
-    ? 'Shopify Changelog'
-    : 'Developer Changelog';
+  const sourceName =
+    entry.source === 'shopify-changelog' ? 'Shopify Changelog' : 'Developer Changelog';
 
   const displayTitle = analysis.titleJa || entry.title;
 
@@ -145,12 +181,12 @@ function generateTrendsSection(report: WeeklyReport): string {
   // 日本市場関連性の高い更新を抽出（japanRelevance >= 4）
   const allEntries = [...entries.high, ...entries.medium, ...entries.low];
   const japanRelevantCount = allEntries.filter(
-    item => item.analysis.scores.japanRelevance >= 4
+    (item) => item.analysis.scores.japanRelevance >= 4
   ).length;
 
   // 破壊的変更を抽出（technicalImportance >= 4）
   const breakingChangesCount = allEntries.filter(
-    item => item.analysis.scores.technicalImportance >= 4
+    (item) => item.analysis.scores.technicalImportance >= 4
   ).length;
 
   return `## 📈 週次トレンド

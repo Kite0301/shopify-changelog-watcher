@@ -26,6 +26,19 @@
             <input type="text" id="searchBox" placeholder="🔍 タイトルや要約で検索...">
 
             <div class="filters">
+                <select id="perspectiveFilter">
+                    <option value="">すべての立場</option>
+                    <option value="merchant">マーチャント目線</option>
+                    <option value="developer">開発者目線</option>
+                </select>
+
+                <select id="priorityFilter">
+                    <option value="">すべての優先度</option>
+                    <option value="now">今すぐ対応</option>
+                    <option value="check">確認推奨以上</option>
+                    <option value="related">関連領域あり</option>
+                </select>
+
                 <select id="sourceFilter">
                     <option value="">すべてのソース</option>
                     <option value="shopify-changelog">Shopify Changelog</option>

@@ -44,7 +44,20 @@ export interface ScoredEntry {
     };
     analyzedAt: string;
     model: string;
+    audienceJa?: string; // 対象者
+    actionJa?: string | null; // 必要な対応
+    deadline?: string | null; // 対応期限（YYYY-MM-DD）
   };
+}
+
+/**
+ * 立場ごとの「今すぐ対応」「確認推奨」の記事
+ */
+export interface PerspectiveActionItems {
+  key: string; // config/profiles.json の立場のキー
+  label: string;
+  now: ScoredEntry[];
+  check: ScoredEntry[];
 }
 
 /**
@@ -63,6 +76,7 @@ export interface WeeklyReport {
   meta: WeeklyReportMeta;
   stats: WeeklyReportStats;
   entries: GroupedEntries;
+  actionItems: PerspectiveActionItems[];
 }
 
 /**

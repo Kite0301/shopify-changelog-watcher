@@ -17,6 +17,10 @@ export function generateMarpSlides(report: WeeklyReport): string {
   // スライド3: サマリー + 目次
   slides.push(generateSummarySlide(report));
 
+  // 立場別の要対応・確認推奨
+  const actionSlide = generateActionItemsSlide(report);
+  if (actionSlide) slides.push(actionSlide);
+
   // スライド4〜: 超重要更新
   if (report.entries.high.length > 0) {
     report.entries.high.forEach((entry, index) => {
@@ -119,23 +123,29 @@ function generateSummarySlide(report: WeeklyReport): string {
   const tocItems: string[] = [];
 
   if (entries.high.length > 0) {
-    entries.high.forEach(item => {
+    entries.high.forEach((item) => {
       const title = item.analysis.titleJa || item.entry.title;
-      tocItems.push(`<div class="toc-item high"><span class="toc-icon">🔥</span><span class="toc-title">${title}</span><span class="toc-score">${item.score}pt</span></div>`);
+      tocItems.push(
+        `<div class="toc-item high"><span class="toc-icon">🔥</span><span class="toc-title">${title}</span><span class="toc-score">${item.score}pt</span></div>`
+      );
     });
   }
 
   if (entries.medium.length > 0) {
-    entries.medium.forEach(item => {
+    entries.medium.forEach((item) => {
       const title = item.analysis.titleJa || item.entry.title;
-      tocItems.push(`<div class="toc-item medium"><span class="toc-icon">⚠️</span><span class="toc-title">${title}</span><span class="toc-score">${item.score}pt</span></div>`);
+      tocItems.push(
+        `<div class="toc-item medium"><span class="toc-icon">⚠️</span><span class="toc-title">${title}</span><span class="toc-score">${item.score}pt</span></div>`
+      );
     });
   }
 
   if (entries.low.length > 0) {
-    entries.low.forEach(item => {
+    entries.low.forEach((item) => {
       const title = item.analysis.titleJa || item.entry.title;
-      tocItems.push(`<div class="toc-item low"><span class="toc-icon">📌</span><span class="toc-title">${title}</span><span class="toc-score">${item.score}pt</span></div>`);
+      tocItems.push(
+        `<div class="toc-item low"><span class="toc-icon">📌</span><span class="toc-title">${title}</span><span class="toc-score">${item.score}pt</span></div>`
+      );
     });
   }
 
@@ -191,9 +201,8 @@ ${tocItems.join('\n')}
 function generateDetailSlide(item: ScoredEntry, index: number, category: string): string {
   const { entry, score, analysis } = item;
   const publishedDate = formatDate(new Date(entry.publishedAt));
-  const sourceName = entry.source === 'shopify-changelog'
-    ? 'Shopify Changelog'
-    : 'Developer Changelog';
+  const sourceName =
+    entry.source === 'shopify-changelog' ? 'Shopify Changelog' : 'Developer Changelog';
 
   // スコアバーの視覚化（20点満点）
   const scoreBar = generateScoreBar(score);
@@ -295,6 +304,31 @@ function generateScoreBar(score: number, max: number = 20): string {
   const filled = Math.round((score / max) * 20);
   const empty = 20 - filled;
   return '■'.repeat(filled) + '□'.repeat(empty);
+}
+
+/**
+ * 立場別の要対応・確認推奨スライド（該当がなければ null）
+ */
+function generateActionItemsSlide(report: WeeklyReport): string | null {
+  const MAX_ITEMS = 6;
+  const blocks = report.actionItems
+    .filter((p) => p.now.length + p.check.length > 0)
+    .map((p) => {
+      const items = [
+        ...p.now.map((item) => ({ item, icon: '🚨' })),
+        ...p.check.map((item) => ({ item, icon: '👀' })),
+      ];
+      const lines = items
+        .slice(0, MAX_ITEMS)
+        .map(({ item, icon }) => `- ${icon} ${item.analysis.titleJa || item.entry.title}`);
+      if (items.length > MAX_ITEMS) lines.push(`- ほか${items.length - MAX_ITEMS}件`);
+      return `### ${p.label}\n\n${lines.join('\n')}`;
+    });
+  if (blocks.length === 0) return null;
+
+  return `# 🎯 立場別の要対応・確認推奨
+
+${blocks.join('\n\n')}`;
 }
 
 /**

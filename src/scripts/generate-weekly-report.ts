@@ -15,6 +15,7 @@ import {
 } from '../reporters/types.js';
 import { ChangelogEntry } from '../types/index.js';
 import { getPrimaryAnalysis } from '../utils/analysis.js';
+import { loadProfiles, type Profiles } from '../utils/config.js';
 
 const DEFAULT_OUTPUT_DIR = path.join(process.cwd(), 'data', 'reports');
 
@@ -31,10 +32,11 @@ export async function generateWeeklyReport(options: ReportGeneratorOptions = {})
 
   // データ読み込み
   const data = await loadDataStore();
+  const profiles = await loadProfiles();
   console.log(`✓ データ読み込み完了: ${data.entries.length}件のエントリー`);
 
   // 週次レポート構築
-  const report = buildWeeklyReport(data.entries, weekNumber);
+  const report = buildWeeklyReport(data.entries, weekNumber, profiles);
 
   console.log(`✓ レポート構築完了:`);
   console.log(`  - 超重要更新: ${report.stats.highPriorityCount}件`);
@@ -70,7 +72,11 @@ export async function generateWeeklyReport(options: ReportGeneratorOptions = {})
 /**
  * 週次レポートを構築
  */
-function buildWeeklyReport(entries: ChangelogEntry[], weekNumber: string): WeeklyReport {
+function buildWeeklyReport(
+  entries: ChangelogEntry[],
+  weekNumber: string,
+  profiles: Profiles
+): WeeklyReport {
   // メタ情報生成
   const meta = buildReportMeta(weekNumber);
 
@@ -86,10 +92,20 @@ function buildWeeklyReport(entries: ChangelogEntry[], weekNumber: string): Weekl
   // 統計情報生成
   const stats = buildReportStats(scoredEntries, weekEntries);
 
+  // 立場ごとの「今すぐ対応」「確認推奨」（スコア順）
+  const sorted = [...scoredEntries].sort((a, b) => b.score - a.score);
+  const actionItems = Object.entries(profiles.profiles).map(([key, profile]) => ({
+    key,
+    label: profile.label,
+    now: sorted.filter((e) => e.entry.priority?.[key]?.level === 'now'),
+    check: sorted.filter((e) => e.entry.priority?.[key]?.level === 'check'),
+  }));
+
   return {
     meta,
     stats,
     entries: groupedEntries,
+    actionItems,
   };
 }
 
@@ -114,7 +130,7 @@ function buildReportMeta(weekNumber: string): WeeklyReportMeta {
  * 指定週のエントリーをフィルタリング
  */
 function filterEntriesByWeek(entries: ChangelogEntry[], weekNumber: string): ChangelogEntry[] {
-  return entries.filter(entry => {
+  return entries.filter((entry) => {
     if (!entry.collectedAt) return false;
     const entryWeek = getWeekNumber(new Date(entry.collectedAt));
     return entryWeek === weekNumber;
@@ -138,6 +154,9 @@ function scoreEntries(entries: ChangelogEntry[]): ScoredEntry[] {
           scores: analysis.scores,
           analyzedAt: analysis.analyzedAt,
           model: analysis.model,
+          audienceJa: analysis.audienceJa,
+          actionJa: analysis.actionJa,
+          deadline: analysis.deadline,
         },
       },
     ];
@@ -152,9 +171,9 @@ function groupEntriesByPriority(scoredEntries: ScoredEntry[]): GroupedEntries {
   const sorted = [...scoredEntries].sort((a, b) => b.score - a.score);
 
   return {
-    high: sorted.filter(e => e.score >= 12),
-    medium: sorted.filter(e => e.score >= 8 && e.score < 12),
-    low: sorted.filter(e => e.score < 8),
+    high: sorted.filter((e) => e.score >= 12),
+    medium: sorted.filter((e) => e.score >= 8 && e.score < 12),
+    low: sorted.filter((e) => e.score < 8),
   };
 }
 
@@ -166,20 +185,20 @@ function buildReportStats(
   allWeekEntries: ChangelogEntry[]
 ): WeeklyReportStats {
   // 優先度別カウント
-  const highPriorityCount = scoredEntries.filter(e => e.score >= 12).length;
-  const mediumPriorityCount = scoredEntries.filter(e => e.score >= 8 && e.score < 12).length;
-  const lowPriorityCount = scoredEntries.filter(e => e.score < 8).length;
+  const highPriorityCount = scoredEntries.filter((e) => e.score >= 12).length;
+  const mediumPriorityCount = scoredEntries.filter((e) => e.score >= 8 && e.score < 12).length;
+  const lowPriorityCount = scoredEntries.filter((e) => e.score < 8).length;
 
   // ソース別カウント
   const bySource = {
-    'shopify-changelog': allWeekEntries.filter(e => e.source === 'shopify-changelog').length,
-    'developer-changelog': allWeekEntries.filter(e => e.source === 'developer-changelog').length,
+    'shopify-changelog': allWeekEntries.filter((e) => e.source === 'shopify-changelog').length,
+    'developer-changelog': allWeekEntries.filter((e) => e.source === 'developer-changelog').length,
   };
 
   // カテゴリー集計
   const categoryCount: Record<string, number> = {};
-  allWeekEntries.forEach(entry => {
-    entry.category.forEach(cat => {
+  allWeekEntries.forEach((entry) => {
+    entry.category.forEach((cat) => {
       categoryCount[cat] = (categoryCount[cat] || 0) + 1;
     });
   });
@@ -210,7 +229,7 @@ generateWeeklyReport({ weekNumber })
   .then(() => {
     process.exit(0);
   })
-  .catch(error => {
+  .catch((error) => {
     console.error('❌ レポート生成エラー:', error);
     process.exit(1);
   });

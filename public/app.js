@@ -58,6 +58,8 @@ function setupEventListeners() {
   const scoreFilter = document.getElementById('scoreFilter');
   const modelFilter = document.getElementById('modelFilter');
 
+  document.getElementById('perspectiveFilter').addEventListener('change', applyFilters);
+  document.getElementById('priorityFilter').addEventListener('change', applyFilters);
   searchBox.addEventListener('input', applyFilters);
   sourceFilter.addEventListener('change', applyFilters);
   scoreFilter.addEventListener('change', applyFilters);
@@ -96,6 +98,58 @@ function updateStats() {
   document.getElementById('latestDate').textContent = latestDate;
 }
 
+const PERSPECTIVES = { merchant: 'マーチャント', developer: '開発者' };
+const PRIORITY_LABELS = { now: '🚨 今すぐ対応', check: '👀 確認推奨' };
+const RELATED = 0.5;
+
+/**
+ * 立場ごとの優先度を取得（perspective が空ならすべての立場）
+ */
+function getPriorities(entry, perspective) {
+  return Object.entries(entry.priority || {})
+    .filter(([key]) => !perspective || key === perspective)
+    .map(([key, p]) => ({ key, ...p }));
+}
+
+/**
+ * 優先度・関連領域・公式ラベルのバッジHTML
+ */
+function createPriorityHTML(entry) {
+  const perspective = document.getElementById('perspectiveFilter').value;
+  const badges = [];
+  if (entry.officialActionRequired) {
+    badges.push('<span class="priority-badge official">公式: Action required</span>');
+  }
+  for (const p of getPriorities(entry, perspective)) {
+    const name = PERSPECTIVES[p.key] || p.key;
+    if (p.level !== 'info') {
+      badges.push(`<span class="priority-badge ${p.level}">${PRIORITY_LABELS[p.level]}（${name}）</span>`);
+    }
+    if (p.relevance >= RELATED && p.areas.length > 0) {
+      badges.push(`<span class="area-chip">${name}: ${p.areas.slice(0, 3).map(escapeHtml).join('・')}</span>`);
+    }
+    if (perspective && p.outOfScope) {
+      badges.push(`<span class="area-chip muted">${name}目線では対象外の可能性</span>`);
+    }
+  }
+  return badges.length > 0 ? `<div class="priority-row">${badges.join('')}</div>` : '';
+}
+
+/**
+ * 対象者・やること・期限のHTML
+ */
+function createDetailsHTML(analysis) {
+  if (!analysis?.audienceJa) return '';
+  const rows = [`<div><span class="detail-label">対象</span>${escapeHtml(analysis.audienceJa)}</div>`];
+  if (analysis.actionJa) {
+    rows.push(`<div><span class="detail-label">対応</span>${escapeHtml(analysis.actionJa)}</div>`);
+  }
+  if (analysis.deadline) {
+    rows.push(`<div><span class="detail-label">期限</span>${escapeHtml(analysis.deadline)}</div>`);
+  }
+  return `<div class="entry-details">${rows.join('')}</div>`;
+}
+
 /**
  * エントリーの代表となる分析結果を取得（最も新しく分析されたもの）
  */
@@ -120,6 +174,8 @@ function applyFilters() {
   const sourceValue = document.getElementById('sourceFilter').value;
   const scoreValue = document.getElementById('scoreFilter').value;
   const modelValue = document.getElementById('modelFilter').value;
+  const perspectiveValue = document.getElementById('perspectiveFilter').value;
+  const priorityValue = document.getElementById('priorityFilter').value;
 
   // フィルタリング
   filteredEntries = allEntries.filter((entry) => {
@@ -147,7 +203,14 @@ function applyFilters() {
       else if (scoreValue === 'low') matchesScore = score < 8;
     }
 
-    return matchesSearch && matchesSource && matchesModel && matchesScore;
+    // 優先度（立場を選んでいなければ、どちらかの立場で当てはまれば表示）
+    const priorities = getPriorities(entry, perspectiveValue);
+    let matchesPriority = true;
+    if (priorityValue === 'now') matchesPriority = priorities.some((p) => p.level === 'now');
+    else if (priorityValue === 'check') matchesPriority = priorities.some((p) => p.level !== 'info');
+    else if (priorityValue === 'related') matchesPriority = priorities.some((p) => p.relevance >= RELATED);
+
+    return matchesSearch && matchesSource && matchesModel && matchesScore && matchesPriority;
   });
 
   // デフォルトソート: 収集日（なければ公開日）の新しい順
@@ -261,6 +324,8 @@ function createEntryCard(entry) {
         <span>📍 ${sourceName}</span>
       </div>
 
+      ${createPriorityHTML(entry)}
+      ${createDetailsHTML(defaultAnalysis)}
       ${analysisHTML}
     </div>
   `;

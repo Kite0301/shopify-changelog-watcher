@@ -34,6 +34,9 @@ export type TokenUsage = z.infer<typeof TokenUsageSchema>;
 export const AnalysisSchema = z.object({
   titleJa: z.string().optional(), // 日本語タイトル
   summarizedJa: z.string(),
+  audienceJa: z.string().optional(), // 対象者
+  actionJa: z.string().nullable().optional(), // 必要な対応（不要なら null）
+  deadline: z.string().nullable().optional(), // 対応期限（YYYY-MM-DD、なければ null）
   scores: AnalysisScoresSchema,
   totalScore: z.number(),
   analyzedAt: z.string(),
