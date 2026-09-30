@@ -151,6 +151,27 @@
             "output": 318
           },
           "estimatedCost": 0.009693
+        },
+        "claude-opus-5-5": {
+          "titleJa": "ユーザーセッションなしでのトークン移行時のトークン交換の耐障害性向上",
+          "summarizedJa": "非期限切れのオフライントークンから期限付きオフラインアクセストークンへユーザーセッションなしで移行する際、移行レスポンスを失っても、元のトークンで最大7日間リトライすれば同じアクセストークンとリフレッシュトークンのペアを再取得できるようになりました。これによりマーチャントにアプリを再度開いてもらう必要が減り、既存フローの変更は不要です。",
+          "audienceJa": "非期限切れオフライントークンをユーザーセッションなしで期限付きトークンに移行するアプリ開発者",
+          "actionJa": "必須対応はないが、移行レスポンスを受信・保存できなかった場合は7日以内に元のトークンで同じ移行リクエストを再実行し、返されたトークンと有効期限をまとめて保存して元のトークンを破棄する。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-09-30T09:54:38.205Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 3076,
+            "output": 386
+          },
+          "estimatedCost": 0.020024
         }
       },
       "jev": {
@@ -233,7 +254,7 @@
           "outOfScope": true
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.9,
           "areas": [
@@ -519,6 +540,27 @@
             "output": 263
           },
           "estimatedCost": 0.008907
+        },
+        "claude-opus-5-5": {
+          "titleJa": "既存のサブスクリプションをShopify App Pricingへ移行可能に",
+          "summarizedJa": "Billing APIで課金しているアプリは、パートナーダッシュボードの移行ツールまたはShopify CLIの新コマンド（shopify app subscription-migrations）を使って、既存のサブスクリプションをShopify App Pricingへ移行できるようになりました。移行は次回の請求サイクル開始時に行われ、マーチャントによる課金の再承認は不要です。従量課金やプライベートプランなど複雑なケースはCLIで一括スケジュール・キャンセルが可能です。",
+          "audienceJa": "Billing APIで課金しており、Shopify App Pricingへの移行を検討しているアプリ開発者（パートナー）",
+          "actionJa": "Shopify App Pricingへ移行する場合は、既存プランに対応するApp Pricingプランを作成して開発ストアでテストし、単純なサブスクリプションはパートナーダッシュボード、複雑なものはShopify CLIで移行をスケジュールしてください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-30T09:54:42.989Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 3171,
+            "output": 423
+          },
+          "estimatedCost": 0.021144
         }
       },
       "jev": {
@@ -603,7 +645,7 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.96,
           "areas": [
@@ -1004,6 +1046,27 @@
             "output": 237
           },
           "estimatedCost": 0.007023
+        },
+        "claude-opus-5-5": {
+          "titleJa": "カテゴリーメタフィールドがストア分析で利用可能に",
+          "summarizedJa": "商品をカテゴリー分類した際に設定した色・素材・フィットなどのカテゴリーメタフィールドが、ストア分析のディメンションやフィルターとして利用できるようになりました。レポート、Explore、クエリエディタで、素材別や色別の売上をエクスポートせずに分析できます。既に分類済みの商品は設定不要で、複数値を持つ属性も売上が二重計上されないよう1行にまとめられます。",
+          "audienceJa": "商品をカテゴリー分類しているマーチャント、および分析・レポート作成を支援するパートナー",
+          "actionJa": null,
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-30T09:54:47.619Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2409,
+            "output": 300
+          },
+          "estimatedCost": 0.015636
         }
       },
       "jev": {
@@ -1078,7 +1141,7 @@
       },
       "priority": {
         "merchant": {
-          "level": "check",
+          "level": "info",
           "action": 0.08,
           "relevance": 0.70416528,
           "areas": [
@@ -1611,6 +1674,27 @@
             "output": 320
           },
           "estimatedCost": 0.00825
+        },
+        "claude-opus-5-5": {
+          "titleJa": "カスタムアプリのフィルタ可能なログとヘルス指標がDeveloper Dashboardで利用可能に",
+          "summarizedJa": "Developer Dashboardで、カスタムアプリのAPIリクエスト量、エラー率、Webhook配信状況、埋め込み管理画面の読み込み速度を、しきい値付きで確認できるようになりました。APIリクエスト・Webhook配信・アプリイベントを1つのフィルタ可能なログで確認でき、障害時の原因特定が容易になります。新しいホーム画面では全アプリの要対応事項が一覧でき、カスタムアプリを開発する代理店や開発者も同じデータを参照できます。",
+          "audienceJa": "カスタムアプリを利用するマーチャント、およびカスタムアプリを開発する代理店・開発者",
+          "actionJa": null,
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T09:54:52.548Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2419,
+            "output": 351
+          },
+          "estimatedCost": 0.016696000000000003
         }
       },
       "jev": {
@@ -1692,7 +1776,7 @@
           "outOfScope": true
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0.06,
           "relevance": 0.92,
           "areas": [
@@ -2223,6 +2307,27 @@
             "output": 261
           },
           "estimatedCost": 0.010626
+        },
+        "claude-opus-5-5": {
+          "titleJa": "API 2027-01でincludeRestOfWorldをtrueに設定するとエラーに",
+          "summarizedJa": "GraphQL Admin API 2027-01以降、非推奨のDiscountCountriesInput.includeRestOfWorldにtrueを渡すとBAD_REQUESTエラーが返されるようになります。送料割引の対象国は、addで国コードを明示的に列挙する必要があります。2026-10以前のバージョンではサポート期間中は従来の挙動が維持されます。",
+          "audienceJa": "Admin GraphQL APIで送料割引を作成・更新し、includeRestOfWorld: trueを使用しているアプリ開発者",
+          "actionJa": "2027-01へアップグレードする前に、割引のcreate/updateミューテーション内のincludeRestOfWorld: trueを対象国コードの完全なリストをaddで指定する形に置き換え、開発ストアでテストしてください。",
+          "deadline": "2027-01-01",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-30T09:54:56.842Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 3813,
+            "output": 381
+          },
+          "estimatedCost": 0.022872
         }
       },
       "jev": {
@@ -2954,6 +3059,27 @@
             "output": 223
           },
           "estimatedCost": 0.008775
+        },
+        "claude-opus-5-5": {
+          "titleJa": "marketCurrencySettingsUpdateミューテーションの削除",
+          "summarizedJa": "Admin GraphQL API 2027-01で、marketCurrencySettingsUpdateミューテーションと関連する型（Payload、UserError、UserErrorCode）が削除されます。このミューテーションは2025-04のMarkets Home導入時に非推奨となり、現在は常にエラーを返すため実質的に機能していません。2027-01では呼び出しがバリデーションで拒否されてリクエスト全体が失敗するため、marketCreate/marketUpdateへの移行が必要です。",
+          "audienceJa": "marketCurrencySettingsUpdateを呼び出しているAdmin GraphQL APIを使うアプリ開発者",
+          "actionJa": "marketCurrencySettingsUpdateの呼び出しを、通貨設定を入力に直接含めたmarketCreateまたはmarketUpdateに置き換えてください。",
+          "deadline": "2027-01-01",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-09-30T09:55:01.892Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 3314,
+            "output": 386
+          },
+          "estimatedCost": 0.020976
         }
       },
       "jev": {
@@ -3323,6 +3449,27 @@
             "output": 223
           },
           "estimatedCost": 0.00711
+        },
+        "claude-opus-5-5": {
+          "titleJa": "Shopifyアナリティクスのセッション計測の改善",
+          "summarizedJa": "2026年9月21日より、Shopifyアナリティクスのセッション計測が改善され、ボット・システムトラフィックの分類が一貫化され、デフォルトで人間の訪問者に焦点を当てた表示になります。これによりセッション数、コンバージョン率、カート追加率、直帰率などのセッション系指標が変化する可能性がありますが、注文・売上・顧客数には影響しません。9月21日以前との比較では、新しいベースラインとして扱う必要があります。",
+          "audienceJa": "Shopifyアナリティクスを利用する全マーチャント、およびクライアントのレポート分析を行うパートナー・代理店",
+          "actionJa": "2026年9月21日前後のセッション系指標を比較する際は新しいベースラインとして扱い、必要に応じて社内やクライアントへのレポートでこの変更を説明してください。",
+          "deadline": "2026-09-21",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-30T09:55:08.245Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2587,
+            "output": 389
+          },
+          "estimatedCost": 0.018128
         }
       },
       "jev": {
@@ -3447,6 +3594,27 @@
             "output": 249
           },
           "estimatedCost": 0.012518999999999999
+        },
+        "claude-opus-5-5": {
+          "titleJa": "API 2027-01で`automaticDiscounts`クエリが削除",
+          "summarizedJa": "非推奨だったGraphQL Admin APIの`automaticDiscounts`クエリが、API 2027-01で削除されます。関連する`DiscountAutomaticConnection`・`DiscountAutomaticEdge`型も削除され、今後は`discountNodes`クエリに`query: \"method:automatic\"`フィルターを付けて取得する必要があります。なお`automaticDiscountNodes`も非推奨のため、移行先には`discountNodes`を選ぶよう推奨されています。",
+          "audienceJa": "GraphQL Admin APIで`automaticDiscounts`クエリを使用しているアプリ開発者",
+          "actionJa": "API 2027-01へアップグレードする前に、`automaticDiscounts`を`discountNodes`（`query: \"method:automatic\"`）に置き換えます。あわせて、インラインフラグメントを`discount`フィールド配下へ移し、2027-01に対して型を再生成してください。",
+          "deadline": "2027-01-01",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-30T09:55:14.070Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 4663,
+            "output": 422
+          },
+          "estimatedCost": 0.027091999999999998
         }
       },
       "jev": {
@@ -3573,6 +3741,27 @@
             "output": 269
           },
           "estimatedCost": 0.007902
+        },
+        "claude-opus-5-5": {
+          "titleJa": "既存UI拡張機能のバンドルサイズ上限の例外申請が可能に",
+          "summarizedJa": "API バージョン 2025-10 以降の UI 拡張機能は、拡張機能ごとに圧縮後 64 KB（フルページのカスタマーアカウント拡張機能は 128 KB）の JavaScript バンドル上限があります。最適化しても上限を超える場合は、`shopify app build` で生成したミニファイ済みバンドルと esbuild のメタファイルをフォームから提出して例外を申請できます。重いライブラリ、重複した依存関係、ネイティブのローカライズ API を使わずに同梱した翻訳など、回避可能な容量が原因の場合は却下されます。また 2026年10月1日以降もデプロイを続けるには、既存のすべての UI 拡張機能を API バージョン 2026-01 以降に更新する必要があります。",
+          "audienceJa": "Admin・Checkout UI・カスタマーアカウント・POS の UI 拡張機能を開発しているアプリ開発者",
+          "actionJa": "既存の UI 拡張機能を API バージョン 2026-01 以降に更新し、バンドルサイズを上限内に最適化してください。最適化しても上限を超える場合は、例外申請フォームからバンドルと esbuild メタファイルを提出してください。",
+          "deadline": "2026-10-01",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-09-30T09:55:20.200Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2609,
+            "output": 523
+          },
+          "estimatedCost": 0.020896
         }
       },
       "jev": {
@@ -4195,6 +4384,27 @@
             "output": 256
           },
           "estimatedCost": 0.00975
+        },
+        "claude-opus-5-5": {
+          "titleJa": "Eventsのペイロードとサブスクリプション設定の更新",
+          "summarizedJa": "Events（新しいイベント配信機能）のペイロード、トリガー構文、配信ヘッダーが本日より変更されました。fields_changedがadded/updated/removedの3配列を持つオブジェクトになり、親パスのトリガーには末尾に「.*」のワイルドカードが必要となり、shopify-event-idとshopify-resource-idヘッダーが廃止されます。またupdateアクションのサブスクリプションではトリガー指定が必須になります（従来のWebhookサブスクリプションは影響なし）。",
+          "audienceJa": "Events機能でイベントを購読しているアプリ開発者",
+          "actionJa": "fields_changedの新しいオブジェクト形式に対応し、次回のshopify.app.tomlデプロイ時に親トリガーを「.*」形式へ更新し、削除されたヘッダーへの依存を除去してShopify APIパッケージを最新版に更新してください。",
+          "deadline": "2026-09-16",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-30T09:55:25.265Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 3452,
+            "output": 410
+          },
+          "estimatedCost": 0.022008
         }
       },
       "jev": {
@@ -5402,6 +5612,27 @@
             "output": 216
           },
           "estimatedCost": 0.006279
+        },
+        "claude-opus-5-5": {
+          "titleJa": "チェックアウトでWhatsAppマーケティングの同意を取得可能に",
+          "summarizedJa": "チェックアウト時に顧客からWhatsAppマーケティングの受信同意（オプトイン）を取得できるようになりました。購入時に購読者リストを拡大し、WhatsApp経由で見込み客の購入につなげられます。チェックアウト設定から有効化できます。",
+          "audienceJa": "WhatsAppでマーケティングを行いたいマーチャント",
+          "actionJa": "WhatsAppマーケティングを活用したい場合は、チェックアウト設定でWhatsAppマーケティング同意の取得を有効化してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 2,
+            "japanRelevance": 2,
+            "technicalImportance": 2
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-09-30T09:55:28.690Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2258,
+            "output": 285
+          },
+          "estimatedCost": 0.014732
         }
       },
       "jev": {
@@ -5528,6 +5759,27 @@
             "output": 236
           },
           "estimatedCost": 0.008796
+        },
+        "claude-opus-5-5": {
+          "titleJa": "Discounts Allocator Function APIの開発者プレビューが終了",
+          "summarizedJa": "開発者プレビューでのみ提供されていたDiscounts Allocator Function APIは削除され、正式リリースされないことになりました。関連するunstable版Admin GraphQL APIのミューテーションやドキュメントは削除され、プレビュー中に登録されたFunctionは自動で登録解除されます。purchase.discounts-allocator.runの拡張ターゲットを宣言しているアプリは、設定から削除しないとshopify app deployがアプリ全体で失敗します。",
+          "audienceJa": "Discounts Allocator開発者プレビューに参加し、purchase.discounts-allocator.run拡張ターゲットを宣言しているアプリ開発者",
+          "actionJa": "アプリ設定からpurchase.discounts-allocator.run拡張ターゲットを持つ拡張機能を削除して再デプロイし、必要に応じてDiscount Function APIへ移行してください。",
+          "deadline": "2026-09-10",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-09-30T09:55:33.613Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 3201,
+            "output": 405
+          },
+          "estimatedCost": 0.020904
         }
       },
       "jev": {
@@ -5775,6 +6027,27 @@
             "output": 267
           },
           "estimatedCost": 0.010296
+        },
+        "claude-opus-5-5": {
+          "titleJa": "バリエーションが複数のバーコードに対応",
+          "summarizedJa": "Admin GraphQL API（2026-10）でProductVariantに新しいbarcodes接続が追加され、1バリエーションにUPC・EAN（JAN含む）・ISBN・GTIN・ASINなど最大20件のバーコードを登録できるようになりました。productSetやproductVariantsBulkCreate/Updateで書き込み可能で、タイプを指定すると規格に沿った検証が行われます。従来のProductVariant.barcodeは非推奨となり、先頭のバーコードのみを返すため、読み取り側での情報欠落に注意が必要です。",
+          "audienceJa": "Admin GraphQL APIで商品バーコードを読み書きするアプリ開発者（ERP・POS・マーケットプレイス・在庫連携など）",
+          "actionJa": "barcodeフィールドを参照・更新している処理を新しいbarcodes接続およびbarcodes入力に移行し、書き込み時は既存バーコードを含めて全件送信するよう実装を見直してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-09-30T09:55:38.729Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 3637,
+            "output": 428
+          },
+          "estimatedCost": 0.023108
         }
       },
       "jev": {
@@ -6385,6 +6658,27 @@
             "output": 275
           },
           "estimatedCost": 0.007737
+        },
+        "claude-opus-5-5": {
+          "titleJa": "権限のある店舗スタッフがPOSで識別済み顧客のオンラインカートを確認可能に",
+          "summarizedJa": "Shopify POS v11.14以降で、権限を付与されたスタッフが来店した既知の顧客をPOSで検索し、オンラインで放棄されたチェックアウト（カート）内の商品を確認できるようになりました。サイズ相談や商品の質問に対応しながら、店頭で購入を完了させる支援が可能です。表示には顧客の識別・メールアドレス・対象となる放棄チェックアウト・ロケーション情報が必要で、閲覧履歴は表示されません。",
+          "audienceJa": "Shopify POSを利用して実店舗を運営するマーチャント",
+          "actionJa": "機能を利用する場合は、POSをv11.14以上に更新し、管理画面の「設定 > ユーザー > ロール > POSロール > 顧客」で「放棄されたチェックアウトを表示」権限を有効にしてください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-30T09:55:43.329Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2475,
+            "output": 398
+          },
+          "estimatedCost": 0.01786
         }
       },
       "jev": {
@@ -7237,6 +7531,27 @@
             "output": 289
           },
           "estimatedCost": 0.008834999999999999
+        },
+        "claude-opus-5-5": {
+          "titleJa": "有効期限付きオフラインアクセストークンのリフレッシュ処理の耐障害性が向上",
+          "summarizedJa": "有効期限付きオフラインアクセストークンのリフレッシュ時に、アプリが新しいリフレッシュトークンを使い始めるまで、以前のリフレッシュトークンを再試行できるようになりました（従来は60分まで、今回から初回使用から最大30日、ただし90日の有効期間は超えない）。これにより、レスポンスの喪失や保存失敗が起きても、マーチャントにアプリを再度開いてもらわずに復旧できます。移行作業は不要ですが、トークンペアのアトミックな保存は引き続き必要です。",
+          "audienceJa": "有効期限付きオフラインアクセストークンを使用するアプリ開発者",
+          "actionJa": null,
+          "deadline": "2026-08-28",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-09-30T09:55:48.353Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2907,
+            "output": 350
+          },
+          "estimatedCost": 0.018628
         }
       },
       "jev": {
@@ -7319,7 +7634,7 @@
           "outOfScope": true
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.95,
           "areas": [
@@ -7360,6 +7675,27 @@
             "output": 312
           },
           "estimatedCost": 0.009783
+        },
+        "claude-opus-5-5": {
+          "titleJa": "Shopify CLI v3.83.x以前でのパスワード保護ストアのテーマ開発フローを廃止",
+          "summarizedJa": "2026年10月1日以降、パスワード保護されたストアフロントでShopify CLIのテーマコマンドを使うには、バージョン3.84.0以降が必要になります。旧バージョンが使うレガシーなストアフロント認証が廃止されるため、shopify theme dev、shopify theme console、テーマアプリ拡張を含むshopify app devなどが影響を受けます。最新版（4.7.0）へのアップグレード、またはストアのパスワード保護解除で対応できます。",
+          "audienceJa": "Shopify CLI v3.83.x以前でパスワード保護ストアのテーマ開発・プレビューを行うテーマ開発者、およびテーマアプリ拡張を持つアプリ開発者",
+          "actionJa": "2026年10月1日までに「npm install -g @shopify/cli@latest」でShopify CLIを3.84.0以降（推奨は最新版）へアップグレードし、「shopify version」でバージョンを確認してください。",
+          "deadline": "2026-10-01",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-30T09:55:53.859Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 3123,
+            "output": 445
+          },
+          "estimatedCost": 0.021392
         }
       },
       "jev": {
@@ -8214,6 +8550,27 @@
             "output": 266
           },
           "estimatedCost": 0.009624
+        },
+        "claude-opus-5-5": {
+          "titleJa": "スクリプトタグが非推奨に、2027年3月1日に動作停止",
+          "summarizedJa": "2026年10月1日以降、scriptTagCreate/scriptTagUpdateミューテーションおよびREST APIのPOST/PUTがエラーを返すようになり、全APIバージョンに適用されます。2027年3月1日にはストアフロントへのスクリプトタグの挿入が停止されるため、アプリはテーマアプリ拡張機能のアプリ埋め込みブロック（分析用途ならWebピクセル）へ移行する必要があります。",
+          "audienceJa": "display_scopeがonline_storeのスクリプトタグを使用しているアプリ開発者、およびそれらのアプリを利用するマーチャント",
+          "actionJa": "スクリプトタグをテーマアプリ拡張機能のアプリ埋め込みブロック（分析・コンバージョン用途はWebピクセル）に置き換え、2027年3月1日までに移行を完了してください。",
+          "deadline": "2027-03-01",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 5
+          },
+          "totalScore": 18,
+          "analyzedAt": "2026-09-30T09:55:59.352Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 3332,
+            "output": 403
+          },
+          "estimatedCost": 0.021387999999999997
         }
       },
       "jev": {
@@ -8706,6 +9063,27 @@
             "output": 305
           },
           "estimatedCost": 0.012546000000000002
+        },
+        "claude-opus-5-5": {
+          "titleJa": "admin.app.intent.link のアプリインテントがフルページ遷移で開くように変更",
+          "summarizedJa": "Sidekickが admin.app.intent.link ターゲットで宣言されたアプリインテントを呼び出すと、従来のオーバーレイ（モーダル）ではなく、拡張機能の url へフルページで遷移するようになりました。全ストア・全APIバージョンで適用済みで設定変更は不要ですが、未保存の変更がある場合は引き続きモーダルで開きます。admin.app.intent.render ターゲットや intents.invoke() によるadminインテントは影響を受けません。",
+          "audienceJa": "admin.app.intent.link ターゲットでSidekick向けアプリインテントを宣言しているアプリ開発者",
+          "actionJa": "url で指定したルートがフルページ幅とモーダルの両方で正しく表示され、shopify.intents.request.value の読み取り・shopify.tools.register の登録・インテントの解決が機能するかを開発ストアで確認してください。",
+          "deadline": "2026-08-19",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-09-30T09:56:04.497Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 4310,
+            "output": 415
+          },
+          "estimatedCost": 0.02554
         }
       },
       "jev": {
@@ -8781,7 +9159,7 @@
       "officialActionRequired": false,
       "priority": {
         "merchant": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.8291645999999999,
           "areas": [
@@ -11645,6 +12023,27 @@
             "output": 243
           },
           "estimatedCost": 0.008559
+        },
+        "claude-opus-5-5": {
+          "titleJa": "注文の配送先住所を更新すると税金が再計算されるように",
+          "summarizedJa": "2026年8月31日以降、Admin GraphQL APIのorderUpdateミューテーションで未発送注文の配送先住所を変更すると、新しい配送先に基づいて税金が再計算されます。一部発送済みの注文や編集不可の注文では住所のみ保存され税金は再計算されず、再計算時にはorders/editedウェブフックが通知されます。全APIバージョンに適用され、対応は不要です。",
+          "audienceJa": "orderUpdateミューテーションで注文の配送先住所を更新するアプリ開発者・マーチャント",
+          "actionJa": "住所更新後に税額・合計が変わる可能性があるため、必要に応じて注文のtaxLinesやtotalTaxSetを再取得し、orders/editedウェブフックの処理を確認してください。",
+          "deadline": "2026-08-31",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-30T09:56:09.673Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 3067,
+            "output": 368
+          },
+          "estimatedCost": 0.019628
         }
       },
       "jev": {
@@ -12861,6 +13260,27 @@
             "output": 302
           },
           "estimatedCost": 0.010023
+        },
+        "claude-opus-5-5": {
+          "titleJa": "GraphQL Admin APIで無効なメタフィールドフィルタークエリがエラーを返すように変更",
+          "summarizedJa": "API バージョン2026-10以降、GraphQL Admin APIでフィルタリング設定されていないメタフィールドで絞り込むクエリは、誤った結果を黙って返す代わりにエラーを返すようになります。定義がない、フィルタリングが許可されていない、型が比較演算に対応していない場合が該当する破壊的変更です。2026-07以前のバージョンは従来の挙動のままです。",
+          "audienceJa": "GraphQL Admin APIでメタフィールドによるフィルタリング（商品・注文・顧客など）を行うアプリ開発者",
+          "actionJa": "2026-10へアップグレードする前に、メタフィールドで絞り込むクエリを洗い出し、定義の有無・フィルタリング許可・比較演算の型対応を確認して修正し、2026-10でテストしてください。",
+          "deadline": "2026-10-01",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-09-30T09:56:14.965Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 3295,
+            "output": 395
+          },
+          "estimatedCost": 0.02108
         }
       },
       "jev": {
@@ -13360,6 +13780,27 @@
             "output": 228
           },
           "estimatedCost": 0.00777
+        },
+        "claude-opus-5-5": {
+          "titleJa": "物理在庫（Physical inventory）機能のフィーチャープレビュー公開",
+          "summarizedJa": "GraphQL Admin APIのunstable版で、ビン（棚などの保管場所）、在庫カウント、発注書（Purchase orders）を扱う新しい在庫APIがフィーチャープレビューとして早期提供されました。開発ストアでプレビューを有効化すると、ビンの作成・更新やビン単位の在庫数の読み取り、inventoryCountCreateによる在庫数の設定、発注書・明細・サプライヤー情報の取得が可能です。APIは開発中のため、正式版前にスキーマや挙動へのフィードバックが求められています。",
+          "audienceJa": "在庫管理・倉庫管理アプリを開発するアプリ開発者（パートナー）",
+          "actionJa": "関心がある場合は開発ストアでPhysical inventoryフィーチャープレビューを有効化し、unstable版GraphQL Admin APIで実装・検証してフィードバックを提供してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-30T09:56:19.830Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2850,
+            "output": 413
+          },
+          "estimatedCost": 0.01966
         }
       },
       "jev": {
@@ -13442,7 +13883,7 @@
           "outOfScope": true
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.79,
           "areas": [
@@ -13843,6 +14284,27 @@
             "output": 269
           },
           "estimatedCost": 0.008268
+        },
+        "claude-opus-5-5": {
+          "titleJa": "コレクションが複数ソースとバリエーション単位に対応",
+          "summarizedJa": "コレクションで自動条件・手動選択・除外・他コレクション・アプリ由来のソースを1つに組み合わせられるようになり、サイズや色など特定のバリエーション単位のコレクションも作成可能になりました。コレクションはディスカウントや税設定などでも再利用でき、管理画面のUI刷新やSidekickによる作成・更新にも対応しています。既存コレクションへの破壊的変更はありませんが、コレクションを扱うアプリはAPIバージョン2026-07への更新が推奨されます。",
+          "audienceJa": "全マーチャント、およびコレクションを扱うアプリやカスタムアプリの開発者",
+          "actionJa": "コレクションを扱うサードパーティ／カスタムアプリを利用・開発している場合は、新機能に対応するためAPIバージョン2026-07へ更新してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-09-30T09:56:26.004Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2760,
+            "output": 382
+          },
+          "estimatedCost": 0.01868
         }
       },
       "jev": {
@@ -14338,6 +14800,27 @@
             "output": 256
           },
           "estimatedCost": 0.007467
+        },
+        "claude-opus-5-5": {
+          "titleJa": "同一商品への複数の商品割引の併用が可能に",
+          "summarizedJa": "同じ商品に対して複数の商品割引を組み合わせて適用できるようになり、重複するプロモーションがカートでの競合や回避策なしに同時に適用されます。これまでは1つの商品に適用できる商品割引は1つだけでした。割引にタグ（ロイヤルティ、季節、アフィリエイトなど）を付けてグループ化し、併用可能なタグを設定することで、チェックアウト時にルールに従って自動適用されます。",
+          "audienceJa": "割引を活用する全マーチャント、および割引関連アプリを開発・運用するパートナー",
+          "actionJa": "複数の割引を併用したい場合は、割引にタグを付けて併用可能な組み合わせを設定し、意図しない過剰割引が発生しないか既存の割引設定を確認してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 3,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-09-30T09:56:30.064Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2482,
+            "output": 362
+          },
+          "estimatedCost": 0.017168
         }
       },
       "jev": {
@@ -15313,6 +15796,27 @@
             "output": 243
           },
           "estimatedCost": 0.008295
+        },
+        "claude-opus-5-5": {
+          "titleJa": "Shopifyパートナー向け本人確認の提供開始",
+          "summarizedJa": "Shopifyパートナーがマーチャントストアへのコラボレーターリクエストを送信する前に、Stripe経由での本人確認（政府発行の写真付き身分証明書とセルフィー／ライブネスチェック）を完了できるようになりました。現在は任意ですが、今後数週間以内に必須化され、未確認のユーザーは新規コラボレーターリクエストを送信できなくなります。既に承認済みのコラボレーターストアへのアクセスには本人確認は不要です。",
+          "audienceJa": "コラボレーターリクエストを送信するShopifyパートナー（代理店・開発者）組織の全ユーザー",
+          "actionJa": "コラボレーターリクエストを送信する組織内の各ユーザーが、必須化前にDev Dashboardの「Request collaborations」ページで政府発行の写真付き身分証明書とセルフィーを用いた本人確認を完了してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-09-30T09:56:35.705Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 3003,
+            "output": 402
+          },
+          "estimatedCost": 0.020052
         }
       },
       "jev": {
@@ -15435,6 +15939,27 @@
             "output": 285
           },
           "estimatedCost": 0.00825
+        },
+        "claude-opus-5-5": {
+          "titleJa": "アプリ料金設定：プラン数上限の拡大、課金なしのプランテスト、App Eventsの負の値・小数値対応",
+          "summarizedJa": "Shopify App Pricingで作成できるプラン数が公開プラン8件（従来4件）、非公開プラン15件（従来10件）に拡大されました。アプリ審査時に既存プランを選択可能になり、開発ストアでは自作アプリの任意プランを無料で契約でき、プランを無料に設定して他のパートナーにテストしてもらうこともできます。また、App Events APIが負の値（使用量の調整・クレジット）や1.5などの小数値を受け付けるようになりました。",
+          "audienceJa": "Shopify App Pricing（マネージド料金）を利用するアプリ開発者・パートナー",
+          "actionJa": null,
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-30T09:56:40.183Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2632,
+            "output": 339
+          },
+          "estimatedCost": 0.017307999999999997
         }
       },
       "jev": {
@@ -15520,7 +16045,7 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.95,
           "areas": [
@@ -15686,6 +16211,27 @@
             "output": 211
           },
           "estimatedCost": 0.006132
+        },
+        "claude-opus-5-5": {
+          "titleJa": "Android版Shopifyモバイルアプリのセキュリティアップデート",
+          "summarizedJa": "Android版Shopifyモバイルアプリのセキュリティアップデートにより、全ユーザーは最新版へのアップデートが必須となりました。また、アプリの動作要件がAndroid 11以降に引き上げられました。Android 10以前の端末では、モバイルブラウザからadmin.shopify.comにアクセスしてストア管理を継続できます。",
+          "audienceJa": "Android端末でShopifyモバイルアプリを利用する全マーチャントおよびスタッフ",
+          "actionJa": "Shopifyアプリを最新版にアップデートし、Android 10以前の端末を使用している場合はOSを更新するか、モバイルブラウザでadmin.shopify.comを利用してください。",
+          "deadline": "2026-07-08",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-30T09:56:43.943Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2197,
+            "output": 342
+          },
+          "estimatedCost": 0.015628000000000003
         }
       },
       "jev": {
@@ -16417,6 +16963,27 @@
             "output": 232
           },
           "estimatedCost": 0.008637
+        },
+        "claude-opus-5-5": {
+          "titleJa": "Shopify App Pricingへの移行に向けたアプリの準備",
+          "summarizedJa": "Billing APIを利用する開発者向けに、Shopify App Pricingへの移行ツールの第1段階が公開され、Partner Dashboardで既存の手動プランからApp Pricingのドラフトプランを自動生成・確認・編集・テストできるようになりました。この段階では既存の加盟店のサブスクリプションは移行されず、マーチャント側の対応は不要です。既存サブスクリプションを移行する次段階のツールは近日中にEarly Accessで提供予定です。",
+          "audienceJa": "Billing APIで課金を行っている公開アプリの開発者（パートナー）",
+          "actionJa": "Partner Dashboardのアプリ掲載情報の料金詳細から移行ツールを開き、自動生成されたApp Pricingドラフトプランを確認・編集（「Action needed」のプランは従量課金などの必須項目を設定）し、開発ストアでテストしてください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-30T09:56:48.307Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 3177,
+            "output": 403
+          },
+          "estimatedCost": 0.020768000000000002
         }
       },
       "jev": {
@@ -16542,6 +17109,27 @@
             "output": 260
           },
           "estimatedCost": 0.008337
+        },
+        "claude-opus-5-5": {
+          "titleJa": "App Store要件の更新：1.3 誠実で透明性のあるレビュー運用の徹底",
+          "summarizedJa": "Shopify App Store要件ポリシー1.3が更新され、パートナープログラム契約C.2.1に基づく偽レビュー・インセンティブ付きレビューへの取り締まり方針が明確化されました。インセンティブ提供が発覚した場合、レビューの一部削除、アプリの降格・掲載停止、パートナーアカウント停止などの措置が取られます。また信頼基準を満たすレビューのみが公開されるようロジックが調整され、基準未達のレビューは非公開となります。",
+          "audienceJa": "Shopify App Storeにアプリを公開しているアプリ開発者（パートナー）",
+          "actionJa": "可能な限りReviews APIを使って中立的な表現でレビューを依頼し、アプリ内外でのレビューへのインセンティブ提供を一切やめてください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T09:56:53.109Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2872,
+            "output": 383
+          },
+          "estimatedCost": 0.019148
         }
       },
       "jev": {
@@ -16624,7 +17212,7 @@
           "outOfScope": true
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.97,
           "areas": [
@@ -16668,6 +17256,27 @@
             "output": 301
           },
           "estimatedCost": 0.009056999999999999
+        },
+        "claude-opus-5-5": {
+          "titleJa": "Customer Account API：2026-10で Customer.lastIncompleteCheckout と Checkout 関連型を削除",
+          "summarizedJa": "Customer Account API バージョン2026-10で、非推奨となっていた Customer.lastIncompleteCheckout フィールドと、Checkout・AppliedGiftCard・ShippingRate などの Checkout 型サブツリーが削除されます。このフィールドはすでに null を返しており、Checkout Classic 由来の古いスキーマを整理する変更です。代替フィールドはなく、カート状態には Storefront API の Cart、購入履歴には Customer.orders を利用します。",
+          "audienceJa": "Customer Account API を利用するアプリ・カスタムストアフロント開発者",
+          "actionJa": "API バージョン2026-10へ移行する前に、クエリから Customer.lastIncompleteCheckout とその配下のフィールド指定を削除してください。",
+          "deadline": "2026-10-01",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-09-30T09:56:58.396Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2888,
+            "output": 378
+          },
+          "estimatedCost": 0.019112
         }
       },
       "jev": {
@@ -16790,6 +17399,27 @@
             "output": 240
           },
           "estimatedCost": 0.009201
+        },
+        "claude-opus-5-5": {
+          "titleJa": "App Storeレビューの信頼性強化",
+          "summarizedJa": "Shopifyは、レビューと引き換えにアプリ機能を提供・解放・制限する「レビューの見返り提供」を禁止する専用のApp Store要件を新設し、違反アプリはレビューの大部分が削除されます。また、不正レビューの検出シグナルを拡充し、既存レビューにも遡って適用するため、今後数週間で多数のレビューが非公開化され、正当なアプリでも一部レビューが消える可能性があります。",
+          "audienceJa": "Shopify App Storeにアプリを公開しているパートナー（アプリ開発者）",
+          "actionJa": "レビューの見返りとして機能や特典を提供する仕組みを直ちに廃止し、Reviews APIを使って中立的な表現で実際の利用者にのみレビューを依頼してください。",
+          "deadline": "2026-07-06",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T09:57:08.377Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 3433,
+            "output": 360
+          },
+          "estimatedCost": 0.020932
         }
       },
       "jev": {
@@ -16872,7 +17502,7 @@
           "outOfScope": true
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.94,
           "areas": [
@@ -16912,6 +17542,27 @@
             "output": 254
           },
           "estimatedCost": 0.007443
+        },
+        "claude-opus-5-5": {
+          "titleJa": "Markets APIがMarketRegionSubdivision（国の下位地域）に対応",
+          "summarizedJa": "Admin GraphQL API 2026-07リリース候補で、州や都道府県などの国の下位地域（サブリージョン）で構成されたマーケットが利用可能になり、マーケット主導の配送へ移行したストアで出現する可能性があります。サブリージョンの所属は非推奨のmarket.regionsではなくmarket.conditions.regionsCondition.regionsから読み取り、型としてMarketRegionSubdivisionを使用する必要があります。現時点では配送のみ対応で、ディスカウント・カタログ・テーマのコンテキスト化・マーケットメタフィールドは未対応のため、該当APIはバリデーションエラーを返します。",
+          "audienceJa": "Markets関連のAdmin GraphQL API（2026-07）を利用するアプリ開発者、特に配送アプリ開発者",
+          "actionJa": "マーケットの地域所属を取得する処理をmarket.regionsからmarket.conditions.regionsCondition.regionsに切り替え、MarketRegionSubdivision型に対応させてください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T09:57:14.201Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2522,
+            "output": 457
+          },
+          "estimatedCost": 0.019228000000000002
         }
       },
       "jev": {
@@ -16997,7 +17648,7 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.7,
           "areas": [
@@ -17039,6 +17690,27 @@
             "output": 293
           },
           "estimatedCost": 0.008907
+        },
+        "claude-opus-5-5": {
+          "titleJa": "OrderDisplayFulfillmentStatusがフルフィルメント対象商品のない注文にFULFILLMENT_NOT_REQUIREDを返すように変更",
+          "summarizedJa": "Admin GraphQL API 2026-10以降、OrderDisplayFulfillmentStatus列挙型に新しい値FULFILLMENT_NOT_REQUIREDが追加されます。未発送のまま全キャンセル・全返金された注文など、発送すべき商品が残っていない注文は、従来のUNFULFILLEDではなくこの値を返します。2026-10より前のAPIバージョンでは従来どおりUNFULFILLEDが返されます。",
+          "audienceJa": "Admin GraphQL APIで注文のフルフィルメントステータスを扱うアプリ開発者",
+          "actionJa": "API 2026-10へ移行する際、ステータスのswitch文やラベル対応表、生成型にFULFILLMENT_NOT_REQUIREDの処理を追加し、UNFULFILLEDでの絞り込みや条件分岐のロジックを見直してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T09:57:19.216Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2931,
+            "output": 434
+          },
+          "estimatedCost": 0.020404
         }
       },
       "jev": {
@@ -17164,6 +17836,27 @@
             "output": 292
           },
           "estimatedCost": 0.008646000000000001
+        },
+        "claude-opus-5-5": {
+          "titleJa": "チェックアウトUI拡張機能のuseBuyerJourneyIntercept APIを非推奨化",
+          "summarizedJa": "APIバージョン2026-07から、チェックアウトUI拡張機能のuseBuyerJourneyInterceptフックと、それが依存するblock_progress機能が非推奨となり、将来のバージョンで削除されます。ビジネスルールの適用にはサーバーサイドで動作し、エクスプレスウォレットやエージェント型チェックアウトにも一貫して適用されるカート・チェックアウト検証Functionへの移行が推奨されます。割引コードの拒否には、カスタムメッセージ付きの拒否に対応したDiscount Function APIを利用します。",
+          "audienceJa": "useBuyerJourneyInterceptやblock_progressを使用するチェックアウトUI拡張機能のアプリ開発者、およびそれらのアプリを利用するマーチャント",
+          "actionJa": "useBuyerJourneyInterceptによるチェックアウト進行ブロック処理を、カート・チェックアウト検証Functionまたは割引Function APIへ移行し、shopify.extension.tomlからblock_progress設定を削除してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-09-30T09:57:26.101Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2781,
+            "output": 470
+          },
+          "estimatedCost": 0.020524
         }
       },
       "jev": {
@@ -17413,6 +18106,27 @@
             "output": 280
           },
           "estimatedCost": 0.008105999999999999
+        },
+        "claude-opus-5-5": {
+          "titleJa": "マーケット主導の配送設定がフィーチャープレビューで利用可能に",
+          "summarizedJa": "マーチャントの配送設定が配送プロファイルからMarketsへ移行し、各マーケットに配送オプションを直接紐付け、商品やロケーション条件で料金を変えられるようになります。マーチャントの配送設定を配送プロファイルAPIで読み書きしているアプリはMarkets APIへの対応が必要で、2026年10月1日から段階的に展開され、2027年7月1日までに全マーチャントへ適用されます。アプリ配送プロファイルは引き続き配送プロファイルAPIを使用し、全商品を対象にできるなど機能が強化されます。",
+          "audienceJa": "配送プロファイルAPIでマーチャントの配送設定を扱うアプリ開発者、および配送設定を利用する全マーチャント",
+          "actionJa": "開発ストアでフィーチャープレビューを有効にして既存連携と料金ロジックを検証し、マーチャント配送設定の読み書き処理を配送プロファイルAPIからMarkets APIへ移行してください。",
+          "deadline": "2026-10-01",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 5
+          },
+          "totalScore": 18,
+          "analyzedAt": "2026-09-30T09:57:31.860Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2664,
+            "output": 448
+          },
+          "estimatedCost": 0.019616
         }
       },
       "jev": {
@@ -17672,6 +18386,27 @@
             "output": 223
           },
           "estimatedCost": 0.0063869999999999994
+        },
+        "claude-opus-5-5": {
+          "titleJa": "累積マーケティングエンゲージメントの廃止",
+          "summarizedJa": "Admin GraphQL APIの marketingEngagementCreate ミューテーションの isCumulative 引数が非推奨となり、デフォルト値は false になります。マーケティング連携アプリは非累積（期間ごと）のエンゲージメントデータを送信するよう更新が必要です。累積指標を送信している既存アクティビティは、いつでも非累積へ移行できます。",
+          "audienceJa": "marketingEngagementCreate ミューテーションを使用するマーケティング連携アプリの開発者",
+          "actionJa": "marketingEngagementCreate で isCumulative: true を使って累積指標を送信している場合、非累積（期間ごと）のエンゲージメントデータを送信するよう実装を更新してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-30T09:57:35.606Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2238,
+            "output": 335
+          },
+          "estimatedCost": 0.015652
         }
       },
       "jev": {
@@ -18294,6 +19029,27 @@
             "output": 330
           },
           "estimatedCost": 0.00918
+        },
+        "claude-opus-5-5": {
+          "titleJa": "マーケット主導の配送に伴い、マーチャント所有の配送プロファイルAPIが非推奨に",
+          "summarizedJa": "Shopifyは配送設定をマーケットごとに行う「マーケット主導の配送」へ移行し、これを利用するショップではAdmin GraphQL APIのマーチャント所有配送プロファイル関連のフィールドとミューテーション（deliveryProfile、deliveryProfileCreateなど）が実際の配送設定を反映しなくなります。読み取りは古いスナップショットを返す可能性があり、書き込みはエラーなしで成功しても実際の設定は更新されません。アプリ所有の配送プロファイルは影響を受けません。",
+          "audienceJa": "Admin GraphQL APIでマーチャント所有の配送プロファイルを読み取り・管理しているアプリ開発者（パートナー）、およびそのアプリを利用するマーチャント",
+          "actionJa": "アップグレードガイドに従い、マーケット主導の配送を使うショップを検出して、マーチャント所有配送プロファイルAPIへの依存をやめ、Contextual Product Feeds・アプリ所有配送プロファイル・Markets APIのいずれかへ移行してください。",
+          "deadline": "2026-07-01",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-09-30T09:57:40.670Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2840,
+            "output": 487
+          },
+          "estimatedCost": 0.0211
         }
       },
       "jev": {
@@ -18540,6 +19296,27 @@
             "output": 243
           },
           "estimatedCost": 0.021351
+        },
+        "claude-opus-5-5": {
+          "titleJa": "マーケット単位の配送設定に対応したAdmin API",
+          "summarizedJa": "API バージョン 2026-07 から、GraphQL Admin API の Market オブジェクトに delivery フィールドが追加され、配送プロファイルを別途作成せずにマーケットごとの配送設定を直接行えるようになりました。marketCreate / marketUpdate ミューテーションを使い、定額・購入金額ベース・重量ベース・配送業者計算の配送オプションを作成・更新・削除できます。未設定のマーケットは親マーケットの配送設定を継承し、isEnabled を false にするとそのマーケットのチェックアウトで配送オプションが表示されなくなります。",
+          "audienceJa": "Admin GraphQL API で Markets や配送設定を扱うアプリ開発者（越境EC・多市場展開向けアプリのパートナー）",
+          "actionJa": "マーケットごとの配送設定を扱う場合は、API バージョン 2026-07 以降で read_markets / write_markets スコープを用意し、marketCreate・marketUpdate の delivery.shipping を使った実装を検討してください。",
+          "deadline": "2026-07-01",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T09:57:46.865Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 8711,
+            "output": 450
+          },
+          "estimatedCost": 0.043844
         }
       },
       "jev": {
@@ -18625,7 +19402,7 @@
           "outOfScope": true
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.72,
           "areas": [
@@ -18785,6 +19562,27 @@
             "output": 237
           },
           "estimatedCost": 0.007605
+        },
+        "claude-opus-5-5": {
+          "titleJa": "在庫移動（Transfer）でメタフィールドの定義・管理が可能に",
+          "summarizedJa": "在庫移動（Transfer）が Shopify 管理画面および Admin GraphQL API でカスタムメタフィールドに対応しました。「設定 > メタフィールドとメタオブジェクト > 移動」で定義を作成し、ロット・シリアル番号、物流・通関情報、ERP/WMS 連携用の参照番号などを保存できます。複製時のメタフィールドのコピーや、Shopify アナリティクスでのフィルター・グループ化にも対応しています。",
+          "audienceJa": "複数拠点で在庫移動を管理するマーチャント、Stocky から移行したマーチャント、在庫・ERP/WMS 連携アプリを開発するパートナー",
+          "actionJa": null,
+          "deadline": "2026-06-30",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T09:57:51.172Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2724,
+            "output": 348
+          },
+          "estimatedCost": 0.017856
         }
       },
       "jev": {
@@ -18859,7 +19657,7 @@
       },
       "priority": {
         "merchant": {
-          "level": "check",
+          "level": "info",
           "action": 0.15,
           "relevance": 0.72620352,
           "areas": [
@@ -18909,6 +19707,27 @@
             "output": 313
           },
           "estimatedCost": 0.008562
+        },
+        "claude-opus-5-5": {
+          "titleJa": "ロケーションのメタフィールドをストア分析のディメンション・フィルターとして利用可能に",
+          "summarizedJa": "店舗ランク、社内店舗コード、フルフィルメント対応可否、配送ゾーンなど、ロケーションに保存したメタフィールドをストア分析（Analytics）のディメンションやフィルターとして使えるようになりました。「設定 > メタフィールドとメタオブジェクト > ロケーション」で定義を開き、「ストア分析でデータをフィルタリングまたはグループ化」を有効にすると利用できます。これにより、商品・バリエーション・顧客・注文・転送のメタフィールドと同様に、ロケーション単位の切り口でレポートを分析できます。",
+          "audienceJa": "複数ロケーション（実店舗・倉庫など）を運用し、ロケーションにメタフィールドを設定しているマーチャント、およびその分析・ERP連携を支援するパートナー",
+          "actionJa": "ロケーション別分析に使いたい場合は、設定のロケーションメタフィールド定義で「ストア分析でデータをフィルタリングまたはグループ化」をオンにしてください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-09-30T09:57:56.441Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2618,
+            "output": 459
+          },
+          "estimatedCost": 0.019652000000000003
         }
       },
       "jev": {
@@ -20387,6 +21206,27 @@
             "output": 265
           },
           "estimatedCost": 0.009687000000000001
+        },
+        "claude-opus-5-5": {
+          "titleJa": "GraphQL Admin API 2026-10で`DraftOrderDiscountNotAppliedWarning.priceRule`が削除",
+          "summarizedJa": "GraphQL Admin API 2026-10以降、DraftOrderDiscountNotAppliedWarningオブジェクトの非推奨フィールドpriceRuleが削除され、これに伴いPriceRuleオブジェクトと関連型も公開スキーマから削除されます。draftOrderCalculate・draftOrderCreate・draftOrderUpdateなどの警告でpriceRuleを参照しているアプリは、代わりにdiscountTitleとdiscountCodeを使用する必要があります。旧バージョンではサポート終了までpriceRuleが引き続き利用可能です。",
+          "audienceJa": "下書き注文（Draft Order）の割引警告でpriceRuleを参照しているAdmin GraphQL APIを使うアプリ開発者",
+          "actionJa": "2026-10へアップグレードする前に、DraftOrderDiscountNotAppliedWarningのpriceRuleを参照するクエリをdiscountTitleとdiscountCodeを選択する形に書き換えてください。",
+          "deadline": "2026-10-01",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-30T09:58:02.291Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 3405,
+            "output": 466
+          },
+          "estimatedCost": 0.022940000000000002
         }
       },
       "jev": {
@@ -20876,6 +21716,27 @@
             "output": 249
           },
           "estimatedCost": 0.007323
+        },
+        "claude-opus-5-5": {
+          "titleJa": "ITEM_NOT_STOCKED_AT_LOCATION エラーの削除",
+          "summarizedJa": "API バージョン 2026-10 から、在庫数量の調整・移動・設定系ミューテーション（InventoryAdjustQuantities、InventoryMoveQuantities、InventorySetOnHandQuantities など）のエラーコードから ITEM_NOT_STOCKED_AT_LOCATION が削除されます。フルフィルメント用に有効化していないロケーションでも在庫を管理できるようになり、このエラーが発生する条件自体がなくなったためです。アプリ側でこのエラーを処理しているロジックは安全に削除できます。",
+          "audienceJa": "Admin GraphQL API で在庫数量を操作するアプリ開発者",
+          "actionJa": "API バージョン 2026-10 へ移行する前に、ITEM_NOT_STOCKED_AT_LOCATION エラーコードを参照している処理（enum の網羅的な分岐など）を削除・修正してください。",
+          "deadline": "2026-10-01",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-09-30T09:58:06.853Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2493,
+            "output": 414
+          },
+          "estimatedCost": 0.018251999999999997
         }
       },
       "jev": {
@@ -21364,6 +22225,27 @@
             "output": 296
           },
           "estimatedCost": 0.008483999999999998
+        },
+        "claude-opus-5-5": {
+          "titleJa": "ディスカウントUI拡張機能のdiscounts APIにpurchaseTypeとrecurringCycleLimitフィールドが追加",
+          "summarizedJa": "ディスカウントUI拡張機能のdiscountsプラグインから、アプリディスカウントのpurchaseType（単発購入・定期購入・両方のどれに適用するか）とrecurringCycleLimit（定期購入の何回目の請求まで割引を適用するか、0は無制限）を設定できるようになりました。これまではGraphQL Admin API経由でしか設定できませんでしたが、DiscountCodeAppとDiscountAutomaticAppの両方で利用でき、チェックアウト時に適用されます。",
+          "audienceJa": "ディスカウントUI拡張機能を開発するアプリ開発者（特に定期購入対応アプリ）",
+          "actionJa": null,
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-30T09:58:10.708Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2685,
+            "output": 355
+          },
+          "estimatedCost": 0.01784
         }
       },
       "jev": {
@@ -21450,7 +22332,7 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.7,
           "areas": [
@@ -21738,6 +22620,27 @@
             "output": 305
           },
           "estimatedCost": 0.009009
+        },
+        "claude-opus-5-5": {
+          "titleJa": "Admin GraphQL API：全配送可能商品をカバーするアプリ所有の配送プロファイルに対応",
+          "summarizedJa": "GraphQL Admin API 2026-07以降、アプリ所有の配送プロファイルに新しいブール型フィールド「coversAllItems」が追加されました。trueに設定すると、商品やバリアントを個別に割り当てなくても、ストア内のすべての配送可能商品にそのプロファイルの送料がチェックアウト時に適用され、明示的な割り当てよりも優先されます。この機能は承認されたAPIクライアントのアプリ所有配送プロファイルのみで利用でき、マーチャント管理のプロファイルでは利用できません。",
+          "audienceJa": "Admin GraphQL APIで配送プロファイルを管理する配送・送料関連アプリの開発者",
+          "actionJa": "アプリ所有の配送プロファイルで全商品に送料を適用したい場合は、API 2026-07以降でDeliveryProfileInputのcoversAllItemsをtrueに設定する実装を検討してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T09:58:23.397Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2854,
+            "output": 430
+          },
+          "estimatedCost": 0.020016
         }
       },
       "jev": {
@@ -21823,7 +22726,7 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.74,
           "areas": [
@@ -21991,6 +22894,27 @@
             "output": 284
           },
           "estimatedCost": 0.008667000000000001
+        },
+        "claude-opus-5-5": {
+          "titleJa": "GraphQL Admin APIで在庫移動（インベントリートランスファー）にメタフィールドを定義・設定可能に",
+          "summarizedJa": "GraphQL Admin API 2026-07以降、MetafieldOwnerType.TRANSFERを使って在庫移動専用のメタフィールド定義を作成でき、inventoryTransferCreate・inventoryTransferCreateAsReadyToShip・inventoryTransferEditのmetafields入力で直接値を設定できるようになりました。inventoryTransferDuplicateで複製した際にはメタフィールドも複製されるため、ERP参照番号や取り扱い指示などのカスタムデータを別途metafieldsSetを呼ばずに書き込めます。",
+          "audienceJa": "在庫移動を扱うアプリやERP連携を開発するAdmin GraphQL API利用の開発者",
+          "actionJa": "在庫移動にカスタムデータを紐付けたい場合は、API 2026-07でTRANSFER向けメタフィールド定義を作成し、作成・編集ミューテーションのmetafields入力を活用するよう実装を見直してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T09:58:29.603Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2836,
+            "output": 447
+          },
+          "estimatedCost": 0.020284
         }
       },
       "jev": {
@@ -22073,7 +22997,7 @@
           "outOfScope": true
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.8,
           "areas": [
@@ -22595,6 +23519,27 @@
             "output": 275
           },
           "estimatedCost": 0.008592
+        },
+        "claude-opus-5-5": {
+          "titleJa": "顧客アカウントページのデザインを刷新",
+          "summarizedJa": "顧客アカウントページが1カラムのシンプルなレイアウト、分かりやすくアクセシブルなナビゲーション、モバイルファーストの最適化によって刷新されます。モバイルでのインラインメニュー表示、注文詳細の見やすさ向上、注文アクションの上部表示、注文がない顧客へのおすすめ商品表示、ログインページのカスタマイズ強化などが含まれます。本日から順次展開され、数週間以内に最新版の顧客アカウントを使う全ストアで利用可能になります。",
+          "audienceJa": "最新版の顧客アカウントを利用する全マーチャント、旧バージョン（レガシー）の顧客アカウントを使うマーチャント、顧客アカウント拡張機能を提供するアプリ開発者",
+          "actionJa": "レガシー顧客アカウントを利用中の場合は、刷新デザインを全ページで適用するために最新版の顧客アカウントへアップグレードし、チェックアウト・アカウントエディタで表示やおすすめ商品を確認・調整してください。",
+          "deadline": "2026-06-17",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-30T09:58:34.779Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2866,
+            "output": 456
+          },
+          "estimatedCost": 0.020583999999999998
         }
       },
       "jev": {
@@ -22718,6 +23663,27 @@
             "output": 267
           },
           "estimatedCost": 0.008060999999999999
+        },
+        "claude-opus-5-5": {
+          "titleJa": "Plus・Enterpriseプランで1つの注文内に配送と店舗受け取りを混在可能に",
+          "summarizedJa": "PlusおよびEnterpriseプランのマーチャントは、1回のチェックアウトで商品ごとに配送と店舗受け取りを選択できるようになりました。注文作成時には受け取り用と配送用のフルフィルメントが分かれて管理画面に表示されます。機能テストドライブで有効化でき、2027年4月に対象の全チェックアウトへ自動リリースされます。",
+          "audienceJa": "Plus・Enterpriseプランのマーチャント、および配送・フルフィルメント・注文ロジックに関わるアプリ開発者",
+          "actionJa": "自動リリース前に機能テストドライブで有効化し、配送・フルフィルメント・注文に関わるサードパーティ/カスタムアプリや連携が分割フルフィルメントに対応しているか検証・開発者に確認してください。",
+          "deadline": "2027-04-01",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-09-30T09:58:38.911Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2700,
+            "output": 394
+          },
+          "estimatedCost": 0.018680000000000002
         }
       },
       "jev": {
@@ -23690,6 +24656,27 @@
             "output": 268
           },
           "estimatedCost": 0.008118
+        },
+        "claude-opus-5-5": {
+          "titleJa": "バルククエリの実行速度が最大4倍に高速化",
+          "summarizedJa": "Admin GraphQL APIのバルククエリが最適化され、Shopifyからの大規模データのエクスポートが最大4倍高速になりました。バルクオペレーションは同期APIよりも効率的にデータの入出力ができ、最近では管理用クエリの追加、全ミューテーション対応と最大5件の同時実行、Shopify CLIでのサポートなども追加されています。",
+          "audienceJa": "Admin GraphQL APIのバルクオペレーションで大量データを扱うアプリ開発者",
+          "actionJa": null,
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T09:58:42.629Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2714,
+            "output": 275
+          },
+          "estimatedCost": 0.016356
         }
       },
       "jev": {
@@ -23772,7 +24759,7 @@
           "outOfScope": true
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.81,
           "areas": [
@@ -23812,6 +24799,27 @@
             "output": 230
           },
           "estimatedCost": 0.006912
+        },
+        "claude-opus-5-5": {
+          "titleJa": "テーマでカラーパレットをサポート",
+          "summarizedJa": "テーマに新しい設定タイプ「color_palette」が追加され、マーチャントは1つのカラーグリッドを編集するだけでテーマ全体の色を変更でき、セクションやブロック単位での上書きも可能になりました。既存のカラースキームは引き続き動作し、新規テーマやTheme Store申請でもパレットは必須ではありませんが、今後の開発はパレットに注力されるため新規テーマでの採用が推奨されています。Horizon 4.0.0で実際の動作を確認できます。",
+          "audienceJa": "テーマ開発者（Theme Storeパートナー・カスタムテーマ制作者）およびテーマを編集するマーチャント",
+          "actionJa": "新規テーマを開発する場合は、color_paletteのドキュメントを確認し、カラースキームに代えてカラーパレットの採用を検討してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T09:58:47.060Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2407,
+            "output": 378
+          },
+          "estimatedCost": 0.017188000000000002
         }
       },
       "jev": {
@@ -23887,7 +24895,7 @@
       "officialActionRequired": false,
       "priority": {
         "merchant": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.71732276,
           "areas": [
@@ -24181,6 +25189,27 @@
             "output": 285
           },
           "estimatedCost": 0.010014
+        },
+        "claude-opus-5-5": {
+          "titleJa": "Sidekickアプリ拡張機能に関するApp Store要件の新設",
+          "summarizedJa": "Sidekickアプリ拡張機能に対し、Shopify App Store要件2.2.8と2.2.9の2項目が新たに追加され、即日適用されました。拡張機能の設定・App Storeリスティング・実際の動作がアプリの中核機能と一致している必要があり、Sidekick内での宣伝・広告・クロスセル・レビュー依頼は禁止されます。",
+          "audienceJa": "Sidekickアプリ拡張機能を開発済み・開発予定のApp Store公開アプリ開発者",
+          "actionJa": "拡張機能のTOML設定・Sidekick上での実行時の挙動・App Storeリスティングを見直し、中核機能との整合性を確保するとともに、宣伝・広告・クロスセル・レビュー依頼を含めないよう修正してください。",
+          "deadline": "2026-06-17",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-09-30T09:58:51.538Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 3404,
+            "output": 377
+          },
+          "estimatedCost": 0.021156
         }
       },
       "jev": {
@@ -24265,7 +25294,7 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.81,
           "areas": [
@@ -24311,6 +25340,27 @@
             "output": 250
           },
           "estimatedCost": 0.007281
+        },
+        "claude-opus-5-5": {
+          "titleJa": "WhatsAppマーケティング同意がAdmin APIとCustomer Account APIで利用可能に",
+          "summarizedJa": "WhatsAppのマーケティング同意をAdmin APIとCustomer Account APIの両方で管理できるようになりました。customerWhatsAppMarketingConsentUpdateミューテーションで顧客のデフォルト電話番号に対する同意状態を更新でき、CustomerPhoneNumberオブジェクトのwhatsAppMarketingConsentフィールドで現在の値を取得できます。現時点ではunstable版で提供されています。",
+          "audienceJa": "顧客データやマーケティング同意を扱うAdmin API/Customer Account APIを使うアプリ開発者、WhatsAppマーケティングを行うマーチャント",
+          "actionJa": "WhatsAppマーケティングを扱うアプリは、新しいミューテーションとwhatsAppMarketingConsentフィールドを使って同意状態の取得・更新処理を実装・検証してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-30T09:58:56.595Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2490,
+            "output": 406
+          },
+          "estimatedCost": 0.01808
         }
       },
       "jev": {
@@ -24436,6 +25486,27 @@
             "output": 253
           },
           "estimatedCost": 0.007809
+        },
+        "claude-opus-5-5": {
+          "titleJa": "ストアフロントの標準イベントとアクション",
+          "summarizedJa": "Liquidストアフロントに、テーマとその上で動作するアプリ・エージェント間の標準的な通信レイヤーが導入されました。テーマは shopify:product:view や shopify:cart:lines-update などのDOMイベントを発行し、アプリはJavaScriptで購読してペイロードを直接取得できます。また Shopify.actions.updateCart・getCart・openCart が全Liquidストアで利用可能になり、テーマ開発者はこれをオーバーライドしてページリロードなしのUI更新を実装できます。",
+          "audienceJa": "Liquidテーマ開発者およびテーマアプリ拡張・ストアフロント連携を行うアプリ開発者",
+          "actionJa": "テーマ開発者はテーマコードに標準イベントの発行とアクションのオーバーライドを実装し、アプリ開発者は独自のDOM操作の代わりに標準イベント・アクションの利用を検討してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-09-30T09:59:02.109Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2654,
+            "output": 406
+          },
+          "estimatedCost": 0.018736000000000003
         }
       },
       "jev": {
@@ -24560,6 +25631,27 @@
             "output": 245
           },
           "estimatedCost": 0.007896
+        },
+        "claude-opus-5-5": {
+          "titleJa": "Sidekickアプリ拡張機能が本日より利用可能に",
+          "summarizedJa": "すべてのアプリ開発者がSidekickアプリ拡張機能を構築できるようになり、Sidekickからアプリ内のデータ検索（App data）やアプリ内での操作（App actions）が可能になりました。Klaviyo、Loop、Judge.meなど18のローンチパートナーがすでに対応済みで、Shopify CLIで拡張機能の雛形を素早く作成できます。",
+          "audienceJa": "Shopifyアプリ開発者（およびSidekickを利用するマーチャント）",
+          "actionJa": "アプリ開発者は必要に応じてShopify CLIでSidekickアプリ拡張機能（App data/App actions）を実装し、Sidekick連携を検討してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-09-30T09:59:07.004Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2747,
+            "output": 338
+          },
+          "estimatedCost": 0.017748
         }
       },
       "jev": {
@@ -24686,6 +25778,27 @@
             "output": 250
           },
           "estimatedCost": 0.007914
+        },
+        "claude-opus-5-5": {
+          "titleJa": "返品・交換アプリおよびサブスクリプションアプリのBuilt for Shopify要件（2026年12月1日適用）",
+          "summarizedJa": "2026年12月1日より、購入者向けセルフサービス機能を提供する返品・交換アプリとサブスクリプションアプリは、Customer Account APIによる顧客認証が必須となります。期限までに対応しないアプリはBuilt for Shopifyステータスを失う可能性があります。これによりストアフロント、アプリ、顧客アカウント間で統一された安全なサインインが実現されます。",
+          "audienceJa": "購入者向けセルフサービス機能を持つ返品・交換アプリおよびサブスクリプションアプリの開発者（Built for Shopify認定取得・維持を目指すパートナー）",
+          "actionJa": "購入者向けの返品・交換やサブスクリプション管理フローの顧客認証をCustomer Account APIに移行・統合してください。",
+          "deadline": "2026-12-01",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-30T09:59:12.366Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2746,
+            "output": 388
+          },
+          "estimatedCost": 0.018744
         }
       },
       "jev": {
@@ -24813,6 +25926,27 @@
             "output": 268
           },
           "estimatedCost": 0.008676
+        },
+        "claude-opus-5-5": {
+          "titleJa": "GraphQL Admin APIで配送ラベルの購入が可能に",
+          "summarizedJa": "GraphQL Admin APIに新しいshippingLabelPurchaseミューテーションが追加され、アプリから対象のフルフィルメントオーダーに対してShopify Shippingのラベルを購入できるようになりました。購入は非同期で処理され、返却されるShippingLabelPurchaseResultをポーリングしてPENDING_PURCHASE・PURCHASED・PURCHASE_FAILEDのステータスを確認します。利用にはwrite_ordersスコープ、buy_shipping_labels権限を持つユーザー、およびShopify Shipping利用規約への同意が必要です。",
+          "audienceJa": "配送・フルフィルメント関連のアプリを開発するAdmin API利用の開発者（Shopify Shipping対応地域のマーチャント）",
+          "actionJa": "配送ラベル購入を自動化したい場合は、write_ordersスコープを確認し、shippingLabelPurchaseミューテーションと結果ポーリング処理を実装してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-30T09:59:18.012Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2966,
+            "output": 433
+          },
+          "estimatedCost": 0.020524
         }
       },
       "jev": {
@@ -24897,7 +26031,7 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.83,
           "areas": [
@@ -24941,6 +26075,27 @@
             "output": 263
           },
           "estimatedCost": 0.013794
+        },
+        "claude-opus-5-5": {
+          "titleJa": "新しいコレクションモデルとAPIが利用可能に",
+          "summarizedJa": "GraphQL Admin API 2026-07では、コレクションの単一ruleSetが複数のCollectionSource（包含・除外条件、手動選択、サブコレクション、アプリ共有ソース）で構成される新モデルに置き換わりました。新機能を使うコレクションは旧APIバージョンのクエリ結果から除外されるため、全コレクションを扱うには2026-07への移行が必要です。またShopify FunctionsのProductVariantにバリアント単位のコレクション所属判定フィールドが追加されました。",
+          "audienceJa": "コレクションを読み書きするAdmin GraphQL APIアプリ開発者およびShopify Functions開発者",
+          "actionJa": "Collection.ruleSetやcollectionCreate/Update(input:)を使用しているアプリは、API 2026-07に移行しCollection.sourcesと新しいcollection引数を使うよう実装を更新してください。",
+          "deadline": "2026-07-01",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 5
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-09-30T09:59:23.666Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 5317,
+            "output": 406
+          },
+          "estimatedCost": 0.029387999999999997
         }
       },
       "jev": {
@@ -25186,6 +26341,27 @@
             "output": 267
           },
           "estimatedCost": 0.008208
+        },
+        "claude-opus-5-5": {
+          "titleJa": "Customer Account APIでメタフィールドにアクセスするには定義が必須に",
+          "summarizedJa": "本日より、アプリリソースに保存されたメタフィールドをCustomer Account APIで取得するには、メタフィールド定義とカスタマーアカウントのアクセス権限の設定が必要になりました。定義のないアプリメタフィールドは値を返さなくなるため、顧客アカウントUI拡張、Hydrogen、ヘッドレスストアで利用している場合は対応が必要です。なお、CustomerやOrderリソースのメタフィールドは影響を受けません。",
+          "audienceJa": "Customer Account APIでアプリメタフィールドを利用するアプリ開発者（顧客アカウントUI拡張、Hydrogen・ヘッドレスストア構築者）",
+          "actionJa": "使用するすべてのアプリメタフィールドについて、metafieldDefinitionCreateまたはTOMLの宣言的メタフィールドで定義を作成し、Customer Account APIへのアクセス権限を設定してください。",
+          "deadline": "2026-06-16",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-09-30T09:59:28.064Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2729,
+            "output": 426
+          },
+          "estimatedCost": 0.019436000000000002
         }
       },
       "jev": {
@@ -25801,6 +26977,27 @@
             "output": 288
           },
           "estimatedCost": 0.008718
+        },
+        "claude-opus-5-5": {
+          "titleJa": "Shopify AI Toolkitで拡張機能をPolaris Webコンポーネントへアップグレード",
+          "summarizedJa": "Shopify AI Toolkitが、チェックアウトおよび顧客アカウントUI拡張機能の新APIバージョンへのアップグレード（Polaris Webコンポーネントへの移行を含む）に対応しました。AIコーディングエージェントを使い、ReactからPreactへの変換、レガシーコンポーネントの置き換え、拡張APIの更新を効率化できます。2026年10月1日以降、API 2025-07以前の拡張機能を含むアプリはCLIで更新できなくなるため、早期の移行が必要です。",
+          "audienceJa": "チェックアウトUI拡張機能・顧客アカウントUI拡張機能を含むアプリを開発するアプリ開発者",
+          "actionJa": "チェックアウトおよび顧客アカウントUI拡張機能をAPIバージョン2025-10以降にアップグレードし、Polaris Webコンポーネントへ移行してください。",
+          "deadline": "2026-10-01",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-09-30T09:59:33.631Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2871,
+            "output": 426
+          },
+          "estimatedCost": 0.020004
         }
       },
       "jev": {
@@ -25927,6 +27124,27 @@
             "output": 219
           },
           "estimatedCost": 0.007568999999999999
+        },
+        "claude-opus-5-5": {
+          "titleJa": "メタオブジェクトAPIの簡素化（valuesプロパティの追加）",
+          "summarizedJa": "Admin GraphQL API 2026-07で、メタオブジェクトに新しい`values`プロパティが追加され、全フィールドをJSON互換オブジェクトとして1回の呼び出しで取得できるようになり、アプリ側でのデシリアライズが不要になりました。metaobjectUpsertなどの作成・更新時にも`values`でJSON形式のデータを渡せますが、省略したフィールドはクリアされる点に注意が必要です。フィールドの型などの詳細が必要な場合や、未指定フィールドを保持するパッチ型の更新をしたい場合は、従来の`field`/`fields`を引き続き利用できます。",
+          "audienceJa": "Admin GraphQL APIでメタオブジェクトを扱うアプリ開発者・パートナー",
+          "actionJa": "API 2026-07以降で`values`を使ってメタオブジェクトを更新する場合は、省略したフィールドがクリアされるため、保持したい値をすべて含めるか従来の`fields`によるパッチ型更新を使い分けてください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-30T09:59:39.244Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2713,
+            "output": 458
+          },
+          "estimatedCost": 0.020012000000000002
         }
       },
       "jev": {
@@ -26009,7 +27227,7 @@
           "outOfScope": true
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.7,
           "areas": [
@@ -27633,6 +28851,27 @@
             "output": 276
           },
           "estimatedCost": 0.012384
+        },
+        "claude-opus-5-5": {
+          "titleJa": "GraphQL Admin APIでギフトカードの現地通貨対応が利用可能に",
+          "summarizedJa": "API バージョン 2026-07 から、GraphQL Admin API で特定通貨で発行されるギフトカード商品を作成でき、通貨をまたいだ利用可否（crossCurrencyRedeemable）を制御できるようになりました。新しい giftCardProductSet ミューテーションで issuanceCurrency などを設定できますが、これらは作成後に変更できません。また giftCardCreate の initialValue は非推奨となり、金額と通貨を含む initialAmount に置き換わります。",
+          "audienceJa": "ギフトカードを作成・管理する、または越境・多通貨ストアに対応するアプリの開発者",
+          "actionJa": "2026-07 へアップグレードする前に giftCardCreate の initialValue を initialAmount に置き換え、多通貨ストアでは商品作成時に issuanceCurrency と crossCurrencyRedeemable を適切に設定してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T09:59:45.101Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 4524,
+            "output": 407
+          },
+          "estimatedCost": 0.026236000000000002
         }
       },
       "jev": {
@@ -27715,7 +28954,7 @@
           "outOfScope": true
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.71,
           "areas": [
@@ -27996,6 +29235,27 @@
             "output": 297
           },
           "estimatedCost": 0.00978
+        },
+        "claude-opus-5-5": {
+          "titleJa": "Shopify CLI 4.0：セマンティックバージョニング採用、自動アップデート導入、非推奨フラグ・コマンドの削除",
+          "summarizedJa": "Shopify CLI 4.0がリリースされ、セマンティックバージョニングの採用と、インストール時のパッケージマネージャーを使った自動アップグレード（CI・プロジェクトローカル・メジャー版では無効、`shopify config autoupgrade off`で停止可）が導入されました。また、`app deploy`/`app release`の`--force`フラグが削除され`--allow-updates`/`--allow-deletes`に置き換わったほか、`shopify theme serve`や`shopify webhook trigger`などの非推奨コマンド・フラグも削除されました。",
+          "audienceJa": "Shopify CLIを使用するアプリ・テーマ開発者（CI/CDパイプラインを運用するパートナーを含む）",
+          "actionJa": "CI/CDスクリプトやドキュメントで`--force`を`--allow-updates`/`--allow-deletes`に、`theme serve`を`theme dev`に置き換えるなど、削除されたコマンド・フラグを後継のものへ移行してください。",
+          "deadline": "2026-05-21",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-30T09:59:50.152Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 3215,
+            "output": 473
+          },
+          "estimatedCost": 0.02232
         }
       },
       "jev": {
@@ -28120,6 +29380,27 @@
             "output": 240
           },
           "estimatedCost": 0.008028
+        },
+        "claude-opus-5-5": {
+          "titleJa": "App HomeをUI拡張機能として構築可能に",
+          "summarizedJa": "API バージョン 2026-07 から、新しい admin.app.home.render ターゲットを使い、アプリのランディングページ（App Home）をPreactベースの管理画面UI拡張機能として構築できるようになりました。他の管理画面UI拡張機能と一緒にバンドルされるため、App Home表示用のWebサーバーを別途ホストする必要がなくなります。カスタム配信アプリ向けの機能で、App Store公開アプリは引き続きiframeベースのApp Homeを使用します。",
+          "audienceJa": "カスタム配信アプリを開発するアプリ開発者・パートナー",
+          "actionJa": "任意対応：カスタムアプリでWebサーバー不要のApp Homeを構築したい場合は、shopify app init または shopify app generate extension でApp Home UI拡張機能を作成してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-30T09:59:54.703Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2825,
+            "output": 373
+          },
+          "estimatedCost": 0.01876
         }
       },
       "jev": {
@@ -28202,7 +29483,7 @@
           "outOfScope": true
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.89,
           "areas": [
@@ -28974,6 +30255,27 @@
             "output": 265
           },
           "estimatedCost": 0.007581
+        },
+        "claude-opus-5-5": {
+          "titleJa": "FulfillmentOrderLineItemでshippingLineフィールドが利用可能に",
+          "summarizedJa": "Admin GraphQL API 2026-07バージョンから、FulfillmentOrderLineItemでshippingLineフィールドを照会できるようになりました。異なる配送プロファイルのフルフィルメントオーダーが統合された場合でも、各明細の元の配送方法（code、title、sourceなど）を特定でき、正しい配送業者サービスへのマッピングが容易になります。",
+          "audienceJa": "Admin GraphQL APIを使う注文管理・フルフィルメントアプリの開発者",
+          "actionJa": "明細単位で配送方法を特定する必要がある場合は、API 2026-07でFulfillmentOrderLineItem.shippingLineを利用するよう実装を更新してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-09-30T09:59:58.560Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2478,
+            "output": 342
+          },
+          "estimatedCost": 0.016752000000000003
         }
       },
       "jev": {
@@ -29057,7 +30359,7 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0.09,
           "relevance": 0.9,
           "areas": [
@@ -29585,6 +30887,27 @@
             "output": 266
           },
           "estimatedCost": 0.00837
+        },
+        "claude-opus-5-5": {
+          "titleJa": "適切なアクセススコープがあればFunction実行ログの詳細が自動で閲覧可能に",
+          "summarizedJa": "Dev DashboardのFunction実行ログが、マーチャントから付与されたアクセススコープに基づいて自動的に閲覧できるようになりました。関数の入力クエリが要求するフィールドをGraphQL Admin APIで読み取れるスコープをアプリが持っていれば、マーチャントにログ共有を依頼する必要はありません。ログが見えない場合は、必要なスコープ（保護された顧客データやオプショナルスコープを含む）をリクエストします。",
+          "audienceJa": "Shopify Functionsを利用するアプリ開発者",
+          "actionJa": "実行ログが表示されない場合は、関数の入力クエリが必要とするアクセススコープ（必要に応じて保護された顧客データスコープやオプショナルスコープ）をアプリでリクエストしてください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-09-30T10:00:03.276Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2821,
+            "output": 380
+          },
+          "estimatedCost": 0.018884
         }
       },
       "jev": {
@@ -29669,7 +30992,7 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.88,
           "areas": [
@@ -29829,6 +31152,27 @@
             "output": 265
           },
           "estimatedCost": 0.0077280000000000005
+        },
+        "claude-opus-5-5": {
+          "titleJa": "チェックアウトとお客様アカウントのブランディングカスタマイズを統合",
+          "summarizedJa": "チェックアウトのブランディング設定が、チェックアウト・お客様アカウント・サインインページ全体に一貫して適用されるようになり、「チェックアウトとアカウントエディター」で一元管理できます。カラースキームではなく色を直接指定でき、最大20色のパレットを保存して一括更新が可能です。ページごとにロゴや背景色を個別設定でき、Shopify PlusではCheckout and Accounts Configuration APIでより高度なサーフェス別の上書きも行えます。",
+          "audienceJa": "チェックアウトやお客様アカウントのデザインをカスタマイズしている全マーチャント、およびブランディングAPIを利用する開発者・代理店",
+          "actionJa": "チェックアウトとアカウントエディターで、チェックアウト・お客様アカウント・サインインページの表示が意図どおりか確認し、必要に応じてカラーパレットやページ別の上書きを設定してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-30T10:00:08.541Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2581,
+            "output": 419
+          },
+          "estimatedCost": 0.018704
         }
       },
       "jev": {
@@ -30555,6 +31899,27 @@
             "output": 260
           },
           "estimatedCost": 0.008232
+        },
+        "claude-opus-5-5": {
+          "titleJa": "App Events：Dev Dashboardでアプリの利用状況とパフォーマンスデータを確認可能に",
+          "summarizedJa": "新しいApp Events APIにより、アプリから機能利用・ワークフロー・パフォーマンス・課金対象アクティビティなど任意のイベントをShopifyへ送信でき、Dev DashboardのLogsでWebhook、Functions実行、API呼び出しと並べて確認できるようになりました。Shopify App Pricingを利用している場合は、Partner Dashboardでメーターを定義しevent_handleと紐付けるだけで、追加コードなしで従量課金に活用できます。すべてのアプリで課金方法に関係なく利用可能です。",
+          "audienceJa": "Shopifyアプリを開発・運用するアプリ開発者（パートナー）",
+          "actionJa": "利用状況やパフォーマンスを監視したい場合や従量課金を導入したい場合は、App Events APIへのイベント送信を実装し、必要に応じてPartner Dashboardでメーターを設定してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-30T10:00:14.369Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2799,
+            "output": 421
+          },
+          "estimatedCost": 0.019616
         }
       },
       "jev": {
@@ -30637,7 +32002,7 @@
           "outOfScope": true
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.88,
           "areas": [
@@ -30678,6 +32043,27 @@
             "output": 258
           },
           "estimatedCost": 0.007869
+        },
+        "claude-opus-5-5": {
+          "titleJa": "Shopify App Pricing：従量課金・定期サブスクリプション、またはその組み合わせで課金可能に",
+          "summarizedJa": "Managed PricingはShopify App Pricingに名称変更され、Partner Dashboardでサブスクリプション、従量課金、またはその組み合わせを設定できるようになりました。App Events APIでイベントを送信しメーターを定義すると、Shopifyが集計・計算・請求を行い、固定・段階・ボリューム型の料金体系やマイナス報告による自動補正にも対応します。さらに、アンインストール後も状態を保持するActive Subscription APIや履歴APIなど、課金データを正確に取得できる新APIも追加されました。",
+          "audienceJa": "Shopify App Storeでアプリを公開・課金しているアプリ開発者（パートナー）",
+          "actionJa": "従量課金を導入したい場合は、Partner Dashboardでメーターを定義し、App Events APIで利用イベントを送信するよう実装してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-09-30T10:00:19.592Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2704,
+            "output": 402
+          },
+          "estimatedCost": 0.018855999999999998
         }
       },
       "jev": {
@@ -31050,6 +32436,27 @@
             "output": 266
           },
           "estimatedCost": 0.008826
+        },
+        "claude-opus-5-5": {
+          "titleJa": "2027年1月1日より全公開アプリで有効期限付きオフラインアクセストークンが必須に",
+          "summarizedJa": "2027年1月1日以降、すべての公開アプリはAdmin API呼び出し時に有効期限付き（60分で失効・自動ローテーション）のオフラインアクセストークンを使用する必要があり、無期限トークンを使い続けると認証エラーになります。2026年4月1日に新規公開アプリのみに適用された変更を、それ以前に作成された既存の公開アプリにも拡大するものです。カスタムアプリやマーチャントが作成したアプリは対象外で、マーチャントによるアプリの再インストールは不要です。",
+          "audienceJa": "Admin APIを無期限オフラインアクセストークンで利用している公開アプリの開発者（2026年4月1日以前に作成されたアプリを含む）",
+          "actionJa": "移行ガイドに従い、既存の無期限オフラインアクセストークンをコード上で有効期限付きトークンに交換し、トークンの保存処理とリフレッシュ処理を2027年1月1日までに実装してください。",
+          "deadline": "2027-01-01",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 5
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-09-30T10:00:25.110Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 3035,
+            "output": 447
+          },
+          "estimatedCost": 0.02108
         }
       },
       "jev": {
@@ -31537,6 +32944,27 @@
             "output": 264
           },
           "estimatedCost": 0.008169
+        },
+        "claude-opus-5-5": {
+          "titleJa": "ボットとエージェントはWeb Bot Authで身元を明示する必要があります",
+          "summarizedJa": "ShopifyはStorefront APIおよびShopifyホストのオンラインストアページにアクセスするボット・エージェントに対し、より厳格なレート制限を適用しました。リクエストに署名しないボットは最も厳しい制限を受け、Web Bot Authで署名することでより高いレート制限が適用されます。自社ストアをクロールしたいマーチャントは、Shopify管理画面で利用可能なWeb Bot Auth署名を使用できます。",
+          "audienceJa": "Shopifyストアフロント（Storefront APIやオンラインストアページ）にアクセスするボット・エージェント・クローラーを運用する開発者／パートナー、および自社ストアをクロールするマーチャント",
+          "actionJa": "ストアフロントにアクセスするボットやエージェントのリクエストにWeb Bot Authで署名し、自社ストアをクロールする場合はShopify管理画面の署名を利用してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-09-30T10:00:30.713Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2736,
+            "output": 416
+          },
+          "estimatedCost": 0.019264
         }
       },
       "jev": {
@@ -32280,6 +33708,27 @@
             "output": 263
           },
           "estimatedCost": 0.007914000000000001
+        },
+        "claude-opus-5-5": {
+          "titleJa": "CI/CDでのアプリデプロイが全アプリで利用可能に",
+          "summarizedJa": "Dev Dashboardで発行できるアプリ単位の「アプリ自動化トークン」により、全アプリでGitHub Actions等のCI/CDから最新のShopify CLIを使ったアプリデプロイが可能になりました。このトークンはPartner Dashboardで発行していた従来のCLIトークンを置き換えるもので、既存トークンは有効期限まで使えますが、セキュリティ向上のため移行が推奨されています。",
+          "audienceJa": "Shopify CLIとCI/CDでアプリをデプロイしているアプリ開発者・パートナー",
+          "actionJa": "Dev Dashboardでアプリ自動化トークンを発行し、CI/CDの環境変数をSHOPIFY_APP_AUTOMATION_TOKENに切り替えて、既存のPartner Dashboard CLIトークンの期限切れ前に移行してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T10:00:36.222Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2699,
+            "output": 396
+          },
+          "estimatedCost": 0.018716
         }
       },
       "jev": {
@@ -33502,6 +34951,27 @@
             "output": 275
           },
           "estimatedCost": 0.008505
+        },
+        "claude-opus-5-5": {
+          "titleJa": "サブスクリプション契約および請求試行のミューテーションにactorフィールドを追加",
+          "summarizedJa": "Admin GraphQL API 2026-07バージョンで、サブスクリプション関連のミューテーションに新しいactor引数が追加され、操作を誰が開始したか（customer：購入者、merchant：マーチャントやスタッフ、partner：アプリの自動処理）を記録できるようになりました。対象は請求試行の作成、契約の作成・編集、契約のステータス変更（有効化・一時停止・キャンセル等）の各ミューテーションです。",
+          "audienceJa": "サブスクリプションAPIを利用する定期購入アプリの開発者（パートナー）",
+          "actionJa": "定期購入アプリで請求試行や契約編集・ステータス変更を行う際、操作の開始者に応じてactor引数（customer/merchant/partner）を指定するよう実装を検討してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T10:00:41.837Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2817,
+            "output": 375
+          },
+          "estimatedCost": 0.018768
         }
       },
       "jev": {
@@ -33586,7 +35056,7 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.79,
           "areas": [
@@ -34950,6 +36420,27 @@
             "output": 295
           },
           "estimatedCost": 0.008862
+        },
+        "claude-opus-5-5": {
+          "titleJa": "POSの商品行へのカスタム金額割引が1点ごとに適用されるように変更",
+          "summarizedJa": "Shopify POS v11.5以降、商品行に定額のカスタム割引を適用すると、入力額が行全体ではなく商品1点あたりの割引額として扱われます（例：3点に500円入力で計1,500円引き）。管理画面や下書き注文と同じ挙動になり、割合割引や割引コードは変わりません。POS UI拡張でsetLineItemDiscount/bulkSetLineItemDiscountsにFixedAmountを渡している開発者は、API 2026-07以降で1点あたりの値を渡すよう修正が必要です。",
+          "audienceJa": "Shopify POSを利用するマーチャント、およびPOS UI拡張で定額割引を適用するアプリ開発者",
+          "actionJa": "マーチャントはスタッフに定額割引が1点ごとに適用されることを周知し、開発者はAPI 2026-07以降でsetLineItemDiscount/bulkSetLineItemDiscountsのFixedAmountを1点あたりの割引額に修正してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-09-30T10:00:47.753Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2823,
+            "output": 445
+          },
+          "estimatedCost": 0.020192
         }
       },
       "jev": {
@@ -35196,6 +36687,27 @@
             "output": 253
           },
           "estimatedCost": 0.007089
+        },
+        "claude-opus-5-5": {
+          "titleJa": "米国の小売業者がShopify Collectiveで販売価格を調整可能に",
+          "summarizedJa": "Shopify Collectiveでサプライヤーと接続している小売業者は、価格同期をオフにして、インポートした商品の販売価格をサプライヤーの設定価格より高くも低くも独自に設定できるようになりました。既存の接続では価格同期がデフォルトでオンのままで、サプライヤーは注文詳細ページで小売業者の設定価格を確認できますが、サプライヤーの原価には影響しません。",
+          "audienceJa": "Shopify Collectiveを利用する米国の小売業者およびサプライヤー",
+          "actionJa": "販売価格を独自に設定したい小売業者は、事前にサプライヤーと相談したうえで商品設定の価格同期をオフにしてください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 1,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 5,
+          "analyzedAt": "2026-09-30T10:00:52.204Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2352,
+            "output": 340
+          },
+          "estimatedCost": 0.016208
         }
       },
       "jev": {
@@ -35817,6 +37329,27 @@
             "output": 274
           },
           "estimatedCost": 0.009219000000000001
+        },
+        "claude-opus-5-5": {
+          "titleJa": "1つの注文で配送と店舗受け取りを併用できる機能が機能プレビューで利用可能に",
+          "summarizedJa": "Shopify PlusおよびEnterpriseのマーチャント向けに、1回のチェックアウトで商品ごとに配送と店舗受け取りを選べる機能が近日提供され、現在機能プレビューでテスト可能です。新しいAPIフィールドや破壊的なスキーマ変更はありませんが、チェックアウトに複数のdeliveryGroupsが存在したり、1つの注文にSHIPPINGとPICK_UPの異なる配送方法のフルフィルメントオーダーが含まれたりするようになります。未対応のアプリはチェックアウトエラーや計算ミス、フルフィルメントのルーティング失敗を引き起こす可能性があります。",
+          "audienceJa": "配送・フルフィルメント情報を読み取り・計算・表示するアプリ（Checkout UI拡張、Functions、フルフィルメント連携など）の開発者、およびPlus/Enterpriseのマーチャント",
+          "actionJa": "「1注文につき配送方法は1つ」という前提のロジックを洗い出し、Plusプランかつ「Ship and pickup」機能プレビューを有効にした開発ストアで配送と受け取り混在の注文をテストし、フルフィルメントオーダーのdelivery_methodに基づいて正しく処理されるようアプリを更新してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-09-30T10:00:58.908Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 3213,
+            "output": 558
+          },
+          "estimatedCost": 0.024012
         }
       },
       "jev": {
@@ -36311,6 +37844,27 @@
             "output": 289
           },
           "estimatedCost": 0.008898
+        },
+        "claude-opus-5-5": {
+          "titleJa": "パートナーダッシュボードでの新しいアプリ審査申請体験",
+          "summarizedJa": "Partner Dashboardのアプリ申請フローが刷新され、審査フィードバックが「アプリ > 配信」で要件ごとのステータスやレビュアーコメントとともに管理できるようになりました（全要件解決まで再申請不可）。また、Shopify AI toolkitでApp Store要件に照らしたAIセルフレビューが可能になり、テーマアプリ拡張やApp Storeリスティング要件の自動事前チェックも拡充されました。現在「Reviewed」状態の申請は従来のメールベースで継続し、「Submitted」状態の申請は新しいダッシュボードでフィードバックを受け取ります。",
+          "audienceJa": "Shopify App Storeにアプリを申請・公開するアプリ開発者（パートナー）",
+          "actionJa": "今後アプリを申請する際は、事前にShopify AI toolkitのAIセルフレビューを実行し、審査フィードバックはPartner Dashboardの「配信」画面で要件ごとに対応・解決してから再申請してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-09-30T10:01:05.071Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2960,
+            "output": 447
+          },
+          "estimatedCost": 0.02078
         }
       },
       "jev": {
@@ -36393,7 +37947,7 @@
           "outOfScope": true
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.88,
           "areas": [
@@ -37413,6 +38967,27 @@
             "output": 265
           },
           "estimatedCost": 0.007644
+        },
+        "claude-opus-5-5": {
+          "titleJa": "`{% stylesheet %}` タグのCSS自動サブセット化",
+          "summarizedJa": "2026年4月20日から、Shopifyは`{% stylesheet %}`タグのCSSを全ページで一括配信するのではなく、各ページでレンダリングされるセクション・ブロック・スニペットに関連するCSSのみを配信するようになります。各ファイルのスタイルがそのファイル内または`{% render %}`で呼び出す子要素のみに適用されている場合は対応不要ですが、別の無関係なファイルのHTML要素で使われるクラスを定義している場合、スタイルが欠落する恐れがあります。",
+          "audienceJa": "`{% stylesheet %}`タグを使用するテーマを開発・カスタマイズしているテーマ開発者・パートナー、およびカスタムテーマを利用するマーチャント",
+          "actionJa": "各ファイルの`{% stylesheet %}`で定義したCSSクラスが他の無関係なファイルのHTMLで使われていないか確認し、該当する場合はスタイルを利用側ファイルやグローバルCSSへ移すなどの修正を行ってください。",
+          "deadline": "2026-04-20",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-09-30T10:01:10.949Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2554,
+            "output": 457
+          },
+          "estimatedCost": 0.019355999999999998
         }
       },
       "jev": {
@@ -37658,6 +39233,27 @@
             "output": 279
           },
           "estimatedCost": 0.008652
+        },
+        "claude-opus-5-5": {
+          "titleJa": "モバイルのセーフエリア用の新しいCSS変数を追加",
+          "summarizedJa": "Shopify Mobile上で動作する埋め込みアプリ向けに、フローティング下部ナビゲーションバーなどの高さを示すCSS変数「--shopify-safe-area-inset-bottom」がApp Bridgeによって自動設定されるようになります。<body>には下部パディングが自動付与されるため多くのアプリは対応不要ですが、固定フッターやフローティングボタンなど画面下部に固定配置した要素がある場合は、この変数をCSSに組み込む必要があります。",
+          "audienceJa": "Shopify Mobileで動作し、画面下部に固定・スティッキー要素を持つ埋め込みアプリの開発者",
+          "actionJa": "画面下部に固定配置したカスタムUI要素（スティッキーフッターやFABなど）のCSSで、bottomの値に var(--shopify-safe-area-inset-bottom, 0px) を加算してフローティングバーと重ならないよう修正してください。",
+          "deadline": "2026-04-15",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-30T10:01:16.704Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2884,
+            "output": 424
+          },
+          "estimatedCost": 0.020016
         }
       },
       "jev": {
@@ -38150,6 +39746,27 @@
             "output": 268
           },
           "estimatedCost": 0.007614
+        },
+        "claude-opus-5-5": {
+          "titleJa": "`LineItem.priceAfterAllDiscountsBeforeTaxesSet` フィールドが利用可能に",
+          "summarizedJa": "GraphQL Admin API（2026-07）の LineItem オブジェクトに、REST API の line item の current_subtotal_price_set に相当する priceAfterAllDiscountsBeforeTaxesSet フィールドが追加されました。すべての割引適用後、返金・削除数量を除いた税抜きの明細合計金額を、ショップ通貨と表示通貨の両方で取得できます。注文エクスポートなど、明細単位の割引後・税抜き小計が必要な処理に便利です。",
+          "audienceJa": "GraphQL Admin API で注文データを扱うアプリ開発者（特に REST API から移行中の開発者）",
+          "actionJa": "REST API の current_subtotal_price_set を利用している場合は、GraphQL 移行時に 2026-07 版の priceAfterAllDiscountsBeforeTaxesSet への置き換えを検討してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-09-30T10:01:21.247Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2479,
+            "output": 410
+          },
+          "estimatedCost": 0.018116
         }
       },
       "jev": {
@@ -38232,7 +39849,7 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.93,
           "areas": [
@@ -38395,6 +40012,27 @@
             "output": 241
           },
           "estimatedCost": 0.008178000000000001
+        },
+        "claude-opus-5-5": {
+          "titleJa": "DraftOrderLineItem.gramsフィールドが2026-07で削除",
+          "summarizedJa": "Admin GraphQL APIのDraftOrderLineItemオブジェクトから、8年以上前に非推奨となっていたgramsフィールドがバージョン2026-07で削除されます。2026-04バージョンのサポート終了後は、このフィールドを参照するクエリがエラーになります。代わりに値と単位を返すweightフィールドを使用してください。",
+          "audienceJa": "Admin GraphQL APIで下書き注文（DraftOrder）を扱うアプリ開発者",
+          "actionJa": "DraftOrderLineItem.gramsを参照しているクエリを、weightフィールド（valueとunit）を使うよう書き換えてください。",
+          "deadline": "2026-07-01",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-09-30T10:01:25.176Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2884,
+            "output": 326
+          },
+          "estimatedCost": 0.018056
         }
       },
       "jev": {
@@ -38520,6 +40158,27 @@
             "output": 286
           },
           "estimatedCost": 0.008406
+        },
+        "claude-opus-5-5": {
+          "titleJa": "モバイルでActionBarを廃止：TitleBarのプライマリアクションがアイコンボタンで表示に",
+          "summarizedJa": "モバイルの埋め込みアプリで、TitleBarのプライマリアクションは下部バーではなくヘッダー内のアイコンのみのボタンとして表示され、セカンダリアクションはオーバーフローメニューに移動します。iconプロパティを指定しない場合はデフォルトで「+」アイコンが表示されます。変更は2026年4月15日に全対象アプリへ適用されます。",
+          "audienceJa": "TitleBarでプライマリアクションまたはセカンダリアクションを定義している埋め込みアプリの開発者",
+          "actionJa": "デフォルトの「+」アイコンが用途に合わない場合は、TitleBarのプライマリアクションに適切なiconプロパティを明示的に指定してください。",
+          "deadline": "2026-04-15",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T10:01:30.231Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2703,
+            "output": 367
+          },
+          "estimatedCost": 0.018152
         }
       },
       "jev": {
@@ -38901,6 +40560,27 @@
             "output": 237
           },
           "estimatedCost": 0.00681
+        },
+        "claude-opus-5-5": {
+          "titleJa": "1つのカート行に複数の商品ディスカウントを適用可能に",
+          "summarizedJa": "GraphQL Admin API 2026-04バージョンで、1つのカート行（ラインアイテム）に複数の商品ディスカウントを同時に適用できるようになりました。これにより、2026年6月30日に廃止予定のShopify Scriptsからの移行をマーチャントが進めやすくなります。ディスカウントの組み合わせ設定はcombinesWithフィールドで構成します。",
+          "audienceJa": "Shopify Scriptsを利用中のマーチャント（主にPlus）と、ディスカウント関連アプリ・Functionsを開発するパートナー",
+          "actionJa": "Scriptsで実装している商品ディスカウントの重ねがけロジックを、API 2026-04のディスカウント組み合わせ設定（combinesWith）やShopify Functionsへ移行してください。",
+          "deadline": "2026-06-30",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-09-30T10:01:35.508Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2332,
+            "output": 375
+          },
+          "estimatedCost": 0.016828
         }
       },
       "jev": {
@@ -39154,6 +40834,27 @@
             "output": 285
           },
           "estimatedCost": 0.007941
+        },
+        "claude-opus-5-5": {
+          "titleJa": "「Updates」が「Posts」に刷新 — Shopフィードに購入可能なコンテンツを投稿可能に",
+          "summarizedJa": "Shopチャネルの「Updates」機能が「Posts」に名称変更・強化され、画像や最大2分の動画に最大10商品またはコレクションをタグ付けした購入可能な投稿を作成できるようになりました。予約投稿や有効期限の設定、TolstoyやVideowiseなどのアプリとの動画自動同期にも対応しています。フォロワー以外にも、関連性に基づいてShopのメインフィードに表示されるため、より広いリーチが期待できます。",
+          "audienceJa": "Shopチャネルを利用するマーチャント、および動画コンテンツ連携アプリの開発者",
+          "actionJa": "Shopチャネル内の新しい「Posts」ページから、商品をタグ付けした投稿の作成や対応アプリの連携を必要に応じて行ってください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 2,
+            "japanRelevance": 2,
+            "technicalImportance": 2
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-09-30T10:01:41.247Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2516,
+            "output": 389
+          },
+          "estimatedCost": 0.017844
         }
       },
       "jev": {
@@ -39276,6 +40977,27 @@
             "output": 294
           },
           "estimatedCost": 0.008882999999999999
+        },
+        "claude-opus-5-5": {
+          "titleJa": "Shopifyホストファイルの置換・削除時にCDN URLのキャッシュ削除（パージ）が行われなくなります",
+          "summarizedJa": "2026年4月7日以降、Shopify管理画面でファイルを置換・削除しても、cdn.shopify.com上のURLは即時パージされず、TTL期限切れまで古いコンテンツが配信され続けます。商品説明やブログ、テーマコード、印刷物などにハードコードされたCDN URLは置換後も元の内容を返すため、Liquidフィルター（file_url、image_url、asset_url）やメディアアップローダー、APIによる動的なURL取得への移行が推奨されます。",
+          "audienceJa": "全マーチャント、テーマ開発者、ファイルURLを扱うアプリ・外部連携の開発者",
+          "actionJa": "商品説明・ブログ・テーマ・アプリ内にハードコードされたcdn.shopify.comのURLを洗い出し、Liquidフィルター（file_url/image_url/asset_url）、ネイティブのメディアアップローダー、またはAdmin GraphQL API/Storefront APIによるリクエスト時のURL取得に置き換えてください。",
+          "deadline": "2026-04-07",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-09-30T10:01:46.893Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2865,
+            "output": 473
+          },
+          "estimatedCost": 0.02092
         }
       },
       "jev": {
@@ -40141,6 +41863,27 @@
             "output": 291
           },
           "estimatedCost": 0.008349
+        },
+        "claude-opus-5-5": {
+          "titleJa": "チェックアウトおよび顧客アカウントUI拡張機能におけるチェックアウトメタフィールドの廃止",
+          "summarizedJa": "APIバージョン2026-04以降、チェックアウトUI拡張機能および顧客アカウントUI拡張機能でチェックアウトメタフィールドの読み書きができなくなりました。代わりに、チェックアウトUI拡張機能ではカートメタフィールド、顧客アカウントUI拡張機能では注文メタフィールドを使用します。また、注文作成時にカートメタフィールドの値を注文メタフィールドへ自動コピーする新機能が注文メタフィールド定義に追加されました。",
+          "audienceJa": "チェックアウトUI拡張機能・顧客アカウントUI拡張機能でチェックアウトメタフィールドを利用しているアプリ開発者（およびそれらのアプリを利用するPlusマーチャント）",
+          "actionJa": "API 2026-04へアップグレードし、チェックアウトメタフィールドの利用箇所をチェックアウトUI拡張機能ではカートメタフィールド、顧客アカウントUI拡張機能では注文メタフィールドへ移行してください。",
+          "deadline": "2026-04-01",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-09-30T10:01:52.465Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2653,
+            "output": 475
+          },
+          "estimatedCost": 0.020111999999999998
         }
       },
       "jev": {
@@ -40506,6 +42249,27 @@
             "output": 216
           },
           "estimatedCost": 0.006432
+        },
+        "claude-opus-5-5": {
+          "titleJa": "ディスカウントにタグを追加可能に",
+          "summarizedJa": "Admin GraphQL API バージョン2026-04から、すべてのディスカウントタイプに tags フィールドが追加されました。Admin API経由でタグの追加・更新・削除ができ、ディスカウントを効率的にラベル付け・グループ化・整理できます。",
+          "audienceJa": "ディスカウントを扱う Admin GraphQL API を使うアプリ開発者、および多数のディスカウントを管理するマーチャント",
+          "actionJa": "ディスカウントの分類・管理にタグを活用したい場合は、API バージョン2026-04以降に更新して tags フィールドを実装してください。",
+          "deadline": "2026-04-01",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-30T10:01:57.168Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2283,
+            "output": 299
+          },
+          "estimatedCost": 0.015112
         }
       },
       "jev": {
@@ -40590,7 +42354,7 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.79,
           "areas": [
@@ -40756,6 +42520,27 @@
             "output": 262
           },
           "estimatedCost": 0.007626000000000001
+        },
+        "claude-opus-5-5": {
+          "titleJa": "アプリ所有のメタオブジェクトがアクセススコープなしで利用可能に",
+          "summarizedJa": "$app:example のようなタイプで識別されるアプリ所有のメタオブジェクト（宣言的メタオブジェクト定義で作成したものを含む）は、Admin API 2026-04以降であれば、所有アプリがアクセススコープなしで読み書きできるようになりました。追加スコープの要求が不要になるため、インストール時のマーチャントの負担が軽減されます。なお、マーチャント所有のメタオブジェクトには引き続き read_metaobjects などのスコープが必要です。",
+          "audienceJa": "アプリ所有メタオブジェクトを利用する、Admin GraphQL API を使うアプリ開発者",
+          "actionJa": "Admin API 2026-04以降に移行し、アプリ所有メタオブジェクトのためだけに要求していた不要なメタオブジェクト関連スコープの削除を検討してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T10:02:02.405Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2490,
+            "output": 392
+          },
+          "estimatedCost": 0.0178
         }
       },
       "jev": {
@@ -40838,7 +42623,7 @@
           "outOfScope": true
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.76,
           "areas": [
@@ -42003,6 +43788,27 @@
             "output": 238
           },
           "estimatedCost": 0.007143
+        },
+        "claude-opus-5-5": {
+          "titleJa": "支払い方法なしでサブスクリプション契約を作成可能に",
+          "summarizedJa": "Admin GraphQL API 2026-04 リリース候補版で、subscriptionContractAtomicCreate および subscriptionContractCreate ミューテーションの paymentMethodId フィールドが必須ではなくなりました。これにより、支払い方法が欠落または期限切れの契約も含めて、他システムからサブスクリプション契約を移行できるようになります。",
+          "audienceJa": "サブスクリプション契約の作成・移行を行うアプリ開発者（Admin GraphQL API 利用者）",
+          "actionJa": "サブスクリプション移行ツールを開発している場合は、2026-04 版で支払い方法なしの契約作成に対応し、支払い方法が未設定の契約を後から更新する処理を検討してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-30T10:02:07.199Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2486,
+            "output": 345
+          },
+          "estimatedCost": 0.016843999999999998
         }
       },
       "jev": {
@@ -42088,7 +43894,7 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.86,
           "areas": [
@@ -42131,6 +43937,27 @@
             "output": 250
           },
           "estimatedCost": 0.00765
+        },
+        "claude-opus-5-5": {
+          "titleJa": "サブスクリプション請求試行から未払い注文を作成可能に",
+          "summarizedJa": "Admin GraphQL API 2026-04リリース候補版で、subscriptionBillingAttemptCreateミューテーションに新フィールドpaymentProcessingPolicyが追加されました。SKIP_PAYMENT_AND_CREATE_UNPAID_ORDERを指定すると、サブスクリプション契約に有効な支払い方法がなくても未払い注文を作成できます。未指定またはFAIL_UNLESS_VALID_PAYMENT_METHODの場合は従来通り有効な支払い方法が必要です。",
+          "audienceJa": "Admin GraphQL APIでサブスクリプション請求を扱うアプリ開発者",
+          "actionJa": "未払い注文の作成が必要なユースケース（後払い・請求書払い等）がある場合、subscriptionBillingAttemptCreateでpaymentProcessingPolicyにSKIP_PAYMENT_AND_CREATE_UNPAID_ORDERを指定する実装を検討してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T10:02:12.940Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2654,
+            "output": 431
+          },
+          "estimatedCost": 0.019236000000000003
         }
       },
       "jev": {
@@ -42216,7 +44043,7 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.86,
           "areas": [
@@ -42627,6 +44454,27 @@
             "output": 285
           },
           "estimatedCost": 0.009036
+        },
+        "claude-opus-5-5": {
+          "titleJa": "メタオブジェクトのフィールド定義から`visibleToStorefrontApi`フィールドを削除",
+          "summarizedJa": "GraphQL Admin APIのMetaobjectFieldDefinitionや関連する入力型、StandardMetaobjectDefinitionFieldTemplateから`visibleToStorefrontApi`フィールドが非推奨となり削除されます。個別フィールド単位でのストアフロント公開制御は実際には存在せず、公開範囲はメタオブジェクト定義の`access`フィールドでのみ制御されるためです。2026年4月2日にunstableおよび2026-07バージョンから削除されます。",
+          "audienceJa": "メタオブジェクトのフィールド定義で`visibleToStorefrontApi`を参照しているAdmin GraphQL APIを使うアプリ開発者",
+          "actionJa": "アプリのクエリやミューテーションから`visibleToStorefrontApi`フィールドへの参照を削除し、公開範囲の制御はメタオブジェクト定義の`access`フィールドで行ってください。",
+          "deadline": "2026-04-02",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-09-30T10:02:18.439Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 3000,
+            "output": 431
+          },
+          "estimatedCost": 0.02062
         }
       },
       "jev": {
@@ -43349,6 +45197,27 @@
             "output": 270
           },
           "estimatedCost": 0.007356
+        },
+        "claude-opus-5-5": {
+          "titleJa": "テーマエディターのナビゲーションを刷新",
+          "summarizedJa": "テーマエディターのレイアウトが刷新され、左側のナビゲーションが上部バーに移動し、ストアのプレビューをより広く表示できるようになりました。右サイドバーは折りたたみ可能になり、ノートPCなど小さな画面ではセクションやブロックの設定パネルが画面下部からスライド表示され、ページ構造と設定を同時に確認できます。",
+          "audienceJa": "テーマエディターを使用する全マーチャントおよびストア構築を行うパートナー",
+          "actionJa": null,
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-30T10:02:24.779Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2349,
+            "output": 268
+          },
+          "estimatedCost": 0.014756
         }
       },
       "jev": {
@@ -43423,7 +45292,7 @@
       },
       "priority": {
         "merchant": {
-          "level": "check",
+          "level": "info",
           "action": 0.06,
           "relevance": 0.72260496,
           "areas": [
@@ -43589,6 +45458,27 @@
             "output": 266
           },
           "estimatedCost": 0.008712000000000001
+        },
+        "claude-opus-5-5": {
+          "titleJa": "Shopify CLIの app release/deploy の `--force` フラグが非推奨に、今後削除予定",
+          "summarizedJa": "Shopify CLIの `shopify app deploy` および `shopify app release` コマンドの `--force` フラグが非推奨となり、2026年5月のCLIリリースで削除されます。このフラグは拡張機能の削除を含むすべての確認プロンプトをスキップするため、インストール済みストアのデータを誤って消すリスクがありました。CI/CDでは代わりに `--allow-updates` を使い、削除が必要な場合のみ対話型デプロイか `--allow-deletes` を慎重に使用することが推奨されています。",
+          "audienceJa": "Shopify CLIでアプリをデプロイ・リリースしているアプリ開発者（特にCI/CDで自動化しているパートナー）",
+          "actionJa": "CI/CDスクリプト内の `--force` フラグを `--allow-updates`（必要に応じて手動実行時のみ `--allow-deletes`）に置き換えてください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-30T10:02:29.158Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2967,
+            "output": 417
+          },
+          "estimatedCost": 0.020208
         }
       },
       "jev": {
@@ -44075,6 +45965,27 @@
             "output": 220
           },
           "estimatedCost": 0.006615
+        },
+        "claude-opus-5-5": {
+          "titleJa": "最近の注文がある顧客のデータ消去リクエストの処理方法を変更",
+          "summarizedJa": "2026年3月23日以降、顧客データ消去リクエストは最新注文日から180日間保留されることがなくなり、リクエスト提出から10日後に処理されるようになりました。ただし、送信予約済みのギフトカードの受取人については、ギフトカードが配信されるまで保留状態が続きます。",
+          "audienceJa": "全マーチャント、および customers/redact Webhook など顧客データ消去リクエストを扱うアプリ開発者",
+          "actionJa": "アプリ開発者は、消去リクエスト（customers/redact Webhook）が最近の注文がある顧客についても10日後に届くことを前提に、注文処理・返品対応などに必要なデータの扱いを見直してください。",
+          "deadline": "2026-03-23",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T10:02:34.415Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2346,
+            "output": 344
+          },
+          "estimatedCost": 0.016264
         }
       },
       "jev": {
@@ -44159,7 +46070,7 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.77,
           "areas": [
@@ -45420,6 +47331,27 @@
             "output": 257
           },
           "estimatedCost": 0.007419
+        },
+        "claude-opus-5-5": {
+          "titleJa": "IDプロバイダーから顧客データを自動同期",
+          "summarizedJa": "独自のIDプロバイダーで顧客ログインを運用しているPlusマーチャントは、顧客のサインイン時に氏名・メールアドレス・電話番号・住所（複数可）・顧客タグをShopifyの顧客レコードへ自動で同期できるようになりました。これにより、手動入力やWebhook・APIを使ったカスタム連携を用意しなくても、顧客情報を最新の状態に保てます。",
+          "audienceJa": "外部IDプロバイダーで顧客ログインを運用しているPlusマーチャント、およびその連携を構築するパートナー",
+          "actionJa": "外部IDプロバイダーを利用している場合は、ヘルプセンターを参照して同期設定を確認し、既存のカスタム同期連携を置き換えられるか検討してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T10:02:39.620Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2466,
+            "output": 360
+          },
+          "estimatedCost": 0.017064
         }
       },
       "jev": {
@@ -45504,7 +47436,7 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0.16,
           "relevance": 0.77,
           "areas": [
@@ -46031,6 +47963,27 @@
             "output": 241
           },
           "estimatedCost": 0.007503
+        },
+        "claude-opus-5-5": {
+          "titleJa": "ストアフロントのフィルターURLがテキスト値ではなく固定IDを使用するように変更",
+          "summarizedJa": "2026年3月16日より、コレクションや検索結果ページでバリアントオプション（例：カラー）などテキストベースのフィルターグループを使った場合、URLのパラメータがテキスト値（例：Blue）ではなく固定のグループID（gid://shopify/FilterSettingGroup/123）を使うようになりました。これにより、広告・メール・SNSなどで共有済みの旧フィルターURLは期待どおりにフィルターが適用されなくなります。多言語対応やラベル名変更時でもリンクが安定することが目的で、ストア内でのフィルター操作は従来どおり機能します。",
+          "audienceJa": "フィルター付きURLを広告・メール・SNS・外部サイト等で共有しているオンラインストアの全マーチャント、およびフィルターURLをテーマやアプリで直接生成・解析しているパートナー開発者",
+          "actionJa": "ストアのコレクションページで必要なフィルターを選択して新しいURLをコピーし、広告・メール・SNSなどで共有済みの旧フィルターURLを置き換えてください。",
+          "deadline": "2026-03-16",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-09-30T10:02:46.178Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2605,
+            "output": 478
+          },
+          "estimatedCost": 0.01998
         }
       },
       "jev": {
@@ -46156,6 +48109,27 @@
             "output": 272
           },
           "estimatedCost": 0.007443
+        },
+        "claude-opus-5-5": {
+          "titleJa": "POS向けの新しい現金管理機能（API・POS UI拡張）",
+          "summarizedJa": "Shopify POSの現金管理機能が全面的に再構築され、GraphQL Admin API（2026-04）に新しい型が、POS UI拡張に新しいターゲットが追加されました。新リソースCashDrawerは、現金管理を個々のPOSデバイスから切り離し、ロケーション内の物理的なキャッシュドロワーとして扱えるようにします。複数デバイスが1つのドロワーに接続できるため、柔軟な店舗構成に対応し、アプリ開発者は従来は実現できなかった独自の現金管理ワークフローを構築できます。",
+          "audienceJa": "Shopify POSを利用する実店舗マーチャント、およびPOS向けアプリを開発するパートナー・開発者",
+          "actionJa": "POS向けアプリ開発者は、GraphQL Admin API 2026-04のCashDrawer等の新しい型とPOS UI拡張ターゲットを確認し、必要に応じて独自の現金管理ワークフローへの対応を検討してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T10:02:52.133Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2382,
+            "output": 441
+          },
+          "estimatedCost": 0.018348
         }
       },
       "jev": {
@@ -46240,7 +48214,7 @@
           "outOfScope": true
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.81,
           "areas": [
@@ -46647,6 +48621,27 @@
             "output": 288
           },
           "estimatedCost": 0.007413
+        },
+        "claude-opus-5-5": {
+          "titleJa": "テーマ設定とアプリ埋め込みをマーケットごとにカスタマイズ可能に",
+          "summarizedJa": "オンラインストアエディターで、テーマ設定（色、タイポグラフィ、カスタムCSSなど）やアプリ埋め込みをマーケットまたはロールアウトごとに上書き設定できるようになりました。単一のグローバル設定に縛られず、市場ごとにストアフロント体験を最適化できます。テーマのマーケットカスタマイズが利用可能なプランの全マーチャントが対象です。",
+          "audienceJa": "テーマのマーケットカスタマイズが利用可能なプランで複数マーケットに販売するマーチャント、テーマ・アプリ開発者や制作代理店",
+          "actionJa": null,
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-30T10:02:55.795Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2255,
+            "output": 325
+          },
+          "estimatedCost": 0.015519999999999999
         }
       },
       "jev": {
@@ -47382,6 +49377,27 @@
             "output": 266
           },
           "estimatedCost": 0.008172
+        },
+        "claude-opus-5-5": {
+          "titleJa": "2026年4月1日以降に作成される新規公開アプリで有効期限付きオフラインアクセストークンが必須に",
+          "summarizedJa": "マーチャントデータ保護強化のため、2026年4月1日以降に作成されるAdmin APIを呼び出す新規公開アプリは、有効期限付きのオフラインアクセストークンを要求・使用する必要があります。既存の公開アプリ、カスタムアプリ、マーチャントが作成したアプリは対象外です。Shopify公式のアプリテンプレートやライブラリを使っている場合は既に対応済みです。",
+          "audienceJa": "2026年4月1日以降に新規公開アプリを作成するAdmin API利用のアプリ開発者",
+          "actionJa": "新規公開アプリでは有効期限付きオフラインアクセストークンとリフレッシュフローを実装してください（公式テンプレート・ライブラリ利用時は対応済み）。",
+          "deadline": "2026-04-01",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-30T10:03:00.870Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2731,
+            "output": 384
+          },
+          "estimatedCost": 0.018604
         }
       },
       "jev": {
@@ -47504,6 +49520,27 @@
             "output": 267
           },
           "estimatedCost": 0.007371
+        },
+        "claude-opus-5-5": {
+          "titleJa": "Shopify Scriptsは2026年4月15日以降、編集・公開ができなくなります",
+          "summarizedJa": "2026年4月15日以降、Shopify Scriptsの編集や新規公開ができなくなります。既存の公開済みScriptsは2026年6月30日まで動作しますが、その後はすべて停止します。Shopify Scriptsカスタマイズレポートで置き換え可能な機能を確認し、早急にShopify Functionsまたは公開アプリへ移行することが強く推奨されています。",
+          "audienceJa": "Shopify Scriptsを利用しているPlusのマーチャントと、その開発・運用を支援するパートナー",
+          "actionJa": "Shopify Scriptsカスタマイズレポートで既存Scriptsを洗い出し、2026年6月30日の実行停止までにShopify Functionsまたは公開アプリへ移行してください（編集は4月15日以降不可）。",
+          "deadline": "2026-04-15",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 5
+          },
+          "totalScore": 18,
+          "analyzedAt": "2026-09-30T10:03:05.837Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2385,
+            "output": 380
+          },
+          "estimatedCost": 0.017140000000000002
         }
       },
       "jev": {
@@ -47628,6 +49665,27 @@
             "output": 278
           },
           "estimatedCost": 0.007821
+        },
+        "claude-opus-5-5": {
+          "titleJa": "アプリ掲載画像の基準を明確化",
+          "summarizedJa": "Shopify App Storeの要件4.4.4が更新され、画像はアプリの実際のUIや機能を主に示す必要があり、デスクトップ背景やブラウザウィンドウを含むスクリーンショット、ロゴのみの画像は禁止されます。新要件4.4.5では、掲載画像はそれぞれ固有である必要があり、重複やほぼ同一の画像は認められません。これらの要件は2026年3月26日から適用されます。",
+          "audienceJa": "Shopify App Storeにアプリを掲載しているアプリ開発者・パートナー",
+          "actionJa": "2026年3月26日までに、アプリ掲載画像がUIを示す固有のスクリーンショットであり、ブラウザ枠・デスクトップ背景・ロゴのみ・重複画像を含まないよう確認・差し替えてください。",
+          "deadline": "2026-03-26",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-09-30T10:03:11.615Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2510,
+            "output": 379
+          },
+          "estimatedCost": 0.01762
         }
       },
       "jev": {
@@ -47995,6 +50053,27 @@
             "output": 217
           },
           "estimatedCost": 0.006942
+        },
+        "claude-opus-5-5": {
+          "titleJa": "productUpdateミューテーションでカスタムID識別子に対応",
+          "summarizedJa": "Admin GraphQL API（2026-04）のproductUpdateミューテーションで、identifierパラメータにcustomId（ユニークなメタフィールドのnamespace・key・value）を指定して商品を更新できるようになりました。これまでproductSetでのみ利用可能だった機能が拡張され、外部システム独自の商品IDをもとに、Shopifyの商品IDを保存・マッピングせずに同期できます。",
+          "audienceJa": "Admin GraphQL APIで商品データを外部システム（基幹システム・PIM等）と連携するアプリ開発者",
+          "actionJa": "外部IDで商品を更新したい場合は、ユニーク制約付きのメタフィールド定義を用意し、API 2026-04でproductUpdateのidentifier.customIdを利用するよう連携処理を見直してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T10:03:17.122Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2502,
+            "output": 374
+          },
+          "estimatedCost": 0.017488
         }
       },
       "jev": {
@@ -48076,7 +50155,7 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0.18,
           "relevance": 0.78,
           "areas": [
@@ -48118,6 +50197,27 @@
             "output": 239
           },
           "estimatedCost": 0.006945
+        },
+        "claude-opus-5-5": {
+          "titleJa": "productUpdateミューテーションにidentifier引数のサポートを追加",
+          "summarizedJa": "Admin GraphQL API（2026-04）のproductUpdateミューテーションで、新たにidentifier引数が使えるようになり、更新対象の商品をid、handle、customIdのいずれかで指定できます。customIdではメタフィールドのnamespace・key・valueの組み合わせで商品を特定できるため、外部システム（基幹システムやPIMなど）の独自IDを使った商品更新が容易になります。",
+          "audienceJa": "Admin GraphQL APIで商品更新を行うアプリ開発者・システム連携を行うパートナー",
+          "actionJa": null,
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-30T10:03:20.808Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2354,
+            "output": 293
+          },
+          "estimatedCost": 0.015276000000000001
         }
       },
       "jev": {
@@ -48202,7 +50302,7 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.71,
           "areas": [
@@ -48609,6 +50709,27 @@
             "output": 245
           },
           "estimatedCost": 0.00753
+        },
+        "claude-opus-5-5": {
+          "titleJa": "InventoryLevel.scheduledChangesフィールドが代替なしで削除",
+          "summarizedJa": "GraphQL Admin APIのInventoryLevel.scheduledChangesフィールドが、APIバージョン2026-07で削除されます。代替フィールドは提供されないため、このフィールドを参照しているアプリは影響を受ける前に依存をなくす必要があります。予定在庫情報が必要な場合は、他の在庫関連フィールドやinventoryAdjustQuantitiesミューテーションなどの利用を検討してください。",
+          "audienceJa": "GraphQL Admin APIで在庫レベル（InventoryLevel.scheduledChanges）を参照しているアプリ開発者",
+          "actionJa": "アプリのコードからInventoryLevel.scheduledChangesを参照するクエリを削除し、必要に応じて他の在庫関連フィールドやinventoryAdjustQuantitiesなどの代替手段に移行してください。",
+          "deadline": "2026-07-01",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T10:03:25.793Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2603,
+            "output": 395
+          },
+          "estimatedCost": 0.018312000000000002
         }
       },
       "jev": {
@@ -48733,6 +50854,27 @@
             "output": 214
           },
           "estimatedCost": 0.007011
+        },
+        "claude-opus-5-5": {
+          "titleJa": "`inventorySetScheduledChanges` ミューテーションが代替なしで廃止",
+          "summarizedJa": "GraphQL Admin API のバージョン 2026-07 で `inventorySetScheduledChanges` ミューテーションが削除され、代替機能は提供されません。在庫管理APIの整理・近代化の一環であり、利用中のアプリは事前に依存を解消する必要があります。即時の在庫調整には `inventoryAdjustQuantities` などの利用が推奨されています。",
+          "audienceJa": "`inventorySetScheduledChanges` を使用している Admin GraphQL API のアプリ開発者",
+          "actionJa": "アプリのコードから `inventorySetScheduledChanges` の利用箇所を洗い出して削除し、必要に応じて `inventoryAdjustQuantities` や他の在庫ツールによる代替実装に移行してください。",
+          "deadline": "2026-07-01",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-30T10:03:29.870Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2589,
+            "output": 366
+          },
+          "estimatedCost": 0.017676
         }
       },
       "jev": {
@@ -49347,6 +51489,27 @@
             "output": 285
           },
           "estimatedCost": 0.008787
+        },
+        "claude-opus-5-5": {
+          "titleJa": "メタフィールド定義に新しいanalyticsQueryable機能が追加",
+          "summarizedJa": "GraphQL Admin API（2026-04）のMetafieldDefinitionに、Shopifyアナリティクスでメタフィールドをクエリ可能にするanalyticsQueryable機能が追加されました。有効化するとメタフィールドがShopifyQLやアナリティクスのディメンション・フィルターとして使えるようになり、商品・バリエーション・注文・顧客のカスタムデータで売上などを分析できます。設定はmetafieldDefinitionCreate/metafieldDefinitionUpdateミューテーションで行います。",
+          "audienceJa": "メタフィールドを扱うAdmin APIアプリ開発者、およびカスタムデータで分析を深めたいマーチャント",
+          "actionJa": "アナリティクスで活用したいメタフィールド定義に対し、metafieldDefinitionCreate/Updateでcapabilities.analyticsQueryable.enabledをtrueに設定することを検討してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-30T10:03:34.374Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2915,
+            "output": 417
+          },
+          "estimatedCost": 0.02
         }
       },
       "jev": {
@@ -49474,6 +51637,27 @@
             "output": 262
           },
           "estimatedCost": 0.007893
+        },
+        "claude-opus-5-5": {
+          "titleJa": "ShopifyQLの返品（Returns）関連フィールドが非推奨化され、売上取消（sales reversals）フィールドに置き換え",
+          "summarizedJa": "GraphQL Admin API 2026-04で、ShopifyQLで参照できる分析用の返品関連フィールドが非推奨となり、返金・返品・注文編集・キャンセルを含む全ての注文調整を表す名称（sales_reversals、reversed_quantityなど）に改名されました。定義自体は変わりません。旧フィールドは2026-07で削除されますが、旧APIバージョンでは2027-04まで利用可能で、物理的な返品数量や理由はreturnsスキーマのreturned_quantityやreturn_line_item_reasonなどで取得できます。",
+          "audienceJa": "ShopifyQL（Admin GraphQL API）で分析データを取得するアプリ開発者、およびShopifyQLでカスタムレポートを作成しているマーチャント",
+          "actionJa": "ShopifyQLクエリ内の非推奨の返品関連フィールドを、対応表に従って新しいsales_reversalsやreversed_quantityフィールドに置き換えてください。",
+          "deadline": "2026-07-01",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T10:03:40.413Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2648,
+            "output": 466
+          },
+          "estimatedCost": 0.019912
         }
       },
       "jev": {
@@ -49598,6 +51782,27 @@
             "output": 295
           },
           "estimatedCost": 0.008973
+        },
+        "claude-opus-5-5": {
+          "titleJa": "GraphQL Admin APIでメタフィールドの翻訳が取得可能に",
+          "summarizedJa": "GraphQL Admin API（2026-04）のMetafield型にtranslationsフィールドが追加され、商品・コレクション・顧客・注文・ロケーションなどあらゆるリソースのメタフィールドの翻訳値を直接クエリできるようになりました。翻訳の登録はtranslationsRegisterミューテーションでcompareDigestを使って行い、対象はsingle_line_text_field、multi_line_text_field、rich_text_field、htmlなどのテキスト系メタフィールドです。",
+          "audienceJa": "多言語対応や翻訳機能を扱うAdmin APIを使うアプリ開発者・パートナー、および多言語ストアを運営するマーチャント",
+          "actionJa": "メタフィールドの翻訳を扱うアプリでは、API バージョン2026-04のMetafield.translationsフィールドとtranslationsRegisterミューテーションを利用した実装への移行・簡素化を検討してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T10:03:45.247Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2833,
+            "output": 422
+          },
+          "estimatedCost": 0.019771999999999998
         }
       },
       "jev": {
@@ -49680,7 +51885,7 @@
           "outOfScope": true
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.77,
           "areas": [
@@ -50448,6 +52653,27 @@
             "output": 250
           },
           "estimatedCost": 0.007542
+        },
+        "claude-opus-5-5": {
+          "titleJa": "返金は元の決済処理業者経由でのみ処理 – App Store要件の更新",
+          "summarizedJa": "Shopify App Store要件1.1.15が更新され、アプリは返金を元の決済処理業者経由でのみ処理する必要があります。返金時にストアクレジットを発行するアプリは、Admin GraphQL APIの「refundCreate」または「returnProcess」ミューテーションを使用しなければなりません。これにより返金とストアクレジットがShopify内で安全かつ一貫して扱われます。",
+          "audienceJa": "返金・返品やストアクレジット発行機能を持つShopify App Store掲載アプリの開発者",
+          "actionJa": "返金時にストアクレジットを発行している場合は、独自実装をやめてrefundCreateまたはreturnProcessミューテーションを使う実装に切り替えてください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T10:03:49.203Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2559,
+            "output": 351
+          },
+          "estimatedCost": 0.017256
         }
       },
       "jev": {
@@ -50573,6 +52799,27 @@
             "output": 232
           },
           "estimatedCost": 0.007247999999999999
+        },
+        "claude-opus-5-5": {
+          "titleJa": "2月27日発効：パートナープログラム契約およびAPIライセンス・利用規約の更新",
+          "summarizedJa": "Shopifyはパートナープログラム契約とAPIライセンス・利用規約を更新し、役割の明確化、データ保護の強化、新しいプラットフォーム機能への対応を行いました。2026年2月27日以降もShopifyのサービスを利用し続けることで、新しい規約を読み、理解し、同意したものとみなされます。詳細やFAQはShopifyヘルプセンターで確認できます。",
+          "audienceJa": "Shopifyパートナー（アプリ開発者・代理店）およびShopify APIを利用するすべての開発者",
+          "actionJa": "2026年2月27日までに更新されたパートナープログラム契約とAPIライセンス・利用規約の内容を確認し、自社のアプリや業務が新規約（特にデータ保護要件）に準拠しているか確認してください。",
+          "deadline": "2026-02-27",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-30T10:03:55.460Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2514,
+            "output": 386
+          },
+          "estimatedCost": 0.017776
         }
       },
       "jev": {
@@ -50655,7 +52902,7 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.74,
           "areas": [
@@ -50815,6 +53062,27 @@
             "output": 257
           },
           "estimatedCost": 0.008808
+        },
+        "claude-opus-5-5": {
+          "titleJa": "キーなしクエリ文字列によるアセットのキャッシュ更新が無効に",
+          "summarizedJa": "2026年3月24日以降、アセットURLに「?123」のようなキーなしのクエリ文字列を付けても、キャッシュされたアセット（画像・フォント等）は更新されなくなります。asset_url や file_url などのLiquidフィルターでURLを生成していれば自動でバージョン管理されるため対応不要ですが、手書きのURLやCSS内の直接参照を使っているテーマは古いアセットが配信され続ける恐れがあります。",
+          "audienceJa": "カスタムテーマを開発・運用するテーマ開発者、パートナー、およびテーマをカスタマイズしているマーチャント",
+          "actionJa": "テーマ内でキーなしクエリ文字列を付けてアセットを参照している箇所を洗い出し、asset_url や file_url などのLiquidフィルター（CSSでは .css.liquid ファイル）を使ったURL生成に置き換えてください。",
+          "deadline": "2026-03-24",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T10:04:00.136Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 3056,
+            "output": 414
+          },
+          "estimatedCost": 0.020504
         }
       },
       "jev": {
@@ -51174,6 +53442,27 @@
             "output": 249
           },
           "estimatedCost": 0.007431
+        },
+        "claude-opus-5-5": {
+          "titleJa": "従来の顧客アカウント（レガシー）が非推奨に",
+          "summarizedJa": "従来の顧客アカウントは新規ストアおよび現在利用していない既存ストアでは利用できなくなり、今後は機能アップデートや技術サポートも提供されません。最終的な提供終了日は2026年後半に発表される予定で、ワンタイムコードによる安全なログイン、ストアクレジット、返品セルフサービス、B2B対応などを備えた新しい顧客アカウントへの早期移行が強く推奨されています。",
+          "audienceJa": "従来の顧客アカウントを利用している全マーチャント、およびテーマやアプリで従来の顧客アカウントをカスタマイズしているパートナー・開発者",
+          "actionJa": "管理画面の設定から新しい顧客アカウントへアップグレードし、テーマのLiquidカスタマイズや連携アプリをアプリブロック等の新方式へ移行してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-09-30T10:04:04.716Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2542,
+            "output": 385
+          },
+          "estimatedCost": 0.017868
         }
       },
       "jev": {
@@ -51786,6 +54075,27 @@
             "output": 257
           },
           "estimatedCost": 0.006933
+        },
+        "claude-opus-5-5": {
+          "titleJa": "Subscriptions API：SubscriptionBillingAttemptStateの導入",
+          "summarizedJa": "GraphQL Admin API 2026-04バージョンで、サブスクリプションの請求試行の状態を表す新フィールド「SubscriptionBillingAttemptState」が追加されました。従来の型付けが緩いnullableな複数フィールドを判別共用体（discriminated union）パターンで置き換え、APIの扱いやすさと自己文書化性を高めています。旧フィールドは非推奨となるため、サブスクリプションアプリは新フィールドへの移行が推奨されます。",
+          "audienceJa": "GraphQL Admin APIのSubscriptions APIを使うサブスクリプションアプリ開発者",
+          "actionJa": "SubscriptionBillingAttempt関連の非推奨フィールドを参照しているクエリを、API 2026-04以降で新しいSubscriptionBillingAttemptStateフィールドを使う形に移行してください。",
+          "deadline": "2026-04-01",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-30T10:04:10.412Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2258,
+            "output": 399
+          },
+          "estimatedCost": 0.017012
         }
       },
       "jev": {
@@ -51871,7 +54181,7 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.76,
           "areas": [
@@ -52038,6 +54348,27 @@
             "output": 269
           },
           "estimatedCost": 0.026823000000000003
+        },
+        "claude-opus-5-5": {
+          "titleJa": "配送プロファイルの配送オプションを読み書きする新API",
+          "summarizedJa": "配送オプション作成UIの強化により、1つの配送オプションに複数の段階料金（ティア料金）をグループ化して含められるようになり、Admin GraphQL API（unstable）にrateGroupsやconditions、freeConditionsなどの新しい読み書き用フィールドが追加されました。従来のrateProviderやmethodConditionsは非推奨予定で、互換期間中は複数料金が別々のメソッド定義として返されます。マーチャント管理の配送プロファイルを書き込むアプリは、予期しない動作を避けるため新しい書き込みAPIへの移行が必須です。",
+          "audienceJa": "マーチャント管理の配送プロファイル（DeliveryProfile）をAdmin GraphQL APIで読み書きするアプリ開発者",
+          "actionJa": "マーチャント管理のDeliveryProfileを書き込むアプリはrateGroupsToCreate/rateGroupsToUpdate/freeConditions/currencyCodeを使う新しい書き込みAPIへ移行し、読み取るアプリはrateGroupsとconditionsフィールドへの移行を検討してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-09-30T10:04:15.992Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 10811,
+            "output": 478
+          },
+          "estimatedCost": 0.052804
         }
       },
       "jev": {
@@ -52160,6 +54491,27 @@
             "output": 266
           },
           "estimatedCost": 0.008613
+        },
+        "claude-opus-5-5": {
+          "titleJa": "従来の顧客アカウント（レガシー）が非推奨に",
+          "summarizedJa": "従来の顧客アカウントは新規ストアおよび現在利用していないストアでは利用できなくなり、機能更新と技術サポートも終了しました。最終的な廃止日は2026年内に発表予定で、マーチャントには新しい顧客アカウントへの早期アップグレードが強く推奨されています。テーマ開発者はレガシーのLiquidファイルを含めないこと、アプリ開発者は顧客アカウントUI拡張機能へ、カスタムストアフロント開発者はCustomer Account APIへの移行が求められます。",
+          "audienceJa": "従来の顧客アカウントを利用中のマーチャント、テーマ開発者、顧客アカウント関連アプリ開発者、Storefront APIの顧客関連mutationを使うカスタムストアフロント開発者",
+          "actionJa": "マーチャントは新しい顧客アカウントへアップグレードし、開発者はレガシーLiquidテンプレート依存を顧客アカウントUI拡張機能やCustomer Account APIへ移行してください。",
+          "deadline": "2026-02-20",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 17,
+          "analyzedAt": "2026-09-30T10:04:21.159Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2963,
+            "output": 453
+          },
+          "estimatedCost": 0.020912
         }
       },
       "jev": {
@@ -52291,6 +54643,27 @@
             "output": 224
           },
           "estimatedCost": 0.007104
+        },
+        "claude-opus-5-5": {
+          "titleJa": "メタフィールド値のサイズ上限を縮小（16KB）",
+          "summarizedJa": "API バージョン 2026-04 以降、新しいメタフィールド値のサイズ上限が 16KB に制限されます。既存の 16KB を超えるメタフィールドは、更新されるまで読み取り専用となります。大きなデータを扱う場合は、メタオブジェクト参照、リスト型、複数メタフィールドへの分割、Files API の利用などの代替手段が推奨されています。",
+          "audienceJa": "メタフィールドに大きなデータを保存しているアプリ開発者・パートナー、およびテーマやカスタマイズで大容量メタフィールドを利用しているマーチャント",
+          "actionJa": "16KB を超えるメタフィールド値を保存・更新している箇所を洗い出し、API 2026-04 への移行前にメタオブジェクト、リスト型、複数メタフィールドへの分割、または Files API へ移行してください。",
+          "deadline": "2026-04-01",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-09-30T10:04:25.916Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2533,
+            "output": 395
+          },
+          "estimatedCost": 0.018032
         }
       },
       "jev": {
@@ -52660,6 +55033,27 @@
             "output": 280
           },
           "estimatedCost": 0.008213999999999999
+        },
+        "claude-opus-5-5": {
+          "titleJa": "Shopify CLIでAdmin APIとバルク操作が実行可能に",
+          "summarizedJa": "Shopify CLI 3.90.1で、ターミナルからAdmin APIのクエリ・ミューテーションを実行する「shopify app execute」と、バルク操作を開始・監視・キャンセルする「shopify app bulk execute/status/cancel」コマンドが追加されました。スクリプトによる自動化や、コーディングエージェントと組み合わせた開発ストアのデータ操作が容易になります。",
+          "audienceJa": "Shopify CLIとAdmin APIを使うアプリ開発者・パートナー",
+          "actionJa": null,
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-30T10:04:29.333Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2670,
+            "output": 285
+          },
+          "estimatedCost": 0.01638
         }
       },
       "jev": {
@@ -52742,7 +55136,7 @@
           "outOfScope": true
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.95,
           "areas": [
@@ -53394,6 +55788,27 @@
             "output": 258
           },
           "estimatedCost": 0.007299
+        },
+        "claude-opus-5-5": {
+          "titleJa": "メタフィールドをAnalyticsのディメンション・フィルターとして利用可能に",
+          "summarizedJa": "商品、バリエーション、顧客、注文のメタフィールドを、Analyticsの「レポート」と「探索（Explore）」でグループ化やフィルターに使えるようになりました。素材や会員ランク、原材料などの独自データを、スプレッドシートに書き出さずにShopify内で分析できます。利用するには、「設定 → メタフィールドとメタオブジェクト」で各定義の「Analyticsで有効にする」をオンにします。",
+          "audienceJa": "メタフィールドを活用している全マーチャント、およびマーチャントのデータ設計・分析を支援するパートナー",
+          "actionJa": "分析に使いたいメタフィールド定義ごとに、「設定 → メタフィールドとメタオブジェクト」で「Analyticsで有効にする」をオンにしてください（任意）。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-30T10:04:33.352Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2405,
+            "output": 380
+          },
+          "estimatedCost": 0.01722
         }
       },
       "jev": {
@@ -53886,6 +56301,27 @@
             "output": 237
           },
           "estimatedCost": 0.007593
+        },
+        "claude-opus-5-5": {
+          "titleJa": "固定バンドルをGoogleで販売可能に",
+          "summarizedJa": "Shopify BundlesアプリまたはバンドルプロダクトAPIで作成した固定バンドル（構成品が固定されたセット商品）を、Googleの検索結果、ショッピング広告、YouTubeなどに公開できるようになりました。管理画面の商品詳細ページの「公開」セクションで「Google & YouTube」を有効にするだけで、追加設定は不要です。価格・画像・在庫の更新も自動で同期されます。",
+          "audienceJa": "Google & YouTubeアプリを利用し、固定バンドルを販売するマーチャント、およびバンドルアプリを開発するパートナー",
+          "actionJa": null,
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-30T10:04:37.122Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2656,
+            "output": 309
+          },
+          "estimatedCost": 0.016804
         }
       },
       "jev": {
@@ -54010,6 +56446,27 @@
             "output": 246
           },
           "estimatedCost": 0.007119
+        },
+        "claude-opus-5-5": {
+          "titleJa": "App Bridgeのshopify.app.extensions()がPOS UI拡張機能に対応",
+          "summarizedJa": "App Bridgeのshopify.app.extensions()メソッドが、チェックアウト・顧客アカウント・管理画面・テーマ拡張に加えて、POS UI拡張機能のステータス取得にも対応しました。これにより埋め込みアプリから店舗向け拡張を含むすべての拡張機能の状態を一貫して確認でき、オンボーディングフローやセットアップダッシュボードの構築が容易になります。",
+          "audienceJa": "POS UI拡張機能を提供する埋め込みアプリの開発者",
+          "actionJa": null,
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-09-30T10:04:40.632Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2423,
+            "output": 293
+          },
+          "estimatedCost": 0.015552
         }
       },
       "jev": {
@@ -54092,7 +56549,7 @@
           "outOfScope": true
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.79,
           "areas": [
@@ -55367,6 +57824,27 @@
             "output": 244
           },
           "estimatedCost": 0.007119
+        },
+        "claude-opus-5-5": {
+          "titleJa": "商品クエリに `tracks_inventory` フィルターを追加",
+          "summarizedJa": "GraphQL Admin API 2026-04 以降、products クエリで在庫追跡の有無を示す新しい Boolean フィルター `tracks_inventory` を使って商品を絞り込めるようになりました。在庫を持たないドロップシッピング事業者などのデータを扱う際に特に便利です。",
+          "audienceJa": "GraphQL Admin API を使うアプリ開発者",
+          "actionJa": null,
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-09-30T10:04:44.894Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2412,
+            "output": 234
+          },
+          "estimatedCost": 0.014328
         }
       },
       "jev": {
@@ -55449,7 +57927,7 @@
           "outOfScope": true
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.81,
           "areas": [
@@ -55733,6 +58211,27 @@
             "output": 243
           },
           "estimatedCost": 0.007626
+        },
+        "claude-opus-5-5": {
+          "titleJa": "Flow：ストアの送信者メールアドレスでメール送信が可能に",
+          "summarizedJa": "Shopify Flowの「社内メールを送信」アクションで、差出人欄がこれまでの「flow@shopify.com」からストアの送信者メールアドレスに変更されます。新規設定には即時適用され、既存ワークフローも近日中に切り替わります。独自ドメインを使う場合は送信者メールの認証が必要になることがあり、受信側のフィルタや転送ルールの見直しも必要になる場合があります。",
+          "audienceJa": "Shopify Flowの「社内メールを送信」アクションを利用しているマーチャントおよびその運用を支援するパートナー",
+          "actionJa": "設定 > 通知で送信者メールアドレスを確認し、独自ドメインの場合はドメイン認証を行ったうえで、受信側のメールフィルタや転送ルールを「flow@shopify.com」から送信者アドレスに合わせて更新してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-30T10:04:50.141Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2625,
+            "output": 396
+          },
+          "estimatedCost": 0.01842
         }
       },
       "jev": {
@@ -55857,6 +58356,27 @@
             "output": 250
           },
           "estimatedCost": 0.009375
+        },
+        "claude-opus-5-5": {
+          "titleJa": "チェックアウトおよび注文WebhookからチェックアウトIDを削除",
+          "summarizedJa": "Shopifyはチェックアウト参照の統一のため、checkouts/create・checkouts/updateのWebhookから`id`フィールドを、orders/create・orders/paid・orders/updatedなど7つの注文Webhookから`checkout_id`フィールドを削除しました。今後は`token`または`checkout_token`フィールドを使用する必要があります。API バージョン2026-04の破壊的変更です。",
+          "audienceJa": "チェックアウトまたは注文Webhookを利用するアプリ開発者・パートナー、およびカスタム連携を運用するマーチャント",
+          "actionJa": "Webhookハンドラーでチェックアウトの`id`を`token`に、注文の`checkout_id`を`checkout_token`に置き換えて参照するよう修正してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-09-30T10:04:54.312Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 3351,
+            "output": 363
+          },
+          "estimatedCost": 0.020664
         }
       },
       "jev": {
@@ -56227,6 +58747,27 @@
             "output": 276
           },
           "estimatedCost": 0.008028
+        },
+        "claude-opus-5-5": {
+          "titleJa": "チェックアウト完了時にカートのメタフィールドを注文へ自動コピー",
+          "summarizedJa": "API バージョン 2026-04 から、注文メタフィールド定義で cartToOrderCopyable 機能を有効にすると、同じ namespace と key を持つカートメタフィールドの値が注文作成時に自動でコピーされるようになりました。カートメタフィールドは Storefront API、Checkout UI 拡張機能、Functions、GraphQL Admin API から利用できます。Shopify はカスタムデータの保存先として、カート属性やチェックアウトメタフィールドに代わりカートメタフィールドの利用を推奨しています。",
+          "audienceJa": "カート属性やチェックアウトメタフィールドでカスタムデータを扱うアプリ開発者・ストア構築パートナー",
+          "actionJa": "カスタムデータをカートから注文へ引き継ぐ実装がある場合は、API 2026-04 以降で注文メタフィールド定義の cartToOrderCopyable を有効にし、カート属性からカートメタフィールドへの移行を検討してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-30T10:04:59.877Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2601,
+            "output": 438
+          },
+          "estimatedCost": 0.019164
         }
       },
       "jev": {
@@ -56715,6 +59256,27 @@
             "output": 247
           },
           "estimatedCost": 0.006819
+        },
+        "claude-opus-5-5": {
+          "titleJa": "テーマ向けの新しい入力設定「article_list」が追加",
+          "summarizedJa": "テーマのセクションやブロックに、新しい入力設定タイプ「article_list」を追加できるようになりました。マーチャントは記事ピッカーで公開済みのブログ記事を複数選択できるようになり、注目記事セクションや関連コンテンツ、記事ギャラリーなどを作りやすくなります。",
+          "audienceJa": "テーマ開発者（パートナー）およびブログ記事を活用するマーチャント",
+          "actionJa": "複数記事の選択が必要なセクションやブロックでは、任意でテーマのスキーマにarticle_list設定を追加することを検討してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-30T10:05:03.746Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2255,
+            "output": 298
+          },
+          "estimatedCost": 0.01498
         }
       },
       "jev": {
@@ -56790,7 +59352,7 @@
       "officialActionRequired": false,
       "priority": {
         "merchant": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.71732276,
           "areas": [
@@ -57085,6 +59647,27 @@
             "output": 268
           },
           "estimatedCost": 0.007245
+        },
+        "claude-opus-5-5": {
+          "titleJa": "ビジネス詳細の管理がより分かりやすく",
+          "summarizedJa": "管理画面の「一般設定」に更新された「ビジネス詳細」セクションが追加され、認証や金融サービスに必要な情報をオンボーディングや是正対応を待たずに随時更新できるようになりました。ストア連絡先の「請求先住所」は「ストア住所」に名称変更され（用途は変更なし）、ストアの通貨はビジネス詳細で選択した国に基づいて設定されるようになります。なお、Shopifyペイメントなどの金融商品が有効な場合は、変更前にそれらを無効化する必要があります。",
+          "audienceJa": "全マーチャント（特にShopifyペイメント等の金融サービスを利用するマーチャント）",
+          "actionJa": "一般設定のビジネス詳細が正確か確認し、変更が必要な場合はShopifyペイメント等の金融商品を無効化してから更新してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-09-30T10:05:08.071Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2300,
+            "output": 385
+          },
+          "estimatedCost": 0.0169
         }
       },
       "jev": {
@@ -57821,6 +60404,27 @@
             "output": 245
           },
           "estimatedCost": 0.007790999999999999
+        },
+        "claude-opus-5-5": {
+          "titleJa": "Shop Minis の開発に Partner アカウントの権限が必須に",
+          "summarizedJa": "Shop Minis CLI が更新され、Shop Minis の作成・管理には Partner 組織内で「アプリを管理する（Manage apps）」権限が必要になりました。権限がない場合、新しい Mini のセットアップや申請の提出・取り消し・確認などの CLI コマンドはエラーになります。",
+          "audienceJa": "Shop Minis を開発する Partner 組織のオーナー・管理者および開発者",
+          "actionJa": "組織のオーナーまたは管理者が Partner Dashboard の「設定」→「チーム」から、Shop Minis を開発するメンバーに「Sensitive permissions」の「Manage apps」権限を付与してください。",
+          "deadline": "2026-01-17",
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 2,
+            "technicalImportance": 3
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-09-30T10:05:13.419Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2719,
+            "output": 329
+          },
+          "estimatedCost": 0.017456
         }
       },
       "jev": {
@@ -58441,6 +61045,27 @@
             "output": 275
           },
           "estimatedCost": 0.0075120000000000004
+        },
+        "claude-opus-5-5": {
+          "titleJa": "App Bridgeのshopify.app.extensions()が管理画面およびテーマアプリ拡張機能に対応",
+          "summarizedJa": "App Bridgeのshopify.app.extensions()メソッドが、従来のチェックアウト・顧客アカウント拡張機能に加え、管理画面（Admin）拡張機能とテーマアプリ拡張機能にも対応しました。埋め込みアプリから主要なすべてのサーフェスの拡張機能について、ハンドルや有効化状態を一貫して取得できます。これにより、アプリ全体の拡張機能を網羅したオンボーディングやセットアップダッシュボードを構築しやすくなります。",
+          "audienceJa": "App Bridgeを利用する埋め込みアプリの開発者",
+          "actionJa": null,
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-09-30T10:05:18.496Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2399,
+            "output": 330
+          },
+          "estimatedCost": 0.016196000000000002
         }
       },
       "jev": {
@@ -58525,7 +61150,7 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.88,
           "areas": [
@@ -58686,6 +61311,27 @@
             "output": 254
           },
           "estimatedCost": 0.007239
+        },
+        "claude-opus-5-5": {
+          "titleJa": "テーマおよびテーマアプリ拡張機能におけるLiquid構文解析の厳格化",
+          "summarizedJa": "2026年1月13日より、Shopifyはすべてのテーマに対してより厳格なLiquid構文解析を適用します。要件を満たさないLiquidコードは、機能や見た目を維持したまま自動的に書き換えられ、変更内容を説明するコメントが追加されます。テーマストアおよびアプリストアへの新規申請では、すでに厳格な解析に対応したLiquidコードが必須となっています。",
+          "audienceJa": "テーマをカスタマイズしている全マーチャント、テーマ開発者、テーマアプリ拡張機能を開発するアプリ開発者",
+          "actionJa": "移行ガイドを参照し、自社テーマやテーマアプリ拡張機能のLiquidコードを厳格な構文解析に準拠するよう修正し、自動書き換えされたファイルの内容と表示を確認してください。",
+          "deadline": "2026-01-13",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-09-30T10:05:23.814Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2432,
+            "output": 400
+          },
+          "estimatedCost": 0.017728
         }
       },
       "jev": {
@@ -58810,6 +61456,27 @@
             "output": 296
           },
           "estimatedCost": 0.007745999999999999
+        },
+        "claude-opus-5-5": {
+          "titleJa": "マーケティングピクセルのデータ共有に新しいデフォルト設定を導入",
+          "summarizedJa": "Shopifyは、マーケティングピクセルを監視し、トラフィックや売上などのシグナルから成果が出ているツールにのみデータを共有する「データ共有の自動最適化」をデフォルト設定にします。有効なすべてのマーケティングピクセルで設定は即時に有効化されますが、成果の出ていないピクセルへのデータ制限が始まるのは少なくとも7日後からです。常に全データを共有したい場合は、[設定] > [顧客イベント]でピクセルを「常にオン」に変更できます。",
+          "audienceJa": "マーケティングピクセル（Meta、Google、TikTokなどの広告・計測ツール）を利用している全マーチャント、および広告運用を支援する代理店・ピクセル連携アプリ開発者",
+          "actionJa": "広告の学習や計測に影響が出ないよう、7日以内に[設定] > [顧客イベント]で各ピクセルの設定を確認し、完全なデータ共有が必要なピクセルは「常にオン」に変更してください。",
+          "deadline": "2026-01-20",
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-09-30T10:05:29.851Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2372,
+            "output": 457
+          },
+          "estimatedCost": 0.018628
         }
       },
       "jev": {
@@ -58935,6 +61602,27 @@
             "output": 261
           },
           "estimatedCost": 0.007917
+        },
+        "claude-opus-5-5": {
+          "titleJa": "アセットURLのバージョンパラメータ形式の統一",
+          "summarizedJa": "CSSやJSなどストアアセットのURLに付与されるバージョン用クエリパラメータが、従来の「?108」のような数値のみの形式から「?v=108」形式に統一されます。新形式はLiquidタグの出力およびShopifyがレンダリングするストアフロントHTMLに反映されます。標準のLiquidアセットフィルターを使うテーマは対応不要ですが、旧形式を前提とした正規表現やロジックを持つアプリ・カスタムテーマコードは修正が必要です。",
+          "audienceJa": "アセットURLを解析・加工するアプリやカスタムテーマコードを持つ開発者・パートナー、およびカスタムテーマを利用するマーチャント",
+          "actionJa": "アセットURLのクエリ文字列が数値のみで終わることを前提とした正規表現やロジックを、「?v=VERSION_STRING」形式にも対応するよう修正してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T10:05:35.433Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2670,
+            "output": 405
+          },
+          "estimatedCost": 0.018779999999999998
         }
       },
       "jev": {
@@ -59057,6 +61745,27 @@
             "output": 252
           },
           "estimatedCost": 0.007958999999999999
+        },
+        "claude-opus-5-5": {
+          "titleJa": "`shopify app import-custom-data-definitions` でメタフィールド定義を移行",
+          "summarizedJa": "Shopify CLI 3.89で、アプリ所有のメタフィールド・メタオブジェクト定義を宣言的なTOML管理へ移行する新コマンド `shopify app import-custom-data-definitions` が追加されました。開発ストア上の `$app` 名前空間などの定義が自動でTOMLに変換され、`shopify.app.toml` に追加して `shopify app deploy` でインストール済み全ショップに一括反映できます。バージョン管理やロールバック、全ショップでの定義の一貫性確保が容易になります。",
+          "audienceJa": "メタフィールド/メタオブジェクト定義をAPIで管理しているアプリ開発者",
+          "actionJa": null,
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-30T10:05:40.126Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2711,
+            "output": 336
+          },
+          "estimatedCost": 0.017564
         }
       },
       "jev": {
@@ -59139,7 +61848,7 @@
           "outOfScope": true
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.9,
           "areas": [
@@ -59182,6 +61891,27 @@
             "output": 207
           },
           "estimatedCost": 0.006303
+        },
+        "claude-opus-5-5": {
+          "titleJa": "`OrderTransactionErrorCode` enumに新しい決済拒否コードを追加",
+          "summarizedJa": "Admin GraphQL API（2026-04バージョン）で、OrderTransactionErrorCode enumに決済失敗の理由をより詳細に示す新しいエラーコードが追加されます。これにより取引失敗の原因を正確に特定でき、顧客対応の改善に活用できます。enumへの値追加のため、網羅的に値を処理している実装は対応が必要です。",
+          "audienceJa": "Admin GraphQL APIで注文トランザクションのエラーコードを扱うアプリ開発者",
+          "actionJa": "OrderTransactionErrorCodeの未知の値でもエラーにならないよう実装を確認し、新しい決済拒否コードに応じた処理や顧客向けメッセージを追加してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T10:05:46.296Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2311,
+            "output": 349
+          },
+          "estimatedCost": 0.016224000000000002
         }
       },
       "jev": {
@@ -59551,6 +62281,27 @@
             "output": 263
           },
           "estimatedCost": 0.007103999999999999
+        },
+        "claude-opus-5-5": {
+          "titleJa": "ブルガリア・レフ（BGN）がユーロ（EUR）に置き換え",
+          "summarizedJa": "2026年1月1日、ブルガリアの電子取引における法定通貨がブルガリア・レフ（BGN）からユーロ（EUR）に変更されました。Shopifyのマルチ通貨機能を利用するストアでは、BGNを使用していたマーケットが自動的にユーロへ更新され、顧客はユーロで支払うことになります。マルチ通貨を使わずBGNをデフォルト通貨としているストアには、デフォルト通貨をユーロへ変更することが強く推奨されています。",
+          "audienceJa": "ブルガリア向けに販売しているマーチャント、およびBGNをデフォルト通貨に設定しているストア",
+          "actionJa": "マルチ通貨を使用せずBGNをデフォルト通貨にしているストアは、管理画面でデフォルト通貨をユーロ（EUR）に変更してください。",
+          "deadline": "2026-01-01",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 2,
+            "japanRelevance": 2,
+            "technicalImportance": 2
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-09-30T10:05:51.406Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2309,
+            "output": 398
+          },
+          "estimatedCost": 0.017196
         }
       },
       "jev": {
@@ -59796,6 +62547,27 @@
             "output": 263
           },
           "estimatedCost": 0.007698
+        },
+        "claude-opus-5-5": {
+          "titleJa": "在庫移動（インベントリ転送）の柔軟性が向上",
+          "summarizedJa": "在庫移動で、輸送中や受領後でも出荷内容の追加・削除・調整が可能になりました。また、移動元を空欄にして仕入先など外部からの入庫を記録したり、移動先を空欄にして廃棄や外部倉庫への出庫を記録したりできるようになり、すべての変更は調整履歴に残ります。Transfer Update APIでは移動元と移動先の両方の指定が不要になり、referenceNameで外部システムと紐付けられます。",
+          "audienceJa": "複数ロケーションで在庫を管理するマーチャント、および在庫移動APIを利用する在庫管理・WMS連携アプリの開発者",
+          "actionJa": "在庫移動APIを利用している連携アプリは、移動元・移動先が空の転送データを正しく扱えるか確認し、緩和された要件やreferenceNameの活用を検討してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-30T10:05:56.111Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2600,
+            "output": 392
+          },
+          "estimatedCost": 0.01824
         }
       },
       "jev": {
@@ -60048,6 +62820,27 @@
             "output": 244
           },
           "estimatedCost": 0.0069
+        },
+        "claude-opus-5-5": {
+          "titleJa": "SubscriptionBillingAttemptの非推奨フィールドerrorCode・errorMessageを削除",
+          "summarizedJa": "API バージョン2026-04以降、SubscriptionBillingAttemptのerrorCodeとerrorMessageフィールドが非表示になります。これらは2025-01でprocessingErrorの導入に伴い非推奨となっていたもので、今後はprocessingError.codeとprocessingError.messageを使用する必要があります。",
+          "audienceJa": "Admin GraphQL APIでサブスクリプション請求を扱うアプリ開発者",
+          "actionJa": "SubscriptionBillingAttemptのerrorCode・errorMessageの参照をprocessingError.code・processingError.messageに置き換えてください。",
+          "deadline": "2026-04-01",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T10:05:59.424Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2317,
+            "output": 322
+          },
+          "estimatedCost": 0.015708
         }
       },
       "jev": {
@@ -60173,6 +62966,27 @@
             "output": 241
           },
           "estimatedCost": 0.006711
+        },
+        "claude-opus-5-5": {
+          "titleJa": "サブスクリプション請求試行のスロットリング導入",
+          "summarizedJa": "API バージョン 2026-01 以降、サブスクリプションの請求試行（billing attempt）が不正利用防止のため Shopify 内部の信頼性指標に基づいてスロットリング（制限）されるようになります。制限された場合は BillingAttemptUserErrorCode enum に新たに追加された throttled エラーコードで確認できます。",
+          "audienceJa": "Admin GraphQL API でサブスクリプション請求を行うアプリ開発者（定期購入アプリを利用するマーチャントにも間接的に影響）",
+          "actionJa": "API バージョン 2026-01 への移行時に、請求試行で throttled エラーコードが返された場合のハンドリング（再試行スケジュールや通知処理）を実装してください。",
+          "deadline": "2026-01-01",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T10:06:03.403Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2261,
+            "output": 347
+          },
+          "estimatedCost": 0.015983999999999998
         }
       },
       "jev": {
@@ -60258,7 +63072,7 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.78,
           "areas": [
@@ -60301,6 +63115,27 @@
             "output": 286
           },
           "estimatedCost": 0.008013
+        },
+        "claude-opus-5-5": {
+          "titleJa": "`orders/link_requested` Webhookトピックの追加",
+          "summarizedJa": "GraphQL Admin API 2026-01から、アプリは`orders/link_requested` Webhookトピックを購読できるようになりました。顧客が期限切れの注文状況ページから新しい注文リンクをリクエストした際に発火し、注文ID、顧客情報、注文ステータス、フルフィルメント情報を含むOrderオブジェクト全体が配信されます。",
+          "audienceJa": "注文通知やカスタマーサポート関連のアプリを開発する開発者",
+          "actionJa": "期限切れの注文リンク再発行を検知したい場合は、API 2026-01以降で`orders/link_requested`トピックを購読してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-09-30T10:06:08.165Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2520,
+            "output": 310
+          },
+          "estimatedCost": 0.01628
         }
       },
       "jev": {
@@ -60383,7 +63218,7 @@
           "outOfScope": true
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.71,
           "areas": [
@@ -60801,6 +63636,27 @@
             "output": 259
           },
           "estimatedCost": 0.007092
+        },
+        "claude-opus-5-5": {
+          "titleJa": "拡張機能から離れずに購入者がサブスクリプションの支払い方法を更新可能に",
+          "summarizedJa": "カスタマーアカウントUI拡張機能内で、購入者がサブスクリプション契約の支払い方法を画面遷移なしで変更できるようになりました。新しいIntents APIでインテントを呼び出すだけでネイティブの支払いフローが起動し、アプリ側でカード情報を保存・表示する必要はありません。これはカスタマーアカウントのネイティブワークフローを拡張機能から呼び出すIntents APIの最初の機能です。",
+          "audienceJa": "カスタマーアカウントUI拡張機能を開発するサブスクリプションアプリ開発者",
+          "actionJa": "サブスクリプションアプリで支払い方法変更を提供する場合は、Intents APIのドキュメントを確認し拡張機能への組み込みを検討してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T10:06:13.732Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2312,
+            "output": 371
+          },
+          "estimatedCost": 0.016668
         }
       },
       "jev": {
@@ -60887,7 +63743,7 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.78,
           "areas": [
@@ -61056,6 +63912,27 @@
             "output": 275
           },
           "estimatedCost": 0.008382
+        },
+        "claude-opus-5-5": {
+          "titleJa": "_tracking_consent、_landing_page、_orig_referrer Cookieの設定廃止",
+          "summarizedJa": "2025年9月15日以降、Shopifyはストアフロントで_landing_page、_orig_referrer、_tracking_consentの各Cookieを設定しなくなります。これらのCookie値を参照しているコードは、ブラウザAPI（window.location.href、document.referrer）やWeb Pixels API、GraphQL Admin APIのcustomerJourneySummary、Customer Privacy APIなどの公式APIへ移行する必要があります。",
+          "audienceJa": "ストアフロントでこれらのCookieを参照しているテーマ・アプリ開発者、およびカスタムトラッキングコードを導入しているマーチャント",
+          "actionJa": "_landing_page・_orig_referrerの参照はブラウザAPI/Web Pixels API/Admin APIのcustomerJourneySummaryへ、_tracking_consentの参照はCustomer Privacy APIへ置き換えてください。",
+          "deadline": "2025-09-15",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-09-30T10:06:19.150Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2724,
+            "output": 414
+          },
+          "estimatedCost": 0.019176
         }
       },
       "jev": {
@@ -61549,6 +64426,27 @@
             "output": 283
           },
           "estimatedCost": 0.007428
+        },
+        "claude-opus-5-5": {
+          "titleJa": "アプリ生成・インポート注文がAvalara Tax Complianceに完全同期",
+          "summarizedJa": "2025年10月1日以降、LoopやRechargeなどのサードパーティアプリ経由で作成・変更された注文や、Matrixifyなどでインポートされた注文が自動的にAvalara Tax Complianceへ取り込まれ、税額が再計算されます。別の方法でこれらの注文をAvalaraに取り込んでいる場合は、重複記録を防ぐため無効化が必要です。同期を望まない場合はAvalaraサポートへの連絡が必要です。",
+          "audienceJa": "Avalara Tax Complianceを利用し、サードパーティアプリで注文を作成・インポートしているマーチャント（主に米国向け販売）",
+          "actionJa": "サードパーティ注文をAvalara Tax Complianceへ別経路で取り込んでいる場合はその連携を無効化し、同期が不要ならAvalaraサポートに連絡してください。",
+          "deadline": "2025-10-01",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 2,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 7,
+          "analyzedAt": "2026-09-30T10:06:23.514Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2302,
+            "output": 406
+          },
+          "estimatedCost": 0.017328
         }
       },
       "jev": {
@@ -61915,6 +64813,27 @@
             "output": 276
           },
           "estimatedCost": 0.009048
+        },
+        "claude-opus-5-5": {
+          "titleJa": "フルフィルメントサービスから`permitsSkuSharing`フィールドを削除",
+          "summarizedJa": "API バージョン 2026-04 以降、FulfillmentService オブジェクトおよび fulfillmentServiceCreate/fulfillmentServiceUpdate ミューテーションから permitsSkuSharing フィールドが削除され、すべてのフルフィルメントサービスで SKU 共有がデフォルトで有効になります。GraphQL ではこのフィールドを参照・送信するとエラーとなり、REST では GET で返されず、POST/PUT では無視されます。在庫を複数ロケーションに配置できるようになるため、単一ロケーション前提のロジックの見直しが必要です。",
+          "audienceJa": "フルフィルメントサービスを実装・連携している Admin API（GraphQL/REST）を使うアプリ開発者",
+          "actionJa": "API バージョン 2026-04 以降に移行する前に、コードから permitsSkuSharing の読み書きを削除し、フルフィルメントサービスの在庫が単一ロケーションのみと想定したビジネスロジックを見直してください。",
+          "deadline": "2026-04-01",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-30T10:06:28.387Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 3039,
+            "output": 452
+          },
+          "estimatedCost": 0.021196
         }
       },
       "jev": {
@@ -62160,6 +65079,27 @@
             "output": 236
           },
           "estimatedCost": 0.007745999999999999
+        },
+        "claude-opus-5-5": {
+          "titleJa": "顧客マーケティング関連URLフィールドの取得に書き込み権限が必須に",
+          "summarizedJa": "セキュリティ脆弱性への対応として、Customer.emailOpenTrackingUrl、Customer.unsubscribeUrl、CustomerEmailAddress.openTrackingUrl、CustomerEmailAddress.marketingUnsubscribeUrl、CustomerPhoneNumber.marketingUnsubscribeUrlの取得に、write_customersスコープとcreate_and_edit_customers権限が必要になりました。これらのURLにはマーケティング同意を変更できる秘密トークンが含まれるためで、全APIバージョンに即時適用されます。read_customersスコープのみのアプリでは、これらのフィールドを取得するとアクセス拒否エラーになります。",
+          "audienceJa": "Admin GraphQL APIで顧客のメール開封トラッキングURLや配信停止URLを取得しているアプリ開発者（特にメールマーケティング・SMS配信系アプリ）",
+          "actionJa": "該当フィールドを参照している場合は、アプリのアクセススコープにwrite_customersを追加し、リクエストを行うユーザーにcreate_and_edit_customers権限があることを確認してください。",
+          "deadline": "2025-12-18",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-09-30T10:06:34.260Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2777,
+            "output": 497
+          },
+          "estimatedCost": 0.021048
         }
       },
       "jev": {
@@ -63261,6 +66201,27 @@
             "output": 272
           },
           "estimatedCost": 0.012384000000000001
+        },
+        "claude-opus-5-5": {
+          "titleJa": "在庫調整・返金ミューテーションで冪等性（@idempotent）が必須に",
+          "summarizedJa": "Admin GraphQL API 2026-04以降、refundCreateや在庫調整・移動・設定、在庫トランスファー・シップメント関連など15のミューテーションで@idempotentディレクティブの指定が必須になります。スキーマ上は必須と表示されませんが、指定しない場合は実行時エラーとなります。ネットワーク再試行などによる在庫の二重計上や返金の重複を防ぐための変更です。",
+          "audienceJa": "Admin GraphQL APIで在庫調整・在庫移動・返金作成などのミューテーションを使うアプリ開発者（在庫連携・WMS・POS・返品アプリ等）",
+          "actionJa": "API バージョン2026-04へ移行する前に、対象ミューテーションの呼び出しに一意なキー（UUID推奨）を指定した@idempotentディレクティブを追加し、IDEMPOTENCY_CONCURRENT_REQUEST等のエラー処理も実装してください。",
+          "deadline": "2026-04-01",
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 5,
+            "japanRelevance": 4,
+            "technicalImportance": 4
+          },
+          "totalScore": 16,
+          "analyzedAt": "2026-09-30T10:06:42.928Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 4512,
+            "output": 437
+          },
+          "estimatedCost": 0.026788
         }
       },
       "jev": {
@@ -63385,6 +66346,27 @@
             "output": 266
           },
           "estimatedCost": 0.007305000000000001
+        },
+        "claude-opus-5-5": {
+          "titleJa": "API経由で作成するサブスクリプション契約の支払い方法必須要件を撤廃",
+          "summarizedJa": "GraphQL Admin APIを使って、支払い方法が紐づいていないサブスクリプション契約を作成できるようになりました。支払い方法が欠落・期限切れの既存契約も先にShopifyへ移行し、後から支払い情報を収集・更新できます。なお、チェックアウト経由の契約は引き続き支払い方法が必須で、有効な支払い方法が追加されるまで請求は処理されません。",
+          "audienceJa": "サブスクリプションアプリを開発・運用するアプリ開発者、および他プラットフォームからサブスクリプション契約を移行するマーチャント・パートナー",
+          "actionJa": "支払い方法なしで契約を移行する場合は、移行後に顧客へ支払い情報の追加・更新を促すフローを実装してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-09-30T10:06:48.298Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2372,
+            "output": 369
+          },
+          "estimatedCost": 0.016868
         }
       },
       "jev": {
@@ -63470,7 +66452,7 @@
           "outOfScope": false
         },
         "developer": {
-          "level": "check",
+          "level": "info",
           "action": 0,
           "relevance": 0.74,
           "areas": [
@@ -63513,6 +66495,27 @@
             "output": 262
           },
           "estimatedCost": 0.010041000000000001
+        },
+        "claude-opus-5-5": {
+          "titleJa": "`inventorySetQuantities` ミューテーションの新しいコンペア・アンド・スワップ構文",
+          "summarizedJa": "Admin GraphQL API 2026-04 では、`inventorySetQuantities` ミューテーションで2026-01に導入された `changeFromQuantity` が実質必須となり、`compareQuantity` と `ignoreCompareQuantity` フィールドが削除されます。スキーマ上は必須表示されませんが、未指定の場合は実行時エラーとなるため、現在の数量を渡して同時実行チェックを有効にするか、明示的に null を渡してチェックをスキップする必要があります。",
+          "audienceJa": "Admin GraphQL API の inventorySetQuantities ミューテーションで在庫数量を更新するアプリ開発者",
+          "actionJa": "2026-04 へ移行する前に、`compareQuantity` と `ignoreCompareQuantity` を削除し、すべての呼び出しで `changeFromQuantity`（想定される現在数量、またはチェック不要なら null）を指定するよう実装を更新してください。",
+          "deadline": "2026-04-01",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-09-30T10:06:53.306Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 3580,
+            "output": 435
+          },
+          "estimatedCost": 0.02302
         }
       },
       "jev": {
@@ -63640,6 +66643,27 @@
             "output": 241
           },
           "estimatedCost": 0.009051
+        },
+        "claude-opus-5-5": {
+          "titleJa": "在庫・返金ミューテーションの同時実行保護機能（Compare and Swap・冪等性）",
+          "summarizedJa": "在庫更新の競合状態や再試行時の重複処理を防ぐため、Admin GraphQL APIの在庫・返金ミューテーションにchangeFromQuantityフィールドによるCompare and Swap保護と@idempotentディレクティブが2026-01で導入されます。2026-04ではこれらが必須化され（changeFromQuantityは明示的なオプトアウト可）、inventorySetQuantitiesの旧Compare and Swapフィールドは削除される破壊的変更となります。",
+          "audienceJa": "Admin GraphQL APIで在庫調整・在庫数設定・返金ミューテーションを利用するアプリ開発者（在庫連携・WMS・POS・ERP連携アプリなど）",
+          "actionJa": "API 2026-04への移行前に、在庫ミューテーションへchangeFromQuantity（または明示的なオプトアウト）と、在庫・返金ミューテーションへ@idempotentディレクティブ（冪等キー）を付与するよう実装を更新し、inventorySetQuantitiesの旧Compare and Swapフィールドの利用をやめてください。",
+          "deadline": "2026-04-01",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 5,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 14,
+          "analyzedAt": "2026-09-30T10:07:00.032Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 3288,
+            "output": 492
+          },
+          "estimatedCost": 0.022992000000000002
         }
       },
       "jev": {
@@ -63768,6 +66792,27 @@
             "output": 245
           },
           "estimatedCost": 0.010178999999999999
+        },
+        "claude-opus-5-5": {
+          "titleJa": "在庫系ミューテーションで`changeFromQuantity`フィールドが必須化（明示的なオプトアウト可）",
+          "summarizedJa": "Admin GraphQL API 2026-04から、inventoryAdjustQuantities・inventoryMoveQuantities・inventorySetOnHandQuantities・productVariantsBulkUpdate（quantityAdjustments）で`changeFromQuantity`の指定が実行時に必須となる破壊的変更です。現在の想定数量を渡すと同時更新による上書きを防ぐ比較チェック（不一致時はCHANGE_FROM_QUANTITY_STALEエラー）が有効になり、チェック不要な場合は明示的にnullを渡す必要があります。スキーマ上は必須表示されないため、未指定のままだと実行時エラーになる点に注意が必要です。",
+          "audienceJa": "Admin GraphQL APIで在庫数量を更新するアプリ開発者（在庫管理・ERP/倉庫連携アプリなど）",
+          "actionJa": "2026-04へ移行する前に、対象ミューテーションの呼び出しすべてに`changeFromQuantity`（想定される現在数量、またはオプトアウト時は明示的なnull）を追加し、STALEエラー時の再試行処理を実装してください。",
+          "deadline": "2026-04-01",
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-09-30T10:07:06.838Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 3739,
+            "output": 512
+          },
+          "estimatedCost": 0.025196
         }
       },
       "jev": {
@@ -64856,6 +67901,27 @@
             "output": 260
           },
           "estimatedCost": 0.007155
+        },
+        "claude-opus-5-5": {
+          "titleJa": "メタフィールド・メタオブジェクトの高度なクエリ機能",
+          "summarizedJa": "Admin GraphQL API（2026-01）で、メタフィールド値によるクエリ対象にCompany（会社）とCompany Locationが追加されました。また、商品・注文・メタオブジェクトエントリーのメタフィールド値検索で、大小比較、前方一致、AND/OR/NOTの論理演算子が使えるようになり、対応するメタフィールドタイプも拡大しました。これにより、全件取得してクライアント側で絞り込む必要がなくなり、クエリ内で直接フィルタリングできます。",
+          "audienceJa": "Admin GraphQL APIでメタフィールド・メタオブジェクトを扱うアプリ開発者・パートナー",
+          "actionJa": "クライアント側でメタフィールド値を絞り込んでいる実装がある場合、API 2026-01の新しいクエリ構文を使ったサーバー側フィルタリングへの移行を検討してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-30T10:07:12.348Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2308,
+            "output": 406
+          },
+          "estimatedCost": 0.017352
         }
       },
       "jev": {
@@ -65107,6 +68173,27 @@
             "output": 235
           },
           "estimatedCost": 0.006957
+        },
+        "claude-opus-5-5": {
+          "titleJa": "バルクオペレーションの高速化",
+          "summarizedJa": "GraphQL Admin APIのバルクオペレーションが改善され、全APIバージョンで任意のミューテーションをバルク実行できるようになりました。アップロード可能なファイルサイズが20MBから100MBに拡大し、アプリごと・ショップごとに最大5つのバルクオペレーションを同時実行できるようになり、大量データのインポート・エクスポートがより高速に行えます。",
+          "audienceJa": "GraphQL Admin APIのバルクオペレーションを使って大量データを扱うアプリ開発者",
+          "actionJa": null,
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-09-30T10:07:16.373Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2438,
+            "output": 274
+          },
+          "estimatedCost": 0.015231999999999999
         }
       },
       "jev": {
@@ -65598,6 +68685,27 @@
             "output": 256
           },
           "estimatedCost": 0.007752
+        },
+        "claude-opus-5-5": {
+          "titleJa": "Sidekickアプリ拡張機能の提供開始",
+          "summarizedJa": "ShopifyのAIコマースアシスタント「Sidekick」とアプリを連携できる「Sidekickアプリ拡張機能」が登場しました。Sidekickがアプリのデータを検索して文脈に沿った回答をしたり、アプリ内の適切なページへマーチャントを案内したりできます。また、メールテンプレート編集やレビュー作成などの安全に範囲を限定したアクションを定義すると、Sidekickがアプリ内で変更を提案し、最終的な更新はマーチャントが判断します。",
+          "audienceJa": "Shopifyアプリを開発するパートナー・開発者（間接的にSidekickを利用するマーチャント）",
+          "actionJa": null,
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-09-30T10:07:21.276Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2599,
+            "output": 329
+          },
+          "estimatedCost": 0.016975999999999998
         }
       },
       "jev": {
@@ -66205,6 +69313,27 @@
             "output": 241
           },
           "estimatedCost": 0.006897
+        },
+        "claude-opus-5-5": {
+          "titleJa": "テーマエディター内でストアのリソースを管理可能に",
+          "summarizedJa": "テーマエディター内から、商品・コレクション・マーケット・メタフィールド・メタオブジェクトなどを直接編集・新規作成できるようになりました。変更はオーバーレイダイアログで行われるため、作業中の画面を離れずに済みます。同様の機能は管理画面の他の領域でも利用可能です。",
+          "audienceJa": "オンラインストアのテーマをカスタマイズする全マーチャントおよびテーマ制作を行うパートナー",
+          "actionJa": null,
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-09-30T10:07:25.737Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2329,
+            "output": 261
+          },
+          "estimatedCost": 0.014536
         }
       },
       "jev": {
@@ -66279,7 +69408,7 @@
       },
       "priority": {
         "merchant": {
-          "level": "check",
+          "level": "info",
           "action": 0.08,
           "relevance": 0.722456,
           "areas": [
@@ -68027,6 +71156,27 @@
             "output": 239
           },
           "estimatedCost": 0.008649
+        },
+        "claude-opus-5-5": {
+          "titleJa": "オフラインアクセストークンが有効期限とリフレッシュに対応",
+          "summarizedJa": "オフラインアクセストークンに、オプションで60分の有効期限を設定し、リフレッシュトークンを受け取れるようになりました。リフレッシュトークンを使えば、マーチャントの操作なしで新しいアクセストークンを取得でき、OAuth 2.0仕様への準拠とセキュリティ強化が図られます。既存の無期限オフライントークンは当面引き続き利用可能で、トークン交換と認可コードの両グラントタイプで利用できます。",
+          "audienceJa": "オフラインアクセストークンを使用してAdmin API（GraphQL/REST）にアクセスするアプリ開発者",
+          "actionJa": "任意対応ですが、将来に備えて期限付きトークンの採用を検討し、採用する場合はリフレッシュトークンの安全な保管、期限前および401受信時の自動リフレッシュ処理、トークンが無期限であることを前提としたコードの見直しを実装してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-09-30T10:07:30.522Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 3163,
+            "output": 418
+          },
+          "estimatedCost": 0.021012000000000003
         }
       },
       "jev": {
