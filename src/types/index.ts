@@ -44,6 +44,29 @@ export const AnalysisSchema = z.object({
 
 export type Analysis = z.infer<typeof AnalysisSchema>;
 
+// Jev（System One モデル）の判定結果（評価中のため本番のスコアには使わない）
+const ScoredDecisionSchema = z.object({
+  score: z.number(), // 期待スコア（1-5、小数あり）
+  confidence: z.number(),
+});
+
+export const JevDecisionSchema = z.object({
+  model: z.string(), // 実際に応答したモデルのバージョン
+  scores: z.object({
+    merchantImpact: ScoredDecisionSchema,
+    partnerImpact: ScoredDecisionSchema,
+    japanRelevance: ScoredDecisionSchema,
+    technicalImportance: ScoredDecisionSchema,
+  }),
+  totalScore: z.number(),
+  actionRequired: z.number(), // 対応が必要な確率（0-1）
+  breakingChange: z.number(), // 破壊的変更・廃止である確率（0-1）
+  decidedAt: z.string(),
+  tokenUsage: TokenUsageSchema,
+});
+
+export type JevDecision = z.infer<typeof JevDecisionSchema>;
+
 // Changelog Entry Schema
 export const ChangelogEntrySchema = z.object({
   id: z.string(),
@@ -55,6 +78,7 @@ export const ChangelogEntrySchema = z.object({
   category: z.array(z.string()),
   description: z.string(),
   analyses: z.record(z.string(), AnalysisSchema).optional(), // モデル名をキーとした分析結果の辞書
+  jev: JevDecisionSchema.optional(),
 });
 
 export type ChangelogEntry = z.infer<typeof ChangelogEntrySchema>;

@@ -68,6 +68,13 @@ jobs:
           # 出力内容を表示
           cat analyze-output.txt
 
+      # Jev（評価中）の判定を記録。失敗しても日次処理は止めない
+      - name: Record Jev decisions (evaluation)
+        continue-on-error: true
+        env:
+          TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
+        run: npm run decide
+
       - name: Extract new entry titles
         id: extract_titles
         if: steps.fetch.outputs.new_entries != '0'

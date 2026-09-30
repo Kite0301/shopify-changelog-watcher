@@ -15,5 +15,7 @@ export function getPrimaryAnalysis(entry: ChangelogEntry): Analysis | undefined 
 export function formatModelName(model: string): string {
   const [vendor, family, ...version] = model.split('-');
   const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
-  return [capitalize(vendor), capitalize(family ?? ''), version.join('.')].filter(Boolean).join(' ');
+  return [capitalize(vendor), capitalize(family ?? ''), version.join('.')]
+    .filter(Boolean)
+    .join(' ');
 }

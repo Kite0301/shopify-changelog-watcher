@@ -7,7 +7,9 @@
     "typecheck": "tsc --noEmit",
     "fetch": "tsx src/scripts/fetch-rss.ts",
     "analyze": "tsx src/scripts/analyze.ts",
+    "decide": "tsx src/scripts/decide.ts",
     "compare:models": "tsx src/scripts/compare-models.ts",
+    "compare:jev": "tsx src/scripts/compare-jev.ts",
     "report:weekly": "tsx src/scripts/generate-weekly-report.ts",
     "slides:pdf": "marp --theme themes/shopify-changelog.css --pdf --allow-local-files",
     "lint": "eslint src",
@@ -24,6 +26,7 @@
   "license": "MIT",
   "dependencies": {
     "@anthropic-ai/sdk": "^0.129.0",
+    "@typesafe-ai/sdk": "^0.6.0",
     "dotenv": "^18.0.4",
     "rss-parser": "^3.13.0",
     "zod": "^4.6.5"

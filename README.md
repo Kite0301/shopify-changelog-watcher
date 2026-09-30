@@ -17,6 +17,7 @@ Shopify公式のchangelogを自動収集し、AI分析により日本のマー�
 
 - 複数のShopify changelog（通常版・開発者版）からRSS経由で自動収集
 - Claude（Opus 5.5）による日本語タイトル・要約と重要度評価（Structured Outputs で形式を保証）
+- [Jev](https://typesafe.ai)（判定専用モデル）による重要度・要対応の判定を記録（評価中。本番のスコアには未使用）
 - GitHub Pagesによる収集データの可視化
 - 週次レポート（Markdown / Marpスライド / PDF）の自動生成
 - GitHub ActionsとSlack通知による完全自動化
@@ -40,7 +41,7 @@ shopify-changelog-watcher/
 ├── docs/                   # 開発記事など
 ├── public/                 # GitHub Pages用ビューア（index.html / app.js / styles.css）
 ├── src/
-│   ├── analyzer/           # AI分析（Claude / 共通プロンプト）
+│   ├── analyzer/           # AI分析（Claude / Jev / 共通プロンプト）
 │   ├── fetcher/            # RSS取得
 │   ├── reporters/          # 週次レポート生成（Markdown / Marp）
 │   ├── scripts/            # 実行スクリプト（npm scripts から呼び出し）
@@ -71,6 +72,7 @@ cp .env.example .env
 ```env
 ANTHROPIC_API_KEY=your_anthropic_api_key
 # ANALYSIS_MODEL=claude-sonnet-5-5  # 省略時は claude-opus-5-5
+TYPESAFE_API_KEY=your_typesafe_api_key  # Jevの判定を記録する場合のみ
 ```
 
 Anthropic APIキーは https://console.anthropic.com/ から取得できます。
@@ -86,6 +88,9 @@ npm run fetch
 # AI分析（未分析のエントリー。前回失敗したものも再分析）
 npm run analyze
 
+# Jevの判定を記録（判定がないエントリーのみ）
+npm run decide
+
 # 週次レポート生成（引数なしで前週、例: npm run report:weekly 2026-W39）
 npm run report:weekly
 
@@ -100,6 +105,7 @@ npm run typecheck        # 型チェック
 npm run lint             # ESLint
 npm run format           # Prettier
 npm run compare:models -- 20 claude-opus-5-5 claude-sonnet-5-5  # 直近20件で複数モデルを比較（保存しない、tmp/ に出力）
+npm run compare:jev      # 保存済みのJevの判定とClaudeの分析を突き合わせ（API呼び出しなし）
 ```
 
 ### GitHub Actionsでの自動実行
@@ -109,13 +115,15 @@ npm run compare:models -- 20 claude-opus-5-5 claude-sonnet-5-5  # 直近20件で
 GitHubリポジトリの **Settings > Secrets and variables > Actions** で以下のシークレットを設定：
 
 - `ANTHROPIC_API_KEY` - Anthropic APIキー
+- `TYPESAFE_API_KEY` - TypeSafe AI（Jev）APIキー（未設定ならJevの判定はスキップ）
 - `SLACK_WEBHOOK_URL` - Slack Incoming Webhook URL（通知用）
 
 #### 2. 自動実行スケジュール
 
 | ワークフロー | タイミング | 内容 |
 |---|---|---|
-| Daily RSS Fetch | 毎日 9:00 JST | RSS取得 → AI分析 → `data/entries.json` をコミット → Slack通知 |
+| Daily RSS Fetch | 毎日 9:00 JST | RSS取得 → AI分析 → Jev判定 → `data/entries.json` をコミット → Slack通知 |
+| Compare Models | 手動 | 直近の記事を複数モデルで分析して比較（成果物としてMarkdownを保存） |
 | Weekly Report Generation | 毎週月曜 9:30 JST | 前週のレポート・スライド・PDFを生成 → `data/reports/` をコミット → Slack通知 |
 | Deploy to GitHub Pages | `public/` 更新時 | ビューアをデプロイ |
 

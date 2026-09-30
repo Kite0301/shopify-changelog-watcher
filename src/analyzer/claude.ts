@@ -67,7 +67,10 @@ export class ClaudeAnalyzer {
 
     const { scores } = parsed;
     const totalScore =
-      scores.merchantImpact + scores.partnerImpact + scores.japanRelevance + scores.technicalImportance;
+      scores.merchantImpact +
+      scores.partnerImpact +
+      scores.japanRelevance +
+      scores.technicalImportance;
 
     // フォールバックが走った場合は実際に応答したモデルで記録する
     const model = message.model;

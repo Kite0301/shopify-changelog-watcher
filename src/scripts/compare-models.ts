@@ -37,7 +37,10 @@ async function main() {
         try {
           return { analysis: await analyzer.analyzeEntry(entry), ms: Date.now() - start };
         } catch (error) {
-          return { error: error instanceof Error ? error.message : String(error), ms: Date.now() - start };
+          return {
+            error: error instanceof Error ? error.message : String(error),
+            ms: Date.now() - start,
+          };
         }
       })
     );
@@ -45,18 +48,42 @@ async function main() {
   }
 
   const names = MODELS.map(formatModelName);
-  const lines: string[] = [`# モデル比較: ${names.join(' vs ')}`, '', `対象: 直近 ${rows.length} 件`, ''];
+  const lines: string[] = [
+    `# モデル比較: ${names.join(' vs ')}`,
+    '',
+    `対象: 直近 ${rows.length} 件`,
+    '',
+  ];
 
   // 集計
-  lines.push('## 集計', '', `| | ${names.join(' | ')} |`, `|---|${MODELS.map(() => '---').join('|')}|`);
-  const stat = (fn: (r: RunResult[]) => string) => MODELS.map((_, m) => fn(rows.map((row) => row.results[m])));
+  lines.push(
+    '## 集計',
+    '',
+    `| | ${names.join(' | ')} |`,
+    `|---|${MODELS.map(() => '---').join('|')}|`
+  );
+  const stat = (fn: (r: RunResult[]) => string) =>
+    MODELS.map((_, m) => fn(rows.map((row) => row.results[m])));
   const ok = (rs: RunResult[]) => rs.filter((r) => r.analysis).map((r) => r.analysis!);
   const avg = (xs: number[]) => (xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : 0);
   lines.push(`| 成功 | ${stat((rs) => `${ok(rs).length}/${rs.length}`).join(' | ')} |`);
-  lines.push(`| 平均スコア | ${stat((rs) => avg(ok(rs).map((a) => a.totalScore)).toFixed(1)).join(' | ')} |`);
-  lines.push(`| 平均出力トークン | ${stat((rs) => avg(ok(rs).map((a) => a.tokenUsage?.output ?? 0)).toFixed(0)).join(' | ')} |`);
-  lines.push(`| 平均所要時間 | ${stat((rs) => `${(avg(rs.map((r) => r.ms)) / 1000).toFixed(1)}s`).join(' | ')} |`);
-  lines.push(`| 合計コスト | ${stat((rs) => `$${ok(rs).reduce((s, a) => s + (a.estimatedCost ?? 0), 0).toFixed(4)}`).join(' | ')} |`);
+  lines.push(
+    `| 平均スコア | ${stat((rs) => avg(ok(rs).map((a) => a.totalScore)).toFixed(1)).join(' | ')} |`
+  );
+  lines.push(
+    `| 平均出力トークン | ${stat((rs) => avg(ok(rs).map((a) => a.tokenUsage?.output ?? 0)).toFixed(0)).join(' | ')} |`
+  );
+  lines.push(
+    `| 平均所要時間 | ${stat((rs) => `${(avg(rs.map((r) => r.ms)) / 1000).toFixed(1)}s`).join(' | ')} |`
+  );
+  lines.push(
+    `| 合計コスト | ${stat(
+      (rs) =>
+        `$${ok(rs)
+          .reduce((s, a) => s + (a.estimatedCost ?? 0), 0)
+          .toFixed(4)}`
+    ).join(' | ')} |`
+  );
   lines.push('');
 
   // 記事ごとの比較
