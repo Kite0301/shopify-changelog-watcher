@@ -5873,7 +5873,7 @@
       "officialActionRequired": true,
       "priority": {
         "merchant": {
-          "level": "now",
+          "level": "check",
           "action": 1,
           "relevance": 0.52389312,
           "areas": [
@@ -6495,7 +6495,7 @@
           "outOfScope": true
         },
         "developer": {
-          "level": "now",
+          "level": "check",
           "action": 0.8,
           "relevance": 0.5192,
           "areas": [
@@ -7468,7 +7468,7 @@
       "officialActionRequired": true,
       "priority": {
         "merchant": {
-          "level": "now",
+          "level": "check",
           "action": 1,
           "relevance": 0.6423155199999999,
           "areas": [
@@ -8331,7 +8331,7 @@
       "officialActionRequired": true,
       "priority": {
         "merchant": {
-          "level": "now",
+          "level": "check",
           "action": 1,
           "relevance": 0.8104815599999998,
           "areas": [
@@ -16829,7 +16829,7 @@
       "officialActionRequired": true,
       "priority": {
         "merchant": {
-          "level": "now",
+          "level": "check",
           "action": 1,
           "relevance": 0.52739288,
           "areas": [
@@ -17326,7 +17326,7 @@
       "officialActionRequired": true,
       "priority": {
         "merchant": {
-          "level": "now",
+          "level": "check",
           "action": 1,
           "relevance": 0.6682718,
           "areas": [
@@ -24862,7 +24862,7 @@
       "officialActionRequired": true,
       "priority": {
         "merchant": {
-          "level": "now",
+          "level": "check",
           "action": 1,
           "relevance": 0.6773024999999999,
           "areas": [
@@ -25983,7 +25983,7 @@
       "officialActionRequired": true,
       "priority": {
         "merchant": {
-          "level": "now",
+          "level": "check",
           "action": 1,
           "relevance": 0.5903225999999999,
           "areas": [
@@ -37646,7 +37646,7 @@
       "officialActionRequired": true,
       "priority": {
         "merchant": {
-          "level": "now",
+          "level": "check",
           "action": 1,
           "relevance": 0.7811080199999999,
           "areas": [
@@ -39517,7 +39517,7 @@
       "officialActionRequired": true,
       "priority": {
         "merchant": {
-          "level": "now",
+          "level": "check",
           "action": 1,
           "relevance": 0.77835128,
           "areas": [
@@ -40386,7 +40386,7 @@
       "officialActionRequired": true,
       "priority": {
         "merchant": {
-          "level": "now",
+          "level": "check",
           "action": 1,
           "relevance": 0.6701729999999999,
           "areas": [
@@ -49754,7 +49754,7 @@
       "officialActionRequired": true,
       "priority": {
         "merchant": {
-          "level": "now",
+          "level": "check",
           "action": 1,
           "relevance": 0.6209939999999999,
           "areas": [
@@ -50734,7 +50734,7 @@
       "officialActionRequired": true,
       "priority": {
         "merchant": {
-          "level": "now",
+          "level": "check",
           "action": 1,
           "relevance": 0.5583974399999999,
           "areas": [
@@ -51102,7 +51102,7 @@
       "officialActionRequired": true,
       "priority": {
         "merchant": {
-          "level": "now",
+          "level": "check",
           "action": 1,
           "relevance": 0.7416208799999999,
           "areas": [
@@ -52334,7 +52334,7 @@
       "officialActionRequired": true,
       "priority": {
         "merchant": {
-          "level": "now",
+          "level": "check",
           "action": 1,
           "relevance": 0.5712537599999999,
           "areas": [
@@ -52589,7 +52589,7 @@
       "officialActionRequired": true,
       "priority": {
         "merchant": {
-          "level": "now",
+          "level": "check",
           "action": 1,
           "relevance": 0.5224576,
           "areas": [
@@ -59257,7 +59257,7 @@
       "officialActionRequired": true,
       "priority": {
         "merchant": {
-          "level": "now",
+          "level": "check",
           "action": 1,
           "relevance": 0.73336144,
           "areas": [
@@ -61377,7 +61377,7 @@
       "officialActionRequired": true,
       "priority": {
         "merchant": {
-          "level": "now",
+          "level": "check",
           "action": 1,
           "relevance": 0.58480128,
           "areas": [
@@ -62244,7 +62244,7 @@
       "officialActionRequired": true,
       "priority": {
         "merchant": {
-          "level": "now",
+          "level": "check",
           "action": 1,
           "relevance": 0.52887989,
           "areas": [
@@ -62489,7 +62489,7 @@
       "officialActionRequired": true,
       "priority": {
         "merchant": {
-          "level": "now",
+          "level": "check",
           "action": 1,
           "relevance": 0.7574380799999999,
           "areas": [
@@ -63974,7 +63974,7 @@
       "officialActionRequired": true,
       "priority": {
         "merchant": {
-          "level": "now",
+          "level": "check",
           "action": 1,
           "relevance": 0.5605823999999999,
           "areas": [
@@ -72013,7 +72013,7 @@
       "officialActionRequired": true,
       "priority": {
         "merchant": {
-          "level": "now",
+          "level": "check",
           "action": 1,
           "relevance": 0.6895652400000001,
           "areas": [
@@ -72137,7 +72137,7 @@
       },
       "priority": {
         "merchant": {
-          "level": "now",
+          "level": "check",
           "action": 0.97,
           "relevance": 0.6251665,
           "areas": [
@@ -75150,7 +75150,7 @@
       "officialActionRequired": true,
       "priority": {
         "merchant": {
-          "level": "now",
+          "level": "check",
           "action": 1,
           "relevance": 0.5622220799999998,
           "areas": [

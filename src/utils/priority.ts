@@ -38,10 +38,12 @@ export function computePriority(
     const relevance =
       Math.max(...areaProbs) * notExcluded * (profile.requireJapan ? jev.appliesInJapan : 1);
 
+    // 別の立場向けの changelog の記事は「確認推奨」までにとどめる
     const level =
-      action >= ACTION_NOW && relevance >= RELEVANT
+      action >= ACTION_NOW && relevance >= RELEVANT && entry.source === profile.primarySource
         ? 'now'
         : (action >= ACTION_CHECK && relevance >= MAYBE_RELEVANT) ||
+            (action >= ACTION_NOW && relevance >= RELEVANT) ||
             (relevance >= STRONGLY_RELEVANT && impact >= HIGH_IMPACT_SCORE)
           ? 'check'
           : 'info';

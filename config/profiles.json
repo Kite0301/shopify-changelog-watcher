@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "description": "「関係あるか」を判定する立場の定義。question は Jev に渡す英語の質問（原文が英語のため）、label は表示用。areas のいずれかに当てはまれば関係あり、excludes に当てはまれば関係度を下げる",
+  "description": "「関係あるか」を判定する立場の定義。question は Jev に渡す英語の質問（原文が英語のため）、label は表示用。areas のいずれかに当てはまれば関係あり、excludes に当てはまれば関係度を下げる。primarySource 以外の changelog の記事は「確認推奨」までにとどめる（例: 開発者向けの Action required はマーチャントの対応ではない）",
   "profiles": {
     "merchant": {
       "label": "マーチャント（自社D2C）",
@@ -61,7 +61,8 @@
           "label": "海外販売のみ",
           "question": "Is this change only relevant to selling internationally, cross-border, or with Shopify Markets for multiple countries?"
         }
-      }
+      },
+      "primarySource": "shopify-changelog"
     },
     "developer": {
       "label": "開発者（おみせコネクト）",
@@ -114,7 +115,8 @@
           "label": "未使用の機能のみ",
           "question": "Is this change only relevant to POS UI extensions, Shopify Functions, checkout or customer account UI extensions, Hydrogen, Storefront API, Flow, or metafields and metaobjects?"
         }
-      }
+      },
+      "primarySource": "developer-changelog"
     }
   }
 }
