@@ -305,11 +305,3 @@ function generateMiniBar(score: number, max: number = 5): string {
   const empty = max - score;
   return `<div class="mini-bar">${'●'.repeat(filled)}${'○'.repeat(empty)}</div>`;
 }
-
-/**
- * タイトルを短縮（スライド表示用）
- */
-function shortenTitle(title: string, maxLength: number = 60): string {
-  if (title.length <= maxLength) return title;
-  return title.substring(0, maxLength) + '...';
-}

@@ -1,9 +1,12 @@
 import { loadDataStore, saveDataStore } from '../utils/file.js';
 import { createAllAnalyzers } from '../analyzer/factory.js';
 
+// 一部モデルの分析が失敗したエントリーを再分析する期間（収集日基準）
+const RETRY_WINDOW_DAYS = 7;
+
 /**
  * 未分析のエントリーを全モデルで分析して保存
- * ※過去エントリーは遡らず、新規未分析エントリーのみ対象
+ * ※過去エントリーは遡らず、新規未分析エントリーと、直近に収集され一部モデルの分析が欠けているエントリーのみ対象
  */
 async function main() {
   try {
@@ -17,8 +20,13 @@ async function main() {
     const dataStore = await loadDataStore();
     console.log(`✓ Loaded ${dataStore.entries.length} entries\n`);
 
-    // analyses が全くないエントリーのみを対象（完全未分析）
-    const unanalyzedEntries = dataStore.entries.filter((entry) => !entry.analyses);
+    const retryCutoff = Date.now() - RETRY_WINDOW_DAYS * 24 * 60 * 60 * 1000;
+    const isMissingAnalysis = (entry: (typeof dataStore.entries)[number]) => {
+      if (!entry.analyses) return true;
+      if (!entry.collectedAt || new Date(entry.collectedAt).getTime() < retryCutoff) return false;
+      return analyzers.some((analyzer) => !entry.analyses?.[analyzer.getModelName()]);
+    };
+    const unanalyzedEntries = dataStore.entries.filter(isMissingAnalysis);
 
     if (unanalyzedEntries.length === 0) {
       console.log('✓ All entries are already analyzed');
@@ -40,12 +48,12 @@ async function main() {
 
       console.log(`\n[${progress}] Analyzing: ${entry.title.substring(0, 80)}...`);
 
-      // analyses を初期化
-      entry.analyses = {};
+      entry.analyses ??= {};
 
-      // 各アナライザーで分析
+      // 分析結果がないモデルのみで分析
       for (const analyzer of analyzers) {
         const modelName = analyzer.getModelName();
+        if (entry.analyses[modelName]) continue;
 
         try {
           console.log(`  → ${modelName}: Analyzing...`);

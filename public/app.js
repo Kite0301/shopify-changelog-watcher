@@ -82,34 +82,18 @@ function updateStats() {
 }
 
 /**
- * エントリーから分析結果を取得（analyses または analysis から）
+ * エントリーから分析結果を取得（最初のモデルの結果をデフォルトとする）
  */
 function getAnalysis(entry) {
-  // 新形式: analyses から取得
-  if (entry.analyses) {
-    const models = Object.keys(entry.analyses);
-    if (models.length > 0) {
-      // 最初のモデルの結果を返す（デフォルト）
-      return entry.analyses[models[0]];
-    }
-  }
-  // 旧形式: analysis を返す（後方互換性）
-  return entry.analysis || null;
+  const analyses = Object.values(entry.analyses || {});
+  return analyses[0] || null;
 }
 
 /**
  * エントリーから全モデルの分析結果を取得
  */
 function getAllAnalyses(entry) {
-  if (entry.analyses) {
-    return entry.analyses;
-  }
-  // 旧形式の場合
-  if (entry.analysis) {
-    const model = entry.analysis.model || 'claude-sonnet-4-5';
-    return { [model]: entry.analysis };
-  }
-  return {};
+  return entry.analyses || {};
 }
 
 /**
@@ -380,8 +364,6 @@ function getModelDisplayName(modelName) {
   const displayNames = {
     'claude-sonnet-4-5': 'Claude 4.5',
     'gemini-2.5-flash': 'Gemini 2.5',
-    'gemini-1.5-flash': 'Gemini 1.5',
-    'gpt-4o': 'GPT-4o',
   };
   return displayNames[modelName] || modelName;
 }

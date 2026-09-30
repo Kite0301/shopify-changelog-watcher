@@ -1,30 +1,27 @@
-import fs from 'fs/promises';
-import path from 'path';
 import { GeminiAnalyzer } from '../analyzer/gemini.js';
+import { loadDataStore, saveDataStore } from '../utils/file.js';
 
-const DATA_FILE = path.join(process.cwd(), 'data', 'entries.json');
-const ENTRIES_TO_BACKFILL = 10;
+// 対象とする直近エントリー数（引数で指定可能: npm run backfill:gemini -- 60）
+const ENTRIES_TO_BACKFILL = Number(process.argv[2] ?? 10);
 
 /**
- * 直近N件のエントリーにGemini分析を追加
+ * 直近N件のエントリーのうち、Gemini分析がないものに分析を追加
  */
 async function main() {
   try {
     console.log('=== Backfill Gemini Analysis for Recent Entries ===\n');
 
-    // データを直接読み込み（スキーマ検証なし）
+    const analyzer = new GeminiAnalyzer();
+    const modelName = analyzer.getModelName();
+
     console.log('Loading data...');
-    const content = await fs.readFile(DATA_FILE, 'utf-8');
-    const dataStore = JSON.parse(content);
+    const dataStore = await loadDataStore();
     console.log(`✓ Loaded ${dataStore.entries.length} entries\n`);
 
     // 直近N件でGemini分析がないエントリーを探す
     const entriesToBackfill = dataStore.entries
       .slice(0, ENTRIES_TO_BACKFILL)
-      .filter((entry: any) => {
-        if (!entry.analyses) return false;
-        return !entry.analyses['gemini-2.5-flash'];
-      });
+      .filter((entry) => entry.analyses && !entry.analyses[modelName]);
 
     if (entriesToBackfill.length === 0) {
       console.log('✓ All recent entries already have Gemini analysis');
@@ -33,7 +30,6 @@ async function main() {
 
     console.log(`Found ${entriesToBackfill.length} entries to backfill\n`);
 
-    const analyzer = new GeminiAnalyzer();
     let successCount = 0;
     let failedCount = 0;
     let totalCost = 0;
@@ -49,11 +45,7 @@ async function main() {
       try {
         const result = await analyzer.analyzeEntry(entry);
 
-        // analyses に追加
-        if (!entry.analyses) {
-          entry.analyses = {};
-        }
-        entry.analyses['gemini-2.5-flash'] = result;
+        entry.analyses![modelName] = result;
 
         console.log(`  ✓ Score: ${result.totalScore}/20`);
         if (result.tokenUsage) {
@@ -67,12 +59,12 @@ async function main() {
         successCount++;
 
         // 1件ごとに保存
-        await fs.writeFile(DATA_FILE, JSON.stringify(dataStore, null, 2), 'utf-8');
+        await saveDataStore(dataStore);
 
         // API制限を考慮して少し待機（無料枠: 10 RPM）
         if (i < entriesToBackfill.length - 1) {
           console.log(`  Waiting 6s for rate limit...`);
-          await new Promise(resolve => setTimeout(resolve, 6000));
+          await new Promise((resolve) => setTimeout(resolve, 6000));
         }
       } catch (error) {
         console.error(`  ✗ Failed: ${error instanceof Error ? error.message : String(error)}`);

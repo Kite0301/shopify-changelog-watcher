@@ -1,4 +1,5 @@
 import { loadEvaluationCriteria, generateScoreDescription } from '../utils/config.js';
+import { z } from 'zod';
 import type { ChangelogEntry } from '../types/index.js';
 
 /**
@@ -59,4 +60,39 @@ ${technicalDesc}
     "technicalImportance": 1-5の数値
   }
 }`;
+}
+
+const AnalysisResponseSchema = z.object({
+  titleJa: z.string().optional(),
+  summarizedJa: z.string(),
+  scores: z.object({
+    merchantImpact: z.number().int().min(1).max(5),
+    partnerImpact: z.number().int().min(1).max(5),
+    japanRelevance: z.number().int().min(1).max(5),
+    technicalImportance: z.number().int().min(1).max(5),
+  }),
+});
+
+export type AnalysisResponse = z.infer<typeof AnalysisResponseSchema>;
+
+/**
+ * モデルの応答テキストをパースし、出力形式どおりか検証する
+ */
+export function parseAnalysisResponse(responseText: string): AnalysisResponse {
+  let jsonText = responseText.trim();
+  // ```json ... ``` の形式の場合は中身を抽出
+  const jsonMatch = jsonText.match(/```json\s*([\s\S]*?)\s*```/);
+  if (jsonMatch) {
+    jsonText = jsonMatch[1].trim();
+  }
+
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(jsonText);
+  } catch (error) {
+    throw new Error(
+      `Failed to parse JSON: ${error instanceof Error ? error.message : String(error)}\n${jsonText}`
+    );
+  }
+  return AnalysisResponseSchema.parse(parsed);
 }

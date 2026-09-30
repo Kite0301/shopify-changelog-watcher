@@ -1,6 +1,6 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { getAnthropicApiKey } from '../utils/env.js';
-import { buildAnalysisPrompt } from './prompt.js';
+import { buildAnalysisPrompt, parseAnalysisResponse } from './prompt.js';
 import type { ChangelogEntry } from '../types/index.js';
 import type { Analyzer, AnalysisResult } from './interface.js';
 import { toISOString } from '../utils/date.js';
@@ -44,19 +44,9 @@ export class ClaudeAnalyzer implements Analyzer {
     });
 
     // レスポンスからテキストを抽出
-    const responseText =
-      message.content[0].type === 'text' ? message.content[0].text : '';
+    const responseText = message.content[0].type === 'text' ? message.content[0].text : '';
 
-    // JSONブロックを削除してパース
-    let jsonText = responseText.trim();
-    // ```json ... ``` の形式の場合は中身を抽出
-    const jsonMatch = jsonText.match(/```json\s*([\s\S]*?)\s*```/);
-    if (jsonMatch) {
-      jsonText = jsonMatch[1];
-    }
-
-    // JSONをパース
-    const parsed = JSON.parse(jsonText);
+    const parsed = parseAnalysisResponse(responseText);
 
     // スコアの合計を計算
     const totalScore =

@@ -1,6 +1,6 @@
 import { GoogleGenAI } from '@google/genai';
 import { getGeminiApiKey } from '../utils/env.js';
-import { buildAnalysisPrompt } from './prompt.js';
+import { buildAnalysisPrompt, parseAnalysisResponse } from './prompt.js';
 import type { ChangelogEntry } from '../types/index.js';
 import type { Analyzer, AnalysisResult } from './interface.js';
 import { toISOString } from '../utils/date.js';
@@ -12,6 +12,27 @@ const PRICING = {
   INPUT_PER_MILLION: 0.0, // 無料枠内なら $0
   OUTPUT_PER_MILLION: 0.0, // 無料枠内なら $0
 };
+
+// 混雑(503)・レート制限(429)・通信エラー時の再試行間隔
+const RETRY_DELAYS_MS = [10_000, 30_000];
+
+function isRetryableError(error: unknown): boolean {
+  const message = error instanceof Error ? error.message : String(error);
+  return /"code":\s*(429|503)|UNAVAILABLE|RESOURCE_EXHAUSTED|fetch failed/.test(message);
+}
+
+async function withRetry<T>(fn: () => Promise<T>): Promise<T> {
+  for (let attempt = 0; ; attempt++) {
+    try {
+      return await fn();
+    } catch (error) {
+      if (attempt >= RETRY_DELAYS_MS.length || !isRetryableError(error)) throw error;
+      const delay = RETRY_DELAYS_MS[attempt];
+      console.warn(`     Gemini API busy, retrying in ${delay / 1000}s...`);
+      await new Promise((resolve) => setTimeout(resolve, delay));
+    }
+  }
+}
 
 export class GeminiAnalyzer implements Analyzer {
   private client: GoogleGenAI;
@@ -34,15 +55,17 @@ export class GeminiAnalyzer implements Analyzer {
   async analyzeEntry(entry: ChangelogEntry): Promise<AnalysisResult> {
     const prompt = await buildAnalysisPrompt(entry);
 
-    const response = await this.client.models.generateContent({
-      model: this.model,
-      contents: prompt,
-      config: {
-        temperature: 0.2,
-        maxOutputTokens: 4096, // 十分な余裕を持たせる
-        responseMimeType: 'application/json',
-      },
-    });
+    const response = await withRetry(() =>
+      this.client.models.generateContent({
+        model: this.model,
+        contents: prompt,
+        config: {
+          temperature: 0.2,
+          maxOutputTokens: 4096, // 十分な余裕を持たせる
+          responseMimeType: 'application/json',
+        },
+      })
+    );
 
     // candidatesからテキストを抽出
     if (!response.candidates || response.candidates.length === 0) {
@@ -62,31 +85,14 @@ export class GeminiAnalyzer implements Analyzer {
       throw new Error('Gemini API returned no content parts');
     }
 
-    const responseText = candidate.content.parts.map((part: any) => part.text).join('');
+    const responseText = candidate.content.parts.map((part) => part.text ?? '').join('');
 
     if (!responseText || responseText.trim() === '') {
       console.error('Full response object:', JSON.stringify(response, null, 2));
       throw new Error('Gemini API returned empty text');
     }
 
-    // JSONをパース
-    let jsonText = responseText.trim();
-
-    // 念のため```json ... ```の形式もサポート
-    const jsonMatch = jsonText.match(/```json\s*([\s\S]*?)\s*```/);
-    if (jsonMatch) {
-      jsonText = jsonMatch[1].trim();
-    }
-
-    let parsed;
-    try {
-      parsed = JSON.parse(jsonText);
-    } catch (error) {
-      console.error('Failed to parse Gemini response:', jsonText);
-      throw new Error(
-        `Failed to parse JSON: ${error instanceof Error ? error.message : String(error)}`
-      );
-    }
+    const parsed = parseAnalysisResponse(responseText);
 
     // スコアの合計を計算
     const totalScore =

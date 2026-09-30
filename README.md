@@ -16,10 +16,10 @@ Shopify公式のchangelogを自動収集し、AI分析により日本のマー�
 ## 機能
 
 - 複数のShopify changelog（通常版・開発者版）からRSS経由で自動収集
-- Claude AIによる日本語要約と重要度評価
+- Claude（Sonnet 4.5）と Gemini（2.5 Flash）の2モデルによる日本語タイトル・要約と重要度評価
 - GitHub Pagesによる収集データの可視化
-- 週次レポートの自動生成（※未実装）
-- GitHub Actionsによる完全自動化
+- 週次レポート（Markdown / Marpスライド / PDF）の自動生成
+- GitHub ActionsとSlack通知による完全自動化
 
 ## 対象リソース
 
@@ -30,30 +30,29 @@ Shopify公式のchangelogを自動収集し、AI分析により日本のマー�
 
 ```
 shopify-changelog-watcher/
-├── .github/
-│   └── workflows/          # GitHub Actionsワークフロー
+├── .github/workflows/      # GitHub Actions（日次取得・週次レポート・Pagesデプロイ）
 ├── config/
-│   └── evaluation-criteria.json  # AI評価基準
+│   └── evaluation-criteria.json  # AI評価基準・分析対象期間
 ├── data/
 │   ├── entries.json        # 収集した全エントリー（2025/10/01以降）
 │   ├── entries-archive-2025-09.json  # アーカイブ（2025/09以前）
-│   └── reports/            # 週次レポート
-├── public/                 # GitHub Pages用
-│   ├── index.html          # ビューアページ
-│   ├── styles.css          # スタイルシート
-│   └── app.js              # JavaScriptロジック
+│   └── reports/            # 週次レポート（YYYY-Www.md / -slides.md / -slides.pdf）
+├── docs/                   # 開発記事など
+├── public/                 # GitHub Pages用ビューア（index.html / app.js / styles.css）
 ├── src/
-│   ├── fetcher/            # RSS取得モジュール
-│   ├── analyzer/           # AI分析モジュール
-│   ├── reporter/           # レポート生成モジュール
-│   ├── types/              # TypeScript型定義
-│   ├── utils/              # ユーティリティ
-│   └── scripts/            # 実行スクリプト
-└── templates/
-    └── weekly-report.md    # レポートテンプレート
+│   ├── analyzer/           # AI分析（Claude / Gemini / 共通プロンプト）
+│   ├── fetcher/            # RSS取得
+│   ├── reporters/          # 週次レポート生成（Markdown / Marp）
+│   ├── scripts/            # 実行スクリプト（npm scripts から呼び出し）
+│   ├── types/              # 型定義（zodスキーマ）
+│   └── utils/              # ユーティリティ
+└── themes/
+    └── shopify-changelog.css  # Marpスライド用テーマ
 ```
 
 ## セットアップ
+
+Node.js 22 以上が必要です。
 
 ### 1. 依存関係のインストール
 
@@ -69,33 +68,41 @@ npm install
 cp .env.example .env
 ```
 
-`.env` ファイルを編集：
-
 ```env
-ANTHROPIC_API_KEY=your_actual_api_key_here
+ANTHROPIC_API_KEY=your_anthropic_api_key
+GEMINI_API_KEY=your_gemini_api_key
 ```
 
-Anthropic APIキーは [こちら](https://console.anthropic.com/) から取得できます。
-
-### 3. ビルド
-
-```bash
-npm run build
-```
+- Anthropic APIキー: https://console.anthropic.com/
+- Gemini APIキー: https://aistudio.google.com/app/apikey
 
 ## 使い方
 
-### 手動実行
+スクリプトは `tsx` で直接実行するため、ビルドは不要です。
 
 ```bash
-# RSS取得
+# RSS取得（新規エントリーを data/entries.json に追加）
 npm run fetch
 
-# AI分析
+# AI分析（未分析エントリー＋直近7日間で一部モデルの分析が欠けたエントリー）
 npm run analyze
 
-# 週次レポート生成
-npm run report
+# 週次レポート生成（引数なしで前週、例: npm run report:weekly 2026-W39）
+npm run report:weekly
+
+# スライドのPDF化
+npm run slides:pdf data/reports/2026-W39-slides.md
+```
+
+### 開発用
+
+```bash
+npm run typecheck        # 型チェック
+npm run lint             # ESLint
+npm run format           # Prettier
+npm run analyze:one      # 未分析エントリー1件だけを分析
+npm run test:gemini      # Gemini APIの疎通確認（保存しない）
+npm run backfill:gemini -- 60  # 直近60件のうちGemini分析がないものを補完
 ```
 
 ### GitHub Actionsでの自動実行
@@ -104,19 +111,19 @@ npm run report
 
 GitHubリポジトリの **Settings > Secrets and variables > Actions** で以下のシークレットを設定：
 
-- `ANTHROPIC_API_KEY` - Anthropic APIキー（AI分析用）
+- `ANTHROPIC_API_KEY` - Anthropic APIキー
+- `GEMINI_API_KEY` - Gemini APIキー
 - `SLACK_WEBHOOK_URL` - Slack Incoming Webhook URL（通知用）
 
 #### 2. 自動実行スケジュール
 
-- **日次**: RSS取得 + データ更新（毎日9:00 JST）
-  - 新規エントリーがあればSlack通知
-  - 自動的に `data/entries.json` を更新してコミット
-- **週次**: レポート生成（毎週月曜10:00 JST）※未実装
+| ワークフロー | タイミング | 内容 |
+|---|---|---|
+| Daily RSS Fetch | 毎日 9:00 JST | RSS取得 → AI分析 → `data/entries.json` をコミット → Slack通知 |
+| Weekly Report Generation | 毎週月曜 9:30 JST | 前週のレポート・スライド・PDFを生成 → `data/reports/` をコミット → Slack通知 |
+| Deploy to GitHub Pages | `public/` 更新時 | ビューアをデプロイ |
 
-#### 3. 手動実行
-
-GitHubリポジトリの **Actions** タブから "Daily RSS Fetch" を選択し、"Run workflow" で実行可能
+いずれも **Actions** タブから "Run workflow" で手動実行できます（週次レポートは週番号を指定可能）。
 
 ## データビューア（GitHub Pages）
 
@@ -156,22 +163,21 @@ GitHub Actions を使って自動デプロイされます。
 
 ## 評価基準
 
-AIは以下の4つの軸で各エントリーを1-5点で評価します（`config/evaluation-criteria.json` で定義）：
+各モデルが以下の4つの軸で各エントリーを1-5点（合計20点満点）で評価します（`config/evaluation-criteria.json` で定義）：
 
 - **マーチャント影響度**: 日本のマーチャントへの影響
 - **パートナー影響度**: 開発者・代理店への影響
 - **日本市場関連性**: 日本での利用可能性・重要性
 - **技術的重要度**: 破壊的変更や重要な機能追加の有無
 
-合計スコア8点以上のエントリーが週次レポートに含まれます。
+週次レポートはClaudeのスコアをもとに、超重要（12点以上）・重要（8-11点）・通常（8点未満）に分類します。
 
 ## コスト管理
 
-- AI分析は2025/10/01以降のエントリーのみが対象（コスト削減のため）
+- AI分析は2025/10/01以降のエントリーのみが対象（`config/evaluation-criteria.json` の `analysis.startDate`）
 - 古いエントリーは `data/entries-archive-2025-09.json` にアーカイブ
-- 推定月間コスト: 約$0.40（Claude Sonnet 4.5使用）
-  - 入力トークン: $3/1M
-  - 出力トークン: $15/1M
+- Claude Sonnet 4.5: 入力 $3 / 出力 $15（100万トークンあたり）。1エントリーあたり約 $0.007
+- Gemini 2.5 Flash: 無料枠内で利用（10 RPM / 250 RPD）
 
 ## ライセンス
 
