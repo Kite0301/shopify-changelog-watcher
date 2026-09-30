@@ -1,6 +1,6 @@
 {
   "version": 4,
-  "description": "「関係あるか」を判定する立場の定義。question は Jev に渡す英語の質問（原文が英語のため）、label は表示用。areas は関心のある領域（直接使っていなくても関連領域なら拾う）、excludes は明らかに無関係なもの（当てはまれば関係度を下げる）。primarySource 以外の changelog の記事は「確認推奨」までにとどめる（例: 開発者向けの Action required はマーチャントの対応ではない）",
+  "description": "「関係あるか」を判定する立場の定義。question は Jev に渡す英語の質問（原文が英語のため）、label は表示用。areas は関心のある領域（直接使っていなくても関連領域なら拾う）、excludes は明らかに無関係なもの（当てはまれば関係度を下げる）。primarySource 以外の changelog の記事は「確認推奨」までにとどめる（例: 開発者向けの Action required はマーチャントの対応ではない）。broad な領域は関連・確認推奨の判定にだけ使い、「今すぐ対応」には使わない",
   "profiles": {
     "merchant": {
       "label": "マーチャント（自社D2C）",
@@ -111,7 +111,8 @@
         },
         "appPlatform": {
           "label": "アプリ開発全般",
-          "question": "Does this change affect Shopify app development in general, such as the Admin API, app extensions, Shopify CLI, the Dev Dashboard, or app distribution?"
+          "question": "Does this change affect Shopify app development in general, such as the Admin API, app extensions, Shopify CLI, the Dev Dashboard, or app distribution?",
+          "broad": true
         }
       },
       "primarySource": "developer-changelog"

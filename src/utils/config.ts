@@ -73,7 +73,10 @@ const ProfilesSchema = z.object({
       summary: z.string(),
       requireJapan: z.boolean(),
       primarySource: z.enum(['shopify-changelog', 'developer-changelog']),
-      areas: z.record(z.string(), z.object({ label: z.string(), question: z.string() })),
+      areas: z.record(
+        z.string(),
+        z.object({ label: z.string(), question: z.string(), broad: z.boolean().default(false) })
+      ),
       excludes: z
         .record(z.string(), z.object({ label: z.string(), question: z.string() }))
         .default({}),

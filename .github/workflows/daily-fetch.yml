@@ -87,7 +87,13 @@ jobs:
           NEW_COUNT=${{ steps.fetch.outputs.new_entries }}
 
           # jqを使用してタイトルを抽出し、改行区切りで結合
-          TITLES=$(jq -r --argjson count "$NEW_COUNT" '.entries[:$count] | .[] | "• " + .title' data/entries.json | head -n 10)
+          # 立場ごとの優先度で印を付け、日本語タイトルがあれば使う（🚨 今すぐ対応 / 👀 確認推奨）
+          TITLES=$(jq -r --argjson count "$NEW_COUNT" '
+            .entries[:$count] | .[]
+            | ([.priority // {} | .[] | .level]) as $levels
+            | (if ($levels | index("now")) then "🚨 " elif ($levels | index("check")) then "👀 " else "" end) as $mark
+            | ((.analyses // {} | to_entries | max_by(.value.analyzedAt) | .value.titleJa?) // .title) as $title
+            | "• " + $mark + $title' data/entries.json | head -n 10)
 
           # Slack用にフォーマット（複数行を\nでエスケープ）
           TITLES_FORMATTED=$(echo "$TITLES" | sed ':a;N;$!ba;s/\n/\\n/g')

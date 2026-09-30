@@ -17,7 +17,7 @@ Shopify公式のchangelogを自動収集し、AI分析により日本のマー�
 
 - 複数のShopify changelog（通常版・開発者版）からRSS経由で自動収集
 - Claude（Opus 5.5）による日本語タイトル・要約と重要度評価（Structured Outputs で形式を保証）
-- [Jev](https://typesafe.ai)（判定専用モデル）による重要度・要対応の判定を記録（評価中。本番のスコアには未使用）
+- 立場別（マーチャント／開発者）の優先度（🚨 今すぐ対応 / 👀 確認推奨 / 参考）と関連領域の判定。[Jev](https://typesafe.ai)（判定専用モデル）と Shopify 公式の「Action required」ラベルを使用
 - GitHub Pagesによる収集データの可視化
 - 週次レポート（Markdown / Marpスライド / PDF）の自動生成
 - GitHub ActionsとSlack通知による完全自動化
@@ -106,6 +106,7 @@ npm run lint             # ESLint
 npm run format           # Prettier
 npm run compare:models -- 20 claude-opus-5-5 claude-sonnet-5-5  # 直近20件で複数モデルを比較（保存しない、tmp/ に出力）
 npm run compare:jev      # 保存済みのJevの判定とClaudeの分析を突き合わせ（API呼び出しなし）
+npm run prioritize       # 立場別の優先度を計算し直す（API呼び出しなし）
 ```
 
 ### GitHub Actionsでの自動実行
@@ -123,6 +124,7 @@ GitHubリポジトリの **Settings > Secrets and variables > Actions** で以�
 | ワークフロー | タイミング | 内容 |
 |---|---|---|
 | Daily RSS Fetch | 毎日 9:00 JST | RSS取得 → AI分析 → Jev判定 → `data/entries.json` をコミット → Slack通知 |
+| Jev Decisions | 手動 | 関心領域の設定を変えたときに Jev の判定と優先度を計算し直す |
 | Compare Models | 手動 | 直近の記事を複数モデルで分析して比較（成果物としてMarkdownを保存） |
 | Weekly Report Generation | 毎週月曜 9:30 JST | 前週のレポート・スライド・PDFを生成 → `data/reports/` をコミット → Slack通知 |
 | Deploy to GitHub Pages | `public/` 更新時 | ビューアをデプロイ |
@@ -164,6 +166,17 @@ GitHub Actions を使って自動デプロイされます。
 - 手動実行も可能：Actions タブから "Deploy to GitHub Pages" を実行
 
 **注意**: `data/entries.json` が更新されても再デプロイは不要です。ビューアは実行時にGitHub rawコンテンツから最新のJSONを読み込みます。
+
+## 立場別の優先度
+
+`config/profiles.json` に「マーチャント（自社D2C）」「開発者（おみせコネクト）」の2つの立場と、それぞれの関心領域を定義しています。直接使っていない機能でも、関連する領域の情報は拾う方針です。
+
+- **対応が必要か**: 開発者向けの記事は Shopify 公式の「Action required」ラベル（RSSにはないため記事ページから取得）、それ以外は Jev の確率
+- **関係度**: 関心領域ごとの確率の最大値 ×（明らかに無関係＝POSのみ・海外販売のみに当てはまらない確率）×（マーチャントは日本のストアに適用される確率）
+- **優先度**: 🚨 今すぐ対応（対応が必要で、具体的な関心領域に当てはまる、自分の立場向けの記事）/ 👀 確認推奨（対応が必要かもしれない、または関係が強く影響も大きい）/ 参考
+- Claude が「対象・対応・期限」を日本語で書き出し、ビューア・週次レポート・Slack に表示します
+
+関心領域を変えたら `version` を上げて、Actions の "Jev Decisions" を実行すると全件を判定し直します（約 $0.06）。
 
 ## 評価基準
 
