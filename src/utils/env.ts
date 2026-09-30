@@ -1,7 +1,7 @@
 import { config } from 'dotenv';
 
 // .envファイルを読み込み
-config();
+config({ quiet: true });
 
 /**
  * 環境変数を取得する（必須）
@@ -28,9 +28,3 @@ export function getAnthropicApiKey(): string {
   return getRequiredEnv('ANTHROPIC_API_KEY');
 }
 
-/**
- * Gemini API キーを取得
- */
-export function getGeminiApiKey(): string {
-  return getRequiredEnv('GEMINI_API_KEY');
-}

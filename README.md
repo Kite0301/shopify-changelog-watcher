@@ -16,7 +16,7 @@ Shopify公式のchangelogを自動収集し、AI分析により日本のマー�
 ## 機能
 
 - 複数のShopify changelog（通常版・開発者版）からRSS経由で自動収集
-- Claude（Sonnet 4.5）と Gemini（2.5 Flash）の2モデルによる日本語タイトル・要約と重要度評価
+- Claude（Opus 5.5）による日本語タイトル・要約と重要度評価（Structured Outputs で形式を保証）
 - GitHub Pagesによる収集データの可視化
 - 週次レポート（Markdown / Marpスライド / PDF）の自動生成
 - GitHub ActionsとSlack通知による完全自動化
@@ -40,7 +40,7 @@ shopify-changelog-watcher/
 ├── docs/                   # 開発記事など
 ├── public/                 # GitHub Pages用ビューア（index.html / app.js / styles.css）
 ├── src/
-│   ├── analyzer/           # AI分析（Claude / Gemini / 共通プロンプト）
+│   ├── analyzer/           # AI分析（Claude / 共通プロンプト）
 │   ├── fetcher/            # RSS取得
 │   ├── reporters/          # 週次レポート生成（Markdown / Marp）
 │   ├── scripts/            # 実行スクリプト（npm scripts から呼び出し）
@@ -70,11 +70,10 @@ cp .env.example .env
 
 ```env
 ANTHROPIC_API_KEY=your_anthropic_api_key
-GEMINI_API_KEY=your_gemini_api_key
+# ANALYSIS_MODEL=claude-sonnet-5-5  # 省略時は claude-opus-5-5
 ```
 
-- Anthropic APIキー: https://console.anthropic.com/
-- Gemini APIキー: https://aistudio.google.com/app/apikey
+Anthropic APIキーは https://console.anthropic.com/ から取得できます。
 
 ## 使い方
 
@@ -84,7 +83,7 @@ GEMINI_API_KEY=your_gemini_api_key
 # RSS取得（新規エントリーを data/entries.json に追加）
 npm run fetch
 
-# AI分析（未分析エントリー＋直近7日間で一部モデルの分析が欠けたエントリー）
+# AI分析（未分析のエントリー。前回失敗したものも再分析）
 npm run analyze
 
 # 週次レポート生成（引数なしで前週、例: npm run report:weekly 2026-W39）
@@ -100,9 +99,7 @@ npm run slides:pdf data/reports/2026-W39-slides.md
 npm run typecheck        # 型チェック
 npm run lint             # ESLint
 npm run format           # Prettier
-npm run analyze:one      # 未分析エントリー1件だけを分析
-npm run test:gemini      # Gemini APIの疎通確認（保存しない）
-npm run backfill:gemini -- 60  # 直近60件のうちGemini分析がないものを補完
+npm run compare:models -- 20 claude-opus-5-5 claude-sonnet-5-5  # 直近20件で複数モデルを比較（保存しない、tmp/ に出力）
 ```
 
 ### GitHub Actionsでの自動実行
@@ -112,7 +109,6 @@ npm run backfill:gemini -- 60  # 直近60件のうちGemini分析がないもの
 GitHubリポジトリの **Settings > Secrets and variables > Actions** で以下のシークレットを設定：
 
 - `ANTHROPIC_API_KEY` - Anthropic APIキー
-- `GEMINI_API_KEY` - Gemini APIキー
 - `SLACK_WEBHOOK_URL` - Slack Incoming Webhook URL（通知用）
 
 #### 2. 自動実行スケジュール
@@ -170,14 +166,14 @@ GitHub Actions を使って自動デプロイされます。
 - **日本市場関連性**: 日本での利用可能性・重要性
 - **技術的重要度**: 破壊的変更や重要な機能追加の有無
 
-週次レポートはClaudeのスコアをもとに、超重要（12点以上）・重要（8-11点）・通常（8点未満）に分類します。
+週次レポートは各エントリーの最新の分析結果をもとに、超重要（12点以上）・重要（8-11点）・通常（8点未満）に分類します。
 
 ## コスト管理
 
 - AI分析は2025/10/01以降のエントリーのみが対象（`config/evaluation-criteria.json` の `analysis.startDate`）
 - 古いエントリーは `data/entries-archive-2025-09.json` にアーカイブ
-- Claude Sonnet 4.5: 入力 $3 / 出力 $15（100万トークンあたり）。1エントリーあたり約 $0.007
-- Gemini 2.5 Flash: 無料枠内で利用（10 RPM / 250 RPD）
+- Claude Opus 5.5: 入力 $4 / 出力 $20（100万トークンあたり）。effort `low` で1エントリーあたり約 $0.01
+- モデルはリポジトリ変数 `ANALYSIS_MODEL`（Settings > Secrets and variables > Actions > Variables）で切り替え可能。過去の分析結果は当時のモデルのまま残ります
 
 ## ライセンス
 

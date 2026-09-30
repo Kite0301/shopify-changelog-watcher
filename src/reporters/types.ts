@@ -28,7 +28,7 @@ export interface WeeklyReportStats {
 }
 
 /**
- * スコア付きエントリー（Claude Sonnet 4.5の分析結果）
+ * スコア付きエントリー（AIの分析結果）
  */
 export interface ScoredEntry {
   entry: ChangelogEntry;
@@ -43,6 +43,7 @@ export interface ScoredEntry {
       technicalImportance: number;
     };
     analyzedAt: string;
+    model: string;
   };
 }
 

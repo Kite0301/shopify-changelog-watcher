@@ -38,6 +38,7 @@ async function loadData() {
 
     filteredEntries = [...allEntries];
 
+    populateModelFilter();
     updateStats();
     loadingEl.style.display = 'none';
   } catch (error) {
@@ -64,6 +65,20 @@ function setupEventListeners() {
 }
 
 /**
+ * データに含まれるモデルでモデルフィルターの選択肢を作る
+ */
+function populateModelFilter() {
+  const modelFilter = document.getElementById('modelFilter');
+  const models = new Set(allEntries.flatMap((entry) => Object.keys(entry.analyses || {})));
+  for (const model of [...models].sort().reverse()) {
+    const option = document.createElement('option');
+    option.value = model;
+    option.textContent = getModelDisplayName(model);
+    modelFilter.appendChild(option);
+  }
+}
+
+/**
  * 統計情報を更新
  */
 function updateStats() {
@@ -82,10 +97,11 @@ function updateStats() {
 }
 
 /**
- * エントリーから分析結果を取得（最初のモデルの結果をデフォルトとする）
+ * エントリーの代表となる分析結果を取得（最も新しく分析されたもの）
  */
 function getAnalysis(entry) {
   const analyses = Object.values(entry.analyses || {});
+  analyses.sort((a, b) => b.analyzedAt.localeCompare(a.analyzedAt));
   return analyses[0] || null;
 }
 
@@ -167,8 +183,8 @@ function createEntryCard(entry) {
   const analyses = getAllAnalyses(entry);
   const modelNames = Object.keys(analyses);
 
-  // デフォルトで最初のモデルを表示
-  const defaultAnalysis = modelNames.length > 0 ? analyses[modelNames[0]] : null;
+  // 最も新しい分析をスコア表示に使う
+  const defaultAnalysis = getAnalysis(entry);
   const totalScore = defaultAnalysis?.totalScore ?? 0;
 
   // スコアレベルを判定
@@ -361,11 +377,10 @@ function createMultiAnalysisHTML(analyses, entryId) {
  * モデル名を表示用に変換
  */
 function getModelDisplayName(modelName) {
-  const displayNames = {
-    'claude-sonnet-4-5': 'Claude 4.5',
-    'gemini-2.5-flash': 'Gemini 2.5',
-  };
-  return displayNames[modelName] || modelName;
+  // 例: claude-opus-5-5 → Claude Opus 5.5
+  const [vendor, family, ...version] = modelName.split('-');
+  const capitalize = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+  return [capitalize(vendor), capitalize(family || ''), version.join('.')].filter(Boolean).join(' ');
 }
 
 /**

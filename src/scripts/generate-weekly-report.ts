@@ -14,8 +14,8 @@ import {
   ReportGeneratorOptions,
 } from '../reporters/types.js';
 import { ChangelogEntry } from '../types/index.js';
+import { getPrimaryAnalysis } from '../utils/analysis.js';
 
-const CLAUDE_MODEL = 'claude-sonnet-4-5';
 const DEFAULT_OUTPUT_DIR = path.join(process.cwd(), 'data', 'reports');
 
 /**
@@ -77,7 +77,7 @@ function buildWeeklyReport(entries: ChangelogEntry[], weekNumber: string): Weekl
   // 指定週のエントリーを抽出
   const weekEntries = filterEntriesByWeek(entries, weekNumber);
 
-  // Claude Sonnet 4.5の分析結果を持つエントリーのみスコア化
+  // 分析結果を持つエントリーのみスコア化
   const scoredEntries = scoreEntries(weekEntries);
 
   // 優先度別にグループ化
@@ -122,17 +122,14 @@ function filterEntriesByWeek(entries: ChangelogEntry[], weekNumber: string): Cha
 }
 
 /**
- * エントリーをスコア付き形式に変換（Claude Sonnet 4.5の分析のみ）
+ * エントリーをスコア付き形式に変換（分析結果があるエントリーのみ）
  */
 function scoreEntries(entries: ChangelogEntry[]): ScoredEntry[] {
-  return entries
-    .filter(entry => {
-      // Claude Sonnet 4.5の分析結果があるエントリーのみ
-      return entry.analyses && entry.analyses[CLAUDE_MODEL];
-    })
-    .map(entry => {
-      const analysis = entry.analyses![CLAUDE_MODEL];
-      return {
+  return entries.flatMap((entry) => {
+    const analysis = getPrimaryAnalysis(entry);
+    if (!analysis) return [];
+    return [
+      {
         entry,
         score: analysis.totalScore,
         analysis: {
@@ -140,9 +137,11 @@ function scoreEntries(entries: ChangelogEntry[]): ScoredEntry[] {
           summarizedJa: analysis.summarizedJa,
           scores: analysis.scores,
           analyzedAt: analysis.analyzedAt,
+          model: analysis.model,
         },
-      };
-    });
+      },
+    ];
+  });
 }
 
 /**

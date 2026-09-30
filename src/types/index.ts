@@ -37,7 +37,7 @@ export const AnalysisSchema = z.object({
   scores: AnalysisScoresSchema,
   totalScore: z.number(),
   analyzedAt: z.string(),
-  model: z.string(), // 'claude-sonnet-4-5', 'gemini-1.5-pro-latest', etc.
+  model: z.string(), // 'claude-opus-5-5' など
   tokenUsage: TokenUsageSchema.optional(),
   estimatedCost: z.number().optional(), // USD
 });

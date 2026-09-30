@@ -1,0 +1,41 @@
+name: Compare Models
+
+# 直近のエントリーを複数モデルで分析し、結果を並べたMarkdownを成果物として保存する（データは更新しない）
+on:
+  workflow_dispatch:
+    inputs:
+      count:
+        description: 'Number of recent entries to compare'
+        required: false
+        default: '20'
+      models:
+        description: 'Space-separated model IDs'
+        required: false
+        default: 'claude-opus-5-5 claude-sonnet-5-5'
+
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Compare models
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          COUNT: ${{ inputs.count }}
+          MODELS: ${{ inputs.models }}
+        run: npm run compare:models -- "$COUNT" $MODELS
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: model-comparison
+          path: tmp/model-comparison.md

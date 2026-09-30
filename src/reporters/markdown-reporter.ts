@@ -1,6 +1,7 @@
 import { WeeklyReport, ScoredEntry } from './types.js';
 import { formatDate } from '../utils/date.js';
 import { formatWeekNumber, formatWeekRange } from '../utils/week.js';
+import { formatModelName } from '../utils/analysis.js';
 
 /**
  * 週次レポートをMarkdown形式で生成
@@ -123,7 +124,7 @@ function generateDetailedEntry(item: ScoredEntry, index: number): string {
 **収集日**: ${collectedDate}
 **情報源**: ${sourceName}
 
-#### AI分析サマリー（Claude Sonnet 4.5）
+#### AI分析サマリー（${formatModelName(analysis.model)}）
 
 ${analysis.summarizedJa}
 
