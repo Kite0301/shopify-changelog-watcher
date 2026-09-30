@@ -124,7 +124,8 @@
           "input": 1094,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-manage-packed-product-dimensions-with-the-admin-graphql-api",
@@ -188,7 +189,8 @@
           "input": 892,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-return-window-overrides-now-available",
@@ -311,7 +313,8 @@
           "input": 1091,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-local-delivery-orders-in-shopify-pos",
@@ -617,7 +620,8 @@
           "input": 1160,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-webmcp-support-for-checkout",
@@ -679,7 +683,8 @@
           "input": 844,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-tax-is-now-calculated-on-return-shipping-fees",
@@ -803,7 +808,8 @@
           "input": 1166,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "shopify-changelog-posts-filterable-logs-and-health-metrics-for-custom-apps-are-now-in-the-developer-dashboard",
@@ -926,7 +932,8 @@
           "input": 764,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-shopify-payments-balance-transaction-graphql-type-supports-currency-conversion-type",
@@ -990,7 +997,8 @@
           "input": 724,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-polaris-2-0-release-candidate",
@@ -1052,7 +1060,8 @@
           "input": 1312,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-improved-shipping-and-duty-data-in-analytics",
@@ -1306,7 +1315,8 @@
           "input": 955,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-polaris-cdn-1-1-is-now-stable",
@@ -1368,7 +1378,8 @@
           "input": 1359,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-plan-launches-events-and-tests-with-clearer-and-more-granular-controls-in-rollouts",
@@ -1555,7 +1566,8 @@
           "input": 1306,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-unlimited-private-plans-and-target-stores-in-shopify-app-pricing",
@@ -1617,7 +1629,8 @@
           "input": 846,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-is-translatable-metafield-field",
@@ -1681,7 +1694,8 @@
           "input": 1480,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-shopify-analytics-session-measurement-improvements",
@@ -1807,7 +1821,8 @@
           "input": 1864,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-request-a-bundle-size-exception-for-existing-ui-extensions",
@@ -1873,7 +1888,8 @@
           "input": 854,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-adding-a-canceled-receive-action-to-the-inventory-shipments-api",
@@ -1937,7 +1953,8 @@
           "input": 1724,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-removed-session-currentsession-staffmemberid-from-pos-ui-extensions-2026-10",
@@ -2002,7 +2019,8 @@
           "input": 920,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-market-relationships",
@@ -2066,7 +2084,8 @@
           "input": 1253,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-pricing-audit-trail-for-contextual-product-variant-prices",
@@ -2130,7 +2149,8 @@
           "input": 1296,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-updates-to-events-payloads-and-subscription-configuration",
@@ -2194,7 +2214,8 @@
           "input": 1257,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "shopify-changelog-posts-payouts-page-redesign-see-all-your-payouts-in-one-view",
@@ -2317,7 +2338,8 @@
           "input": 1342,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-see-the-shopify-admin-s-new-look",
@@ -2441,7 +2463,8 @@
           "input": 815,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-prepare-your-app-for-the-shopify-admins-new-look",
@@ -2503,7 +2526,8 @@
           "input": 1232,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-family_name-is-optional-for-b2b-orders-in-payments-apps-api-requests",
@@ -2566,7 +2590,8 @@
           "input": 901,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-delivery-options-in-shopify-functions-input-now-expose-their-metafields",
@@ -2630,7 +2655,8 @@
           "input": 1270,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-keep-the-cart-in-view-on-mobile-pos",
@@ -2878,7 +2904,8 @@
           "input": 1167,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-create-and-delete-dev-stores-in-shopify-cli",
@@ -2940,7 +2967,8 @@
           "input": 1091,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-product-variant-barcode-is-being-replaced-by-barcodes",
@@ -3005,7 +3033,8 @@
           "input": 1245,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "shopify-changelog-posts-multiple-barcodes-in-variants",
@@ -3193,7 +3222,8 @@
           "input": 1174,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-08-25-is-now-supported",
@@ -3255,7 +3285,8 @@
           "input": 1003,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-permitted-store-staff-can-now-see-an-identified-customer-s-online-cart-in-pos",
@@ -3379,7 +3410,8 @@
           "input": 788,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-new-paymentinstrumentsendaddemail-mutation",
@@ -3443,7 +3475,8 @@
           "input": 1805,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-scan-and-search-variants-with-multiple-barcodes",
@@ -3627,7 +3660,8 @@
           "input": 1227,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-the-polaris-cdn-is-adopting-semantic-versioning",
@@ -3689,7 +3723,8 @@
           "input": 1183,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-more-resilient-refreshes-for-expiring-offline-access-tokens",
@@ -3753,7 +3788,8 @@
           "input": 1038,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-password-protected-shop-dev-flows-on-shopify-theme-cli-v3-83-x-and-older-to-be-deprecated",
@@ -3816,7 +3852,8 @@
           "input": 1023,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-four-additional-topics-are-now-available-for-events",
@@ -3879,7 +3916,8 @@
           "input": 1376,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-github-commits-now-name-the-last-theme-editor",
@@ -3941,7 +3979,8 @@
           "input": 788,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-build-shopify-apps-in-php-and-python-with-new-official-packages",
@@ -4003,7 +4042,8 @@
           "input": 1412,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-shopify-payments-in-the-united-arab-emirates-available-on-shopify-advanced-plan",
@@ -4127,7 +4167,8 @@
           "input": 705,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-shopify-tax-is-now-compatible-with-order-routing",
@@ -4253,7 +4294,8 @@
           "input": 1115,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "shopify-changelog-posts-review-shopify-payments-balance-activity-with-the-new-activity-report",
@@ -4498,7 +4540,8 @@
           "input": 1688,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-hydrogen-developer-preview-update-august-18-2026",
@@ -4561,7 +4604,8 @@
           "input": 919,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-a-redesigned-point-of-sale-channel-page-with-an-easy-entry-point-to-the-pos-editor",
@@ -5112,7 +5156,8 @@
           "input": 883,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-events-and-actions-cart-attributes-support",
@@ -5174,7 +5219,8 @@
           "input": 781,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-collect-whatsapp-marketing-consent-on-shopify-forms",
@@ -5298,7 +5344,8 @@
           "input": 1119,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-webmcp-liquid-hydrogen",
@@ -5360,7 +5407,8 @@
           "input": 917,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-microsoft-advertising-now-available-in-campaign-autopilot",
@@ -5484,7 +5532,8 @@
           "input": 702,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-order-create-fulfillment-tracking-numbers",
@@ -5549,7 +5598,8 @@
           "input": 984,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-updated-built-for-shopify-requirements-for-fulfillment-services-apps",
@@ -5611,7 +5661,8 @@
           "input": 871,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-hydrogen-developer-preview-update-july-30",
@@ -5674,7 +5725,8 @@
           "input": 869,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-new-fields-for-cash-management-activities-and-drawers",
@@ -5738,7 +5790,8 @@
           "input": 720,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-partner-details-on-collaborator-requests",
@@ -5800,7 +5853,8 @@
           "input": 1163,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-the-shopify-account-component-for-customer-accounts-is-now-a-theme-store-requirement",
@@ -5862,7 +5916,8 @@
           "input": 805,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-createdat-is-now-available-on-the-customer-object-in-shopify-functions",
@@ -5926,7 +5981,8 @@
           "input": 896,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-updating-an-orders-shipping-address-returns-accurate-financial-data",
@@ -5990,7 +6046,8 @@
           "input": 1046,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "shopify-changelog-posts-view-app-added-annotations-on-your-analytics-charts",
@@ -6359,7 +6416,8 @@
           "input": 1193,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-quick-nearby-device-login",
@@ -6484,7 +6542,8 @@
           "input": 1428,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-new-app-added-annotations-on-your-analytics-charts",
@@ -6611,7 +6670,8 @@
           "input": 1317,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-metafield-triggers-and-additional-topics-are-now-available-for-events",
@@ -6674,7 +6734,8 @@
           "input": 1522,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-developer-preview-liquid-block-and-partial-tags",
@@ -6737,7 +6798,8 @@
           "input": 948,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-full-stack-capabilities-to-power-app-analytics",
@@ -6804,7 +6866,8 @@
           "input": 1537,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-physical-inventory-feature-preview",
@@ -6867,7 +6930,8 @@
           "input": 930,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-localized-address-fields-are-rolling-out-to-checkout-and-shopify-admin",
@@ -7051,7 +7115,8 @@
           "input": 1386,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-collections-now-support-multi-source-and-variants",
@@ -7174,7 +7239,8 @@
           "input": 979,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-new-fields-on-exchangelineitem",
@@ -7302,7 +7368,8 @@
           "input": 969,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-multiple-product-discounts-on-the-same-item",
@@ -7488,7 +7555,8 @@
           "input": 1033,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-drive-international-conversion-with-automated-duties-inclusive-pricing-from-shopify-managed-markets",
@@ -7796,7 +7864,8 @@
           "input": 802,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-identity-verification-for-partners",
@@ -7859,7 +7928,8 @@
           "input": 1053,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-app-pricing-more-plans-no-charge-plan-testing-and-negative-and-fractional-app-events",
@@ -7921,7 +7991,8 @@
           "input": 851,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-hydrogen-developer-preview-update",
@@ -7984,7 +8055,8 @@
           "input": 906,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-security-update-shopify-mobile-app-ios-android",
@@ -8110,7 +8182,8 @@
           "input": 1068,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "shopify-changelog-posts-see-your-pos-selling-environment-health-at-a-glance",
@@ -8295,7 +8368,8 @@
           "input": 981,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-shopify-flow-action-runtime-urls-now-update-automatically",
@@ -8358,7 +8432,8 @@
           "input": 889,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-prepare-your-app-for-migration-to-shopify-app-pricing",
@@ -8420,7 +8495,8 @@
           "input": 1000,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-updated-app-store-requirements-13-always-use-honest-and-transparent-review-practices",
@@ -8482,7 +8558,8 @@
           "input": 911,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-customer-account-api-last-incomplete-checkout-and-checkout-types-removed",
@@ -8547,7 +8624,8 @@
           "input": 934,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-strengthening-trust-in-app-store-reviews",
@@ -8609,7 +8687,8 @@
           "input": 1311,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-markets-apis-now-support-marketregionsubdivision",
@@ -8671,7 +8750,8 @@
           "input": 833,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-orderdisplayfulfillmentstatus-now-returns-fulfillmentnotrequired",
@@ -8735,7 +8815,8 @@
           "input": 1075,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-deprecating-the-usebuyerjourneyintercept-api-on-checkout-ui-extensions",
@@ -8799,7 +8880,8 @@
           "input": 872,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-shop-minis-may-june-2026-update",
@@ -8862,7 +8944,8 @@
           "input": 961,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-market-driven-shipping-now-available-in-feature-preview",
@@ -8927,7 +9010,8 @@
           "input": 934,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-draft-order-deposit-fields-now-available-in-the-admin-and-customer-account-graphql-apis",
@@ -8992,7 +9076,8 @@
           "input": 808,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-deprecation-of-cumulative-marketing-engagements",
@@ -9057,7 +9142,8 @@
           "input": 730,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-new-lineitem-field-on-the-giftcard-graphql-object",
@@ -9185,7 +9271,8 @@
           "input": 917,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-discountedunitprice-on-draftorderlineitem-customer-account-api-deprecation",
@@ -9249,7 +9336,8 @@
           "input": 755,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-businessentity-now-exposes-legalentityid-in-the-admin-api",
@@ -9313,7 +9401,8 @@
           "input": 1126,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-merchant-owned-delivery-profile-apis-are-deprecated-for-market-driven-shipping",
@@ -9378,7 +9467,8 @@
           "input": 926,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "shopify-changelog-posts-brazil-cnpj-validation-now-supports-alphanumeric-identifiers",
@@ -9503,7 +9593,8 @@
           "input": 2956,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-hydrogen-now-deploys-to-vercel",
@@ -9566,7 +9657,8 @@
           "input": 782,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-define-and-manage-metafields-on-inventory-transfers",
@@ -9815,7 +9907,8 @@
           "input": 1003,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-view-data-access-changes-with-the-new-app-pixel-activity-log",
@@ -10062,7 +10155,8 @@
           "input": 768,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-carrier-services-will-no-longer-be-automatically-added-to-the-default-shipping-profile",
@@ -10127,7 +10221,8 @@
           "input": 980,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-new-3-eu-import-customs-duty-arrives-july-1",
@@ -10312,7 +10407,8 @@
           "input": 1002,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "shopify-changelog-posts-b2b-discounts-are-now-available-by-default-on-new-stores",
@@ -10438,7 +10534,8 @@
           "input": 1130,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "shopify-changelog-posts-purchase-orders-now-create-transfers-to-move-inventory",
@@ -10686,7 +10783,8 @@
           "input": 817,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-flow-action-extensions-now-support-relative-paths-for-endpoint-urls",
@@ -10748,7 +10846,8 @@
           "input": 879,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-self-serve-returns-now-support-cancellations",
@@ -10934,7 +11033,8 @@
           "input": 908,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-the-spring-26-edition-is-live",
@@ -11058,7 +11158,8 @@
           "input": 897,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-admin-graphql-api-now-supports-app-owned-delivery-profiles-that-cover-all-shippable-items",
@@ -11122,7 +11223,8 @@
           "input": 985,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-intents-api-file-picker",
@@ -11186,7 +11288,8 @@
           "input": 862,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-define-and-set-metafields-on-inventory-transfers-in-the-admin-graphql-api",
@@ -11250,7 +11353,8 @@
           "input": 854,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-shopify-s-spring-26-edition-everywhere",
@@ -12104,7 +12208,8 @@
           "input": 791,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-color-palettes",
@@ -12166,7 +12271,8 @@
           "input": 799,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-create-channel-markets-with-the-graphql-admin-api",
@@ -12230,7 +12336,8 @@
           "input": 1005,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-hydrogen-developer-preview",
@@ -12293,7 +12400,8 @@
           "input": 740,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-sidekick-app-extensions-app-store-requirements",
@@ -12355,7 +12463,8 @@
           "input": 963,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-whatsapp-marketing-consent-now-available",
@@ -12422,7 +12531,8 @@
           "input": 805,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-standard-storefront-events-and-actions",
@@ -12484,7 +12594,8 @@
           "input": 842,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-sidekick-app-extensions-available-today",
@@ -12546,7 +12657,8 @@
           "input": 903,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-built-for-shopify-requirements-for-returns-and-exchanges-and-subscription-apps",
@@ -12609,7 +12721,8 @@
           "input": 846,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-label-purchase-mutation",
@@ -12673,7 +12786,8 @@
           "input": 921,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-new-collection-model-and-apis-now-available",
@@ -12739,7 +12853,8 @@
           "input": 1925,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "shopify-changelog-posts-reduced-bot-noise-in-abandoned-checkouts",
@@ -12863,7 +12978,8 @@
           "input": 847,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-new-appsubscriptioncancel-mutation-in-the-partner-api",
@@ -12926,7 +13042,8 @@
           "input": 772,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-expanded-multi-currency-payout-support-in-us-hk-and-sg",
@@ -13051,7 +13168,8 @@
           "input": 725,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-cart-line-view-key-field",
@@ -13115,7 +13233,8 @@
           "input": 838,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-shopify-ai-toolkit-for-upgrading-extensions-to-polaris-web-components",
@@ -13178,7 +13297,8 @@
           "input": 930,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-streamlined-metaobject-api",
@@ -13242,7 +13362,8 @@
           "input": 823,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-unified-pos-staff-management",
@@ -13792,7 +13913,8 @@
           "input": 792,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-cart-line-mutations-accept-view-key",
@@ -13856,7 +13978,8 @@
           "input": 849,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-giftcardcashouttransaction-now-resolvable-from-giftcardtransaction",
@@ -13920,7 +14043,8 @@
           "input": 921,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-more-local-payment-methods-are-now-available-in-additional-countries",
@@ -14043,7 +14167,8 @@
           "input": 793,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-gift-card-local-currency-support",
@@ -14107,7 +14232,8 @@
           "input": 1211,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-clearer-payout-balance-and-reserve-information-in-shopify-payments",
@@ -14233,7 +14359,8 @@
           "input": 767,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-shopify-cli-40-semver-auto-updates-removing-deprecated-flags-and-commands",
@@ -14295,7 +14422,8 @@
           "input": 1039,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-build-app-home-as-a-ui-extension",
@@ -14359,7 +14487,8 @@
           "input": 926,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-draft-a-refreshed-sign-in-page-for-customer-accounts-now-customizable-in-the-editor",
@@ -14544,7 +14673,8 @@
           "input": 1276,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-create-sms-marketing-automations-in-shopify-messaging",
@@ -14668,7 +14798,8 @@
           "input": 1488,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-sell-from-multiple-legal-entities-in-the-same-country-using-shopify-payments",
@@ -14857,7 +14988,8 @@
           "input": 721,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-flow-sidekick-generates-test-cases-for-your-workflows",
@@ -15043,7 +15175,8 @@
           "input": 827,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-function-run-log-details-are-now-automatically-visible-with-the-right-access-scopes",
@@ -15105,7 +15238,8 @@
           "input": 944,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-shopify-tax-has-expanded-to-canada",
@@ -15597,7 +15731,8 @@
           "input": 905,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-shopify-app-pricing-charge-for-usage-recurring-subscriptions-or-both",
@@ -15659,7 +15794,8 @@
           "input": 853,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-sell-gift-cards-in-your-customers-local-currency",
@@ -15849,7 +15985,8 @@
           "input": 988,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "shopify-changelog-posts-flow-new-action-to-get-analytics-data-using-shopifyql",
@@ -16095,7 +16232,8 @@
           "input": 841,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "shopify-changelog-posts-product-variant-publishing",
@@ -16343,7 +16481,8 @@
           "input": 1134,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-target-discounts-to-specific-markets",
@@ -16406,7 +16545,8 @@
           "input": 968,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-app-deployment-in-cicd-is-now-available-for-all-apps",
@@ -16469,7 +16609,8 @@
           "input": 850,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-more-admin-intents-now-support-settings",
@@ -16531,7 +16672,8 @@
           "input": 843,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-annotations-bring-store-event-context-directly-to-your-analytics",
@@ -16717,7 +16859,8 @@
           "input": 1463,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-apply-discounts-to-items-on-the-refund-page",
@@ -16842,7 +16985,8 @@
           "input": 788,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-monitor-admin-web-vitals-in-the-dev-dashboard",
@@ -16904,7 +17048,8 @@
           "input": 919,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-mark-fulfillments-without-tracking-as-delivered",
@@ -17091,7 +17236,8 @@
           "input": 933,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-flow-new-triggers-for-inventory-transfers-completed-and-inventory-transfer-ready-to-ship",
@@ -17276,7 +17422,8 @@
           "input": 1310,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-shopify-balance-domestic-wire-transfers",
@@ -17888,7 +18035,8 @@
           "input": 916,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-u-s-retailers-can-adjust-retail-prices-on-shopify-collective",
@@ -18011,7 +18159,8 @@
           "input": 862,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-use-matches-in-shopifyql-to-filter-by-what-customers-did",
@@ -18136,7 +18285,8 @@
           "input": 889,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-compare-multiple-metrics-on-one-chart",
@@ -18266,7 +18416,8 @@
           "input": 1094,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-storefront-catalog-mcp-now-implements-ucp",
@@ -18329,7 +18480,8 @@
           "input": 890,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-update-to-app-uninstall-reasons",
@@ -18391,7 +18543,8 @@
           "input": 727,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-updates-to-local-pickup-user-experience-in-checkout",
@@ -18514,7 +18667,8 @@
           "input": 986,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-spot-trends-with-new-analytics-insights",
@@ -18639,7 +18793,8 @@
           "input": 717,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-feature-preview-customer-account-improvements",
@@ -18701,7 +18856,8 @@
           "input": 897,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-collect-newfoundland-vapour-products-tax-automatically",
@@ -18887,7 +19043,8 @@
           "input": 721,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-removing-deprecated-private-and-publicread-enums-on-metaobject-definitions",
@@ -18951,7 +19108,8 @@
           "input": 745,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-new-most-relevant-sort-order-for-products-in-a-collection",
@@ -19075,7 +19233,8 @@
           "input": 850,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "shopify-changelog-posts-customers-can-now-set-and-manage-default-addresses-in-checkout",
@@ -19200,7 +19359,8 @@
           "input": 997,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "shopify-changelog-posts-search-filter-and-saved-views-for-orders-products-and-more",
@@ -19325,7 +19485,8 @@
           "input": 736,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-mtls-client-certificate-renewal-for-payments-apps",
@@ -19388,7 +19549,8 @@
           "input": 856,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-lineitem-priceafteralldiscountsbeforetaxesset-field-now-available",
@@ -19452,7 +19614,8 @@
           "input": 837,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-checkout-blocks-order-value-limits-available-on-all-plans",
@@ -19576,7 +19739,8 @@
           "input": 1045,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-primary-action-icon-replaces-actionbar-on-mobile",
@@ -19640,7 +19804,8 @@
           "input": 860,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-shopify-scripts-will-be-deprecated-on-june-30-2026",
@@ -19704,7 +19869,8 @@
           "input": 855,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-hydrogen-april-2026-release",
@@ -19767,7 +19933,8 @@
           "input": 901,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-multiple-product-discounts-can-apply-on-a-single-cart-line",
@@ -19831,7 +19998,8 @@
           "input": 745,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-automated-testing-for-shopify-ui-extensions-with-shopify-ui-extensions-tester",
@@ -19898,7 +20066,8 @@
           "input": 932,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-updates-is-now-posts-publish-shoppable-content-to-the-shop-feed",
@@ -20022,7 +20191,8 @@
           "input": 912,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "shopify-changelog-posts-key-b2b-features-now-available-on-non-plus-plans",
@@ -20206,7 +20376,8 @@
           "input": 789,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-add-tags-to-your-discounts",
@@ -20392,7 +20563,8 @@
           "input": 965,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-deprecation-of-checkout-metafields-in-checkout-and-customer-account-ui-extensions",
@@ -20458,7 +20630,8 @@
           "input": 842,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "shopify-changelog-posts-capital-remittance-via-shopify-payments-expands-to-all-states-of-the-us",
@@ -20644,7 +20817,8 @@
           "input": 724,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-add-prerequisites-to-product-discount-functions",
@@ -20708,7 +20882,8 @@
           "input": 799,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-metaobject-scopes-not-required-for-app-metaobjects",
@@ -20772,7 +20947,8 @@
           "input": 833,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-removing-outdated-polaris-reference-docs",
@@ -20839,7 +21015,8 @@
           "input": 794,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-adding-access-field-to-standardmetaobjectdefinitiontemplate",
@@ -20903,7 +21080,8 @@
           "input": 796,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-delegateaccesstokencreate-mutation-now-returns-expiresin",
@@ -21031,7 +21209,8 @@
           "input": 893,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-fulfillment-order-cancel-error-codes",
@@ -21095,7 +21274,8 @@
           "input": 787,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-cart-and-checkout-validation-adds-billing-address-and-po-number-error-targets",
@@ -21159,7 +21339,8 @@
           "input": 865,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-multi-channel-support-for-sales-channel-apps",
@@ -21223,7 +21404,8 @@
           "input": 984,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-payment-method-identifier-now-required-for-customerpaymentmethodremotecreate",
@@ -21287,7 +21469,8 @@
           "input": 884,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-report-fulfillment-order-progress-with-new-fulfillmentorderreportprogress-graphql-mutation",
@@ -21352,7 +21535,8 @@
           "input": 1036,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-create-subscriptions-contracts-without-payment-methods",
@@ -21416,7 +21600,8 @@
           "input": 745,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-create-unpaid-orders-from-subscription-billing-attempts",
@@ -21480,7 +21665,8 @@
           "input": 847,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-visual-updates-to-checkout-blocks-app",
@@ -21664,7 +21850,8 @@
           "input": 848,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-removing-storefront-visibility-field-on-metaobject-field-definitions",
@@ -21729,7 +21916,8 @@
           "input": 938,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "shopify-changelog-posts-create-pickup-orders-in-shopify-pos",
@@ -22219,7 +22407,8 @@
           "input": 925,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "shopify-changelog-posts-flow-new-actions-to-get-data-about-workflow-runs-abandoned-checkouts-inventory-items-catalogs-and-pages",
@@ -22464,7 +22653,8 @@
           "input": 765,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-collect-marketing-consent-on-the-customer-sign-in-page",
@@ -22649,7 +22839,8 @@
           "input": 731,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-adding-barcode-support-to-inventory-shipments-api",
@@ -22713,7 +22904,8 @@
           "input": 1085,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-flow-new-actions-to-get-data-about-markets-and-articles",
@@ -22960,7 +23152,8 @@
           "input": 947,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-add-isactive-field-to-inventorylevel",
@@ -23024,7 +23217,8 @@
           "input": 996,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-inventorytransferdelete-adds-invalidstate-error-code-for-transfers-with-in-progress-product-import",
@@ -23088,7 +23282,8 @@
           "input": 839,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-enrich-customer-records-with-data-from-external-identity-providers",
@@ -23274,7 +23469,8 @@
           "input": 751,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-easier-smart-grid-setup-for-discount-tiles",
@@ -23398,7 +23594,8 @@
           "input": 765,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-storefront-filter-urls-now-use-stable-identifiers-instead-of-text-values",
@@ -23524,7 +23721,8 @@
           "input": 776,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-making-fielddefinitions-optional-in-metaobjectdefinitioncreate",
@@ -23588,7 +23786,8 @@
           "input": 770,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-metaobject-access-in-functions",
@@ -23652,7 +23851,8 @@
           "input": 804,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-returns-metrics-renamed-to-reversals",
@@ -23837,7 +24037,8 @@
           "input": 718,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-track-discount-promotions-with-marketing-campaigns",
@@ -23962,7 +24163,8 @@
           "input": 709,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-admin-intents-now-support-settings",
@@ -24024,7 +24226,8 @@
           "input": 925,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-address-autocomplete-and-validation-improvements-for-us-au-ca-nl-fr",
@@ -24150,7 +24353,8 @@
           "input": 888,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "shopify-changelog-posts-shopify-scripts-can-no-longer-be-edited-or-published",
@@ -24274,7 +24478,8 @@
           "input": 826,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "shopify-changelog-posts-track-app-activity-and-permissions-from-settings",
@@ -24524,7 +24729,8 @@
           "input": 761,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-shopify-simgym-is-now-available-in-ai-research-preview-for-all-eligible-merchants",
@@ -24837,7 +25043,8 @@
           "input": 835,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "shopify-changelog-posts-improved-visual-hierarchy-for-line-items-in-orders-and-returns",
@@ -24961,7 +25168,8 @@
           "input": 1567,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-new-discount-fields-in-the-storefront-cart-graphql-api",
@@ -25025,7 +25233,8 @@
           "input": 1222,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-marketing-automations-are-moving-on-march-24",
@@ -25150,7 +25359,8 @@
           "input": 1025,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-shopifyql-returns-fields-deprecated-and-replaced-with-sales-reversals-fields",
@@ -25215,7 +25425,8 @@
           "input": 915,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-metafield-translations-now-available-via-graphql-admin-api",
@@ -25279,7 +25490,8 @@
           "input": 885,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-smarter-international-pricing-with-managed-markets",
@@ -25707,7 +25919,8 @@
           "input": 769,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-updates-effective-february-27-to-our-partner-program-agreement-and-api-license-and-terms-of-use",
@@ -25769,7 +25982,8 @@
           "input": 755,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-pos-editor-now-supports-editing-smart-grid-tiles-and-screen-settings",
@@ -25893,7 +26107,8 @@
           "input": 995,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "shopify-changelog-posts-see-how-duties-are-calculated-on-your-orders",
@@ -26262,7 +26477,8 @@
           "input": 743,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-support-for-market-aware-auth-urls-in-customer-account-api",
@@ -26325,7 +26541,8 @@
           "input": 850,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-subscriptions-apis-introduce-subscriptionbillingattemptstate",
@@ -26389,7 +26606,8 @@
           "input": 747,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-new-rejection-reason-codes-and-merchant-message-added-to-verificationsessionreject-mutation",
@@ -26453,7 +26671,8 @@
           "input": 864,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-new-apis-to-read-and-write-shipping-options-in-delivery-profile",
@@ -26517,7 +26736,8 @@
           "input": 4500,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-legacy-customer-accounts-are-deprecated",
@@ -26579,7 +26799,8 @@
           "input": 982,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-reduced-metafield-value-sizes",
@@ -26647,7 +26868,8 @@
           "input": 860,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-improved-app-logs-and-monitoring",
@@ -26709,7 +26931,8 @@
           "input": 789,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-the-dev-dashboard-is-now-multi-lingual",
@@ -26771,7 +26994,8 @@
           "input": 681,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-use-the-admin-api-and-bulk-operations-in-shopify-cli",
@@ -26833,7 +27057,8 @@
           "input": 835,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-manage-dev-previews-on-your-dev-store-without-leaving-admin",
@@ -26895,7 +27120,8 @@
           "input": 768,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-enable-offline-checkout-from-pos-device-setting",
@@ -27081,7 +27307,8 @@
           "input": 750,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-improved-us-sales-tax-reports",
@@ -27267,7 +27494,8 @@
           "input": 731,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-webhook-subscriptions-now-support-a-name-field-for-identification",
@@ -27332,7 +27560,8 @@
           "input": 915,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-create-customers-and-companies-with-sidekick",
@@ -27518,7 +27747,8 @@
           "input": 771,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-australia-post-account-linking-available-on-grow-and-basic-plans",
@@ -27703,7 +27933,8 @@
           "input": 837,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-auto-lock-staff-balance-or-credit-cards",
@@ -27828,7 +28059,8 @@
           "input": 881,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-shop-minis-january-2026-update",
@@ -27891,7 +28123,8 @@
           "input": 722,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-accelerated-checkout-now-supports-addons-from-the-product-page",
@@ -27953,7 +28186,8 @@
           "input": 691,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-sending-payment-requests-per-fulfillment",
@@ -28077,7 +28311,8 @@
           "input": 959,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-new-payment-error-codes-added-to-subscriptions-apis",
@@ -28141,7 +28376,8 @@
           "input": 955,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-introducing-tracksinventory-query-filter-for-products",
@@ -28205,7 +28441,8 @@
           "input": 789,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-increasing-the-app-block-limit-to-30-for-theme-app-extensions",
@@ -28267,7 +28504,8 @@
           "input": 711,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-fulfilling-transfers-with-shopify-pos",
@@ -28454,7 +28692,8 @@
           "input": 886,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-hydrogen-october-2025-release",
@@ -28517,7 +28756,8 @@
           "input": 879,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-updates-to-chargeback-rates",
@@ -28642,7 +28882,8 @@
           "input": 863,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-control-how-your-retail-locations-are-classified",
@@ -28828,7 +29069,8 @@
           "input": 902,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-new-articlelist-input-setting-for-themes",
@@ -28890,7 +29132,8 @@
           "input": 709,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-events-data-now-limited-to-one-year-retention",
@@ -28954,7 +29197,8 @@
           "input": 738,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-more-control-over-app-deploys-in-cicd-pipelines",
@@ -29016,7 +29260,8 @@
           "input": 823,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-business-details-section-in-admin-general-settings",
@@ -29140,7 +29385,8 @@
           "input": 806,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-shopify-account-web-component-for-storefronts",
@@ -29202,7 +29448,8 @@
           "input": 862,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-improved-product-availability-for-market-specific-inventory",
@@ -29327,7 +29574,8 @@
           "input": 724,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-offline-payments-for-multi-entity",
@@ -29452,7 +29700,8 @@
           "input": 837,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-tracking-cookie-deprecation-hydrogen",
@@ -29514,7 +29763,8 @@
           "input": 800,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-inventoryactivate-now-preserves-available-quantity",
@@ -29579,7 +29829,8 @@
           "input": 926,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-enhanced-return-reasons",
@@ -29764,7 +30015,8 @@
           "input": 761,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-storefronts-are-getting-faster-and-ready-to-evolve",
@@ -29887,7 +30139,8 @@
           "input": 799,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-new-default-setting-for-pixel-data-sharing",
@@ -30011,7 +30264,8 @@
           "input": 901,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-migrate-metafields-with-shopify-app-import-custom-data-definitions",
@@ -30073,7 +30327,8 @@
           "input": 966,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-new-payment-decline-codes-added-to-ordertransactionerrorcode-enum",
@@ -30138,7 +30393,8 @@
           "input": 739,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "shopify-changelog-posts-better-way-to-match-shopify-payments-payouts-with-bank-deposits",
@@ -30263,7 +30519,8 @@
           "input": 769,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-bulgarian-lev-bgn-is-now-replaced-with-euros-eur",
@@ -30510,7 +30767,8 @@
           "input": 972,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-remove-deprecated-errorcode-and-errormessage-fields-from-subscriptionbillingattempt",
@@ -30638,7 +30896,8 @@
           "input": 723,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-introducing-the-orderslinkrequested-webhook-topic",
@@ -30703,7 +30962,8 @@
           "input": 808,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-new-return-reason-definitions-api-for-better-return-insights",
@@ -30769,7 +31029,8 @@
           "input": 1013,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-access-transactions-on-the-return-object",
@@ -30833,7 +31094,8 @@
           "input": 834,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-localization-support-for-pos-ui-extensions",
@@ -30897,7 +31159,8 @@
           "input": 768,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-intents-api-for-customer-accounts",
@@ -30961,7 +31224,8 @@
           "input": 748,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-fulfillment-order-move-mutation-error-codes",
@@ -31025,7 +31289,8 @@
           "input": 797,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-trackingconsent-landingpage-origreferrer-cookies-will-no-longer-be-set",
@@ -31088,7 +31353,8 @@
           "input": 893,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-tax-summary-webhook-now-includes-merchant-business-entity-information",
@@ -31153,7 +31419,8 @@
           "input": 1150,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-tax-calculation-requests-now-include-merchant-business-entity-information",
@@ -31216,7 +31483,8 @@
           "input": 1135,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-tax-partner-apps-can-now-receive-cart-line-properties-in-tax-calculation-requests",
@@ -31279,7 +31547,8 @@
           "input": 1498,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-app-generated-and-imported-orders-fully-sync-to-avalara-tax-compliance",
@@ -31528,7 +31797,8 @@
           "input": 1018,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "shopify-changelog-posts-shopify-capital-launches-in-spain",
@@ -31653,7 +31923,8 @@
           "input": 924,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "shopify-changelog-posts-uplift-disputes-evidence-form",
@@ -31778,7 +32049,8 @@
           "input": 731,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-conversion-tracking-fields-added-to-marketing-engagement-create",
@@ -31842,7 +32114,8 @@
           "input": 800,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-storefront-api-now-returns-a-specific-error-code-when-cart-transform-functions-fail",
@@ -31906,7 +32179,8 @@
           "input": 925,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-improved-in-store-pickup-experience-for-shop-orders",
@@ -32215,7 +32489,8 @@
           "input": 1342,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-removal-of-payment-method-requirement-on-api-created-subscription-contracts",
@@ -32277,7 +32552,8 @@
           "input": 752,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-finalizing-compare-and-swap-redesign-for-inventory-set-quantities",
@@ -32342,7 +32618,8 @@
           "input": 1194,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-concurrency-protection-features",
@@ -32407,7 +32684,8 @@
           "input": 1032,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-making-changefromquantity-field-required",
@@ -32472,7 +32750,8 @@
           "input": 1214,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-set-processed-at-in-refund-create",
@@ -32536,7 +32815,8 @@
           "input": 1008,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-create-flow-automations-with-sidekick",
@@ -33027,7 +33307,8 @@
           "input": 774,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-deprecation-of-ordertransaction-authorizationcode-in-favor-of-ordertransactionpaymentid",
@@ -33090,7 +33371,8 @@
           "input": 965,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-faster-bulk-operations",
@@ -33154,7 +33436,8 @@
           "input": 799,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-discouraging-use-of-receiptjson-on-ordertransaction-in-the-graphql-admin-api",
@@ -33217,7 +33500,8 @@
           "input": 740,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-expand-your-catalog-instantly-with-the-shopify-product-network",
@@ -33401,7 +33685,8 @@
           "input": 844,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-edit-emails-faster-with-sidekick",
@@ -34439,7 +34724,8 @@
           "input": 660,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-a-more-powerful-dev-assistant-on-shopifydev",
@@ -34501,7 +34787,8 @@
           "input": 848,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-revamped-pos-ui-extensions-reference",
@@ -34564,7 +34851,8 @@
           "input": 776,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-offline-access-tokens-now-support-expiry-and-refresh",
@@ -34628,7 +34916,8 @@
           "input": 1028,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-monitor-admin-performance-issues-by-region-with-web-vitals-api",
@@ -34690,7 +34979,8 @@
           "input": 798,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-simplified-app-store-requirements",
@@ -34752,7 +35042,8 @@
           "input": 778,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-new-fields-to-combine-bundle-options",
@@ -34816,7 +35107,8 @@
           "input": 791,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-shopifyql-python-sdk-and-cli-now-available-for-analytics",
@@ -34878,7 +35170,8 @@
           "input": 756,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-tax-summary-webhook-and-calculation-requests-now-include-customer-and-company-metafields",
@@ -34943,7 +35236,8 @@
           "input": 1376,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-multi-environment-theme-commands-shopify-cli",
@@ -35005,7 +35299,8 @@
           "input": 677,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-venmo-and-paypal-are-now-treated-as-separate-payment-methods",
@@ -35070,7 +35365,8 @@
           "input": 869,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-new-open-source-experimentation-platform",
@@ -35132,7 +35428,8 @@
           "input": 700,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-order-editing-new-validations-and-handled-usererrors",
@@ -35196,7 +35493,8 @@
           "input": 882,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-binary-testing-for-shopify-functions",
@@ -35259,7 +35557,8 @@
           "input": 836,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-inventory-item-variant-field-deprecation",
@@ -35323,7 +35622,8 @@
           "input": 982,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-deprecation-of-shop-billingaddress-in-favor-of-shop-shopaddress",
@@ -35388,7 +35688,8 @@
           "input": 912,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-tax-summary-webhook-and-calculation-requests-now-includes-shop-and-presentment-currency-amount",
@@ -35453,7 +35754,8 @@
           "input": 1140,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-adding-idempotency-for-inventory-adjustments-and-refund-mutations",
@@ -35517,7 +35819,8 @@
           "input": 1337,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-compare-and-swap-for-inventory-mutations-with-change-from-quantity",
@@ -35581,7 +35884,8 @@
           "input": 1131,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-tax-summary-webhook-created-at-field-now-returns-utc-timezone",
@@ -35642,7 +35946,8 @@
           "input": 938,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "shopify-changelog-posts-get-to-shopify-support-faster-from-the-shopify-help-center",
@@ -35883,7 +36188,8 @@
           "input": 1184,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-subscription-billing-attempt-invalid-billing-address-error",
@@ -35947,7 +36253,8 @@
           "input": 741,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-apple-pay-available-as-a-payment-method-in-shop-pay-checkout",
@@ -36060,7 +36367,8 @@
           "input": 768,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-sidekick-voice-is-now-available-in-the-shopify-mobile-app",
@@ -36229,7 +36537,8 @@
           "input": 796,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-change-all-ids-to-global-ids-in-tax-summary-and-tax-calculation-request",
@@ -36460,7 +36769,8 @@
           "input": 1220,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-tax-webhook-summary-and-calculation-requests-now-use-global-ids",
@@ -36909,7 +37219,8 @@
           "input": 820,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-taxsummariescreate-webhook-and-taxsummarycreate-mutation-now-available",
@@ -36968,7 +37279,8 @@
           "input": 903,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-receive-weekly-order-summary-in-your-inbox",
@@ -37082,7 +37394,8 @@
           "input": 772,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-create-cards-for-balance-additional-accounts",
@@ -37200,7 +37513,8 @@
           "input": 822,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-legacy-custom-apps-can-t-be-created-after-january-1-2026",
@@ -37311,7 +37625,8 @@
           "input": 1152,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-faster-invoice-payments-for-indian-merchants",
@@ -37856,7 +38171,8 @@
           "input": 921,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-built-for-shopify-apps-get-priority-visibility-across-the-shopify-app-store",
@@ -37911,7 +38227,8 @@
           "input": 784,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-the-cartdiscountcodeupdate-mutation-now-requires-the-discountcodes-field",
@@ -37969,7 +38286,8 @@
           "input": 772,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-new-ach-support-for-deferred-payments",
@@ -38026,7 +38344,8 @@
           "input": 808,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-shopify-payments-france-gets-new-payment-methods",
@@ -38137,7 +38456,8 @@
           "input": 818,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-quick-count-extension-in-shopify-pos",
@@ -38354,7 +38674,8 @@
           "input": 974,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-pos-ui-extensions-developer-experience-improvements",
@@ -38410,7 +38731,8 @@
           "input": 973,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-new-unlisted-product-status-1",
@@ -38531,7 +38853,8 @@
           "input": 809,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-accept-more-local-payment-methods",
@@ -38642,7 +38965,8 @@
           "input": 957,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-improved-concurrency-handling-in-the-cart-ajax-api-and-storefront-cart-graphql-api",
@@ -38698,7 +39022,8 @@
           "input": 846,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-support-metafield-and-metaobject-standards-in-declarative-custom-data-definitions",
@@ -38753,7 +39078,8 @@
           "input": 753,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-shop-channel-updates-shoppable-videos-and-posts-migration",
@@ -38918,7 +39244,8 @@
           "input": 778,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-introducing-the-shop-minis-sdk-early-access",
@@ -38973,7 +39300,8 @@
           "input": 762,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-subscriptions-now-available-in-pos",
@@ -39137,7 +39465,8 @@
           "input": 969,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-view-in-progress-returns-and-cancel-unfulfilled-items-in-pos-order-details",
@@ -39302,7 +39631,8 @@
           "input": 880,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-improved-ai-image-editing-features-in-the-file-editor",
@@ -39468,7 +39798,8 @@
           "input": 1055,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "developer-changelog-changelog-integrate-accelerated-checkout-buttons-shop-pay-and-apple-pay-on-mobile-app-storefronts",
@@ -39523,7 +39854,8 @@
           "input": 695,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-shopify-duties-and-import-taxes-usa-postal-rates-support",
@@ -39850,7 +40182,8 @@
           "input": 820,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-update-customer-emails-in-accounts",
@@ -40283,7 +40616,8 @@
           "input": 753,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-shopifydev-mcp-now-supports-more-apis",
@@ -40338,7 +40672,8 @@
           "input": 748,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-rerouting-fulfillment-orders-via-api",
@@ -40395,7 +40730,8 @@
           "input": 880,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-inventory-shipment-receive-mutation-now-supports-idempotency",
@@ -40510,7 +40846,8 @@
           "input": 871,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-deprecation-of-legacy-return-apis-and-improvements-to-return-management",
@@ -40568,7 +40905,8 @@
           "input": 931,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": true
     },
     {
       "id": "shopify-changelog-posts-pay-in-full-credit-card-payment-option-will-automatically-retry-each-month",
@@ -40688,7 +41026,8 @@
           "input": 748,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-introducing-functionhandle",
@@ -40752,7 +41091,8 @@
           "input": 1079,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-storefront-api-cart-now-supports-adding-gift-cards",
@@ -40816,7 +41156,8 @@
           "input": 737,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-new-support-for-usdc-credit-field-in-shopify-payments-payout-graphql",
@@ -40880,7 +41221,8 @@
           "input": 747,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-dev-mcp-now-supports-liquid",
@@ -40942,7 +41284,8 @@
           "input": 760,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-multipassidentifier-field-added-to-graphql-admin-api",
@@ -41006,7 +41349,8 @@
           "input": 868,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-polaris-unified-web-components-are-now-stable",
@@ -41062,7 +41406,8 @@
           "input": 776,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-new-productnetwork-field-on-order-object",
@@ -41119,7 +41464,8 @@
           "input": 713,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "shopify-changelog-posts-control-when-b2b-orders-require-review-at-checkout",
@@ -41230,7 +41576,8 @@
           "input": 1141,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-shopifyqlquery-now-available-in-graphql-admin-api",
@@ -41287,7 +41634,8 @@
           "input": 1146,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-metafield-references-added-to-customer-account-api",
@@ -41352,7 +41700,8 @@
           "input": 1075,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-dynamic-complexity-for-productvariantsbulkcreate-and-productvariantsbulkupdate-mutations",
@@ -41415,7 +41764,8 @@
           "input": 1000,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-inventoryquantities-limit-in-mutations",
@@ -41479,7 +41829,8 @@
           "input": 1126,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-dynamic-complexity-cost-for-productcreate-and-productupdate-mutations",
@@ -41543,7 +41894,8 @@
           "input": 886,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-productset-limit-for-inventory-quantities",
@@ -41607,7 +41959,8 @@
           "input": 1112,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     },
     {
       "id": "developer-changelog-changelog-duplicate-themes-with-the-admin-graphql-api",
@@ -41664,7 +42017,8 @@
           "input": 725,
           "output": 109
         }
-      }
+      },
+      "officialActionRequired": false
     }
   ]
 }

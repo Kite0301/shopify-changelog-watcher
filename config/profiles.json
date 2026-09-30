@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "description": "「関係あるか」を判定する立場の定義。question は Jev に渡す英語の質問（原文が英語のため）、label は表示用",
+  "profiles": {
+    "merchant": {
+      "label": "マーチャント（自社D2C）",
+      "summary": "A Japan-based merchant running several direct-to-consumer brand stores on Shopify Plus. Sells only within Japan (no international Markets), sells subscriptions and B2B/wholesale, and has no physical retail (no POS).",
+      "requireJapan": true,
+      "areas": {
+        "onlineStore": { "label": "オンラインストア・テーマ", "question": "Does this change affect the online store storefront, themes, or the theme editor?" },
+        "checkout": { "label": "チェックアウト", "question": "Does this change affect checkout, checkout branding, or checkout customization?" },
+        "payments": { "label": "決済", "question": "Does this change affect payments, payment methods, or payouts for a merchant?" },
+        "shipping": { "label": "配送・フルフィルメント", "question": "Does this change affect shipping, delivery settings, or order fulfillment for a merchant?" },
+        "orders": { "label": "注文・商品・在庫管理", "question": "Does this change affect how a merchant manages orders, products, or inventory in the Shopify admin?" },
+        "customers": { "label": "顧客・顧客アカウント", "question": "Does this change affect customer accounts, customer data, or customer privacy settings?" },
+        "marketing": { "label": "マーケティング・分析", "question": "Does this change affect marketing, discounts, analytics, or reports for a merchant?" },
+        "subscriptions": { "label": "定期購入", "question": "Does this change affect selling subscriptions or recurring purchases?" },
+        "b2b": { "label": "B2B", "question": "Does this change affect B2B or wholesale selling?" },
+        "plus": { "label": "Shopify Plus", "question": "Does this change specifically affect Shopify Plus merchants or Plus-only features?" },
+        "admin": { "label": "管理画面・Sidekick・アプリ", "question": "Does this change affect general Shopify admin features, Sidekick, or how merchants use apps?" }
+      }
+    },
+    "developer": {
+      "label": "開発者（おみせコネクト）",
+      "summary": "A public, non-embedded Shopify app (Ruby on Rails, shopify_api gem) that connects stores to LINE messaging. Uses authorization-code OAuth with expiring offline tokens, GraphQL Admin API version 2026-07 to read orders, products, product variants, collections and customers, ScriptTags, a web pixel extension subscribing to customer events, a theme app extension, an app proxy, webhooks (orders, products, app uninstall, app subscriptions, shop, GDPR compliance), and the Billing API with recurring and usage charges. Does not use POS, Shopify Functions, checkout UI extensions, Hydrogen, Flow, metafields, or Markets.",
+      "requireJapan": false,
+      "areas": {
+        "scriptTags": { "label": "ScriptTag", "question": "Does this change affect the ScriptTag API or storefront scripts injected by apps?" },
+        "webPixels": { "label": "Web Pixel・顧客イベント", "question": "Does this change affect web pixel extensions or the customer events (analytics events) API?" },
+        "themeExtension": { "label": "テーマアプリ拡張・App Proxy", "question": "Does this change affect theme app extensions, app blocks, app embeds, or app proxies?" },
+        "webhooks": { "label": "Webhook", "question": "Does this change affect webhooks, webhook payloads, delivery, headers, or GDPR compliance webhooks?" },
+        "billing": { "label": "課金（Billing API）", "question": "Does this change affect the app Billing API, app subscriptions, or usage charges?" },
+        "auth": { "label": "認証・トークン", "question": "Does this change affect app authentication, OAuth, access tokens, or app installation flow?" },
+        "adminApiData": { "label": "注文・商品・顧客API", "question": "Does this change affect GraphQL Admin API queries or fields for orders, products, product variants, collections, or customers?" },
+        "customerData": { "label": "保護された顧客データ", "question": "Does this change affect access to protected customer data such as customer names, emails, or phone numbers?" },
+        "apiVersioning": { "label": "APIバージョン・レート制限", "question": "Does this change affect all apps through API versioning, deprecations of the Admin API, rate limits, or app review requirements?" }
+      }
+    }
+  }
+}

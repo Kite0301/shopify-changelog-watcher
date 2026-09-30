@@ -1,4 +1,5 @@
 import { fetchAllFeeds, filterNewEntries } from '../fetcher/rss.js';
+import { fetchOfficialActionRequired } from '../fetcher/labels.js';
 import { loadDataStore, saveDataStore } from '../utils/file.js';
 import { loadEvaluationCriteria } from '../utils/config.js';
 import { toISOString } from '../utils/date.js';
@@ -37,6 +38,11 @@ async function main() {
     if (newEntries.length === 0) {
       console.log('\n✓ No new entries to add');
       return;
+    }
+
+    // 開発者向けの記事は、公式の「Action required」ラベルを記事ページから取得
+    for (const entry of newEntries.filter((e) => e.source === 'developer-changelog')) {
+      entry.officialActionRequired = await fetchOfficialActionRequired(entry.link);
     }
 
     // 新規エントリーを追加

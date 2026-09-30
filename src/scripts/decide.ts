@@ -1,12 +1,13 @@
 import { JevClassifier } from '../analyzer/jev.js';
 import { getOptionalEnv } from '../utils/env.js';
+import { loadProfiles } from '../utils/config.js';
 import { loadDataStore, saveDataStore } from '../utils/file.js';
 
 // 保存間隔（件数）。全件バックフィル時にファイル書き込みを減らす
 const SAVE_EVERY = 25;
 
 /**
- * Jevの判定がないエントリーを評価して保存（評価中のため本番のスコアには使わない）
+ * Jevの判定がない（または設定が古い）エントリーを評価して保存
  */
 async function main() {
   if (!getOptionalEnv('TYPESAFE_API_KEY')) {
@@ -14,9 +15,13 @@ async function main() {
     return;
   }
 
-  const classifier = new JevClassifier();
+  const profiles = await loadProfiles();
+  const classifier = new JevClassifier(profiles);
   const dataStore = await loadDataStore();
-  const targets = dataStore.entries.filter((entry) => !entry.jev);
+  // 未判定、または判定に使った立場の設定が古いエントリーが対象
+  const targets = dataStore.entries.filter(
+    (entry) => entry.jev?.profilesVersion !== profiles.version
+  );
   console.log(`=== Jev decisions: ${targets.length} entries ===\n`);
 
   let successCount = 0;

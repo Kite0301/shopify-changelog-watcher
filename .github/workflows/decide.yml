@@ -1,0 +1,37 @@
+name: Jev Decisions
+
+# config/profiles.json の version を上げたときなどに、Jevの判定をやり直してコミットする
+on:
+  workflow_dispatch:
+
+jobs:
+  decide:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Record Jev decisions
+        env:
+          TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
+        run: npm run decide
+
+      - name: Commit and push changes
+        run: |
+          if [[ -z $(git status -s data/entries.json) ]]; then
+            echo "No changes"
+            exit 0
+          fi
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/entries.json
+          git commit -m "Update Jev decisions (automated)"
+          git push

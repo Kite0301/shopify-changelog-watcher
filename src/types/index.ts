@@ -61,6 +61,12 @@ export const JevDecisionSchema = z.object({
   totalScore: z.number(),
   actionRequired: z.number(), // 対応が必要な確率（0-1）
   breakingChange: z.number(), // 破壊的変更・廃止である確率（0-1）
+  appliesInJapan: z.number().optional(), // 日本のストアに適用される確率（0-1）
+  // 立場ごとの関係度（config/profiles.json）。overall は立場全体、areas は領域ごとの確率
+  relevance: z
+    .record(z.string(), z.object({ overall: z.number(), areas: z.record(z.string(), z.number()) }))
+    .optional(),
+  profilesVersion: z.number().optional(),
   decidedAt: z.string(),
   tokenUsage: TokenUsageSchema,
 });
@@ -79,6 +85,7 @@ export const ChangelogEntrySchema = z.object({
   description: z.string(),
   analyses: z.record(z.string(), AnalysisSchema).optional(), // モデル名をキーとした分析結果の辞書
   jev: JevDecisionSchema.optional(),
+  officialActionRequired: z.boolean().optional(), // Shopify公式の「Action required」ラベル（開発者向けのみ）
 });
 
 export type ChangelogEntry = z.infer<typeof ChangelogEntrySchema>;

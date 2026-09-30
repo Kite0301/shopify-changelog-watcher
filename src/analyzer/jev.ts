@@ -1,6 +1,7 @@
-import { TypeSafeClient, noul, score } from '@typesafe-ai/sdk';
+import { TypeSafeClient, noul, score, type NoulResponse, type Questions } from '@typesafe-ai/sdk';
 import type { ChangelogEntry, JevDecision } from '../types/index.js';
 import { toISOString } from '../utils/date.js';
+import type { Profiles } from '../utils/config.js';
 
 // 原文が英語のため、質問と評価基準も英語で与える
 // （config/evaluation-criteria.json の4軸・5段階と同じ内容）
@@ -42,7 +43,27 @@ const QUESTIONS = {
   breakingChange: noul(
     'Is this a breaking change or deprecation that will stop existing integrations or workflows from working?'
   ),
+  appliesInJapan: noul(
+    'Does this change apply to stores based in Japan? Answer no if it is limited to specific other countries or regions.'
+  ),
 };
+
+/**
+ * 立場ごとの関係度を聞く質問を作る（キーは `立場__overall` / `立場__領域`）
+ */
+function buildRelevanceQuestions(profiles: Profiles): Questions {
+  const questions: Questions = {};
+  for (const [key, profile] of Object.entries(profiles.profiles)) {
+    questions[`${key}__overall`] = noul({
+      question: 'Does this change affect this business or require its attention?',
+      business: profile.summary,
+    });
+    for (const [area, { question }] of Object.entries(profile.areas)) {
+      questions[`${key}__${area}`] = noul(question);
+    }
+  }
+  return questions;
+}
 
 /**
  * HTMLタグを除いたプレーンテキストに変換
@@ -56,20 +77,36 @@ function toPlainText(html: string): string {
 
 export class JevClassifier {
   private client = new TypeSafeClient();
+  private relevanceQuestions: Questions;
+
+  constructor(private profiles: Profiles) {
+    this.relevanceQuestions = buildRelevanceQuestions(profiles);
+  }
 
   /**
    * Jevでエントリーを評価（スコアは1-5に揃える）
    */
   async decide(entry: ChangelogEntry): Promise<JevDecision> {
-    const { answers, model, usage } = await this.client.systemOne({
-      state: {
-        title: entry.title,
-        source: entry.source,
-        categories: entry.category,
-        content: toPlainText(entry.description),
-      },
-      questions: QUESTIONS,
-    });
+    const state = {
+      title: entry.title,
+      source: entry.source,
+      categories: entry.category,
+      content: toPlainText(entry.description),
+    };
+    const [{ answers, model, usage }, relevanceResult] = await Promise.all([
+      this.client.systemOne({ state, questions: QUESTIONS }),
+      this.client.systemOne({ state, questions: this.relevanceQuestions }),
+    ]);
+
+    const relevance: NonNullable<JevDecision['relevance']> = {};
+    for (const [key, profile] of Object.entries(this.profiles.profiles)) {
+      const prob = (name: string) =>
+        (relevanceResult.answers[`${key}__${name}`] as NoulResponse).noul;
+      relevance[key] = {
+        overall: prob('overall'),
+        areas: Object.fromEntries(Object.keys(profile.areas).map((area) => [area, prob(area)])),
+      };
+    }
 
     // Jevのスコアは0始まりなので+1して1-5に揃える
     const toScore = (a: { score: number; confidence: number }) => ({
@@ -89,8 +126,14 @@ export class JevClassifier {
       totalScore: Object.values(scores).reduce((sum, s) => sum + s.score, 0),
       actionRequired: answers.actionRequired.noul,
       breakingChange: answers.breakingChange.noul,
+      appliesInJapan: answers.appliesInJapan.noul,
+      relevance,
+      profilesVersion: this.profiles.version,
       decidedAt: toISOString(new Date()),
-      tokenUsage: { input: usage.input_tokens, output: usage.output_tokens },
+      tokenUsage: {
+        input: usage.input_tokens + relevanceResult.usage.input_tokens,
+        output: usage.output_tokens + relevanceResult.usage.output_tokens,
+      },
     };
   }
 }
