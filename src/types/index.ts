@@ -64,7 +64,14 @@ export const JevDecisionSchema = z.object({
   appliesInJapan: z.number().optional(), // 日本のストアに適用される確率（0-1）
   // 立場ごとの関係度（config/profiles.json）。overall は立場全体、areas は領域ごとの確率
   relevance: z
-    .record(z.string(), z.object({ overall: z.number(), areas: z.record(z.string(), z.number()) }))
+    .record(
+      z.string(),
+      z.object({
+        overall: z.number(),
+        areas: z.record(z.string(), z.number()),
+        excludes: z.record(z.string(), z.number()).optional(),
+      })
+    )
     .optional(),
   profilesVersion: z.number().optional(),
   decidedAt: z.string(),
@@ -72,6 +79,17 @@ export const JevDecisionSchema = z.object({
 });
 
 export type JevDecision = z.infer<typeof JevDecisionSchema>;
+
+// 立場ごとの優先度（src/utils/priority.ts で計算）
+export const PrioritySchema = z.object({
+  level: z.enum(['now', 'check', 'info']), // 今すぐ対応 / 確認推奨 / 参考
+  action: z.number(), // 対応が必要な確率（公式ラベルがあれば 0 か 1）
+  relevance: z.number(), // 関係度（0-1）
+  areas: z.array(z.string()), // 関係する領域（表示用ラベル）
+  outOfScope: z.boolean(), // 対象外の可能性が高い
+});
+
+export type Priority = z.infer<typeof PrioritySchema>;
 
 // Changelog Entry Schema
 export const ChangelogEntrySchema = z.object({
@@ -86,6 +104,7 @@ export const ChangelogEntrySchema = z.object({
   analyses: z.record(z.string(), AnalysisSchema).optional(), // モデル名をキーとした分析結果の辞書
   jev: JevDecisionSchema.optional(),
   officialActionRequired: z.boolean().optional(), // Shopify公式の「Action required」ラベル（開発者向けのみ）
+  priority: z.record(z.string(), PrioritySchema).optional(),
 });
 
 export type ChangelogEntry = z.infer<typeof ChangelogEntrySchema>;

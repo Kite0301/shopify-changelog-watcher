@@ -58,7 +58,7 @@ function buildRelevanceQuestions(profiles: Profiles): Questions {
       question: 'Does this change affect this business or require its attention?',
       business: profile.summary,
     });
-    for (const [area, { question }] of Object.entries(profile.areas)) {
+    for (const [area, { question }] of Object.entries({ ...profile.areas, ...profile.excludes })) {
       questions[`${key}__${area}`] = noul(question);
     }
   }
@@ -105,6 +105,7 @@ export class JevClassifier {
       relevance[key] = {
         overall: prob('overall'),
         areas: Object.fromEntries(Object.keys(profile.areas).map((area) => [area, prob(area)])),
+        excludes: Object.fromEntries(Object.keys(profile.excludes).map((ex) => [ex, prob(ex)])),
       };
     }
 

@@ -1,6 +1,6 @@
 {
-  "version": 2,
-  "description": "「関係あるか」を判定する立場の定義。question は Jev に渡す英語の質問（原文が英語のため）、label は表示用",
+  "version": 3,
+  "description": "「関係あるか」を判定する立場の定義。question は Jev に渡す英語の質問（原文が英語のため）、label は表示用。areas のいずれかに当てはまれば関係あり、excludes に当てはまれば関係度を下げる",
   "profiles": {
     "merchant": {
       "label": "マーチャント（自社D2C）",
@@ -51,6 +51,16 @@
           "label": "管理画面・Sidekick・アプリ",
           "question": "Does this change affect general Shopify admin features, Sidekick, or how merchants use apps?"
         }
+      },
+      "excludes": {
+        "posOnly": {
+          "label": "POS（実店舗）のみ",
+          "question": "Is this change only relevant to physical retail stores or Shopify POS?"
+        },
+        "internationalOnly": {
+          "label": "海外販売のみ",
+          "question": "Is this change only relevant to selling internationally, cross-border, or with Shopify Markets for multiple countries?"
+        }
       }
     },
     "developer": {
@@ -97,6 +107,12 @@
         "appStore": {
           "label": "App Store・Partner要件",
           "question": "Does this change affect Shopify App Store listing or review requirements, or requirements for Shopify Partner accounts and organizations?"
+        }
+      },
+      "excludes": {
+        "unusedSurfaceOnly": {
+          "label": "未使用の機能のみ",
+          "question": "Is this change only relevant to POS UI extensions, Shopify Functions, checkout or customer account UI extensions, Hydrogen, Storefront API, Flow, or metafields and metaobjects?"
         }
       }
     }

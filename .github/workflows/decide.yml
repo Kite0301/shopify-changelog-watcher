@@ -24,6 +24,9 @@ jobs:
           TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
         run: npm run decide
 
+      - name: Compute priorities
+        run: npm run prioritize
+
       - name: Commit and push changes
         run: |
           if [[ -z $(git status -s data/entries.json) ]]; then

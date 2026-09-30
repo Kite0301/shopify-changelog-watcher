@@ -8,6 +8,7 @@
     "fetch": "tsx src/scripts/fetch-rss.ts",
     "analyze": "tsx src/scripts/analyze.ts",
     "decide": "tsx src/scripts/decide.ts",
+    "prioritize": "tsx src/scripts/prioritize.ts",
     "compare:models": "tsx src/scripts/compare-models.ts",
     "compare:jev": "tsx src/scripts/compare-jev.ts",
     "report:weekly": "tsx src/scripts/generate-weekly-report.ts",

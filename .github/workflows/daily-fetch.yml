@@ -75,6 +75,9 @@ jobs:
           TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
         run: npm run decide
 
+      - name: Compute priorities
+        run: npm run prioritize
+
       - name: Extract new entry titles
         id: extract_titles
         if: steps.fetch.outputs.new_entries != '0'

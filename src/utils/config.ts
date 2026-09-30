@@ -73,6 +73,9 @@ const ProfilesSchema = z.object({
       summary: z.string(),
       requireJapan: z.boolean(),
       areas: z.record(z.string(), z.object({ label: z.string(), question: z.string() })),
+      excludes: z
+        .record(z.string(), z.object({ label: z.string(), question: z.string() }))
+        .default({}),
     })
   ),
 });
