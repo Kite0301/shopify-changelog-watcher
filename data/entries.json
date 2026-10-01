@@ -2565,7 +2565,7 @@
           "summarizedJa": "GraphQL Admin API 2027-01以降、非推奨のDiscountCountriesInput.includeRestOfWorldにtrueを渡すとBAD_REQUESTエラーが返されるようになります。送料割引の対象国は、addで国コードを明示的に列挙する必要があります。2026-10以前のバージョンではサポート期間中は従来の挙動が維持されます。",
           "audienceJa": "Admin GraphQL APIで送料割引を作成・更新し、includeRestOfWorld: trueを使用しているアプリ開発者",
           "actionJa": "2027-01へアップグレードする前に、割引のcreate/updateミューテーション内のincludeRestOfWorld: trueを対象国コードの完全なリストをaddで指定する形に置き換え、開発ストアでテストしてください。",
-          "deadline": "2027-01-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 2,
             "partnerImpact": 3,
@@ -3317,7 +3317,7 @@
           "summarizedJa": "Admin GraphQL API 2027-01で、marketCurrencySettingsUpdateミューテーションと関連する型（Payload、UserError、UserErrorCode）が削除されます。このミューテーションは2025-04のMarkets Home導入時に非推奨となり、現在は常にエラーを返すため実質的に機能していません。2027-01では呼び出しがバリデーションで拒否されてリクエスト全体が失敗するため、marketCreate/marketUpdateへの移行が必要です。",
           "audienceJa": "marketCurrencySettingsUpdateを呼び出しているAdmin GraphQL APIを使うアプリ開発者",
           "actionJa": "marketCurrencySettingsUpdateの呼び出しを、通貨設定を入力に直接含めたmarketCreateまたはmarketUpdateに置き換えてください。",
-          "deadline": "2027-01-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 1,
             "partnerImpact": 2,
@@ -3852,7 +3852,7 @@
           "summarizedJa": "非推奨だったGraphQL Admin APIの`automaticDiscounts`クエリが、API 2027-01で削除されます。関連する`DiscountAutomaticConnection`・`DiscountAutomaticEdge`型も削除され、今後は`discountNodes`クエリに`query: \"method:automatic\"`フィルターを付けて取得する必要があります。なお`automaticDiscountNodes`も非推奨のため、移行先には`discountNodes`を選ぶよう推奨されています。",
           "audienceJa": "GraphQL Admin APIで`automaticDiscounts`クエリを使用しているアプリ開発者",
           "actionJa": "API 2027-01へアップグレードする前に、`automaticDiscounts`を`discountNodes`（`query: \"method:automatic\"`）に置き換えます。あわせて、インラインフラグメントを`discount`フィールド配下へ移し、2027-01に対して型を再生成してください。",
-          "deadline": "2027-01-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 2,
             "partnerImpact": 3,
@@ -4642,7 +4642,7 @@
           "summarizedJa": "Events（新しいイベント配信機能）のペイロード、トリガー構文、配信ヘッダーが本日より変更されました。fields_changedがadded/updated/removedの3配列を持つオブジェクトになり、親パスのトリガーには末尾に「.*」のワイルドカードが必要となり、shopify-event-idとshopify-resource-idヘッダーが廃止されます。またupdateアクションのサブスクリプションではトリガー指定が必須になります（従来のWebhookサブスクリプションは影響なし）。",
           "audienceJa": "Events機能でイベントを購読しているアプリ開発者",
           "actionJa": "fields_changedの新しいオブジェクト形式に対応し、次回のshopify.app.tomlデプロイ時に親トリガーを「.*」形式へ更新し、削除されたヘッダーへの依存を除去してShopify APIパッケージを最新版に更新してください。",
-          "deadline": "2026-09-16",
+          "deadline": null,
           "scores": {
             "merchantImpact": 1,
             "partnerImpact": 4,
@@ -6017,7 +6017,7 @@
           "summarizedJa": "開発者プレビューでのみ提供されていたDiscounts Allocator Function APIは削除され、正式リリースされないことになりました。関連するunstable版Admin GraphQL APIのミューテーションやドキュメントは削除され、プレビュー中に登録されたFunctionは自動で登録解除されます。purchase.discounts-allocator.runの拡張ターゲットを宣言しているアプリは、設定から削除しないとshopify app deployがアプリ全体で失敗します。",
           "audienceJa": "Discounts Allocator開発者プレビューに参加し、purchase.discounts-allocator.run拡張ターゲットを宣言しているアプリ開発者",
           "actionJa": "アプリ設定からpurchase.discounts-allocator.run拡張ターゲットを持つ拡張機能を削除して再デプロイし、必要に応じてDiscount Function APIへ移行してください。",
-          "deadline": "2026-09-10",
+          "deadline": null,
           "scores": {
             "merchantImpact": 1,
             "partnerImpact": 2,
@@ -7789,7 +7789,7 @@
           "summarizedJa": "有効期限付きオフラインアクセストークンのリフレッシュ時に、アプリが新しいリフレッシュトークンを使い始めるまで、以前のリフレッシュトークンを再試行できるようになりました（従来は60分まで、今回から初回使用から最大30日、ただし90日の有効期間は超えない）。これにより、レスポンスの喪失や保存失敗が起きても、マーチャントにアプリを再度開いてもらわずに復旧できます。移行作業は不要ですが、トークンペアのアトミックな保存は引き続き必要です。",
           "audienceJa": "有効期限付きオフラインアクセストークンを使用するアプリ開発者",
           "actionJa": null,
-          "deadline": "2026-08-28",
+          "deadline": null,
           "scores": {
             "merchantImpact": 1,
             "partnerImpact": 2,
@@ -9321,7 +9321,7 @@
           "summarizedJa": "Sidekickが admin.app.intent.link ターゲットで宣言されたアプリインテントを呼び出すと、従来のオーバーレイ（モーダル）ではなく、拡張機能の url へフルページで遷移するようになりました。全ストア・全APIバージョンで適用済みで設定変更は不要ですが、未保存の変更がある場合は引き続きモーダルで開きます。admin.app.intent.render ターゲットや intents.invoke() によるadminインテントは影響を受けません。",
           "audienceJa": "admin.app.intent.link ターゲットでSidekick向けアプリインテントを宣言しているアプリ開発者",
           "actionJa": "url で指定したルートがフルページ幅とモーダルの両方で正しく表示され、shopify.intents.request.value の読み取り・shopify.tools.register の登録・インテントの解決が機能するかを開発ストアで確認してください。",
-          "deadline": "2026-08-19",
+          "deadline": null,
           "scores": {
             "merchantImpact": 1,
             "partnerImpact": 2,
@@ -16469,7 +16469,7 @@
           "summarizedJa": "Android版Shopifyモバイルアプリのセキュリティアップデートにより、全ユーザーは最新版へのアップデートが必須となりました。また、アプリの動作要件がAndroid 11以降に引き上げられました。Android 10以前の端末では、モバイルブラウザからadmin.shopify.comにアクセスしてストア管理を継続できます。",
           "audienceJa": "Android端末でShopifyモバイルアプリを利用する全マーチャントおよびスタッフ",
           "actionJa": "Shopifyアプリを最新版にアップデートし、Android 10以前の端末を使用している場合はOSを更新するか、モバイルブラウザでadmin.shopify.comを利用してください。",
-          "deadline": "2026-07-08",
+          "deadline": null,
           "scores": {
             "merchantImpact": 3,
             "partnerImpact": 2,
@@ -17514,7 +17514,7 @@
           "summarizedJa": "Customer Account API バージョン2026-10で、非推奨となっていた Customer.lastIncompleteCheckout フィールドと、Checkout・AppliedGiftCard・ShippingRate などの Checkout 型サブツリーが削除されます。このフィールドはすでに null を返しており、Checkout Classic 由来の古いスキーマを整理する変更です。代替フィールドはなく、カート状態には Storefront API の Cart、購入履歴には Customer.orders を利用します。",
           "audienceJa": "Customer Account API を利用するアプリ・カスタムストアフロント開発者",
           "actionJa": "API バージョン2026-10へ移行する前に、クエリから Customer.lastIncompleteCheckout とその配下のフィールド指定を削除してください。",
-          "deadline": "2026-10-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 1,
             "partnerImpact": 2,
@@ -17657,7 +17657,7 @@
           "summarizedJa": "Shopifyは、レビューと引き換えにアプリ機能を提供・解放・制限する「レビューの見返り提供」を禁止する専用のApp Store要件を新設し、違反アプリはレビューの大部分が削除されます。また、不正レビューの検出シグナルを拡充し、既存レビューにも遡って適用するため、今後数週間で多数のレビューが非公開化され、正当なアプリでも一部レビューが消える可能性があります。",
           "audienceJa": "Shopify App Storeにアプリを公開しているパートナー（アプリ開発者）",
           "actionJa": "レビューの見返りとして機能や特典を提供する仕組みを直ちに廃止し、Reviews APIを使って中立的な表現で実際の利用者にのみレビューを依頼してください。",
-          "deadline": "2026-07-06",
+          "deadline": null,
           "scores": {
             "merchantImpact": 2,
             "partnerImpact": 4,
@@ -19287,7 +19287,7 @@
           "summarizedJa": "Shopifyは配送設定をマーケットごとに行う「マーケット主導の配送」へ移行し、これを利用するショップではAdmin GraphQL APIのマーチャント所有配送プロファイル関連のフィールドとミューテーション（deliveryProfile、deliveryProfileCreateなど）が実際の配送設定を反映しなくなります。読み取りは古いスナップショットを返す可能性があり、書き込みはエラーなしで成功しても実際の設定は更新されません。アプリ所有の配送プロファイルは影響を受けません。",
           "audienceJa": "Admin GraphQL APIでマーチャント所有の配送プロファイルを読み取り・管理しているアプリ開発者（パートナー）、およびそのアプリを利用するマーチャント",
           "actionJa": "アップグレードガイドに従い、マーケット主導の配送を使うショップを検出して、マーチャント所有配送プロファイルAPIへの依存をやめ、Contextual Product Feeds・アプリ所有配送プロファイル・Markets APIのいずれかへ移行してください。",
-          "deadline": "2026-07-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 3,
             "partnerImpact": 5,
@@ -19554,7 +19554,7 @@
           "summarizedJa": "API バージョン 2026-07 から、GraphQL Admin API の Market オブジェクトに delivery フィールドが追加され、配送プロファイルを別途作成せずにマーケットごとの配送設定を直接行えるようになりました。marketCreate / marketUpdate ミューテーションを使い、定額・購入金額ベース・重量ベース・配送業者計算の配送オプションを作成・更新・削除できます。未設定のマーケットは親マーケットの配送設定を継承し、isEnabled を false にするとそのマーケットのチェックアウトで配送オプションが表示されなくなります。",
           "audienceJa": "Admin GraphQL API で Markets や配送設定を扱うアプリ開発者（越境EC・多市場展開向けアプリのパートナー）",
           "actionJa": "マーケットごとの配送設定を扱う場合は、API バージョン 2026-07 以降で read_markets / write_markets スコープを用意し、marketCreate・marketUpdate の delivery.shipping を使った実装を検討してください。",
-          "deadline": "2026-07-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 2,
             "partnerImpact": 3,
@@ -19820,7 +19820,7 @@
           "summarizedJa": "在庫移動（Transfer）が Shopify 管理画面および Admin GraphQL API でカスタムメタフィールドに対応しました。「設定 > メタフィールドとメタオブジェクト > 移動」で定義を作成し、ロット・シリアル番号、物流・通関情報、ERP/WMS 連携用の参照番号などを保存できます。複製時のメタフィールドのコピーや、Shopify アナリティクスでのフィルター・グループ化にも対応しています。",
           "audienceJa": "複数拠点で在庫移動を管理するマーチャント、Stocky から移行したマーチャント、在庫・ERP/WMS 連携アプリを開発するパートナー",
           "actionJa": null,
-          "deadline": "2026-06-30",
+          "deadline": null,
           "scores": {
             "merchantImpact": 2,
             "partnerImpact": 3,
@@ -21464,7 +21464,7 @@
           "summarizedJa": "GraphQL Admin API 2026-10以降、DraftOrderDiscountNotAppliedWarningオブジェクトの非推奨フィールドpriceRuleが削除され、これに伴いPriceRuleオブジェクトと関連型も公開スキーマから削除されます。draftOrderCalculate・draftOrderCreate・draftOrderUpdateなどの警告でpriceRuleを参照しているアプリは、代わりにdiscountTitleとdiscountCodeを使用する必要があります。旧バージョンではサポート終了までpriceRuleが引き続き利用可能です。",
           "audienceJa": "下書き注文（Draft Order）の割引警告でpriceRuleを参照しているAdmin GraphQL APIを使うアプリ開発者",
           "actionJa": "2026-10へアップグレードする前に、DraftOrderDiscountNotAppliedWarningのpriceRuleを参照するクエリをdiscountTitleとdiscountCodeを選択する形に書き換えてください。",
-          "deadline": "2026-10-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 1,
             "partnerImpact": 3,
@@ -21974,7 +21974,7 @@
           "summarizedJa": "API バージョン 2026-10 から、在庫数量の調整・移動・設定系ミューテーション（InventoryAdjustQuantities、InventoryMoveQuantities、InventorySetOnHandQuantities など）のエラーコードから ITEM_NOT_STOCKED_AT_LOCATION が削除されます。フルフィルメント用に有効化していないロケーションでも在庫を管理できるようになり、このエラーが発生する条件自体がなくなったためです。アプリ側でこのエラーを処理しているロジックは安全に削除できます。",
           "audienceJa": "Admin GraphQL API で在庫数量を操作するアプリ開発者",
           "actionJa": "API バージョン 2026-10 へ移行する前に、ITEM_NOT_STOCKED_AT_LOCATION エラーコードを参照している処理（enum の網羅的な分岐など）を削除・修正してください。",
-          "deadline": "2026-10-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 1,
             "partnerImpact": 2,
@@ -23777,7 +23777,7 @@
           "summarizedJa": "顧客アカウントページが1カラムのシンプルなレイアウト、分かりやすくアクセシブルなナビゲーション、モバイルファーストの最適化によって刷新されます。モバイルでのインラインメニュー表示、注文詳細の見やすさ向上、注文アクションの上部表示、注文がない顧客へのおすすめ商品表示、ログインページのカスタマイズ強化などが含まれます。本日から順次展開され、数週間以内に最新版の顧客アカウントを使う全ストアで利用可能になります。",
           "audienceJa": "最新版の顧客アカウントを利用する全マーチャント、旧バージョン（レガシー）の顧客アカウントを使うマーチャント、顧客アカウント拡張機能を提供するアプリ開発者",
           "actionJa": "レガシー顧客アカウントを利用中の場合は、刷新デザインを全ページで適用するために最新版の顧客アカウントへアップグレードし、チェックアウト・アカウントエディタで表示やおすすめ商品を確認・調整してください。",
-          "deadline": "2026-06-17",
+          "deadline": null,
           "scores": {
             "merchantImpact": 3,
             "partnerImpact": 3,
@@ -23921,7 +23921,7 @@
           "summarizedJa": "PlusおよびEnterpriseプランのマーチャントは、1回のチェックアウトで商品ごとに配送と店舗受け取りを選択できるようになりました。注文作成時には受け取り用と配送用のフルフィルメントが分かれて管理画面に表示されます。機能テストドライブで有効化でき、2027年4月に対象の全チェックアウトへ自動リリースされます。",
           "audienceJa": "Plus・Enterpriseプランのマーチャント、および配送・フルフィルメント・注文ロジックに関わるアプリ開発者",
           "actionJa": "自動リリース前に機能テストドライブで有効化し、配送・フルフィルメント・注文に関わるサードパーティ/カスタムアプリや連携が分割フルフィルメントに対応しているか検証・開発者に確認してください。",
-          "deadline": "2027-04-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 3,
             "partnerImpact": 4,
@@ -25447,7 +25447,7 @@
           "summarizedJa": "Sidekickアプリ拡張機能に対し、Shopify App Store要件2.2.8と2.2.9の2項目が新たに追加され、即日適用されました。拡張機能の設定・App Storeリスティング・実際の動作がアプリの中核機能と一致している必要があり、Sidekick内での宣伝・広告・クロスセル・レビュー依頼は禁止されます。",
           "audienceJa": "Sidekickアプリ拡張機能を開発済み・開発予定のApp Store公開アプリ開発者",
           "actionJa": "拡張機能のTOML設定・Sidekick上での実行時の挙動・App Storeリスティングを見直し、中核機能との整合性を確保するとともに、宣伝・広告・クロスセル・レビュー依頼を含めないよう修正してください。",
-          "deadline": "2026-06-17",
+          "deadline": null,
           "scores": {
             "merchantImpact": 1,
             "partnerImpact": 3,
@@ -26333,7 +26333,7 @@
           "summarizedJa": "GraphQL Admin API 2026-07では、コレクションの単一ruleSetが複数のCollectionSource（包含・除外条件、手動選択、サブコレクション、アプリ共有ソース）で構成される新モデルに置き換わりました。新機能を使うコレクションは旧APIバージョンのクエリ結果から除外されるため、全コレクションを扱うには2026-07への移行が必要です。またShopify FunctionsのProductVariantにバリアント単位のコレクション所属判定フィールドが追加されました。",
           "audienceJa": "コレクションを読み書きするAdmin GraphQL APIアプリ開発者およびShopify Functions開発者",
           "actionJa": "Collection.ruleSetやcollectionCreate/Update(input:)を使用しているアプリは、API 2026-07に移行しCollection.sourcesと新しいcollection引数を使うよう実装を更新してください。",
-          "deadline": "2026-07-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 3,
             "partnerImpact": 5,
@@ -26599,7 +26599,7 @@
           "summarizedJa": "本日より、アプリリソースに保存されたメタフィールドをCustomer Account APIで取得するには、メタフィールド定義とカスタマーアカウントのアクセス権限の設定が必要になりました。定義のないアプリメタフィールドは値を返さなくなるため、顧客アカウントUI拡張、Hydrogen、ヘッドレスストアで利用している場合は対応が必要です。なお、CustomerやOrderリソースのメタフィールドは影響を受けません。",
           "audienceJa": "Customer Account APIでアプリメタフィールドを利用するアプリ開発者（顧客アカウントUI拡張、Hydrogen・ヘッドレスストア構築者）",
           "actionJa": "使用するすべてのアプリメタフィールドについて、metafieldDefinitionCreateまたはTOMLの宣言的メタフィールドで定義を作成し、Customer Account APIへのアクセス権限を設定してください。",
-          "deadline": "2026-06-16",
+          "deadline": null,
           "scores": {
             "merchantImpact": 2,
             "partnerImpact": 4,
@@ -29493,7 +29493,7 @@
           "summarizedJa": "Shopify CLI 4.0がリリースされ、セマンティックバージョニングの採用と、インストール時のパッケージマネージャーを使った自動アップグレード（CI・プロジェクトローカル・メジャー版では無効、`shopify config autoupgrade off`で停止可）が導入されました。また、`app deploy`/`app release`の`--force`フラグが削除され`--allow-updates`/`--allow-deletes`に置き換わったほか、`shopify theme serve`や`shopify webhook trigger`などの非推奨コマンド・フラグも削除されました。",
           "audienceJa": "Shopify CLIを使用するアプリ・テーマ開発者（CI/CDパイプラインを運用するパートナーを含む）",
           "actionJa": "CI/CDスクリプトやドキュメントで`--force`を`--allow-updates`/`--allow-deletes`に、`theme serve`を`theme dev`に置き換えるなど、削除されたコマンド・フラグを後継のものへ移行してください。",
-          "deadline": "2026-05-21",
+          "deadline": null,
           "scores": {
             "merchantImpact": 1,
             "partnerImpact": 4,
@@ -40270,7 +40270,7 @@
           "summarizedJa": "Admin GraphQL APIのDraftOrderLineItemオブジェクトから、8年以上前に非推奨となっていたgramsフィールドがバージョン2026-07で削除されます。2026-04バージョンのサポート終了後は、このフィールドを参照するクエリがエラーになります。代わりに値と単位を返すweightフィールドを使用してください。",
           "audienceJa": "Admin GraphQL APIで下書き注文（DraftOrder）を扱うアプリ開発者",
           "actionJa": "DraftOrderLineItem.gramsを参照しているクエリを、weightフィールド（valueとunit）を使うよう書き換えてください。",
-          "deadline": "2026-07-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 1,
             "partnerImpact": 2,
@@ -42121,7 +42121,7 @@
           "summarizedJa": "APIバージョン2026-04以降、チェックアウトUI拡張機能および顧客アカウントUI拡張機能でチェックアウトメタフィールドの読み書きができなくなりました。代わりに、チェックアウトUI拡張機能ではカートメタフィールド、顧客アカウントUI拡張機能では注文メタフィールドを使用します。また、注文作成時にカートメタフィールドの値を注文メタフィールドへ自動コピーする新機能が注文メタフィールド定義に追加されました。",
           "audienceJa": "チェックアウトUI拡張機能・顧客アカウントUI拡張機能でチェックアウトメタフィールドを利用しているアプリ開発者（およびそれらのアプリを利用するPlusマーチャント）",
           "actionJa": "API 2026-04へアップグレードし、チェックアウトメタフィールドの利用箇所をチェックアウトUI拡張機能ではカートメタフィールド、顧客アカウントUI拡張機能では注文メタフィールドへ移行してください。",
-          "deadline": "2026-04-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 3,
             "partnerImpact": 4,
@@ -42507,7 +42507,7 @@
           "summarizedJa": "Admin GraphQL API バージョン2026-04から、すべてのディスカウントタイプに tags フィールドが追加されました。Admin API経由でタグの追加・更新・削除ができ、ディスカウントを効率的にラベル付け・グループ化・整理できます。",
           "audienceJa": "ディスカウントを扱う Admin GraphQL API を使うアプリ開発者、および多数のディスカウントを管理するマーチャント",
           "actionJa": "ディスカウントの分類・管理にタグを活用したい場合は、API バージョン2026-04以降に更新して tags フィールドを実装してください。",
-          "deadline": "2026-04-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 2,
             "partnerImpact": 3,
@@ -50967,7 +50967,7 @@
           "summarizedJa": "GraphQL Admin APIのInventoryLevel.scheduledChangesフィールドが、APIバージョン2026-07で削除されます。代替フィールドは提供されないため、このフィールドを参照しているアプリは影響を受ける前に依存をなくす必要があります。予定在庫情報が必要な場合は、他の在庫関連フィールドやinventoryAdjustQuantitiesミューテーションなどの利用を検討してください。",
           "audienceJa": "GraphQL Admin APIで在庫レベル（InventoryLevel.scheduledChanges）を参照しているアプリ開発者",
           "actionJa": "アプリのコードからInventoryLevel.scheduledChangesを参照するクエリを削除し、必要に応じて他の在庫関連フィールドやinventoryAdjustQuantitiesなどの代替手段に移行してください。",
-          "deadline": "2026-07-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 2,
             "partnerImpact": 3,
@@ -51112,7 +51112,7 @@
           "summarizedJa": "GraphQL Admin API のバージョン 2026-07 で `inventorySetScheduledChanges` ミューテーションが削除され、代替機能は提供されません。在庫管理APIの整理・近代化の一環であり、利用中のアプリは事前に依存を解消する必要があります。即時の在庫調整には `inventoryAdjustQuantities` などの利用が推奨されています。",
           "audienceJa": "`inventorySetScheduledChanges` を使用している Admin GraphQL API のアプリ開発者",
           "actionJa": "アプリのコードから `inventorySetScheduledChanges` の利用箇所を洗い出して削除し、必要に応じて `inventoryAdjustQuantities` や他の在庫ツールによる代替実装に移行してください。",
-          "deadline": "2026-07-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 2,
             "partnerImpact": 3,
@@ -51895,7 +51895,7 @@
           "summarizedJa": "GraphQL Admin API 2026-04で、ShopifyQLで参照できる分析用の返品関連フィールドが非推奨となり、返金・返品・注文編集・キャンセルを含む全ての注文調整を表す名称（sales_reversals、reversed_quantityなど）に改名されました。定義自体は変わりません。旧フィールドは2026-07で削除されますが、旧APIバージョンでは2027-04まで利用可能で、物理的な返品数量や理由はreturnsスキーマのreturned_quantityやreturn_line_item_reasonなどで取得できます。",
           "audienceJa": "ShopifyQL（Admin GraphQL API）で分析データを取得するアプリ開発者、およびShopifyQLでカスタムレポートを作成しているマーチャント",
           "actionJa": "ShopifyQLクエリ内の非推奨の返品関連フィールドを、対応表に従って新しいsales_reversalsやreversed_quantityフィールドに置き換えてください。",
-          "deadline": "2026-07-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 2,
             "partnerImpact": 3,
@@ -54333,7 +54333,7 @@
           "summarizedJa": "GraphQL Admin API 2026-04バージョンで、サブスクリプションの請求試行の状態を表す新フィールド「SubscriptionBillingAttemptState」が追加されました。従来の型付けが緩いnullableな複数フィールドを判別共用体（discriminated union）パターンで置き換え、APIの扱いやすさと自己文書化性を高めています。旧フィールドは非推奨となるため、サブスクリプションアプリは新フィールドへの移行が推奨されます。",
           "audienceJa": "GraphQL Admin APIのSubscriptions APIを使うサブスクリプションアプリ開発者",
           "actionJa": "SubscriptionBillingAttempt関連の非推奨フィールドを参照しているクエリを、API 2026-04以降で新しいSubscriptionBillingAttemptStateフィールドを使う形に移行してください。",
-          "deadline": "2026-04-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 1,
             "partnerImpact": 3,
@@ -54749,7 +54749,7 @@
           "summarizedJa": "従来の顧客アカウントは新規ストアおよび現在利用していないストアでは利用できなくなり、機能更新と技術サポートも終了しました。最終的な廃止日は2026年内に発表予定で、マーチャントには新しい顧客アカウントへの早期アップグレードが強く推奨されています。テーマ開発者はレガシーのLiquidファイルを含めないこと、アプリ開発者は顧客アカウントUI拡張機能へ、カスタムストアフロント開発者はCustomer Account APIへの移行が求められます。",
           "audienceJa": "従来の顧客アカウントを利用中のマーチャント、テーマ開発者、顧客アカウント関連アプリ開発者、Storefront APIの顧客関連mutationを使うカスタムストアフロント開発者",
           "actionJa": "マーチャントは新しい顧客アカウントへアップグレードし、開発者はレガシーLiquidテンプレート依存を顧客アカウントUI拡張機能やCustomer Account APIへ移行してください。",
-          "deadline": "2026-02-20",
+          "deadline": null,
           "scores": {
             "merchantImpact": 4,
             "partnerImpact": 5,
@@ -54901,7 +54901,7 @@
           "summarizedJa": "API バージョン 2026-04 以降、新しいメタフィールド値のサイズ上限が 16KB に制限されます。既存の 16KB を超えるメタフィールドは、更新されるまで読み取り専用となります。大きなデータを扱う場合は、メタオブジェクト参照、リスト型、複数メタフィールドへの分割、Files API の利用などの代替手段が推奨されています。",
           "audienceJa": "メタフィールドに大きなデータを保存しているアプリ開発者・パートナー、およびテーマやカスタマイズで大容量メタフィールドを利用しているマーチャント",
           "actionJa": "16KB を超えるメタフィールド値を保存・更新している箇所を洗い出し、API 2026-04 への移行前にメタオブジェクト、リスト型、複数メタフィールドへの分割、または Files API へ移行してください。",
-          "deadline": "2026-04-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 3,
             "partnerImpact": 4,
@@ -60662,7 +60662,7 @@
           "summarizedJa": "Shop Minis CLI が更新され、Shop Minis の作成・管理には Partner 組織内で「アプリを管理する（Manage apps）」権限が必要になりました。権限がない場合、新しい Mini のセットアップや申請の提出・取り消し・確認などの CLI コマンドはエラーになります。",
           "audienceJa": "Shop Minis を開発する Partner 組織のオーナー・管理者および開発者",
           "actionJa": "組織のオーナーまたは管理者が Partner Dashboard の「設定」→「チーム」から、Shop Minis を開発するメンバーに「Sensitive permissions」の「Manage apps」権限を付与してください。",
-          "deadline": "2026-01-17",
+          "deadline": null,
           "scores": {
             "merchantImpact": 1,
             "partnerImpact": 3,
@@ -61714,7 +61714,7 @@
           "summarizedJa": "Shopifyは、マーケティングピクセルを監視し、トラフィックや売上などのシグナルから成果が出ているツールにのみデータを共有する「データ共有の自動最適化」をデフォルト設定にします。有効なすべてのマーケティングピクセルで設定は即時に有効化されますが、成果の出ていないピクセルへのデータ制限が始まるのは少なくとも7日後からです。常に全データを共有したい場合は、[設定] > [顧客イベント]でピクセルを「常にオン」に変更できます。",
           "audienceJa": "マーケティングピクセル（Meta、Google、TikTokなどの広告・計測ツール）を利用している全マーチャント、および広告運用を支援する代理店・ピクセル連携アプリ開発者",
           "actionJa": "広告の学習や計測に影響が出ないよう、7日以内に[設定] > [顧客イベント]で各ピクセルの設定を確認し、完全なデータ共有が必要なピクセルは「常にオン」に変更してください。",
-          "deadline": "2026-01-20",
+          "deadline": null,
           "scores": {
             "merchantImpact": 4,
             "partnerImpact": 4,
@@ -63078,7 +63078,7 @@
           "summarizedJa": "API バージョン2026-04以降、SubscriptionBillingAttemptのerrorCodeとerrorMessageフィールドが非表示になります。これらは2025-01でprocessingErrorの導入に伴い非推奨となっていたもので、今後はprocessingError.codeとprocessingError.messageを使用する必要があります。",
           "audienceJa": "Admin GraphQL APIでサブスクリプション請求を扱うアプリ開発者",
           "actionJa": "SubscriptionBillingAttemptのerrorCode・errorMessageの参照をprocessingError.code・processingError.messageに置き換えてください。",
-          "deadline": "2026-04-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 2,
             "partnerImpact": 3,
@@ -63224,7 +63224,7 @@
           "summarizedJa": "API バージョン 2026-01 以降、サブスクリプションの請求試行（billing attempt）が不正利用防止のため Shopify 内部の信頼性指標に基づいてスロットリング（制限）されるようになります。制限された場合は BillingAttemptUserErrorCode enum に新たに追加された throttled エラーコードで確認できます。",
           "audienceJa": "Admin GraphQL API でサブスクリプション請求を行うアプリ開発者（定期購入アプリを利用するマーチャントにも間接的に影響）",
           "actionJa": "API バージョン 2026-01 への移行時に、請求試行で throttled エラーコードが返された場合のハンドリング（再試行スケジュールや通知処理）を実装してください。",
-          "deadline": "2026-01-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 2,
             "partnerImpact": 3,
@@ -65071,7 +65071,7 @@
           "summarizedJa": "API バージョン 2026-04 以降、FulfillmentService オブジェクトおよび fulfillmentServiceCreate/fulfillmentServiceUpdate ミューテーションから permitsSkuSharing フィールドが削除され、すべてのフルフィルメントサービスで SKU 共有がデフォルトで有効になります。GraphQL ではこのフィールドを参照・送信するとエラーとなり、REST では GET で返されず、POST/PUT では無視されます。在庫を複数ロケーションに配置できるようになるため、単一ロケーション前提のロジックの見直しが必要です。",
           "audienceJa": "フルフィルメントサービスを実装・連携している Admin API（GraphQL/REST）を使うアプリ開発者",
           "actionJa": "API バージョン 2026-04 以降に移行する前に、コードから permitsSkuSharing の読み書きを削除し、フルフィルメントサービスの在庫が単一ロケーションのみと想定したビジネスロジックを見直してください。",
-          "deadline": "2026-04-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 2,
             "partnerImpact": 3,
@@ -65337,7 +65337,7 @@
           "summarizedJa": "セキュリティ脆弱性への対応として、Customer.emailOpenTrackingUrl、Customer.unsubscribeUrl、CustomerEmailAddress.openTrackingUrl、CustomerEmailAddress.marketingUnsubscribeUrl、CustomerPhoneNumber.marketingUnsubscribeUrlの取得に、write_customersスコープとcreate_and_edit_customers権限が必要になりました。これらのURLにはマーケティング同意を変更できる秘密トークンが含まれるためで、全APIバージョンに即時適用されます。read_customersスコープのみのアプリでは、これらのフィールドを取得するとアクセス拒否エラーになります。",
           "audienceJa": "Admin GraphQL APIで顧客のメール開封トラッキングURLや配信停止URLを取得しているアプリ開発者（特にメールマーケティング・SMS配信系アプリ）",
           "actionJa": "該当フィールドを参照している場合は、アプリのアクセススコープにwrite_customersを追加し、リクエストを行うユーザーにcreate_and_edit_customers権限があることを確認してください。",
-          "deadline": "2025-12-18",
+          "deadline": null,
           "scores": {
             "merchantImpact": 2,
             "partnerImpact": 4,
@@ -66459,7 +66459,7 @@
           "summarizedJa": "Admin GraphQL API 2026-04以降、refundCreateや在庫調整・移動・設定、在庫トランスファー・シップメント関連など15のミューテーションで@idempotentディレクティブの指定が必須になります。スキーマ上は必須と表示されませんが、指定しない場合は実行時エラーとなります。ネットワーク再試行などによる在庫の二重計上や返金の重複を防ぐための変更です。",
           "audienceJa": "Admin GraphQL APIで在庫調整・在庫移動・返金作成などのミューテーションを使うアプリ開発者（在庫連携・WMS・POS・返品アプリ等）",
           "actionJa": "API バージョン2026-04へ移行する前に、対象ミューテーションの呼び出しに一意なキー（UUID推奨）を指定した@idempotentディレクティブを追加し、IDEMPOTENCY_CONCURRENT_REQUEST等のエラー処理も実装してください。",
-          "deadline": "2026-04-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 3,
             "partnerImpact": 5,
@@ -66753,7 +66753,7 @@
           "summarizedJa": "Admin GraphQL API 2026-04 では、`inventorySetQuantities` ミューテーションで2026-01に導入された `changeFromQuantity` が実質必須となり、`compareQuantity` と `ignoreCompareQuantity` フィールドが削除されます。スキーマ上は必須表示されませんが、未指定の場合は実行時エラーとなるため、現在の数量を渡して同時実行チェックを有効にするか、明示的に null を渡してチェックをスキップする必要があります。",
           "audienceJa": "Admin GraphQL API の inventorySetQuantities ミューテーションで在庫数量を更新するアプリ開発者",
           "actionJa": "2026-04 へ移行する前に、`compareQuantity` と `ignoreCompareQuantity` を削除し、すべての呼び出しで `changeFromQuantity`（想定される現在数量、またはチェック不要なら null）を指定するよう実装を更新してください。",
-          "deadline": "2026-04-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 2,
             "partnerImpact": 4,
@@ -66901,7 +66901,7 @@
           "summarizedJa": "在庫更新の競合状態や再試行時の重複処理を防ぐため、Admin GraphQL APIの在庫・返金ミューテーションにchangeFromQuantityフィールドによるCompare and Swap保護と@idempotentディレクティブが2026-01で導入されます。2026-04ではこれらが必須化され（changeFromQuantityは明示的なオプトアウト可）、inventorySetQuantitiesの旧Compare and Swapフィールドは削除される破壊的変更となります。",
           "audienceJa": "Admin GraphQL APIで在庫調整・在庫数設定・返金ミューテーションを利用するアプリ開発者（在庫連携・WMS・POS・ERP連携アプリなど）",
           "actionJa": "API 2026-04への移行前に、在庫ミューテーションへchangeFromQuantity（または明示的なオプトアウト）と、在庫・返金ミューテーションへ@idempotentディレクティブ（冪等キー）を付与するよう実装を更新し、inventorySetQuantitiesの旧Compare and Swapフィールドの利用をやめてください。",
-          "deadline": "2026-04-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 2,
             "partnerImpact": 5,
@@ -67050,7 +67050,7 @@
           "summarizedJa": "Admin GraphQL API 2026-04から、inventoryAdjustQuantities・inventoryMoveQuantities・inventorySetOnHandQuantities・productVariantsBulkUpdate（quantityAdjustments）で`changeFromQuantity`の指定が実行時に必須となる破壊的変更です。現在の想定数量を渡すと同時更新による上書きを防ぐ比較チェック（不一致時はCHANGE_FROM_QUANTITY_STALEエラー）が有効になり、チェック不要な場合は明示的にnullを渡す必要があります。スキーマ上は必須表示されないため、未指定のままだと実行時エラーになる点に注意が必要です。",
           "audienceJa": "Admin GraphQL APIで在庫数量を更新するアプリ開発者（在庫管理・ERP/倉庫連携アプリなど）",
           "actionJa": "2026-04へ移行する前に、対象ミューテーションの呼び出しすべてに`changeFromQuantity`（想定される現在数量、またはオプトアウト時は明示的なnull）を追加し、STALEエラー時の再試行処理を実装してください。",
-          "deadline": "2026-04-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 2,
             "partnerImpact": 4,
@@ -73399,7 +73399,7 @@
           "summarizedJa": "Admin GraphQL API 2026-01 で、inventoryAdjustQuantities・inventoryMoveQuantities・inventorySetOnHandQuantities・productVariantsBulkUpdate の各ミューテーションにオプションの changeFromQuantity フィールドが追加されました。指定した数量と実際の在庫数が一致しない場合は CHANGE_FROM_QUANTITY_STALE エラーで失敗するため、同時更新による意図しない上書きを防げます（コンペア・アンド・スワップ）。比較チェックを無効にする場合は明示的に null を渡します。",
           "audienceJa": "Admin GraphQL API で在庫数量を更新するアプリ開発者（在庫連携・WMS・ERP連携アプリなど）",
           "actionJa": "API バージョン 2026-01 への移行時に在庫系ミューテーションで changeFromQuantity に現在の在庫数を指定し、CHANGE_FROM_QUANTITY_STALE エラー時の再取得・リトライ処理を実装してください。",
-          "deadline": "2026-01-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 2,
             "partnerImpact": 4,
@@ -73892,7 +73892,7 @@
           "summarizedJa": "Admin GraphQL APIのLocationオブジェクトにある`in_catalog`と`catalogs`フィールドは、ロケーションに直接カタログを紐づけるという旧来の概念に基づくもので、Markets Homeの導入により有効ではなくなりました。これらのフィールドは非推奨となり、バージョン2026-04からドキュメント上で非表示になります。これらのフィールドを利用している開発者は連携を更新する必要があります。",
           "audienceJa": "Admin GraphQL APIでLocationの`in_catalog`・`catalogs`フィールドを使用しているアプリ開発者",
           "actionJa": "Locationの`in_catalog`・`catalogs`フィールドの利用箇所を洗い出し、API 2026-04への移行までにMarkets Home（Markets/カタログ関連API）に基づく実装へ置き換えてください。",
-          "deadline": "2026-04-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 1,
             "partnerImpact": 2,
@@ -74904,7 +74904,7 @@
           "summarizedJa": "API バージョン 2026-01 以降、Tax Partner App が受け取る税計算リクエストおよび税Webhookのサマリーセクションにおいて、顧客・商品・ラインアイテム・販売契約のIDがGraphQL Admin APIと同じGlobal ID形式に変更されます。これにより税計算APIのID形式が他のShopify APIと統一され、税連携専用の異なるID形式を管理する必要がなくなります。",
           "audienceJa": "Shopifyの税計算API・税Webhookを利用する税パートナーアプリ（Tax Partner App）の開発者",
           "actionJa": "API バージョン 2026-01 への移行に合わせ、税計算リクエストおよび税Webhookで受け取る顧客・商品・ラインアイテム・販売契約のIDを数値IDではなくGlobal ID（gid://shopify/...形式）として解析・保存するよう実装を更新してください。",
-          "deadline": "2026-01-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 1,
             "partnerImpact": 2,
@@ -75438,7 +75438,7 @@
           "summarizedJa": "API バージョン 2026-01 から、サードパーティ税金アプリが受け取る税金計算リクエストおよび税サマリーWebhookペイロード内のエンティティID（Customer、Product、ProductVariant、LineItem、Company など）が数値IDからGID形式（例: gid://shopify/Customer/5）に変更されます。Webhookのトップレベルには admin_graphql_api_id、shop_admin_graphql_api_id、order_admin_graphql_api_id が追加され、既存の shop_id と order_id は整数のまま残ります。",
           "audienceJa": "Shopifyの税金計算連携（Tax Platform）を利用するサードパーティ税金アプリの開発者",
           "actionJa": "API バージョン 2026-01 以降で、税金計算リクエストと税サマリーWebhookのID処理をGID形式に対応するようアプリを改修してください。",
-          "deadline": "2026-01-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 1,
             "partnerImpact": 3,
@@ -78469,7 +78469,7 @@
           "summarizedJa": "Storefront GraphQL API 2026-01 バージョンから、`cartDiscountCodesUpdate` ミューテーションで `discountCodes` 引数の指定が必須になります。これまでは引数なしでもリクエストが受け付けられていましたが、カートは何も変更されていませんでした。",
           "audienceJa": "Storefront API を使ってカートを操作するヘッドレスストアやカスタムストアフロント、アプリの開発者",
           "actionJa": "Storefront API 2026-01 以降へ移行する前に、`cartDiscountCodesUpdate` の呼び出しで必ず `discountCodes` 引数（割引コードを解除する場合は空配列）を渡すようコードを修正してください。",
-          "deadline": "2026-01-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 1,
             "partnerImpact": 2,
@@ -81707,7 +81707,7 @@
           "summarizedJa": "GraphQL Admin API 2026-01から、bulkOperationRunQueryのgroupObjects引数のデフォルトがfalseになり、親子オブジェクトをグループ化しない出力が標準になります。bulkOperationRunMutationのgroupObjects引数は非推奨となり、出力には影響しません。グループ化された出力に依存するアプリは明示的にgroupObjects: trueを指定する必要があります。",
           "audienceJa": "Admin GraphQL APIの一括操作（Bulk Operations）を利用するアプリ開発者",
           "actionJa": "2026-01版へ移行する際、グループ化されたJSONL出力に依存する一括クエリにはgroupObjects: trueを明示し、一括ミューテーションからはgroupObjects引数を削除してください。",
-          "deadline": "2026-01-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 1,
             "partnerImpact": 3,
@@ -83718,7 +83718,7 @@
           "summarizedJa": "Admin GraphQL API（2025-10）に新しいfulfillmentOrdersRerouteミューテーションが追加され、ショップの配送戦略に基づいてフルフィルメントオーダーを次に最適なロケーションへ移動できるようになりました。除外するロケーションや候補とするロケーションを指定することも可能で、管理画面と同等の操作をAPIから行えます。",
           "audienceJa": "複数ロケーションの在庫・フルフィルメントを扱うアプリ開発者およびマーチャント",
           "actionJa": null,
-          "deadline": "2025-10-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 2,
             "partnerImpact": 3,
@@ -83860,7 +83860,7 @@
           "summarizedJa": "Admin GraphQL API 2026-01 バージョンより、`inventoryShipmentReceive` ミューテーションで `idempotencyKey` フィールドが必須となる破壊的変更が行われます。同じキーでの再送信による在庫の二重入荷（重複調整）を防ぐためのもので、キーは最大255文字の任意文字列で、UUID v7 の利用が推奨されています。",
           "audienceJa": "Admin GraphQL API の inventoryShipmentReceive ミューテーションを使用する在庫・入荷管理アプリの開発者",
           "actionJa": "API バージョン 2026-01 へ移行する前に、inventoryShipmentReceive の全リクエストで受領操作ごとに一意の idempotencyKey（UUID v7 推奨）を生成して渡すよう実装を修正してください。",
-          "deadline": "2026-01-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 2,
             "partnerImpact": 3,
@@ -83999,7 +83999,7 @@
           "summarizedJa": "subscriptionBillingAttemptCreateミューテーション使用時、サブスクリプション契約の「配送が必要」の値が、契約追加時に保存された固定値ではなく商品バリエーションの最新値から動的に取得されるようになりました（SubscriptionDraft.fields.deliveryOptionsにも適用）。また、契約内に配送が必要な明細がない場合は注文に配送明細が追加されなくなり、不要な送料や誤った税計算が防止されます。",
           "audienceJa": "サブスクリプションアプリを開発・運用するAdmin GraphQL API利用の開発者、および定期購入を提供するマーチャント",
           "actionJa": "API 2025-10以降で、配送要否が商品バリエーションから動的に取得され配送明細が省略され得ることを前提に、課金処理・送料・税計算のロジックや商品バリエーションの配送設定を見直してください。",
-          "deadline": "2025-10-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 2,
             "partnerImpact": 3,
@@ -85139,7 +85139,7 @@
           "summarizedJa": "Polaris Webコンポーネントが、APIバージョン2025-10の拡張機能向けに一般提供されました。POS、管理画面、チェックアウト、顧客アカウントに対応した統合ツールキットで、ShopifyのCDN経由で常に最新版が提供されます。早期アクセス以降、App Home向けに新しいモーダルを含む14コンポーネント、チェックアウト・顧客アカウント向けに36コンポーネント、新たなPOSサーフェス向けに31コンポーネントが追加されました。",
           "audienceJa": "管理画面・チェックアウト・顧客アカウント・POSの拡張機能やApp Homeを開発するアプリ開発者",
           "actionJa": "2025-10バージョンの拡張機能開発やアップデート時に、ドキュメントを確認してPolaris Webコンポーネントへの移行・採用を検討してください。",
-          "deadline": "2025-10-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 2,
             "partnerImpact": 4,
@@ -86397,7 +86397,7 @@
           "summarizedJa": "GraphQL Admin APIのバージョン2025-10から、ストアのテーマを複製できるthemeDuplicateミューテーションが追加されました。テーマIDを指定し、任意でnameパラメータにより複製後のテーマ名を設定できます。テーマのバックアップや検証用コピーの作成をアプリから自動化しやすくなります。",
           "audienceJa": "Admin GraphQL APIを使ってテーマを操作するアプリ開発者・パートナー",
           "actionJa": null,
-          "deadline": "2025-10-01",
+          "deadline": null,
           "scores": {
             "merchantImpact": 1,
             "partnerImpact": 3,

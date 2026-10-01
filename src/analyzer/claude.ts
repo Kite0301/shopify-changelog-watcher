@@ -2,7 +2,8 @@ import Anthropic from '@anthropic-ai/sdk';
 import { betaZodOutputFormat } from '@anthropic-ai/sdk/helpers/beta/zod';
 import { z } from 'zod';
 import { getAnthropicApiKey, getOptionalEnv } from '../utils/env.js';
-import { buildAnalysisPrompt } from './prompt.js';
+import { buildEntryMessage, buildSystemPrompt } from './prompt.js';
+import { isDateMentioned } from '../utils/deadline.js';
 import type { Analysis, ChangelogEntry } from '../types/index.js';
 import { toISOString } from '../utils/date.js';
 
@@ -10,6 +11,10 @@ import { toISOString } from '../utils/date.js';
 export const DEFAULT_MODEL = 'claude-opus-5-5';
 
 // 料金 (USD per million tokens)
+// キャッシュ書き込みは入力の1.25倍、読み込みは0.1倍
+const CACHE_WRITE_MULTIPLIER = 1.25;
+const CACHE_READ_MULTIPLIER = 0.1;
+
 const PRICING: Record<string, { input: number; output: number }> = {
   'claude-opus-5-5': { input: 4.0, output: 20.0 },
   'claude-sonnet-5-5': { input: 2.0, output: 10.0 },
@@ -28,7 +33,9 @@ const AnalysisResponseSchema = z.object({
   deadline: z
     .string()
     .nullable()
-    .describe('対応期限や変更の適用日（YYYY-MM-DD）。記事に日付がなければ null'),
+    .describe(
+      '記事本文に明記された対応期限や適用日（YYYY-MM-DD）。APIバージョン名から推測しない。なければ null'
+    ),
   scores: z.object({
     merchantImpact: score,
     partnerImpact: score,
@@ -50,7 +57,7 @@ export class ClaudeAnalyzer {
    * Claude APIを使ってエントリーを分析
    */
   async analyzeEntry(entry: ChangelogEntry): Promise<Analysis> {
-    const prompt = await buildAnalysisPrompt(entry);
+    const systemPrompt = await buildSystemPrompt();
 
     const message = await this.client.beta.messages.parse({
       model: this.model,
@@ -62,7 +69,9 @@ export class ClaudeAnalyzer {
         effort: 'low',
         format: betaZodOutputFormat(AnalysisResponseSchema),
       },
-      messages: [{ role: 'user', content: prompt }],
+      // 共通の指示はキャッシュし、同じ実行内で続けて分析するときの入力コストを下げる
+      system: [{ type: 'text', text: systemPrompt, cache_control: { type: 'ephemeral' } }],
+      messages: [{ role: 'user', content: buildEntryMessage(entry) }],
     });
 
     if (message.stop_reason === 'refusal') {
@@ -82,19 +91,33 @@ export class ClaudeAnalyzer {
 
     // フォールバックが走った場合は実際に応答したモデルで記録する
     const model = message.model;
-    const inputTokens = message.usage.input_tokens;
-    const outputTokens = message.usage.output_tokens;
+    const usage = message.usage;
+    const cacheWrite = usage.cache_creation_input_tokens ?? 0;
+    const cacheRead = usage.cache_read_input_tokens ?? 0;
+    const inputTokens = usage.input_tokens + cacheWrite + cacheRead;
+    const outputTokens = usage.output_tokens;
     const pricing = PRICING[model];
     const estimatedCost = pricing
-      ? (inputTokens / 1_000_000) * pricing.input + (outputTokens / 1_000_000) * pricing.output
+      ? ((usage.input_tokens +
+          cacheWrite * CACHE_WRITE_MULTIPLIER +
+          cacheRead * CACHE_READ_MULTIPLIER) /
+          1_000_000) *
+          pricing.input +
+        (outputTokens / 1_000_000) * pricing.output
       : undefined;
+
+    // 期限は本文に明記されている日付だけを採用する
+    const deadline =
+      parsed.deadline && isDateMentioned(entry.description, parsed.deadline)
+        ? parsed.deadline
+        : null;
 
     return {
       titleJa: parsed.titleJa,
       summarizedJa: parsed.summarizedJa,
       audienceJa: parsed.audienceJa,
       actionJa: parsed.actionJa,
-      deadline: parsed.deadline,
+      deadline,
       scores,
       totalScore,
       analyzedAt: toISOString(new Date()),

@@ -193,7 +193,7 @@ GitHub Actions を使って自動デプロイされます。
 
 - AI分析は2025/10/01以降のエントリーのみが対象（`config/evaluation-criteria.json` の `analysis.startDate`）
 - 古いエントリーは `data/entries-archive-2025-09.json` にアーカイブ
-- Claude Opus 5.5: 入力 $4 / 出力 $20（100万トークンあたり）。effort `low` で1エントリーあたり約 $0.01
+- Claude Opus 5.5: 入力 $4 / 出力 $20（100万トークンあたり）。effort `low` で1エントリーあたり約 $0.02、月60件ほどで約 $1。共通の指示文はプロンプトキャッシュで再利用
 - モデルはリポジトリ変数 `ANALYSIS_MODEL`（Settings > Secrets and variables > Actions > Variables）で切り替え可能。過去の分析結果は当時のモデルのまま残ります
 
 ## ライセンス
