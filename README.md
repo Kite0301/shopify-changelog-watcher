@@ -20,6 +20,7 @@ Shopify公式のchangelogを自動収集し、AI分析により日本のマー�
 - 立場別（マーチャント／開発者・パートナー）の優先度（🚨 要対応 / 👀 注目）と関連領域の判定。[Jev](https://typesafe.ai)（判定専用モデル）と Shopify 公式の「Action required」ラベルを使用
 - GitHub Pagesによる収集データの可視化
 - 週次レポート（Markdown / Marpスライド / PDF）の自動生成
+- 月刊レポート「[月間 Shopify Changelogs](https://kite0301.github.io/shopify-changelog-watcher/monthly/)」（HTML）の自動生成。Claude が今月のトピックと立場別のポイントを書き、要対応・注目の更新をまとめます
 - GitHub ActionsとSlack通知による完全自動化
 
 ## 対象リソース
@@ -94,6 +95,9 @@ npm run decide
 # 週次レポート生成（引数なしで前週、例: npm run report:weekly 2026-W39）
 npm run report:weekly
 
+# 月刊レポート生成（引数なしで前月。--refresh で巻頭記事を作り直す）
+npm run report:monthly -- 2026-09
+
 # スライドのPDF化
 npm run slides:pdf data/reports/2026-W39-slides.md
 ```
@@ -124,6 +128,7 @@ GitHubリポジトリの **Settings > Secrets and variables > Actions** で以�
 | ワークフロー | タイミング | 内容 |
 |---|---|---|
 | Daily RSS Fetch | 毎日 9:00 JST | RSS取得 → AI分析 → Jev判定 → `data/entries.json` をコミット → Slack通知 |
+| Monthly Report | 毎月1日 10:00 JST | 前月の「月間 Shopify Changelogs」を作成して GitHub Pages に公開し、Slack で通知 |
 | Jev Decisions | 手動 | 関心領域の設定を変えたときに Jev の判定と優先度を計算し直す |
 | Compare Models | 手動 | 直近の記事を複数モデルで分析して比較（成果物としてMarkdownを保存） |
 | Weekly Report Generation | 毎週月曜 9:30 JST | 前週のレポート・スライド・PDFを生成 → `data/reports/` をコミット → Slack通知 |

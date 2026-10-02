@@ -12,6 +12,7 @@
     "compare:models": "tsx src/scripts/compare-models.ts",
     "compare:jev": "tsx src/scripts/compare-jev.ts",
     "report:weekly": "tsx src/scripts/generate-weekly-report.ts",
+    "report:monthly": "tsx src/scripts/generate-monthly-report.ts",
     "slides:pdf": "marp --theme themes/shopify-changelog.css --pdf --allow-local-files",
     "lint": "eslint src",
     "format": "prettier --write \"src/**/*.ts\""

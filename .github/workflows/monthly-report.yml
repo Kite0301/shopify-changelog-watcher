@@ -1,0 +1,92 @@
+name: Monthly Report
+
+# 毎月1日に前月の「月間 Shopify Changelogs」を作成し、GitHub Pages に公開する
+on:
+  schedule:
+    # 毎月1日 10:00 JST (01:00 UTC)
+    - cron: '0 1 1 * *'
+  workflow_dispatch:
+    inputs:
+      month:
+        description: 'Month to generate (YYYY-MM). Leave empty for the previous month.'
+        required: false
+        type: string
+      refresh:
+        description: 'Regenerate the editorial with Claude even if one exists'
+        required: false
+        type: boolean
+        default: false
+      notify:
+        description: 'Post the link to Slack'
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write # Pages のデプロイを起動するため
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - run: npm ci
+
+      # 要対応・注目の記事に「対象・対応・期限」がそろうように、未分析分を先に補う
+      - name: Fill in missing analyses
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANALYSIS_MODEL: ${{ vars.ANALYSIS_MODEL }}
+        run: npm run analyze
+
+      - name: Compute priorities
+        run: npm run prioritize
+
+      - name: Generate monthly report
+        id: generate
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANALYSIS_MODEL: ${{ vars.ANALYSIS_MODEL }}
+          MONTH: ${{ inputs.month }}
+          REFRESH: ${{ inputs.refresh && '--refresh' || '' }}
+        run: |
+          npm run report:monthly -- $MONTH $REFRESH | tee report-output.txt
+          FILE=$(grep "HTMLを保存" report-output.txt | sed 's#.*public/monthly/##')
+          echo "file=${FILE}" >> $GITHUB_OUTPUT
+          echo "label=$(grep '月間レポート:' report-output.txt | sed 's/.*月間レポート: \([^（]*\).*/\1/')" >> $GITHUB_OUTPUT
+
+      - name: Commit and push
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/entries.json data/reports/monthly public/monthly
+          if git diff --cached --quiet; then
+            echo "No changes"
+            exit 0
+          fi
+          git commit -m "Generate monthly report ${{ steps.generate.outputs.label }} (automated)"
+          git push
+
+      # GITHUB_TOKEN による push では他の workflow が起動しないため、明示的にデプロイする
+      - name: Deploy GitHub Pages
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy-pages.yml --ref main
+
+      - name: Send Slack notification
+        if: github.event_name == 'schedule' || inputs.notify
+        uses: slackapi/slack-github-action@v1.27.0
+        with:
+          payload: |
+            {
+              "text": "📰 月間 Shopify Changelogs ${{ steps.generate.outputs.label }}号を公開しました\nhttps://kite0301.github.io/shopify-changelog-watcher/monthly/${{ steps.generate.outputs.file }}"
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
