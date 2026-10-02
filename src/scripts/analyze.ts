@@ -2,13 +2,14 @@ import { loadDataStore, saveDataStore } from '../utils/file.js';
 import { ClaudeAnalyzer } from '../analyzer/claude.js';
 import { getPrimaryAnalysis } from '../utils/analysis.js';
 
-// 既存エントリーに対象者・対応・期限を補う件数の上限（1回の実行あたり）
-const MAX_DETAIL_BACKFILL = 150;
+// 既存エントリーに対象者・対応・期限を補う範囲（収集日が直近N日以内）と、1回の実行あたりの上限
+const DETAIL_BACKFILL_DAYS = 45;
+const MAX_DETAIL_BACKFILL = 50;
 
 /**
  * 未分析のエントリーを分析して保存
  * ※分析に失敗したエントリーは analyses が付かないため、次回実行時に再分析される
- * ※「要対応」「注目」なのに対象者・対応・期限がない既存エントリーも分析し直す
+ * ※直近に収集した「要対応」「注目」のエントリーで、対象者・対応・期限がないものも分析し直す
  */
 async function main() {
   try {
@@ -21,7 +22,10 @@ async function main() {
     const dataStore = await loadDataStore();
     console.log(`✓ Loaded ${dataStore.entries.length} entries\n`);
 
+    const backfillSince = new Date(Date.now() - DETAIL_BACKFILL_DAYS * 24 * 60 * 60 * 1000);
     const needsDetails = (entry: (typeof dataStore.entries)[number]) =>
+      !!entry.collectedAt &&
+      new Date(entry.collectedAt) >= backfillSince &&
       Object.values(entry.priority ?? {}).some((p) => p.level !== 'info') &&
       getPrimaryAnalysis(entry)?.audienceJa === undefined;
     const unanalyzedEntries = [

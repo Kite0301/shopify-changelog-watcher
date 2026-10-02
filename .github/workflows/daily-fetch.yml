@@ -110,8 +110,10 @@ jobs:
 
           echo "titles_formatted=$TITLES_FORMATTED" >> $GITHUB_OUTPUT
 
+      # 途中で失敗しても、それまでの取得・分析結果は保存する
       - name: Check for changes
         id: check_changes
+        if: ${{ !cancelled() }}
         run: |
           if [[ -n $(git status -s data/entries.json) ]]; then
             echo "changes=true" >> $GITHUB_OUTPUT
@@ -120,7 +122,7 @@ jobs:
           fi
 
       - name: Commit and push changes
-        if: steps.check_changes.outputs.changes == 'true'
+        if: ${{ !cancelled() && steps.check_changes.outputs.changes == 'true' }}
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
