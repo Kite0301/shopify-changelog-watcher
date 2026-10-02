@@ -1,6 +1,1797 @@
 {
-  "lastUpdated": "2026-10-01T00:01:44.267Z",
+  "lastUpdated": "2026-10-02T00:01:21.356Z",
   "entries": [
+    {
+      "id": "developer-changelog-changelog-next-generation-events-are-now-generally-available",
+      "source": "developer-changelog",
+      "title": "More control over commerce updates with Next Gen Events",
+      "link": "https://shopify.dev/changelog/next-generation-events-are-now-generally-available",
+      "publishedAt": "2026-10-01T17:30:00.000Z",
+      "collectedAt": "2026-10-02T00:01:16.420Z",
+      "category": [
+        "API",
+        "New",
+        "Events & webhooks",
+        "2026-10"
+      ],
+      "description": " <div class=\"\"><p>With the <code>2026-10</code> API version Next Gen Events, Shopify's successor to classic webhooks, is now generally available. Events give you more customization than classic webhooks, letting you choose what changes your app receives, and what data comes with the payload.</p>\n<p>If your app keeps track of collection memberships, for example, finding out that a collection changed is only part of the work. You still need to know which product joined or left. With classic webhooks, that can mean fetching the collection's products, comparing them with your saved list, and then updating your app. You're doing all of that work to identify one change.</p>\n<p>We built Events to make this easier. Your subscription tells us which changes your app cares about and what data it needs to process them. We send you the change, the affected resource IDs, and the result of your GraphQL query together.</p>\n<h2>Tell us what your app cares about</h2>\n<p>You configure Events subscriptions right in your app's <code>shopify.app.toml</code> <a href=\"https://shopify.dev/docs/apps/build/cli-for-apps/app-configuration#events\" target=\"_blank\" class=\"body-link\">configuration file</a>. An event has three components:</p>\n<ul>\n<li><strong><code>triggers</code>: Which changes matter to your app.</strong> For example, a product joining or leaving a collection, or a variant's price changing.  </li>\n<li><strong><code>query</code>: What data you need when that happens.</strong> Write a GraphQL Admin API query, and we'll include its result in the payload. You can include related data and metafields too.  </li>\n<li><strong><code>query_filter</code>: Which results your app needs to receive.</strong> For example, you can limit deliveries to only products with an <code>ACTIVE</code> status.</li>\n</ul>\n<p>The trigger and query are independent. A change to one field can trigger a query that fetches the other data your app needs. The query filter then checks that result to decide whether to deliver it. For more on how triggers, queries, and query filters work together, see the <a href=\"https://shopify.dev/docs/apps/build/events\" target=\"_blank\" class=\"body-link\">Events overview</a>.</p>\n<h2>Receive the change and the data you need together</h2>\n<p>Let's continue to use collection memberships as an example. Your app maintains a search index, and you need to update it whenever a product joins or leaves a collection.</p>\n<p>You can subscribe to <a href=\"https://shopify.dev/docs/api/events/latest/collection\" target=\"_blank\" class=\"body-link\"><code>collection.products</code></a> and use the collection and product IDs directly in your query:</p>\n<pre><code class=\"language-toml\">[events]\napi_version = &quot;2026-10&quot;\n\n[[events.subscription]]\nhandle = &quot;collection-membership&quot;\ntopic = &quot;Collection&quot;\nactions = [&quot;update&quot;]\ntriggers = [&quot;collection.products&quot;]\nuri = &quot;/api/events/collections&quot;\n\nquery = &quot;&quot;&quot;\n  query CollectionMembership($collectionId: ID!, $productsId: ID!) {\n    collection(id: $collectionId) {\n      id\n      hasProduct(id: $productsId)\n    }\n  }\n&quot;&quot;&quot;\n</code></pre>\n<p>When product <code>456</code> is added to collection <code>123</code>, you receive a payload like this:</p>\n<pre><code class=\"language-json\">{\n  &quot;topic&quot;: &quot;Collection&quot;,\n  &quot;action&quot;: &quot;update&quot;,\n  &quot;handle&quot;: &quot;collection-membership&quot;,\n  &quot;data&quot;: {\n    &quot;collection&quot;: {\n      &quot;id&quot;: &quot;gid://shopify/Collection/123&quot;,\n      &quot;hasProduct&quot;: true\n    }\n  },\n  &quot;fields_changed&quot;: {\n    &quot;added&quot;: [\n      &quot;collection[id: 'gid://shopify/Collection/123'].products[id: 'gid://shopify/Product/456']&quot;\n    ],\n    &quot;updated&quot;: [],\n    &quot;removed&quot;: []\n  },\n  &quot;query_variables&quot;: {\n    &quot;collectionId&quot;: &quot;gid://shopify/Collection/123&quot;,\n    &quot;productsId&quot;: &quot;gid://shopify/Product/456&quot;\n  }\n}\n</code></pre>\n<p>Your app now knows which product joined which collection:</p>\n<ul>\n<li>The <code>action</code> is <code>update</code> because adding a product changes the collection's membership.</li>\n<li>The query tells you that <code>hasProduct</code> is <code>true</code>. That query runs as part of your subscription, so you don't need to make another API call after receiving the delivery or fetch the collection's full product list.</li>\n<li><code>fields_changed.added</code> tells you what changed.</li>\n<li><code>query_variables</code> gives you both IDs.</li>\n</ul>\n<p>The query result reflects the state when the query runs, so use <code>fields_changed</code> to understand the change and <code>data</code> for the current context. The <a href=\"https://shopify.dev/docs/apps/build/events/delivery-structure\" target=\"_blank\" class=\"body-link\">delivery structure guide</a> has more examples.</p>\n<h2>More topics to build with</h2>\n<p>We started the developer preview with Product and Customer. We've expanded our coverage to many more key types across Admin GraphQL:</p>\n<ul>\n<li><strong>Merchandising:</strong> <a href=\"https://shopify.dev/docs/api/events/latest/product\" target=\"_blank\" class=\"body-link\"><code>Product</code></a> and <a href=\"https://shopify.dev/docs/api/events/latest/collection\" target=\"_blank\" class=\"body-link\"><code>Collection</code></a></li>\n<li><strong>Customers and companies:</strong> <a href=\"https://shopify.dev/docs/api/events/latest/customer\" target=\"_blank\" class=\"body-link\"><code>Customer</code></a> and <a href=\"https://shopify.dev/docs/api/events/latest/company\" target=\"_blank\" class=\"body-link\"><code>Company</code></a></li>\n<li><strong>Orders, fulfillment, and returns:</strong> <a href=\"https://shopify.dev/docs/api/events/latest/order\" target=\"_blank\" class=\"body-link\"><code>Order</code></a>, <a href=\"https://shopify.dev/docs/api/events/latest/fulfillment-order\" target=\"_blank\" class=\"body-link\"><code>FulfillmentOrder</code></a>, <a href=\"https://shopify.dev/docs/api/events/latest/refund\" target=\"_blank\" class=\"body-link\"><code>Refund</code></a>, and <a href=\"https://shopify.dev/docs/api/events/latest/return\" target=\"_blank\" class=\"body-link\"><code>Return</code></a></li>\n<li><strong>Inventory and locations:</strong> <a href=\"https://shopify.dev/docs/api/events/latest/inventory-item\" target=\"_blank\" class=\"body-link\"><code>InventoryItem</code></a>, <a href=\"https://shopify.dev/docs/api/events/latest/inventory-shipment\" target=\"_blank\" class=\"body-link\"><code>InventoryShipment</code></a>, <a href=\"https://shopify.dev/docs/api/events/latest/inventory-transfer\" target=\"_blank\" class=\"body-link\"><code>InventoryTransfer</code></a>, and <a href=\"https://shopify.dev/docs/api/events/latest/location\" target=\"_blank\" class=\"body-link\"><code>Location</code></a></li>\n<li><strong>Content:</strong> <a href=\"https://shopify.dev/docs/api/events/latest/article\" target=\"_blank\" class=\"body-link\"><code>Article</code></a>, <a href=\"https://shopify.dev/docs/api/events/latest/blog\" target=\"_blank\" class=\"body-link\"><code>Blog</code></a>, and <a href=\"https://shopify.dev/docs/api/events/latest/page\" target=\"_blank\" class=\"body-link\"><code>Page</code></a></li>\n<li><strong>Custom data:</strong> <a href=\"https://shopify.dev/docs/api/events/latest/metafield-definition\" target=\"_blank\" class=\"body-link\"><code>MetafieldDefinition</code></a>, <a href=\"https://shopify.dev/docs/api/events/latest/metaobject\" target=\"_blank\" class=\"body-link\"><code>Metaobject</code></a>, and <a href=\"https://shopify.dev/docs/api/events/latest/metaobject-definition\" target=\"_blank\" class=\"body-link\"><code>MetaobjectDefinition</code></a></li>\n</ul>\n<p>Each topic has its own supported triggers, query variables, and access scopes. Check the <a href=\"https://shopify.dev/docs/api/events/latest\" target=\"_blank\" class=\"body-link\">Events API reference</a> for the changes you want to subscribe to.</p>\n<h2>Get more out of your subscriptions</h2>\n<p>It can be tempting to copy your existing payload into a GraphQL query and subscribe to every change. That gets you familiar data, but it also carries over a lot of the work your app was already doing.</p>\n<p>Start with what your app needs to do when something changes, then shape the subscription around that. In the collection example, we only need the affected membership. Loading every product in the collection on each delivery adds work without helping us process that change.</p>\n<p>The <a href=\"https://shopify.dev/docs/apps/build/events/optimizing-your-subscriptions\" target=\"_blank\" class=\"body-link\">Events optimization guide</a> walks through choosing specific triggers, querying the affected resource, and splitting subscriptions while keeping the data your app needs. It also explains the complexity limit Shopify places on your queries and how to check that your queries stay within that limit before releasing your configuration.</p>\n<p>As you move over to Events from classic webhooks, measure the deliveries your app receives, the size of each payload, and the follow-up API calls it makes. Those will tell you where the change is helping and where there's more work to do.</p>\n<h2>Get started</h2>\n<p>Your existing classic webhook integrations will continue to work. You can use both in the same app and move workflows over one at a time. For topics or subscription patterns Events doesn't support yet, keep using classic webhooks.</p>\n<ul>\n<li><strong>Moving from Webhooks to Events?</strong>: We recommend starting with identifying a workflow where your app is receiving a lot of updates and discarding most of them, or making another API call on every delivery. Look at what your handler actually does, which changes it needs, and what data it reads. That gives you the starting point for your subscription. Check out the <a href=\"https://shopify.dev/docs/apps/build/events/migrate-from-webhooks\" target=\"_blank\" class=\"body-link\">migration guide</a> to get started.</li>\n<li><strong>Brand new to both classic webhooks and Events?</strong>: To get started, use Shopify CLI version 4.83 or later and follow the <a href=\"https://shopify.dev/docs/apps/build/events/get-started\" target=\"_blank\" class=\"body-link\">getting started guide</a>. Set your events API version to <code>2026-10</code> and choose the topic and triggers your app needs from the <a href=\"https://shopify.dev/docs/api/events/2026-10\" target=\"_blank\" class=\"body-link\">reference</a>.</li>\n<li><strong>Already using the Events developer preview?</strong> Just update your events API version from <code>unstable</code> to <code>2026-10</code>, including any subscription-level overrides. Review the versioned topic reference, then test and deploy the updated configuration.</li>\n</ul>\n<p>We'd love to hear what you build with events, and where you're getting stuck. If a missing topic or trigger is blocking your migration, tell us which workflow you're trying to move over in the <a href=\"https://community.shopify.dev/c/webhooks-and-events\" target=\"_blank\" class=\"body-link\">developer community</a>.  </p>\n</div> ",
+      "analyses": {
+        "claude-opus-5-5": {
+          "titleJa": "Next Gen Events の一般提供開始：コマース更新をより柔軟に制御",
+          "summarizedJa": "API バージョン 2026-10 で、従来の Webhook の後継となる Next Gen Events が一般提供されました。shopify.app.toml で triggers・GraphQL query・query_filter を設定することで、必要な変更と必要なデータだけをまとめて受け取れるため、追加の API 呼び出しを削減できます。対応トピックは Product、Collection、Order、Inventory、Metaobject などに拡大されており、既存の Webhook も引き続き利用可能です。",
+          "audienceJa": "Webhook を利用するアプリ開発者（特に Events 開発者プレビュー利用者）",
+          "actionJa": "Events 開発者プレビューを利用中の場合は、events の API バージョンを unstable から 2026-10 に更新してテスト・デプロイし、既存 Webhook 利用者は移行ガイドを参考に段階的な移行を検討してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-10-02T00:01:27.334Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 6310,
+            "output": 397
+          },
+          "estimatedCost": 0.035289
+        }
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "scores": {
+          "merchantImpact": {
+            "score": 1.1400000000000001,
+            "confidence": 0.88
+          },
+          "partnerImpact": {
+            "score": 2.88,
+            "confidence": 0.48
+          },
+          "japanRelevance": {
+            "score": 2.62,
+            "confidence": 0.64
+          },
+          "technicalImportance": {
+            "score": 3.93,
+            "confidence": 0.93
+          }
+        },
+        "totalScore": 10.57,
+        "actionRequired": 0.19,
+        "breakingChange": 0.05,
+        "appliesInJapan": 0.78,
+        "relevance": {
+          "merchant": {
+            "overall": 0.37,
+            "areas": {
+              "onlineStore": 0.06,
+              "checkout": 0.05,
+              "payments": 0.06,
+              "shipping": 0.12,
+              "orders": 0.06,
+              "customers": 0.24,
+              "marketing": 0.1,
+              "subscriptions": 0.11,
+              "b2b": 0.39,
+              "plus": 0.05,
+              "admin": 0.16
+            },
+            "excludes": {
+              "posOnly": 0.02,
+              "internationalOnly": 0.02
+            }
+          },
+          "developer": {
+            "overall": 0.62,
+            "areas": {
+              "scriptTags": 0.05,
+              "webPixels": 0.07,
+              "themeExtension": 0.15,
+              "webhooks": 0.06,
+              "billing": 0.07,
+              "auth": 0.03,
+              "adminApiData": 0.12,
+              "customerData": 0.15,
+              "apiVersioning": 0.11,
+              "appStore": 0.09,
+              "appPlatform": 0.81
+            },
+            "excludes": {}
+          }
+        },
+        "profilesVersion": 4,
+        "decidedAt": "2026-10-02T00:02:40.757Z",
+        "tokenUsage": {
+          "input": 5098,
+          "output": 637
+        }
+      },
+      "officialActionRequired": false,
+      "priority": {
+        "merchant": {
+          "level": "info",
+          "action": 0,
+          "relevance": 0.29215368,
+          "areas": [],
+          "outOfScope": true
+        },
+        "developer": {
+          "level": "check",
+          "action": 0,
+          "relevance": 0.81,
+          "areas": [
+            "アプリ開発全般"
+          ],
+          "outOfScope": false
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-read_rollouts",
+      "source": "developer-changelog",
+      "title": "Rollouts queries and webhooks in the Admin GraphQL API",
+      "link": "https://shopify.dev/changelog/read_rollouts",
+      "publishedAt": "2026-10-01T16:00:00.000Z",
+      "collectedAt": "2026-10-02T00:01:16.420Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-10"
+      ],
+      "description": " <div class=\"\"><h3><strong>Summary</strong></h3>\n<p>Apps can now discover Rollouts, inspect their schedules, traffic allocation, and resource changes, and receive notifications when they change. These capabilities help apps understand and respond to coordinated launches, experiments, and temporary events across discounts, catalogs, themes, and checkout and accounts configurations.</p>\n<h3><strong>What's new</strong></h3>\n<ul>\n<li><strong>Discover and read Rollouts.</strong> Use the root <code>rollouts</code> query to list and search Rollouts, and <code>rollout(id:)</code> to fetch a Rollout directly by ID.  </li>\n<li><strong>See what a Rollout changes.</strong> Read how each treatment affects discounts, catalogs, themes, and checkout and accounts configurations.  </li>\n<li><strong>Understand schedules and allocation.</strong> Read planned activation and conclusion times, configured <code>trafficAllocation</code>, current <code>effectiveTrafficAllocation</code>, and treatment split values. Configured allocation alone does not determine effective reach.  </li>\n<li><strong>Stay up to date.</strong> Subscribe to Rollout webhooks for lifecycle, effective-allocation, and resource-change notifications. Refetch affected Rollouts to keep your integration current.</li>\n</ul>\n<h3><strong>Access Rollout data</strong></h3>\n<p>Request <code>read_rollouts</code> to access Rollout data. Existing resource scopes apply to the underlying resource payloads, and existing installations may need merchant reauthorization.</p>\n<p>See the <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/objects/Rollout\" target=\"_blank\" class=\"body-link\">Rollout API reference</a> for details.</p>\n<p>If your app reads discounts, see <a href=\"https://shopify.dev/changelog/discounts-can-now-be-included-in-rollouts\" target=\"_blank\" class=\"body-link\">Update your app to account for discount Rollouts</a> for discount-specific integration guidance and compatibility behavior.</p>\n</div> ",
+      "analyses": {
+        "claude-opus-5-5": {
+          "titleJa": "Admin GraphQL APIでRolloutsのクエリとWebhookが利用可能に",
+          "summarizedJa": "アプリはAdmin GraphQL API（2026-10）でRolloutsを一覧・検索・取得し、スケジュール、トラフィック配分、ディスカウント・カタログ・テーマ・チェックアウト設定などへの変更内容を確認できるようになりました。ライフサイクルや実効配分、リソース変更を通知するWebhookも追加され、連携の最新化が可能です。利用にはread_rolloutsスコープが必要で、既存インストールではマーチャントの再認可が必要な場合があります。",
+          "audienceJa": "Admin GraphQL APIを使うアプリ開発者（特にディスカウント、カタログ、テーマ、チェックアウト関連のアプリ）",
+          "actionJa": "Rollouts情報を扱う場合はread_rolloutsスコープを追加してマーチャントの再認可を得て、関連Webhookを購読しRolloutの影響をアプリに反映してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-10-02T00:01:32.190Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2969,
+            "output": 418
+          },
+          "estimatedCost": 0.012643600000000001
+        }
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "scores": {
+          "merchantImpact": {
+            "score": 1.19,
+            "confidence": 0.84
+          },
+          "partnerImpact": {
+            "score": 2.5300000000000002,
+            "confidence": 0.5
+          },
+          "japanRelevance": {
+            "score": 2.56,
+            "confidence": 0.58
+          },
+          "technicalImportance": {
+            "score": 3.68,
+            "confidence": 0.74
+          }
+        },
+        "totalScore": 9.96,
+        "actionRequired": 0.58,
+        "breakingChange": 0.05,
+        "appliesInJapan": 0.78,
+        "relevance": {
+          "merchant": {
+            "overall": 0.44,
+            "areas": {
+              "onlineStore": 0.23,
+              "checkout": 0.64,
+              "payments": 0.07,
+              "shipping": 0.09,
+              "orders": 0.09,
+              "customers": 0.36,
+              "marketing": 0.73,
+              "subscriptions": 0.18,
+              "b2b": 0.22,
+              "plus": 0.11,
+              "admin": 0.44
+            },
+            "excludes": {
+              "posOnly": 0.02,
+              "internationalOnly": 0.04
+            }
+          },
+          "developer": {
+            "overall": 0.36,
+            "areas": {
+              "scriptTags": 0.06,
+              "webPixels": 0.06,
+              "themeExtension": 0.29,
+              "webhooks": 0.05,
+              "billing": 0.07,
+              "auth": 0.32,
+              "adminApiData": 0.07,
+              "customerData": 0.09,
+              "apiVersioning": 0.08,
+              "appStore": 0.19,
+              "appPlatform": 0.65
+            },
+            "excludes": {}
+          }
+        },
+        "profilesVersion": 4,
+        "decidedAt": "2026-10-02T00:02:40.892Z",
+        "tokenUsage": {
+          "input": 2456,
+          "output": 637
+        }
+      },
+      "officialActionRequired": false,
+      "priority": {
+        "merchant": {
+          "level": "info",
+          "action": 0,
+          "relevance": 0.53569152,
+          "areas": [
+            "マーケティング・分析",
+            "チェックアウト"
+          ],
+          "outOfScope": false
+        },
+        "developer": {
+          "level": "info",
+          "action": 0,
+          "relevance": 0.65,
+          "areas": [
+            "アプリ開発全般"
+          ],
+          "outOfScope": false
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-discounts-can-now-be-included-in-rollouts",
+      "source": "developer-changelog",
+      "title": "Discounts can now be included in Rollouts",
+      "link": "https://shopify.dev/changelog/discounts-can-now-be-included-in-rollouts",
+      "publishedAt": "2026-10-01T16:00:00.000Z",
+      "collectedAt": "2026-10-02T00:01:16.420Z",
+      "category": [
+        "Action Required",
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-10"
+      ],
+      "description": " <div class=\"\"><h2><strong>Update your app to account for discount Rollouts</strong></h2>\n<h3><strong>Summary</strong></h3>\n<p>Admin GraphQL API version <code>2026-10</code> adds a read-only <code>rollouts</code> connection across Discount types. Apps that read discounts should use <code>Discount.rollouts</code> alongside existing discount fields to account for Rollout-driven schedules and buyer reach.</p>\n<h3><strong>What's changing</strong></h3>\n<p>Merchants can include discounts in Rollouts to coordinate launches, test discounts with a share of buyers, or run temporary events alongside other store changes. When a discount is part of a Rollout, its native dates alone don't describe its availability.</p>\n<h3><strong>Update your integration</strong></h3>\n<ul>\n<li><strong>Request access.</strong> Add <code>read_rollouts</code> to your app's scopes. Existing resource scopes still apply to the underlying resource payloads, and existing installations may need merchant reauthorization.  </li>\n<li><strong>Read the discount's Rollouts.</strong> Query <code>Discount.rollouts</code> to identify which Rollouts affect the discount.  </li>\n<li><strong>Combine schedules and availability data.</strong> Read Rollout schedule fields alongside the discount's existing <code>startsAt</code> and <code>endsAt</code> fields. Also read effective allocation, treatment splits, and whether each change activates or expires the discount. Configured traffic allocation alone does not determine effective reach.</li>\n</ul>\n<h3><strong>Account for sales-channel availability</strong></h3>\n<p>Discounts activated at 100% effective traffic are available across all sales channels, subject to normal discount eligibility rules. Partial-traffic Rollout activation applies on the Online Store only.</p>\n<p>Discounts outside Rollouts behave as before.</p>\n<h3><strong>Earlier API versions</strong></h3>\n<p>On Admin GraphQL API versions earlier than <code>2026-10</code>, discounts are filtered out if they are active but may not reach all buyers, or if their status differs from the status inferred from native dates.</p>\n<p>See the <a href=\"https://shopify.dev/docs/apps/build/discounts/rollouts\" target=\"_blank\" class=\"body-link\">Discount Rollouts upgrade guide</a> for integration guidance and examples.</p>\n<p>To discover Rollouts independently of a discount or receive notifications when they change, see <a href=\"https://shopify.dev/changelog/read_rollouts\" target=\"_blank\" class=\"body-link\">Rollouts queries and webhooks in the Admin GraphQL API</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-opus-5-5": {
+          "titleJa": "ディスカウントをRolloutsに含められるように",
+          "summarizedJa": "Admin GraphQL API 2026-10で、全ディスカウントタイプに読み取り専用の`rollouts`接続が追加されました。マーチャントはディスカウントをRolloutに含めてローンチ調整や一部購入者へのテスト配信が可能になり、その場合ディスカウント本来のstartsAt/endsAtだけでは有効期間や適用範囲を判断できません。2026-10より前のAPIバージョンでは、全購入者に届かない可能性のあるアクティブなディスカウントや、日付から推定されるステータスと異なるディスカウントはクエリ結果から除外されます。",
+          "audienceJa": "Admin GraphQL APIでディスカウントを読み取るアプリ開発者",
+          "actionJa": "アプリに`read_rollouts`スコープを追加し、`Discount.rollouts`とRolloutのスケジュール・実効配分・トリートメント分割を既存のstartsAt/endsAtと組み合わせて読み取るよう実装を更新してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-10-02T00:01:37.158Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 3171,
+            "output": 431
+          },
+          "estimatedCost": 0.013711600000000001
+        }
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "scores": {
+          "merchantImpact": {
+            "score": 2.31,
+            "confidence": 0
+          },
+          "partnerImpact": {
+            "score": 4.109999999999999,
+            "confidence": 0.26
+          },
+          "japanRelevance": {
+            "score": 2.56,
+            "confidence": 0.57
+          },
+          "technicalImportance": {
+            "score": 3.97,
+            "confidence": 0.97
+          }
+        },
+        "totalScore": 12.950000000000001,
+        "actionRequired": 0.96,
+        "breakingChange": 0.46,
+        "appliesInJapan": 0.74,
+        "relevance": {
+          "merchant": {
+            "overall": 0.73,
+            "areas": {
+              "onlineStore": 0.12,
+              "checkout": 0.1,
+              "payments": 0.06,
+              "shipping": 0.03,
+              "orders": 0.08,
+              "customers": 0.05,
+              "marketing": 0.94,
+              "subscriptions": 0.13,
+              "b2b": 0.25,
+              "plus": 0.09,
+              "admin": 0.59
+            },
+            "excludes": {
+              "posOnly": 0.02,
+              "internationalOnly": 0.03
+            }
+          },
+          "developer": {
+            "overall": 0.41,
+            "areas": {
+              "scriptTags": 0.05,
+              "webPixels": 0.05,
+              "themeExtension": 0.1,
+              "webhooks": 0.05,
+              "billing": 0.07,
+              "auth": 0.59,
+              "adminApiData": 0.06,
+              "customerData": 0.04,
+              "apiVersioning": 0.1,
+              "appStore": 0.19,
+              "appPlatform": 0.52
+            },
+            "excludes": {}
+          }
+        },
+        "profilesVersion": 4,
+        "decidedAt": "2026-10-02T00:02:41.050Z",
+        "tokenUsage": {
+          "input": 2662,
+          "output": 637
+        }
+      },
+      "officialActionRequired": true,
+      "priority": {
+        "merchant": {
+          "level": "check",
+          "action": 1,
+          "relevance": 0.6612373599999999,
+          "areas": [
+            "マーケティング・分析",
+            "管理画面・Sidekick・アプリ"
+          ],
+          "outOfScope": false
+        },
+        "developer": {
+          "level": "now",
+          "action": 1,
+          "relevance": 0.59,
+          "areas": [
+            "認証・トークン",
+            "アプリ開発全般"
+          ],
+          "outOfScope": false
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-orders-webhooks-now-include-selling_plan_id-on-line-items",
+      "source": "developer-changelog",
+      "title": "Orders webhooks now include selling_plan_id on line items",
+      "link": "https://shopify.dev/changelog/orders-webhooks-now-include-selling_plan_id-on-line-items",
+      "publishedAt": "2026-10-01T16:00:00.000Z",
+      "collectedAt": "2026-10-02T00:01:16.420Z",
+      "category": [
+        "API",
+        "Update",
+        "Events & webhooks",
+        "2026-10"
+      ],
+      "description": " <div class=\"\"><p>Line items in Orders webhook payloads now include a <code>selling_plan_id</code> field. This field identifies the selling plan applied to a subscription line item, which helps you avoid extra API calls to look up that information. The change applies to API version <code>2026-10</code> and later, and you don’t need to take any action to keep your app working.</p>\n<p>Previously, if your app needed to know which selling plan applied to a subscription line item, it had to make a follow-up Admin API call for every order it received. That value now arrives directly in the webhook payload.</p>\n<p>In Orders webhook payloads, <code>selling_plan_id</code> contains the ID of the selling plan applied to the line item. It’s <code>null</code> for line items that aren’t part of a subscription.</p>\n<pre><code class=\"language-json\">{\n  &quot;line_items&quot;: [\n    {\n      &quot;id&quot;: 123456789,\n      &quot;selling_plan_id&quot;: 987654321\n    }\n  ]\n}\n</code></pre>\n<p>This example shows a line item that includes a <code>selling_plan_id</code> value for a subscription.</p>\n<p>This change is available on API version <code>2026-10</code> and later. Earlier versions are unaffected, and no action is required.</p>\n<p>For details on Orders webhook payloads, see the <a href=\"https://shopify.dev/docs/api/admin-rest/latest/resources/webhook#event-topics\" target=\"_blank\" class=\"body-link\">orders webhooks reference</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-opus-5-5": {
+          "titleJa": "Ordersウェブフックのラインアイテムにselling_plan_idが追加",
+          "summarizedJa": "API バージョン2026-10以降、Ordersウェブフックのペイロードのラインアイテムにselling_plan_idフィールドが含まれるようになりました。サブスクリプション商品に適用された販売プランを、追加のAdmin API呼び出しなしで特定できます。サブスクリプション以外のラインアイテムではnullとなり、既存アプリへの対応は不要です。",
+          "audienceJa": "Ordersウェブフックを利用するアプリ開発者（特にサブスクリプションアプリ）",
+          "actionJa": null,
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 9,
+          "analyzedAt": "2026-10-02T00:01:41.142Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2765,
+            "output": 282
+          },
+          "estimatedCost": 0.0091076
+        }
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "scores": {
+          "merchantImpact": {
+            "score": 1.05,
+            "confidence": 0.96
+          },
+          "partnerImpact": {
+            "score": 1.75,
+            "confidence": 0.71
+          },
+          "japanRelevance": {
+            "score": 2.46,
+            "confidence": 0.53
+          },
+          "technicalImportance": {
+            "score": 2.37,
+            "confidence": 0.69
+          }
+        },
+        "totalScore": 7.63,
+        "actionRequired": 0.06,
+        "breakingChange": 0.02,
+        "appliesInJapan": 0.85,
+        "relevance": {
+          "merchant": {
+            "overall": 0.32,
+            "areas": {
+              "onlineStore": 0.04,
+              "checkout": 0.04,
+              "payments": 0.04,
+              "shipping": 0.04,
+              "orders": 0.04,
+              "customers": 0.04,
+              "marketing": 0.09,
+              "subscriptions": 0.92,
+              "b2b": 0.13,
+              "plus": 0.09,
+              "admin": 0.08
+            },
+            "excludes": {
+              "posOnly": 0.02,
+              "internationalOnly": 0.02
+            }
+          },
+          "developer": {
+            "overall": 0.24,
+            "areas": {
+              "scriptTags": 0.03,
+              "webPixels": 0.04,
+              "themeExtension": 0.06,
+              "webhooks": 0.94,
+              "billing": 0.12,
+              "auth": 0.02,
+              "adminApiData": 0.06,
+              "customerData": 0.03,
+              "apiVersioning": 0.08,
+              "appStore": 0.06,
+              "appPlatform": 0.17
+            },
+            "excludes": {}
+          }
+        },
+        "profilesVersion": 4,
+        "decidedAt": "2026-10-02T00:02:41.195Z",
+        "tokenUsage": {
+          "input": 2456,
+          "output": 637
+        }
+      },
+      "officialActionRequired": false,
+      "priority": {
+        "merchant": {
+          "level": "info",
+          "action": 0,
+          "relevance": 0.7510328,
+          "areas": [
+            "定期購入"
+          ],
+          "outOfScope": false
+        },
+        "developer": {
+          "level": "info",
+          "action": 0,
+          "relevance": 0.94,
+          "areas": [
+            "Webhook"
+          ],
+          "outOfScope": false
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-new-fiscaldeviceidentifier-field-on-pointofsaledevice",
+      "source": "developer-changelog",
+      "title": "New fiscalDeviceIdentifier field on PointOfSaleDevice",
+      "link": "https://shopify.dev/changelog/new-fiscaldeviceidentifier-field-on-pointofsaledevice",
+      "publishedAt": "2026-10-01T16:00:00.000Z",
+      "collectedAt": "2026-10-02T00:01:16.420Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "2026-10"
+      ],
+      "description": " <div class=\"\"><p>As of the 2026-10 GraphQL Admin API version, the <code>PointOfSaleDevice</code> object includes a new <code>fiscalDeviceIdentifier</code> field. This field returns the Shopify-assigned fiscal register identifier (manufacturing number) for a POS device. You only need to adopt it if your app supports in-person fiscal compliance workflows.</p>\n<h2>What changed</h2>\n<p>The <code>PointOfSaleDevice</code> object in the GraphQL Admin API now includes a nullable <code>fiscalDeviceIdentifier</code> field. It returns the Shopify-assigned fiscal register identifier for the device, for example Sweden's manufacturing number (<code>tillverkningsnummer</code>) that merchants register with the Swedish Tax Agency (Skatteverket). For details, see the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/PointOfSaleDevice\" target=\"_blank\" class=\"body-link\">PointOfSaleDevice reference</a>.</p>\n<p>The field returns a value only for devices at locations in countries whose fiscal regulations require registering the cash register with the tax authority. Sweden is the first supported country. For all other devices, the field returns <code>null</code>.</p>\n<h2>Who's affected</h2>\n<p>Apps that support in-person fiscal compliance workflows, such as fiscal transaction signing and journal reporting in countries that require registered cash registers, can use this field. Apps that don't work with POS fiscal compliance aren't affected and don't need to take action.</p>\n<h2>What to do</h2>\n<ol>\n<li><p>Query the field on the 2026-10 GraphQL Admin API version:</p>\n<pre><code class=\"language-graphql\">query {\n  pointOfSaleDevice(id: &quot;gid://shopify/PointOfSaleDevice/123&quot;) {\n    fiscalDeviceIdentifier\n  }\n}\n</code></pre>\n<p>This query returns the fiscal register identifier for the device, or <code>null</code> when the device's location doesn't require one.</p>\n</li>\n<li><p>To identify the device that your POS UI extension is running on, use <code>session.deviceId</code>, available in POS UI Extensions API 2026-04 and later, and query the GraphQL Admin API with that ID.</p>\n</li>\n<li><p>Treat the value as stable for the lifetime of the device registration, and cache it per device.</p>\n</li>\n</ol>\n<h2>Related docs</h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/PointOfSaleDevice\" target=\"_blank\" class=\"body-link\">PointOfSaleDevice reference</a></li>\n<li><a href=\"https://shopify.dev/docs/api/pos-ui-extensions/latest/target-apis/session-api\" target=\"_blank\" class=\"body-link\">POS UI Extensions Session API</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-opus-5-5": {
+          "titleJa": "PointOfSaleDeviceに新しいfiscalDeviceIdentifierフィールドを追加",
+          "summarizedJa": "GraphQL Admin API 2026-10で、PointOfSaleDeviceオブジェクトにShopifyが割り当てた会計登録識別子（製造番号）を返すnullableなfiscalDeviceIdentifierフィールドが追加されました。レジの税務当局への登録が義務付けられた国の端末でのみ値を返し、最初の対応国はスウェーデンです。それ以外の端末ではnullが返ります。",
+          "audienceJa": "POSの会計（税務）コンプライアンス対応機能を提供するアプリ開発者",
+          "actionJa": "会計コンプライアンス対応アプリの場合、2026-10版APIでfiscalDeviceIdentifierを取得し（POS UI拡張ではsession.deviceIdを利用）、端末ごとにキャッシュしてください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 2,
+            "japanRelevance": 1,
+            "technicalImportance": 2
+          },
+          "totalScore": 6,
+          "analyzedAt": "2026-10-02T00:01:49.229Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 3284,
+            "output": 382
+          },
+          "estimatedCost": 0.0131836
+        }
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "scores": {
+          "merchantImpact": {
+            "score": 1.05,
+            "confidence": 0.96
+          },
+          "partnerImpact": {
+            "score": 1.28,
+            "confidence": 0.77
+          },
+          "japanRelevance": {
+            "score": 1.18,
+            "confidence": 0.85
+          },
+          "technicalImportance": {
+            "score": 2.5700000000000003,
+            "confidence": 0.61
+          }
+        },
+        "totalScore": 6.08,
+        "actionRequired": 0.15,
+        "breakingChange": 0.02,
+        "appliesInJapan": 0.11,
+        "relevance": {
+          "merchant": {
+            "overall": 0.04,
+            "areas": {
+              "onlineStore": 0.03,
+              "checkout": 0.03,
+              "payments": 0.06,
+              "shipping": 0.02,
+              "orders": 0.04,
+              "customers": 0.03,
+              "marketing": 0.04,
+              "subscriptions": 0.03,
+              "b2b": 0.06,
+              "plus": 0.05,
+              "admin": 0.1
+            },
+            "excludes": {
+              "posOnly": 0.84,
+              "internationalOnly": 0.12
+            }
+          },
+          "developer": {
+            "overall": 0.04,
+            "areas": {
+              "scriptTags": 0.03,
+              "webPixels": 0.03,
+              "themeExtension": 0.07,
+              "webhooks": 0.03,
+              "billing": 0.04,
+              "auth": 0.03,
+              "adminApiData": 0.03,
+              "customerData": 0.02,
+              "apiVersioning": 0.04,
+              "appStore": 0.08,
+              "appPlatform": 0.22
+            },
+            "excludes": {}
+          }
+        },
+        "profilesVersion": 4,
+        "decidedAt": "2026-10-02T00:02:41.322Z",
+        "tokenUsage": {
+          "input": 2766,
+          "output": 637
+        }
+      },
+      "officialActionRequired": false,
+      "priority": {
+        "merchant": {
+          "level": "info",
+          "action": 0,
+          "relevance": 0.0015488000000000004,
+          "areas": [],
+          "outOfScope": true
+        },
+        "developer": {
+          "level": "info",
+          "action": 0,
+          "relevance": 0.22,
+          "areas": [],
+          "outOfScope": true
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-metafieldinteger-collection-condition-removed-in-api-version-2027-01",
+      "source": "developer-changelog",
+      "title": "`metafieldInteger` collection condition removed in API version 2027-01",
+      "link": "https://shopify.dev/changelog/metafieldinteger-collection-condition-removed-in-api-version-2027-01",
+      "publishedAt": "2026-10-01T16:00:00.000Z",
+      "collectedAt": "2026-10-02T00:01:16.420Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Breaking API Change",
+        "Admin GraphQL API",
+        "2027-01"
+      ],
+      "description": " <div class=\"\"><p>As of API version <code>2027-01</code>, the <code>metafieldInteger</code> collection source condition inputs and types is removed from GraphQL Admin API. If you use <code>metafieldInteger</code> to create or read collection source conditions, you need to migrate to <code>metafieldInt</code> before you upgrade to API version <code>2027-01</code>.</p>\n<h2>What changed</h2>\n<p>With <code>metafieldInt</code>, the <code>value</code> field on integer metafield conditions changes type from <code>Int</code> to <code>String</code>, to align with the metafield <code>value</code> field on the Storefront API. For details, see the <a href=\"https://shopify.dev/docs/api/storefront/latest/objects/Metafield#field-Metafield.fields.value\" target=\"_blank\" class=\"body-link\">Storefront <code>Metafield.value</code> field reference</a>.</p>\n<p>The following types and fields are replaced:</p>\n<ul>\n<li><code>CollectionSourceInclusionConditionMetafieldInteger</code> is replaced by <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/objects/CollectionSourceInclusionConditionMetafieldInt\" target=\"_blank\" class=\"body-link\"><code>CollectionSourceInclusionConditionMetafieldInt</code></a>  </li>\n<li><code>CollectionSourceInclusionConditionMetafieldIntegerRelation</code> is replaced by <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/enums/CollectionSourceInclusionConditionMetafieldIntRelation\" target=\"_blank\" class=\"body-link\"><code>CollectionSourceInclusionConditionMetafieldIntRelation</code></a>  </li>\n<li><code>CollectionSourceInclusionConditionInput.metafieldInteger</code> is replaced by <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/input-objects/CollectionSourceInclusionConditionInput#fields-metafieldInt\" target=\"_blank\" class=\"body-link\"><code>CollectionSourceInclusionConditionInput.metafieldInt</code></a>  </li>\n<li><code>CollectionSourceInclusionConditionUpdateInput.metafieldInteger</code> is replaced by <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/input-objects/CollectionSourceInclusionConditionUpdateInput#fields-metafieldInt\" target=\"_blank\" class=\"body-link\"><code>CollectionSourceInclusionConditionUpdateInput.metafieldInt</code></a></li>\n</ul>\n<p>The relation enum members are unchanged (<code>EQUALS</code>, <code>GREATER_THAN</code>, <code>LESS_THAN</code>). The behavioral difference is that <code>value</code> is now a <code>String</code> instead of an <code>Int</code>.</p>\n<h3>Writes</h3>\n<p>These examples show the required switch from <code>metafieldInteger</code> to <code>metafieldInt</code> and the change in the <code>value</code> literal type.</p>\n<p>Before:</p>\n<pre><code>conditionsToCreate: [{\n  metafieldInteger: { definitionId: &quot;gid://shopify/MetafieldDefinition/1&quot;, relation: GREATER_THAN, value: 2000 }\n}]\n</code></pre>\n<p>After:</p>\n<pre><code>conditionsToCreate: [{\n  metafieldInt: { definitionId: &quot;gid://shopify/MetafieldDefinition/1&quot;, relation: GREATER_THAN, value: &quot;2000&quot; }\n}]\n</code></pre>\n<h3>Reads</h3>\n<p>This example shows the updated type condition you need to use when you read collection source conditions.</p>\n<p>Before:</p>\n<pre><code>... on CollectionSourceInclusionConditionMetafieldInteger { relation value }\n</code></pre>\n<p>After:</p>\n<pre><code>... on CollectionSourceInclusionConditionMetafieldInt { relation value }\n</code></pre>\n<h2>Action required</h2>\n<p>Before you move to API version <code>2027-01</code>, you need to:</p>\n<ul>\n<li>Update all Admin GraphQL queries and mutations that reference <code>metafieldInteger</code> to use <code>metafieldInt</code>.  </li>\n<li>Ensure all integer metafield condition <code>value</code> fields are strings.</li>\n</ul>\n<p>If you don’t update your app before you use API version <code>2027-01</code>, mutations that send <code>metafieldInteger</code> fail validation, and queries that select <code>CollectionSourceInclusionConditionMetafieldInteger</code> return errors. You can test <code>metafieldInt</code> behavior on <code>2026-10</code> before you upgrade to <code>2027-01</code>.</p>\n<p><code>metafieldInteger</code> continues to work on API versions up to and including <code>2026-10</code>. On <code>2026-10</code>, integer metafield conditions resolve to <code>CollectionSourceInclusionConditionMetafieldInt</code> when present. In API version <code>2027-01</code>, <code>metafieldInteger</code> is no longer available.</p>\n<h2>Related docs</h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/latest/input-objects/CollectionSourceInclusionConditionInput\" target=\"_blank\" class=\"body-link\">Collection source inclusion condition inputs</a>  </li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/latest/input-objects/CollectionSourceInclusionConditionUpdateInput\" target=\"_blank\" class=\"body-link\">Collection source inclusion condition update inputs</a>  </li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/latest/objects/CollectionSourceInclusionConditionMetafieldInt\" target=\"_blank\" class=\"body-link\">Collection source inclusion condition metafield <code>Int</code> type reference</a>  </li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql\" target=\"_blank\" class=\"body-link\">GraphQL Admin API reference</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-opus-5-5": {
+          "titleJa": "API バージョン 2027-01 でコレクション条件 `metafieldInteger` が削除",
+          "summarizedJa": "GraphQL Admin API の 2027-01 以降、コレクションのソース条件で使われていた `metafieldInteger` の入力・型が削除され、`metafieldInt` に置き換わります。`metafieldInt` では整数メタフィールド条件の `value` が Int から String に変わります。`metafieldInteger` は 2026-10 まで引き続き利用でき、2026-10 で `metafieldInt` の動作を事前にテストできます。",
+          "audienceJa": "GraphQL Admin API でコレクションのメタフィールド整数条件を作成・取得しているアプリ開発者",
+          "actionJa": "2027-01 へアップグレードする前に、`metafieldInteger` を参照するクエリ・ミューテーションを `metafieldInt` に置き換え、条件の `value` を文字列で送るよう修正してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-10-02T00:01:57.491Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 4472,
+            "output": 385
+          },
+          "estimatedCost": 0.0179956
+        }
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "scores": {
+          "merchantImpact": {
+            "score": 1.81,
+            "confidence": 0.32
+          },
+          "partnerImpact": {
+            "score": 3.83,
+            "confidence": 0.02
+          },
+          "japanRelevance": {
+            "score": 2.08,
+            "confidence": 0.2
+          },
+          "technicalImportance": {
+            "score": 3.99,
+            "confidence": 0.99
+          }
+        },
+        "totalScore": 11.71,
+        "actionRequired": 0.96,
+        "breakingChange": 0.96,
+        "appliesInJapan": 0.75,
+        "relevance": {
+          "merchant": {
+            "overall": 0.36,
+            "areas": {
+              "onlineStore": 0.09,
+              "checkout": 0.03,
+              "payments": 0.02,
+              "shipping": 0.04,
+              "orders": 0.11,
+              "customers": 0.03,
+              "marketing": 0.1,
+              "subscriptions": 0.06,
+              "b2b": 0.15,
+              "plus": 0.06,
+              "admin": 0.2
+            },
+            "excludes": {
+              "posOnly": 0.02,
+              "internationalOnly": 0.02
+            }
+          },
+          "developer": {
+            "overall": 0.11,
+            "areas": {
+              "scriptTags": 0.03,
+              "webPixels": 0.04,
+              "themeExtension": 0.08,
+              "webhooks": 0.02,
+              "billing": 0.03,
+              "auth": 0.02,
+              "adminApiData": 0.32,
+              "customerData": 0.02,
+              "apiVersioning": 0.09,
+              "appStore": 0.06,
+              "appPlatform": 0.69
+            },
+            "excludes": {}
+          }
+        },
+        "profilesVersion": 4,
+        "decidedAt": "2026-10-02T00:02:41.501Z",
+        "tokenUsage": {
+          "input": 3498,
+          "output": 637
+        }
+      },
+      "officialActionRequired": true,
+      "priority": {
+        "merchant": {
+          "level": "info",
+          "action": 1,
+          "relevance": 0.14406,
+          "areas": [],
+          "outOfScope": true
+        },
+        "developer": {
+          "level": "check",
+          "action": 1,
+          "relevance": 0.69,
+          "areas": [
+            "アプリ開発全般"
+          ],
+          "outOfScope": false
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-added-parsewarnings-to-shopifyqlqueryresponse",
+      "source": "developer-changelog",
+      "title": "Added parseWarnings to ShopifyqlQueryResponse",
+      "link": "https://shopify.dev/changelog/added-parsewarnings-to-shopifyqlqueryresponse",
+      "publishedAt": "2026-10-01T16:00:00.000Z",
+      "collectedAt": "2026-10-02T00:01:16.420Z",
+      "category": [
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "ShopifyQL",
+        "2026-10"
+      ],
+      "description": " <div class=\"\"><p>Starting in API version 2026-10, the <code>shopifyqlQuery</code> query in the GraphQL Admin API returns a new <code>parseWarnings</code> field on <code>ShopifyqlQueryResponse</code>. This field surfaces non-fatal issues, such as the use of fields scheduled for deprecation, so you can detect and address them proactively.</p>\n<h2>What changed</h2>\n<p><code>shopifyqlQuery</code> now returns a <code>parseWarnings</code> field alongside your results. The field is always present: it returns a list of warning messages when a successful query has non-fatal issues, and an empty list when there are none.</p>\n<p>Unlike <code>parseErrors</code>, which explain why a query failed to run, <code>parseWarnings</code> are only returned on queries that ran successfully, together with <code>tableData</code>. Warnings don’t block execution, but they highlight potential problems you should consider fixing.</p>\n<h2>Why this matters</h2>\n<p>Warnings help you identify and resolve issues before they cause failures, such as upcoming deprecations or other changes that could affect your queries in future API versions. By monitoring <code>parseWarnings</code>, you can keep your ShopifyQL queries compatible as the API evolves.</p>\n<h2>What to do</h2>\n<p>Add <code>parseWarnings</code> to your <code>shopifyqlQuery</code> selection set, and check it after a successful query in the same way you already check <code>parseErrors</code>:</p>\n<pre><code class=\"language-&lt;gql&gt;\">query {\n  shopifyqlQuery(query: &quot;FROM sales SHOW total_sales SINCE -7d&quot;) {\n    tableData { columns { name } rows }\n    parseWarnings\n    parseErrors\n  }\n}\n</code></pre>\n<p>In this example, <code>parseWarnings</code> will contain any non-fatal warnings related to the query, or an empty list if there are none.</p>\n<h2>Learn more</h2>\n<ul>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/queries/shopifyqlQuery\" target=\"_blank\" class=\"body-link\">shopifyqlQuery query reference</a></li>\n<li><a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/objects/ShopifyqlQueryResponse\" target=\"_blank\" class=\"body-link\">ShopifyqlQueryResponse object</a></li>\n<li><a href=\"https://shopify.dev/docs/api/shopifyql\" target=\"_blank\" class=\"body-link\">ShopifyQL query language</a></li>\n<li><a href=\"https://shopify.dev/docs/api/usage/versioning\" target=\"_blank\" class=\"body-link\">API versioning</a></li>\n</ul>\n</div> ",
+      "analyses": {
+        "claude-opus-5-5": {
+          "titleJa": "ShopifyqlQueryResponseにparseWarningsフィールドを追加",
+          "summarizedJa": "API バージョン 2026-10 から、GraphQL Admin API の shopifyqlQuery が返す ShopifyqlQueryResponse に parseWarnings フィールドが追加されました。非推奨予定のフィールド使用など、クエリ実行を妨げない警告を成功時に tableData と共に返し、警告がない場合は空リストを返します。これにより将来の API 変更によるクエリの失敗を事前に検知・対処できます。",
+          "audienceJa": "Admin API の shopifyqlQuery を使ってストア分析データを取得するアプリ開発者",
+          "actionJa": "推奨対応として、shopifyqlQuery の選択セットに parseWarnings を追加し、クエリ成功後に parseErrors と同様に警告内容を確認して、非推奨予定フィールドなどを修正してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-10-02T00:02:01.826Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 3220,
+            "output": 377
+          },
+          "estimatedCost": 0.0128276
+        }
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "scores": {
+          "merchantImpact": {
+            "score": 1.3,
+            "confidence": 0.75
+          },
+          "partnerImpact": {
+            "score": 2.06,
+            "confidence": 0.85
+          },
+          "japanRelevance": {
+            "score": 2.45,
+            "confidence": 0.52
+          },
+          "technicalImportance": {
+            "score": 2.4699999999999998,
+            "confidence": 0.59
+          }
+        },
+        "totalScore": 8.280000000000001,
+        "actionRequired": 0.19,
+        "breakingChange": 0.03,
+        "appliesInJapan": 0.8,
+        "relevance": {
+          "merchant": {
+            "overall": 0.39,
+            "areas": {
+              "onlineStore": 0.03,
+              "checkout": 0.02,
+              "payments": 0.03,
+              "shipping": 0.03,
+              "orders": 0.06,
+              "customers": 0.03,
+              "marketing": 0.15,
+              "subscriptions": 0.05,
+              "b2b": 0.08,
+              "plus": 0.05,
+              "admin": 0.13
+            },
+            "excludes": {
+              "posOnly": 0.02,
+              "internationalOnly": 0.02
+            }
+          },
+          "developer": {
+            "overall": 0.23,
+            "areas": {
+              "scriptTags": 0.03,
+              "webPixels": 0.04,
+              "themeExtension": 0.07,
+              "webhooks": 0.02,
+              "billing": 0.03,
+              "auth": 0.02,
+              "adminApiData": 0.06,
+              "customerData": 0.03,
+              "apiVersioning": 0.08,
+              "appStore": 0.05,
+              "appPlatform": 0.53
+            },
+            "excludes": {}
+          }
+        },
+        "profilesVersion": 4,
+        "decidedAt": "2026-10-02T00:02:41.663Z",
+        "tokenUsage": {
+          "input": 2652,
+          "output": 637
+        }
+      },
+      "officialActionRequired": false,
+      "priority": {
+        "merchant": {
+          "level": "info",
+          "action": 0,
+          "relevance": 0.11524799999999999,
+          "areas": [],
+          "outOfScope": true
+        },
+        "developer": {
+          "level": "info",
+          "action": 0,
+          "relevance": 0.53,
+          "areas": [
+            "アプリ開発全般"
+          ],
+          "outOfScope": false
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-the-ordercancel-mutation-now-returns-a-structured-jobresult",
+      "source": "developer-changelog",
+      "title": "The `orderCancel` mutation now returns a structured `jobResult`",
+      "link": "https://shopify.dev/changelog/the-ordercancel-mutation-now-returns-a-structured-jobresult",
+      "publishedAt": "2026-10-01T16:00:00.000Z",
+      "collectedAt": "2026-10-02T00:01:16.420Z",
+      "category": [
+        "API",
+        "Update",
+        "Admin GraphQL API",
+        "2026-10"
+      ],
+      "description": " <div class=\"\"><p>As of the <code>2026-10</code> <a href=\"https://shopify.dev/docs/api/admin-graphql/latest\" target=\"_blank\" class=\"body-link\">GraphQL Admin API</a> version, the <a href=\"https://shopify.dev/docs/api/admin-graphql/latest/mutations/orderCancel\" target=\"_blank\" class=\"body-link\"><code>orderCancel</code></a> mutation returns a new <code>jobResult</code> field of type <code>OrderCancelJobResult</code>.</p>\n<p>Order cancellations run asynchronously. The <code>jobResult</code> field provides a structured, cancellation-specific result, including the cancellation status, any errors, and the affected order. Use this field to check whether the cancellation completed successfully and to handle any errors.</p>\n<p>Previously, the mutation only exposed the generic <code>job</code> field, which didn’t include cancellation-specific status or errors. The existing <code>job</code> field is unchanged and continues to work as before, so no action is required for existing integrations.</p>\n</div> ",
+      "analyses": {
+        "claude-opus-5-5": {
+          "titleJa": "orderCancel ミューテーションが構造化された jobResult を返すように",
+          "summarizedJa": "GraphQL Admin API 2026-10 バージョンから、orderCancel ミューテーションが OrderCancelJobResult 型の新しい jobResult フィールドを返すようになりました。非同期で実行される注文キャンセルについて、キャンセルのステータス、エラー、対象注文を構造的に取得できます。既存の job フィールドは変更されないため、既存の連携に対応は不要です。",
+          "audienceJa": "Admin GraphQL API で注文キャンセルを扱うアプリ開発者",
+          "actionJa": null,
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-10-02T00:02:08.530Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2613,
+            "output": 278
+          },
+          "estimatedCost": 0.0084196
+        }
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "scores": {
+          "merchantImpact": {
+            "score": 1.19,
+            "confidence": 0.84
+          },
+          "partnerImpact": {
+            "score": 1.69,
+            "confidence": 0.73
+          },
+          "japanRelevance": {
+            "score": 2.37,
+            "confidence": 0.47
+          },
+          "technicalImportance": {
+            "score": 2.63,
+            "confidence": 0.66
+          }
+        },
+        "totalScore": 7.88,
+        "actionRequired": 0.07,
+        "breakingChange": 0.04,
+        "appliesInJapan": 0.71,
+        "relevance": {
+          "merchant": {
+            "overall": 0.25,
+            "areas": {
+              "onlineStore": 0.05,
+              "checkout": 0.04,
+              "payments": 0.09,
+              "shipping": 0.1,
+              "orders": 0.15,
+              "customers": 0.04,
+              "marketing": 0.1,
+              "subscriptions": 0.1,
+              "b2b": 0.11,
+              "plus": 0.07,
+              "admin": 0.14
+            },
+            "excludes": {
+              "posOnly": 0.03,
+              "internationalOnly": 0.03
+            }
+          },
+          "developer": {
+            "overall": 0.18,
+            "areas": {
+              "scriptTags": 0.03,
+              "webPixels": 0.05,
+              "themeExtension": 0.06,
+              "webhooks": 0.07,
+              "billing": 0.05,
+              "auth": 0.02,
+              "adminApiData": 0.06,
+              "customerData": 0.04,
+              "apiVersioning": 0.08,
+              "appStore": 0.07,
+              "appPlatform": 0.58
+            },
+            "excludes": {}
+          }
+        },
+        "profilesVersion": 4,
+        "decidedAt": "2026-10-02T00:02:41.838Z",
+        "tokenUsage": {
+          "input": 2196,
+          "output": 637
+        }
+      },
+      "officialActionRequired": false,
+      "priority": {
+        "merchant": {
+          "level": "info",
+          "action": 0,
+          "relevance": 0.10020584999999999,
+          "areas": [],
+          "outOfScope": true
+        },
+        "developer": {
+          "level": "info",
+          "action": 0,
+          "relevance": 0.58,
+          "areas": [
+            "アプリ開発全般"
+          ],
+          "outOfScope": false
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-sms-marketing-consent-now-available-on-the-customerphonenumber-object",
+      "source": "developer-changelog",
+      "title": "SMS marketing consent now available on the CustomerPhoneNumber object",
+      "link": "https://shopify.dev/changelog/sms-marketing-consent-now-available-on-the-customerphonenumber-object",
+      "publishedAt": "2026-10-01T16:00:00.000Z",
+      "collectedAt": "2026-10-02T00:01:16.420Z",
+      "category": [
+        "Action Required",
+        "API",
+        "New",
+        "Admin GraphQL API",
+        "Customer Account API",
+        "2026-10"
+      ],
+      "description": " <div class=\"\"><p>SMS marketing consent is now available through the new <code>smsMarketingConsent</code> field on the <code>CustomerPhoneNumber</code> object. This field uses the same structured consent model as WhatsApp.</p>\n<p>The existing flat SMS marketing consent fields on <code>CustomerPhoneNumber</code> remain available for backward compatibility but are now deprecated. New integrations should use <code>smsMarketingConsent</code>, and existing integrations should plan to migrate to this field.</p>\n<p>For field definitions, data structure, and migration details, see the <code>CustomerPhoneNumber</code> object reference in the <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/objects/CustomerPhoneNumber\" target=\"_blank\" class=\"body-link\">API documentation</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-opus-5-5": {
+          "titleJa": "CustomerPhoneNumberオブジェクトでSMSマーケティング同意が利用可能に",
+          "summarizedJa": "CustomerPhoneNumberオブジェクトに新しいsmsMarketingConsentフィールドが追加され、WhatsAppと同じ構造化された同意モデルでSMSマーケティング同意を扱えるようになりました。既存のフラットなSMSマーケティング同意フィールドは後方互換のため残りますが非推奨となり、新フィールドへの移行が推奨されます。",
+          "audienceJa": "Admin GraphQL APIまたはCustomer Account APIで顧客の電話番号・SMS同意情報を扱うアプリ開発者",
+          "actionJa": "CustomerPhoneNumberの非推奨となったフラットなSMS同意フィールドの利用箇所を、新しいsmsMarketingConsentフィールドへ移行する計画を立てて対応してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 3
+          },
+          "totalScore": 11,
+          "analyzedAt": "2026-10-02T00:02:14.101Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2560,
+            "output": 377
+          },
+          "estimatedCost": 0.0101876
+        }
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "scores": {
+          "merchantImpact": {
+            "score": 1.95,
+            "confidence": 0.53
+          },
+          "partnerImpact": {
+            "score": 2.8,
+            "confidence": 0.58
+          },
+          "japanRelevance": {
+            "score": 2.13,
+            "confidence": 0.22
+          },
+          "technicalImportance": {
+            "score": 3.21,
+            "confidence": 0.78
+          }
+        },
+        "totalScore": 10.09,
+        "actionRequired": 0.59,
+        "breakingChange": 0.14,
+        "appliesInJapan": 0.64,
+        "relevance": {
+          "merchant": {
+            "overall": 0.56,
+            "areas": {
+              "onlineStore": 0.09,
+              "checkout": 0.04,
+              "payments": 0.03,
+              "shipping": 0.03,
+              "orders": 0.04,
+              "customers": 0.94,
+              "marketing": 0.51,
+              "subscriptions": 0.06,
+              "b2b": 0.21,
+              "plus": 0.09,
+              "admin": 0.21
+            },
+            "excludes": {
+              "posOnly": 0.02,
+              "internationalOnly": 0.05
+            }
+          },
+          "developer": {
+            "overall": 0.27,
+            "areas": {
+              "scriptTags": 0.04,
+              "webPixels": 0.06,
+              "themeExtension": 0.09,
+              "webhooks": 0.05,
+              "billing": 0.05,
+              "auth": 0.03,
+              "adminApiData": 0.17,
+              "customerData": 0.12,
+              "apiVersioning": 0.08,
+              "appStore": 0.09,
+              "appPlatform": 0.41
+            },
+            "excludes": {}
+          }
+        },
+        "profilesVersion": 4,
+        "decidedAt": "2026-10-02T00:02:41.958Z",
+        "tokenUsage": {
+          "input": 2176,
+          "output": 637
+        }
+      },
+      "officialActionRequired": true,
+      "priority": {
+        "merchant": {
+          "level": "check",
+          "action": 1,
+          "relevance": 0.5600895999999999,
+          "areas": [
+            "顧客・顧客アカウント",
+            "マーケティング・分析"
+          ],
+          "outOfScope": false
+        },
+        "developer": {
+          "level": "check",
+          "action": 1,
+          "relevance": 0.41,
+          "areas": [],
+          "outOfScope": false
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-new-subscriptioncontractcalculation-api-for-subscription-management",
+      "source": "developer-changelog",
+      "title": "New SubscriptionContractCalculation API for subscription management ",
+      "link": "https://shopify.dev/changelog/new-subscriptioncontractcalculation-api-for-subscription-management",
+      "publishedAt": "2026-10-01T15:30:00.000Z",
+      "collectedAt": "2026-10-02T00:01:16.420Z",
+      "category": [
+        "Action Required",
+        "Platform",
+        "New",
+        "2026-10"
+      ],
+      "description": " <div class=\"\"><p>A new SubscriptionContractCalculation API is now available to manage subscriptions. This new API runs subscription contract edits through Shopify's checkout engine, enabling new capabilities:</p>\n<ul>\n<li>Shopify Functions, including cart transforms and delivery customizations are supported during contract calculations</li>\n<li>Contract edits align with what the subscriber sees during billing</li>\n<li>Get a preview of the full calculated contract (totals, delivery options, and warnings) before persisting any changes</li>\n</ul>\n<p>Developers using the SubscriptionDraft API should migrate to SubscriptionContractCalculation API. The SubscriptionDraft API will remain available but will not support the new capabilities. </p>\n<p>See the <a href=\"https://shopify.dev/docs/apps/build/purchase-options/subscriptions/contracts/migrate-to-subscription-calculation-api\" target=\"_blank\" class=\"body-link\">migration guide</a> and updated subscriptions <a href=\"https://shopify.dev/docs/apps/build/purchase-options/subscriptions/contracts\" target=\"_blank\" class=\"body-link\">build guides</a> and <a href=\"https://shopify.dev/docs/api/admin-graphql/2026-10/unions/SubscriptionContractCalculation\" target=\"_blank\" class=\"body-link\">API docs</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-opus-5-5": {
+          "titleJa": "サブスクリプション管理向けの新しいSubscriptionContractCalculation APIを公開",
+          "summarizedJa": "サブスクリプション契約の編集をShopifyのチェックアウトエンジンで処理する新しいSubscriptionContractCalculation APIが利用可能になりました。カート変換や配送カスタマイズなどのShopify Functionsに対応し、変更を保存する前に合計金額・配送オプション・警告を含む計算結果をプレビューできます。SubscriptionDraft APIは引き続き利用できますが、新機能には対応しないため移行が推奨されています。",
+          "audienceJa": "SubscriptionDraft APIを使用しているサブスクリプションアプリ開発者",
+          "actionJa": "移行ガイドを参照し、SubscriptionDraft APIを使った契約編集処理をSubscriptionContractCalculation APIへ移行してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 13,
+          "analyzedAt": "2026-10-02T00:02:20.835Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2710,
+            "output": 364
+          },
+          "estimatedCost": 0.0105276
+        }
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "scores": {
+          "merchantImpact": {
+            "score": 2.23,
+            "confidence": 0
+          },
+          "partnerImpact": {
+            "score": 3.63,
+            "confidence": 0.27
+          },
+          "japanRelevance": {
+            "score": 2.5,
+            "confidence": 0.51
+          },
+          "technicalImportance": {
+            "score": 3.9,
+            "confidence": 0.91
+          }
+        },
+        "totalScore": 12.26,
+        "actionRequired": 0.72,
+        "breakingChange": 0.18,
+        "appliesInJapan": 0.62,
+        "relevance": {
+          "merchant": {
+            "overall": 0.8,
+            "areas": {
+              "onlineStore": 0.11,
+              "checkout": 0.67,
+              "payments": 0.31,
+              "shipping": 0.77,
+              "orders": 0.09,
+              "customers": 0.18,
+              "marketing": 0.2,
+              "subscriptions": 0.96,
+              "b2b": 0.35,
+              "plus": 0.27,
+              "admin": 0.3
+            },
+            "excludes": {
+              "posOnly": 0.02,
+              "internationalOnly": 0.05
+            }
+          },
+          "developer": {
+            "overall": 0.46,
+            "areas": {
+              "scriptTags": 0.06,
+              "webPixels": 0.05,
+              "themeExtension": 0.08,
+              "webhooks": 0.06,
+              "billing": 0.83,
+              "auth": 0.04,
+              "adminApiData": 0.06,
+              "customerData": 0.11,
+              "apiVersioning": 0.09,
+              "appStore": 0.14,
+              "appPlatform": 0.29
+            },
+            "excludes": {}
+          }
+        },
+        "profilesVersion": 4,
+        "decidedAt": "2026-10-02T00:02:42.158Z",
+        "tokenUsage": {
+          "input": 2190,
+          "output": 637
+        }
+      },
+      "officialActionRequired": true,
+      "priority": {
+        "merchant": {
+          "level": "check",
+          "action": 1,
+          "relevance": 0.5541311999999999,
+          "areas": [
+            "定期購入",
+            "配送・フルフィルメント",
+            "チェックアウト"
+          ],
+          "outOfScope": false
+        },
+        "developer": {
+          "level": "now",
+          "action": 1,
+          "relevance": 0.83,
+          "areas": [
+            "課金（Billing API）"
+          ],
+          "outOfScope": false
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-design-a-fully-bespoke-store-with-canvas",
+      "source": "shopify-changelog",
+      "title": "Design a fully bespoke store with Canvas",
+      "link": "https://changelog.shopify.com/posts/design-a-fully-bespoke-store-with-canvas",
+      "publishedAt": "2026-10-01T14:00:00.000Z",
+      "collectedAt": "2026-10-02T00:01:17.441Z",
+      "category": [
+        "Online store"
+      ],
+      "description": "\n        <p>Canvas is a new design surface for your online store. Every page is laid out together in one interactive, infinite workspace, so you can see how your whole store feels and work on any part of it in context.</p>\n\n<p>In Canvas, you can:<br>\n* Pan across every page of your store and zoom in on any detail<br>\n* Click any element to edit it directly, or tell Sidekick what you want in the chat<br>\n* See Sidekick's changes land in real time, from a single section to a store-wide redesign<br>\n* Preview the real, working store, with interactions, animations, and different products, collections, and screen sizes<br>\n* Canvas is rolling out to existing stores over the coming days. Go to Online Store &gt; Themes to create a new theme in Canvas, or duplicate a Shopify theme or custom theme in Canvas. Your original theme stays in the current theme editor.</p>\n\n<p>At launch, Canvas doesn't support third-party themes from the Shopify Theme Store, Markets, rollouts, translations, or app blocks and app embeds. Themes edited in Canvas don't receive theme updates.</p>\n\n<p>Learn more about <a href=\"https://help.shopify.com/manual/online-store/themes/canvas\">designing your store in Canvas</a> in the Shopify Help Center.</p>\n\n      ",
+      "analyses": {
+        "claude-opus-5-5": {
+          "titleJa": "Canvasで完全オリジナルのストアをデザイン",
+          "summarizedJa": "オンラインストア向けの新しいデザイン環境「Canvas」が登場し、全ページを1つの無限ワークスペース上で俯瞰しながら、要素を直接編集したりSidekickにチャットで指示して変更をリアルタイムに反映できます。実際に動作するストアをインタラクションや画面サイズ別にプレビューでき、既存ストアへ数日かけて順次展開されます。ローンチ時点ではテーマストアのサードパーティテーマ、Markets、ロールアウト、翻訳、アプリブロック/アプリ埋め込みに非対応で、Canvasで編集したテーマはテーマアップデートを受け取れません。",
+          "audienceJa": "オンラインストアを運営する全マーチャント、テーマ制作・ストア構築を行うパートナー（代理店・テーマ開発者）",
+          "actionJa": "Canvasを試す場合は、翻訳・Markets・アプリブロック非対応やテーマアップデート停止の制約を確認したうえで、既存テーマを複製してCanvas上で検証してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 4,
+            "partnerImpact": 4,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 15,
+          "analyzedAt": "2026-10-02T00:02:26.630Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2656,
+            "output": 455
+          },
+          "estimatedCost": 0.0121316
+        }
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "scores": {
+          "merchantImpact": {
+            "score": 2.0700000000000003,
+            "confidence": 0.57
+          },
+          "partnerImpact": {
+            "score": 2.51,
+            "confidence": 0.52
+          },
+          "japanRelevance": {
+            "score": 2.4,
+            "confidence": 0.45
+          },
+          "technicalImportance": {
+            "score": 3.88,
+            "confidence": 0.9
+          }
+        },
+        "totalScore": 10.86,
+        "actionRequired": 0.14,
+        "breakingChange": 0.09,
+        "appliesInJapan": 0.61,
+        "relevance": {
+          "merchant": {
+            "overall": 0.64,
+            "areas": {
+              "onlineStore": 0.98,
+              "checkout": 0.07,
+              "payments": 0.03,
+              "shipping": 0.02,
+              "orders": 0.05,
+              "customers": 0.03,
+              "marketing": 0.09,
+              "subscriptions": 0.05,
+              "b2b": 0.09,
+              "plus": 0.07,
+              "admin": 0.6
+            },
+            "excludes": {
+              "posOnly": 0.01,
+              "internationalOnly": 0.03
+            }
+          },
+          "developer": {
+            "overall": 0.28,
+            "areas": {
+              "scriptTags": 0.14,
+              "webPixels": 0.07,
+              "themeExtension": 0.83,
+              "webhooks": 0.03,
+              "billing": 0.03,
+              "auth": 0.01,
+              "adminApiData": 0.03,
+              "customerData": 0.04,
+              "apiVersioning": 0.03,
+              "appStore": 0.07,
+              "appPlatform": 0.09
+            },
+            "excludes": {}
+          }
+        },
+        "profilesVersion": 4,
+        "decidedAt": "2026-10-02T00:02:42.339Z",
+        "tokenUsage": {
+          "input": 2330,
+          "output": 637
+        }
+      },
+      "priority": {
+        "merchant": {
+          "level": "info",
+          "action": 0.14,
+          "relevance": 0.5740673399999999,
+          "areas": [
+            "オンラインストア・テーマ",
+            "管理画面・Sidekick・アプリ"
+          ],
+          "outOfScope": false
+        },
+        "developer": {
+          "level": "check",
+          "action": 0.14,
+          "relevance": 0.83,
+          "areas": [
+            "テーマアプリ拡張・App Proxy"
+          ],
+          "outOfScope": false
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-inventory-shipment-webhooks-include-inventory-transfer-ids",
+      "source": "developer-changelog",
+      "title": " Inventory shipment webhooks include inventory transfer IDs",
+      "link": "https://shopify.dev/changelog/inventory-shipment-webhooks-include-inventory-transfer-ids",
+      "publishedAt": "2026-10-01T12:00:00.000Z",
+      "collectedAt": "2026-10-02T00:01:16.420Z",
+      "category": [
+        "API",
+        "Update",
+        "Events & webhooks",
+        "2026-10"
+      ],
+      "description": " <div class=\"\"><p>We are introducing the <code>inventory_transfer_id</code>  to several <code>inventory_shipment</code> webhook payloads to make it easier for developers to identify which <code>inventory_transfer</code> records, if any, a given shipment is related to. This will ease integration burdens and remove the need for developers to merge the datasets on their end to manually build the links.</p>\n<h2>What changed</h2>\n<p>Introduces an <code>inventory_transfer_id</code> field to the payloads of the following...</p>\n<ul>\n<li><code>inventory_shipments/create</code></li>\n<li><code>inventory_shipments/delete</code></li>\n<li><code>inventory_shipments/add_items</code></li>\n<li><code>inventory_shipments/remove_items</code></li>\n<li><code>inventory_shipments/update_item_quantities</code></li>\n<li><code>inventory_shipments/mark_in_transit</code></li>\n<li><code>inventory_shipments/receive_items</code></li>\n<li><code>inventory_shipments/update_tracking</code></li>\n</ul>\n<h2>Who's affected</h2>\n<p>This is an additive change, any adopters of the shipment webhooks, upon updating to 2026-10, will get access to this new field. </p>\n</div> ",
+      "analyses": {
+        "claude-opus-5-5": {
+          "titleJa": "在庫シップメントのWebhookに在庫移動（transfer）IDが追加",
+          "summarizedJa": "inventory_shipments関連の複数のWebhookペイロード（create、delete、add_items、receive_itemsなど）に、新たにinventory_transfer_idフィールドが追加されました。これにより、各シップメントがどの在庫移動レコードに紐づくかを直接特定でき、開発者側でデータを突き合わせる手間が不要になります。APIバージョン2026-10以降で利用可能な追加的変更です。",
+          "audienceJa": "在庫シップメントのWebhookを利用するアプリ開発者",
+          "actionJa": "在庫移動との紐付けを自前で行っている場合は、APIバージョン2026-10に更新し、新しいinventory_transfer_idフィールドを利用するよう実装を見直してください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 1,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 8,
+          "analyzedAt": "2026-10-02T00:02:31.367Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2686,
+            "output": 349
+          },
+          "estimatedCost": 0.010131600000000001
+        }
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "scores": {
+          "merchantImpact": {
+            "score": 1.41,
+            "confidence": 0.66
+          },
+          "partnerImpact": {
+            "score": 2.0300000000000002,
+            "confidence": 0.79
+          },
+          "japanRelevance": {
+            "score": 2.3899999999999997,
+            "confidence": 0.47
+          },
+          "technicalImportance": {
+            "score": 2.44,
+            "confidence": 0.63
+          }
+        },
+        "totalScore": 8.27,
+        "actionRequired": 0.12,
+        "breakingChange": 0.03,
+        "appliesInJapan": 0.76,
+        "relevance": {
+          "merchant": {
+            "overall": 0.53,
+            "areas": {
+              "onlineStore": 0.05,
+              "checkout": 0.02,
+              "payments": 0.03,
+              "shipping": 0.14,
+              "orders": 0.06,
+              "customers": 0.04,
+              "marketing": 0.07,
+              "subscriptions": 0.04,
+              "b2b": 0.54,
+              "plus": 0.05,
+              "admin": 0.1
+            },
+            "excludes": {
+              "posOnly": 0.05,
+              "internationalOnly": 0.04
+            }
+          },
+          "developer": {
+            "overall": 0.15,
+            "areas": {
+              "scriptTags": 0.03,
+              "webPixels": 0.03,
+              "themeExtension": 0.05,
+              "webhooks": 0.07,
+              "billing": 0.03,
+              "auth": 0.02,
+              "adminApiData": 0.03,
+              "customerData": 0.03,
+              "apiVersioning": 0.08,
+              "appStore": 0.08,
+              "appPlatform": 0.15
+            },
+            "excludes": {}
+          }
+        },
+        "profilesVersion": 4,
+        "decidedAt": "2026-10-02T00:02:42.477Z",
+        "tokenUsage": {
+          "input": 2262,
+          "output": 637
+        }
+      },
+      "officialActionRequired": false,
+      "priority": {
+        "merchant": {
+          "level": "info",
+          "action": 0,
+          "relevance": 0.37428480000000003,
+          "areas": [
+            "B2B"
+          ],
+          "outOfScope": false
+        },
+        "developer": {
+          "level": "info",
+          "action": 0,
+          "relevance": 0.15,
+          "areas": [],
+          "outOfScope": true
+        }
+      }
+    },
+    {
+      "id": "shopify-changelog-posts-add-your-own-notes-to-shopify-analytics",
+      "source": "shopify-changelog",
+      "title": "Add your own notes to Shopify Analytics",
+      "link": "https://changelog.shopify.com/posts/add-your-own-notes-to-shopify-analytics",
+      "publishedAt": "2026-10-01T11:00:00.000Z",
+      "collectedAt": "2026-10-02T00:01:17.441Z",
+      "category": [
+        "Analytics"
+      ],
+      "description": "\n        <p>Your reports show what changed. You know why. Now, you're able to capture that story directly in Shopify Analytics.</p>\n\n<p>Add <strong>annotations</strong> to supported time-series reports for the moments that shape your business, like a campaign launch, creator mention, supplier change, promotion, or operational improvement. Instead of leaving that context in memory, spreadsheets, or team threads, it stays beside the data where you expect to see shifts.</p>\n\n<p>When you return to a report weeks or months later, you and your team can quickly understand why performance changed without piecing the story back together.</p>\n\n<p>From the annotations panel, you can:<br>\n- Add a title, description, date or date range, and annotation type<br>\n- Use our auto-detected annotation categories or choose your own<br>\n- Edit, delete, and see who created each annotation<br>\n- Search and filter context from your team, installed apps, and Shopify</p>\n\n<p>Annotations are shared with staff who have Reports permission and appear alongside context from Shopify and installed apps. Together, they create one shared history of what changed, what your business did, and why it mattered.</p>\n\n<p>Learn more about annotations <a href=\"https://help.shopify.com/en/manual/reports-and-analytics/shopify-reports/report-types/reports-overview\">here</a>. </p>\n\n      ",
+      "analyses": {
+        "claude-opus-5-5": {
+          "titleJa": "Shopifyアナリティクスに独自のメモ（注釈）を追加可能に",
+          "summarizedJa": "Shopifyアナリティクスの対応する時系列レポートに、キャンペーン開始やプロモーション、仕入先変更などの出来事を「注釈（アノテーション）」として記録できるようになりました。タイトル・説明・日付または期間・種類を設定でき、自動検出カテゴリの利用や編集・削除、作成者の確認、検索・フィルタも可能です。注釈はレポート権限を持つスタッフと共有され、Shopifyやインストール済みアプリからの情報と並んで表示されます。",
+          "audienceJa": "Shopifyアナリティクスを利用する全マーチャントおよびレポート権限を持つスタッフ",
+          "actionJa": null,
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 3,
+            "partnerImpact": 2,
+            "japanRelevance": 3,
+            "technicalImportance": 2
+          },
+          "totalScore": 10,
+          "analyzedAt": "2026-10-02T00:02:35.869Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2661,
+            "output": 334
+          },
+          "estimatedCost": 0.0097316
+        }
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "scores": {
+          "merchantImpact": {
+            "score": 1.62,
+            "confidence": 0.48
+          },
+          "partnerImpact": {
+            "score": 1.74,
+            "confidence": 0.69
+          },
+          "japanRelevance": {
+            "score": 2.75,
+            "confidence": 0.73
+          },
+          "technicalImportance": {
+            "score": 3.08,
+            "confidence": 0.9
+          }
+        },
+        "totalScore": 9.190000000000001,
+        "actionRequired": 0.09,
+        "breakingChange": 0.02,
+        "appliesInJapan": 0.69,
+        "relevance": {
+          "merchant": {
+            "overall": 0.62,
+            "areas": {
+              "onlineStore": 0.03,
+              "checkout": 0.02,
+              "payments": 0.02,
+              "shipping": 0.02,
+              "orders": 0.04,
+              "customers": 0.04,
+              "marketing": 0.97,
+              "subscriptions": 0.06,
+              "b2b": 0.14,
+              "plus": 0.08,
+              "admin": 0.37
+            },
+            "excludes": {
+              "posOnly": 0.02,
+              "internationalOnly": 0.03
+            }
+          },
+          "developer": {
+            "overall": 0.12,
+            "areas": {
+              "scriptTags": 0.03,
+              "webPixels": 0.04,
+              "themeExtension": 0.05,
+              "webhooks": 0.02,
+              "billing": 0.04,
+              "auth": 0.02,
+              "adminApiData": 0.02,
+              "customerData": 0.04,
+              "apiVersioning": 0.03,
+              "appStore": 0.08,
+              "appPlatform": 0.16
+            },
+            "excludes": {}
+          }
+        },
+        "profilesVersion": 4,
+        "decidedAt": "2026-10-02T00:02:42.638Z",
+        "tokenUsage": {
+          "input": 2310,
+          "output": 637
+        }
+      },
+      "priority": {
+        "merchant": {
+          "level": "info",
+          "action": 0.09,
+          "relevance": 0.6362365799999999,
+          "areas": [
+            "マーケティング・分析"
+          ],
+          "outOfScope": false
+        },
+        "developer": {
+          "level": "info",
+          "action": 0.09,
+          "relevance": 0.16,
+          "areas": [],
+          "outOfScope": true
+        }
+      }
+    },
+    {
+      "id": "developer-changelog-changelog-updated-function-syntax-on-the-segment-query-language",
+      "source": "developer-changelog",
+      "title": "Updated function syntax on the segment query language",
+      "link": "https://shopify.dev/changelog/updated-function-syntax-on-the-segment-query-language",
+      "publishedAt": "2026-10-01T11:00:00.000Z",
+      "collectedAt": "2026-10-02T00:01:16.420Z",
+      "category": [
+        "Action Required",
+        "API",
+        "Breaking API Change",
+        "Admin GraphQL API",
+        "2026-10"
+      ],
+      "description": " <div class=\"\"><p>As of GraphQL Admin API version 2026-10, functions in the segment query language now use the operators <code>MATCHES</code>/<code>NOT MATCHES</code> instead of <code>= true</code>/<code>= false</code>. For example, the previous query <code>shopify_email.opened() = true</code> would now be represented as <code>shopify_email.opened MATCHES ()</code>.</p>\n<p>The parameters for each function have also been expanded to use their own operators. For example, the query <code>products_purchased(quantity: 5) = true</code> would now be represented as <code>products_purchased MATCHES (quantity = 5)</code>. This expands the functionality of parameters. For example, the following queries were not possible before: <code>products_purchased MATCHES (quantity != 5)</code>, <code>products_purchased MATCHES (quantity &gt; 5)</code>.</p>\n<p>Additionally, the following <a href=\"https://shopify.dev/docs/api/shopifyql/segment-query-language-reference#nameddate\" target=\"_blank\" class=\"body-link\">named dates</a> have been deprecated: <code>12_months_ago</code>, <code>90_days_ago</code>, <code>30_days_ago</code>, <code>7_days_ago</code>. Instead, the you can use the existing <a href=\"https://shopify.dev/docs/api/shopifyql/segment-query-language-reference#dateoffset\" target=\"_blank\" class=\"body-link\">date offsets</a> in your segment queries. For example, the named date <code>12_months_ago</code> is equivalent to the date offset <code>-12m</code>.</p>\n<p>Learn more about customer segment filters in our <a href=\"https://help.shopify.com/en/manual/customers/customer-segmentation/reference-guide/components\" target=\"_blank\" class=\"body-link\">Help Center</a>.</p>\n</div> ",
+      "analyses": {
+        "claude-opus-5-5": {
+          "titleJa": "セグメントクエリ言語の関数構文が更新",
+          "summarizedJa": "GraphQL Admin API 2026-10以降、セグメントクエリ言語の関数は「= true/= false」ではなく「MATCHES/NOT MATCHES」演算子を使用するようになり、パラメータにも独自の演算子（!=、>など）が使えるようになりました。また、名前付き日付（12_months_ago、90_days_ago、30_days_ago、7_days_ago）は非推奨となり、-12mなどの日付オフセットで代替します。",
+          "audienceJa": "Admin APIで顧客セグメントクエリを作成・利用するアプリ開発者",
+          "actionJa": "API 2026-10へ移行する際、セグメントクエリの関数構文をMATCHES/NOT MATCHES形式に書き換え、非推奨の名前付き日付を日付オフセットに置き換えてください。",
+          "deadline": null,
+          "scores": {
+            "merchantImpact": 2,
+            "partnerImpact": 3,
+            "japanRelevance": 3,
+            "technicalImportance": 4
+          },
+          "totalScore": 12,
+          "analyzedAt": "2026-10-02T00:02:40.040Z",
+          "model": "claude-opus-5-5",
+          "tokenUsage": {
+            "input": 2877,
+            "output": 368
+          },
+          "estimatedCost": 0.0112756
+        }
+      },
+      "jev": {
+        "model": "jev-1.13.0",
+        "scores": {
+          "merchantImpact": {
+            "score": 3.2,
+            "confidence": 0
+          },
+          "partnerImpact": {
+            "score": 3.78,
+            "confidence": 0
+          },
+          "japanRelevance": {
+            "score": 2.5,
+            "confidence": 0.49
+          },
+          "technicalImportance": {
+            "score": 4,
+            "confidence": 1
+          }
+        },
+        "totalScore": 13.48,
+        "actionRequired": 0.95,
+        "breakingChange": 0.92,
+        "appliesInJapan": 0.82,
+        "relevance": {
+          "merchant": {
+            "overall": 0.67,
+            "areas": {
+              "onlineStore": 0.05,
+              "checkout": 0.04,
+              "payments": 0.04,
+              "shipping": 0.04,
+              "orders": 0.08,
+              "customers": 0.13,
+              "marketing": 0.78,
+              "subscriptions": 0.12,
+              "b2b": 0.16,
+              "plus": 0.1,
+              "admin": 0.27
+            },
+            "excludes": {
+              "posOnly": 0.02,
+              "internationalOnly": 0.03
+            }
+          },
+          "developer": {
+            "overall": 0.41,
+            "areas": {
+              "scriptTags": 0.04,
+              "webPixels": 0.09,
+              "themeExtension": 0.06,
+              "webhooks": 0.03,
+              "billing": 0.04,
+              "auth": 0.03,
+              "adminApiData": 0.06,
+              "customerData": 0.07,
+              "apiVersioning": 0.14,
+              "appStore": 0.07,
+              "appPlatform": 0.48
+            },
+            "excludes": {}
+          }
+        },
+        "profilesVersion": 4,
+        "decidedAt": "2026-10-02T00:02:42.786Z",
+        "tokenUsage": {
+          "input": 2458,
+          "output": 637
+        }
+      },
+      "officialActionRequired": true,
+      "priority": {
+        "merchant": {
+          "level": "check",
+          "action": 1,
+          "relevance": 0.60800376,
+          "areas": [
+            "マーケティング・分析"
+          ],
+          "outOfScope": false
+        },
+        "developer": {
+          "level": "check",
+          "action": 1,
+          "relevance": 0.48,
+          "areas": [],
+          "outOfScope": false
+        }
+      }
+    },
     {
       "id": "developer-changelog-changelog-use-app-intents-for-your-discount-app",
       "source": "developer-changelog",
