@@ -14,7 +14,7 @@ const HIGH_IMPACT_SCORE = 12;
  * 立場ごとの優先度を計算する
  * - 対応が必要か: 公式の「Action required」ラベルがあればそれ、なければJevの確率
  * - 関係度: 領域ごとの確率の最大値 ×（除外条件に当てはまらない確率）×（必要なら日本に適用される確率）
- * - 「今すぐ対応」は広い領域（broad）を除いた具体的な領域での関係度で判定する
+ * - 「要対応」は広い領域（broad）を除いた具体的な領域での関係度で判定する
  */
 export function computePriority(
   entry: ChangelogEntry,
@@ -40,11 +40,11 @@ export function computePriority(
     const scale = notExcluded * (profile.requireJapan ? jev.appliesInJapan : 1);
     const maxOf = (areas: string[]) => Math.max(0, ...areas.map((a) => r.areas[a] ?? 0));
     const areaKeys = Object.keys(profile.areas);
-    // 関係度（広い領域も含む）と、「今すぐ対応」の判定に使う具体的な領域だけの関係度
+    // 関係度（広い領域も含む）と、「要対応」の判定に使う具体的な領域だけの関係度
     const relevance = maxOf(areaKeys) * scale;
     const specificRelevance = maxOf(areaKeys.filter((a) => !profile.areas[a].broad)) * scale;
 
-    // 別の立場向けの changelog の記事は「確認推奨」までにとどめる
+    // 別の立場向けの changelog の記事は「注目」までにとどめる
     const level =
       action >= ACTION_NOW &&
       specificRelevance >= RELEVANT &&

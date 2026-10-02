@@ -15,7 +15,7 @@ export function generateMarkdownReport(report: WeeklyReport): string {
   // サマリー
   sections.push(generateSummary(report));
 
-  // 立場別の要対応・確認推奨
+  // 立場別の要対応・注目
   const actionSection = generateActionItemsSection(report);
   if (actionSection) sections.push(actionSection);
 
@@ -73,7 +73,7 @@ function generateSummary(report: WeeklyReport): string {
 }
 
 /**
- * 立場別の要対応・確認推奨セクション生成（該当がなければ null）
+ * 立場別の要対応・注目セクション生成（該当がなければ null）
  */
 function generateActionItemsSection(report: WeeklyReport): string | null {
   const blocks = report.actionItems
@@ -87,9 +87,9 @@ function generateActionItemsSection(report: WeeklyReport): string | null {
     });
   if (blocks.length === 0) return null;
 
-  return `## 🎯 立場別の要対応・確認推奨
+  return `## 🎯 立場別の要対応・注目
 
-🚨 今すぐ対応 / 👀 確認推奨
+🚨 要対応 / 👀 注目
 
 ${blocks.join('\n\n')}`;
 }

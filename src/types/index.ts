@@ -85,7 +85,7 @@ export type JevDecision = z.infer<typeof JevDecisionSchema>;
 
 // 立場ごとの優先度（src/utils/priority.ts で計算）
 export const PrioritySchema = z.object({
-  level: z.enum(['now', 'check', 'info']), // 今すぐ対応 / 確認推奨 / 参考
+  level: z.enum(['now', 'check', 'info']), // 要対応 / 注目 / 参考
   action: z.number(), // 対応が必要な確率（公式ラベルがあれば 0 か 1）
   relevance: z.number(), // 関係度（0-1）
   areas: z.array(z.string()), // 関係する領域（表示用ラベル）

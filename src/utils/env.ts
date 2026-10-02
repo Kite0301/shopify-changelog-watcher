@@ -27,4 +27,3 @@ export function getOptionalEnv(key: string, defaultValue = ''): string {
 export function getAnthropicApiKey(): string {
   return getRequiredEnv('ANTHROPIC_API_KEY');
 }
-

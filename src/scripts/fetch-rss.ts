@@ -25,9 +25,7 @@ async function main() {
     const fetchedEntries = await fetchAllFeeds();
 
     // 分析開始日以降のエントリーのみをフィルタリング
-    const recentEntries = fetchedEntries.filter(
-      (entry) => entry.publishedAt >= startDate
-    );
+    const recentEntries = fetchedEntries.filter((entry) => entry.publishedAt >= startDate);
     console.log(
       `Filtered to ${recentEntries.length} entries from ${startDate} onwards (from ${fetchedEntries.length} total)`
     );

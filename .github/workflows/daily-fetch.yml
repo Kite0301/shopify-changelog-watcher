@@ -87,7 +87,7 @@ jobs:
           NEW_COUNT=${{ steps.fetch.outputs.new_entries }}
 
           # jqを使用してタイトルを抽出し、改行区切りで結合
-          # 立場ごとの優先度で印を付け、日本語タイトルがあれば使う（🚨 今すぐ対応 / 👀 確認推奨）
+          # 立場ごとの優先度で印を付け、日本語タイトルがあれば使う（🚨 要対応 / 👀 注目）
           TITLES=$(jq -r --argjson count "$NEW_COUNT" '
             .entries[:$count] | .[]
             | ([.priority // {} | .[] | .level]) as $levels

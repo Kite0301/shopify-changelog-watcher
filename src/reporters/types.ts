@@ -51,7 +51,7 @@ export interface ScoredEntry {
 }
 
 /**
- * 立場ごとの「今すぐ対応」「確認推奨」の記事
+ * 立場ごとの「要対応」「注目」の記事
  */
 export interface PerspectiveActionItems {
   key: string; // config/profiles.json の立場のキー

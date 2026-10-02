@@ -17,7 +17,7 @@ export function generateMarpSlides(report: WeeklyReport): string {
   // スライド3: サマリー + 目次
   slides.push(generateSummarySlide(report));
 
-  // 立場別の要対応・確認推奨
+  // 立場別の要対応・注目
   const actionSlide = generateActionItemsSlide(report);
   if (actionSlide) slides.push(actionSlide);
 
@@ -307,7 +307,7 @@ function generateScoreBar(score: number, max: number = 20): string {
 }
 
 /**
- * 立場別の要対応・確認推奨スライド（該当がなければ null）
+ * 立場別の要対応・注目スライド（該当がなければ null）
  */
 function generateActionItemsSlide(report: WeeklyReport): string | null {
   const MAX_ITEMS = 6;
@@ -326,7 +326,7 @@ function generateActionItemsSlide(report: WeeklyReport): string | null {
     });
   if (blocks.length === 0) return null;
 
-  return `# 🎯 立場別の要対応・確認推奨
+  return `# 🎯 立場別の要対応・注目
 
 ${blocks.join('\n\n')}`;
 }

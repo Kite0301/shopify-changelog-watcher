@@ -98,8 +98,8 @@ function updateStats() {
   document.getElementById('latestDate').textContent = latestDate;
 }
 
-const PERSPECTIVES = { merchant: 'マーチャント', developer: '開発者' };
-const PRIORITY_LABELS = { now: '🚨 今すぐ対応', check: '👀 確認推奨' };
+const PERSPECTIVES = { merchant: 'マーチャント', developer: '開発者・パートナー' };
+const PRIORITY_LABELS = { now: '🚨 要対応', check: '👀 注目' };
 const RELATED = 0.5;
 
 /**

@@ -1,11 +1,12 @@
 {
-  "version": 4,
-  "description": "「関係あるか」を判定する立場の定義。question は Jev に渡す英語の質問（原文が英語のため）、label は表示用。areas は関心のある領域（直接使っていなくても関連領域なら拾う）、excludes は明らかに無関係なもの（当てはまれば関係度を下げる）。primarySource 以外の changelog の記事は「確認推奨」までにとどめる（例: 開発者向けの Action required はマーチャントの対応ではない）。broad な領域は関連・確認推奨の判定にだけ使い、「今すぐ対応」には使わない",
+  "version": 5,
+  "description": "記事を読む立場の定義。question は Jev に渡す英語の質問（原文が英語のため）、label は表示用。areas はその立場の人が関心を持つ領域、excludes は明らかに無関係なもの（当てはまれば関係度を下げる）。primarySource 以外の changelog の記事は「注目」までにとどめる（例: 開発者向けの Action required はマーチャントの対応ではない）",
   "profiles": {
     "merchant": {
-      "label": "マーチャント（自社D2C）",
-      "summary": "A Japan-based merchant running several direct-to-consumer brand stores on Shopify Plus. Sells only within Japan (no international Markets), sells subscriptions and B2B/wholesale, and has no physical retail (no POS).",
+      "label": "マーチャント",
+      "summary": "A merchant running a store on Shopify in Japan, of any size and business model.",
       "requireJapan": true,
+      "primarySource": "shopify-changelog",
       "areas": {
         "onlineStore": {
           "label": "オンラインストア・テーマ",
@@ -24,7 +25,7 @@
           "question": "Does this change affect shipping, delivery settings, or order fulfillment for a merchant?"
         },
         "orders": {
-          "label": "注文・商品・在庫管理",
+          "label": "注文・商品・在庫",
           "question": "Does this change affect how a merchant manages orders, products, or inventory in the Shopify admin?"
         },
         "customers": {
@@ -32,8 +33,20 @@
           "question": "Does this change affect customer accounts, customer data, or customer privacy settings?"
         },
         "marketing": {
-          "label": "マーケティング・分析",
-          "question": "Does this change affect marketing, discounts, analytics, or reports for a merchant?"
+          "label": "マーケティング・ディスカウント",
+          "question": "Does this change affect marketing, discounts, email, or sales channels for a merchant?"
+        },
+        "analytics": {
+          "label": "分析・レポート",
+          "question": "Does this change affect analytics or reports for a merchant?"
+        },
+        "pos": {
+          "label": "POS・実店舗",
+          "question": "Does this change affect Shopify POS or selling in physical retail stores?"
+        },
+        "international": {
+          "label": "越境・Markets",
+          "question": "Does this change affect selling internationally or Shopify Markets?"
         },
         "subscriptions": {
           "label": "定期購入",
@@ -51,71 +64,55 @@
           "label": "管理画面・Sidekick・アプリ",
           "question": "Does this change affect general Shopify admin features, Sidekick, or how merchants use apps?"
         }
-      },
-      "excludes": {
-        "posOnly": {
-          "label": "POS（実店舗）のみ",
-          "question": "Is this change only relevant to physical retail stores or Shopify POS?"
-        },
-        "internationalOnly": {
-          "label": "海外販売のみ",
-          "question": "Is this change only relevant to selling internationally, cross-border, or with Shopify Markets for multiple countries?"
-        }
-      },
-      "primarySource": "shopify-changelog"
+      }
     },
     "developer": {
-      "label": "開発者（おみせコネクト）",
-      "summary": "A public, non-embedded Shopify app (Ruby on Rails, shopify_api gem) that connects stores to LINE messaging. Uses authorization-code OAuth with expiring offline tokens, GraphQL Admin API version 2026-07 to read orders, products, product variants, collections and customers, ScriptTags, a web pixel extension subscribing to customer events, a theme app extension, an app proxy, webhooks (orders, products, app uninstall, app subscriptions, shop, GDPR compliance), and the Billing API with recurring and usage charges. Does not use POS, Shopify Functions, checkout UI extensions, Hydrogen, Flow, metafields, or Markets.",
+      "label": "開発者・パートナー",
+      "summary": "A developer or agency building Shopify apps, themes, or custom storefronts for merchants.",
       "requireJapan": false,
+      "primarySource": "developer-changelog",
       "areas": {
-        "scriptTags": {
-          "label": "ScriptTag",
-          "question": "Does this change affect the ScriptTag API or storefront scripts injected by apps?"
-        },
-        "webPixels": {
-          "label": "Web Pixel・顧客イベント",
-          "question": "Does this change affect web pixel extensions or the customer events (analytics events) API?"
-        },
-        "themeExtension": {
-          "label": "テーマアプリ拡張・App Proxy",
-          "question": "Does this change affect theme app extensions, app blocks, app embeds, or app proxies?"
+        "adminApi": {
+          "label": "Admin API",
+          "question": "Does this change affect the GraphQL or REST Admin API, its fields, versions, or rate limits?"
         },
         "webhooks": {
-          "label": "Webhook",
-          "question": "Does this change affect classic webhook subscriptions (orders, products, app uninstalled, app subscriptions, shop update, or GDPR compliance topics), their payload fields, or delivery headers? Changes only to the newer Events subscriptions do not count."
+          "label": "Webhook・Events",
+          "question": "Does this change affect webhooks, Events subscriptions, their payloads, or delivery?"
         },
-        "billing": {
-          "label": "課金（Billing API）",
-          "question": "Does this change affect the app Billing API, app subscriptions, or usage charges?"
-        },
-        "auth": {
-          "label": "認証・トークン",
-          "question": "Does this change affect OAuth authorization code grant, expiring offline access tokens, token refresh, or the app installation flow?"
-        },
-        "adminApiData": {
-          "label": "注文・商品・顧客API",
-          "question": "Does this change affect GraphQL Admin API fields or enum values used when reading orders (status, totals, line items, fulfillments, customer), products, product variants (price, inventory quantity), collections, or customers (name, email)?"
-        },
-        "customerData": {
-          "label": "保護された顧客データ",
-          "question": "Does this change affect access to protected customer data such as customer names, emails, or phone numbers?"
-        },
-        "apiVersioning": {
-          "label": "APIバージョン・レート制限",
-          "question": "Does this change affect every app through Admin API versioning policy or API rate limits?"
+        "appAuth": {
+          "label": "認証・インストール",
+          "question": "Does this change affect app authentication, OAuth, access tokens, scopes, or the app installation flow?"
         },
         "appStore": {
-          "label": "App Store・Partner要件",
-          "question": "Does this change affect Shopify App Store listing or review requirements, or requirements for Shopify Partner accounts and organizations?"
+          "label": "App Store・課金・Partner",
+          "question": "Does this change affect the Shopify App Store, app review requirements, the Billing API, or Shopify Partner accounts?"
         },
-        "appPlatform": {
-          "label": "アプリ開発全般",
-          "question": "Does this change affect Shopify app development in general, such as the Admin API, app extensions, Shopify CLI, the Dev Dashboard, or app distribution?",
-          "broad": true
+        "extensions": {
+          "label": "アプリ拡張（管理画面・チェックアウト・POS）",
+          "question": "Does this change affect app extensions such as admin, checkout, customer account, or POS UI extensions?"
+        },
+        "functions": {
+          "label": "Shopify Functions",
+          "question": "Does this change affect Shopify Functions such as discounts, delivery, payment, or cart customizations?"
+        },
+        "themes": {
+          "label": "テーマ・Liquid・テーマアプリ拡張",
+          "question": "Does this change affect theme development, Liquid, theme app extensions, or app embeds?"
+        },
+        "storefront": {
+          "label": "Storefront API・Hydrogen",
+          "question": "Does this change affect the Storefront API, Customer Account API, Hydrogen, or headless storefronts?"
+        },
+        "pixels": {
+          "label": "Web Pixel・計測",
+          "question": "Does this change affect web pixels, customer events, or storefront analytics tracking?"
+        },
+        "devTools": {
+          "label": "CLI・開発ツール",
+          "question": "Does this change affect Shopify CLI, the Dev Dashboard, or other developer tools?"
         }
-      },
-      "primarySource": "developer-changelog"
+      }
     }
   }
 }

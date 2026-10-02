@@ -21,7 +21,7 @@ async function main() {
 
   for (const [key, c] of Object.entries(counts)) {
     console.log(
-      `${profiles.profiles[key].label}: 今すぐ対応 ${c.now} / 確認推奨 ${c.check} / 参考 ${c.info}`
+      `${profiles.profiles[key].label}: 要対応 ${c.now} / 注目 ${c.check} / 参考 ${c.info}`
     );
   }
 }

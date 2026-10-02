@@ -92,7 +92,7 @@ function buildWeeklyReport(
   // 統計情報生成
   const stats = buildReportStats(scoredEntries, weekEntries);
 
-  // 立場ごとの「今すぐ対応」「確認推奨」（スコア順）
+  // 立場ごとの「要対応」「注目」（スコア順）
   const sorted = [...scoredEntries].sort((a, b) => b.score - a.score);
   const actionItems = Object.entries(profiles.profiles).map(([key, profile]) => ({
     key,
